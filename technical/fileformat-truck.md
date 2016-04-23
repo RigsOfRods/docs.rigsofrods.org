@@ -832,78 +832,44 @@ The parameters are:
 -   **lengthening factor** - <span style="color:#BD0058">Real number</span> A coefficient which specifies how much the animator moves. Required.
 -   **Option string** - <span style="color:#BD0058">String</span> Required
 
-  
-*Options:*
+Options:
 
-:\***vis** - This creates a visible animator. ( It's not necessarily needed, but can help users read the truck file.)
+- **vis** - This creates a visible animator. ( It's not necessarily needed, but can help users read the truck file.)
+- **inv** - This creates an invisible animator.
+- **airspeed** - This animator extends or contracts with the actual speed (not speedometer indicated speed) for any vehicle.
+- **vvi** - This animator extends or contracts with the vehicle's vertical velocity.
+- **altimeter100k** - This animator extends or contracts with the vehicle's altitude up to 100,000 feet.
+- **altimeter10k** - This animator extends or contracts with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
+- **altimeter1k** - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](Truck_Description_File#Add_animation "wikilink") be used.
+- **aoa** - This animator extends or contracts with the dashboard's angle of attack.
+- **flap** - This animator extends or contracts with the flap setting on the vehicle.
+- **airbrake** - This animator extends or contracts with the airbrake setting on the vehicle.
+- ***roll** - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
+- **pitch** - This animator extends or contracts with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
+- **throttle1** - This animator extends or contracts with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
+- **rpm1** - This animator extends or contracts with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
+- **aerotorq1** - This animator extends or contracts with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
+- **aeropit1** - This animator extends or contracts with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
+- **aerostatus1** - This animator extends with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
+- **brakes** - This animator extends or contracts with the vehicle's brake status.
+- **accel** - This animator extends or contracts with the vehicle's accelerator status.
+- **clutch** - This animator extends or contracts with the vehicle's clutch status.
+- **speedo** - This animator extends or contracts with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
+- **tacho** - This animator extends or contracts with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
+- **turbo** - This animator extends or contracts with the vehicle's turbocharger PSI.
+- **parking** - This animator extends or contracts with the vehicle's parking brake status.
+- **shifterman1** - H-shift left right animator ( ```Reverse | 1-2 | 3-4 | 5-6...11-12``` as positions, scales with engine settings (maxGear)
+- **shifterman2** - H-shift forth/back animator ```Reverse-2-6-8-10-12 | 1-3-5-7-9-11``` as positions
+- **sequential** - sequential shift animator ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
+- **shifterlin** - for auto transmission animations or gearselect indicators
+- **torque** - animator to simulate engine torque, useful in addition to wheel nodearms
+- **difflock** - This animator extends or contracts with the difflock status of the truck (It only works when differentials are present in the truck.)
+- **rudderboat** - This animator extends or contracts with the steering hydro on boats.
+- **throttleboat** - This animator extends or contracts with the throttle status on boats.
+- **shortlimit:** - Add s shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
+- **longlimit:** - Add s longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
 
-:\***inv** - This creates an invisible animator.
-
-:\***airspeed** - This animator extends or contracts with the actual speed (not speedometer indicated speed) for any vehicle.
-
-:\***vvi** - This animator extends or contracts with the vehicle's vertical velocity.
-
-:\***altimeter100k** - This animator extends or contracts with the vehicle's altitude up to 100,000 feet.
-
-:\***altimeter10k** - This animator extends or contracts with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
-
-:\***altimeter1k** - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](Truck_Description_File#Add_animation "wikilink") be used.
-
-:\***aoa** - This animator extends or contracts with the dashboard's angle of attack.
-
-:\***flap** - This animator extends or contracts with the flap setting on the vehicle.
-
-:\***airbrake** - This animator extends or contracts with the airbrake setting on the vehicle.
-
-:\***roll** - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
-
-:\***pitch** - This animator extends or contracts with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
-
-:\***throttle1** - This animator extends or contracts with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
-
-:\***rpm1** - This animator extends or contracts with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
-
-:\***aerotorq1** - This animator extends or contracts with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
-
-:\***aeropit1** - This animator extends or contracts with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
-
-:\***aerostatus1** - This animator extends with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
-
-:\***brakes** - This animator extends or contracts with the vehicle's brake status.
-
-:\***accel** - This animator extends or contracts with the vehicle's accelerator status.
-
-:\***clutch** - This animator extends or contracts with the vehicle's clutch status.
-
-:\***speedo** - This animator extends or contracts with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
-
-:\***tacho** - This animator extends or contracts with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
-
-:\***turbo** - This animator extends or contracts with the vehicle's turbocharger PSI.
-
-:\***parking** - This animator extends or contracts with the vehicle's parking brake status.
-
-:\***shifterman1** - H-shift left right animator ( Reverse | 1-2 | 3-4 | 5-6...11-12 as positions, scales with engine settings (maxGear)
-
-:\***shifterman2** - H-shift forth/back animator Reverse-2-6-8-10-12 | 1-3-5-7-9-11 as positions
-
-:\***sequential** - sequential shift animator ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
-
-:\***shifterlin** - for auto transmission animations or gearselect indicators
-
-:\***torque** - animator to simulate engine torque, useful in addition to wheel nodearms
-
-:\***difflock** - This animator extends or contracts with the difflock status of the truck (It only works when differentials are present in the truck.)
-
-:\***rudderboat** - This animator extends or contracts with the steering hydro on boats.
-
-:\***throttleboat** - This animator extends or contracts with the throttle status on boats.
-
-:\***shortlimit:** - Add s shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
-
-:\***longlimit:** - Add s longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
-
-All options need to be connected by an vertical bar "|", please refer to the example below. You can stack multiple options (like: airpseed | vvi | inv), but it is not recommended and may result in weird behaviors. All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff shock2. The harder you make the shock, the more engine-rpm torque effect you get. Animators can use [set\_inertia\_defaults](#Set_inertia_defaults "wikilink"). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
+All options need to be connected by an vertical bar "\|", please refer to the example below. You can stack multiple options (like: airpseed \| vvi \| inv), but it is not recommended and may result in weird behaviors. All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff shock2. The harder you make the shock, the more engine-rpm torque effect you get. Animators can use [set\_inertia\_defaults](#Set_inertia_defaults "wikilink"). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
 
     animators
     ;node1, node2, factor, options
@@ -1046,31 +1012,19 @@ The parameters are:
 -   **Maximum extension**: <span style="color:#BD0058">Positive real number</span>; The longest length the command beam will try to be, as a proportion of its initial length.
 -   **Shortening key**: <span style="color:#BD0058">Key code (decimal number)</span>; A number representing the function key needed to compress the command beam. More than one can be controlled with the same key. (see above for keymap)
 -   **Lengthening key**: <span style="color:#BD0058">Key code (decimal number)</span>; The key used to extend the command beam.
--   '''Option flag(s) '''<span style="color:#666">(optional)</span>:
-
-:\***n** Filler option, does nothing.
-
-:\***i** Makes the command beam invisible.
-
-:\***r** Makes the command beam behave like a rope or a winch.
-
-:\***c** Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
-:\***f** Stops the command moving faster when engine revs increase.
-
-:\***p** Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
-:\***o** is like **p**, but it will stop in the center position.
-
+-   **Option flag(s)** <span style="color:#666">(optional)</span>:
+    - **n** Filler option, does nothing.
+    - **i** Makes the command beam invisible.
+    - **r** Makes the command beam behave like a rope or a winch.
+    - **c** Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
+    - **f** Stops the command moving faster when engine revs increase.
+    - **p** Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
+    - **o** is like **p**, but it will stop in the center position.
 -   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing "t" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
-
-<!-- -->
-
 -   **Inertia: Start delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command start. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Stop delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command stop. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Start function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for start. See diagram below.
 -   **Inertia: Stop function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for stop. See diagram below.
-
-<!-- -->
-
 -   **Affects engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; 0 means that moving this command won't affect engine RPM, so it is independent. Value larger than 0 specifies how much engine power will be needed for this command to move.
 -   **Needs engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Boolean</span>; <span style="color:#0B8A00">default = true</span>; value of "true" means that the command only works with a running engine. "False" means engine is not needed.
 
@@ -1955,41 +1909,14 @@ Please read this guide if you want to use high quality meshes: [Mesh LODs](Mesh_
 Parameters are:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system
-
-<!-- -->
-
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **x\_offset**: <span style="color:#BD0058">Real number</span>; The amount the prop should be moved in the X direction from the **reference node**. The distance it is moved depends on the distance between the **Reference node** and the '''X direction node '''(it's proportional): (0) leaves the prop on the reference node, (1) moves it all the way to the **X direction node**, and (0.5) puts the prop half-way between the two
-
-<!-- -->
-
 -   **y\_offset**: <span style="color:#BD0058">Real number</span>; The amount the prop should be moved in the Y direction from the **reference node**. Like the **X direction offset**, the amount it is proportional to the distance between the **reference node** and the **Y direction node**.
-
-<!-- -->
-
 -   **z\_offset**: <span style="color:#BD0058">Real number</span>; Imagine a surface which the X and Y directions pass straight through. If looking along that surface is the forwards direction, then this field moves the prop straight up. Unlike the **X direction offset** and the **Y direction offset**, the amount for the straight up offset is measured in meters
-
-<!-- -->
-
 -   **x\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the prop should be rotated about the X axis
-
-<!-- -->
-
 -   **y\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the prop should be rotated about the Y axis
-
-<!-- -->
-
 -   **z\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the prop should be rotated about the 'straight up' axis
-
-<!-- -->
-
 -   **mesh\_name\_or\_special\_prop**: <span style="color:#BD0058">String (may start with a keyword)</span>; The name of the Ogre3D mesh object used for the prop.
     If the mesh name starts with one of the following keywords, it will have special behavior:
 
@@ -2209,139 +2136,77 @@ This directive adds an animation to last defined prop. Up to **10** rotations an
 Parameters:
 
 -   **Ratio**: <span style="color:#BD0058">Real number</span>; A coefficient for the animation, prop degree if used with **mode: rotation** and propoffset if used with*' mode: offset*'.
-
-<!-- -->
-
 -   **Lower limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; The lower limit for the animation, remember to use a negative value when source can be negative (as in wheel steering.) Use **0** for both options to get default limits (Full circle rotation ( -180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
-
-<!-- -->
-
 -   **Upper limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Upper Limiter for movement, remember to use a positive value when source can be negative (as in wheel steering.). Use **0** for both options to get default limits ( Full circle rotation (-180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
+-   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
+    - **"source:"** <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
+    - **"mode:"** <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
+    - **"event:"** <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
+    - **"autoanimate"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
+-   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
+-   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current sttus, useful for switches and staus levers. Only works with **mode:event** and a correct defined **event:**
 
-<!-- -->
-
--   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and | - delimited list of options.
-
-<!-- -->
-
--   -   **"source:"** <span style="color:#BD0058">Source type(s) joined with |</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
-
-<!-- -->
-
--   -   **"mode:"** <span style="color:#BD0058">Mode type(s) joined with |</span>; A list of modes to use, multiple modes are valid
-
-<!-- -->
-
--   -   **"event:"** <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
-
-<!-- -->
-
--   **"autoanimate"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
-
-<!-- -->
-
--   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at the set limit
-
-<!-- -->
-
--   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
-
-<!-- -->
-
+-   **Ratio**: <span style="color:#BD0058">Real number</span>; A coefficient for the animation, prop degree if used with **mode: rotation** and propoffset if used with*' mode: offset*'.
+-   **Lower limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; The lower limit for the animation, remember to use a negative value when source can be negative (as in wheel steering.) Use **0** for both options to get default limits (Full circle rotation ( -180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
+-   **Upper limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Upper Limiter for movement, remember to use a positive value when source can be negative (as in wheel steering.). Use **0** for both options to get default limits ( Full circle rotation (-180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
+-   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
+    - **"source:"** <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
+    - **"mode:"** <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
+    - **"event:"** <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
+    - **"autoanimate"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
+-   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
 -   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current sttus, useful for switches and staus levers. Only works with **mode:event** and a correct defined **event:**
 
 *source:*
 
-:\***airspeed** - This prop animates with the actual speed (not speedometer indicated speed) for any vehicle.
-
-:\***vvi** - This prop animates with the vehicle's vertical velocity.
-
-:\***altimeter100k** - This prop animates with the vehicle's altitude up to 100,000 feet.
-
-:\***altimeter10k** - This prop animates with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
-
-:\***altimeter1k** - This prop animates with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects/
-
-:\***aoa** - This prop animates with the dashboard's angle of attack.
-
-:\***flap** - This prop animates with the flap setting on the vehicle.
-
-:\***airbrake** - This prop animates with the airbrake setting on the vehicle.
-
-:\***roll** - This prop animates with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
-
-:\***pitch** - This prop animates with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
-
-:\***throttle1** - This prop animates with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
-
-:\***rpm1** - This prop animates with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
-
-:\***aerotorq1** - This prop animates with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
-
-:\***aeropit1** - This prop animates with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
-
-:\***aerostatus1** - This prop animates with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
-
-:\***brakes** - This prop animates with the vehicle's brake status.
-
-:\***accel** - This prop animates with the vehicle's accelerator status.
-
-:\***clutch** - This prop animates with the vehicle's clutch status.
-
-:\***speedo** - This prop animates with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
-
-:\***tacho** - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
-
-:\***turbo** - This prop animates with the vehicle's turbocharger PSI.
-
-:\***parking** - This prop animates with the vehicle's parking brake status.
-
-:\***shifterman1** - H-shift left/right ( Reverse | 1-2 | 3-4 | 5-6...11-12 as positions, scales with engine settings (maxGear)
-
-:\***shifterman2** - H-shift forth/back animator Reverse-2-6-8-10-12 | 1-3-5-7-9-11 as positions
-
-:\***sequential** - sequentiell shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
-
-:\***shifterlin** - for auto transmission animations or gearselect indicators ( special limits rules apply for this one, see below! )
-
-:\***torque** - current engine torque
-
-:\***heading** - This prop animates with the current heading of the truck.
-
-:\***difflock** - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
-
-:\***rudderboat** - This prop animates with the steering hydro on boats.
-
-:\***throttleboat**- This prop animates with the throttle status on boats.
-
-:\***steeringwheel** - This prop animates with the steering status for trucks.
-
-:\***aileron** - This prop animates with the aileron status for airplanes.
-
-:\***elevator** - This prop animates with the elevator status for airplanes.
-
-:\***rudderair** - This prop animates with the rudder status for airplanes.
-
-:\***permanent** - This is a permanent source, which is always active when you are in the truck.
-
-:\***event** - A source triggered by a keypress, needs exactly one defined event.
+-   **airspeed** - This prop animates with the actual speed (not speedometer indicated speed) for any vehicle.
+-   **vvi** - This prop animates with the vehicle's vertical velocity.
+-   **altimeter100k** - This prop animates with the vehicle's altitude up to 100,000 feet.
+-   **altimeter10k** - This prop animates with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
+-   **altimeter1k** - This prop animates with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects/
+-   **aoa** - This prop animates with the dashboard's angle of attack.
+-   **flap** - This prop animates with the flap setting on the vehicle.
+-   **airbrake** - This prop animates with the airbrake setting on the vehicle.
+-   **roll** - This prop animates with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
+-   **pitch** - This prop animates with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
+-   **throttle1** - This prop animates with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
+-   **rpm1** - This prop animates with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
+-   **aerotorq1** - This prop animates with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
+-   **aeropit1** - This prop animates with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
+-   ***aerostatus1** - This prop animates with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
+-   **brakes** - This prop animates with the vehicle's brake status.
+-   **accel** - This prop animates with the vehicle's accelerator status.
+-   **clutch** - This prop animates with the vehicle's clutch status.
+-   **speedo** - This prop animates with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
+-   **tacho** - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
+-   **turbo** - This prop animates with the vehicle's turbocharger PSI.
+-   **parking** - This prop animates with the vehicle's parking brake status.
+-   **shifterman1** - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
+-   **shifterman2** - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
+-   **sequential** - sequentiell shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
+-   **shifterlin** - for auto transmission animations or gearselect indicators ( special limits rules apply for this one, see below! )
+-   **torque** - current engine torque
+-   **heading** - This prop animates with the current heading of the truck.
+-   **difflock** - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
+-   **rudderboat** - This prop animates with the steering hydro on boats.
+-   **throttleboat**- This prop animates with the throttle status on boats.
+-   **steeringwheel** - This prop animates with the steering status for trucks.
+-   **aileron** - This prop animates with the aileron status for airplanes.
+-   **elevator** - This prop animates with the elevator status for airplanes.
+-   **rudderair** - This prop animates with the rudder status for airplanes.
+-   **permanent** - This is a permanent source, which is always active when you are in the truck.
+-   **event** - A source triggered by a keypress, needs exactly one defined event.
 
 Specials: Limits do not apply for **mode:sequential**. In this case the options are the F-Keynumbers of the command-movement you want to catch. Option 0, 0 with **mode:sequential** provides a shift\_up/shift\_down animation for a sequential shifter. Look into the Examples.
 
 *mode:*
 
-:\***x-rotation** - Rotate around the x-axis, in some cases special rules apply here see below (gimbal lock)
-
-:\***y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
-
-:\***y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
-
-:\***x-offset** - offset along the x-axis
-
-:\***y-offset** - offset along the y-axis
-
-:\***z-offset** - offset along the z-axis
-
+-   **x-rotation** - Rotate around the x-axis, in some cases special rules apply here see below (gimbal lock)
+-   **y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
+-   **y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
+-   **x-offset** - offset along the x-axis
+-   **y-offset** - offset along the y-axis
+-   **z-offset** - offset along the z-axis
   
 *event:*
 
@@ -2439,41 +2304,14 @@ You can declare several flexbodies. Each must be composed of the two lines (prop
 The first line of this section is exactly the same format as on the props section. Parameters:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system. If you want to place your flexbody globally, declare -1 as the reference node.
-
-<!-- -->
-
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **x\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the X direction from the **reference\_node**.
-
-<!-- -->
-
 -   **y\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the Y direction from the **reference\_node**.
-
-<!-- -->
-
 -   **z\_offset\_meters**: <span style="color:#BD0058">Real number</span>; Moves the flexbody "straight up". Unlike the **x\_offset** and the **y\_offset**, the distance is measured in meters.
-
-<!-- -->
-
 -   **x\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the flexbody should be rotated about the X axis
-
-<!-- -->
-
 -   **y\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the flexbody should be rotated about the Y axis
-
-<!-- -->
-
 -   **z\_axis\_rotation**: <span style="color:#BD0058">Real number</span>; The amount the flexbody should be rotated about the 'straight up' axis
-
-<!-- -->
-
 -   **mesh\_name**: <span style="color:#BD0058">String</span>; The name of the Ogre3D mesh object used for the flexbody.
 
 ## (sub-directive) forset
@@ -2706,81 +2544,24 @@ The videocamera section describes how to set up multiple mirrors and extra camer
 Parameters:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The node where the camera is placed. This is your reference node. Any existing node\# is valid.
-
-<!-- -->
-
 -   **left\_node**: <span style="color:#BD0058">Node number/name</span>; The Z-reference of the camera, should be exactly right of the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
-
-<!-- -->
-
 -   **bottom\_node**: <span style="color:#BD0058">Node number/name</span>; The Y-reference of the camera, should be exactly below the reference node when the camera points forward to the trucks front. Any existing node\# is valid.
-
-<!-- -->
-
 -   **alt\_reference\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative cam position node. It replaces the reference node for position but not for orientation. Good to setup mirrors and cams with just one extra node to an existing truck. Important for mirrors, read below! Any existing node\# is valid.
-
-<!-- -->
-
 -   **alt\_orientation\_node** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Node number/name</span>; <span style="color: #008079">Empty value = -1</span>; The alternative camera orientation node. If set, it skips any camera orientation calculation and makes the cam permanent look at the set node. Good for hooks moving up and down. Any existing node\# is valid.
-
-<!-- -->
-
 -   **offset\_x** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; X-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional forth and back on its roll-axis.
-
-<!-- -->
-
 -   **offset\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Y-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam up and down in meters on its rotation-axis.
-
-<!-- -->
-
 -   **offset\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Z-offset from reference or alternative cam position node. Works like props offsets, relates to the plane of Node 1-3 as frustum and moves the cam proportional left and right on its pitch-axis.
-
-<!-- -->
-
 -   **rotation\_x** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Optional camera X-rotation. Works like props rotation, relates to the plane of Node 1-3 as frustum. Adjust camera orientation without moving nodes.
-
-<!-- -->
-
 -   **rotation\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Optional camera Y-rotation. Works like props rotation, relates to the plane of Node 1-3 as frustum. Adjust camera orientation without moving nodes. Avoid the gimbal lock, using Y-rotation is not recommended together with other axis.
-
-<!-- -->
-
 -   **rotation\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Optional camera Z-rotation. Works like props rotation, relates to the plane of Node 1-3 as frustum. Adjust camera orientation without moving nodes.
-
-<!-- -->
-
 -   **fov**: <span style="color:#BD0058">Real number, valid: 0.01 -179.9</span>; Camera field of view.
-
-<!-- -->
-
 -   **texture\_width**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; X-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum 256, watch your FPS.
-
-<!-- -->
-
 -   **texture\_height**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; Y-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum 256, watch your FPS.
-
-<!-- -->
-
 -   **min\_clip\_distance**: <span style="color:#BD0058">Real number</span>; Minimum distance in meters of objects to be rendered Valid: 0.1 - value&lt;maxclipdistance. Useful to blend out things that should not be displayed. Good to tune FPS.
-
-<!-- -->
-
 -   **max\_clip\_distance**: <span style="color:#BD0058">Real number</span> Maximum distance in meters of objects to be rendered Valid: value&gt;minclipdistance - 32000. Useful to blend out things that should not be displayed. Watch your FPS.
-
-<!-- -->
-
 -   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: **-1** == camera, **0** == tracker camera (requires an alternative camera orientation node), **1** == mirrors.
-
-<!-- -->
-
 -   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a **-2** in here.
-
-<!-- -->
-
 -   **material**: <span style="color:#BD0058">String</span>; The material the generated textured should be displayed on. Requires a prop (mesh) using this material to get any visual results.
-
-<!-- -->
-
 -   **name**: <span style="background-color:#fb7">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
 
 **Important**:
@@ -3260,61 +3041,19 @@ Airbrakes are a moving panel used to slow down an airplane (key bindings: "3" an
 Parameters:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system
-
-<!-- -->
-
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
-
-<!-- -->
-
 -   **additional\_node**: <span style="color:#BD0058">Node number/name</span>; An additional node to make the braking forces symmetric (they are applied to noderef, nodex, nodey and nodea).
-
-<!-- -->
-
 -   **x\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the X direction from the **reference node**. The distance it is moved depends on the distance between the **Reference node** and the '''X direction node '''(it's proportional): (0) leaves the prop on the reference node, (1) moves it all the way to the **X direction node**, and (0.5) puts the prop half-way between the two
-
-<!-- -->
-
 -   **y\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the Y direction from the **reference node**. Like the **X direction offset**, the amount it is proportional to the distance between the **reference node** and the **Y direction node**.
-
-<!-- -->
-
 -   **z\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; Imagine a surface which the X and Y directions pass straight through. If looking along that surface is the forwards direction, then this field moves the prop straight up. Unlike the **X direction offset** and the **Y direction offset**, the amount for the straight up offset is measured in meters
-
-<!-- -->
-
 -   **width**: <span style="color:#BD0058">Real number</span>; Dimension of the panel
-
-<!-- -->
-
 -   **height**: <span style="color:#BD0058">Real number</span>; Dimension of the panel
-
-<!-- -->
-
 -   **max\_inclination\_angle**: <span style="color:#BD0058">Real number</span>; Maximum inclination angle
-
-<!-- -->
-
 -   **texcoord\_x1**: <span style="color:#BD0058">Real number <0 - 1></span>; Texture coordinate.
-
-<!-- -->
-
 -   **texcoord\_y1**: <span style="color:#BD0058">Real number <0 - 1></span>; Texture coordinate.
-
-<!-- -->
-
 -   **texcoord\_x2**: <span style="color:#BD0058">Real number <0 - 1></span>; Texture coordinate.
-
-<!-- -->
-
 -   **texcoord\_y2**: <span style="color:#BD0058">Real number <0 - 1></span>; Texture coordinate.
-
-<!-- -->
-
 -   **lift\_coefficient** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -1.0</span>
 
 <!-- -->
