@@ -67,3 +67,18 @@ footer {
 	text-align: right;
 }
 
+th, td {
+	padding: $spacing-unit/4;
+	border: 1px solid gray;
+	margin: 0;
+}
+
+th {
+	background: a#ecffd7;
+}
+
+table {
+	margin-bottom: $spacing-unit/2;
+	border-collapse: collapse;
+}
+
