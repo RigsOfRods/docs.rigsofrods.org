@@ -56,9 +56,16 @@ Note that, to this date (04/2016), there is no editor which would create these f
 
 ## The heightmap
 
-As said above, RoR's primary mechanism for shaping a terrain are heightmaps. We use 8-bit or 16-bit unsigned integer RAW heightmaps. These can be converted from images or generated in a specialized tool. We provide tutorials for several of them.
+As said above, RoR's primary mechanism for shaping a terrain are heightmaps. We use 8-bit or 16-bit unsigned integer RAW heightmaps.
+These can be converted from images or generated in a specialized tool. We provide tutorials for several of them.
 
 To use the heightmap in a terrain, you must configure it in ".otc" file (filename, size, bit depth...) and include it into terrain's ZIP archive.
+
+You can use [ImageMagick](http://www.imagemagick.org/script/index.php) to convert to and from the .raw heightmap files:
+
+- To convert from a .raw file to a bitmap image file issue the following command:convert -depth 16 -size 1025x1025 -endian LSB gray:mymap.raw mymap.bmp
+- To convert back to a .raw file for RoR execute: convert mymap.bmp -resize 1025x1025 -endian LSB -flip gray:mymap.raw
+- For more information, see ImageMagick's [command-line processing](http://www.imagemagick.org/script/command-line-processing.php) page. 
 
 ## Ground textures
 

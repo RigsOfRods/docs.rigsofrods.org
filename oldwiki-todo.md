@@ -228,7 +228,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Submeshing_in_Blender
 * http://ror.avrintech.net/rorwikibackup/index.php/SwingAxleDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Terms_of_Service
-* http://ror.avrintech.net/rorwikibackup/index.php/Terrain_Formats
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrain_finishing
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
 * http://ror.avrintech.net/rorwikibackup/index.php/Testbusdoors.truck

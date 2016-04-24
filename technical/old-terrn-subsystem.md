@@ -12,9 +12,15 @@ which was obsoleted, and thus we couldn't rely on it anymore.
 
 -   **.terrn** - You define terrain name, associated .cfg name, spawn point position, ambient colour and various object positions.
 -   **.cfg** - You define Terrain Texture, RAW Heightmap file, World Sizes and Height, Tiles the map get divided into, Terrain LOD and additional stuff.
--   **.RAW** - A greyscale image which is the heightmap of the terrain.
+-   **.RAW** - A greyscale image which is the heightmap of the terrain. It is a RAW 8/16 bit DEM (digital elevation map). 
+    Its dimensions MUST BE squared sized and with size (2^n) + 1, in example 1025x1025.
+    As a consequence, the total file size must be 2,101,250 bytes (2x1025x1025).
+    Other elevation sized maps could be: 129x129, 513x513, 2049x2049 
 -   **.os** - Caelum Config
--   **.png/./jpg/.dds** - Terrain Texture.
+-   **.png/./jpg/.dds** - Terrain Texture, typically a large bitmap (for example a 1024x1024 BMP) that is projected onto the terrain.
+    This texture must include shading and shadowing (the terrain is not shaded by RoR).
+    The light source (the sun) heading is -60 degree and altitude of 25 degree.
+-   **.png/./jpg/.dds** - A miniature map: a 256x256 image (that can be the reduction of the texture file) used as a map in RoR. 
 
 # Converting Terrn format to Terrn2 format
 
