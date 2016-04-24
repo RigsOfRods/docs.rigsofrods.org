@@ -62,11 +62,14 @@ To use the heightmap in a terrain, you must configure it in ".otc" file (filenam
 
 ## Ground textures
 
-...
+The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
+Other build-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
+
+Terrain supports "Global Light maps" (Mountains will shadow the terrain if the sun is low, etc...), but this feature is not currently used by RoR.
 
 # Static objects
 
-...
+To be written...
 
 
 
