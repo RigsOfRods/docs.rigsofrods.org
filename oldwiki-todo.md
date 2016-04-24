@@ -2,7 +2,7 @@
 layout: page
 title:  "Wiki porting checklist - TODO"
 ---
-                                            
+
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
@@ -47,7 +47,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/BusDoorDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/CMT_Vehicle_Quality_Standards
 * http://ror.avrintech.net/rorwikibackup/index.php/Changing_meshwheels - looks lame
-* http://ror.avrintech.net/rorwikibackup/index.php/Collision_Meshes
 * http://ror.avrintech.net/rorwikibackup/index.php/ColourCodedBusDoorDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/CommandList_Examples - truckfile = commands
 * http://ror.avrintech.net/rorwikibackup/index.php/Command_Line_Arguments
@@ -101,7 +100,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_fix_truck_problems
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_get_a_good_Flexbody
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_beacon_flare
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_collision_mesh
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_good_light_texture
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_plane_with_two_sides
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_not_Fail_at_skinning
