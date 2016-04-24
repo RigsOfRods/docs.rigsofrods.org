@@ -3,6 +3,8 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
+* http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
+
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
@@ -229,7 +231,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/SwingAxleDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Terms_of_Service
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrain_finishing
-* http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
 * http://ror.avrintech.net/rorwikibackup/index.php/Testbusdoors.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Texture_File
 * http://ror.avrintech.net/rorwikibackup/index.php/Texturing_Tutorial

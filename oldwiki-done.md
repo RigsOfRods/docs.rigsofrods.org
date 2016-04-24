@@ -10,6 +10,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Collision_Meshes
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_collision_mesh
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrain_Formats
+* http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
 
 * .odef = redirect
 * .terrn = redirect
