@@ -82,3 +82,21 @@ table {
 	border-collapse: collapse;
 }
 
+.info-box {
+    padding: 0;
+    border: 1px solid #3ac58a;
+    background: #d2efe3;
+    margin: $spacing-unit/2 auto $spacing-unit/2 auto;
+    width: 80%;
+}
+
+.info-box p {
+    padding-left: $spacing-unit/2; 
+    padding-right: $spacing-unit/2;
+}
+
+.info-box p.title{
+    font-weight: bold;
+    background: #9bdabb;
+}
+

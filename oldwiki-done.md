@@ -5,7 +5,8 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
-* http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System 
+* http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System
+* http://ror.avrintech.net/rorwikibackup/index.php/Alpha_Splatting
 
 * .odef = redirect
 * .terrn = redirect

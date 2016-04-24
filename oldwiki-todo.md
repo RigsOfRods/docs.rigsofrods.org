@@ -16,7 +16,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_rust_to_a_texture - graphics
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps - terrn
-* http://ror.avrintech.net/rorwikibackup/index.php/Alpha_Splatting
 * http://ror.avrintech.net/rorwikibackup/index.php/AngelScript
 * http://ror.avrintech.net/rorwikibackup/index.php/AntiRollDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Arm_node - reference arm node
