@@ -4,9 +4,19 @@ title:  "Terrain subsystem (Terrn2)"
 categories: [technical]
 ---
 
+<div class="toc" markdown="1">
+* TOC
+{:toc}
+</div>
+
 This terrain system was introduced in version 0.4.
 The previous terrain system was based upon Ogre engine's TerrainManager component,
 which was obsoleted, and thus RoR couldn't rely on it anymore.
+
+<br> <!-- Ugly hack to make space for TOC -->
+<br>
+<br>
+<br>
 
 # Terrain 2 (.terrn2) file format
 
