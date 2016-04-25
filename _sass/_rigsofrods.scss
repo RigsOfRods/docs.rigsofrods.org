@@ -100,3 +100,12 @@ table {
     background: #9bdabb;
 }
 
+.toc {
+     border: 1px solid #C0C0C0;
+     margin: 0 0 $spacing-unit/2 $spacing-unit/2; 
+     border-spacing: 0px;
+     width: 300px;
+     padding: $spacing-unit/2;
+     float: right;
+     border-radius: 3px;
+}
