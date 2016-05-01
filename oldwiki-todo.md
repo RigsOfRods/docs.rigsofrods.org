@@ -3,6 +3,10 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
+# In progress
+
+
+
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
@@ -146,7 +150,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/PanhardRodDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Placing_objects_on_terrains_%28For_0.38_and_0.4%29
 * http://ror.avrintech.net/rorwikibackup/index.php/Plugins_*.cfg
-* http://ror.avrintech.net/rorwikibackup/index.php/Port_Forwarding
 * http://ror.avrintech.net/rorwikibackup/index.php/Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Procedual_Roads_Examples
 * http://ror.avrintech.net/rorwikibackup/index.php/Removing_managedmaterials
@@ -208,7 +211,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Rules_Useless
 * http://ror.avrintech.net/rorwikibackup/index.php/Separate_%28flexbody%29_deforming/detaching_parts
 * http://ror.avrintech.net/rorwikibackup/index.php/Server_Commands
-* http://ror.avrintech.net/rorwikibackup/index.php/Server_Setup_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Plugins
 * http://ror.avrintech.net/rorwikibackup/index.php/SketchUp_truck_tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Serverside_scripting

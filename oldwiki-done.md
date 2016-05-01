@@ -15,6 +15,8 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting - obsolete, missing downloads
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_Races
 * http://ror.avrintech.net/rorwikibackup/index.php/Introduction_to_Event_Scripting
+* http://ror.avrintech.net/rorwikibackup/index.php/Server_Setup_Tutorial
+* http://ror.avrintech.net/rorwikibackup/index.php/Port_Forwarding
 
 * .odef = redirect
 * .terrn = redirect
@@ -118,7 +120,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Planned_Features - empty
 * http://ror.avrintech.net/rorwikibackup/index.php/Popis_Terrn._souboru - CZ, empty
 * http://ror.avrintech.net/rorwikibackup/index.php/Popis_Truck_souboru - empty
-* http://ror.avrintech.net/rorwikibackup/index.php/Port_Forwardings_for_Multiplayer - redir
+* http://ror.avrintech.net/rorwikibackup/index.php/Port_Forwardings_for_Multiplayer - redir > Server_Setup_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Portal - dead 
 * http://ror.avrintech.net/rorwikibackup/index.php/Po%C3%85%C2%BEavky_verze - CZ, obsolete
 * http://ror.avrintech.net/rorwikibackup/index.php/Presentations - dead
