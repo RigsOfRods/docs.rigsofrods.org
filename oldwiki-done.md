@@ -11,6 +11,10 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_collision_mesh
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrain_Formats
 * http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
+* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_terrain - obsolete, tutorial for Terragen 0.9
+* http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting - obsolete, missing downloads
+* http://ror.avrintech.net/rorwikibackup/index.php/Creating_Races
+* http://ror.avrintech.net/rorwikibackup/index.php/Introduction_to_Event_Scripting
 
 * .odef = redirect
 * .terrn = redirect

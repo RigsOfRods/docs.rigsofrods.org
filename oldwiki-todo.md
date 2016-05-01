@@ -3,8 +3,6 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
-* http://ror.avrintech.net/rorwikibackup/index.php/Terrn_file_description
-
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
@@ -57,12 +55,10 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Crash_Report_Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_An_Invisible_Slide_Rail
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_GIF_Animations
-* http://ror.avrintech.net/rorwikibackup/index.php/Creating_Races
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_TRACKS/CRAWLERS_with_slidenodes
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_raw_file
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
-* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_terrain
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_your_own_GUI - custom MyGUI dashboards
 * http://ror.avrintech.net/rorwikibackup/index.php/Custom_Dashboards - "renderdash" material
 * http://ror.avrintech.net/rorwikibackup/index.php/Custom_Flares
@@ -113,7 +109,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Input.map
 * http://ror.avrintech.net/rorwikibackup/index.php/Input.map_graphical
 * http://ror.avrintech.net/rorwikibackup/index.php/Installation_Guide
-* http://ror.avrintech.net/rorwikibackup/index.php/Introduction_to_Event_Scripting
 * http://ror.avrintech.net/rorwikibackup/index.php/Keypress_Events 
 * http://ror.avrintech.net/rorwikibackup/index.php/L3DT_Map_Making
 * http://ror.avrintech.net/rorwikibackup/index.php/Languages/Help
@@ -239,7 +234,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Troubleshooting
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
 * http://ror.avrintech.net/rorwikibackup/index.php/Tutorial:_Creating_TRACKS/CRAWLERS
-* http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting
 * http://ror.avrintech.net/rorwikibackup/index.php/Typical_terrain_cfg_file
 * http://ror.avrintech.net/rorwikibackup/index.php/UserGroups - old forum
 * http://ror.avrintech.net/rorwikibackup/index.php/User_token - historical
