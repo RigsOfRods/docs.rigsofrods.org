@@ -3,10 +3,6 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
-# In progress
-
-
-
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38

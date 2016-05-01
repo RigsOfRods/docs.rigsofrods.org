@@ -4,6 +4,11 @@ title:  "Multiplayer server setup"
 categories: [gameplay]
 ---
 
+<div class="toc" markdown="1">
+  * TOC
+  {:toc}
+</div>
+
 This tutorial will guide you through the process of setting up a Rigs of Rods multiplayer server.
 
 # Assumptions
