@@ -90,7 +90,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_are_the_skidmarks_working
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_add_LED_flares_to_a_vehicle
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute - general content contrib
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_Input_maps
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_to_community_projects_using_GitHub - Modern, Hiradur
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_create_a_high_quality_sound%28-loop%29
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_create_custom_particles
@@ -106,17 +105,13 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_write_a_good_tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Hydrax_Config
 * http://ror.avrintech.net/rorwikibackup/index.php/Importing_An_Existing_Terrain_Into_L3DT
-* http://ror.avrintech.net/rorwikibackup/index.php/Input.map
-* http://ror.avrintech.net/rorwikibackup/index.php/Input.map_graphical
-* http://ror.avrintech.net/rorwikibackup/index.php/Installation_Guide
-* http://ror.avrintech.net/rorwikibackup/index.php/Keypress_Events 
+* http://ror.avrintech.net/rorwikibackup/index.php/Installation_Guide 
 * http://ror.avrintech.net/rorwikibackup/index.php/L3DT_Map_Making
 * http://ror.avrintech.net/rorwikibackup/index.php/Languages/Help
 * http://ror.avrintech.net/rorwikibackup/index.php/LevelOfDetail - LOD
 * http://ror.avrintech.net/rorwikibackup/index.php/Make_RoR_Faster 
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_DDS_textures
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_Skins_with_Paint.net
-* http://ror.avrintech.net/rorwikibackup/index.php/Making_a_keymap
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp

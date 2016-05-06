@@ -17,6 +17,12 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Introduction_to_Event_Scripting
 * http://ror.avrintech.net/rorwikibackup/index.php/Server_Setup_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Port_Forwarding
+* http://ror.avrintech.net/rorwikibackup/index.php?title=Input.map_graphical
+* http://ror.avrintech.net/rorwikibackup/index.php?title=Input.map
+* http://ror.avrintech.net/rorwikibackup/index.php/Input.map_graphical_printed_version
+* http://ror.avrintech.net/rorwikibackup/index.php?title=Keypress_Events
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_a_keymap
+* http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_Input_maps
 
 * .odef = redirect
 * .terrn = redirect
