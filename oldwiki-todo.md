@@ -6,7 +6,6 @@ title:  "Wiki porting checklist - TODO"
 # WIP
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Truck_Construction_%28old%29 - processed intro and softbody, TODO: suspension, wheels, other
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
 
 # pending
 

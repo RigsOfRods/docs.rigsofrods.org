@@ -30,6 +30,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements - useless
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
 
 * .odef = redirect
 * .terrn = redirect

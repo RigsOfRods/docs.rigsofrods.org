@@ -1153,15 +1153,41 @@ In 0.4.0.5 and above it is possible to toggle importcommands on/off for the curr
 
 ## Set\_beam\_defaults
 
-This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes all the beams (and the hydros and ropes) declared after this line. You can use this line many times to make different groups of beams that have different characteristics (e.g. stronger chassis, softer cab, etc.). This method is better than the **globeams** command that is now deprecated. The parameters comes on the same line, after **set\_beam\_defaults**. You can use the first parameters (most useful) and safely ignore the last parameters. They are:
+This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes all the beams (and the hydros and ropes) declared after this line. You can use this line many times to make different groups of beams that have different characteristics (e.g. stronger chassis, softer cab, etc.).
 
--   **Springiness** - The overall stiffness of a beam. The higher the value the stiffer the beam. *The default value is 9000000.*
--   **Damping constant** - The resistance to motion of a beam ''The default value is 12000. ''
--   **Deformation threshold constant** - The amount of force that must be applied to a beam before it will not return to its original length. The lower the value, the easier it is to deform. *The default value is 400000.*
--   **Breaking threshold constant** - The amount of force that must be applied to a beam before it will break. *The default value is 1000000.*
--   **Beam diameter** (optional) - The visual size of a beam in meters. This setting only has a visual effect. Changing it does not modify how a truck will drive. *The default value is 0.05.*
--   **Beam material** (optional) - *The default is "tracks/beam".*
--   '''Plastic deformation coefficient ''' (optional) - Valid range: 0.0 - 1.0. This defines how elastic the deformation of a beam is. It is explained in greater detail below. *The default value is 0.0.*
+Parameters:
+
+-   **Springiness**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 9000000</span>;
+        The overall stiffness of a beam. The higher the value the stiffer the beam.
+-   **Damping constant**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 12000</span>;
+        The resistance to motion of a beam. Higher values make the beam less likely to deform.
+-   **Deformation threshold constant**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 400000</span>;
+        The amount of force that must be applied to a beam before it will not return to its original length. The lower the value, the easier it is to deform.
+-   **Breaking threshold constant**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 1000000</span>;
+        The amount of force that must be applied to a beam before it will break.
+-   **Beam diameter**:
+        <span style="color:#666">(optional)</span>;
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 0.05 (= 5cm)</span>
+        The visual size of a beam in meters. This setting only has a visual effect. Changing it does not modify how a truck will drive.
+-   **Beam material**
+        <span style="color:#666">(optional)</span>;
+        <span style="color:#BD0058">String</span>;
+        <span style="color:#0B8A00">Default: <i>tracks/beam</i></span>;
+        The material used to color the beam. It must be defined in a separate _.material_ file. 
+-   **Plastic deformation coefficient**:
+        <span style="color:#666">(optional)</span>;
+        <span style="color:#BD0058">Real number in range: 0.0 - 1.0</span>;
+        <span style="color:#0B8A00">Default: 0.0</span>;
+        This defines how elastic the deformation of a beam is. It is explained in greater detail below.
 
 To use default values without having to type the numbers, use "-1" in each field. Example:
 
@@ -1196,7 +1222,7 @@ If you want to to make something deform well (like for flexbodies), use these se
     ;set_beam_defaults spring, damping, deform,  break, diameter,         material, deform_coef
     set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack,         0.9
 
-The plastic deformation coefficient is 0.0 by default (elastic deformation). By setting it as property you can tune the related beam group to your needs. Valid values: 0.0 - 1.0, do not exceed that range! A plastic deformation coefficient setting of 0.0 is close to the original beam behavior of RoR 0.36.2 (quite elastic). 1.0 is close to the maximum plastic deformation you were able to reach with the former experimental enable\_advanced\_deformation patch. Never use a break setting lower then a deform setting! This will result in a beam breaking instantly when it starts deforming!
+The plastic deformation coefficient is 0.0 by default (elastic deformation). By setting it as property you can tune the related beam group to your needs. For example, if a cube made of nodes and beams is crashed to a wall, then the placement of the nodes are displaced, altering the original shape to an irregular one. This also affects the length of beams, if nodes are displaced, the beams may conform to a new shorter or longer length, and staying that way until another outside force is applied. Valid values: 0.0 - 1.0, do not exceed that range! A plastic deformation coefficient setting of 0.0 is close to the original beam behavior of RoR 0.36.2 (quite elastic). 1.0 is close to the maximum plastic deformation you were able to reach with the former experimental enable\_advanced\_deformation patch. Never use a break setting lower then a deform setting! This will result in a beam breaking instantly when it starts deforming!
 
 ## Set\_beam\_defaults\_scale
 
@@ -1222,13 +1248,35 @@ Take note:
 
 ## Set\_node\_defaults
 
-This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the nodes (including wheel and camera nodes) declared after this line. You can use this line many times to make different groups of nodes that have different characteristics (e.g. more grip for wheels, more surface drag for chassis nodes, etc.). The parameters comes on the same line, after **set\_node\_defaults**. Merged into RoR SVN Revision 746, it is available in the RoR-Stream/updater service as "use experimental" setting in the new installer service. You can use the first parameters (most useful) and safely ignore the last parameters. If they are not defined then default settings apply. The parameters are:
+This is a directive which affects all nodes (including wheel and camera nodes) declared on lines below it. 
+You can use this line many times to make different groups of nodes that have different characteristics (e.g. more grip for wheels, more surface drag for chassis nodes, etc.). 
 
--   **loadweight** - The default loadweight mass applied to a node. Will be overridden by a per node definition (the option **"l"**). Adds loadweight to following nodes. Minimass calculation is unaffected *The default value is 0.*
--   **friction** - Coefficient to lower/raise friction of a node which alters its traction abilities. ''The default value is 1.0. ''
--   **volume** - Coefficient to lower/raise buoyancy of a node, this only applies when the node is in a fluid. ''The default value is 1.0. ''
--   **surface** - Coefficient to lower/raise the surface of a node, this only applies when the node is in a fluid\*. ''The default value is 1.0. ''
--   **options** - Set any node-option property as default. You do not need to set the **"l"** property if a default loadweight is set.
+The parameters are:
+
+-   **loadweight**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 0.0</span>; 
+        The default loadweight mass applied to a node. Will be overridden by a per node definition (the option "l").
+        Minimass calculation is unaffected.
+-   **friction**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 1.0</span>; 
+        The amount to multiply the node's friction by. 
+        A setting of 2 will double the friction; a setting of 0 will create a frictionless node.
+-   **volume**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 1.0</span>; 
+        The amount to multiply the node's buoyancy. 
+        A setting of 2 will double the buoyancy; a setting of 0 will create a non-buoyant node. This only applies when the node is in a fluid.
+-   **surface**:
+        <span style="color:#BD0058">Real number</span>;
+        <span style="color:#0B8A00">Default: 1.0</span>; 
+        The amount to multiply the node's surface by. 
+        A setting of 2 will double the surface; a setting of 0 will create a node with no surface. This only applies when the node is in a fluid.
+-   **options**:
+        <span style="color:#666">(optional)</span>;
+        <span style="color:#BD0058">Options string</span>;
+        Set any node-option property as default. You do not need to set the **"l"** property if a default loadweight is set.
 
 Important: Buoyancy volume and drag surface settings only have effect on fluids defined in groundmodels.cfg (mud definitions), so right now they do not work with the standard RoR Water.
 
