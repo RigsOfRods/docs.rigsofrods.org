@@ -26,6 +26,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Aircraft_Construction - incomplete, useless
 * http://ror.avrintech.net/rorwikibackup/index.php/Configurator
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
+* http://ror.avrintech.net/rorwikibackup/index.php/Editorizer
 
 * .odef = redirect
 * .terrn = redirect
