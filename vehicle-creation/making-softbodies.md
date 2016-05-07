@@ -55,6 +55,8 @@ Create a text file in the _MyDocuments\Rigs of Rods XX\vehicles_ directory. Call
 
 ## Required sections
 
+Not including certain sections can yield different results, from making the vehicle explode upon spawning, to its nonappearance in the selection menu.
+
 The first line MUST begin with the truck name:
 
     Tutorial Truck

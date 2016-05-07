@@ -32,6 +32,20 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Rigidity
+* http://ror.avrintech.net/rorwikibackup/index.php/McPhersonStrutDemonstrationWithRigidifiersForWiki.truck - obsolete
+* http://ror.avrintech.net/rorwikibackup/index.php/BeamAxleDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/PanhardRodDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/WattsLinkageDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/DeDionTubeDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/WalkingBeamDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/SwingAxleDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Suspension
+* http://ror.avrintech.net/rorwikibackup/index.php/DoubleWishboneDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/McPhersonStrutDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/McPhersonStrutDemonstrationWithSlidenodesForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/AntiRollDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/NoAntiRollDemonstrationForWiki.truck
+* http://ror.avrintech.net/rorwikibackup/index.php/LowStressLifterAxleDemonstrationForWiki.truck
 
 * .odef = redirect
 * .terrn = redirect
