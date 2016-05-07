@@ -188,6 +188,8 @@ Here is the resulting file:
     cinecam
     ;x,y,z,bindings
     0.5, 0.5, 1.0, 0,1,2,3,4,5,6,7
+
+Here is the chassis rendered in RoR: 
     
 ![](/images/softbody-tutorial-soapbox-hull-ingame.jpg)
 
