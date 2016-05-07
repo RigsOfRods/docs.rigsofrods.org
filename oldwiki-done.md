@@ -28,6 +28,8 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer_Tutorial
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements - useless
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
 
 * .odef = redirect
 * .terrn = redirect

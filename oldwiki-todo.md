@@ -5,16 +5,17 @@ title:  "Wiki porting checklist - TODO"
 
 # WIP
 
+* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Truck_Construction_%28old%29 - processed intro and softbody, TODO: suspension, wheels, other
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
+
 # pending
 
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
+
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag
@@ -36,7 +37,7 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Suspension
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings
-* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Truck_Construction_%28old%29
+
 
 # Docs
 
