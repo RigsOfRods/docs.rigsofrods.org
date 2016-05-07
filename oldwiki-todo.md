@@ -3,6 +3,42 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
+# WIP
+
+# pending
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Packaging
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Props
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Rigidity
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Sections
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Set_beam_defaults
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Setup_a_working_environment
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Steering
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshes
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshs
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Suspension
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings
+* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Truck_Construction_%28old%29
+
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
@@ -50,7 +86,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/ColourCodedBusDoorDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/CommandList_Examples - truckfile = commands
 * http://ror.avrintech.net/rorwikibackup/index.php/Command_Line_Arguments
-* http://ror.avrintech.net/rorwikibackup/index.php/Configurator
 * http://ror.avrintech.net/rorwikibackup/index.php/Crash_Report
 * http://ror.avrintech.net/rorwikibackup/index.php/Crash_Report_Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_An_Invisible_Slide_Rail
@@ -151,36 +186,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR.log
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRAutoBeamber.py
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Packaging
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Props
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Rigidity
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Sections
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Set_beam_defaults
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Setup_a_working_environment
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Steering
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshes
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshs
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Suspension
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit_Developer
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR_Museum
@@ -213,8 +218,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Spawning_a_truck_in_Lua
 * http://ror.avrintech.net/rorwikibackup/index.php/Standard_wheels_to_mesh_wheels
 * http://ror.avrintech.net/rorwikibackup/index.php/Starting_RoR_under_Linux
-* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Aircraft_Construction
-* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Truck_Construction_%28old%29
 * http://ror.avrintech.net/rorwikibackup/index.php/Submeshing_in_Blender
 * http://ror.avrintech.net/rorwikibackup/index.php/SwingAxleDemonstrationForWiki.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Terms_of_Service

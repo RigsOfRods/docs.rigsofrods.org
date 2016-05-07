@@ -23,6 +23,8 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php?title=Keypress_Events
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_keymap
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_Input_maps
+* http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Aircraft_Construction - incomplete, useless
+* http://ror.avrintech.net/rorwikibackup/index.php/Configurator
 
 * .odef = redirect
 * .terrn = redirect
