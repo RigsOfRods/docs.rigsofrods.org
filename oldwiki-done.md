@@ -27,6 +27,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/Configurator
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer
+* http://ror.avrintech.net/rorwikibackup/index.php/Editorizer_Tutorial
 
 * .odef = redirect
 * .terrn = redirect

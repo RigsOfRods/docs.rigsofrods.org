@@ -104,7 +104,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Detachable_nodes/beams
 * http://ror.avrintech.net/rorwikibackup/index.php/Displaying_outgauge_data_on_another_screen_or_device
 * http://ror.avrintech.net/rorwikibackup/index.php/DoubleWishboneDemonstrationForWiki.truck
-* http://ror.avrintech.net/rorwikibackup/index.php/Editorizer_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Ensuring_Unique_ID_Compatibility
 * http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it - old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/FAQ
