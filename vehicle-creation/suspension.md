@@ -39,7 +39,7 @@ A fully working concept vehicle is available in the repository.
 
 <div style="clear: both;"></div>
 
-# Geometries: Dependent suspension
+# Dependent suspension
 
 The wheels of each axle are securely connected to each other using non independent suspension systems. The force from every bump that a wheel on one side goes over is transmitted into the other wheel too. These systems do not tend produce very good handling, and therefore are not often used on sports cars. Non independent suspension is much more commonly found on heavy duty vehicles, where the link between the wheels makes axles much stronger
 
@@ -206,7 +206,7 @@ On the right: the concept vehicle in game.
 
 <div style="clear: both;"></div>
 
-# Geometry: Independent suspension
+# Independent suspension
 
 There are no significant connections between wheels in independent suspension setups. They are therefore much more suited to vehicles where roadholding is especially important.
 
