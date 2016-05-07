@@ -19,7 +19,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
