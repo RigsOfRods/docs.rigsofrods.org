@@ -31,6 +31,7 @@ title:  "Wiki porting checklist - DONE"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Basic_Truck_Requirements - useless
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/First_beams_and_nodes
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Rigidity
 
 * .odef = redirect
 * .terrn = redirect
