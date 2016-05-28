@@ -2199,17 +2199,6 @@ Parameters:
 -   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
 -   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current sttus, useful for switches and staus levers. Only works with **mode:event** and a correct defined **event:**
 
--   **Ratio**: <span style="color:#BD0058">Real number</span>; A coefficient for the animation, prop degree if used with **mode: rotation** and propoffset if used with*' mode: offset*'.
--   **Lower limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; The lower limit for the animation, remember to use a negative value when source can be negative (as in wheel steering.) Use **0** for both options to get default limits (Full circle rotation ( -180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
--   **Upper limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Upper Limiter for movement, remember to use a positive value when source can be negative (as in wheel steering.). Use **0** for both options to get default limits ( Full circle rotation (-180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
--   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
-    - **"source:"** <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
-    - **"mode:"** <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
-    - **"event:"** <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
-    - **"autoanimate"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
--   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
--   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current sttus, useful for switches and staus levers. Only works with **mode:event** and a correct defined **event:**
-
 *source:*
 
 -   **airspeed** - This prop animates with the actual speed (not speedometer indicated speed) for any vehicle.
