@@ -849,7 +849,7 @@ Options:
 - **aoa** - This animator extends or contracts with the dashboard's angle of attack.
 - **flap** - This animator extends or contracts with the flap setting on the vehicle.
 - **airbrake** - This animator extends or contracts with the airbrake setting on the vehicle.
-- ***roll** - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
+- **roll** - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
 - **pitch** - This animator extends or contracts with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
 - **throttle1** - This animator extends or contracts with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
 - **rpm1** - This animator extends or contracts with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
