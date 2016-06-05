@@ -9,32 +9,26 @@ title:  "Wiki porting checklist - TODO"
 
 # pending
 
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines
+
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Packaging
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Props
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Sections
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Set_beam_defaults
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Setup_a_working_environment
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Steering
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshes
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshs
 * http://ror.avrintech.net/rorwikibackup/index.php/Axle_Rigidity
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings
-
 
 # Docs
 
@@ -70,7 +64,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_mesh_tutorial - blender 2.5+
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_simple_Mesh_creation - old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Blueprints - links, looks good!
-* http://ror.avrintech.net/rorwikibackup/index.php/Building_Railroad_vehicles - looks good!
 * http://ror.avrintech.net/rorwikibackup/index.php/Building_Workflow - super
 * http://ror.avrintech.net/rorwikibackup/index.php/Bump_Map_Alpha_Splatting - materials
 * http://ror.avrintech.net/rorwikibackup/index.php/Bump_map_shader - normal mapping, looks lame
@@ -98,7 +91,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Detachable_nodes/beams
 * http://ror.avrintech.net/rorwikibackup/index.php/Displaying_outgauge_data_on_another_screen_or_device
 * http://ror.avrintech.net/rorwikibackup/index.php/Ensuring_Unique_ID_Compatibility
-* http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it - old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/FAQ
 * http://ror.avrintech.net/rorwikibackup/index.php/Folder_Structure
 * http://ror.avrintech.net/rorwikibackup/index.php/Folding_Bus_Doors
@@ -199,7 +191,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Skins
 * http://ror.avrintech.net/rorwikibackup/index.php/Skinzip
-* http://ror.avrintech.net/rorwikibackup/index.php/Soundscript_files
 * http://ror.avrintech.net/rorwikibackup/index.php/Spawning_a_truck_in_Lua
 * http://ror.avrintech.net/rorwikibackup/index.php/Standard_wheels_to_mesh_wheels
 * http://ror.avrintech.net/rorwikibackup/index.php/Starting_RoR_under_Linux
@@ -209,7 +200,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Testbusdoors.truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Texture_File
 * http://ror.avrintech.net/rorwikibackup/index.php/Texturing_Tutorial
-* http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation
 * http://ror.avrintech.net/rorwikibackup/index.php/Transport_Simulator
 * http://ror.avrintech.net/rorwikibackup/index.php/Troubleshooting
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
