@@ -5,6 +5,8 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
+* http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation -> building-rail-tracks
+* http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it -> building-rail-tracks
 * http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System
 * http://ror.avrintech.net/rorwikibackup/index.php/Alpha_Splatting
 * http://ror.avrintech.net/rorwikibackup/index.php/Collision_Meshes
