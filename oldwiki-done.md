@@ -5,6 +5,10 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings               -> aircraft-and-aerodynamics
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines   -> aircraft-and-aerodynamics
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag            -> aircraft-and-aerodynamics
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines -> discarded, useless
 * http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation -> building-rail-tracks
 * http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it -> building-rail-tracks
 * http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System
