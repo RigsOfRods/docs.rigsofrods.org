@@ -93,6 +93,7 @@ Max angle is the maximum angle the airbrake will lift when fully engaged.  Then 
 Air brakes can easily be added to a wing box, just set noderef, nodex, nodey and nodea as the four upper nodes of a wing box.
 
 Example:
+
 ```
 airbrakes
 ; noderef, nodex, nodey, nodea, offsetx, offsety, offsetz, width, length, max angle, texcord x1, texcoord y1, texcoord x2, texcoord y2
@@ -133,6 +134,7 @@ First we will take care of the "props" section.
 The first thing that you want to add to the props section is the "spinprop.mesh" this is what makes the turboprops/pistonprops work. When placing this mesh its important how the nodes that you place it on are oriented, for this test model that I'm making it would have ref node: 0, X node: 1, Y node: 5 this way when the engine is spinning the propeller mesh (ie pale.mesh) will be oriented right. for example if I switch X and Y around so X was 5 and Y was 1 the propellers would appear to spin at a 90 degree angle compared to the way the node/beam engine was really spinning. Also you need one "spinprop.mesh" for each engine you have. 
 
 Example props section for "spinprop.mesh":
+
 ```
 props
 ;ref,x,y,offsetx,offsety,offsetz,rotx,roty,rotz,mesh
@@ -146,6 +148,7 @@ Its the same as for the "spinprop.mesh" you just need one for every visible prop
 By looking at the picture and the example props section below it should be fairly easy to figure out.
 
 Example props section with propellers mesh's:
+
 ```
 props
 ;ref,x,y,offsetx,offsety,offsetz,rotx,roty,rotz,mesh
@@ -187,6 +190,7 @@ Explanation of the parameters for the example engine built for this tutorial:
 * The eighth parameter is the airfoil that the props will use, in this case "Clark-Y.alf".
 
 Example turboprops section:
+
 ```
 turboprops
 ;ref, back, p1, p2, p3, p4, power, propfoil
@@ -219,12 +223,14 @@ Its quite possible that you will have to use set_beam_defaults to make it so tha
 The settings that this example uses may be a bit extreme but you get the idea.
 
 set_beam_defaults to start out with when raising the deform and break values:
+
 ```
 ;        spring, damping, deform, break,
 set_beam_defaults -1, -1, 400000, 1000000,
 ```
 
 set_beam_defaults that the example engine uses:
+
 ```
 ;         spring, damping, deform, break,
 set_beam_defaults -1, -1, 2000000, 3000000,
