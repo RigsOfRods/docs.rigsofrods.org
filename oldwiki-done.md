@@ -5,6 +5,8 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands       -> special-components
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks          -> special-components
 * http://ror.avrintech.net/rorwikibackup/index.php/Soundscript_files -> fileformat-soundscript
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction -> nautical-vehicles
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines                  -> nautical-vehicles
