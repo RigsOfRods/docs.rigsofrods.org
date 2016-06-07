@@ -149,7 +149,6 @@ Cliffdrop.raw
 ```
 ###.terrn -> .tobj
 ```
-#After the configuration lines in the .terrn (usually after line 4) Copy all the lines after it except "end".
 
 1385.381592, 300.027374, 736.709045, 0.000000, 0.000000, 0.000000, truckshop
 
