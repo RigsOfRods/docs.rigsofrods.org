@@ -5,18 +5,38 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands       -> special-components
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks          -> special-components
-* http://ror.avrintech.net/rorwikibackup/index.php/Soundscript_files -> fileformat-soundscript
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction -> nautical-vehicles
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines                  -> nautical-vehicles
-* http://ror.avrintech.net/rorwikibackup/index.php/Building_Railroad_vehicles -> rail-vehicles
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings               -> aircraft-and-aerodynamics
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines   -> aircraft-and-aerodynamics
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag            -> aircraft-and-aerodynamics
+special-components
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands   
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks   
+
+fileformat-soundscript
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Soundscript_files
+
+nautical-vehicles
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Simple_boat_body_construction 
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Boat_engines  
+
+rail-vehicles
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Building_Railroad_vehicles 
+
+aircraft-and-aerodynamics
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wings              
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Propeller_engines  
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Fusedrag 
+
+building-rail-tracks
+
+* http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation 
+* http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it
+
+Unsorted
+
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines -> discarded, useless
-* http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation -> building-rail-tracks
-* http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it -> building-rail-tracks
 * http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System
 * http://ror.avrintech.net/rorwikibackup/index.php/Alpha_Splatting
 * http://ror.avrintech.net/rorwikibackup/index.php/Collision_Meshes
