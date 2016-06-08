@@ -11,12 +11,10 @@ title:  "Wiki porting checklist - TODO"
 
 
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Hooks
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Packaging
