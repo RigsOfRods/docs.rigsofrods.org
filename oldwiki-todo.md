@@ -75,7 +75,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Crash_Report_Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_An_Invisible_Slide_Rail
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_GIF_Animations
-* http://ror.avrintech.net/rorwikibackup/index.php/Creating_TRACKS/CRAWLERS_with_slidenodes
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_raw_file
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
@@ -201,7 +200,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Transport_Simulator
 * http://ror.avrintech.net/rorwikibackup/index.php/Troubleshooting
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
-* http://ror.avrintech.net/rorwikibackup/index.php/Tutorial:_Creating_TRACKS/CRAWLERS
 * http://ror.avrintech.net/rorwikibackup/index.php/Typical_terrain_cfg_file
 * http://ror.avrintech.net/rorwikibackup/index.php/UserGroups - old forum
 * http://ror.avrintech.net/rorwikibackup/index.php/User_token - historical

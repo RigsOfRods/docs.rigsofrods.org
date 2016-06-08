@@ -5,6 +5,11 @@ title:  "Wiki porting checklist - DONE"
 
 ## Completely done or discarded
 
+caterpillar-vehicles
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Tutorial:_Creating_TRACKS/CRAWLERS
+* http://ror.avrintech.net/rorwikibackup/index.php/Creating_TRACKS/CRAWLERS_with_slidenodes
+
 special-components
 
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Commands   
