@@ -30,21 +30,21 @@ In this tutorial I will be converting the [Cliffdrop](https://repofiles.avrintec
 Once you've downloaded the template terrain, extract it into a folder using any zipping program (Windows can extract files by default,
 but I use [7-Zip](http://www.7-zip.org/download.html). It should look like this:
 
-![1.1](http://i.imgur.com/eYj4ian.png)
+![1.1](/images/terrain-conversion1.png)
 
 Extract the 0.3x terrain zip into that same folder. Now it should look like this:
-![1.2](http://i.imgur.com/wN1KRI0.png)
+![1.2](/images/terrain-conversion2.png)
 
 Rename the template_04 files to match your terrain's file name
 **Delete the template_04.raw file first as you will get duplicate errors otherwise!**:
 
-![1.3](http://i.imgur.com/skF2zZo.png)
+![1.3](/images/terrain-conversion3.png)
 
 ##Transfering terrain information to 0.4 terrain files
 Now that you've got both the new 0.4 files and the old terrain files in the zip, I will start out by transfering the information from the .terrn file to the .terrn2 file.
 If you're using Notepad++, you can open both files and have them side-by-side for easy editing:
-![3](http://i.imgur.com/z2Bnh01.png)
-![4](http://i.imgur.com/bOUWrEc.png)
+![3](/images/terrain-conversion4.png)
+![4](/images/terrain-conversion5.png)
 ###.terrn -> .terrn2
 
 ```
@@ -164,25 +164,25 @@ If you tried the terrain in-game right now, you'd see there is a large white spa
 I will use GIMP with the dds texture plugin to fix this. I recommend backing up your original texture image first.
 
 ####Open your texture in GIMP (in this case, Cliffdrop.jpg)
-![gimp1](http://i.imgur.com/UeBLAkg.png)
+![gimp1](/images/terrain-conversiongimp1.png)
 
 ####Go to Layer > Mask > Add Layer Mask...
-![gimp2](http://i.imgur.com/px8lxKR.png)
+![gimp2](/images/terrain-conversiongimp2.png)
 
 ###Select Black (full transparency) and click 'Add'
-![gimp3](http://i.imgur.com/koPMGII.png)
+![gimp3](/images/terrain-conversiongimp3.png)
 
 ###It should now look like this:
-![gimp4](http://i.imgur.com/1pvqxsW.png)
+![gimp4](/images/terrain-conversiongimp4.png)
 
 ###Go to File > Export As...
-![gimp5](http://i.imgur.com/0TgzeQb.png)
+![gimp5](/images/terrain-conversiongimp5.png)
 
 ###Set the file format to .dds
-![gimp6](http://i.imgur.com/3hTJ9Cr.png)
+![gimp6](/images/terrain-conversiongimp6.png)
 
 ###Set the compression type to 'BC3 / DXT5' and click 'OK'
-![gimp5](http://i.imgur.com/AH6tCga.png)
+![gimp5](/images/terrain-conversiongimp7.png)
 
 You can now close GIMP.
 
@@ -192,6 +192,6 @@ Now go ahead and zip all the files and place them in your Documents/Rigs of Rods
 
 When you load the terrain in Rigs of Rods, You should have a working 0.4-ported terrain!
 
-![FinishedMap](http://i.imgur.com/jkkxVxt.png)
+![FinishedMap](/images/terrain-conversionfin.png)
 
 #####Download the finished terrain [here.](https://www.dropbox.com/s/8qs28gs5dujgxgd/Cliffdrop.zip)
