@@ -45,7 +45,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Arm_node - reference arm node
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_to_Multiplayer
-* http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_videotutorials
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender2ogre - Important: If you've scaled your mesh in Object-Mode press CTRL + A to apply scale and rotation.
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Nodes_and_Beam_Plugin - TODO: reincarnate the plugin!
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Ogre_Plugins

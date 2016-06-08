@@ -39,6 +39,11 @@ building-rail-tracks
 * http://ror.avrintech.net/rorwikibackup/index.php/TrainDocumentation 
 * http://ror.avrintech.net/rorwikibackup/index.php/Extract_a_spline_from_a_heightmap_and_generate_a_track_of_it
 
+configurator
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_videotutorials
+* http://ror.avrintech.net/rorwikibackup/index.php/Configurator
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines -> discarded, useless
@@ -61,7 +66,6 @@ Unsorted
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_keymap
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_Input_maps
 * http://ror.avrintech.net/rorwikibackup/index.php/Step_by_Step_Aircraft_Construction - incomplete, useless
-* http://ror.avrintech.net/rorwikibackup/index.php/Configurator
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Introduction
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer
 * http://ror.avrintech.net/rorwikibackup/index.php/Editorizer_Tutorial

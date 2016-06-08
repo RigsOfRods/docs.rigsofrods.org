@@ -13,6 +13,10 @@ categories: [gameplay]
 
 This is the configurator. It is how you set the options for how RoR looks and how it plays. It is also how you access multiplayer servers.
 
+# Video tutorial
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/z60VoTbJao0" frameborder="0" allowfullscreen></iframe>
+
 # Settings
 
 ## Render System
