@@ -1,11 +1,19 @@
 ---
-title: basic-terrain-conversion
+layout: page
+title: "Converting terrain to `terrn2` format"
+categories: [terrain-creation]
 ---
-##Basic (Single-layer) 0.3x terrain to 0.4 conversion
+
+<div class="toc" markdown="1">
+  * TOC
+  {:toc}
+</div>
+
+#Basic (Single-layer) 0.3x terrain to 0.4 conversion
 
 As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
 
-#Programs needed:
+Programs needed:
 - Any text editor (I recommend [Notepad++](http://notepad-plus-plus.org/) as I will use one of its features)
 - [GIMP (Version 2.8.x is used in this tutorial)](https://www.gimp.org/downloads/) 
 - [DDS texture plugin for GIMP](http://registry.gimp.org/node/70) This page will not explain how to install it.
@@ -13,9 +21,11 @@ As of 0.4.0, The terrain format changed into what's now called [.terrn2](https:/
 ##What defines a "Single-layer" terrain?
 
 In the old [.terrn](https://ror.avrintech.net/rorwikibackup/index.php/.terrn) format's .cfg file, you will find a line at the top in this format:
+
 ```
 WorldTexture=texture.dds
 ```
+
 This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting) which is not covered in this tutorial.
 
 ##Getting the template
@@ -102,6 +112,7 @@ Cliffdrop.tobj=
 ```
 
 ###.cfg -> .otc
+
 ```
 ;Heightmap values
 ;size (horizontal/vertical)
@@ -131,9 +142,11 @@ MaxPixelError=3
 ;Advanced 0.4 texture values, best to leave them as the defaults.
 LightmapEnabled=0
 SpecularMappingEnabled=1
-NormalMappingEnabled=0
+NormalMappingEnabled=0     
 ```
+
 ###.cfg -> *.-page-0-0.otc
+
 ```
 Cliffdrop.raw = Heightmap filename 
 1 = Amount of layers
@@ -147,7 +160,9 @@ Cliffdrop.raw
 3000     , Cliffdrop.dds     ,   Cliffdrop.dds
 
 ```
+
 ###.terrn -> .tobj
+
 ```
 ;After the configuration lines in the .terrn (usually after line 4) Copy all the lines after it except "end".
 ```
@@ -160,28 +175,36 @@ Cliffdrop.raw
 We're done with the text editor now.
 
 ##Removing the terrain shininess 
+
 If you tried the terrain in-game right now, you'd see there is a large white space over the terrain where the sun is. 
 I will use GIMP with the dds texture plugin to fix this. I recommend backing up your original texture image first.
 
 ####Open your texture in GIMP (in this case, Cliffdrop.jpg)
+
 ![gimp1](/images/terrain-conversiongimp1.png)
 
 ####Go to Layer > Mask > Add Layer Mask...
+
 ![gimp2](/images/terrain-conversiongimp2.png)
 
 ###Select Black (full transparency) and click 'Add'
+
 ![gimp3](/images/terrain-conversiongimp3.png)
 
 ###It should now look like this:
+
 ![gimp4](/images/terrain-conversiongimp4.png)
 
 ###Go to File > Export As...
+
 ![gimp5](/images/terrain-conversiongimp5.png)
 
 ###Set the file format to .dds
+
 ![gimp6](/images/terrain-conversiongimp6.png)
 
 ###Set the compression type to 'BC3 / DXT5' and click 'OK'
+
 ![gimp5](/images/terrain-conversiongimp7.png)
 
 You can now close GIMP.
