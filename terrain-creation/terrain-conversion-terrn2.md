@@ -14,6 +14,7 @@ categories: [terrain-creation]
 As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
 
 Programs needed:
+
 - Any text editor (I recommend [Notepad++](http://notepad-plus-plus.org/) as I will use one of its features)
 - [GIMP (Version 2.8.x is used in this tutorial)](https://www.gimp.org/downloads/) 
 - [DDS texture plugin for GIMP](http://registry.gimp.org/node/70) This page will not explain how to install it.
