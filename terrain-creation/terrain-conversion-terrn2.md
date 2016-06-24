@@ -9,7 +9,7 @@ categories: [terrain-creation]
   {:toc}
 </div>
 
-#Basic (Single-layer) 0.3x terrain to 0.4 conversion
+# Basic (Single-layer) 0.3x terrain to 0.4 conversion
 
 As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
 
@@ -18,7 +18,7 @@ Programs needed:
 - [GIMP (Version 2.8.x is used in this tutorial)](https://www.gimp.org/downloads/) 
 - [DDS texture plugin for GIMP](http://registry.gimp.org/node/70) This page will not explain how to install it.
 
-##What defines a "Single-layer" terrain?
+## What defines a "Single-layer" terrain?
 
 In the old [.terrn](https://ror.avrintech.net/rorwikibackup/index.php/.terrn) format's .cfg file, you will find a line at the top in this format:
 
@@ -28,15 +28,15 @@ WorldTexture=texture.dds
 
 This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](http://ror.avrintech.net/rorwikibackup/index.php/Tutorials/Bump_Map_Alpha_Splatting) which is not covered in this tutorial.
 
-##Getting the template
+## Getting the template
 I have made and uploaded a template terrain [here](https://www.dropbox.com/s/vnyybg7zs2ljur0/template_04_conversion.zip) with the right file structure which will be used throughout this tutorial.
 
 
-##Choosing your terrain to convert
+## Choosing your terrain to convert
 Lots of terrains have already been converted, you can find them [here](http://rigsofrods.org/thread-10.html), **don't waste your time converting a terrain that has already been converted!**
 In this tutorial I will be converting the [Cliffdrop](https://repofiles.avrintech.net/repofiles-3rd-batch/Cliffdrop.zip) terrain.
 
-##Getting started
+## Getting started
 Once you've downloaded the template terrain, extract it into a folder using any zipping program (Windows can extract files by default,
 but I use [7-Zip](http://www.7-zip.org/download.html). It should look like this:
 
@@ -50,12 +50,12 @@ Rename the template_04 files to match your terrain's file name
 
 ![1.3](/images/terrain-conversion3.png)
 
-##Transfering terrain information to 0.4 terrain files
+## Transfering terrain information to 0.4 terrain files
 Now that you've got both the new 0.4 files and the old terrain files in the zip, I will start out by transfering the information from the .terrn file to the .terrn2 file.
 If you're using Notepad++, you can open both files and have them side-by-side for easy editing:
 ![3](/images/terrain-conversion4.png)
 ![4](/images/terrain-conversion5.png)
-###.terrn -> .terrn2
+### .terrn -> .terrn2
 
 ```
 [General]
@@ -111,7 +111,7 @@ Cliffdrop.tobj=
 
 ```
 
-###.cfg -> .otc
+### .cfg -> .otc
 
 ```
 ;Heightmap values
@@ -145,7 +145,7 @@ SpecularMappingEnabled=1
 NormalMappingEnabled=0     
 ```
 
-###.cfg -> *.-page-0-0.otc
+### .cfg -> *.-page-0-0.otc
 
 ```
 Cliffdrop.raw = Heightmap filename 
@@ -161,7 +161,7 @@ Cliffdrop.raw
 
 ```
 
-###.terrn -> .tobj
+### .terrn -> .tobj
 
 ```
 ;After the configuration lines in the .terrn (usually after line 4) Copy all the lines after it except "end".
@@ -174,42 +174,42 @@ Cliffdrop.raw
 
 We're done with the text editor now.
 
-##Removing the terrain shininess 
+## Removing the terrain shininess 
 
 If you tried the terrain in-game right now, you'd see there is a large white space over the terrain where the sun is. 
 I will use GIMP with the dds texture plugin to fix this. I recommend backing up your original texture image first.
 
-####Open your texture in GIMP (in this case, Cliffdrop.jpg)
+#### Open your texture in GIMP (in this case, Cliffdrop.jpg)
 
 ![gimp1](/images/terrain-conversiongimp1.png)
 
-####Go to Layer > Mask > Add Layer Mask...
+#### Go to Layer > Mask > Add Layer Mask...
 
 ![gimp2](/images/terrain-conversiongimp2.png)
 
-###Select Black (full transparency) and click 'Add'
+### Select Black (full transparency) and click 'Add'
 
 ![gimp3](/images/terrain-conversiongimp3.png)
 
-###It should now look like this:
+### It should now look like this:
 
 ![gimp4](/images/terrain-conversiongimp4.png)
 
-###Go to File > Export As...
+### Go to File > Export As...
 
 ![gimp5](/images/terrain-conversiongimp5.png)
 
-###Set the file format to .dds
+### Set the file format to .dds
 
 ![gimp6](/images/terrain-conversiongimp6.png)
 
-###Set the compression type to 'BC3 / DXT5' and click 'OK'
+### Set the compression type to 'BC3 / DXT5' and click 'OK'
 
 ![gimp5](/images/terrain-conversiongimp7.png)
 
 You can now close GIMP.
 
-##Trying the terrain in-game
+## Trying the terrain in-game
 
 Now go ahead and zip all the files and place them in your Documents/Rigs of Rods 0.4/packs folder.
 
@@ -217,4 +217,4 @@ When you load the terrain in Rigs of Rods, You should have a working 0.4-ported 
 
 ![FinishedMap](/images/terrain-conversionfin.png)
 
-#####Download the finished terrain [here.](https://www.dropbox.com/s/8qs28gs5dujgxgd/Cliffdrop.zip)
+##### Download the finished terrain [here.](https://www.dropbox.com/s/8qs28gs5dujgxgd/Cliffdrop.zip)
