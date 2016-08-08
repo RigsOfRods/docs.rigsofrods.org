@@ -99,7 +99,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Groundmodel_Description_File - fileformat
 * http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Get_Support
-* http://ror.avrintech.net/rorwikibackup/index.php/How_To_Skin_Successfully
 * http://ror.avrintech.net/rorwikibackup/index.php/How_are_the_skidmarks_working
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_add_LED_flares_to_a_vehicle
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute - general content contrib
@@ -112,7 +111,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_beacon_flare
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_good_light_texture
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_plane_with_two_sides
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_not_Fail_at_skinning
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_participate_in_races - outdated?
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_write_a_good_tutorial
@@ -128,7 +126,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp
-* http://ror.avrintech.net/rorwikibackup/index.php/Making_non-overwriting_skins
 * http://ror.avrintech.net/rorwikibackup/index.php/Material_File
 * http://ror.avrintech.net/rorwikibackup/index.php/Material_basics
 * http://ror.avrintech.net/rorwikibackup/index.php/Meaningful_Subject
@@ -184,8 +181,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Serverside_scripting
 * http://ror.avrintech.net/rorwikibackup/index.php/Shadows
 * http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Tutorial
-* http://ror.avrintech.net/rorwikibackup/index.php/Skins
-* http://ror.avrintech.net/rorwikibackup/index.php/Skinzip
 * http://ror.avrintech.net/rorwikibackup/index.php/Spawning_a_truck_in_Lua
 * http://ror.avrintech.net/rorwikibackup/index.php/Standard_wheels_to_mesh_wheels
 * http://ror.avrintech.net/rorwikibackup/index.php/Starting_RoR_under_Linux

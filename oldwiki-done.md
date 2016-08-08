@@ -48,6 +48,14 @@ configurator
 
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR.cfg
 
+skins
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_non-overwriting_skins - legacy skinning, discarded
+* http://ror.avrintech.net/rorwikibackup/index.php/Skins
+* http://ror.avrintech.net/rorwikibackup/index.php/Skinzip
+* http://ror.avrintech.net/rorwikibackup/index.php/How_To_Skin_Successfully - unfinished, useless -> discarded
+* http://ror.avrintech.net/rorwikibackup/index.php/How_to_not_Fail_at_skinning - very basic (just paint.NET), useless -> discarded
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines -> discarded, useless
