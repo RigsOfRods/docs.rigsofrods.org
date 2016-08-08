@@ -56,6 +56,10 @@ skins
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Skin_Successfully - unfinished, useless -> discarded
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_not_Fail_at_skinning - very basic (just paint.NET), useless -> discarded
 
+making-softbodies
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Weight_tuning
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal

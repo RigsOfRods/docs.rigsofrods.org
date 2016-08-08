@@ -195,3 +195,48 @@ Here is the chassis rendered in RoR:
     
 ![](/images/softbody-tutorial-soapbox-hull-ingame.jpg)
 
+# Weight tuning
+
+Making a stable, lightweight, and complex vehicle is a difficult challenge in RoR.  
+You will certainly run into this problem if you try to do a light airplane (any airplane less than about 20 tons).
+
+The root problem is that strong beams attached to light nodes are physically unstable. 
+In RoR physics, only nodes bear weight. To ensure a realistic distribution of weight, the node weights are computed as this:
+
+* Compute the sum of the length of all beams
+* From the global net weight, compute the linear density of beams (total mass/total length)
+* For each node, set its weight as the sum of the weight of all beams attached to it 
+  (in fact, half the weight of the beams, to avoid double counting weight)
+* Add extra load weight to the loaded nodes (the total load is divided by the number of nodes declared as loaded)
+* Fix weight of ropes, hooks, and cameras to predefined "stable" values
+* To ensure stability of all nodes, if a node is found to be below 50kg, its weigh is set to 50kg 
+  (this can happen if a node is only connected to very short beams)
+
+At the end of the process, the final, total mass of the vehicle can be higher than anticipated, 
+especially if the last rule applied to a lot of nodes. With this rule, a 100 node 
+vehicle can never be below 5 tons. Note that wheel node weights are computed separately depending on the wheel weight settings.
+
+To know if your vehicle has gained weight, enabled mass debugging in the Configurator 
+and load the vehicle into RoR.  Leave and look in RoR.log and check the last line 
+"TOTAL VEHICLE MASS". This is the final total mass (including wheels).
+
+If it is too much, you will need to lower the minimum node mass setting. 
+You can do it with the "minimass" command (at the beginning of the truck/boat/airplane file):
+
+    minimass
+    25.0
+
+You can also lower the global mass, to reduce the mass of "heavy" nodes (those not concerned by the minimum mass rule).
+
+When you lower minimass, you will encounter physics instability. 
+The solution to instability is to lower the rigidity of beams, using 
+the "set_beam_defaults" to soften them until they are stable with the new mass settings.
+
+But when you lower the rigidity, parts of the vehicle will be too fragile. 
+So use set_beam_defaults to adjust strength depending on the stress elements will bear. 
+For example, landing gear beams will need stronger beams, and fuselage softer beams.
+You can also use loaded nodes to balance and/or stabilize specific unstable nodes.
+
+So with the minimass and set_beam_defaults commands, with much guessing, 
+trimming, and luck you can achieve lightweight airplanes.
+
