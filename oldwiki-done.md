@@ -58,6 +58,13 @@ skins
 
 Unsorted
 
+* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal
+* http://ror.avrintech.net/rorwikibackup/index.php/Languages/Help -> old wiki feature, useless now
+* http://ror.avrintech.net/rorwikibackup/index.php/AngelScript -> empty
+* http://ror.avrintech.net/rorwikibackup/index.php/Patch_Checklist -> dev. guidelines, outdated
+* http://ror.avrintech.net/rorwikibackup/index.php/What_needs_to_be_done -> development, very outdated
+* http://ror.avrintech.net/rorwikibackup/index.php/GameBot -> outdated
+* http://ror.avrintech.net/rorwikibackup/index.php/Version_Requirement -> old wiki feature (orange box), useless
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Jetengines -> discarded, useless
 * http://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System
 * http://ror.avrintech.net/rorwikibackup/index.php/Alpha_Splatting
