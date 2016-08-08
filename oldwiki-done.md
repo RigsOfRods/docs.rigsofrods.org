@@ -43,6 +43,10 @@ configurator
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_videotutorials
 * http://ror.avrintech.net/rorwikibackup/index.php/Configurator
+ 
+[config/README](https://github.com/RigsOfRods/rigs-of-rods/blob/master/bin/resources/skeleton/config/README.txt)
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoR.cfg
 
 Unsorted
 
