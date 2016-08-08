@@ -194,7 +194,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Vertexoverlay.py
 * http://ror.avrintech.net/rorwikibackup/index.php/Video_Tutorial-_Creating_Your_First_Truck
 * http://ror.avrintech.net/rorwikibackup/index.php/Video_Tutorials_-_Modding
-* http://ror.avrintech.net/rorwikibackup/index.php/Weight_tuning
 * http://ror.avrintech.net/rorwikibackup/index.php/Wiki_Editing_Guidelines
 * http://ror.avrintech.net/rorwikibackup/index.php/Windows_Crash_Report_Tool
 * http://ror.avrintech.net/rorwikibackup/index.php/WiresharkDissector
