@@ -41,7 +41,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_rust_to_a_texture - graphics
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps - terrn
-* http://ror.avrintech.net/rorwikibackup/index.php/AngelScript
 * http://ror.avrintech.net/rorwikibackup/index.php/Arm_node - reference arm node
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_to_Multiplayer
@@ -74,7 +73,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Crash_Report_Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_An_Invisible_Slide_Rail
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_GIF_Animations
-* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_raw_file
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_your_own_GUI - custom MyGUI dashboards
@@ -94,7 +92,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Chat - IRC
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Etiquette - consider
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Signature_Guidelines - consider
-* http://ror.avrintech.net/rorwikibackup/index.php/GameBot
 * http://ror.avrintech.net/rorwikibackup/index.php/Glossary - Jargon file!
 * http://ror.avrintech.net/rorwikibackup/index.php/Groundmodel_Description_File - fileformat
 * http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
@@ -118,7 +115,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Importing_An_Existing_Terrain_Into_L3DT
 * http://ror.avrintech.net/rorwikibackup/index.php/Installation_Guide 
 * http://ror.avrintech.net/rorwikibackup/index.php/L3DT_Map_Making
-* http://ror.avrintech.net/rorwikibackup/index.php/Languages/Help
 * http://ror.avrintech.net/rorwikibackup/index.php/LevelOfDetail - LOD
 * http://ror.avrintech.net/rorwikibackup/index.php/Make_RoR_Faster 
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_DDS_textures
@@ -253,10 +249,7 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Network_Protocols_Overview
 * http://ror.avrintech.net/rorwikibackup/index.php/NewEngineSectionDoc
 * http://ror.avrintech.net/rorwikibackup/index.php/Patch_Authors - credits!
-* http://ror.avrintech.net/rorwikibackup/index.php/Patch_Checklist
 * http://ror.avrintech.net/rorwikibackup/index.php/Programmers_%26_Projects - slightly outdated
 * http://ror.avrintech.net/rorwikibackup/index.php/Release_Checklist
 * http://ror.avrintech.net/rorwikibackup/index.php/Version_Information - TODO add version number to menu!!
-* http://ror.avrintech.net/rorwikibackup/index.php/Version_Requirement - useless
-* http://ror.avrintech.net/rorwikibackup/index.php/What_needs_to_be_done
 * http://ror.avrintech.net/rorwikibackup/index.php/WxWidgets
