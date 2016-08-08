@@ -156,7 +156,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Repository_Guidelines
 * http://ror.avrintech.net/rorwikibackup/index.php/Resources.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/Rigs_of_Rods_Wiki:Language_policy
-* http://ror.avrintech.net/rorwikibackup/index.php/RoR.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR.log
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRAutoBeamber.py
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit
