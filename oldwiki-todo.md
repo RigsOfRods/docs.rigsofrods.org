@@ -145,8 +145,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Procedual_Roads_Examples
 * http://ror.avrintech.net/rorwikibackup/index.php/Removing_managedmaterials
-* http://ror.avrintech.net/rorwikibackup/index.php/Repository
-* http://ror.avrintech.net/rorwikibackup/index.php/Repository_Guidelines
 * http://ror.avrintech.net/rorwikibackup/index.php/Resources.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/Rigs_of_Rods_Wiki:Language_policy
 * http://ror.avrintech.net/rorwikibackup/index.php/RoR.log
@@ -201,7 +199,12 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Windows_Crash_Report_Tool
 * http://ror.avrintech.net/rorwikibackup/index.php/WiresharkDissector
 
-# To be moved to Doxygen
+# TODO -> repository
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Repository
+* http://ror.avrintech.net/rorwikibackup/index.php/Repository_Guidelines
+
+# TODO -> Doxygen
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Changelog
 * http://ror.avrintech.net/rorwikibackup/index.php/Changelog_old
