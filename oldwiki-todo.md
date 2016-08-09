@@ -31,8 +31,6 @@ title:  "Wiki porting checklist - TODO"
 # Docs
 
 * http://ror.avrintech.net/rorwikibackup/index.php/0.38
-* http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max - links
-* http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max_importer/exporter
 * http://ror.avrintech.net/rorwikibackup/index.php/AC3D_Plugins
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_Glow - ogre .material + .program
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_an_object_to_a_terrain - old, terrn, editortruck

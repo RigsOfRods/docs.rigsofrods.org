@@ -69,6 +69,11 @@ motorbikes
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Motorbikes
 
+tools/3d-studio-max
+
+* http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max - links
+* http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max_importer/exporter
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal
