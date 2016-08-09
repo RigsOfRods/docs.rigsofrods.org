@@ -125,19 +125,15 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Object_Format - terrain .obj
 * http://ror.avrintech.net/rorwikibackup/index.php/Object_Format_LOD - .obj
 * http://ror.avrintech.net/rorwikibackup/index.php/Ogre.cfg
-* http://ror.avrintech.net/rorwikibackup/index.php/One_Good_Reason_why_SketchUp_is_Mediocre
 * http://ror.avrintech.net/rorwikibackup/index.php/Opening_Bus_Doors_%28modern%29
 * http://ror.avrintech.net/rorwikibackup/index.php/Other_Useful_Tools
-* http://ror.avrintech.net/rorwikibackup/index.php/PSPad_ROR-settings
 * http://ror.avrintech.net/rorwikibackup/index.php/Painted_Pavement_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Placing_objects_on_terrains_%28For_0.38_and_0.4%29
 * http://ror.avrintech.net/rorwikibackup/index.php/Plugins_*.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Procedual_Roads_Examples
 * http://ror.avrintech.net/rorwikibackup/index.php/Removing_managedmaterials
-* http://ror.avrintech.net/rorwikibackup/index.php/Resources.cfg
 * http://ror.avrintech.net/rorwikibackup/index.php/Rigs_of_Rods_Wiki:Language_policy
-* http://ror.avrintech.net/rorwikibackup/index.php/RoR.log
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRAutoBeamber.py
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit_Developer
