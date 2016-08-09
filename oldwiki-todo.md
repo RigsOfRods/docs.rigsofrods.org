@@ -13,7 +13,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Cinecam/Cameras
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Details
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flexbodies
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Basic_rules
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Meshes/Tools
@@ -94,7 +93,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Get_Support
 * http://ror.avrintech.net/rorwikibackup/index.php/How_are_the_skidmarks_working
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_add_LED_flares_to_a_vehicle
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute - general content contrib
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute_to_community_projects_using_GitHub - Modern, Hiradur
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_create_a_high_quality_sound%28-loop%29
@@ -102,7 +100,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_edit_a_DDS_texture
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_fix_truck_problems
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_get_a_good_Flexbody
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_beacon_flare
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_good_light_texture
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_plane_with_two_sides
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_participate_in_races - outdated?
