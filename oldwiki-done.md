@@ -74,6 +74,10 @@ tools/3d-studio-max
 * http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max - links
 * http://ror.avrintech.net/rorwikibackup/index.php/3ds_Max_importer/exporter
 
+jargon
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Glossary - Jargon file!
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal
