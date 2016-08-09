@@ -90,7 +90,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Chat - IRC
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Etiquette - consider
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Signature_Guidelines - consider
-* http://ror.avrintech.net/rorwikibackup/index.php/Glossary - Jargon file!
 * http://ror.avrintech.net/rorwikibackup/index.php/Groundmodel_Description_File - fileformat
 * http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Get_Support
