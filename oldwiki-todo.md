@@ -122,8 +122,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp
-* http://ror.avrintech.net/rorwikibackup/index.php/Material_File
-* http://ror.avrintech.net/rorwikibackup/index.php/Material_basics
 * http://ror.avrintech.net/rorwikibackup/index.php/Meaningful_Subject
 * http://ror.avrintech.net/rorwikibackup/index.php/Mesh_making_in_sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Miniature_File
