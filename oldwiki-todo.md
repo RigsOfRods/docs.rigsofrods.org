@@ -74,7 +74,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_your_own_GUI - custom MyGUI dashboards
 * http://ror.avrintech.net/rorwikibackup/index.php/Custom_Dashboards - "renderdash" material
-* http://ror.avrintech.net/rorwikibackup/index.php/Custom_Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/DEM_Data_and_you:_How_to_use_the_USGS_Seamless_Server_to_make_terrains_for_you
 * http://ror.avrintech.net/rorwikibackup/index.php/Data/wavefield.cfg 
      - this is still used, https://github.com/RigsOfRods/rigs-of-rods/blob/d1d3d0f3c626c80f49b745ef0636202334acdbff/source/main/gfx/Water.cpp#L130

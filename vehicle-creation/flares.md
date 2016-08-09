@@ -203,3 +203,125 @@ If you had to add nodes to a vehicle to place flares, and the flares seem to swi
 If a flare isn't illuminating when you attempt to turn it on, verify that the syntax is correct; the flare line has the correct REF, X & Y nodes; that it is of the correct type; and that the control number (if it's a user-controlled light) is correct.  The flare could be showing up inside the vehicle, check the wireframe (hit K).  If this is the case, see above.
 
 
+# Custom flares
+
+Some times, default flares get a little boring, because there are not enough flash patterns or not enough colors. In this tutorial, you will learn how to make your own flare texture and your own flash patterns.
+
+If you want to make your own custom flare textures, you will need a decent photo-editing program. If you want to only use the default flares, you might, or might not, need a flare tutorial on the Rigs of Rods wiki.
+
+Flare Tutorial
+GIMP
+Paint.NET
+Adobe Photoshop
+
+
+## Making your flare texture 
+
+(You only need this step if you want to make your own flare texture/color. If you will use default flares, skip to step III)
+
+Open up a new document in your photo-editing software. Make the background transparent, and make it 40 pixels wide and 40 pixels high.
+
+<a href="/images/flares-custom-01-new.png"><img src="/images/flares-custom-01-new.png"></a>
+
+Right after that, pick a color for your flare. I will do blue, because I want blue flashers on my vehicle. So I will select the gradient tool and make a small light effect. (Note I zoomed in a little bit)
+
+<a href="/images/flares-custom-02-source.png"><img src="/images/flares-custom-02-source.png"></a>
+
+Remember to save your textures as Portable Network Graphics (PNG)
+
+Then, save it as a name you will remember, such as "Flare1" or "Flash1". For this tutorial, I will go with "Flash1". Following that step, you must make another light effect, but 100% transparent. So create a new file in Photoshop with the dimensions and settings above, then simply save it as "Flash2". This is needed because there needs to be an invisible flash when the light is off/deactivated.
+
+Once you have saved the flashes, put them into the vehicle's .ZIP file you will be editing.
+
+## The Material file and the Material code
+
+Locate the .MATERIAL file in your vehicles .ZIP folder and open it with notepad. You will need to copy and paste the following code below...
+
+    material tracks/<a name for your new flare>
+    {
+    	receive_shadows off
+    	technique
+    	{
+    		pass
+    		{
+    			lighting off
+     			scene_blend alpha_blend
+    			alpha_rejection greater 2
+    			depth_write off
+    			//depth_check off
+    
+    			texture_unit
+    			{
+    				anim_texture <the on image> <the off image> <animation length>
+    			}
+    		}
+    	}
+    }
+
+(Thanks to Turbocharger for providing the code)
+
+... Anyways, paste that to the bottom of your .MATERIAL file of your vehicle. 
+If you inspect the code provided, you will see inserts where to put names. 
+For example, where it says <A name for your new flare> will be the name of your custom flare. 
+I would call it the same as my texture name, Flash1. 
+Then where it says <on image> and <off image>, put what it says. 
+For the on, put Flash1.png and for the off, put Flash2.png - and for animation length, put how long you want them to flash. 
+I would test values before I got it perfect. 
+But, after filling in the missing spaces, your .MATERIAL code should look like this:
+
+
+    material tracks/Flash1
+    {
+    	receive_shadows off
+    	technique
+    	{
+    		pass
+    		{
+    			lighting off
+     			scene_blend alpha_blend
+    			alpha_rejection greater 2
+    			depth_write off
+    			//depth_check off
+    
+    			texture_unit
+    			{
+    				anim_texture Flash1.png Flash2.png .5
+    			}
+    		}
+    	}
+    }
+
+
+Save your .MATERIAL file after completing this.
+
+## Editing the truck file 
+
+Open the .truck file, and find the flares section. To test these flashes, I would use the headlights as an example. So copy the headlight codes, and paste them below. You may have to change them from headlights, to custom flares. So if you see this in the headlight line: f, -1, you need to change that to: u, 1 because that makes it a user controlled flare (A flare you activate by pressing Ctrl+1)
+Then, instead of end of the headlight code saying default, change it to: tracks/Flash1 so it flashes your custom flare pattern. 
+
+<a href="/images/flares-custom-03-text.png"><img src="/images/flares-custom-03-text.png"></a>
+
+Once you test it in game, it is a simple on/off flashing pattern.
+
+<a href="/images/flares-custom-04-jeep.png"><img src="/images/flares-custom-04-jeep.png"></a>
+
+## Lets go one step further
+
+Now that you can easily make an off/on flashing pattern, let's get more complex. Get back into the .MATERIAL file, copy the custom flare section, and paste it below. Now switch/reverse the <On> and <Off> image, and call the pattern Flash2. 
+
+<a href="/images/flares-custom-05-text.png"><img src="/images/flares-custom-05-text.png"></a>
+
+Now, open up the .truck file, and look at only ONE of the new flashing headlights, and change it's material name to tracks/Flash2. 
+
+<a href="/images/flares-custom-06-text.png"><img src="/images/flares-custom-06-text.png"></a>
+
+Now, see it ingame, it will be a wig-wag pattern. 
+
+<a href="/images/flares-custom-07-jeep.png"><img src="/images/flares-custom-07-jeep.png"></a>
+
+Easy as that. There is a rule when it comes to making custom flashes: 
+When Flash1 is on, Flash2 is off. When Flash2 is off, Flash2 is on. 
+You can make a traffic advisor using this rule, or strobes, or anything you like. 
+Just refer to this tutorial and be creative.
+
+
