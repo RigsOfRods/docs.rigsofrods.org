@@ -128,7 +128,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Mod_Creator
 * http://ror.avrintech.net/rorwikibackup/index.php/Modeling_Plugins
 * http://ror.avrintech.net/rorwikibackup/index.php/ModerationTemplates
-* http://ror.avrintech.net/rorwikibackup/index.php/Motorbikes
 * http://ror.avrintech.net/rorwikibackup/index.php/Notepad%2B%2B
 * http://ror.avrintech.net/rorwikibackup/index.php/Object_Format - terrain .obj
 * http://ror.avrintech.net/rorwikibackup/index.php/Object_Format_LOD - .obj
