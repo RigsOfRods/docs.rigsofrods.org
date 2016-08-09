@@ -60,6 +60,11 @@ making-softbodies
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Weight_tuning
 
+ogre-old-materials
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Material_basics - good, detailed
+* http://ror.avrintech.net/rorwikibackup/index.php/Material_File - discard, not useful
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal
