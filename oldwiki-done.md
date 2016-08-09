@@ -87,6 +87,10 @@ flares
 
 Unsorted
 
+* http://ror.avrintech.net/rorwikibackup/index.php/PSPad_ROR-settings - dead links, probably outdated -> discard
+* http://ror.avrintech.net/rorwikibackup/index.php/One_Good_Reason_why_SketchUp_is_Mediocre -> aggressive, biased, not informative -> discarded.
+* http://ror.avrintech.net/rorwikibackup/index.php/Resources.cfg -> no info, just outdated config file. Discarded
+* http://ror.avrintech.net/rorwikibackup/index.php/RoR.log -> short, outdated, not useful -> discarded
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_Truck - short, just portal
 * http://ror.avrintech.net/rorwikibackup/index.php/Languages/Help -> old wiki feature, useless now
 * http://ror.avrintech.net/rorwikibackup/index.php/AngelScript -> empty
