@@ -21,11 +21,9 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Sections
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Set_beam_defaults
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Setup_a_working_environment
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Steering
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshes
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshs
-* http://ror.avrintech.net/rorwikibackup/index.php/Axle_Rigidity
-* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels
+
 
 # Docs
 
@@ -38,7 +36,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_rust_to_a_texture - graphics
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps - terrn
-* http://ror.avrintech.net/rorwikibackup/index.php/Arm_node - reference arm node
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_to_Multiplayer
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender2ogre - Important: If you've scaled your mesh in Object-Mode press CTRL + A to apply scale and rotation.
