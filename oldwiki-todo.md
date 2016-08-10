@@ -24,8 +24,49 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshes
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Submeshs
 
+# ------ pending - blender -------
+
+# blender - general
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_mesh_tutorial - blender 2.5+ (good enough)
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_3 - Generic - cool, UV maps!
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_simple_Mesh_creation - old blender, discard
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rendering_Setup_Tutorial - (just rendering) discard
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_4 - weird, misleading. Discard.
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_5 - How to create a .material file in Blender ? Misleading, discard.  
+  >> blender-beginners
+
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender2ogre - Important: If you've scaled your mesh in Object-Mode press CTRL + A to apply scale and rotation.
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Nodes_and_Beam_Plugin - TODO: reincarnate the plugin!
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Ogre_Plugins (Development) TODO: research, reincarnate
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Plugins TODO: research
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rigidity_Plugin  simple plugin, connects all to all.
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial  - RoR importexport plugin tut.   
+  >> tools/blender
+
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_2  - Vehicles - basic soapbox vehicle construction
+  >> vehicles/blender
+
+# blender - maps
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Race_Track_Tutorial - useless, duplicate with "making heightmaps in Blender" -> discard
 
 # Docs
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup - workable.
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp - not so bad
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp - OK
+* http://ror.avrintech.net/rorwikibackup/index.php/Mesh_making_in_sketchup - not very detailed steps.
+* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Tutorial - not bad.
+* 
+* http://ror.avrintech.net/rorwikibackup/index.php/Complete_sketchup_truck_mesh - not informative, discard
+* http://ror.avrintech.net/rorwikibackup/index.php/SketchUp_truck_tutorial - useless, almost empty. Discard.
+* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Plugins - outdated, discard.
+
+# ------------- Docs -----------------
 
 
 * http://ror.avrintech.net/rorwikibackup/index.php/AC3D_Plugins
@@ -38,20 +79,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps - terrn
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide
 * http://ror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_to_Multiplayer
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender2ogre - Important: If you've scaled your mesh in Object-Mode press CTRL + A to apply scale and rotation.
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Nodes_and_Beam_Plugin - TODO: reincarnate the plugin!
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Ogre_Plugins
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Plugins
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Race_Track_Tutorial
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rendering_Setup_Tutorial - old blender, check anyway
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rigidity_Plugin
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_2
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_3 - cool, UV maps!
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_4
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_5
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_mesh_tutorial - blender 2.5+
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_simple_Mesh_creation - old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Blueprints - links, looks good!
 * http://ror.avrintech.net/rorwikibackup/index.php/Building_Workflow - super
 * http://ror.avrintech.net/rorwikibackup/index.php/Bump_Map_Alpha_Splatting - materials
@@ -67,7 +94,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_An_Invisible_Slide_Rail
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_GIF_Animations
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_raw_file
-* http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_your_own_GUI - custom MyGUI dashboards
 * http://ror.avrintech.net/rorwikibackup/index.php/Custom_Dashboards - "renderdash" material
 * http://ror.avrintech.net/rorwikibackup/index.php/DEM_Data_and_you:_How_to_use_the_USGS_Seamless_Server_to_make_terrains_for_you
