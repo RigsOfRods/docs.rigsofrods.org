@@ -83,7 +83,11 @@ flares
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/Custom_Flares
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_add_LED_flares_to_a_vehicle - just links, useless -> discraded
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_beacon_flare - weird/misleading -> discarded 
+* http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_beacon_flare - weird/misleading -> discarded
+
+heightmaps
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Terrains - heightmap making in blender 
 
 Unsorted
 
