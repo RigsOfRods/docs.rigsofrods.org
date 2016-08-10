@@ -48,7 +48,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Race_Track_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rendering_Setup_Tutorial - old blender, check anyway
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rigidity_Plugin
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Terrains - heightmap making in blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_2
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_3 - cool, UV maps!
