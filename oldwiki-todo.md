@@ -169,7 +169,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Texturing_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Transport_Simulator
 * http://ror.avrintech.net/rorwikibackup/index.php/Troubleshooting
-* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
 * http://ror.avrintech.net/rorwikibackup/index.php/Typical_terrain_cfg_file
 * http://ror.avrintech.net/rorwikibackup/index.php/UserGroups - old forum
 * http://ror.avrintech.net/rorwikibackup/index.php/User_token - historical
