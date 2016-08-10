@@ -81,9 +81,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Folder_Structure
 * http://ror.avrintech.net/rorwikibackup/index.php/Folding_Bus_Doors
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Boards - consider
-* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Chat - IRC
-* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Etiquette - consider
-* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Signature_Guidelines - consider
 * http://ror.avrintech.net/rorwikibackup/index.php/Groundmodel_Description_File - fileformat
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Get_Support
 * http://ror.avrintech.net/rorwikibackup/index.php/How_are_the_skidmarks_working
@@ -109,7 +106,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp
-* http://ror.avrintech.net/rorwikibackup/index.php/Meaningful_Subject
 * http://ror.avrintech.net/rorwikibackup/index.php/Mesh_making_in_sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Miniature_File
 * http://ror.avrintech.net/rorwikibackup/index.php/Mod_Creator
@@ -124,10 +120,8 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Painted_Pavement_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Placing_objects_on_terrains_%28For_0.38_and_0.4%29
 * http://ror.avrintech.net/rorwikibackup/index.php/Plugins_*.cfg
-* http://ror.avrintech.net/rorwikibackup/index.php/Privacy_Policy
 * http://ror.avrintech.net/rorwikibackup/index.php/Procedual_Roads_Examples
 * http://ror.avrintech.net/rorwikibackup/index.php/Removing_managedmaterials
-* http://ror.avrintech.net/rorwikibackup/index.php/Rigs_of_Rods_Wiki:Language_policy
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRAutoBeamber.py
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRToolkit_Developer
@@ -135,19 +129,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRnet_2.3
 * http://ror.avrintech.net/rorwikibackup/index.php/RoRnet_2.4
 * http://ror.avrintech.net/rorwikibackup/index.php/Roadmap
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Backseat
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Begging
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Grammar
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Language
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Links
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Nice
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Privacy
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Singularity
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Search
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Profanity
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Stolen_Content
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Unwritten
-* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Useless
 * http://ror.avrintech.net/rorwikibackup/index.php/Separate_%28flexbody%29_deforming/detaching_parts
 * http://ror.avrintech.net/rorwikibackup/index.php/Server_Commands
 * http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Plugins
@@ -167,8 +148,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Transport_Simulator
 * http://ror.avrintech.net/rorwikibackup/index.php/Troubleshooting
 * http://ror.avrintech.net/rorwikibackup/index.php/Typical_terrain_cfg_file
-* http://ror.avrintech.net/rorwikibackup/index.php/UserGroups - old forum
-* http://ror.avrintech.net/rorwikibackup/index.php/User_token - historical
 * http://ror.avrintech.net/rorwikibackup/index.php/Vehicle_Limits
 * http://ror.avrintech.net/rorwikibackup/index.php/Vertexoverlay.py
 * http://ror.avrintech.net/rorwikibackup/index.php/Video_Tutorial-_Creating_Your_First_Truck
@@ -176,6 +155,30 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Wiki_Editing_Guidelines
 * http://ror.avrintech.net/rorwikibackup/index.php/Windows_Crash_Report_Tool
 * http://ror.avrintech.net/rorwikibackup/index.php/WiresharkDissector
+
+# TODO forums/website
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Meaningful_Subject
+* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Chat - IRC
+* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Etiquette - consider
+* http://ror.avrintech.net/rorwikibackup/index.php/Forum_Signature_Guidelines - consider
+* http://ror.avrintech.net/rorwikibackup/index.php/Privacy_Policy
+* http://ror.avrintech.net/rorwikibackup/index.php/UserGroups - old forum
+* http://ror.avrintech.net/rorwikibackup/index.php/User_token - historical
+* http://ror.avrintech.net/rorwikibackup/index.php/Rigs_of_Rods_Wiki:Language_policy
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Backseat
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Begging
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Grammar
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Language
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Links
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Nice
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Privacy
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Singularity
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Search
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Profanity
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Stolen_Content
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Unwritten
+* http://ror.avrintech.net/rorwikibackup/index.php/Rules_Useless 
 
 # TODO -> changelog/history
 
