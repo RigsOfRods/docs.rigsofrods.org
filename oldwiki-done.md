@@ -93,6 +93,11 @@ gameplay/aircraft-handling
 
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot 
 
+truckfile
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
+* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Description_File - DONE 
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/PSPad_ROR-settings - dead links, probably outdated -> discard
