@@ -101,7 +101,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_good_light_texture
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_make_a_plane_with_two_sides
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_participate_in_races - outdated?
-* http://ror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_write_a_good_tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Hydrax_Config
 * http://ror.avrintech.net/rorwikibackup/index.php/Importing_An_Existing_Terrain_Into_L3DT

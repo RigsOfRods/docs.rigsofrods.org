@@ -89,6 +89,10 @@ heightmaps
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Terrains - heightmap making in blender 
 
+gameplay/aircraft-handling
+
+* http://ror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot 
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/PSPad_ROR-settings - dead links, probably outdated -> discard
