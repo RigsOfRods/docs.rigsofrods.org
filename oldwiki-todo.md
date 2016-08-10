@@ -29,7 +29,7 @@ title:  "Wiki porting checklist - TODO"
 
 # Docs
 
-* http://ror.avrintech.net/rorwikibackup/index.php/0.38
+
 * http://ror.avrintech.net/rorwikibackup/index.php/AC3D_Plugins
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_Glow - ogre .material + .program
 * http://ror.avrintech.net/rorwikibackup/index.php/Adding_an_object_to_a_terrain - old, terrn, editortruck
@@ -88,7 +88,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Etiquette - consider
 * http://ror.avrintech.net/rorwikibackup/index.php/Forum_Signature_Guidelines - consider
 * http://ror.avrintech.net/rorwikibackup/index.php/Groundmodel_Description_File - fileformat
-* http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
 * http://ror.avrintech.net/rorwikibackup/index.php/How_To_Get_Support
 * http://ror.avrintech.net/rorwikibackup/index.php/How_are_the_skidmarks_working
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_contribute - general content contrib
@@ -181,6 +180,11 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Wiki_Editing_Guidelines
 * http://ror.avrintech.net/rorwikibackup/index.php/Windows_Crash_Report_Tool
 * http://ror.avrintech.net/rorwikibackup/index.php/WiresharkDissector
+
+# TODO -> changelog/history
+
+* http://ror.avrintech.net/rorwikibackup/index.php/0.38
+* http://ror.avrintech.net/rorwikibackup/index.php/Guide_to_0.36
 
 # TODO -> repository
 
