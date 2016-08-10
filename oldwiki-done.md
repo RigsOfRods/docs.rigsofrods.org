@@ -93,6 +93,13 @@ gameplay/aircraft-handling
 
 * http://ror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot 
 
+veh-creation/wheels-axles-steering
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Axle_Rigidity  - DONE
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Wheels - DONE
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Steering - DONE
+* http://ror.avrintech.net/rorwikibackup/index.php/Arm_node - reference arm node - DONE
+
 truckfile
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
@@ -299,8 +306,7 @@ Unsorted
 * http://ror.avrintech.net/rorwikibackup/index.php/Test_Page - dead
 * http://ror.avrintech.net/rorwikibackup/index.php/TheNewDownload - dead
 * http://ror.avrintech.net/rorwikibackup/index.php/Transport_Sim_Fraud - redir
-* * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Concepts - DONE
-* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Description_File - DONE
+* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Concepts - DONE
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Description_File/Syntax - dead
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_improvement_list - dead
 * http://ror.avrintech.net/rorwikibackup/index.php/Tutorials - portal
