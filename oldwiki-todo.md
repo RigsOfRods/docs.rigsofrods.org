@@ -47,7 +47,18 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Creating_a_road_in_Blender - very good, but old blender
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Race_Track_Tutorial - useless, duplicate with "making heightmaps in Blender" -> discard
 
-# Docs
+# ------------------- pending - SketchUp -----------------
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
+* http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp
+* http://ror.avrintech.net/rorwikibackup/index.php/Mesh_making_in_sketchup
+* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Plugins
+* http://ror.avrintech.net/rorwikibackup/index.php/SketchUp_truck_tutorial
+* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Tutorial
+* http://ror.avrintech.net/rorwikibackup/index.php/Complete_sketchup_truck_mesh
+
+# ------------- Docs -----------------
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup - workable.
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp - not so bad
@@ -122,10 +133,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Make_RoR_Faster 
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_DDS_textures
 * http://ror.avrintech.net/rorwikibackup/index.php/Making_Skins_with_Paint.net
-* http://ror.avrintech.net/rorwikibackup/index.php/Making_a_prop_in_Google_Sketchup
-* http://ror.avrintech.net/rorwikibackup/index.php/Making_an_object_in_Google_SketchUp
-* http://ror.avrintech.net/rorwikibackup/index.php/Making_low_poly_curves/circles_in_SketchUp
-* http://ror.avrintech.net/rorwikibackup/index.php/Mesh_making_in_sketchup
 * http://ror.avrintech.net/rorwikibackup/index.php/Miniature_File
 * http://ror.avrintech.net/rorwikibackup/index.php/Mod_Creator
 * http://ror.avrintech.net/rorwikibackup/index.php/Modeling_Plugins
@@ -150,11 +157,8 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Roadmap
 * http://ror.avrintech.net/rorwikibackup/index.php/Separate_%28flexbody%29_deforming/detaching_parts
 * http://ror.avrintech.net/rorwikibackup/index.php/Server_Commands
-* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Plugins
-* http://ror.avrintech.net/rorwikibackup/index.php/SketchUp_truck_tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Serverside_scripting
 * http://ror.avrintech.net/rorwikibackup/index.php/Shadows
-* http://ror.avrintech.net/rorwikibackup/index.php/Sketchup_Tutorial
 * http://ror.avrintech.net/rorwikibackup/index.php/Spawning_a_truck_in_Lua
 * http://ror.avrintech.net/rorwikibackup/index.php/Standard_wheels_to_mesh_wheels
 * http://ror.avrintech.net/rorwikibackup/index.php/Starting_RoR_under_Linux
@@ -221,7 +225,6 @@ title:  "Wiki porting checklist - TODO"
 * http://ror.avrintech.net/rorwikibackup/index.php/Compiling_Sources_under_MacOS
 * http://ror.avrintech.net/rorwikibackup/index.php/Compiling_Sources_under_Windows
 * http://ror.avrintech.net/rorwikibackup/index.php/Compiling_Sources_under_Windows_Ogre_2.0
-* http://ror.avrintech.net/rorwikibackup/index.php/Complete_sketchup_truck_mesh
 * http://ror.avrintech.net/rorwikibackup/index.php/Deb_packaging
 * http://ror.avrintech.net/rorwikibackup/index.php/Debugging_Trucks
 * http://ror.avrintech.net/rorwikibackup/index.php/DistributedPhysics -- WTF? Ask Estama!
