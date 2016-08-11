@@ -28,13 +28,7 @@ title:  "Wiki porting checklist - TODO"
 
 # blender - general
 
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_mesh_tutorial - blender 2.5+ (good enough)
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_3 - Generic - cool, UV maps!
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_simple_Mesh_creation - old blender, discard
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rendering_Setup_Tutorial - (just rendering) discard
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_4 - weird, misleading. Discard.
-* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_5 - How to create a .material file in Blender ? Misleading, discard.  
-  >> blender-beginners
+
 
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender2ogre - Important: If you've scaled your mesh in Object-Mode press CTRL + A to apply scale and rotation.
