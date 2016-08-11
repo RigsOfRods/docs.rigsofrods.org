@@ -114,6 +114,10 @@ tools/blender-beginner
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_4 - weird, misleading. Discard.
 * http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_5 - How to create a .material file in Blender ? Misleading, discard.   
 
+engine
+
+* http://ror.avrintech.net/rorwikibackup/index.php/RoRBook/Engine
+
 Unsorted
 
 * http://ror.avrintech.net/rorwikibackup/index.php/PSPad_ROR-settings - dead links, probably outdated -> discard
