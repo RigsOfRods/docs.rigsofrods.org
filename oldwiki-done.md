@@ -103,7 +103,16 @@ veh-creation/wheels-axles-steering
 truckfile
 
 * http://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
-* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Description_File - DONE 
+* http://ror.avrintech.net/rorwikibackup/index.php/Truck_Description_File - DONE
+
+tools/blender-beginner
+
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_mesh_tutorial - blender 2.5+ (good enough)
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_3 - Generic - cool, UV maps!
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_simple_Mesh_creation - old blender, discard
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Rendering_Setup_Tutorial - (just rendering) discard
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_4 - weird, misleading. Discard.
+* http://ror.avrintech.net/rorwikibackup/index.php/Blender_Tutorial_5 - How to create a .material file in Blender ? Misleading, discard.   
 
 Unsorted
 
