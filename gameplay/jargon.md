@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Jargon"
-categories: [overview]
+categories: [gameplay]
 ---
 
 <div class="toc" markdown="1">
