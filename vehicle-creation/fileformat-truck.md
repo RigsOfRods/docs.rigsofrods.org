@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Truck file format"
-categories: [technical]
+categories: [vehicle-creation]
 ---
 
 <div class="toc" markdown="1">

@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Ogre legacy materials"
-categories: [technical]
+categories: [tools-tutorials]
 ---
 
 <div class="toc" markdown="1">

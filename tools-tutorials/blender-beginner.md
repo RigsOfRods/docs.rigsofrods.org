@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Blender for beginners"
-categories: [tools]
+categories: [tools-tutorials]
 ---
 
 <div class="toc" markdown="1">
