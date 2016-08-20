@@ -9,7 +9,7 @@ categories: [vehicle-creation]
   {:toc}
 </div>
 
-"Truck" is a text-based file format which defines all physically simulated objects in the game, be it vehicles of any kind, machinery, loads or any other thigs. The name is historical - Rigs of Rods was originally a heavy truck simulator, other kinds of vehicles came later.
+"Truck" is a text-based file format which defines all physically simulated objects in the game, be it vehicles of any kind, machinery, loads or any other things. The name is historical - Rigs of Rods was originally a heavy truck simulator, other kinds of vehicles came later.
 
 Recognized filename extensions for this format are: ".truck", ".car", ".boat", ".airplane", ".train", ".machine", ".trailer", ".load", ".fixed". Note the extension is only informative, the actual type of object is determined by file contents.
 
