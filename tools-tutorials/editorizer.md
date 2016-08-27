@@ -15,7 +15,7 @@ It's a fairly old and simple program. Note you can't use it to create a new vehi
 
 # Download and run on Windows
 
-[Download here] (/download/Editorizer.zip) (ZIP archive)
+[Download here](/download/Editorizer.zip) (ZIP archive)
 
 Run as administrator! (only needed on the first run or if you move Editorizer's directory)
 
