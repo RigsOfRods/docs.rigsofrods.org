@@ -38,7 +38,7 @@ NOTE: some animations will not work exactly like in RoR yet. We are working on f
 
 1. Create graphics of gauges and needles
 2. Start GUIEditor and create the controls using your graphics 
-3. Save the .layout and image files in your truck zip and use [`guisettings`](/vehicle-creation/fileformat-truck) to integrate it with your vehicle.
+3. Save the .layout and image files in your truck zip and use [`guisettings`](/vehicle-creation/fileformat-truck#guisettings) to integrate it with your vehicle.
 4. Test in RoR and fix in GUIEditor
 
 # Available animations
