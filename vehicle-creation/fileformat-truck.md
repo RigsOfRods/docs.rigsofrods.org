@@ -417,7 +417,7 @@ General info about the vehicle.
 
 The help section gives the name of the material used for the help panel on the in-game dashboard. This material must be defined elsewhere in a material file. This is optional. (But it looks cool, so use it!)
 
-NOTE: This setting can be overriden by [section "guisettings"](Truck_Description_File#Guisettings "wikilink")
+NOTE: This setting can be overriden by [section "guisettings"](#guisettings)
 
     help
     tracks/semihelp
@@ -2583,30 +2583,31 @@ By using this section you can set some parameters of the Truck GUI. This can be 
 
 Format: keyword <space> value
 
+-   **dashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for this truck. You can use multiple lines.
+-   **texturedashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
+-   **interactiveOverviewMap**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
+
+Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored or removed soon.
+
 -   **tachoMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/Tacho</span>; The name of the tachometer face material. (must be defined in a material file).
 -   **speedoMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/Speedo</span>; The name of the speedometer face material. (must be defined in a material file).
 -   **Speedo max value (kph)**: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = 140</span>; The highest number that is on the speedometer. (values 10-32000) Speedometer needle goes from -140° to 140°.
 -   **useMaxRPM**: <span style="color:#BD0058">0 or 1</span>; <span style="color:#0B8A00">default = 0</span>; \[Yes/No\] Whether or not to use the max rpm (in the engine section) as the highest number on the tachometer. Note that your actual max rpm is MaxRPM+20%. Do not include the 20% on your tachometer or it will be inaccurate. Tachometer needle is from -120° to 120°.
--   **helpMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/black</span>; The help material (a picture that shows command instructions). NOTE: This value overrides settings from [section "help"](Truck_Description_File#Help "wikilink")
--   **interactiveOverviewMap**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
--   **debugBeams** : <span style="background-color:purple; color: pink;">\[ OBSOLETE, since 0.38.62 \]</span> (see also: <http://www.rigsofrods.com/entries/139-debug-menu>)
-
-<!-- -->
-
--   **dashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> dashboard layout that should be used for this truck. You can use multiple lines. See also: [Creating your own GUI](Creating_your_own_GUI "wikilink")
--   **texturedashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> dashboard layout that should be used for the RTT for this truck. You can use multiple lines. See also: [Creating your own GUI](Creating_your_own_GUI "wikilink")
+-   **helpMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/black</span>; The help material (a picture that shows command instructions). NOTE: This value overrides settings from [section "help"](#help)
 
 Example:
 
     guisettings
-    tachoMaterial tracks/MyTacho
-    speedoMaterial tracks/MySpeedo
-    speedoMax 80
-    useMaxRPM 1
-    interactiveOverviewMap zoom
-    dashboard dash_test.layout
-    dashboard dash_test2.layout
-    texturedashboard dashGauges.layout
+        interactiveOverviewMap zoom
+        dashboard dash_test.layout
+        dashboard dash_test2.layout
+        texturedashboard dashGauges.layout
+        ; legacy settings
+        tachoMaterial tracks/MyTacho
+        speedoMaterial tracks/MySpeedo
+        speedoMax 80
+        useMaxRPM 1
+   
 
 ## Set\_skeleton\_settings
 
