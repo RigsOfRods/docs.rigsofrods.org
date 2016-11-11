@@ -4,10 +4,6 @@ title:  "Blender for beginners"
 categories: [tools-tutorials]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 
 # Introduction

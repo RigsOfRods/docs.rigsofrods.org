@@ -4,10 +4,6 @@ title:  "Jargon"
 categories: [gameplay]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 This is a glossary of un-intuitive terms used by members of RoR community.
 

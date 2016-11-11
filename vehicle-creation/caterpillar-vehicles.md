@@ -4,10 +4,6 @@ categories: [vehicle-creation]
 title: "Caterpillar vehicles (using slidenodes)"
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 [1-frame]:          /images/caterpillar-slidenodes-01-frame.png
 {: width="49%"}

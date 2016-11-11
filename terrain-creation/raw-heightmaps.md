@@ -4,10 +4,6 @@ title:  "Heightmap RAW files"
 categories: [terrain-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 A "heightmap", or "elevation map", is an image or binary file where every pixel/number represents world height at the given point.
 RoR supports 8-bit or 16-bit unsigned integer RAW heightmaps.

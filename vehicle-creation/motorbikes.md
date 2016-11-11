@@ -4,10 +4,6 @@ layout: page
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 
 [motorbike]: /images/motorbike-scheme.jpg
@@ -20,9 +16,9 @@ This tutorial covers the theory and concepts used to build real 2-wheeled vehicl
 Based off the forum thread [http://www.rigsofrods.com/threads/95634-Motorbike-tech-demo-and-tutorial Motorbike-tech-demo-and-tutorial]
 
 # Example Bike
-* [http://www.rigsofrods.com/attachment.php?attachmentid=338074&d=1345143041 Polaris 250GP (Latest)]
+* [http://www.rigsofrods.com/attachment.php?attachmentid=338074&d=1345143041](Polaris 250GP (Latest))
 
-* [http://www.rigsofrods.com/attachment.php?attachmentid=337683&d=1344972883 Polaris GP2.5.0.truck]
+* [http://www.rigsofrods.com/attachment.php?attachmentid=337683&d=1344972883](Polaris GP2.5.0.truck)
 
 # Theory
 

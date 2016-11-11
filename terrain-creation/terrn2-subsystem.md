@@ -4,10 +4,6 @@ title:  "Terrain subsystem (Terrn2)"
 categories: [terrain-creation]
 ---
 
-<div class="toc" markdown="1">
-* TOC
-{:toc}
-</div>
 
 This terrain system was introduced in version 0.4.
 The previous terrain system was based upon Ogre engine's TerrainManager component,

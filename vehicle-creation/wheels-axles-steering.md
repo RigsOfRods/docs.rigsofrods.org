@@ -4,13 +4,6 @@ categories: [vehicle-creation]
 title: "Wheels, axles, steering"
 ---
 
-<div class="toc" markdown="1">
-   * TOC
-   {:toc}
-</div>
-
-
-
 # Wheels
 
 

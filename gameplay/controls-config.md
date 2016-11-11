@@ -4,11 +4,6 @@ title:  "Controls and configuration"
 categories: [gameplay]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 # Intro
 
 Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.

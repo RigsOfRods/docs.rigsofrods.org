@@ -4,10 +4,6 @@ title: "Converting terrain to `terrn2` format"
 categories: [terrain-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 # Basic (Single-layer) 0.3x terrain to 0.4 conversion
 

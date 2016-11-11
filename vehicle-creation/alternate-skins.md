@@ -4,10 +4,6 @@ layout: page
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 This page serves as an overview page o how to create and modify custom skins.
 

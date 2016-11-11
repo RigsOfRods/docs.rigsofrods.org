@@ -4,10 +4,6 @@ layout: page
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 In this tutorial you will learn how to build a small locomotive and wagon. 
 Apart from the meshbuilding, it covers everything needed to build a working train. 

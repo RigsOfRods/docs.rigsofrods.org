@@ -4,10 +4,6 @@ title:  "Suspension"
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 Suspension is a flexible component which connects a car's body to its wheels. because of its flexibility, suspension components soften out bumps in the road and make the truck's ride smoother.
 

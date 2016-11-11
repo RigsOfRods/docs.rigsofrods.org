@@ -4,11 +4,6 @@ title:  "Aircraft handling"
 categories: [gameplay]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 # How to use the autopilot
 	
 You can find the autopilot on top of your dashboard in a plane. Upon startup it looks like this:

@@ -4,11 +4,6 @@ title:  "3D Studio Max"
 categories: [tools-tutorials]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 # Intro
 
 **3ds Max** is a professional 3D modeling, animation, and rendering package from 
