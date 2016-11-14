@@ -4,11 +4,6 @@ title:  "Editorizer"
 categories: [tools-tutorials]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 The Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
 
 It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. A  _.truck_ file with the basic structure has been included to get you started.

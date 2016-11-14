@@ -1,19 +1,52 @@
 ---
-layout: default
+layout: Template
 ---
-<article id="docs-page">
-	<header>
-		<div class="wrapper docs-content">
-			<h1>{{ page.title }}</h1>
-		</div>
-	</header>
-	<div class="page wrapper docs-content">
 
-		{{ content }}
+<style type="text/css">
+  code{
+   display: block; 
+  }
+  
+  .clickable-header:target {
+    padding-top: 1.4em; 
+    margin-top: -1.4em;
+  }
+</style>
 
-		<p id="edit-on-github">
-			<a href="https://github.com/RigsOfRods/docs.rigsofrods.org/blob/gh-pages/{{ page.path }}" title="Contribute to this article on GitHub">Edit page on GitHub</a>
-		</p>
-	</div>
-</article>
+<script type="text/javascript" src="/js/toc.js"></script>
+
+<div style="background-color:LightGrey;">	
+
+  <div class="row" style="padding:1em; background-color:white; border-left: 3px solid grey; border-right: 3px solid grey;">	
+  
+    <center>
+      <h1>{{ page.title }}</h1>			
+    </center>		    
+    
+    <a class="tiny button" style="float:right;" href="https://github.com/RigsOfRods/docs.rigsofrods.org/blob/gh-pages/{{ page.path }}" title="Contribute to this article on GitHub">Edit page on GitHub</a>	
+    
+    <div class="medium-9 columns" id="content">	
+      {{ content }} 		    
+    </div>	
+    
+    <div class="medium-3 columns right" data-sticky-container>		      
+      <div class="sticky" data-sticky data-anchor="content" >
+        <br>
+        <br>
+        <div class="callout" id="toc">
+        </div>	
+        <br>
+        <br>
+      </div>		    
+    </div>
+    
+  </div>	
+  
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#toc').toc();
+  });
+</script>
+
 

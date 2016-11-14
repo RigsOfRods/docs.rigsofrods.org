@@ -4,10 +4,6 @@ layout: page
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 Before we begin, we need to ensure some basic understanding of flares, nodes, and planes (no, not the flying type). 
 

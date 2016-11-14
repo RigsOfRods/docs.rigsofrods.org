@@ -4,11 +4,6 @@ title: "Building rail tracks"
 categories: [terrain-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 # Basic Principle 
 
 The tracks are simple meshes that are placed on the map. 

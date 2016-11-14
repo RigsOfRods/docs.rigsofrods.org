@@ -4,18 +4,16 @@ title:  "Configurator"
 categories: [gameplay]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 ![](/images/rorconfig.png)
 
 This is the configurator. It is how you set the options for how RoR looks and how it plays. It is also how you access multiplayer servers.
 
 # Video tutorial
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/z60VoTbJao0" frameborder="0" allowfullscreen></iframe>
+<div class="flex-video">
+  <iframe width="640" height="480" src="https://www.youtube.com/embed/z60VoTbJao0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 # Settings
 

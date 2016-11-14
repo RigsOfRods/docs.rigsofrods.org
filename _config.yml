@@ -6,5 +6,5 @@ url: "http://docs.rigsofrods.org"
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 permalink: pretty

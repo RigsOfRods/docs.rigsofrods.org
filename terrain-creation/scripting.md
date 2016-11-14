@@ -4,10 +4,6 @@ title:  "Terrain Scripting"
 categories: [terrain-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 # Event box
 
@@ -44,29 +40,31 @@ Example:
 
 <!-- -->
 
-    // Always include the base.as file!
-    #include "base.as"
+```
+// Always include the base.as file!
+#include "base.as"
 
-    string calledLast="";
+string calledLast="";
 
-    void main()
-    {
-        // spawn an oil-well
-        game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
-    }
+void main()
+{
+    // spawn an oil-well
+    game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
+}
 
-    void myCallBack(int trigger_type, string inst, string box, int nodeid)
-    {
-        if(calledLast == inst) return; // already triggered, discard
+void myCallBack(int trigger_type, string inst, string box, int nodeid)
+{
+    if(calledLast == inst) return; // already triggered, discard
 
-        // we log a message to the logfile
-        log(inst + " event triggered");
+    // we log a message to the logfile
+    log(inst + " event triggered");
 
-        // We show a message ingame
-        game.flashMessage(inst + " event triggered", 3, -1);
+    // We show a message ingame
+    game.flashMessage(inst + " event triggered", 3, -1);
 
-        calledLast = inst;
-    }
+    calledLast = inst;
+}
+```
 
 ## Test-Run
 

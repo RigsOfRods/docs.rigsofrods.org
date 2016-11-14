@@ -4,11 +4,6 @@ layout: page
 categories: [vehicle-creation]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
-
 # Making a buoyant hull
 
 Step1: What you have to do is make a simple boat hull shape out of nodes. 

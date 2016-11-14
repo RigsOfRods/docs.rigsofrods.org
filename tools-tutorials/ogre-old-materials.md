@@ -4,10 +4,6 @@ title:  "Ogre legacy materials"
 categories: [tools-tutorials]
 ---
 
-<div class="toc" markdown="1">
-  * TOC
-  {:toc}
-</div>
 
 # What is a material?
 
