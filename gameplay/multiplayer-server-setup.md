@@ -152,6 +152,7 @@ We're now ready to start setting up the Rigs of Rods server.
 ####Required tools:
 
 - [VS 2015 Community Edition]( https://www.visualstudio.com/vs/community/) C++ tools must be installed: 
+
 ![vs](http://i.imgur.com/ROA8aCa.png)
 
 - [CMake](https://cmake.org/download/)
@@ -173,13 +174,16 @@ You should now have a folder named `ror-server` inside of the folder you created
 
 ###Running CMake
 Open CMake, input the source and build paths:
+
 ![cmake1](http://i.imgur.com/oqWNGf7.png)
 
 Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
+
 ![cmake2](http://i.imgur.com/xloCNiG.png)
 Click `Finish`.
 
 (**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
+
 ![cmake3](http://i.imgur.com/hpQ1cXw.png)
 
 Click `Configure` again till all fields are white then press `Generate`. 
@@ -190,19 +194,27 @@ You should now have a `build` folder with `rorserver.sln` inside of it.
 
 Open `rorserver.sln`
 
-Set the build to `Release` ![vs2](http://i.imgur.com/3CSsEe5.png)
+Set the build to `Release` 
 
-Click `Build -> Build Solution ![vs3](http://i.imgur.com/QxzcgnZ.png)
+![vs2](http://i.imgur.com/3CSsEe5.png)
 
-Wait for it to compile. Your build should be successful. ![vs4](http://i.imgur.com/VOQO9Q9.png)
+Click `Build -> Build Solution 
+
+![vs3](http://i.imgur.com/QxzcgnZ.png)
+
+Wait for it to compile. Your build should be successful. 
+
+![vs4](http://i.imgur.com/VOQO9Q9.png)
 
 You should now have `rorserver.exe` inside of the `bin` directory.
 
 ###Configuration
 Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+
 ![f1](http://i.imgur.com/LlycCKX.png)
 
 Rename the files: (example: `tutorial-`):
+
 ![f2](http://i.imgur.com/SCj6UVw.png)
 
 
@@ -282,6 +294,7 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 `make -j2`
 
 Your build should be successful:
+
 ![linux1](http://i.imgur.com/5FWOxR9.png)
 
 You should now have a `rorserver` binary in the `/bin` directory.
