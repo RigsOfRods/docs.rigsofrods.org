@@ -143,6 +143,10 @@ Didn't enter a correct Port number: **port numbers are usually 12000-12500**
 
 Server can't register at master server: **You didn't forward correctly. Try again**
 
+# Creating a Rigs of Rods Server
+
+We're now ready to start setting up the Rigs of Rods server.
+
 ##Windows
 
 ####Required tools:
