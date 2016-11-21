@@ -380,18 +380,3 @@ Many things can go wrong with your server, here's a small selection of problems 
 If you come across a problem, please post in the appropriate [help/support forum](http://rigsofrods.org/forum-15.html).
 If you have a solution for your problem, please add the problem and solution to this list.
 
-# Further Reading
-
-## Server Commands
-
-The server supports several commands by default. Please see the [Server Commands](Server_Commands "wikilink") page for more information.
-
-## GameBot
-
-A special Python-based bot is available for random tasks. Please see the [GameBot](GameBot "wikilink") page. This bot connects to a server as a normal client, and can provide several services to both players and server-administrators.
-
-## Server Side Scripts
-
-You can add scripts to the server, which can perform random tasks as well. More information about these script can be found on the [serverside scripting](serverside_scripting "wikilink") page.
-
-
