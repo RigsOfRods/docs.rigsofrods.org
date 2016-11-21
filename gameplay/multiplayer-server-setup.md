@@ -153,7 +153,7 @@ We're now ready to start setting up the Rigs of Rods server.
 
 - [VS 2015 Community Edition]( https://www.visualstudio.com/vs/community/) C++ tools must be installed: 
 
-![vs](http://i.imgur.com/ROA8aCa.png)
+![vs](/images/VS-server-cplusplus.png)
 
 - [CMake](https://cmake.org/download/)
 
@@ -175,17 +175,17 @@ You should now have a folder named `ror-server` inside of the folder you created
 ### Running CMake
 Open CMake, input the source and build paths:
 
-![cmake1](http://i.imgur.com/oqWNGf7.png)
+![cmake1](/images/cmake-1-server.png)
 
 Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
 
-![cmake2](http://i.imgur.com/xloCNiG.png)
+![cmake2](/images/cmake-2-server.png)
 
 Click `Finish`.
 
 (**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
 
-![cmake3](http://i.imgur.com/hpQ1cXw.png)
+![cmake3](/images/cmake-3-server.png)
 
 Click `Configure` again till all fields are white then press `Generate`. 
 
@@ -197,26 +197,26 @@ Open `rorserver.sln`
 
 Set the build to `Release` 
 
-![vs2](http://i.imgur.com/3CSsEe5.png)
+![vs2](/images/VS-server-release.png)
 
 Click `Build -> Build Solution 
 
-![vs3](http://i.imgur.com/QxzcgnZ.png)
+![vs3](/images/VS-server-build.png)
 
 Wait for it to compile. Your build should be successful. 
 
-![vs4](http://i.imgur.com/VOQO9Q9.png)
+![vs4](/images/VS-server-finish.png)
 
 You should now have `rorserver.exe` inside of the `bin` directory.
 
 ### Configuration
 Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
 
-![f1](http://i.imgur.com/LlycCKX.png)
+![f1](/images/server-config-1.png)
 
 Rename the files: (example: `tutorial-`):
 
-![f2](http://i.imgur.com/SCj6UVw.png)
+![f2](/images/server-config-2.png)
 
 
 Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
@@ -296,7 +296,7 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 
 Your build should be successful:
 
-![linux1](http://i.imgur.com/5FWOxR9.png)
+![linux1](/images/server-linux-finish.png)
 
 You should now have a `rorserver` binary in the `/bin` directory.
 
