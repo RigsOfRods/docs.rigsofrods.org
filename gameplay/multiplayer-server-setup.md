@@ -143,152 +143,207 @@ Didn't enter a correct Port number: **port numbers are usually 12000-12500**
 
 Server can't register at master server: **You didn't forward correctly. Try again**
 
-# Creating a Rigs of Rods Server
+##Windows
 
-We're now ready to start setting up the Rigs of Rods server.
+####Required tools:
 
-## Windows OS
+- [VS 2015 Community Edition]( https://www.visualstudio.com/vs/community/) C++ tools must be installed: 
+![vs](http://i.imgur.com/ROA8aCa.png)
 
-If you are working with Windows, there are two methods to create a server. For both methods, you'll need the server executable and some dll files. If you checked the "Multiplayer Server" checkbox while installing Rigs of Rods, then you should have all the required files in your Rigs of Rods folder (by default C:\\Program Files\\Rigs of Rods).
+- [CMake](https://cmake.org/download/)
 
-1.  The <u>first method</u> is only usable for RoR 0.38 and later, but it is the easiest and most user-friendly method, since there's no long command or complicated file editing involved. This method is recommended if you just need a temporary server. We will guide you through the process of setting up your server in 4 steps:
-    1.  **step 1:** Navigate to the folder where the server files are. If the server was installed together with Rigs of Rods, then the files will be in main Rigs of Rods folder, which is, by default: **C:\\Program Files\\Rigs of Rods**. There, you should see an executable called, 'servergui.exe'. Just start it by double clicking it. This will bring up a window in which you can change the settings of your server before starting it. The following fields can be edited:
-        1.  *Server Name*: This is the name of your server. This name will be shown in the serverlist in the configurator.
-        2.  *Mode*: Select 'LAN' if you don't want your server to be in the internet serverlist in the configurator, or select 'internet' if you want your server to be advertised in the configurator.
-        3.  *IP*: Click the 'get public IP address' button. This is the IP that you will need to fill in your configurator to join your server.
-        4.  *Port*: If you're running multiple servers, then you'll need to make sure, each of them has another number here. The Rigs of Rods server ports are usually between 12000 and 14000.
-        5.  *Password*: If you prefer a passworded server, then fill in your desired password here.
-        6.  *Slots*: The amount of players that will be able to play on your server at the same time. Please read [this blog post](http://www.rigsofrods.com/entries/55-Server-requirements) to find out more about the influence of this setting on the required connection speed.
-        7.  *Terrain*: the terrain that your server will use. Use 'any' to let your players select choose their terrain.
-        8.  *Log level*: The amount of information that will be shown in the log tab. 'INFO' is recommended here.
-        9.  *Log filename*: The name of the file in which the server will store logmessages.
-        10. *Admin user token*: Fill in your user token here. This will ensure that when you join your server, you'll be admin.
+- [Git](https://git-scm.com/) (Leave all options to their defaults)
 
-    2.  **Step 2:** Start your server by clicking the blue 'Start' button in the top right corner.
-    3.  **Step 3:** Check in the log tab for any errors. If an error occurred, please consult the 'troubleshooting' part in this tutorial.
-    4.  **Step 4:** Test if your server works by joining it. To do this, you'll need to fill in the IP and portnumber, from step 1, in your configurator.
-    5.  *Note: you can kick and ban players by right clicking on a player name in the playerlist.*
-    6.  *Note: the servergui.exe that comes with Rigs of Rods 0.37 will not work in Internet mode.*
+###Getting the source
 
-<!-- -->
+Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
-1.  The <u>second method</u> is more suited for running a permanent server. This server will use less CPU, is more stable and offers advanced functionality, but this server is a bit harder to set up. We will guide you through the process of setting up this server in 4 steps:
-    1.  **Step 1**: Navigate to the folder containing the server files. (by default: **C:\\Program Files\\Rigs of Rods**). There, you should see an executable called, 'rorserver.exe'. Do **not** double click that file.
-    2.  **Step 2**: Create a new empty text-file, and name it 'server\_INET.bat'. Make sure the extension is .bat, and not .txt. In that file, put the following text: 
-    
-        
-        rorserver.exe -port 12000 -terrain aspen -maxclients 4 -name Default_Servername pause
-        
-    
-        You can change the parameters to suit your needs. In the example above, the terrain aspen is used. Change the 'aspen' to something else to change the terrain. You can edit the other parameters in the same way. Here's a list of all possible parameters: 
-        
-        
-        Usage: rorserver [OPTIONS] <paramaters>
+While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
 
-        Where [OPTIONS] and <parameters>
-        -c (-config) <config file>   Loads the configuration from a file rather than
-                                     from the commandline
-        -name <name>                 Name of the server, no spaces, only
-                                     [a-z,0-9,A-Z]
-        -terrain <mapname>           Map name (defaults to 'any')
-        -maxclients <clients>        Maximum clients allowed
-        -lan|inet                    Private or public server (defaults to inet)
-        -password <password>         Private server password
-        -ip <ip>                     Public IP address to register with.
-        -port <port>                 Port to use (defaults to random 12000-12500)
-        -verbosity {0-5}             Sets displayed log verbosity
-        -logverbosity {0-5}          Sets file log verbositylog verbosity
-                                     levels available to verbosity and logverbosity:
-                                         0 = stack
-                                         1 = debug
-                                         2 = verbosity
-                                         3 = info
-                                         4 = warn
-                                         5 = error
-        -logfilename <server.log>    Sets the filename of the log
-        -script <script.as>          server script to execute
-        -webserver                   enables the built-in webserver
-        -webserver-port <number>     sets up the port for the webserver, default is
-                                     game port + 100
-        -script <script.as>          server script to execute
-        -version                     prints the server version numbers
-        -fg                          starts the server in the foreground (background by
-                                     default)
-        -resdir <path>               sets the path to the resource directory
-        -authfile <server.auth>      Sets the filename of the file that contains
-                                     player authorization information
-        -motdfile <server.motd>      Sets the filename of the file that contains the
-                                     message of the day (the contents of this file is
-                                     shown when someone joins)
-        -rulesfile <server.rules>    Sets the filename of the file that contains rules
-                                     for this server (the contents of this file is
-                                     shown when someone says '!rules')
-        -vehiclelimit {1-*}          Sets the maximum number of vehicles that a user is
-                                     allowed to have (a vehicle is a truck, plane or
-                                     boat, but also a load or a trailer)
-        -owner <name|organisation>   Sets the owner of this server (this will be shown
-                                     when someone says '!owner')
-        -website <URL>               Sets the website of this server (this will be shown
-                                     when someone says '!website')
-        -irc <URL>                   Sets the IRC url for this server (this will be shown
-                                     when someone says '!irc')
-        -voip <URL>                  Sets the voip url for this server (this will be shown
-                                     when someone says '!voip')
-        -help                        Show this list
-        
-        
-        As you can see, if you prefer a LAN server, then you can do this by adding ''-lan'' to the .bat file.
+A Command Prompt window should now be open.
 
-    3.  **Step 3**: Save the file, and make sure the extension is .bat, and not .txt. When that's done, double click the server\_INET.bat file. Your server is now running.
-    4.  **Step 4**: Take a look at the terminal window that should have appeared, if an error occurred, please consult the troubleshooting part of this tutorial.
-    5.  **notes**:
-        1.  These server commands along with the MOTD file and admin (authorizations) file do not work with the rorserver.exe that comes with Rigs of Rods 0.37.
-        2.  To connect to this server:
-            1.  on your own computer: type the local host into the server IP box. The local host is always 127.0.0.1
-            2.  on a computer on your home network: on the computer that is hosting the server, open command prompt and type ipconfig and push enter. The address that you are looking for is under IP Address or IPv4 address. This number goes into the server IP box in the configurator.
+Run this command to get the latest source:
+`git clone https://github.com/RigsOfRods/ror-server.git`
 
-## Linux
+You should now have a folder named `ror-server` inside of the folder you created earlier.
 
-There's no server binary available for the latest rorserver versions, but you can follow the following tutorial to compile one yourself: [Compiling Server](http://ror.avrintech.net/rorwikibackup/index.php/Compiling_Server) After that tutorial, you'll have a working Rigs of Rods multiplayer server.
+###Running CMake
+Open CMake, input the source and build paths:
+![cmake1](http://i.imgur.com/oqWNGf7.png)
 
-Note: if the init script doesn't work for your system, then you can also start the server using the following command: (there's a list of all possible parameters in the windows part of this tutorial).
+Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
+![cmake2](http://i.imgur.com/xloCNiG.png)
+Click `Finish`.
 
-## Source
+(**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
+![cmake3](http://i.imgur.com/hpQ1cXw.png)
 
-The Rigs of Rods server is licensed under the [GNU General Public License](http://en.wikipedia.org/wiki/GNU_General_Public_License). This means that the source code is available to you free of charge for any purpose. However, if you want to modify and distribute the server, the modified code must be released as GPL code as well. Any application which makes use of GPL code must also be released as GPL.
+Click `Configure` again till all fields are white then press `Generate`. 
 
-That said, feel free to submit patches, bugs, and etc to our [GitHub project page](https://github.com/RigsOfRods/ror-server) and help us improve!
+You should now have a `build` folder with `rorserver.sln` inside of it.
 
-To get the latest code, please follow the [Compiling Server](http://ror.avrintech.net/rorwikibackup/index.php/Compiling_Server) tutorial.
+###Compiling
 
-# Frequently Asked Questions
+Open `rorserver.sln`
 
-1.  **How to add a welcome message to my server? / How to add a Message of the Day (motd)?**
-    The easiest way is to create new text file 'motd.txt' in the same folder as your server executable (or '/motd.txt' for Linux users). The contents of that file will be displayed to every user that joins your server.
-    It's possible to change the location of that file to somewhere else. To do that, add, for example, the following command line argument:
-        -motdfile "C:/rorserver/resources/my_motd.txt"
+Set the build to `Release` ![vs2](http://i.imgur.com/3CSsEe5.png)
 
-    or the following configuration file setting:
+Click `Build -> Build Solution ![vs3](http://i.imgur.com/QxzcgnZ.png)
 
-        motdfile = C:/rorserver/resources/my_motd.txt
+Wait for it to compile. Your build should be successful. ![vs4](http://i.imgur.com/VOQO9Q9.png)
 
-2.  **How do I make myself admin on my server?**
-    Make a file 'admins.txt' in the same folder as your rorserver.exe. The contents of this file can be found [here](https://github.com/RigsOfRods/ror-server/blob/master/contrib/example-auth.auth). Follow the instructions in that file and then replace the example admin line by the correct data. You can just add as many lines as admins/moderators that you want. It's also possible to change the location of that file to somewhere else. To do that, add, for example, the following command line argument:
-        -authfile "C:/rorserver/resources/my_authorizations.txt"
+You should now have `rorserver.exe` inside of the `bin` directory.
 
-    or the following configuration file setting:
+###Configuration
+Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+![f1](http://i.imgur.com/LlycCKX.png)
 
-        authfile = C:/rorserver/resources/my_authorizations.txt
+Rename the files: (example: `tutorial-`):
+![f2](http://i.imgur.com/SCj6UVw.png)
 
-3.  **How do I make a LAN/Internet server?**
-    Add the command line argument -lan or -inet <u>at the end of your argument list</u>, or add the following configuration setting in your configuration file: mode = lan for a lan server or mode = inet for an Internet server.
-4.  **How to connect to a LAN server?**
-    You'll need to connect manually to the server by entering the local IP and port number of the server in the Network tab of your Rigs of Rods Configurator.
-5.  **How do I permanently ban someone from my server?**
-    At the moment, this is not possible. We advise to ban users using iptables, firewalls or similar programs.
 
-If you have a question that is not answerred here, please post in the appropriate [help/support forum](http://rigsofrods.org/forum-15.html).
-If you have received an answer for your question, please add the question and answer to this list.
+Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings.
+For now, the .auth file cannot be read on the latest source, so it can be ignored.
+
+###Running the server
+In the `bin` directory, 
+`SHIFT + Right click -> Open command prompt window here`
+
+To start the server:
+
+`rorserver.exe -c your-config.cfg`
+
+Your server should now be running and registered on the server list!
+
+To stop the server, press `CTRL+C` or close the command prompt.
+
+##Linux 
+###(requires a `terminal` and `sudo` access)
+
+####Required tools:
+(Debian/Ubuntu)
+
+- `sudo apt-get install build-essential`
+- `sudo apt-get install nano`
+- `sudo apt-get install cmake`
+- `sudo apt-get install git`
+
+(CentOS)
+
+- `sudo yum groupinstall 'Development Tools'`
+- `sudo yum install nano`
+- `sudo yum install cmake`
+- `sudo yum install git`
+
+###Getting the source
+
+Create rorserver user with no login rights:
+
+`useradd rorserver -s /bin/false`
+
+Make a directory where you want your source to be:
+
+`mkdir ror-server`
+
+Change into the created directory:
+
+`cd ror-server`
+
+To get the latest source: 
+
+`git clone https://github.com/RigsOfRods/ror-server.git`
+
+Change into the source folder:
+
+`cd ror-server`
+
+###Running CMake
+
+(**Optional**) Enable build options (May cause build failures - webserver fails to build on latest source)
+
+```
+
+cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
+-DRORSERVER_NO_STACKLOG:BOOL=ON \
+-DRORSERVER_CRASHHANDLER:BOOL=OFF \
+-DRORSERVER_GUI:BOOL=OFF \
+-DRORSERVER_WITH_ANGELSCRIPT:BOOL=OFF \
+-DRORSERVER_WITH_WEBSERVER:BOOL=OFF \
+.
+
+```
+
+###Compiling
+
+`make -j2`
+
+Your build should be successful:
+![linux1](http://i.imgur.com/5FWOxR9.png)
+
+You should now have a `rorserver` binary in the `/bin` directory.
+
+###Configuration
+
+
+Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+
+```
+
+cd contrib
+cp example-auth.auth ../bin
+cp example-motd.motd ../bin
+cp example-config.cfg ../bin
+cp example-rules.rules ../bin
+
+```
+
+
+
+Change into the `bin` directory:
+
+`cd ../bin`
+
+Rename the files (example: `tutorial-`):
+
+```
+
+mv example-auth.auth tutorial-auth.auth 
+mv example-motd.motd tutorial-motd.motd 
+mv example-config.cfg tutorial-config.cfg 
+mv example-rules.rules tutorial-rules.rules
+
+```
+
+Edit the files using `nano`:
+
+```
+
+nano tutorial-auth.auth 
+For now, the .auth file cannot be read on the latest source, so it can be ignored.
+nano tutorial-motd.motd 
+nano tutorial-config.cfg 
+nano tutorial-rules.rules
+
+```
+
+Use the arrow keys to navigate. After you fill out the file, press CTRL+O to write the changes and CTRL+X to exit.
+
+###Running the server
+
+To start the server: 
+
+`./rorserver -c your-config.cfg`
+
+If you get permission denied:
+
+`sudo chmod +x rorserver`
+
+
+Your server should now be running and registered on the server list!
+
+To stop the server, use the kill command with the `pid`:
+
+`sudo kill pid`
 
 # Troubleshooting
 
