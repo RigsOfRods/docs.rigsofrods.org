@@ -180,6 +180,7 @@ Open CMake, input the source and build paths:
 Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
 
 ![cmake2](http://i.imgur.com/xloCNiG.png)
+
 Click `Finish`.
 
 (**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
