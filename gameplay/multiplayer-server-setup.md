@@ -378,17 +378,9 @@ Many things can go wrong with your server, here's a small selection of problems 
     5.  **ERROR|Message does not appear to contain a body**
         *Please make sure that your terrain name doesn't contain any spaces. If you're not using the servergui, then also make sure that your server name doesn't contain spaces.*
 
-2.  Problems while setting up your server
-    1.  **When I double click the server\_INET.bat file, the file just opens in notepad.**
-        *Please make sure that the extension of the file is .bat and not .txt*
-    2.  **My servergui.exe crashes or gets stuck when starting my server in Internet mode.**
-        *The servergui.exe that comes with Rigs of Rods 0.37 only works for LAN games. You'll need to use the second method to setup a Rigs of Rods 0.37 server.*
-    3.  **I cannot start the server because MSVCR100.dll is missing.**
-        *You'll need to download the visual c++ redistributable. You can download it from the [official Microsoft site](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84).*
-
-3.  Problems while connecting to your server
+4.  Problems while connecting to your server
     1.  **Network fatal error: server uses a different protocol version**
-        *You need to download the correct server version to match your game version.*
+        *You need to download the correct server version to match your game version. 0.4.7.0+ supports RoRNet 2.38.*
 
 If you come across a problem, please post in the appropriate [help/support forum](http://rigsofrods.org/forum-15.html).
 If you have a solution for your problem, please add the problem and solution to this list.
