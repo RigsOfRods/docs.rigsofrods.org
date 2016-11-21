@@ -218,7 +218,7 @@ Rename the files: (example: `tutorial-`):
 ![f2](http://i.imgur.com/SCj6UVw.png)
 
 
-Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings.
+Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
 For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
 ###Running the server
@@ -336,14 +336,15 @@ Edit the files using `nano`:
 ```
 
 nano tutorial-auth.auth 
-For now, the .auth file cannot be read on the latest source, so it can be ignored.
+
 nano tutorial-motd.motd 
 nano tutorial-config.cfg 
 nano tutorial-rules.rules
 
 ```
-
 Use the arrow keys to navigate. After you fill out the file, press CTRL+O to write the changes and CTRL+X to exit.
+You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
+For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
 ###Running the server
 
