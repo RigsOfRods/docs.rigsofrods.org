@@ -336,7 +336,6 @@ Edit the files using `nano`:
 ```
 
 nano tutorial-auth.auth 
-
 nano tutorial-motd.motd 
 nano tutorial-config.cfg 
 nano tutorial-rules.rules
