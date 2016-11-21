@@ -147,9 +147,9 @@ Server can't register at master server: **You didn't forward correctly. Try agai
 
 We're now ready to start setting up the Rigs of Rods server.
 
-##Windows
+## Windows
 
-####Required tools:
+#### Required tools:
 
 - [VS 2015 Community Edition]( https://www.visualstudio.com/vs/community/) C++ tools must be installed: 
 
@@ -159,7 +159,7 @@ We're now ready to start setting up the Rigs of Rods server.
 
 - [Git](https://git-scm.com/) (Leave all options to their defaults)
 
-###Getting the source
+### Getting the source
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
@@ -172,7 +172,7 @@ Run this command to get the latest source:
 
 You should now have a folder named `ror-server` inside of the folder you created earlier.
 
-###Running CMake
+### Running CMake
 Open CMake, input the source and build paths:
 
 ![cmake1](http://i.imgur.com/oqWNGf7.png)
@@ -191,7 +191,7 @@ Click `Configure` again till all fields are white then press `Generate`.
 
 You should now have a `build` folder with `rorserver.sln` inside of it.
 
-###Compiling
+### Compiling
 
 Open `rorserver.sln`
 
@@ -209,7 +209,7 @@ Wait for it to compile. Your build should be successful.
 
 You should now have `rorserver.exe` inside of the `bin` directory.
 
-###Configuration
+### Configuration
 Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
 
 ![f1](http://i.imgur.com/LlycCKX.png)
@@ -222,7 +222,7 @@ Rename the files: (example: `tutorial-`):
 Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
 For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
-###Running the server
+### Running the server
 In the `bin` directory, 
 `SHIFT + Right click -> Open command prompt window here`
 
@@ -234,10 +234,10 @@ Your server should now be running and registered on the server list!
 
 To stop the server, press `CTRL+C` or close the command prompt.
 
-##Linux 
-###(requires a `terminal` and `sudo` access)
+## Linux 
+### (requires a `terminal` and `sudo` access)
 
-####Required tools:
+#### Required tools:
 (Debian/Ubuntu)
 
 - `sudo apt-get install build-essential`
@@ -252,7 +252,7 @@ To stop the server, press `CTRL+C` or close the command prompt.
 - `sudo yum install cmake`
 - `sudo yum install git`
 
-###Getting the source
+### Getting the source
 
 Create rorserver user with no login rights:
 
@@ -274,7 +274,7 @@ Change into the source folder:
 
 `cd ror-server`
 
-###Running CMake
+### Running CMake
 
 (**Optional**) Enable build options (May cause build failures - webserver fails to build on latest source)
 
@@ -290,7 +290,7 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 
 ```
 
-###Compiling
+### Compiling
 
 `make -j2`
 
@@ -300,7 +300,7 @@ Your build should be successful:
 
 You should now have a `rorserver` binary in the `/bin` directory.
 
-###Configuration
+### Configuration
 
 
 Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
@@ -346,7 +346,7 @@ Use the arrow keys to navigate. After you fill out the file, press `CTRL+O` to w
 You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
 For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
-###Running the server
+### Running the server
 
 To start the server: 
 
