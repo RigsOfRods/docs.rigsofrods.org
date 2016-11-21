@@ -382,6 +382,6 @@ Many things can go wrong with your server, here's a small selection of problems 
     1.  **Network fatal error: server uses a different protocol version**
         *You need to download the correct game version to match your server version. 0.4.7.0+ supports RoRNet 2.38.*
 
-If you come across a problem, please post in the appropriate [help/support forum](http://rigsofrods.org/forum-15.html).
+If you come across a problem, please post in the appropriate [help/support forum](https://forum.rigsofrods.org/forum-15.html).
 If you have a solution for your problem, please add the problem and solution to this list.
 
