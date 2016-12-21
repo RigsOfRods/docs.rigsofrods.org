@@ -161,35 +161,35 @@ We're now ready to start setting up the Rigs of Rods server.
 
 ### Getting the source
 
-Create a folder where you want the source to be ( I will be using `C:\ror-server`)
+Create a folder where you want the source to be. I will be using: `C:\ror-server`
 
-While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
+While in the folder, do the following: `SHIFT + Right click -> Open command prompt window here` 
 
 A Command Prompt window should now be open.
 
 Run this command to get the latest source:
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
-You should now have a folder named `ror-server` inside of the folder you created earlier.
+You should now have a folder named "ror-server" inside of the folder you created earlier.
 
 ### Running CMake
 Open CMake, input the source and build paths:
 
 ![cmake1](/images/cmake-1-server.png)
 
-Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
+Click "Configure" and select your compiler: (Don't confuse Visual Studio 14 2015 with Visual Studio 15)
 
 ![cmake2](/images/cmake-2-server.png)
 
-Click `Finish`.
+Click "Finish".
 
 (**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
 
 ![cmake3](/images/cmake-3-server.png)
 
-Click `Configure` again till all fields are white then press `Generate`. 
+Click "Configure" again till all fields are white then press "Generate". 
 
-You should now have a `build` folder with `rorserver.sln` inside of it.
+You should now have a "build" folder with "rorserver.sln" inside of it.
 
 ### Compiling
 
@@ -199,7 +199,7 @@ Set the build to `Release`
 
 ![vs2](/images/VS-server-release.png)
 
-Click `Build -> Build Solution 
+Click `Build -> Build Solution` 
 
 ![vs3](/images/VS-server-build.png)
 
@@ -207,45 +207,46 @@ Wait for it to compile. Your build should be successful.
 
 ![vs4](/images/VS-server-finish.png)
 
-You should now have `rorserver.exe` inside of the `bin` directory.
+You should now have "rorserver.exe" inside of the "bin" directory.
 
 ### Configuration
-Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+Copy the example auth/cfg/motd/rules files from the "contrib" directory to the "bin" directory:
 
 ![f1](/images/server-config-1.png)
 
-Rename the files: (example: `tutorial-`):
+Rename the files: (example: "tutorial-config.cfg"):
 
 ![f2](/images/server-config-2.png)
 
 
-Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
+Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the [Port Forwarding](http://docs.rigsofrods.org/gameplay/multiplayer-server-setup/#port-forwarding) part of this page.
+
 For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
 ### Running the server
-In the `bin` directory, 
+In the "bin" directory, do the following: 
 `SHIFT + Right click -> Open command prompt window here`
 
-To start the server:
+To start the server, type:
 
-`rorserver.exe -c your-config.cfg`
+`rorserver.exe -c tutorial-config.cfg`
 
 Your server should now be running and registered on the server list!
 
-To stop the server, press `CTRL+C` or close the command prompt.
+To stop the server, press "CTRL+C" or close the command prompt.
 
 ## Linux 
-### (requires a `terminal` and `sudo` access)
+### (requires a "terminal" and "sudo" access)
 
 #### Required tools:
-(Debian/Ubuntu)
+##### Debian/Ubuntu
 
 - `sudo apt-get install build-essential`
 - `sudo apt-get install nano`
 - `sudo apt-get install cmake`
 - `sudo apt-get install git`
 
-(CentOS)
+##### CentOS
 
 - `sudo yum groupinstall 'Development Tools'`
 - `sudo yum install nano`
@@ -254,7 +255,7 @@ To stop the server, press `CTRL+C` or close the command prompt.
 
 ### Getting the source
 
-Create rorserver user with no login rights:
+Create a "rorserver" user with no login rights:
 
 `useradd rorserver -s /bin/false`
 
@@ -266,7 +267,7 @@ Change into the created directory:
 
 `cd ror-server`
 
-To get the latest source: 
+Get the latest source: 
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
@@ -279,7 +280,6 @@ Change into the source folder:
 (**Optional**) Enable build options (May cause build failures - webserver fails to build on latest source)
 
 ```
-
 cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 -DRORSERVER_NO_STACKLOG:BOOL=ON \
 -DRORSERVER_CRASHHANDLER:BOOL=OFF \
@@ -287,7 +287,6 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 -DRORSERVER_WITH_ANGELSCRIPT:BOOL=OFF \
 -DRORSERVER_WITH_WEBSERVER:BOOL=OFF \
 .
-
 ```
 
 ### Compiling
@@ -303,80 +302,88 @@ You should now have a `rorserver` binary in the `/bin` directory.
 ### Configuration
 
 
-Copy the example `auth`/`cfg`/`motd`/`rules` files from the `contrib` directory to the `bin` directory:
+Copy the example auth/cfg/motd/rules files from the "contrib" directory to the "bin" directory:
 
 ```
-
 cd contrib
 cp example-auth.auth ../bin
 cp example-motd.motd ../bin
 cp example-config.cfg ../bin
 cp example-rules.rules ../bin
-
 ```
-
-
 
 Change into the `bin` directory:
 
 `cd ../bin`
 
-Rename the files (example: `tutorial-`):
+Rename the files (example: "tutorial-config.cfg"):
 
 ```
-
 mv example-auth.auth tutorial-auth.auth 
 mv example-motd.motd tutorial-motd.motd 
 mv example-config.cfg tutorial-config.cfg 
 mv example-rules.rules tutorial-rules.rules
-
 ```
 
-Edit the files using `nano`:
+Edit the files using "nano":
 
 ```
-
 nano tutorial-auth.auth 
 nano tutorial-motd.motd 
 nano tutorial-config.cfg 
 nano tutorial-rules.rules
-
 ```
-Use the arrow keys to navigate. After you fill out the file, press `CTRL+O` to write the changes and `CTRL+X` to exit.
-You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
+Use the arrow keys to navigate. After you fill out the file, press "CTRL+O" to write the changes and "CTRL+X" to exit.
+You will need to port forward your servers port in your router settings. See the [Port Forwarding](http://docs.rigsofrods.org/gameplay/multiplayer-server-setup/#port-forwarding) part of this page.
+
 For now, the .auth file cannot be read on the latest source, so it can be ignored.
 
 ### Running the server
 
-To start the server: 
+To start the server, run: 
 
 `./rorserver -c your-config.cfg`
 
-If you get permission denied:
+If you get permission denied, use:
 
 `sudo chmod +x rorserver`
 
 
 Your server should now be running and registered on the server list!
 
-To stop the server, use the kill command with the `pid`:
+To stop the server, use the kill command with the ["pid"](https://en.wikipedia.org/wiki/Process_identifier):
 
-`sudo kill pid`
+`sudo kill "pid"`
 
 # Troubleshooting
 
 Many things can go wrong with your server, here's a small selection of problems that may occur:
 
 1.  Common error messages
-    1.  **ERROR|error upon registration: error: cannot connect from the master server. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the Master server. You should have a look at <http://docs.rigsofrods.org/gameplay/multiplayer-server-setup>**
+    -  
+    ```
+    ERROR|error upon registration: error: cannot connect from the master server. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the Master server. You should have a look at <http://docs.rigsofrods.org/gameplay/multiplayer-server-setup>
+    ```
         *This usually means that you have to forward your port. Please follow the 'Port Forwarding' part of this tutorial. Another cause may be that you specified the wrong IP address. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.*
-    2.  **ERROR|FATAL Listerer: SWInetSocket::bind() error: Address already in use**
+    -  
+    ```
+    ERROR|FATAL Listerer: SWInetSocket::bind() error: Address already in use
+    ```
         *The port that you filled in is already in use by another program. Please use another port number.*
-    3.  **ERROR|error opening admin configuration file '/admins.txt**'
+    -  
+    ```
+    ERROR|error opening admin configuration file '/admins.txt'
+    ```
         *This means that you didn't specify an authorizations file. You can safely ignore this error message.*'
-    4.  **ERROR Listener: SWBaseSocket::accept() error: Socket operation on non-socket**
+    -  
+    ```
+    ERROR Listener: SWBaseSocket::accept() error: Socket operation on non-socket
+    ```
         *This happens in the servergui after you've stopped your server. Please ignore this message.*
-    5.  **ERROR|Message does not appear to contain a body**
+    -  
+    ```
+    ERROR|Message does not appear to contain a body
+    ```
         *Please make sure that your terrain name doesn't contain any spaces. If you're not using the servergui, then also make sure that your server name doesn't contain spaces.*
 
 2.  Problems while connecting to your server
