@@ -641,13 +641,11 @@ DOF\_DEBUG\_FOCUS\_OUT
 
 1. Attach your wheel/joystick/gamepad that you want to map.
 
-2. Download [Inputtool.zip](:Media:Inputtool3.zip "wikilink"). When you execute 'inputtool.exe' it will create a textfile named 'inputinfo.txt' in the same directory. This text file contains the relevant 'VendorMapFilename'.
+2. Download [Inputtool.zip](https://xror.avrintech.net/rorwikibackup/misc-files/Inputtool.zip). When you execute 'inputtool.exe' it will create a textfile named 'inputinfo.txt' in the same directory. This text file contains the relevant 'VendorMapFilename'.
 
 3. Create a mapping file named like the value of 'VendorMapFilename' you just found out in the Rigs of Rods/config/ folder.
 
 4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](Input.map "wikilink"))
-
--   Hint: You might find it easier to copy an [existing](http://www.rigsofrods.com/threads/96556-Joystick-specific-Input-maps) input map and edit commands to match your controller.
 
 5. When you are finished with your configuration, copy and paste relevant infos from inputinfo.txt into your map file. Also make a comment (";" marks the rest of the line as a comment) after every command which button is used so others can easily see what button they have to use. See template:
 
@@ -682,7 +680,7 @@ AIRPLANE_THROTTLE_UP            JoystickButton       0 1 ;B
 ...
 ```
 
-6. Submit <your map filename>.map as a new post [here](http://www.rigsofrods.com/threads/96556-Joystick-specific-Input-maps)
+6. Create a pull request on [GitHub] (https://github.com/RigsOfRods/rigs-of-rods) with <your map filename>.map in the `bin\resources\skeleton\config` directory.
 
 Thank you!
 
