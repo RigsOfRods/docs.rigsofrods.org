@@ -180,6 +180,7 @@ because some planes could have more than 4 engines and you couldn't control them
 
 # Config file 'input.map'
 
+For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/bin/resources/skeleton/config/input.map) file on GitHub.
 
 This file defines all key alias for RoR. It has the following format:
 
