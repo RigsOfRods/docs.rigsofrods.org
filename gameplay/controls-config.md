@@ -131,7 +131,7 @@ Input is configured using configuration file 'input.map'. It's also possible to 
 ![](/images/input-map-aerial-and-marine.png)
 
 <table style="color: #127220; display: inline-block; vertical-align: top;">
-    <tr><th>Airplane control</th><th>Key</th></tr>
+    <tr><th>Airplane controls</th><th>Key</th></tr>
 
     <tr><td>Steer Left   </td><td>LEFT              </td></tr>
     <tr><td>Steer Right  </td><td>RIGHT             </td></tr>
@@ -149,15 +149,18 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>Start Engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
-<table style="color: #ced925; display: inline-block; vertical-align: top;">
-    <tr><th>Boat control</th><th>Key</th></tr>
+It is recommended to use: - CTRL + HOME - to start all engine of a plane - CTRL + PGUP  - to full throttle all engines
+because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
-    <tr><td>Throttle Down  </td><td>6    </td></tr>
-    <tr><td>Throttle Up    </td><td>7    </td></tr>
+<table style="color: #ced925; display: inline-block; vertical-align: top;">
+    <tr><th>Boat controls</th><th>Key</th></tr>
+
+    <tr><td>Throttle Down  </td><td>DOWN   </td></tr>
+    <tr><td>Throttle Up    </td><td>UP    </td></tr>
     <tr><td>Steer Left     </td><td>LEFT </td></tr>
     <tr><td>Steer Right    </td><td>RIGHT</td></tr>
-    <tr><td>Center Rudder  </td><td>DOWN </td></tr>
-    <tr><td>Center Throttle</td><td>UP   </td></tr>
+    <tr><td>Center Rudder  </td><td>PGUP  </td></tr>
+    <tr><td>Center Throttle</td><td>PGDOWN   </td></tr>
 </table>
 
 <table style="color: #ab7e3a; display: inline-block; vertical-align: top;">
@@ -173,10 +176,6 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>Toggle HUD          </td><td>U    </td></tr>
     <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
 </table>
-
-It is recommended to use: - CTRL + HOME - to start all engine of a plane - CTRL + PGUP  - to full throttle all engines
-
-because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
 # Config file 'input.map'
 
