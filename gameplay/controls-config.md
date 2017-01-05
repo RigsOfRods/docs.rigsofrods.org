@@ -8,7 +8,7 @@ categories: [gameplay]
 
 Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
-Input is configured using configuration file 'input.map'. It's also possible to configure them via our 'configurator' utility, RoRConfig. In-game configuration of controls is not implemented yet.
+Input is configured using configuration file 'input.map'. In-game configuration of controls is not implemented yet.
 
 # Keyboard layout
 
@@ -615,7 +615,7 @@ DOF\_DEBUG\_APERTURE\_LESS
 DOF\_DEBUG\_FOCUS\_IN
 DOF\_DEBUG\_FOCUS\_OUT
 
-# Configuring controls with RoRConfig
+# Configuring controls with RoRConfig (Outdated as of version 0.37.126)
 
 1. Plug in your device, open the Configurator and go to the **"Controls"** tab.
 
