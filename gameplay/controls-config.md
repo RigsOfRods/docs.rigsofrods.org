@@ -174,11 +174,12 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
 </table>
 
-It is recommended to use: - CTRL + Home - to start all engine of a plane - CTRL + 7 - to full throttle all engines
+It is recommended to use: - CTRL + HOME - to start all engine of a plane - CTRL + PGUP  - to full throttle all engines
 
 because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
 # Config file 'input.map'
+
 
 This file defines all key alias for RoR. It has the following format:
 
