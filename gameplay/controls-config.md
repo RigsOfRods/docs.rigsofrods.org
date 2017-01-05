@@ -108,7 +108,22 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>COMMANDS 36</td><td>ALT + F12</td></tr>
     <tr><td>COMMANDS 37</td><td>CTRL + ALT + F1</td></tr>
     <tr><td>...</td><td>...</td></tr>
-    <tr><td>COMMANDS 48</td><td>CTRL + ALT + F12</td></tr>
+    <tr><td>COMMANDS 48</td><td>CTRL+ ALT + F12</td></tr>
+	<tr><td>COMMANDS 49</td><td>CTRL+ SHIFT + F1</td></tr>
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 58</td><td>CTRL + SHIFT + F10</td></tr>
+	<tr><td>COMMANDS 59</td><td>CTRL + SHIFT + F11</td></tr>
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 68</td><td>CTRL + ALT + F8</td></tr>	
+	<tr><td>COMMANDS 69</td><td>CTRL + ALT + F9</td></tr>	
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 78</td><td>CTRL + SHIFT + ALT + F6</td></tr>	
+	<tr><td>COMMANDS 79</td><td>CTRL + SHIFT + ALT + F7</td></tr>	
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 83</td><td>CTRL + SHIFT + ALT + F11</td></tr>	
+	<tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
+	
+
 </table>
 
 ## Aerial and marine keys
