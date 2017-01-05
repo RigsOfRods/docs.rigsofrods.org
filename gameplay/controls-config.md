@@ -170,11 +170,16 @@ because some planes could have more than 4 engines and you couldn't control them
     <tr><td>Lock Load           </td><td>L    </td></tr>
     <tr><td>Secure Load         </td><td>O    </td></tr>
     <tr><td>Reset Vehicle       </td><td>I    </td></tr>
+    <tr><td>Reset Vehicle In Place  </td><td>BACKSPACE</td></tr>
     <tr><td>Show Skeleton       </td><td>K    </td></tr>
     <tr><td>Toggle Lights       </td><td>N    </td></tr>
-    <tr><td>Toggle beacons      </td><td>M    </td></tr>
+    <tr><td>Toggle Beacons      </td><td>M    </td></tr>
     <tr><td>Toggle HUD          </td><td>U    </td></tr>
-    <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
+    <tr><td>Enter / Exit Vehicle</td><td>ENTER</td></tr>
+    <tr><td>Adjust Simulation Speed</td><td>Ctrl+= / Shift+= </td></tr>
+    <tr><td>Switch Between Vehicles </td><td>Ctrl+] / Ctrl+[</td></tr>
+    <tr><td>Remove Current Vehicle</td><td>Ctrl+Del</td></tr>
+    <tr><td>Respawn Last Vehicle</td><td>Ctrl+.(period)</td></tr>
 </table>
 
 # Config file 'input.map'
