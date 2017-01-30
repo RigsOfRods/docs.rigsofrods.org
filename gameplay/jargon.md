@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Jargon"
-categories: [overview]
+categories: [gameplay]
 ---
 
 This is a glossary of un-intuitive terms used by members of RoR community.
