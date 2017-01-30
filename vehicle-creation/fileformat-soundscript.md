@@ -1,7 +1,7 @@
 ---
 title: "Soundscript file reference"
 layout: page
-categories: [technical]
+categories: [vehicle-creation]
 ---
 
 <div class="toc" markdown="1">

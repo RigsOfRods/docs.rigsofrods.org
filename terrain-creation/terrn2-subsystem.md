@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Terrain subsystem (Terrn2)"
-categories: [technical]
+categories: [terrain-creation]
 ---
 
 <div class="toc" markdown="1">

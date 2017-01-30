@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Editorizer"
-categories: [tools]
+categories: [tools-tutorials]
 ---
 
 <div class="toc" markdown="1">

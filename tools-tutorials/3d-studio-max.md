@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "3D Studio Max"
-categories: [tools]
+categories: [tools-tutorials]
 ---
 
 <div class="toc" markdown="1">

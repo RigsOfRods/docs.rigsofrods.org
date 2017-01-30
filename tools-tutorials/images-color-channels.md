@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Images and color channels"
-categories: [technical]
+categories: [tools-tutorials]
 ---
 
 In daily computer usage, image files store photos and imagery. They can be produced by digital cameras, scanners and authoring tools, and viewed in image viewers.
