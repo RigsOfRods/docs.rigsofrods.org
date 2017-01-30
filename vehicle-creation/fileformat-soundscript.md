@@ -13,7 +13,7 @@ This format is text-based and files must have the extension ".soundscript".
 
 Each soundscript file can contain the description of many sound scripts. 
 Each sound script defines how to play one or many audio files 
-in the context of the vehicle where it is used (using the [soundsources section](/technical/fileformat-truck)). 
+in the context of the vehicle where it is used (using the [soundsources section](/vehicle-creation/fileformat-truck)). 
 
 A sound script is defined by a line with his name 
 (which is the name you use in the soundsource section of your vehicle description file),
