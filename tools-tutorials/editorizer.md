@@ -11,11 +11,11 @@ categories: [tools-tutorials]
 
 The Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
 
-It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. The file must contain a section for nodes, beams, hydros, commands, shocks, and wheels. It can be blank to begin with or when saving but the heading must be there.
+It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. A  _.truck_ file with the basic structure has been included to get you started.
 
 # Download and run on Windows
 
-[Download here](https://repofiles.avrintech.net/repofiles-1st-batch/57ddb080d4ea83b7d40df778c916a66a379d4dd1_Editozer.zip) (ZIP archive)
+[Download here](/download/Editorizer.zip) (ZIP archive)
 
 Run as administrator! (only needed on the first run or if you move Editorizer's directory)
 
