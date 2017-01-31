@@ -329,5 +329,5 @@ Unsorted
 * https://xror.avrintech.net/rorwikibackup/index.php/Video_Tutorial-_Tvorba_Va%C3%85%C2%A1eho_pravn%C3%83%C2%ADho_Kamionu%28anglicky%29 - empty
 * https://xror.avrintech.net/rorwikibackup/index.php/What_is_the_serialization_about - empty
 * https://xror.avrintech.net/rorwikibackup/index.php/Zombie_Siege_mode - dead
-
+* https://xror.avrintech.net/rorwikibackup/index.php/Beginner%27s_Guide
 
