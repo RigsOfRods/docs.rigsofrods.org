@@ -2833,13 +2833,13 @@ Parameters:
        23,   -1, my_turbo
       135,    0, tracks/default_horn
 
-## Default
+## List of default soundsources
 
 This is a list of all default soundsources separated by engine type
 
 This can be inserted in the file as is.
 
-## Engine (Diesel)
+### Engine (Diesel)
 
     soundsources
     1, tracks/default_diesel
@@ -2860,7 +2860,7 @@ This can be inserted in the file as is.
     1, tracks/default_reverse_beep
     1, tracks/default_turn_signal
 
-## Engine (Gasoline)
+### Engine (Gasoline)
 
     soundsources
     1, tracks/default_car
@@ -2879,7 +2879,7 @@ This can be inserted in the file as is.
 
  
 
-## Airplane (Prop)
+### Airplane (Prop)
 
     soundsources
 
@@ -2910,7 +2910,7 @@ This can be inserted in the file as is.
 
  
 
-## Airplane (Jet)
+### Airplane (Jet)
 
     soundsources
     1, tracks/default_turbojet_start1
@@ -2946,7 +2946,7 @@ This can be inserted in the file as is.
     1, tracks/default_turbojet_hipower8
     1, tracks/default_turbojet_afterburner8
 
-## Airplane (Piston)
+### Airplane (Piston)
 
     soundsources
     1, tracks/default_pistonprop_start1
@@ -2970,11 +2970,11 @@ This can be inserted in the file as is.
     1, tracks/default_pistonprop_lopower8
     1, tracks/default_pistonprop_hipower8
 
-## Marine (Large)
+### Marine (Large)
 
     1, tracks/default_marine_large
 
-## Marine (Small)
+### Marine (Small)
 
     1, tracks/default_marine_small
 
