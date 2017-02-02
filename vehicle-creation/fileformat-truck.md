@@ -2978,47 +2978,6 @@ This can be inserted in the file as is.
 
     1, tracks/default_marine_small
 
-## Soundsources3
-
-Not available yet.
-
-Like soundsources2, but adds the ability to bind sounds to specific dynamic parts of the trucks, like commands, hydros and alike.
-
-Modes:
-
--   -2 = global : enabled all the time
--   -1 = enabled in external camera only
--   &gt;=0 enabled for cinecamera number specified
-
-<!-- -->
-
-    soundsources3
-    ;node, mode, linkName, linkNum, sound
-    ;example sound for command1
-       23,   -2,  command,       1, my_CommandSound_Oil
-
-    ;and for command2:
-       23,   -2,  command,       2, my_CommandSound_Hydraulic2
-
-    ;or a hydro:
-       23,   -2,    hydro,       1, my_SteeringScratchingSound1
-
-possible linknames are:
-
--   command
--   hydro
--   collision
--   shock
--   brake
--   rope
--   tie
--   particle
--   axle
--   flare
--   flexbody
--   exhaust
--   videocamera
-
 # Aircraft
 
 ## Wings
