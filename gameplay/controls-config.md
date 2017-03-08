@@ -653,7 +653,7 @@ DOF\_DEBUG\_FOCUS\_OUT
 
 3. Create a mapping file named like the value of 'VendorMapFilename' you just found out in the Rigs of Rods/config/ folder.
 
-4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](Input.map "https://xror.avrintech.net/rorwikibackup/index.php/Input.map"))
+4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](https://xror.avrintech.net/rorwikibackup/index.php/Input.map))
 
 5. When you are finished with your configuration, copy and paste relevant infos from the `Device info` tab into your map file. Also make a comment (";" marks the rest of the line as a comment) after every command which button is used so others can easily see what button they have to use. See template:
 
