@@ -623,7 +623,7 @@ DOF\_DEBUG\_APERTURE\_LESS
 DOF\_DEBUG\_FOCUS\_IN
 DOF\_DEBUG\_FOCUS\_OUT
 
-# Configuring controls with RoRConfig (Outdated as of version 0.37.126)
+# Configuring controls with RoRConfig (Outdated as of version 0.37.126 - See [this post](https://forum.rigsofrods.org/thread-1068.html).
 
 1. Plug in your device, open the Configurator and go to the **"Controls"** tab.
 
