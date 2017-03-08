@@ -13,7 +13,7 @@ categories: [gameplay]
 
 Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
-Input is configured using configuration file 'input.map'. It's also possible to configure them via our 'configurator' utility, RoRConfig. In-game configuration of controls is not implemented yet.
+Input is configured using configuration file 'input.map'. In-game configuration of controls is not implemented yet.
 
 # Keyboard layout
 
@@ -114,6 +114,19 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>COMMANDS 37</td><td>CTRL + ALT + F1</td></tr>
     <tr><td>...</td><td>...</td></tr>
     <tr><td>COMMANDS 48</td><td>CTRL + ALT + F12</td></tr>
+	<tr><td>COMMANDS 49</td><td>CTRL+ SHIFT + F1</td></tr>
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 58</td><td>CTRL + SHIFT + F10</td></tr>
+	<tr><td>COMMANDS 59</td><td>CTRL + SHIFT + F11</td></tr>
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 68</td><td>CTRL + ALT + F8</td></tr>	
+	<tr><td>COMMANDS 69</td><td>CTRL + ALT + F9</td></tr>	
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 78</td><td>CTRL + SHIFT + ALT + F6</td></tr>	
+	<tr><td>COMMANDS 79</td><td>CTRL + SHIFT + ALT + F7</td></tr>	
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>COMMANDS 83</td><td>CTRL + SHIFT + ALT + F11</td></tr>	
+	<tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
 </table>
 
 ## Aerial and marine keys
@@ -121,7 +134,7 @@ Input is configured using configuration file 'input.map'. It's also possible to 
 ![](/images/input-map-aerial-and-marine.png)
 
 <table style="color: #127220; display: inline-block; vertical-align: top;">
-    <tr><th>Airplane control</th><th>Key</th></tr>
+    <tr><th>Airplane controls</th><th>Key</th></tr>
 
     <tr><td>Steer Left   </td><td>LEFT              </td></tr>
     <tr><td>Steer Right  </td><td>RIGHT             </td></tr>
@@ -134,20 +147,27 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>Reverse      </td><td>R                 </td></tr>
     <tr><td>Less Flaps   </td><td>1                 </td></tr>
     <tr><td>More Flaps   </td><td>2                 </td></tr>
+    <tr><td>Less Airbrakes*</td><td>3               </td></tr>
+    <tr><td>More Airbrakes*</td><td>4               </td></tr>
     <tr><td>Throttle Down</td><td>PAGE-DOWN         </td></tr>
     <tr><td>Throttle Up  </td><td>PAGE-UP           </td></tr>
     <tr><td>Start Engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
-<table style="color: #ced925; display: inline-block; vertical-align: top;">
-    <tr><th>Boat control</th><th>Key</th></tr>
+* Depending on the plane setup
 
-    <tr><td>Throttle Down  </td><td>6    </td></tr>
-    <tr><td>Throttle Up    </td><td>7    </td></tr>
+It is recommended to use: - CTRL + Home - to start all engine of a plane - CTRL + 7 - to full throttle all engines
+because some planes could have more than 4 engines and you couldn't control them with your mouse.
+
+<table style="color: #ced925; display: inline-block; vertical-align: top;">
+    <tr><th>Boat controls</th><th>Key</th></tr>
+
+    <tr><td>Throttle Down  </td><td>DOWN   </td></tr>
+    <tr><td>Throttle Up    </td><td>UP    </td></tr>
     <tr><td>Steer Left     </td><td>LEFT </td></tr>
     <tr><td>Steer Right    </td><td>RIGHT</td></tr>
-    <tr><td>Center Rudder  </td><td>DOWN </td></tr>
-    <tr><td>Center Throttle</td><td>UP   </td></tr>
+    <tr><td>Center Rudder  </td><td>PGUP  </td></tr>
+    <tr><td>Center Throttle</td><td>PGDOWN   </td></tr>
 </table>
 
 <table style="color: #ab7e3a; display: inline-block; vertical-align: top;">
@@ -157,18 +177,22 @@ Input is configured using configuration file 'input.map'. It's also possible to 
     <tr><td>Lock Load           </td><td>L    </td></tr>
     <tr><td>Secure Load         </td><td>O    </td></tr>
     <tr><td>Reset Vehicle       </td><td>I    </td></tr>
+    <tr><td>Reset Vehicle In Place  </td><td>BACKSPACE</td></tr>
     <tr><td>Show Skeleton       </td><td>K    </td></tr>
     <tr><td>Toggle Lights       </td><td>N    </td></tr>
     <tr><td>Toggle beacons      </td><td>M    </td></tr>
     <tr><td>Toggle HUD          </td><td>U    </td></tr>
     <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
+    <tr><td>Adjust Simulation Speed</td><td>Ctrl+= / Shift+= </td></tr>
+    <tr><td>Switch Between Vehicles </td><td>Ctrl+] / Ctrl+[</td></tr>
+    <tr><td>Remove Current Vehicle</td><td>Ctrl+Del</td></tr>
+    <tr><td>Respawn Last Vehicle</td><td>Ctrl+.(period)</td></tr>
 </table>
 
-It is recommended to use: - CTRL + Home - to start all engine of a plane - CTRL + 7 - to full throttle all engines
-
-because some planes could have more than 4 engines and you couldn't control them with your mouse.
-
 # Config file 'input.map'
+
+For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/bin/resources/skeleton/config/input.map) file on GitHub.
+
 
 This file defines all key alias for RoR. It has the following format:
 
@@ -202,7 +226,7 @@ In this example, only COMMANDS_01 is triggered when pressing F1, and COMMANDS_13
     COMMANDS_01                    Keyboard             EXPL+F1 
     COMMANDS_13                    Keyboard             EXPL+CTRL+F1 
 
-In this example, COMMANDS_01 would be triggered if you press CTRL+F1, as F1 is part of the COMMANDs_13 combination.
+In this example, COMMANDS_01 would be triggered if you press CTRL+F1, as F1 is part of the COMMANDS_13 combination.
 
     COMMANDS_01                    Keyboard             F1 
     COMMANDS_13                    Keyboard             CTRL+F1 
@@ -599,7 +623,7 @@ DOF\_DEBUG\_APERTURE\_LESS
 DOF\_DEBUG\_FOCUS\_IN
 DOF\_DEBUG\_FOCUS\_OUT
 
-# Configuring controls with RoRConfig
+# Configuring controls with RoRConfig (Outdated as of version 0.37.126)
 
 1. Plug in your device, open the Configurator and go to the **"Controls"** tab.
 
@@ -625,15 +649,13 @@ DOF\_DEBUG\_FOCUS\_OUT
 
 1. Attach your wheel/joystick/gamepad that you want to map.
 
-2. Download [Inputtool.zip](:Media:Inputtool3.zip "wikilink"). When you execute 'inputtool.exe' it will create a textfile named 'inputinfo.txt' in the same directory. This text file contains the relevant 'VendorMapFilename'.
+2. Download [rorconfig-inputtool-devbuild.zip](https://forum.rigsofrods.org/attachment.php?aid=6249). Unpack into a new folder and run `RoRConfig.exe` - Click `Controls` -> `Device info` tab. This tab contains the relevant 'VendorMapFilename'.
 
 3. Create a mapping file named like the value of 'VendorMapFilename' you just found out in the Rigs of Rods/config/ folder.
 
-4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](Input.map "wikilink"))
+4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](Input.map "https://xror.avrintech.net/rorwikibackup/index.php/Input.map"))
 
--   Hint: You might find it easier to copy an [existing](http://www.rigsofrods.com/threads/96556-Joystick-specific-Input-maps) input map and edit commands to match your controller.
-
-5. When you are finished with your configuration, copy and paste relevant infos from inputinfo.txt into your map file. Also make a comment (";" marks the rest of the line as a comment) after every command which button is used so others can easily see what button they have to use. See template:
+5. When you are finished with your configuration, copy and paste relevant infos from the `Device info` tab into your map file. Also make a comment (";" marks the rest of the line as a comment) after every command which button is used so others can easily see what button they have to use. See template:
 
 ``` text
 ;This is the input map for the Rigs of Rods game for the following device:
@@ -666,7 +688,7 @@ AIRPLANE_THROTTLE_UP            JoystickButton       0 1 ;B
 ...
 ```
 
-6. Submit <your map filename>.map as a new post [here](http://www.rigsofrods.com/threads/96556-Joystick-specific-Input-maps)
+6. Submit a zip file containing <your map filename>.map as a new post [here](https://forum.rigsofrods.org/thread-1068.html).
 
 Thank you!
 
