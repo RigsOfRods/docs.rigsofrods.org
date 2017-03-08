@@ -154,7 +154,7 @@ Input is configured using configuration file 'input.map'. In-game configuration 
     <tr><td>Start Engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
-* Depending on the plane setup
+`*` Depending on the plane setup
 
 It is recommended to use: - CTRL + Home - to start all engine of a plane - CTRL + 7 - to full throttle all engines
 because some planes could have more than 4 engines and you couldn't control them with your mouse.
