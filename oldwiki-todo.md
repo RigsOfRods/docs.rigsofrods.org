@@ -81,7 +81,6 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.org/wiki/index.php/Adding_rust_to_a_texture - graphics
 * https://archives.rigsofrods.org/wiki/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
 * https://archives.rigsofrods.org/wiki/index.php/Adding_truck/load_to_the_maps - terrn
-* https://archives.rigsofrods.org/wiki/index.php/Beginner's_Guide
 * https://archives.rigsofrods.org/wiki/index.php/Beginner's_Guide_to_Multiplayer
 * https://archives.rigsofrods.org/wiki/index.php/Blueprints - links, looks good!
 * https://archives.rigsofrods.org/wiki/index.php/Building_Workflow - super

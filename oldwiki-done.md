@@ -183,7 +183,7 @@ Unsorted
 * https://archives.rigsofrods.org/wiki/index.php/AutoDesk - empty
 * https://archives.rigsofrods.org/wiki/index.php/BTT - redirect
 * https://archives.rigsofrods.org/wiki/index.php/BeamY_file_format_%28draft%29 - dead, useless
-* https://archives.rigsofrods.org/wiki/index.php/Beginner's_guide - redirect
+* https://archives.rigsofrods.org/wiki/index.php/Beginner's_guide - done
 * https://archives.rigsofrods.org/wiki/index.php/Blender_Mesh_Export_into_RoR - done
 * https://archives.rigsofrods.org/wiki/index.php/Blender_Navigation - outdated
 * https://archives.rigsofrods.org/wiki/index.php/Blender_Setup - short, not useful
@@ -329,5 +329,6 @@ Unsorted
 * https://archives.rigsofrods.org/wiki/index.php/Video_Tutorial-_Tvorba_Va%C3%85%C2%A1eho_pravn%C3%83%C2%ADho_Kamionu%28anglicky%29 - empty
 * https://archives.rigsofrods.org/wiki/index.php/What_is_the_serialization_about - empty
 * https://archives.rigsofrods.org/wiki/index.php/Zombie_Siege_mode - dead
+
 
 
