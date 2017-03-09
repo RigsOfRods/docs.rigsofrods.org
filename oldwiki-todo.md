@@ -81,7 +81,6 @@ title:  "Wiki porting checklist - TODO"
 * https://xror.avrintech.net/rorwikibackup/index.php/Adding_rust_to_a_texture - graphics
 * https://xror.avrintech.net/rorwikibackup/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
 * https://xror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps - terrn
-* https://xror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide
 * https://xror.avrintech.net/rorwikibackup/index.php/Beginner's_Guide_to_Multiplayer
 * https://xror.avrintech.net/rorwikibackup/index.php/Blueprints - links, looks good!
 * https://xror.avrintech.net/rorwikibackup/index.php/Building_Workflow - super
