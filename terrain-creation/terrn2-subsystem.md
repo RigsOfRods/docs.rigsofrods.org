@@ -9,9 +9,9 @@ categories: [terrain-creation]
 {:toc}
 </div>
 
-This terrain system was introduced in version 0.4.
-The previous terrain system was based upon Ogre engine's TerrainManager component,
-which was obsoleted, and thus RoR couldn't rely on it anymore.
+This is a technical reference of terrain system in Rigs of Rods. It provides commented examples of various files needed to compose a terrn2 terrain.
+
+If you're new to terrain creation, read [intro to terrain creation](/terrain-creation/intro) first.
 
 <br> <!-- Ugly hack to make space for TOC -->
 <br>
@@ -252,7 +252,7 @@ Layer at position \#0 is a ground layer - it covers the entire page and thus nee
 
 Layers \#1 - \#5 only cover areas which have a corresponding color in the **blendmap**.
 
-For explanation of used images, see [Images & color channels](images-color-channels.html)
+For explanation of used images, see [Images & color channels](/tools-tutorials/images-color-channels)
 
 ## Example
 
@@ -272,8 +272,8 @@ For explanation of used images, see [Images & color channels](images-color-chann
 
 # Terrain Objects (.tobj)
 
-Defines object placement on terrain. More info: [Placing objects on terrains (For 0.38 and 0.4)](Placing_objects_on_terrains_(For_0.38_and_0.4) "wikilink")
+Defines object placement on terrain. More info in archived wikipage "Placing_objects_on_terrains_(For_0.38_and_0.4)"
 
-Usage is equal to "terrn" files for 0.38 map system: [Terrn file description](Terrn_file_description "wikilink")
+Usage is equal to [legacy 'terrn' files](/terrain-creation/old-terrn-subsystem).
 
 
