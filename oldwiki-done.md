@@ -183,7 +183,7 @@ Unsorted
 * https://xror.avrintech.net/rorwikibackup/index.php/AutoDesk - empty
 * https://xror.avrintech.net/rorwikibackup/index.php/BTT - redirect
 * https://xror.avrintech.net/rorwikibackup/index.php/BeamY_file_format_%28draft%29 - dead, useless
-* https://xror.avrintech.net/rorwikibackup/index.php/Beginner's_guide - redirect
+* https://xror.avrintech.net/rorwikibackup/index.php/Beginner's_guide - done
 * https://xror.avrintech.net/rorwikibackup/index.php/Blender_Mesh_Export_into_RoR - done
 * https://xror.avrintech.net/rorwikibackup/index.php/Blender_Navigation - outdated
 * https://xror.avrintech.net/rorwikibackup/index.php/Blender_Setup - short, not useful
