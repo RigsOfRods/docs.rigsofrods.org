@@ -70,7 +70,7 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 ## Debug
 
 -   **Ingame Console** - Enables scripting console ingame.
--   **Debug Truck Mass** - Output mass of every node of a truck in [RoR.log](RoR.log "wikilink")
+-   **Debug Truck Mass** - Output mass of every node of a truck in [RoR.log](/gameplay/jargon#rorlog)
 -   **Advanced Logging** - Fancy HTML logs for objects, terrains and trucks.
 -   **Beam Break Debug** - Logs beam info to log when beam breaks.
 -   **Beam Deform Debug** - Logs beam info to log when beam deforms.
@@ -87,21 +87,6 @@ This is the configurator. It is how you set the options for how RoR looks and ho
 # Controls
 
 See [controls and configuration](/gameplay/controls-config)
-
-# Network
-  
-*See also: [Beginner's Guide to Multiplayer](Beginner's_Guide_to_Multiplayer "wikilink")*
-
--   **Enable network mode** - Force RoR to attempt a connection when started.
--   **Nickname** - The name that appears to other users on the same server. Note that duplicate nicknames are not allowed.
--   **Server list** - Public list of servers from the [server list](http://multiplayer.rigsofrods.org/). Only servers supported by the latest release are listed.
--   **Server host name** - Hostname or IP address of the server you are connecting to.
--   **Server port number** - The TCP port of the server.
--   **Server password** - Only needed if the specified server is protected.
-
-# Updates
-
-Gives information about versions, with a link to update if available.
 
 # About
 
