@@ -1,7 +1,7 @@
 ---
 layout: page
 categories: [vehicle-creation]
-title: "Caterpillar vehicles (using slidenodes)"
+title: "Tracked vehicles (using slidenodes)"
 ---
 
 <div class="toc" markdown="1">
