@@ -9,11 +9,11 @@ categories: [gameplay]
   {:toc}
 </div>
 
-For installation help, see [Installation Guide](https://xror.avrintech.net/rorwikibackup/index.php/Installation_Guide).
+For installation help, see [Installation Guide](https://archives.rigsofrods.org/wiki/index.php/Installation_Guide).
 
-This guide is converted from the old wiki backup at [xror.avrintech.net](https://xror.avrintech.net/rorwikibackup/index.php/Beginner%27s_Guide).
+This guide is converted from the old wiki backup at [archives.rigsofrods.org](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide).
 
-Note: You can watch some videotutorials instead reading this page at [Beginner's Guide videotutorials](https://xror.avrintech.net/rorwikibackup/index.php/Beginner%27s_Guide_videotutorials) page
+Note: You can watch some videotutorials instead reading this page at [Beginner's Guide videotutorials](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide_videotutorials) page
 
 # First Run
 
@@ -57,7 +57,7 @@ Now that we've become comfortable with driving. Let's try to fly. Walk or drive 
 
 When it comes to landing, make sure you have room to slow down and take your time. Going straight into the runway is the easiest way to land when you first start off. It may take a few passes to go head-on so don't be afraid to abort a landing and throttle back up to regain altitude. The entire process is easier if you shadows enabled, but is possible without. When you land, hit `R` to reverse thrust and throttle up to slow down in addition to using `B` to brake the wheels.
 
-This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [How to use the autopilot](https://xror.avrintech.net/rorwikibackup/index.php/How_to_use_the_autopilot).
+This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [How to use the autopilot](https://archives.rigsofrods.org/wiki/index.php/How_to_use_the_autopilot).
 
 # Boating
 
@@ -67,13 +67,13 @@ If your boat is unresponsive to throttle commands, remap your boat keys in the [
 
 # Conclusion
 
-Now that you have a basic grasp of the basic vehicles in RoR, it is now up to you to create your own scenarios. If you feel bored, try your hand at creating your own vehicles, starting with the [Tutorials](https://xror.avrintech.net/rorwikibackup/index.php/Tutorials), or add files from the [repository backup](https://repofiles.avrintech.net/).
+Now that you have a basic grasp of the basic vehicles in RoR, it is now up to you to create your own scenarios. If you feel bored, try your hand at creating your own vehicles, starting with the [Tutorials](https://archives.rigsofrods.org/wiki/index.php/Tutorials), or add files from the [repository backup](https://repofiles.avrintech.net/).
 
 # Multiplayer
 
-If you feel like sharing the experience, you can play on one of the many public multiplayer servers. Note that multiplayer is the newest feature to RoR and is still in development and can be unstable at times! Please be patient and if you encounter errors, be sure to read the [Troubleshooting](https://xror.avrintech.net/rorwikibackup/index.php/Troubleshooting) page.
+If you feel like sharing the experience, you can play on one of the many public multiplayer servers. Note that multiplayer is the newest feature to RoR and is still in development and can be unstable at times! Please be patient and if you encounter errors, be sure to read the [Troubleshooting](https://archives.rigsofrods.org/wiki/index.php/Troubleshooting) page.
 
-*Please see the [Beginner's Guide to Multiplayer](https://xror.avrintech.net/rorwikibackup/index.php/Beginner%27s_Guide_to_Multiplayer).*
+*Please see the [Beginner's Guide to Multiplayer](https://archives.rigsofrods.org/wiki/index.php/Beginner%27s_Guide_to_Multiplayer).*
 
 # Default Commands
 
@@ -81,7 +81,7 @@ If you feel like sharing the experience, you can play on one of the many public 
 
 # Adding Content
 
-To add new vehicles or terrains, go to [Installing Files from the Repository](https://xror.avrintech.net/rorwikibackup/index.php/Installing_Files_from_the_Repository_post_0.36). To add objects/vehicles or make changes to a terrain you already have, see [Terrn file description](http://docs.rigsofrods.org/terrain-creation/terrn2-subsystem) or [Adding truck/load to the maps](https://xror.avrintech.net/rorwikibackup/index.php/Adding_truck/load_to_the_maps).
+To add new vehicles or terrains, go to [Installing Files from the Repository](https://archives.rigsofrods.org/wiki/index.php/Installing_Files_from_the_Repository_post_0.36). To add objects/vehicles or make changes to a terrain you already have, see [Terrn file description](http://docs.rigsofrods.org/terrain-creation/terrn2-subsystem) or [Adding truck/load to the maps](https://archives.rigsofrods.org/wiki/index.php/Adding_truck/load_to_the_maps).
 
 # Changing The Sky Type
 
