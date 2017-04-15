@@ -79,7 +79,7 @@ After adding the nodes, define some points of reference on the chassis with the 
     
 ## Nodes and Beams
 
-Don't forged nodes are perfect ball joints, not shaped connectors. If you create a box of only structural beams, it will fold. You need to add reinforcements.
+Don't forget that nodes are perfect ball joints, not shaped connectors. If you create a box of only structural beams, it will fold. You need to add reinforcements.
 
 [rigidity-box1]:   /images/softbody-rigidity-tutorial-box1.png
 {: width="40%"}
