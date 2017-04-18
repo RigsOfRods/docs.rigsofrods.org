@@ -239,14 +239,19 @@ categories: [tools-tutorials]
   <p>Skins in Rigs of Rods are made by draping the beams in triangles known as submeshes.  Textures are cut up and placed by coordinate and percentage.  This is <i>a lot</i> of work by hand, and luckily Blender does it all for you.</p>
   
   <h2><span class="editsection">[<a href="/rorwikibackup/index.php?title=Blender_Tutorial_3&amp;action=edit&amp;section=1" title="Edit section: Applying Texture">edit</a>]</span> <span class="mw-headline" id="Applying_Texture">Applying Texture</span></h2>
-  <p>Enter <a href="/rorwikibackup/index.php/File:Objectmode.png" class="image"><img alt="Objectmode.png" src="/rorwikibackup/images/6/66/Objectmode.png" width="132" height="25" /></a> and select your truck.  Press <tt>f</tt> to enter <i>UV Face Select</i>.  Enter UV/Image Editor by clicking the <i>Windows Type</i> button, see on the right.  Click <tt>Image &gt; Open Image</tt> and select your trucks texture.  Because there is no real texture for the tutorial truck, just pick any image.  I am using a picture of my cat, because I can.</p>
+  <p>Enter <a href="/images/blender-old-objectmode.png" class="image"><img alt="blender-old-objectmode.png" src="/images/blender-old-objectmode.png" width="132" height="25" /></a> and select your truck.  Press <tt>f</tt> to enter <i>UV Face Select</i>.  Enter UV/Image Editor by clicking the <i>Windows Type</i> button, see on the right.  Click <tt>Image &gt; Open Image</tt> and select your trucks texture.  Because there is no real texture for the tutorial truck, just pick any image.  I am using a picture of my cat, because I can.</p>
   <p><br />
      Select triangles by right clicking them, holding <tt>SHIFT</tt> to select multiple triangles.  You can now adjust the texture placement.  In the UV/Image Editor, use left click to adjust the position of the triangle on the texture.  Right click a corner of the triangle and use the left click to adjust its position.  This may be time consuming and may require some trial-and-error.  Take your time, because you're almost done!
   </p>
-  <p>
-         <a href="/images/blender-beginner-old-uv.png" class="image">
-         <img alt="/images/blender-beginner-old-uv.png" width="800" height="600" /></a></p>
-  <p>From here, make a <a href="/rorwikibackup/index.php/Material_File" title="Material File">Material File</a> for your truck and set it in your globals... export your truck, and you're done!</p>
+
+<div class="thumb tleft">
+    <div class="thumbinner" style="width:602px;">
+       <a href="/images/blender-beginner-01-splash.png" class="image">
+       <img alt="" src="/images/blender-beginner-old-uv.png" width="600" height="375" class="thumbimage" /></a>  
+   </div>
+ </div>
+
+  <p>From here, make a <a href="https://archives.rigsofrods.org/wiki/index.php/Material_File" title="Material File">Material File</a> for your truck and set it in your globals... export your truck, and you're done!</p>
   <p><br />
      <b>EDIT: in blender 2.46 there isn't a "UV face edit", go to edit mode and press "U"</b>
   </p>
@@ -261,7 +266,6 @@ categories: [tools-tutorials]
   <p>After that if you have the blender ror importer and exporter installed.( witch im sure you do if you got the car into blender in the first place) click file-export-RoR exporter, then find the truck file you are exporting to and click export.</p>
   <p>Blender should just pause for a second and then return to normal activity. and when you go to your truck file you should see all the submesh stuff in the truck file. </p>
   <p>Also Blender will automatically make a copy of your original truck  file from befor you exported it. open that using notepad and copy the node and beem sections into your new truck file that has the submesh because blender will have messed those up. but by doing that it will put it back to normal.</p>
-
 
 
 
