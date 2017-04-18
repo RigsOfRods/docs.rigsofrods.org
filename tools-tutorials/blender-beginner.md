@@ -30,13 +30,13 @@ categories: [tools-tutorials]
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
        <a href="/images/blender-beginner-01-splash.png" class="image">
-       <img alt="" src="/images/blender-beginner-01-splash.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+       <img alt="" src="/images/blender-beginner-01-splash.png" width="600" height="375" class="thumbimage" /></a>  
        <div class="thumbcaption">This is what you should see</div>
    </div>
  </div>
  <p>This is the first thing you should see when you load up blender.</p>
  <div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/rorwikibackup/index.php/File:WarningIcon.png" class="image"><img alt="WarningIcon.png" src="/rorwikibackup/images/9/94/WarningIcon.png" width="32" height="32" /></a></div>
+    <div style="float:left;"><a href="/images/WarningIcon.png" class="image"><img alt="WarningIcon.png" src="/images/WarningIcon.png" width="32" height="32" /></a></div>
     <div style="margin-left:40px"><strong>Warning</strong><br /> Do not panic, Its not all that bad. I promise</div>
  </div>
  <p><br />
@@ -45,7 +45,7 @@ categories: [tools-tutorials]
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
        <a href="/images/blender-beginner-02-start.png" class="image">
-       <img alt="" src="/images/blender-beginner-02-start.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+       <img alt="" src="/images/blender-beginner-02-start.png" width="600" height="375" class="thumbimage"   /></a>  
        <div class="thumbcaption">This is what you will be working with
        </div>
     </div>
@@ -107,7 +107,7 @@ categories: [tools-tutorials]
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
        <a href="/images/blender-beginner-house1.png" class="image">
-       <img alt="" src="/images/blender-beginner-house1.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+       <img alt="" src="/images/blender-beginner-house1.png" width="600" height="375" class="thumbimage"  /></a>  
        <div class="thumbcaption">
           Select these 3 vertices
        </div>
@@ -122,7 +122,7 @@ categories: [tools-tutorials]
  <div class="thumb tleft">
     <div class="thumbinner" style="width:602px;">
        <a href="/images/blender-beginner-house2.png" class="image">
-       <img alt="" src="/images/blender-beginner-house2.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+       <img alt="" src="/images/blender-beginner-house2.png" width="600" height="375" class="thumbimage"  /></a>  
        <div class="thumbcaption">Best house evar!!1!1!!!!1!!!
        </div>
     </div>
@@ -137,7 +137,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-detail1.png" class="image">
-        <img alt="" src="/images/blender-beginner-detail1.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-detail1.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">
           The polygon count is over 9000! (well, 96 is close enough)
         </div>
@@ -148,7 +148,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-bay-window1.png" class="image">
-        <img alt="" src="/images/blender-beginner-bay-window1.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-bay-window1.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">
            Select these vertices
         </div>
@@ -160,7 +160,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-door1.png" class="image">
-        <img alt="" src="/images/blender-beginner-door1.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-door1.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">
           Next we are going to add a door, well it kind of looks like one
         </div>
@@ -172,7 +172,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-door2.png" class="image">
-        <img alt="" src="/images/blender-beginner-door2.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-door2.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">Notice the lip at the bottom of the door, it is evil
         </div>
      </div>
@@ -191,7 +191,7 @@ categories: [tools-tutorials]
   <h1><span class="editsection">[<a href="/rorwikibackup/index.php?title=Blender_mesh_tutorial&amp;action=edit&amp;section=6" title="Edit section: Texturing (UV mapping)">edit</a>]</span> <span class="mw-headline" id="Texturing_.28UV_mapping.29"><font size="6">Texturing (UV mapping)</font></span></h1>
   <p>For this i am going to keep it simple so we are ditching the house. You may want to save it first.</p>
   <div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-     <div style="float:left;"><a href="/rorwikibackup/index.php/File:WarningIcon.png" class="image"><img alt="WarningIcon.png" src="/rorwikibackup/images/9/94/WarningIcon.png" width="32" height="32" /></a></div>
+     <div style="float:left;"><a href="/images/WarningIcon.png" class="image"><img alt="WarningIcon.png" src="/images/WarningIcon.png" width="32" height="32" /></a></div>
      <div style="margin-left:40px"><strong>Warning</strong><br />Always keep backups of files, you have no ideas how many times i have seen great projects die because of this. This also doesn't just apply to rigs of rods, this applies to everything in life.
         A good method if you have the space is to create a main folder for the whole project, then for each save you make you create a new folder inside that one named after the time and date the file was saved. This means you have lots of backups should anything go wrong
      </div>
@@ -201,7 +201,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-cube.png" class="image">
-        <img alt="" src="/images/blender-beginner-cube.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-cube.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">
            This is some next gen cry-engine graphical awesomeness we have here
         </div>
@@ -211,7 +211,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-edge-select.png" class="image">
-        <img alt="" src="/images/blender-beginner-edge-select.png" width="600" height="358" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-edge-select.png" width="600" height="358" class="thumbimage"  /></a>  
         <div class="thumbcaption">
            There always has to be one indie screen shot
         </div>
@@ -222,7 +222,7 @@ categories: [tools-tutorials]
   <div class="thumb tleft">
      <div class="thumbinner" style="width:602px;">
         <a href="/images/blender-beginner-mark-seams.png" class="image">
-        <img alt="" src="/images/blender-beginner-mark-seams.png" width="600" height="375" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
+        <img alt="" src="/images/blender-beginner-mark-seams.png" width="600" height="375" class="thumbimage"  /></a>  
         <div class="thumbcaption">
            Think back to making a net of something in school
         </div>
@@ -261,7 +261,6 @@ categories: [tools-tutorials]
   <p>After that if you have the blender ror importer and exporter installed.( witch im sure you do if you got the car into blender in the first place) click file-export-RoR exporter, then find the truck file you are exporting to and click export.</p>
   <p>Blender should just pause for a second and then return to normal activity. and when you go to your truck file you should see all the submesh stuff in the truck file. </p>
   <p>Also Blender will automatically make a copy of your original truck  file from befor you exported it. open that using notepad and copy the node and beem sections into your new truck file that has the submesh because blender will have messed those up. but by doing that it will put it back to normal.</p>
-
 
 
 
