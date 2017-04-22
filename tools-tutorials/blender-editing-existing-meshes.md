@@ -26,6 +26,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 - [Torchlight-To-Blender plug-in](https://code.google.com/archive/p/torchlight-to-blender/downloads) (ImportExportTL_blender25x_v0.6.2.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreCommandLineTools-Windows](https://sourceforge.net/projects/ogre/files/ogre-tools/1.7.2/OgreCommandLineTools_1.7.2.zip/download) (If you don't want to use the OgreXMLConverter located in your RoR install directory)
+- (Optional) [OgreMeshTool](https://code.google.com/archive/p/ogre-meshtool/downloads)
 
 # Getting started
 
@@ -198,3 +199,52 @@ To find your material name, either look at the object name or open the `.mesh.xm
 Before we export, if you moved the object while editing it you will need to apply `Scale/Rotation/Location` by pressing `CTRL+A` otherwise it will be placed wrong in-game:
 
 ![30](/images/blender-edit-ctrla.png)
+
+Select your mesh then click `File` -> `Export` -> `Ogre3D (.scene and .mesh)`:
+
+![31](/images/blender-edit-export1.png)
+
+Change your export settings to match the screenshot (all other settings can be left to their defaults):
+
+![32](/images/blender-edit-export2.png)
+
+You should now have a new `.mesh.xml` file in your folder.
+
+And finally, just drag the `.mesh.xml` into OgreXMLConverter to get a `.mesh`:
+
+![33](/images/blender-edit-converting-new-xml.png)
+
+If you want to "preview" your `.mesh` instead of going in-game, you can use OgreMeshTool to view it:
+(You can make a `.material` file if you want it to be textured in OgreMeshTool)
+
+![35](/images/blender-edit-preview-ogremeshtool.png)
+
+# Testing in-game
+
+Now just edit the `.truck` file to match the name of your new mesh and drag the new mesh file back into the `.zip` and test in-game:
+
+![35](/images/blender-edit-ingame.png)
+
+Congratulations!
+
+
+# Troubleshooting
+
+**Q:** My mesh is flipped in-game!
+
+**A:** Change the "swap axis" option in the export settings.
+
+---------------------------------------
+
+**Q:** My mesh is white in-game!
+
+**A:** You did not assign the correct material. Make sure it matches.
+
+---------------------------------------
+
+**Q:**: I get a plug-in install error/other Blender errors!
+
+**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [Forums](https://forum.rigsofrods.org/forum-23.html) about it.
+
+
+---------------------------------------
