@@ -156,7 +156,7 @@ We're now ready to start setting up the Rigs of Rods server.
 
 #### Required tools:
 
-- [VS 2015 Community Edition]( https://www.visualstudio.com/vs/community/) C++ tools must be installed: 
+- [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed: 
 
 ![vs](/images/VS-server-cplusplus.png)
 
