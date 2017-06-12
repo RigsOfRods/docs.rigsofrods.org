@@ -1241,6 +1241,10 @@ Parameters:
 To use default values without having to type the numbers, use "-1" in each field. Example:
 
     set_beam_defaults -1, -1, -1, -1
+	
+Or if you want to use the default values as a base:
+	
+    set_beam_defaults 9000000, 12000, 400000, 1000000, 0.05, tracks/beam, 0.0
 
 Beware: Excessive spring will result in an unstable chassis. Increasing the damping will help with this, but excessive damping will crash RoR. Higher chassis mass may mitigate that problem if applicable. If you create a light car, you may want to reduce the spring, damping and deformation values to match the real, softer frame of a car, and also increase stability.
 
