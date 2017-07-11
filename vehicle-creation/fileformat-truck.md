@@ -27,7 +27,7 @@ See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the bui
 -   When the chassis seems to work well; add wheels, suspension, hydros, etc; And then test drive.
 -   When the truck is all working; do the bodywork and texture, and mark most beams as invisible (displaying too many beams has a large performance impact)
 
-To see a simple truck file example, see the [Step by Step Truck Construction](Step_by_Step_Truck_Construction "wikilink").
+To see a simple truck file example, see the [Step by Step Truck Construction](https://archives.rigsofrods.org/wiki/index.php/Step_by_Step_Truck_Construction).
 
 # Is It a Truck, Plane, Train or Boat?
 
@@ -36,12 +36,12 @@ Before we start, let's ask an important question: **Is it a truck, plane, train,
 -   A truck is a description file containing an **engine** section
 -   A plane is a description file containing a **turboprops**, **turbojets**, or **pistonprops** section
 -   A boat is a description file containing a **screwprops** section
--   A train is a vehicle that drives on a rail (see [TrainDocumentation](TrainDocumentation "wikilink"))
+-   A train is a vehicle that drives on a rail (see [TrainDocumentation](https://archives.rigsofrods.org/wiki/index.php/TrainDocumentation)
 
 Also, notice that:
 
 -   You should not combine more than one propulsion (eg have both an **engine** and a **turboprops** section in the same file)
--   If you have no propulsion, then you are making a load, and the file extension should be .load (see [Creating a Load](Creating_a_Load "wikilink"))
+-   If you have no propulsion, then you are making a load, and the file extension should be .load (see [Creating a Load](https://archives.rigsofrods.org/wiki/index.php/Creating_a_Load))
 -   You can have a **wings** section on a truck or a boat (e.g. to add aerodynamic spoilers for stability).
 -   You should have a **fusedrag** section on a plane to have a better aerodynamic modeling.
 -   A boat needs to have a hull which is defined in the **submesh** section.
@@ -132,10 +132,10 @@ This section begins the structural definition of the vehicle. Each line defines 
     -   **n**: This node can be grabbed with the mouse. (Standard node)
     -   **m** <span style="background-color:#fb7">\[ Version 0.39.07+ \]</span>: This node can't be grabbed with the mouse. (Useful for switching levers with the mouse.)
     -   **f**: This node will not produce sparks. (Useful for support feet or hand made wheels.)
-    -   **x**: This node is the exhaust point. (requires a "y" node) (see the [exhausts](#Exhausts "wikilink") section)
+    -   **x**: This node is the exhaust point. (requires a "y" node) (see the [exhausts](#exhausts) section)
     -   **y**: The exhaust reference point. This node should be placed opposite of the direction that you want the exhaust to come from.
     -   **c**: This node will not detect contact with ground. (Can be used for optimization on inner chassis parts, for instance.)
-    -   **h**: This node is a hook point. (Like the hook on a crane, or a winch, or whatever.) RoR will create a [beam](#Beams "wikilink") between this Node and Node\#0. If this is Node\#0, it will link it to Node\#1 (even if it isn't defined yet).
+    -   **h**: This node is a hook point. (Like the hook on a crane, or a winch, or whatever.) RoR will create a [beam](#beams) between this Node and Node\#0. If this is Node\#0, it will link it to Node\#1 (even if it isn't defined yet).
     -   **e**: This node is a terrain editing point (Like in the terrain editor truck.)
     -   **b**: This node is assigned an extra buoyancy force (Experimental!)
     -   **p** <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span>: Disables particle effects for this node (Like dust.)
@@ -354,7 +354,7 @@ General info about the vehicle.
 -   **Unique ID** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = -1</span>; <span style="color: #008079">Empty value = -1</span>; This field specifies the unique file ID (you get one by uploading it to the repository).
     [You can get a unique ID here.](http://repository.rigsofrods.com/uniqueid/)
 -   **Category ID** <span style="color:#666">(optional)</span> <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = -1</span>; <span style="color: #008079">Empty value = -1</span>; This is the category number from the repository. It is recommended that you give your truck a category.
-    [You can find a list of valid numbers here.](Truck_Categories "wikilink")
+    [You can find a list of valid numbers here.](https://archives.rigsofrods.org/wiki/index.php/Truck_Categories)
 -   **File version** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = 0</span>; Version of the vehicle, read by users and the repository. For backwards compatibility, this field also accepts real number (a warning is reported).
 
 <!-- -->
@@ -646,10 +646,10 @@ This section is important: it defines the wheels! Parameters are:
 -   **Node 1** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where the one side of the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where one side of the wheel ends.
     To clarify, if you imagine a beam that goes right through the middle of the wheel along the axis of rotation, Node 1 and Node 2 would be at the intersection between one side of the wheel and the beam and the intersection between other side of the wheel and the beam.
--   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](Axle_Rigidity "wikilink")). Use "9999" if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use "9999" if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span>"0" for unbraked wheels, "1" for braked wheels. For directional braking, as found in airplanes, use "2" for a left wheel, "3" for a right wheel. In 0.37, "4" is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> "0" for undriven wheels, "1" for wheels driven forwards, "2" for wheels driven backwards
--   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](Arm_node "wikilink") for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
+-   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
 -   **Mass** - <span style="color:#BD0058">Real number</span>; Mass of the wheel, in kilograms.
 -   **Springiness** - <span style="color:#BD0058">Real number</span>; The stiffness of the wheel, somewhat equivalent to tire pressure. Having too much spring will make the steering wheels bounce back and forth during understeer, sending vibrations through the entire vehicle.
 -   **Damping** - <span style="color:#BD0058">Real number</span>; The rebound rate of the wheel
@@ -678,11 +678,11 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Width** - <span style="color:#BD0058">Real number</span> Use any number (must be present for compatibility), wheel width is auto-calculated from distance between node1 and node2.
 -   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, "3" makes the wheel triangular, and "4" makes the wheel square. Recommended values are between 10 and 16.
 -   **Node 1** - <span style="color:#BD0058">Node number/name</span> The node where the wheel starts.
--   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](Truck_Description_File#Wheels "wikilink") for an explanation of how this works.)
--   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](Axle_Rigidity "wikilink")). Use "9999" if there is no rigidity node.
+-   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](#wheels) for an explanation of how this works.)
+-   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use "9999" if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> "0" for unbraked wheels, "1" for braked wheels. For directional braking, as found in airplanes, use "2" for a left wheel, "3" for a right wheel. In 0.37, "4" is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> "0" for an undriven wheel, "1" for a wheel driven forwards, "2" for a wheel driven backwards.
--   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](Arm_node "wikilink") for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
+-   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
 -   '''Rim damping '''- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
@@ -704,7 +704,7 @@ This section improves wheels by simulating both wheel tires and rims. The player
 Please note:
 
 -   wheels2 will be replaced with normal wheels during multiplayer game play.
--   wheels2 can be deactivated completely in the [configurator](configurator "wikilink").
+-   wheels2 can be deactivated completely in the [configurator](https://archives.rigsofrods.org/wiki/index.php/configurator).
 
 ## Meshwheels
 
@@ -842,7 +842,7 @@ This is an example how to get started with replacing shocks with shocks2. In thi
 
 ## Hydros
 
-The hydros section is concerned only with the steering actuators! They are beams which change their length depending on the steering of the truck. Hydros can use [inertia](#Inertia "wikilink").
+The hydros section is concerned only with the steering actuators! They are beams which change their length depending on the steering of the truck. Hydros can use [inertia](#set_inertia_defaults).
 
 Parameters:
 
@@ -894,7 +894,7 @@ Options:
 - **vvi** - This animator extends or contracts with the vehicle's vertical velocity.
 - **altimeter100k** - This animator extends or contracts with the vehicle's altitude up to 100,000 feet.
 - **altimeter10k** - This animator extends or contracts with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
-- **altimeter1k** - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](Truck_Description_File#Add_animation "wikilink") be used.
+- **altimeter1k** - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](#add_animation) be used.
 - **aoa** - This animator extends or contracts with the dashboard's angle of attack.
 - **flap** - This animator extends or contracts with the flap setting on the vehicle.
 - **airbrake** - This animator extends or contracts with the airbrake setting on the vehicle.
@@ -923,7 +923,7 @@ Options:
 - **shortlimit:** - Add s shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
 - **longlimit:** - Add s longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
 
-All options need to be connected by an vertical bar "\|", please refer to the example below. You can stack multiple options (like: airpseed \| vvi \| inv), but it is not recommended and may result in weird behaviors. All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff shock2. The harder you make the shock, the more engine-rpm torque effect you get. Animators can use [set\_inertia\_defaults](#Set_inertia_defaults "wikilink"). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
+All options need to be connected by an vertical bar "\|", please refer to the example below. You can stack multiple options (like: airpseed \| vvi \| inv), but it is not recommended and may result in weird behaviors. All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff shock2. The harder you make the shock, the more engine-rpm torque effect you get. Animators can use [set\_inertia\_defaults](#set_inertia_defaults). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
 
     animators
     ;node1, node2, factor, options
@@ -1160,7 +1160,7 @@ New in 0.4+
 -   engine\_coupling. Real, default 1.0
 -   needs\_engine. Boolean, default false
 
-Rotators can use [inertia](#Inertia "wikilink").
+Rotators can use [inertia](#inertia).
 
 The reference nodes for the baseplate and rotator plate must also match each other in order. (i.e. if you start at the front left for the base plate and work clockwise, do the same for the rotator plate!) See the example rotators code and attached picture. Both plates must be identical!
 
@@ -1270,7 +1270,7 @@ If you want to keep a rigid chassis base and drivetrain, you can do:
     set_beam_defaults -1, -1, -1, -1
     ...
 
-If you want to to make something deform well (like for flexbodies), use these settings for the beam group you want to deform together with the global [enable\_advanced\_deformation](#Enable_advanced_deformation "wikilink") option to unleash unlimited beam physics for best results in crash deformation:
+If you want to to make something deform well (like for flexbodies), use these settings for the beam group you want to deform together with the global [enable\_advanced\_deformation](#enable_advanced_deformation) option to unleash unlimited beam physics for best results in crash deformation:
 
     ;set_beam_defaults spring, damping, deform,  break, diameter,         material, deform_coef
     set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack,         0.9
@@ -1355,7 +1355,7 @@ Beware: Excessive friction, surface and volume will result in an unstable node/b
     ;contactless with default settings
     set_node_defaults -1, -1, -1, -1, c
 
-The new **"L"** node option will help to understand and use set\_node\_defaults , **"p"** node option will boost fps even with tracked vehicles on slower computers. -&gt; [nodes](#Nodes "wikilink")
+The new **"L"** node option will help to understand and use set\_node\_defaults , **"p"** node option will boost fps even with tracked vehicles on slower computers. -&gt; [nodes](#nodes)
 
 ## Enable\_advanced\_deformation
 
@@ -1367,7 +1367,7 @@ Truck file syntax:
 
     enable_advanced_deformation
 
-This will remove any limit and thresholds from the [set\_beam\_defaults](#Set_beam_defaults "wikilink") processing. Its recommended to use it for the development of properly deforming flexbody node\\beam structures.
+This will remove any limit and thresholds from the [set\_beam\_defaults](#set_beam_defaults) processing. Its recommended to use it for the development of properly deforming flexbody node\\beam structures.
 
 ## Rollon
 
@@ -1661,7 +1661,7 @@ Fixes are nodes that are fixed in place. That means that once put in place in th
 
 This sets the minimum node mass. Useful for very light vehicles with lots of nodes (e.g. small airplanes).
 
-(Tip: When using a very low minimass, i.e. below 10, you should use a low damping value in the [Beam defaults](Truck_Description_File#Set_beam_defaults "wikilink") in your beams section)
+(Tip: When using a very low minimass, i.e. below 10, you should use a low damping value in the [Beam defaults](#set_beam_defaults) in your beams section)
 
     minimass
     10.0
@@ -1747,7 +1747,7 @@ Torque curves affect the behavior of the engine. This section allows you to assi
 ## Usage \#2: Defining custom curve
 
 -   **power**: <span style="color:#BD0058">Real number</span>; RPM where the power begins
--   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#Engine "wikilink") parameter \#3 "Torque" (0 = 0%, 0.5 = 50%, 1.5 = 150%)
+-   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#engine) parameter \#3 "Torque" (0 = 0%, 0.5 = 50%, 1.5 = 150%)
 
 It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overev area defined.
 
@@ -1912,7 +1912,7 @@ Parameters:
 
 Flares allow you to add lights to your truck. They work as light sources in OGRE and will illuminate other objects (if enabled in settings).
 
-''See also: [Flares Tutorial](Flares_Tutorial "wikilink")
+''See also: [Flares Tutorial](http://docs.rigsofrods.org/vehicle-creation/flares)
 
 Parameters:
 
@@ -1970,7 +1970,7 @@ Flares2 are the same as normal flares, except that they add an offset-z argument
 
 ## Materialflarebindings
 
-*See also: [Flares Tutorial](Flares_Tutorial "wikilink")*
+*See also: [Flares Tutorial](http://docs.rigsofrods.org/vehicle-creation/flares)*
  This can bind a material to a flare, so that the material changes with the flare's on/off status.
 
 The format is as follows:
@@ -2010,7 +2010,7 @@ COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, 
 
 This allows you to "stick" any 3D mesh to a triangle of points of a truck. You can use it to stick air intakes, horns, seats, dashboard, bumpers, whatever to the truck. Note that there will be no collision detection with these objects. Like flares, they use a vector coordinate system instead of normal right-angle coordinates. Props are positioned relative to 3 nodes of the chassis: One node is the reference node, and the two others define a base (x,y). Props are positioned relative to the reference node by adding proportions of the vectors ref-&gt;X, ref-&gt;Y, with the normal being used as well .
 
-Please read this guide if you want to use high quality meshes: [Mesh LODs](Mesh_LODs "wikilink").
+Please read this guide if you want to use high quality meshes: [Mesh LODs](https://archives.rigsofrods.org/wiki/index.php/Mesh_LODs).
 
 Parameters are:
 
@@ -2453,9 +2453,9 @@ Note: It's important to keep an eye on the number of vertices of your meshes. No
 Further reading:
 
 -   Refer to [this thread](http://forum.rigsofrods.com/index.php?topic=9341.msg77404#msg77404) for more information.
--   Read this guide if you want to use high quality meshes: [Mesh LODs](Mesh_LODs "wikilink")
--   [How to get a good Flexbody](How_to_get_a_good_Flexbody "wikilink")
--   [Separate (flexbody) deforming/detaching parts](Separate_(flexbody)_deforming/detaching_parts "wikilink")
+-   Read this guide if you want to use high quality meshes: [Mesh LODs](https://archives.rigsofrods.org/wiki/index.php/Mesh_LODs)
+-   [How to get a good Flexbody](https://archives.rigsofrods.org/wiki/index.php/How_to_get_a_good_Flexbody)
+-   [Separate (flexbody) deforming/detaching parts](https://archives.rigsofrods.org/wiki/index.php/Separate_(flexbody)_deforming/detaching_parts)
 
 ## Submesh
 
@@ -2490,7 +2490,7 @@ A submesh has two subsections: the texcoords, that places nodes of the submesh o
 
 The order in which the three points forming the triangles is given is important, as its winding defines in which direction it will be visible. The winding must be counterclockwise to be visible.
 
-mcreed has contributed a cool [Texturing Tutorial](Texturing_Tutorial "wikilink") that describes how to fill the submesh and cab parts of the truck file.
+mcreed has contributed a cool [Texturing Tutorial](https://archives.rigsofrods.org/wiki/index.php/Texturing_Tutorial) that describes how to fill the submesh and cab parts of the truck file.
 
 ### (sub-directive) backmesh
 
@@ -2547,7 +2547,7 @@ Specifies groundmodel should be used for the trucks contactive submeshes. It has
 
 Parameter:
 
--   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](Groundmodel_Description_File "wikilink")
+-   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.org/wiki/index.php/Groundmodel_Description_File)
 
 <!-- -->
 
@@ -2807,7 +2807,7 @@ Adds a sound source to your vehicle.
 Parameters:
 
 -   **node**: <span style="color:#BD0058">Node number</span>; The place where your sound will come from. Doesn't support named nodes.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](soundscript_files "wikilink"). You can use game-defined sound scripts or your own sound scripts.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](http://docs.rigsofrods.org/vehicle-creation/fileformat-soundscript/). You can use game-defined sound scripts or your own sound scripts.
 
 <!-- -->
 
@@ -2827,7 +2827,7 @@ Parameters:
     -   **-1**: Enabled in external camera only
     -   **0 (or higher)**: Enabled for cinecamera number specified.
         Note: for backwards compatibility, the parser will read invalid values as 0 and emit a warning.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](soundscript_files "wikilink"). You can use game-defined sound scripts or your own sound scripts.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](http://docs.rigsofrods.org/vehicle-creation/fileformat-soundscript). You can use game-defined sound scripts or your own sound scripts.
 
 <!-- -->
 
@@ -2987,7 +2987,7 @@ This can be inserted in the file as is.
 ## Wings
 
   
-*Please see [RoRBook/Wings](RoRBook/Wings "wikilink") for more information*
+*Please see [RoRBook/Wings](https://archives.rigsofrods.org/wiki/index.php/RoRBook/Wings) for more information*
 
 ![Wing reference](/images/truckfile-wing.png)
 
