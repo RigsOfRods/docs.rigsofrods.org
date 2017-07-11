@@ -188,7 +188,7 @@ to your RoR.cfg. (Be sure to use a TAB before Yes and not to start the configura
     ...
     04:09:05: TOTAL VEHICLE MASS: 32399 kg
 
-You can set any option property, loadweight, friction-, volume- and surface-coefficients as default with [set\_node\_defaults](#Set_node_defaults "wikilink").
+You can set any option property, loadweight, friction-, volume- and surface-coefficients as default with [set\_node\_defaults](#set_node_defaults).
 
 ## Nodes2
 
@@ -3228,4 +3228,3 @@ Screwprops are boats' propellers. As of RoR 0.31, the definition of this section
     ;prop node, back node, top node,    power
             88,        93,       91, 100000.0
             89,        92,       90, 100000.0
-
