@@ -171,6 +171,10 @@ NOTE: You can put a comment at the end of a node-line.
     nodes
     14, 1.36, 0.00, 1.97, l 2000
 
+    ; This setting will set the node as non-contactable and set the mass to 2000 kilograms:
+    nodes
+    14, 1.36, 0.00, 1.97, cl 2000
+
 <span style="background-color:#fb7">\[ Version 0.35+ \]</span> You can debug your Truck's Node masses by adding
 
     Debug Truck Mass   Yes
@@ -1820,6 +1824,56 @@ The axle section is different from other sections in that it is broken into prop
         -   **o** - open
         -   **l** - locked
         -   **s** - Split evenly (each wheel gets equal torque regardless of wheel speed)
+
+## Wheeldetachers
+
+**This section is still highly experimental and could cause wheels to become unstable!**
+
+Added in 0.4.7.0, this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
+
+```
+wheeldetachers
+;wheel_id, detacher_group
+1, 1
+2, 2
+```
+
+Parameters:
+
+-   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at 1.
+-   **detacher_group**: <span style="color:#BD0058">Real number</span>; The detacher_group number. 
+
+Example usage:
+
+```
+beams
+;front right wheel
+set_beam_defaults 12500000, 28600, 1860000, 6968000
+detacher_group 1
+1, 2, i
+3, 4, i
+5, 6, i
+7, 8, i
+detacher_group 0
+;front left wheel
+detacher_group 2
+9, 10, i
+11, 12, i
+13, 14, i
+15, 16, i
+detacher_group 0
+
+meshwheels 
+;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping, side,               meshname         material
+0.35,       0.21,   0.5,      14,    1,    2,    9999,      1,         1,  18, 200.0, 300000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
+0.35,       0.21,   0.5,      14,    3,    4,    9999,      1,         1,  26, 200.0, 300000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
+
+
+wheeldetachers
+;wheel_id, detacher_group
+1, 1
+2, 2
+```
 
 ## Collisionboxes
 
