@@ -1825,6 +1825,56 @@ The axle section is different from other sections in that it is broken into prop
         -   **l** - locked
         -   **s** - Split evenly (each wheel gets equal torque regardless of wheel speed)
 
+## Wheeldetachers
+
+**This section is still highly experimental and could cause wheels to become unstable!**
+
+Added in 0.4.7.0, this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
+
+```
+wheeldetachers
+;wheel_id, detacher_group
+1, 1
+2, 2
+```
+
+Parameters:
+
+-   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at 1.
+-   **detacher_group**: <span style="color:#BD0058">Real number</span>; The detacher_group number. 
+
+Example usage:
+
+```
+beams
+;front right wheel
+set_beam_defaults 12500000, 28600, 1860000, 6968000
+detacher_group 1
+1, 2, i
+3, 4, i
+5, 6, i
+7, 8, i
+detacher_group 0
+;front left wheel
+detacher_group 2
+9, 10, i
+11, 12, i
+13, 14, i
+15, 16, i
+detacher_group 0
+
+meshwheels 
+;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping, side,               meshname         material
+0.35,       0.21,   0.5,      14,    1,    2,    9999,      1,         1,  18, 200.0, 300000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
+0.35,       0.21,   0.5,      14,    3,    4,    9999,      1,         1,  26, 200.0, 300000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
+
+
+wheeldetachers
+;wheel_id, detacher_group
+1, 1
+2, 2
+```
+
 ## Collisionboxes
 
 In RoR 0.4.0.5 and above you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
