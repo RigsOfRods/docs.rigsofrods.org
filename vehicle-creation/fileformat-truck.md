@@ -171,6 +171,10 @@ NOTE: You can put a comment at the end of a node-line.
     nodes
     14, 1.36, 0.00, 1.97, l 2000
 
+    ; This setting will set the node as non-contactable and set the mass to 2000 kilograms:
+    nodes
+    14, 1.36, 0.00, 1.97, cl 2000
+
 <span style="background-color:#fb7">\[ Version 0.35+ \]</span> You can debug your Truck's Node masses by adding
 
     Debug Truck Mass   Yes
