@@ -240,7 +240,7 @@ Your server should now be running and registered on the server list!
 To stop the server, press `CTRL+C` or close the command prompt.
 
 ## Linux 
-### (requires a `terminal` and `sudo` access)
+(requires a `terminal` and `sudo` access)
 
 #### Required tools:
 (Debian/Ubuntu)
