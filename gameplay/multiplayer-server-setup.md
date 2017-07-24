@@ -172,10 +172,35 @@ While in the folder, do `SHIFT + Right click -> Open command prompt window here`
 
 A Command Prompt window should now be open.
 
-Run this command to get the latest source:
+Depending on what RoR version you are using, the clone command will be different. 
+
+#### 0.4.7.0
+
+If you want to run a server for 0.4.7.0 without admin/moderator support (UserAuth), you can just run this command:
+
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
-You should now have a folder named `ror-server` inside of the folder you created earlier.
+Since the old `notifier` class was replaced for the new server list, it doesn't support the UserAuth file for admin/moderator support. I (Michael10055) has reimplemented the UserAuth part of the `notifier` class. To get these changes, run this command:
+
+`git clone https://github.com/Michael10055/ror-server.git`
+
+#### Latest GitHub commit/AppVeyor builds
+
+At the moment, the RoRNet 2.40 changes have not been merged yet. (This might change in the near future)
+
+To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
+
+`git clone https://github.com/only-a-ptr/ror-server.git`
+
+#### 0.38.67 to 0.4.6RC3
+
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+
+`git reset --hard 32b14e7`
+
+This will set your files to the last commit before the change to RoRNet 2.38.
+
+After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
 ### Running CMake
 Open CMake, input the source and build paths:
@@ -191,6 +216,8 @@ Click `Finish`.
 (**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
 
 ![cmake3](/images/cmake-3-server.png)
+
+It is highly recommended to enable Angelscript support.
 
 Click `Configure` again till all fields are white then press `Generate`. 
 
@@ -225,7 +252,8 @@ Rename the files: (example: `tutorial-`):
 
 
 Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
-For now, the .auth file cannot be read on the latest source, so it can be ignored.
+
+If you compiled with admin/moderator support, see the [Setting up admins/moderators](#userauth-setup) section.
 
 ### Running the server
 In the `bin` directory, 
@@ -240,7 +268,7 @@ Your server should now be running and registered on the server list!
 To stop the server, press `CTRL+C` or close the command prompt.
 
 ## Linux 
-### (requires a `terminal` and `sudo` access)
+(requires a `terminal` and `sudo` access)
 
 #### Required tools:
 (Debian/Ubuntu)
@@ -271,9 +299,35 @@ Change into the created directory:
 
 `cd ror-server`
 
-To get the latest source: 
+Depending on what RoR version you are using, the clone command will be different. 
+
+#### 0.4.7.0
+
+If you want to run a server for 0.4.7.0 without admin/moderator support (UserAuth), you can just run this command:
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
+
+Since the old `notifier` class was replaced for the new server list, it doesn't support the UserAuth file for admin/moderator support. I (Michael10055) has reimplemented the UserAuth part of the `notifier` class. To get these changes, run this command:
+
+`git clone https://github.com/Michael10055/ror-server.git`
+
+#### Latest GitHub commit
+
+At the moment, the RoRNet 2.40 changes have not been merged yet. (This might change in the near future)
+
+To run a server for the latest `rigs-of-rods` repo commit, run this command:
+
+`git clone https://github.com/only-a-ptr/ror-server.git`
+
+#### 0.38.67 to 0.4.6RC3
+
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+
+`git reset --hard 32b14e7`
+
+This will set your files to the last commit before the change to RoRNet 2.38.
+
+After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
 Change into the source folder:
 
@@ -294,6 +348,8 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 .
 
 ```
+
+It is highly recommended to enable Angelscript support.
 
 ### Compiling
 
@@ -340,8 +396,6 @@ mv example-rules.rules tutorial-rules.rules
 Edit the files using `nano`:
 
 ```
-
-nano tutorial-auth.auth 
 nano tutorial-motd.motd 
 nano tutorial-config.cfg 
 nano tutorial-rules.rules
@@ -349,7 +403,7 @@ nano tutorial-rules.rules
 ```
 Use the arrow keys to navigate. After you fill out the file, press `CTRL+O` to write the changes and `CTRL+X` to exit.
 You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
-For now, the .auth file cannot be read on the latest source, so it can be ignored.
+If you compiled with admin/moderator support, see the [Setting up admins/moderators](#userauth-setup) section.
 
 ### Running the server
 
@@ -390,4 +444,63 @@ Many things can go wrong with your server, here's a small selection of problems 
 
 If you come across a problem, please post in the appropriate [help/support forum](https://forum.rigsofrods.org/forum-15.html).
 If you have a solution for your problem, please add the problem and solution to this list.
+
+# UserAuth setup
+
+If you compiled with admin/moderator support and have your server running, this section will teach you how to set up the `.auth` file.
+
+Open the `.auth` file in a text editor. It should look like this:
+
+
+```
+; This files defines who is an admin, moderator etc on your server
+; the syntax is as follows: <authorization> <token> <username (optional)>
+;  - where authorization is a number between 1 and 13:
+;		1: administrator (red name, has access to all admin functions)
+;		4: moderator (red name, has access to all admin functions)
+;		8: bot, robot (blue name, no special privileges)
+;  - token is the user token of the user. It's the token that uniquely identifies the user, not the username.
+;		This is not the normal token, but an encoded version of it.
+;		You can get this token by starting your server, filling in your token
+;		in your configurator and then look in the logfile for your encoded token.
+;		A typical encoded token is exactly 40 characters long.
+;  - username is the username that will be shown to other players
+;		The username that the user fills in into their configurator will be overridden by this username.
+;		If you do not specify a username, the username from the client's configurator will be used.
+;
+; note: You need to restart server after every edit to this file.
+; note: Do not use spaces in the usernames
+; note: Empty lines and lines starting with a ";" will be ignored.
+
+; EXAMPLE ADMIN (replace these with your username and encoded token)
+1 9b3c463506f128319a0f16ef08d39d876ca25c68 admin_user
+```
+
+Open RoRConfig and set your unhashed token `Gameplay tab -> User Token` box. It's kind of like a password, so make it unique.
+
+Now join your server and check your server's log. You should see a line similar to this:
+
+`INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
+
+This is the hashed token for the user. 
+
+If you want the user to be a admin, set the number in the `.auth` file to `1`, or `4` if you want the user to be a moderator. 
+
+```
+;example admin
+1 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
+;example moderator
+4 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
+```
+
+Save the file and restart your server. If the server read the auth file correctly, it should log this:
+
+` INFO| found X auth overrides in the authorizations file!`
+
+The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
+
+
+
+
+
 
