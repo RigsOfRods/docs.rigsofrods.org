@@ -291,6 +291,8 @@ Optional parameters:
 -   **beam damping**: <span style="color:#BD0058">Real number</span>; Default=800
 -   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#fb7">\[ Upcoming versions 0.4.8+ \]</span> Weight of the camera point. Default=20Kg
 
+Example:
+
     cinecam
     ;  x,   y,   z, <---------8 bindings--------->, Opt: spring, damping, node-weight
     0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
