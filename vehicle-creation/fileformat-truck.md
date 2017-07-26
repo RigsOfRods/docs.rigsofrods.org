@@ -278,11 +278,22 @@ This section is important. It helps to position the truck in space, by defining 
 
 ## Cinecam
 
-This defines the position of the in-truck camera. It is a special node suspended from eight chassis nodes. The parameters are the 3 coordinates of the point and the 8 nodes to which it is bound. Note that if your input nodes that do not exist, your vehicle will most likely explode upon spawning. There are also two optional values to define the spring and damping factors of the links to the camera, to adjust its movements. The default values are 8000 and 800.
+This defines the position of the in-truck camera. It is a special node suspended from eight chassis nodes.
+
+Required parameters:
+
+-   **X,Y,Z position (in meters)**: <span style="color:#BD0058">Real numbers</span>; Coordinates of the camera point.
+-   **8 node bindings**: <span style="color:#BD0058">Node ID</span>; Nodes to which the camera point is bound.
+
+Optional parameters:
+
+-   **beam spring**: <span style="color:#BD0058">Real number</span>; Default=8000
+-   **beam damping**: <span style="color:#BD0058">Real number</span>; Default=800
+-   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#fb7">\[ Upcoming versions 0.4.8+ \]</span> Weight of the camera point. Default=20Kg
 
     cinecam
-    ;  x,   y,   z, <---------8 bindings--------->, spring, damping
-    0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54, 8000.0,   800.0
+    ;  x,   y,   z, <---------8 bindings--------->, Opt: spring, damping, node-weight
+    0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0, 20.0
 
 ## End
 
