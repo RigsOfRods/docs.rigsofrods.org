@@ -103,23 +103,23 @@ Flexbodies allow you to make mesh-based vehicles which actually deform with the 
 
 A vehicle feature which adjusts aerodynamic properties of the vehicle body/hull. Very important in RoR, greatly affects speed and acceleration.
 
-##Props
+## Props
 
 Meshes that can be added to vehicles that do not have collision.
 
-##Rotators
+## Rotators
 
 Rotators are alternate commands (Hydros) that allow you to do turntables, like in the base of a rotating crane.
 
-##Rollon
+## Rollon
 
 Enables collision between wheels and the contactable textured surfaces of a truck.
 
-##Ropables
+## Ropables
 
 Nodes that can be grabbed to.
 
-##SlopeBrake
+## SlopeBrake
 
 Fixes the bug, where trucks slowly roll down a slope no matter how much brake-force is applied.
 
