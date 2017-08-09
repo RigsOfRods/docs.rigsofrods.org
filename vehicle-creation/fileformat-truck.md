@@ -1994,12 +1994,12 @@ Parameters:
     -   *l* : Left blinker.
     -   *r* : Right blinker.
     -   *R* : Reverse light (on when driving in R gear)
-    -   *u* : User controlled light. (i.e. fog light) (see controlnumbers))
+    -   *u* : User controlled light. (i.e. fog light) (see control numbers))
 -   **Control number**: <span style="color:#BD0058">Decimal number</span>; - This determines how this light is switched on and off, if you chose a user controlled light. Valid user defined control numbers are 0-500. If you chose a non-user controlled light(i.e. brake light) you should put "-1" here.
     Some custom control numbers found in 0.38:
     -   11 Clutch
     -   12 Parking Brake
-    -   40 Stater
+    -   40 Starter
     -   45 Axle Lock
     -   55 Steer right
     -   56 Steer left
