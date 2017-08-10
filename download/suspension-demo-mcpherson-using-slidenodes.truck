@@ -5,10 +5,8 @@ author chassis 40199 Creak
 fileinfo -1, 146, 1
 
 description
-This is an example vehicle.
-It features McPherson strut front suspension
-and double wishbone suspension in the rear.
-end_description 
+This is an example vehicle. It features McPherson strut front suspension and double wishbone suspension in the rear.
+end_description
  
 globals
 1000, 0, tracks/semi
