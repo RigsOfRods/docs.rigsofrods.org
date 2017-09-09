@@ -156,6 +156,14 @@ We're now ready to start setting up the Rigs of Rods server.
 
 #### Required tools:
 
+If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
+
+0.4.7.0 (RoRNet 2.38 - Includes Angelscript support and admin/moderator authorization fixes): https://github.com/Michael10055/ror-server/releases/download/2.38-v1/rorserver-rornet238-windows.zip
+
+Latest GitHub commit/AppVeyor builds (RoRNet 2.40): (link here)
+
+0.38.67 to 0.4.6RC3 (RoRNet 2.37 - Includes Angelscript support and fixed LAN mode authorizations): https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip
+
 - [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed: 
 
 ![vs](/images/VS-server-cplusplus.png)
