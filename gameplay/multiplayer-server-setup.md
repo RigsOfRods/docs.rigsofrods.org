@@ -202,11 +202,9 @@ To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run t
 
 #### 0.38.67 to 0.4.6RC3
 
-If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git reset --hard 32b14e7`
-
-This will set your files to the last commit before the change to RoRNet 2.38.
+`git clone https://github.com/Michael10055/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
@@ -329,11 +327,9 @@ To run a server for the latest `rigs-of-rods` repo commit, run this command:
 
 #### 0.38.67 to 0.4.6RC3
 
-If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git reset --hard 32b14e7`
-
-This will set your files to the last commit before the change to RoRNet 2.38.
+`git clone https://github.com/Michael10055/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
