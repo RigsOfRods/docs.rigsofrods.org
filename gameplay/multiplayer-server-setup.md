@@ -156,6 +156,14 @@ We're now ready to start setting up the Rigs of Rods server.
 
 #### Required tools:
 
+If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
+
+[0.4.7.0](https://github.com/Michael10055/ror-server/releases/download/2.38-v1/rorserver-rornet238-windows.zip) (RoRNet 2.38 - Includes Angelscript support and admin/moderator authorization fixes)
+
+[0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip) (RoRNet 2.37 - Includes Angelscript support and fixed LAN mode authorizations)
+
+The programs listed below are required to build the server, restart your computer after installing all the below tools!
+
 - [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed: 
 
 ![vs](/images/VS-server-cplusplus.png)
@@ -194,11 +202,9 @@ To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run t
 
 #### 0.38.67 to 0.4.6RC3
 
-If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git reset --hard 32b14e7`
-
-This will set your files to the last commit before the change to RoRNet 2.38.
+`git clone https://github.com/Michael10055/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
@@ -321,11 +327,9 @@ To run a server for the latest `rigs-of-rods` repo commit, run this command:
 
 #### 0.38.67 to 0.4.6RC3
 
-If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this after running the command mentioned in the 0.4.7.0 section.
+If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git reset --hard 32b14e7`
-
-This will set your files to the last commit before the change to RoRNet 2.38.
+`git clone https://github.com/Michael10055/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
