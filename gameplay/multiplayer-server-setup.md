@@ -184,21 +184,15 @@ Depending on what RoR version you are using, the clone command will be different
 
 #### 0.4.7.0
 
-If you want to run a server for 0.4.7.0 without admin/moderator support (UserAuth), you can just run this command:
+If you want to run a server for 0.4.7.0, run this command:
 
-`git clone https://github.com/RigsOfRods/ror-server.git`
-
-Since the old `notifier` class was replaced for the new server list, it doesn't support the UserAuth file for admin/moderator support. I (Michael10055) has reimplemented the UserAuth part of the `notifier` class. To get these changes, run this command:
-
-`git clone https://github.com/Michael10055/ror-server.git`
+`git clone https://github.com/Michael10055/ror-server-rornet238.git`
 
 #### Latest GitHub commit/AppVeyor builds
 
-At the moment, the RoRNet 2.40 changes have not been merged yet. (This might change in the near future)
-
 To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
 
-`git clone https://github.com/only-a-ptr/ror-server.git`
+`git clone https://github.com/RigsOfRods/ror-server.git`
 
 #### 0.38.67 to 0.4.6RC3
 
@@ -219,7 +213,7 @@ Click `Configure` and select your compiler: (Don't confuse Visual Studio 14 2015
 
 Click `Finish`.
 
-(**Optional**) Enable needed build options (May cause build failures - webserver fails to build on latest source)
+(**Optional**) Change build options - It is highly recommended to enable Angelscript support.
 
 ![cmake3](/images/cmake-3-server.png)
 
@@ -309,21 +303,15 @@ Depending on what RoR version you are using, the clone command will be different
 
 #### 0.4.7.0
 
-If you want to run a server for 0.4.7.0 without admin/moderator support (UserAuth), you can just run this command:
+If you want to run a server for 0.4.7.0, run this command:
+
+`git clone https://github.com/Michael10055/ror-server-rornet238.git`
+
+#### Latest GitHub commit/AppVeyor builds
+
+To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
-
-Since the old `notifier` class was replaced for the new server list, it doesn't support the UserAuth file for admin/moderator support. I (Michael10055) has reimplemented the UserAuth part of the `notifier` class. To get these changes, run this command:
-
-`git clone https://github.com/Michael10055/ror-server.git`
-
-#### Latest GitHub commit
-
-At the moment, the RoRNet 2.40 changes have not been merged yet. (This might change in the near future)
-
-To run a server for the latest `rigs-of-rods` repo commit, run this command:
-
-`git clone https://github.com/only-a-ptr/ror-server.git`
 
 #### 0.38.67 to 0.4.6RC3
 
@@ -339,7 +327,7 @@ Change into the source folder:
 
 ### Running CMake
 
-(**Optional**) Enable build options (May cause build failures - webserver fails to build on latest source)
+(**Optional**) Change build options - It is highly recommended to enable Angelscript support.
 
 ```
 
@@ -347,13 +335,13 @@ cmake -DCMAKE_INSTALL_PREFIX:STRING=/usr \
 -DRORSERVER_NO_STACKLOG:BOOL=ON \
 -DRORSERVER_CRASHHANDLER:BOOL=OFF \
 -DRORSERVER_GUI:BOOL=OFF \
--DRORSERVER_WITH_ANGELSCRIPT:BOOL=OFF \
+-DRORSERVER_WITH_ANGELSCRIPT:BOOL=ON \
 -DRORSERVER_WITH_WEBSERVER:BOOL=OFF \
 .
 
 ```
 
-It is highly recommended to enable Angelscript support.
+
 
 ### Compiling
 
