@@ -158,10 +158,12 @@ We're now ready to start setting up the Rigs of Rods server.
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
-[0.4.7.0](https://github.com/Michael10055/ror-server/releases/download/2.38-v1/rorserver-rornet238-windows.zip) (RoRNet 2.38 - Includes Angelscript support and admin/moderator authorization fixes)
+** Prebuilts **
+[0.4.7.0](https://github.com/Michael10055/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip) (RoRNet 2.38 - Includes Angelscript support and admin/moderator authorization fixes)
 
 [0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip) (RoRNet 2.37 - Includes Angelscript support and fixed LAN mode authorizations)
 
+** Compiling yourself **
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
 - [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed: 
