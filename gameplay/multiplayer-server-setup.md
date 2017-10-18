@@ -32,8 +32,8 @@ When the test is complete, you will see the results in an image similar to the o
 
 ![](/images/network-speed-test.png)
 
-Take a look at the upload speed. On the image above it displays 361kb/s as an upload speed. This is in kilobits. 
-As of RoRnet\_2.1, when starting the server you may append "-speed" as a command. 
+Take a look at the upload speed. On the image above it displays 361kb/s as an upload speed. This is in kilobits.
+As of RoRnet\_2.1, when starting the server you may append "-speed" as a command.
 Input your upload speed in kilobits and the maximum amount of users will be automatically determined. For example: rorserver -speed 361
 
 ## Ping
@@ -154,17 +154,19 @@ We're now ready to start setting up the Rigs of Rods server.
 
 ## Windows
 
-#### Required tools:
+### Pre-built packages:
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
-[0.4.7.0](https://github.com/Michael10055/ror-server/releases/download/2.38-v1/rorserver-rornet238-windows.zip) (RoRNet 2.38 - Includes Angelscript support and admin/moderator authorization fixes)
+[For 0.4.7.0+](https://github.com/Michael10055/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
 
-[0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip) (RoRNet 2.37 - Includes Angelscript support and fixed LAN mode authorizations)
+[For 0.38.67-0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
 
+
+### Building yourself
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
-- [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed: 
+- [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed:
 
 ![vs](/images/VS-server-cplusplus.png)
 
@@ -176,25 +178,25 @@ The programs listed below are required to build the server, restart your compute
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
-While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
+While in the folder, do `SHIFT + Right click -> Open command prompt window here`.
 
 A Command Prompt window should now be open.
 
-Depending on what RoR version you are using, the clone command will be different. 
+Depending on what RoR version you are using, the clone command will be different.
 
-#### 0.4.7.0
+### 0.4.7.0
 
 If you want to run a server for 0.4.7.0, run this command:
 
 `git clone https://github.com/Michael10055/ror-server-rornet238.git`
 
-#### Latest GitHub commit/AppVeyor builds
+### Latest GitHub commit/AppVeyor builds
 
 To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
-#### 0.38.67 to 0.4.6RC3
+### 0.38.67 to 0.4.6RC3
 
 If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
@@ -219,7 +221,7 @@ Click `Finish`.
 
 It is highly recommended to enable Angelscript support.
 
-Click `Configure` again till all fields are white then press `Generate`. 
+Click `Configure` again till all fields are white then press `Generate`.
 
 You should now have a `build` folder with `rorserver.sln` inside of it.
 
@@ -227,15 +229,15 @@ You should now have a `build` folder with `rorserver.sln` inside of it.
 
 Open `rorserver.sln`
 
-Set the build to `Release` 
+Set the build to `Release`
 
 ![vs2](/images/VS-server-release.png)
 
-Click `Build -> Build Solution 
+Click `Build -> Build Solution
 
 ![vs3](/images/VS-server-build.png)
 
-Wait for it to compile. Your build should be successful. 
+Wait for it to compile. Your build should be successful.
 
 ![vs4](/images/VS-server-finish.png)
 
@@ -256,7 +258,7 @@ Open each file in a text editor and fill it out with your server's info. You wil
 If you compiled with admin/moderator support, see the [Setting up admins/moderators](#userauth-setup) section.
 
 ### Running the server
-In the `bin` directory, 
+In the `bin` directory,
 `SHIFT + Right click -> Open command prompt window here`
 
 To start the server:
@@ -267,7 +269,7 @@ Your server should now be running and registered on the server list!
 
 To stop the server, press `CTRL+C` or close the command prompt.
 
-## Linux 
+## Linux
 (requires a `terminal` and `sudo` access)
 
 #### Required tools:
@@ -299,7 +301,7 @@ Change into the created directory:
 
 `cd ror-server`
 
-Depending on what RoR version you are using, the clone command will be different. 
+Depending on what RoR version you are using, the clone command will be different.
 
 #### 0.4.7.0
 
@@ -378,9 +380,9 @@ Rename the files (example: `tutorial-`):
 
 ```
 
-mv example-auth.auth tutorial-auth.auth 
-mv example-motd.motd tutorial-motd.motd 
-mv example-config.cfg tutorial-config.cfg 
+mv example-auth.auth tutorial-auth.auth
+mv example-motd.motd tutorial-motd.motd
+mv example-config.cfg tutorial-config.cfg
 mv example-rules.rules tutorial-rules.rules
 
 ```
@@ -388,8 +390,8 @@ mv example-rules.rules tutorial-rules.rules
 Edit the files using `nano`:
 
 ```
-nano tutorial-motd.motd 
-nano tutorial-config.cfg 
+nano tutorial-motd.motd
+nano tutorial-config.cfg
 nano tutorial-rules.rules
 
 ```
@@ -399,7 +401,7 @@ If you compiled with admin/moderator support, see the [Setting up admins/moderat
 
 ### Running the server
 
-To start the server: 
+To start the server:
 
 `./rorserver -c your-config.cfg`
 
@@ -474,9 +476,9 @@ Now join your server and check your server's log. You should see a line similar 
 
 `INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
 
-This is the hashed token for the user. 
+This is the hashed token for the user.
 
-If you want the user to be a admin, set the number in the `.auth` file to `1`, or `4` if you want the user to be a moderator. 
+If you want the user to be a admin, set the number in the `.auth` file to `1`, or `4` if you want the user to be a moderator.
 
 ```
 ;example admin
@@ -490,9 +492,3 @@ Save the file and restart your server. If the server read the auth file correctl
 ` INFO| found X auth overrides in the authorizations file!`
 
 The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
-
-
-
-
-
-
