@@ -164,8 +164,6 @@ If you don't want to compile the server yourself, you can download the correct p
 
 
 ### Building yourself
-
-### Required tools:
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
 - [VS 2015 Community Edition]( http://dl.rigsofrods.org/developer/vs_community__2015.exe) C++ tools must be installed:
