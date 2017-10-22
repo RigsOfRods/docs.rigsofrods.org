@@ -323,7 +323,7 @@ If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
-Change into the source folder (The folder name might be different dependong on which `git clone` command you used)
+Change into the source folder (The folder name might be different dependong on which `git clone` command you used):
 
 `cd ror-server`
 
