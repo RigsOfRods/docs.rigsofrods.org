@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Weight tuning"
-categories: [tools-tutorials]
+categories: [vehicle-creation]
 ---
 
 <div class="toc" markdown="1">
