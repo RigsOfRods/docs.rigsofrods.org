@@ -253,9 +253,9 @@ Rename the files: (example: `tutorial-`):
 ![f2](/images/server-config-2.png)
 
 
-Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
+Open each file in a text editor and fill it out with your server's info. You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page. If you're running your server on a VPS, you most likely can skip this step.
 
-If you compiled with admin/moderator support, see the [Setting up admins/moderators](#userauth-setup) section.
+If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
 
 ### Running the server
 In the `bin` directory,
@@ -396,8 +396,9 @@ nano tutorial-rules.rules
 
 ```
 Use the arrow keys to navigate. After you fill out the file, press `CTRL+O` to write the changes and `CTRL+X` to exit.
-You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page.
-If you compiled with admin/moderator support, see the [Setting up admins/moderators](#userauth-setup) section.
+You will need to port forward your servers port in your router settings. See the `Port Forwarding` part of this page. If you're running your server on a VPS, you most likely can skip this step.
+
+If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
 
 ### Running the server
 
@@ -441,7 +442,7 @@ If you have a solution for your problem, please add the problem and solution to 
 
 # UserAuth setup
 
-If you compiled with admin/moderator support and have your server running, this section will teach you how to set up the `.auth` file.
+If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future) and have your server working, this section will teach you how to set up the `.auth` file.
 
 Open the `.auth` file in a text editor. It should look like this:
 
