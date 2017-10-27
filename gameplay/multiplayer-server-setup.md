@@ -493,3 +493,18 @@ Save the file and restart your server. If the server read the auth file correctl
 ` INFO| found X auth overrides in the authorizations file!`
 
 The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
+
+Admin commands:
+```
+!list - Lists all users on a server with their UID
+
+!kick/!ban - Kicks or bans a user. Note that server bans will be removed when the server restarts.
+
+Usage: !kick UID reason or !ban UID reason
+
+!say - Sends a message to a user or the entire server.
+
+Usage: !say 10 message or !say -1 message
+
+```
+
