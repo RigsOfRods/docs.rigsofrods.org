@@ -66,7 +66,7 @@ To precisely place your object, you can use the built-in "terrain/object editor"
 
 Note: The editor cannot move roads/Paged Geometry trees/grass.
 
-First, make sure you have the correct `input.map` line needed to open the editor. Open the `input.map` (Located in /config/input.map) and search for this line:
+First, make sure you have the correct `input.map` line needed to open the editor. Open the `input.map` (Located in `/config/input.map`) and search for this line:
 
 `COMMON_TOGGLE_TERRAIN_EDITOR   Keyboard             EXPL+CTRL+Y`
 
