@@ -75,8 +75,6 @@ title:  "Wiki porting checklist - TODO"
 
 * https://archives.rigsofrods.org/wiki/index.php/AC3D_Plugins
 * https://archives.rigsofrods.org/wiki/index.php/Adding_Glow - ogre .material + .program
-* https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain - old, terrn, editortruck
-* https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain_in_0.36_or_higher - old, terrn, editortruck, rortoolkit-old
 * https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_ror_with_AC3D - links?
 * https://archives.rigsofrods.org/wiki/index.php/Adding_rust_to_a_texture - graphics
 * https://archives.rigsofrods.org/wiki/index.php/Adding_sounds_to_a_terrain_version_0.38.67 - soundloads
