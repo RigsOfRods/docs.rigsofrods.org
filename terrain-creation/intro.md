@@ -151,7 +151,7 @@ A normal terrain object is usually formatted like this:
 875.549, 67.6607, 1155.26, 0, 0, 0, truckshop
 ```
 
-RoR uses Paged Geometry for trees/grass, see [this page](http://docs.rigsofrods.org/terrain-creation/old-terrn-subsystem/) for more info.
+RoR uses Paged Geometry for trees/grass, see [this page](http://docs.rigsofrods.org/terrain-creation/old-terrn-subsystem/#grass) for more info.
 
 
 
