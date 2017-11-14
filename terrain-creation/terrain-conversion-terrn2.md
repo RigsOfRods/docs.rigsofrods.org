@@ -11,7 +11,7 @@ categories: [terrain-creation]
 
 # Basic (Single-layer) 0.3x terrain to 0.4 conversion
 
-As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://ror.avrintech.net/rorwikibackup/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
+As of 0.4.0, The terrain format changed into what's now called [.terrn2](https://archives.rigsofrods.org/wiki/index.php/0.4_Terrain_System), This page will teach you how to easily convert a basic terrain to 0.4.
 
 Programs needed:
 
@@ -21,7 +21,7 @@ Programs needed:
 
 ## What defines a "Single-layer" terrain?
 
-In the old [.terrn](https://ror.avrintech.net/rorwikibackup/index.php/.terrn) format's .cfg file, you will find a line at the top in this format:
+In the old [.terrn](https://archives.rigsofrods.org/wiki/index.php/.terrn) format's .cfg file, you will find a line at the top in this format:
 
 ```
 WorldTexture=texture.dds
@@ -76,7 +76,7 @@ AmbientColor = 0.93, 0.86, 0.76
 #The numbers do not have to be seperated by commas.
 StartPosition = 1364.25 121.028  1272.22
 #Where the map will be located in the terrain selector menu. leave it as the default. More about ID's here:
-#https://ror.avrintech.net/rorwikibackup/index.php/Truck_Categories
+#https://archives.rigsofrods.org/wiki/index.php/Truck_Categories
 CategoryID = 129
 #Version of the terrain. If no version number is listed by the author, leave it as the default.
 Version = 1
