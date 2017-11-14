@@ -49,17 +49,19 @@ Terrains are distributed as ZIP archives containing a set of terrain-definition 
 ## The files
 * **.terrn2**: Entry point for the terrain. This is the only required file for a terrain to have.
 * **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display.
+* **-page-x-x.otc**: Configures the terrain's ground textures. Most terrains only have 1 page, so this file is usually named `mapname-page-0-0.otc`.
 * **.os**: Caelum system (sky/weather) config. Visuals only.
 * **.hdx**: Hydrax config (0.4.5 and up). Water display.
 
-Note that, to this date (04/2016), there is no editor which would create these files for you. You need to copy a template and work manually from there.
+Note that, to this date (11/2017), there is no editor which would create these files for you. You need to copy a template and work manually from there.
 
 ## The heightmap
 
-As said above, RoR's primary mechanism for shaping a terrain are heightmaps. We use 8-bit or 16-bit unsigned integer RAW heightmaps.
-These can be converted from images or generated in a specialized tool. We provide tutorials for several of them.
+As said above, RoR's primary mechanism for shaping a terrain are heightmaps. We use 8-bit or 16-bit unsigned integer RAW heightmaps. As of 0.4.x, using a PNG image for the heightmap is also supported.
 
-To use the heightmap in a terrain, you must configure it in ".otc" file (filename, size, bit depth...) and include it into terrain's ZIP archive.
+If you want to use RAW, They can be converted from images or generated in a specialized tool. We provide tutorials for several of them.
+
+To use the heightmap in a terrain, you must configure it in a `.otc` and `-page-x-x.otc`file (filename, size, bit depth...) and include it into terrain's ZIP archive.
 
 You can use [ImageMagick](http://www.imagemagick.org/script/index.php) to convert to and from the .raw heightmap files:
 
