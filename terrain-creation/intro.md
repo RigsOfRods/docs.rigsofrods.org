@@ -34,7 +34,7 @@ Anything that doesn't move. Mostly buildings of all kinds, but also roads, struc
 
 Each of these objects must have a visual mesh (3d model). RoR uses OGRE's ".mesh" format.
 
-Static objects may also have a collision mesh and associated friction settings. Those which don't are ethereal - vehicles just drive through them.
+Static objects may also have a collision mesh and associated friction settings, which are defined in a `.odef` file. Those which don't are ethereal - vehicles just drive through them.
 
 Static object may also trigger special events. A "truck shop" building will, when entered, will display a vehicle menu. A "load spawner" deck will bring up a menu with trailers and loads. And so on.
 
@@ -53,7 +53,7 @@ Terrains are distributed as ZIP archives containing a set of terrain-definition 
 * **.tobj**: Placements for static objects/trees/grass/etc.
 * **.os**: Caelum system (sky/weather) config. Visuals only.
 * **.hdx**: Hydrax config (0.4.5 and up). Water display.
-* **.as**: Terrain script file. Mostly used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
+* **.as**: Terrain script file, usually used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
 
 Note that, to this date (11/2017), there is no editor which would create these files for you. You need to copy a template and work manually from there.
 
@@ -85,7 +85,7 @@ All static objects/grass/etc on a terrain are defined in a `.tobj` file, multipl
 A normal terrain object is usually formatted like this:
 
 ```
-// x        y        z    rx  ry rz meshname (without .mesh file extension)
+// x        y        z    rx  ry rz odefname (without .odef file extension)
 875.549, 67.6607, 1155.26, 0, 0, 0, truckshop
 ```
 
