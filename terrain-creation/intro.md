@@ -79,6 +79,17 @@ Terrain supports "Global Light maps" (Mountains will shadow the terrain if the s
 
 # Static objects
 
+All static objects/grass/etc on a terrain are defined in a `.tobj` file, multiple of these files can be defined in the `.terrn2`.
+
+A normal terrain object is usually formatted like this:
+
+```
+// x        y        z    rx  ry rz meshname (without .mesh file extension)
+875.549, 67.6607, 1155.26, 0, 0, 0, truckshop
+```
+
+RoR uses Paged Geometry for trees/grass, see [this page](http://docs.rigsofrods.org/terrain-creation/old-terrn-subsystem/) for more info.
+
 
 
 
