@@ -105,6 +105,12 @@ LightmapEnabled=0
 SpecularMappingEnabled=1
 NormalMappingEnabled=0
 ```
+## Ground textures
+
+The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
+Other built-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
+
+Terrain supports "Global Light maps" (Mountains will shadow the terrain if the sun is low, etc...), but this feature is not currently used by RoR.
 
 A standard (single layer) `-page-x-x.otc` file:
 
@@ -133,13 +139,6 @@ mapname.raw
 5, mapname-lushGrass2-ds.dds,mapname_lushGrass_NRM-ds.dds,mapname_RGB.png, B, 1.0
 5, mapname_Cracked2_DS.dds,mapname_Cracked_NM.dds,mapname_RGB.png, G, 1.0
 ```
-
-## Ground textures
-
-The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
-Other built-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
-
-Terrain supports "Global Light maps" (Mountains will shadow the terrain if the sun is low, etc...), but this feature is not currently used by RoR.
 
 # Static objects
 
