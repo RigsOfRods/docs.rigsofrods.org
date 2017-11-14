@@ -50,6 +50,7 @@ Terrains are distributed as ZIP archives containing a set of terrain-definition 
 * **.terrn2**: Entry point for the terrain. This is the only required file for a terrain to have.
 * **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display.
 * **-page-x-x.otc**: Configures the terrain's ground textures. Most terrains only have 1 page, so this file is usually named `mapname-page-0-0.otc`.
+* **.tobj**: Placements for static objects/trees/grass/etc.
 * **.os**: Caelum system (sky/weather) config. Visuals only.
 * **.hdx**: Hydrax config (0.4.5 and up). Water display.
 
@@ -72,13 +73,13 @@ You can use [ImageMagick](http://www.imagemagick.org/script/index.php) to conver
 ## Ground textures
 
 The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
-Other build-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
+Other built-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
 
 Terrain supports "Global Light maps" (Mountains will shadow the terrain if the sun is low, etc...), but this feature is not currently used by RoR.
 
 # Static objects
 
-To be written...
+
 
 
 
