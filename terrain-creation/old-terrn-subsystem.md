@@ -4,6 +4,11 @@ title:  "Old Terrain System (pre 0.4)"
 categories: [terrain-creation]
 ---
 
+<div class="toc" markdown="1">
+* TOC
+{:toc}
+</div>
+
 This subsystem is obsolete since RoR version 0.4.0.
 It was based upon Ogre engine's TerrainManager component,
 which was obsoleted, and thus we couldn't rely on it anymore.
