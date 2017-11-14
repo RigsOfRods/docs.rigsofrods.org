@@ -53,6 +53,7 @@ Terrains are distributed as ZIP archives containing a set of terrain-definition 
 * **.tobj**: Placements for static objects/trees/grass/etc.
 * **.os**: Caelum system (sky/weather) config. Visuals only.
 * **.hdx**: Hydrax config (0.4.5 and up). Water display.
+* **.as**: Terrain script file. Mostly used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
 
 Note that, to this date (11/2017), there is no editor which would create these files for you. You need to copy a template and work manually from there.
 
