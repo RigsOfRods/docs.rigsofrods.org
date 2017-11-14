@@ -4,6 +4,11 @@ title:  "Intro to terrain creation"
 categories: [terrain-creation]
 ---
 
+<div class="toc" markdown="1">
+  * TOC
+  {:toc}
+</div>
+
 Creating a terrain for Rigs of Rods is quite technically involved and largely manual process. This page aims to give you an overview of required work, as well as guides and advice for your own projects.
 
 # Anatomy of terrain
@@ -70,6 +75,64 @@ You can use [ImageMagick](http://www.imagemagick.org/script/index.php) to conver
 - To convert from a .raw file to a bitmap image file issue the following command:convert -depth 16 -size 1025x1025 -endian LSB gray:mymap.raw mymap.bmp
 - To convert back to a .raw file for RoR execute: convert mymap.bmp -resize 1025x1025 -endian LSB -flip gray:mymap.raw
 - For more information, see ImageMagick's [command-line processing](http://www.imagemagick.org/script/command-line-processing.php) page. 
+
+A standard `.otc` file:
+
+```
+;Heightmap values
+;size (horizontal/vertical)
+Heightmap.0.0.raw.size=1025
+;bytes per pixel (1 = 8bit, 2=16bit)
+Heightmap.0.0.raw.bpp=2
+;If the terrain heightmap needs to be flipped (eg. Terragen exports RAW upside down)
+Heightmap.0.0.flipX=1
+
+;Terrain size values
+;size (both values must be the same for textures to work properly!)
+WorldSizeX=3000
+WorldSizeZ=3000
+;Terrain max height
+WorldSizeY=300
+
+;To disable caching (creating a `.mapbin` file in `/cache` folder) when changing terrain textures. 
+disableCaching=1
+
+;Filename to define the textures.
+PageFileFormat=mapname-page-0-0.otc
+
+;Advanced texture values, best to leave them as the defaults.
+LightmapEnabled=0
+SpecularMappingEnabled=1
+NormalMappingEnabled=0
+```
+
+A standard (single layer) `-page-x-x.otc` file:
+
+```
+mapname.raw = Heightmap filename 
+1 = Amount of layers
+worldSize = X/Z value in the .otc [Has to be the same]
+mapname.dds = texture name
+```
+```
+mapname.raw
+1
+; worldSize, diffusespecular, normalheight, blendmap, blendmapmode, alpha
+3000     , mapname-diffspec.dds     ,   mapname-normal.dds
+
+```
+
+`-page-x-x.otc` file with multiple layers: (Limited to 6 texture layers)
+
+```
+mapname.raw
+4
+; worldSize, diffusespecular, normalheight, blendmap, blendmapmode, alpha
+3500     , mapname-ds.dds      ,   mapname-ds.dds
+5, mapname-gravel_diffusespecular.dds,mapname-gravel_normalheight.dds,mapname-RGB.png, R, 0.9
+5, mapname-lushGrass2-ds.dds,mapname_lushGrass_NRM-ds.dds,mapname_RGB.png, B, 1.0
+5, mapname_Cracked2_DS.dds,mapname_Cracked_NM.dds,mapname_RGB.png, G, 1.0
+```
 
 ## Ground textures
 
