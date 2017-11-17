@@ -72,8 +72,18 @@ To use the heightmap in a terrain, you must configure it in a `.otc` and `-page-
 
 You can use [ImageMagick](http://www.imagemagick.org/script/index.php) to convert to and from the .raw heightmap files:
 
-- To convert from a .raw file to a bitmap image file issue the following command:convert -depth 16 -size 1025x1025 -endian LSB gray:mymap.raw mymap.bmp
-- To convert back to a .raw file for RoR execute: convert mymap.bmp -resize 1025x1025 -endian LSB -flip gray:mymap.raw
+- To convert from a .raw file to a bitmap image file issue the following command:
+
+```
+convert -depth 16 -size 1025x1025 -endian LSB gray:mymap.raw mymap.bmp
+```
+
+- To convert back to a .raw file for RoR execute: 
+
+```
+convert mymap.bmp -resize 1025x1025 -endian LSB -flip gray:mymap.raw
+```
+
 - For more information, see ImageMagick's [command-line processing](http://www.imagemagick.org/script/command-line-processing.php) page. 
 
 A standard `.otc` file:
