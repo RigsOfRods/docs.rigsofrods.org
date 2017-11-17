@@ -53,11 +53,59 @@ Terrains are distributed as ZIP archives containing a set of terrain-definition 
 
 ## The files
 * **.terrn2**: Entry point for the terrain. This is the only required file for a terrain to have.
-* **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display.
-* **-page-x-x.otc**: Configures the terrain's ground textures. Most terrains only have 1 page, so this file is usually named `mapname-page-0-0.otc`.
-* **.tobj**: Placements for static objects/trees/grass/etc.
-* **.os**: Caelum system (sky/weather) config. Visuals only.
-* **.hdx**: Hydrax config (0.4.5 and up). Water display.
+
+```
+[General]
+#Name of the terrain
+Name = My Terrain
+#File name of the heightmap configuration
+GeometryConfig = my-terrain.otc
+#If your map needs water, set this value to 1
+Water=0
+#Water level
+WaterLine=1.0
+#Terrain/water color, usually left at the default values.
+AmbientColor = 0.93, 0.86, 0.76
+#The position RoRBot spawns at when the terrain is loaded.
+#The numbers do not have to be seperated by commas.
+StartPosition = 1364.25 121.028  1272.22
+#Where the map will be located in the terrain selector menu. Best to leave it as the default. More about ID's here:
+#https://archives.rigsofrods.org/wiki/index.php/Truck_Categories
+CategoryID = 129
+#Version of the terrain.
+Version = 1
+#Unique ID of the terrain. You can generate one at https://guidgenerator.com
+GUID = 9b202f78-ba1c-4d58-9996-61066fa5d9fc
+
+#Extras
+
+#Landuse config, configures surface types (dirt,mud,etc)
+TractionMap = landuse.cfg
+
+#Caelum sky configuration file.
+CaelumConfigFile = my-sky.os
+
+#Sandstorm sky cubemap material.
+SandStormCubeMap = tracks/skyboxcol
+
+#Authors of the terrain.
+[Authors]
+terrain = yourname
+
+#Filename for the object (.tobj) file. 
+[Objects]
+Cliffdrop.tobj=
+
+#Filename for the Angelscript file.
+[Scripts]
+my-script.as=
+```
+
+* **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display. See below for a example file.
+* **-page-x-x.otc**: Configures the terrain's ground textures. Most terrains only have 1 page, so this file is usually named `mapname-page-0-0.otc`. See below for a example file.
+* **.tobj**: Placements for static objects/trees/grass/etc. See the [Static objects](#static-objects-1) section for more info.
+* **.os**: Caelum system (sky/weather) config. Visuals only. [Example file here.](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/caelum/RoRSkies.os)
+* **.hdx**: Hydrax config (0.4.5 and up). Water display. [Example file here.](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/hydrax/HydraxDefault.hdx)
 * **.as**: Terrain script file, usually used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
 
 Note that, to this date (11/2017), there is no editor which would create these files for you. You need to copy a template and work manually from there.
@@ -145,7 +193,7 @@ mapname.raw
 4
 ; worldSize, diffusespecular, normalheight, blendmap, blendmapmode, alpha
 3500     , mapname-ds.dds      ,   mapname-ds.dds
-5, mapname-gravel_diffusespecular.dds,mapname-gravel_normalheight.dds,mapname-RGB.png, R, 0.9
+5, mapname-gravel_diffusespecular.dds,mapname-gravel_normalheight.dds,mapname_RGB.png, R, 0.9
 5, mapname-lushGrass2-ds.dds,mapname_lushGrass_NRM-ds.dds,mapname_RGB.png, B, 1.0
 5, mapname_Cracked2_DS.dds,mapname_Cracked_NM.dds,mapname_RGB.png, G, 1.0
 ```
