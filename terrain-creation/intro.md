@@ -94,7 +94,7 @@ terrain = yourname
 
 #Filename for the object (.tobj) file. 
 [Objects]
-Cliffdrop.tobj=
+my-terrain.tobj=
 
 #Filename for the Angelscript file.
 [Scripts]
