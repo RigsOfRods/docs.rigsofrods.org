@@ -329,6 +329,9 @@ Unsorted
 * https://archives.rigsofrods.org/wiki/index.php/Video_Tutorial-_Tvorba_Va%C3%85%C2%A1eho_pravn%C3%83%C2%ADho_Kamionu%28anglicky%29 - empty
 * https://archives.rigsofrods.org/wiki/index.php/What_is_the_serialization_about - empty
 * https://archives.rigsofrods.org/wiki/index.php/Zombie_Siege_mode - dead
+* https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain
+* https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain_in_0.36_or_higher - done, replaced with http://docs.rigsofrods.org/terrain-creation/editing-terrain-objects/
+
 
 
 
