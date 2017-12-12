@@ -331,7 +331,7 @@ Unsorted
 * https://archives.rigsofrods.org/wiki/index.php/Zombie_Siege_mode - dead
 * https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain
 * https://archives.rigsofrods.org/wiki/index.php/Adding_an_object_to_a_terrain_in_0.36_or_higher - done, replaced with http://docs.rigsofrods.org/terrain-creation/editing-terrain-objects/
-
+* https://archives.rigsofrods.org/wiki/index.php/Shadows - DONE
 
 
 

@@ -155,7 +155,6 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.org/wiki/index.php/Separate_%28flexbody%29_deforming/detaching_parts
 * https://archives.rigsofrods.org/wiki/index.php/Server_Commands
 * https://archives.rigsofrods.org/wiki/index.php/Serverside_scripting
-* https://archives.rigsofrods.org/wiki/index.php/Shadows
 * https://archives.rigsofrods.org/wiki/index.php/Spawning_a_truck_in_Lua
 * https://archives.rigsofrods.org/wiki/index.php/Standard_wheels_to_mesh_wheels
 * https://archives.rigsofrods.org/wiki/index.php/Starting_RoR_under_Linux
