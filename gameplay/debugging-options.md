@@ -1,7 +1,7 @@
 ---
 title: "Debugging options"
 layout: page
-categories: [tools-tutorials]
+categories: [gameplay]
 ---
 
 <div class="toc" markdown="1">
