@@ -691,5 +691,3 @@ AIRPLANE_THROTTLE_UP            JoystickButton       0 1 ;B
 6. Submit a zip file containing <your map filename>.map as a new post [here](https://forum.rigsofrods.org/thread-1068.html).
 
 Thank you!
-
-[Category:File Format](Category:File_Format "wikilink")
