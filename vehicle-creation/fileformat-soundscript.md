@@ -202,7 +202,7 @@ tracks/default_parkbrakes
 
 # Default
 
-These are the default soundscrips for RoR.&nbsp; It is divided into sections according to engine type.
+These are the default soundscripts for RoR.&nbsp; It is divided into sections according to engine type.
 
 ## Engine (Diesel) 
 
