@@ -12,7 +12,7 @@ We collect information from you when you send us an error report from Rigs of Ro
 * Various RoR generated files:
     * **Logs**: RoR.log, mygui.log, configlog.txt, mods.cache
     * **Configurations**: RoR.cfg, ogre.cfg, input.map, ground_models.cfg
-* A screenshot of the RoR window when it crashed (only the main window, not the whole desktop)
+* A screenshot of the RoR window when it crashed (only the main window, not the whole desktop).
 
 You may be asked to enter your e-mail address and problem description. This information is also included into the crash descriptor XML.
 
