@@ -1546,7 +1546,6 @@ Standard hooks toggle with **L**, autolock and triggerd hooks detach with **ALT+
 Hooks with hookgroups < -2 can only be locked automatically or by a trigger.
 
 ## Slide Nodes
-{{Version|0.36.3|later}}
 
 These are nodes which can slide freely along a 'rail', which is a sequence of connected beams. It's a simple constraining mechanism that introduces new possibilities into RoR and simplifies many existing mechanical structures.
 

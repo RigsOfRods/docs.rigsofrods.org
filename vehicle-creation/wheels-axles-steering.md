@@ -14,14 +14,14 @@ title: "Wheels, axles, steering"
 # Wheels
 
 
- wheels are simply structures that the game creates automatically out of standard features to make creating vehicles easier. They are simply {{#icon: IconComponent.gif | Nodes }} <a href="/rorwikibackup/index.php/Truck_Description_File#Nodes" title="Truck Description File">Nodes</a> connected by {{#icon: IconComponent.gif | Beams }} <a href="/rorwikibackup/index.php/Truck_Description_File#Beams" title="Truck Description File">Beams</a> with a contactable {{#icon: IconComponent.gif | Submesh }} <a href="/rorwikibackup/index.php/Truck_Description_File#Submesh" title="Truck Description File">Submesh</a>. They are unique in that they will rotate when given input to accelerate.
+ wheels are simply structures that the game creates automatically out of standard features to make creating vehicles easier. They are simply [nodes](/vehicle-creation/fileformat-truck#nodes) connected by [beams](/vehicle-creation/fileformat-truck#beams) with a contactable [submesh](/vehicle-creation/fileformat-truck#submesh). They are unique in that they will rotate when given input to accelerate.
  
- Wheels <a href="/rorwikibackup/index.php/Truck_Description_File#Wheels" title="Truck Description File">Wheels</a> are the most basic wheels in the game. The width of a wheel is determined by the distance between the two reference nodes and is composed of pie slices known as rays. The more rays a wheel has, the smoother it will be but will also contain more nodes and beams and consequently lower performance. It is considered good form to keep your rays between 10 and 20. 
+[Wheels](/vehicle-creation/fileformat-truck#wheels) are the most basic wheels in the game. The width of a wheel is determined by the distance between the two reference nodes and is composed of pie slices known as rays. The more rays a wheel has, the smoother it will be but will also contain more nodes and beams and consequently lower performance. It is considered good form to keep your rays between 10 and 20. 
  <p>
     <a href="/images/wheels-pic1.png" class="image">
     <img alt="Wheelspic1.png" src="/images/wheels-pic1.png" width="500" height="500" /></a>
  </p>
- <p>The optional snode option allows for game-managed <a href="/rorwikibackup/index.php/Axle_Rigidity" title="Axle Rigidity">Axle Rigidity</a>. This will keep the two wheel reference nodes in line under normal conditions. If snode is NOT used, you must enter 9999. </p>
+The optional snode option allows for game-managed [Axle Rigidity](#axle-rigidity). This will keep the two wheel reference nodes in line under normal conditions. If snode is NOT used, you must enter 9999.
  <div class="thumb tnone">
     <div class="thumbinner" style="width:502px;">
        <a href="/images/wheels-pic2.png" class="image">
@@ -59,7 +59,7 @@ title: "Wheels, axles, steering"
 # Wheels2
  
  <p>This feature improves the default wheels section by splitting wheels into rims and tires. This allows the player to set tire pressure with the keyboard.  </p>
- <p>{{#icon: IconComponent.gif | Wheels2 }} <a href="/rorwikibackup/index.php/Truck_Description_File#Wheels2" title="Truck Description File">Wheels2</a> (also known as the "complex wheel model") allows you to separate the wheel [rim] from the tire (tyre). This requires extra syntax, namely specifying the characteristics of the wheel versus the tire. Traditionally the wheel will be very rigid with the tire being much less so. The rigidity of wheels2 tires can be altered by holding [ and ] ingame, resulting in this: </p>
+[Wheels2](/vehicle-creation/fileformat-truck#wheels2) (also known as the "complex wheel model") allows you to separate the wheel [rim] from the tire (tyre). This requires extra syntax, namely specifying the characteristics of the wheel versus the tire. Traditionally the wheel will be very rigid with the tire being much less so. The rigidity of wheels2 tires can be altered by holding [ and ] ingame, resulting in this:
  <table style="margin: 1em auto;" class="wikitable">
     <tr>
        <td> Inflated tire</td>
@@ -80,7 +80,7 @@ title: "Wheels, axles, steering"
 # Meshwheels 
 
 
- <p>{{#icon: IconComponent.gif | Meshwheels }} <a href="/rorwikibackup/index.php/Truck_Description_File#Meshwheels" title="Truck Description File">Meshwheels</a> takes advantage of a mesh's static nature. It also creates a smoother tire. The wheel rim is a standard Ogre3D mesh. </p>
+[Meshwheels](/vehicle-creation/fileformat-truck#meshwheels) takes advantage of a mesh's static nature. It also creates a smoother tire. The wheel rim is a standard Ogre3D mesh.
  <p>Meshwheels are very similar to normal wheels, but require specification of the wheel rim radius. Likewise, the direction the wheel is facing must be specified in order for the mesh to be rotated properly.<sup>1</sup> </p>
  <table style="margin: 1em auto;" class="wikitable">
     <tr>
@@ -101,21 +101,26 @@ title: "Wheels, axles, steering"
 
 ## Notes 
 
- <ol>
-    <li>The mesh should be centered (Where should the wheel be placed in the L/R direction? Should it face left or right?) and of the right size for the wheel you want to do: its outer diameter should be as the "rim_radius" parameter, and its width should be the same as the distance between node1 and node2. </li>
-    <li>All wheels are able to do skid steering. See the <a href="/rorwikibackup/index.php/RoRBook/Steering#Braked_Steering" title="RoRBook/Steering">steering</a> chapter. </li>
-    <li>It is considered good form to keep your rays between 10 and 20.</li>
- </ol>
+
+The mesh should be centered (Where should the wheel be placed in the L/R direction? Should it face left or right?) and of the right size for the wheel you want to do: its outer diameter should be as the `rim_radius` parameter, and its width should be the same as the distance between `node1` and `node2`. </li>
+	
+All wheels are able to do skid steering. See the [steering](https://archives.rigsofrods.org/wiki/index.php/RoRBook/Steering) chapter.
+
+It is considered good form to keep your rays between 10 and 20.
 
 # Axles 
 
  <p>This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels. </p>
- <p>Sample axle section &lt;geshi lang="ror"&gt;
-    axles
-    w1(1 2), w2(3 4), d(ol)&#160;; axle 1
-    w1(5 6), w2(7 8), d(l)&#160;; axle 2
-    &lt;/geshi&gt;
- </p>
+
+Sample axle section:
+
+```
+axles
+w1(1 2), w2(3 4), d(ol) ; axle 1
+w1(5 6), w2(7 8), d(l) ; axle 2
+
+```
+
  <p>The axle section introduces open differentials, and Spooled (aka locked) differentials. By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. Because the axle sections looks up already defined wheels, it must be defined <b>AFTER</b> the wheels have been defined</p>
  <p>The axle section if different from other sections in that it is broken into properties, properties are not order dependent, currently the available properties are: </p>
  <ul>
@@ -146,8 +151,9 @@ title: "Wheels, axles, steering"
 # Axle Rigidity
    
 
- <p><i>See Also: <a href="/rorwikibackup/index.php/Suspension_Concepts" title="Suspension Concepts" class="mw-redirect">Suspension Concepts</a></i></p>
- <p>The <strong class="selflink">Axle Rigidity</strong> keeps the wheel aligned with the axle of the vehicle. It is used to avoid having to make a complex structure in order to hold the wheel in place. In fact, it keeps the two wheel nodes and the defined node in a straight line. This is intended to use with solid non-steerable axles. However, you probably can devise a way to use this as independent suspension.</p>
+See Also: [Suspension](/vehicle-creation/suspension)
+
+ The <strong class="selflink">Axle Rigidity</strong> keeps the wheel aligned with the axle of the vehicle. It is used to avoid having to make a complex structure in order to hold the wheel in place. In fact, it keeps the two wheel nodes and the defined node in a straight line. This is intended to use with solid non-steerable axles. However, you probably can devise a way to use this as independent suspension.
  <p>Normally a wheel needs some sort of pyramidal hub to support it, such as the image to the right.  Axle rigidity allows you to avoid making this by doing some internal magic to keep the nodes supported.  Wheels need at least 2 nodes to define their width, and the node used for axle rigidity is the innermost node of the wheel.</p>
  <p>
     <a href="/images/wheels-axle-rigidity.jpg" class="image">
@@ -179,18 +185,12 @@ title: "Wheels, axles, steering"
     In the top diagram, the arm node is behind the wheel, so as the wheel spins counterclockwise, it applies upward force to the node(red) in the blue circle, therefore imparting <i><b>less</b></i> traction as the chassis is pushed <i><b>upward</b></i>.In the bottom diagram, the arm node is in front of the wheel, so as the wheel spins counterclockwise, it applies downward force to the circled node, therefore imparting <i><b>more</b></i> traction as the chassis is pushed <i><b>downward</b></i>.
  </p>
 
- <div class="thumbinner" style="width:182px;">
-    <a href="/images/wheels-reference-arm-node.jpg" class="image">
-    <img alt="" src="/images/wheels-reference-arm-node.jpg" width="180" height="268" class="thumbimage" srcset=" 1.5x,  2x" /></a>  
-    <div class="thumbcaption">
-       Arm Node
-    </div>
- </div>
+![arm-node](/images/wheels-reference-arm-node.jpg)
 
 
 # Steering
 
- Steering is made possible with the use of {{#icon: IconComponent.gif | Hydros }} <a href="/rorwikibackup/index.php/Truck_Description_File#Hydros" title="Truck Description File">Hydros</a>. A proven steering set up which involves a diamond wheel support and a small chassis which the suspension is attached to. When this concept is realized, steering is not too difficult. 
+ Steering is made possible with the use of [hydros](/vehicle-creation/fileformat-truck#hydros). A proven steering set up which involves a diamond wheel support and a small chassis which the suspension is attached to. When this concept is realized, steering is not too difficult. 
 
 ## Wheel Mount
 
@@ -199,15 +199,15 @@ title: "Wheels, axles, steering"
         <a href="/images/wheels-steering-octahedron.png" class="image">
         <img alt="Oktraeder.png" src="/images/wheels-steering-octahedron.png" width="427" height="483" /></a> 
 </p>
- <p>The "wheel" nodes labeled here will become the position for the {{#icon: IconComponent.gif | Wheels }} <a href="/rorwikibackup/index.php/Truck_Description_File#Wheels" title="Truck Description File">Wheels</a>. The distance between the two nodes will determine the wheel width. It is wise to make the diamond symmetrical for stability (that is, the height equals the width). You will need one of these for every wheel that is steerable. </p>
- <p>If you find your nodes are contacting the ground and obstructing movement, you can make specific nodes non-contactable. See the {{#icon: IconComponent.gif | Nodes }} <a href="/rorwikibackup/index.php/Truck_Description_File#Nodes" title="Truck Description File">Nodes</a> syntax. </p>
+
+The "wheel" nodes labeled here will become the position for the [wheels](/vehicle-creation/fileformat-truck#wheels). The distance between the two nodes will determine the wheel width. It is wise to make the diamond symmetrical for stability (that is, the height equals the width). You will need one of these for every wheel that is steerable.
+
+If you find your nodes are contacting the ground and obstructing movement, you can make specific nodes non-contactable. See the [nodes](/vehicle-creation/fileformat-truck#nodes) syntax.
  
-<a href="/images/wheels-steering-wheelhub.jpg" class="image">
-<img alt="Wheelhub-wheel.jpg" src="/images/wheels-steering-wheelhub.jpg" width="350" height="263" srcset=" 1.5x,  2x" /></a>
+![wheelhub-wheel](/images/wheels-steering-wheelhub.jpg)
  
 ## Axle
 
- <p><b>Bonehead has created a video to help visualize this implementation: <a rel="nofollow" class="external text" href="http://s307.photobucket.com/albums/nn297/Bonehead3/Rigs%20of%20Rods/?action=view&amp;current=axle.flv">View the video here</a></b></p>
  <p>The axle is actually simply built out of four beams: </p>
  <p>
         <a href="/images/wheels-steering-axle.png" class="image">
@@ -219,7 +219,8 @@ title: "Wheels, axles, steering"
 
 ## Hydros 
 
- <p>After the steering chassis is completed, the {{#icon: IconComponent.gif | Hydros }} <a href="/rorwikibackup/index.php/Truck_Description_File#Hydros" title="Truck Description File">Hydros</a> can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted). </p>
+After the steering chassis is completed, the hydros](/vehicle-creation/fileformat-truck#hydros) can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted).
+
  <p>In order to define a hydro, some specific information is needed. </p>
  <ol>
     <li>Node 1 - One end of the hydro </li>
@@ -252,15 +253,16 @@ Example Syntax:
 
 # Finished Steering Axle
 
- <p>The finished axle can look like this: </p>
- <p>
-        <a href="/images/wheels-steering-complete.png" class="image">
-        <img alt="Fertig.png" src="wheels-steering-complete" width="687" height="474" /></a> </p>
- <p>Don't forget to add suspension (as covered in the previous chapter)&#160;! </p>
+The finished axle can look like this:
+
+![finished-axle](/images/wheels-steering-complete.png)
+
+Don't forget to add suspension (as covered in the previous chapter)
+
 
 # Braked Steering  
  
- It is possible to have a steering system that only turns one side of wheels. In the {{#icon: IconComponent.gif | Wheels }} <a href="/rorwikibackup/index.php/Truck_Description_File#Wheels" title="Truck Description File">Wheels</a> section, set the <tt>Wheel Braking</tt> value to 2 or 3 for left or right wheel respectively. This works well for emulating tracked vehicles such as bulldozers. These usually do not work well at high speed.
+ It is possible to have a steering system that only turns one side of wheels. In the [wheels](/vehicle-creation/fileformat-truck#wheels) section, set the `Wheel Braking` value to 2 or 3 for left or right wheel respectively. This works well for emulating tracked vehicles such as bulldozers. These usually do not work well at high speed.
 
 
 
