@@ -166,7 +166,7 @@ If you don't want to compile the server yourself, you can download the correct p
 ### Building yourself
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
-- [VS 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409) C++ tools must be installed:
+- [Visual Studio 2015 Community Edition](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409) C++ tools must be installed:
 
 ![vs](/images/VS-server-cplusplus.png)
 
