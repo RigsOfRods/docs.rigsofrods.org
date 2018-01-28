@@ -24,7 +24,7 @@ It is organized into sections to make finding answers easier.
 
 ## **Q:** I run Linux/MacOS, where can I download RoR?
 
-**A:** On Linux, You can either download a [prebuilt package](https://archives.rigsofrods.net/old-forum-mybb/thread-68.html) or [compile from source using these shell scripts on apt-based systems.](https://archives.rigsofrods.net/old-forum-mybb/thread-21.html]) (Recommended)
+**A:** On Linux, You can either download a [prebuilt package](https://archives.rigsofrods.net/old-forum-mybb/thread-68.html) or [compile from source using these shell scripts on apt-based systems.](https://archives.rigsofrods.net/old-forum-mybb/thread-21.html) (Recommended)
 
 Due to the lack of MacOS developers, the last MacOS supported version is [0.37](http://archives.rigsofrods.net/repo/files/repofiles-4th-batch/RoR-Mac-0.37-beta.zip). 
 
