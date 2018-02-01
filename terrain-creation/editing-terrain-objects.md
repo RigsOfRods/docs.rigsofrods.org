@@ -51,7 +51,7 @@ Now take the numbers from the `RoR.log` line and add them to the end of the file
 814.936707, 86.249222, 948.549561, 0.000000, 97.500000, -2.000000, road
 813.632263, 85.900230, 938.641174, 0.000000, 97.500000, -2.000000, road
 //new object
-// x        y        z    rx  ry rz meshname (without .mesh file extension)
+// x        y        z    rx  ry rz odefname (without .odef file extension)
 875.549, 67.6607, 1155.26, 0, 0, 0, truckshop
 ```
 I recommend leaving the rotation (last 3) values to 0 for now.
