@@ -55,7 +55,7 @@ categories: [vehicle-creation]
  <h1> <span class="mw-headline" id="Engine"> Engine </span></h1>
  <p>This section specifies torque, gearing and RPM ranges of the engine being used. </p>
  <h2> <span class="mw-headline" id="Settings"> Settings  </span></h2>
- <p>See <a href="/rorwikibackup/index.php/Truck_Description_File#Engine" title="Truck Description File">Truck_Description_File#Engine</a> for reference manual.</p>
+ <p>See <a href="http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#engine" title="Truck Description File">Truck_Description_File#Engine</a> for reference manual.</p>
  <h4> <span class="mw-headline" id="Torque"> Torque  </span></h4>
  <p>Tuning torque in RoR is a tricky topic, since the current air resistance simulation is overstrong. Setting torque to provide realistic acceleration at low speeds results in severely stunted top speeds. Setting it to provide higher top speeds results in very strong acceleration. </p>
  <p>Engine Inertia also has a <b>VERY</b> important role in engine behavior since this value also determines how fast a vehicle can accelerate </p>
@@ -69,7 +69,7 @@ categories: [vehicle-creation]
  <h1> <span class="mw-headline" id="Engoption"> Engoption </span></h1>
  <p>This optional section allows the user to specify whether the engine is for a car or heavy truck and the engine inertia of the vehicle. </p>
  <h2> <span class="mw-headline" id="Settings_2"> Settings  </span></h2>
- <p>See <a href="/rorwikibackup/index.php/Truck_Description_File#Engoption" title="Truck Description File">Truck_Description_File#Engoption</a> for reference manual.</p>
+ <p>See <a href="http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#engoption" title="Truck Description File">Truck_Description_File#Engoption</a> for reference manual.</p>
  <h4> Inertia <span class="mw-headline" id="Engine_Inertia"> Engine Inertia  </span></h4>
  <p>The default game value is 10.0, which is correct for a large diesel engine, Use higher values to make engines accelerate more slowly and stall more difficultly, which may be useful for vehicles towing large masses. This value should be lowered for smaller, light engines (Is the multiplier different for car and truck engines?) </p>
  <p>With a high value of inertia the engines RPM is not likely to change when resistance is met. As an example, when changing gears a high inertia will cause the wheels to slip, while a lower value will cause the engine RPM to change and prevent the wheels from slipping. However, with a low inertia and a high brake value, the engine will stall more easily since the brakes can change the RPMs more easily. </p>
