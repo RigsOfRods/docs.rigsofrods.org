@@ -973,7 +973,7 @@ The commands section describes the "real" hydros, that is, those you command wit
     -   **i**: makes the command beam invisible.
     -   **r**: makes the command behave like a rope or a winch (no compression strength).
     -   **n**: Placeholder, does nothing (useful as filler when you need to specify description)
--   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing "t" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
+-   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing "CTRL+T" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 
 <!-- -->
 
@@ -1091,7 +1091,7 @@ The parameters are:
     - **f** Stops the command moving faster when engine revs increase.
     - **p** Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
     - **o** is like **p**, but it will stop in the center position.
--   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing "t" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
+-   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing "CTRL+T" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 -   **Inertia: Start delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command start. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Stop delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command stop. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Start function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for start. See diagram below.
