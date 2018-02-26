@@ -2852,10 +2852,6 @@ Object A (active) - Object B (hooked) - Object C (hooked)
 
 The distance between the last camerarail node of one and the first camerarail node of another object needs to be under 5 meters.
 
-## Envmap
-
-This section is currently not used. It has no effect putting anything there. However, it may be used in future versions.
-
 # Sounds
 
 Since version 0.36, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
