@@ -432,6 +432,8 @@ General info about the vehicle.
 
 ## Help
 
+**NOTE: This section is not used as of version 0.39.5+**
+
 The help section gives the name of the material used for the help panel on the in-game dashboard. This material must be defined elsewhere in a material file. This is optional. (But it looks cool, so use it!)
 
 NOTE: This setting can be overriden by [section "guisettings"](#guisettings)
