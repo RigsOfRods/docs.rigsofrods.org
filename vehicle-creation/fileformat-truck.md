@@ -136,7 +136,7 @@ This section begins the structural definition of the vehicle. Each line defines 
     -   **y**: The exhaust reference point. This node should be placed opposite of the direction that you want the exhaust to come from.
     -   **c**: This node will not detect contact with ground. (Can be used for optimization on inner chassis parts, for instance.)
     -   **h**: This node is a hook point. (Like the hook on a crane, or a winch, or whatever.) RoR will create a [beam](#beams) between this Node and Node\#0. If this is Node\#0, it will link it to Node\#1 (even if it isn't defined yet).
-    -   **e**: This node is a terrain editing point (Like in the terrain editor truck.)
+    -   **e**: This node is a terrain editing point (Like in the terrain editor truck. Not used as of version 0.4.0+)
     -   **b**: This node is assigned an extra buoyancy force (Experimental!)
     -   **p** <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span>: Disables particle effects for this node (Like dust.)
     -   **L** <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span>: Enables node settings logging into the ror.log for this node
