@@ -15,7 +15,7 @@ As of Rigs of Rods 0.4.x, terrain objects are stored in `.tobj` files, they cont
 
 # Adding a new object 
 
-For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://archives.rigsofrods.org/repo/0.4-Terrains/Bajatrack.zip) using Rigs of Rods version 0.4.7.0. 
+For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0. 
 
 Open Rigs of Rods and select the map you want to add an object to. 
 
