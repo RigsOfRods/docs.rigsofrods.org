@@ -219,4 +219,28 @@ When you load the terrain in Rigs of Rods, You should have a working 0.4-ported 
 
 ![FinishedMap](/images/terrain-conversionfin.png)
 
-##### Download the finished terrain [here.](https://forum.rigsofrods.org/downloads.php?do=file&id=248)
+### Download the finished terrain [here.](https://forum.rigsofrods.org/downloads.php?do=file&id=248)
+
+# Removing the alpha mask 
+
+If you want to edit an existing terrain texture or don't have the original image anymore, you can follow these steps to remove the alpha mask:
+
+Install [paint.net](https://www.getpaint.net/) if you don't already have it.
+
+Since paint.net does not have this functionality by default, you also need to install [dpy's Plugin Pack](https://forums.getpaint.net/topic/16643-dpys-plugin-pack-2014-05-04/).
+
+To install the plugins, open the zip file and drag the `.dll` files inside the `dpyplugins8.1` folder into paint.net's Effects folder, usually located in `C:\Program Files\paint.net\Effects`:
+
+![1](/images/remove-alpha-mask1.png)
+
+Click `Continue` when it asks for administrator permission.
+
+Now open your `.dds` file in paint.net and navigate to `Effects -> Color -> Alpha_to_255`.
+
+![2](/images/remove-alpha-mask2.png)
+
+![3](/images/remove-alpha-mask3.png)
+
+That's it! You can now edit the image and re-apply the alpha mask using the above steps once you're done.
+
+
