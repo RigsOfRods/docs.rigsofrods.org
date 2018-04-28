@@ -38,6 +38,7 @@ It has been confirmed that the latest version does work in [WINE](https://www.wi
 
 **A:**On Windows, the RoR user directory is located in `%userprofile%\Documents\Rigs of Rods 0.x` and on Linux it is in `~/.rigsofrods.` (On Linux, you may have to enable "show hidden folders".)
 
+Most `*.zip` files can be simply placed in the packs folder. Or you can place maps in the `terrains` folder and vehicles/loads/etc in the `vehicles` folder if you want to be more organized.
 
 # Website/Forum
 
@@ -72,10 +73,6 @@ A blog post explaining everything that happened with the old rigsofrods.org webs
 **A:**You can find mods on the [Repository](hhttps://forum.rigsofrods.org/downloads.php?tabid=38), [Content](https://forum.rigsofrods.org/content/) section of the forum, the [old Repository archive](https://archives.rigsofrods.net/repo), and the [vB forum archive](https://archives.rigsofrods.net/old-forum/). 
 
 0.4+ terrains may be found on the [Repository](https://forum.rigsofrods.org/downloads.php?tabid=38).
-
-
-
-Most `*.zip` files can be simply placed in the packs folder. Or you can place maps in the `terrains` folder and vehicles/loads/etc in the `vehicles` folder if you want to be more organized.
 
 # Multiplayer
 
