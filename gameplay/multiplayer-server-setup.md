@@ -272,7 +272,7 @@ To stop the server, press `CTRL+C` or close the command prompt.
 ## Linux
 (requires a `terminal` and `sudo` access)
 
-#### Required tools:
+#### Required tools
 (Debian/Ubuntu)
 
 - `sudo apt-get install build-essential`
