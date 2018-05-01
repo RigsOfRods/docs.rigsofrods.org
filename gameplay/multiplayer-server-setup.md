@@ -154,13 +154,13 @@ We're now ready to start setting up the Rigs of Rods server.
 
 ## Windows
 
-### Pre-built packages:
+### Pre-built packages
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
-[For 0.4.7.0+](https://github.com/Michael10055/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
+[For 0.4.7.0](https://github.com/Michael10055/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
 
-[For 0.38.67-0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
+[For 0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
 
 
 ### Building yourself
