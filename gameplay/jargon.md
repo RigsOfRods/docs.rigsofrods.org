@@ -4,9 +4,14 @@ title:  "Jargon"
 categories: [gameplay]
 ---
 
+<div class="toc" markdown="1">
+  * TOC
+  {:toc}
+</div>
+
 This is a glossary of un-intuitive terms used by members of RoR community.
 
-<!-- ----------------------------------------------------------------------- -->
+
 # Player terms
 
 ## RoR.log
@@ -50,7 +55,6 @@ A form of punishment on the forums. This is usually for misbehavior or breaking 
 
 The 3D rendering engine used in Rigs of Rods.
 
-<!-- ----------------------------------------------------------------------- -->
 # Content creator terms
 
 ## Stolen!
@@ -95,6 +99,10 @@ Freeware program for making n/b structures.
 
 Flares are lights in Rigs of Rods. The name refers to their visualization - a 2d flare image, the classic simple depicition of a light source in 3D games. 
 
+## Props
+
+Meshes that can be added to vehicles that do not have collision.
+
 ## Flexbody
 
 Flexbodies allow you to make mesh-based vehicles which actually deform with the node-and-beam chassis. This makes for incredible visual detail while still keeping the fantastic deformation physics present in Rigs of Rods. 
@@ -102,10 +110,6 @@ Flexbodies allow you to make mesh-based vehicles which actually deform with the 
 ## Fusedrag
 
 A vehicle feature which adjusts aerodynamic properties of the vehicle body/hull. Very important in RoR, greatly affects speed and acceleration.
-
-## Props
-
-Meshes that can be added to vehicles that do not have collision.
 
 ## Rotators
 
