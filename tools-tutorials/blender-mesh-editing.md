@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Editing existing meshes using Blender"
+title:  "Blender mesh editing"
 categories: [tools-tutorials]
 ---
 
@@ -17,7 +17,7 @@ categories: [tools-tutorials]
 
 # Introduction 
 
-Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing existing meshes using Blender, from installing the plug-ins to exporting.
+Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the plug-ins to exporting.
 
 # Required software
 
@@ -214,8 +214,8 @@ And finally, just drag the `.mesh.xml` into OgreXMLConverter to get a `.mesh`:
 
 ![33](/images/blender-edit-converting-new-xml.png)
 
-If you want to "preview" your `.mesh` instead of going in-game, you can use OgreMeshTool to view it:
-(You can make a `.material` file if you want it to be textured in OgreMeshTool)
+If you want to "preview" your `.mesh` instead of going in-game, you can use [Ogre Meshy](https://sourceforge.net/projects/ogremeshy/) to view it:
+(You can make a `.material` file if you want it to be textured in Ogre Meshy)
 
 ![35](/images/blender-edit-preview-ogremeshtool.png)
 
