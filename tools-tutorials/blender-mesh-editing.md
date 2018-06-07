@@ -214,8 +214,8 @@ And finally, just drag the `.mesh.xml` into OgreXMLConverter to get a `.mesh`:
 
 ![33](/images/blender-edit-converting-new-xml.png)
 
-If you want to "preview" your `.mesh` instead of going in-game, you can use OgreMeshTool to view it:
-(You can make a `.material` file if you want it to be textured in OgreMeshTool)
+If you want to "preview" your `.mesh` instead of going in-game, you can use [Ogre Meshy](https://sourceforge.net/projects/ogremeshy/) to view it:
+(You can make a `.material` file if you want it to be textured in Ogre Meshy)
 
 ![35](/images/blender-edit-preview-ogremeshtool.png)
 
