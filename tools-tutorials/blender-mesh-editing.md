@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Editing existing meshes using Blender"
+title:  "Blender mesh editing"
 categories: [tools-tutorials]
 ---
 
@@ -17,7 +17,7 @@ categories: [tools-tutorials]
 
 # Introduction 
 
-Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing existing meshes using Blender, from installing the plug-ins to exporting.
+Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the plug-ins to exporting.
 
 # Required software
 
