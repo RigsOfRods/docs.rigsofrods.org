@@ -21,7 +21,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 
 # Required software
 
-- [Blender](https://www.blender.org/download/) (2.78c at the time of writing)
+- [Blender](https://www.blender.org/download/) (2.79b is the latest at the time of writing)
 - [Blender2ogre plug-in](/download/blender2ogre-0.6.0.zip)
 - [Torchlight-To-Blender plug-in](/download/ImportExportTL_blender25x_v0.6.2.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
