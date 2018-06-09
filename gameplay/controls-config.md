@@ -296,64 +296,44 @@ Arguments:
 TRUCK_MANUAL_CLUTCH    JoystickSliderY    0    Y    0    REVERSE+DEADZONE = -30
 ```
 
-Mouse
------
+# Mouse
 
-Here is a simple tutorial/example, how to implement mouse control for Rigs of Rods.
 
-You will need 2 applications:
+### Required applications
 
--   vJoy joystick emulator:
+[vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
 
-<http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download>
+[FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
 
--   FreePIE input emulator:
+### Setting up the input map and FreePIE script
 
-<http://andersmalmgren.github.io/FreePIE/index.html>
+After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
 
-After installing these you have to edit your input map and define there joystick axises/buttons for the things you want to control with mouse.
-Input map is located in: <b>Documents/Rigs of Rods 0.xx/config</b> and open a file called <b>Input.map</b>.
- I use mouse to control steering and throttle but I suppose you could use it to control anything you want. Add these lines in the input.map to get steering and throttle control: 
- 
-    TRUCK_ACCELERATE    JoystickAxis    0    1    LOWER
-    TRUCK_BRAKE         JoystickAxis    0    1    UPPER
-    TRUCK_STEER_LEFT    JoystickAxis    0    0    LOWER + DEADZONE = 0.00
-    TRUCK_STEER_RIGHT   JoystickAxis    0    0    UPPER + DEADZONE = 0.00
+There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
 
-Then you will need a python script for the FreePIE:
+Extract both files into `Documents\Rigs of Rods 0.4\config`.
 
-```
-from System import Int16
+### Using FreePIE
 
-if (starting):
-    mousex = 0
-    mousey = 0
-    xlimit = 15600
-    ylimit = 15600
+Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
 
-mousex = mousex + (mouse.deltaX \* 40) mousey = mousey + (mouse.deltaY \* 80)
+![1](/images/FreePIE-1.png)
 
-if (mouse.middleButton):
-    mousex = 0
-    mousey = 0
+![2](/images/FreePIE-2.png)
 
-if (mousex >  xlimit): mousex =  xlimit
-if (mousex < -xlimit): mousex = -xlimit
-if (mousey >  ylimit): mousey =  ylimit
-if (mousey < -ylimit): mousey = -ylimit
+![3](/images/FreePIE-3.png)
 
-vJoy[0].x = mousex
-vJoy[0].y = mousey
+Then press `Script -> Run script`:
 
-diagnostics.watch(vJoy[0].x)
-diagnostics.watch(vJoy[0].y)
-```
+![4](/images/FreePIE-4.png)
 
-Open FreePIE, paste the script above in the code area and save the script.
+The script should now be running. If you get an error, install vJoy.
 
-For the mouse input to function, you have to run the script in FreePIE. Click Script -&gt; Run script. Leave it running, open RoR and start playing.
+Leave FreePIE running, launch RoR and you should now have mouse control!
 
-You can modify both the script and the input map to make them better suit for your use. For example the numbers 40 and 80 in the script are the sensitivity of the controls.
+You can modify both the script and the input map to make them better suit for your use. 
+
+For example the numbers `40` and `80` in the script are the sensitivity of the controls.
 
 Mouse middle button in the script above, will reset the axises in game, in this case the steering and throttle.
 
