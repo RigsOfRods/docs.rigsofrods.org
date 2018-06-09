@@ -233,7 +233,153 @@ In this example, COMMANDS_01 would be triggered if you press CTRL+F1, as F1 is p
 
 ### List of usable keys
 
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, ABNT\_C1, ABNT\_C2, ADD, APOSTROPHE, APPS, AT, AX, B, BACK, BACKSLASH, C, CALCULATOR, CAPITAL, COLON, COMMA, CONVERT, D, DECIMAL, DELETE, DIVIDE, DOWN, E, END, EQUALS, ESCAPE, F, F1, F10, F11, F12, F13, F14, F15, F2, F3, F4, F5, F6, F7, F8, F9, G, GRAVE, H, HOME, I, INSERT, J, K, KANA, KANJI, L, LBRACKET, LCONTROL, LEFT, LMENU, LSHIFT, LWIN, M, MAIL, MEDIASELECT, MEDIASTOP, MINUS, MULTIPLY, MUTE, MYCOMPUTER, N, NEXTTRACK, NOCONVERT, NUMLOCK, NUMPAD0, NUMPAD1, NUMPAD2, NUMPAD3, NUMPAD4, NUMPAD5, NUMPAD6, NUMPAD7, NUMPAD8, NUMPAD9, NUMPADCOMMA, NUMPADENTER, NUMPADEQUALS, O, OEM\_102, P, PAUSE, PERIOD, PGDOWN, PGUP, PLAYPAUSE, POWER, PREVTRACK, Q, R, RBRACKET, RCONTROL, RETURN, RIGHT, RMENU, RSHIFT, RWIN, S, SCROLL, SEMICOLON, SLASH, SLEEP, SPACE, STOP, SUBTRACT, SYSRQ, T, TAB, U, UNDERLINE, UNLABELED, UP, V, VOLUMEDOWN, VOLUMEUP, W, WAKE, WEBBACK, WEBFAVORITES, WEBFORWARD, WEBHOME, WEBREFRESH, WEBSEARCH, WEBSTOP, X, Y, YEN, Z.
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+A
+ABNT_C1
+ABNT_C2
+ADD
+APOSTROPHE
+APPS
+AT
+AX
+B
+BACK
+BACKSLASH
+C
+CALCULATOR
+CAPITAL
+COLON
+COMMA
+CONVERT
+D
+DECIMAL
+DELETE
+DIVIDE
+DOWN
+E
+END
+EQUALS
+ESCAPE
+F
+F1
+F10
+F11
+F12
+F13
+F14
+F15
+F2
+F3
+F4
+F5
+F6
+F7
+F8
+F9
+G
+GRAVE
+H
+HOME
+I
+INSERT
+J
+K
+KANA
+KANJI
+L
+LBRACKET
+LCONTROL
+LEFT
+LMENU
+LSHIFT
+LWIN
+M
+MAIL
+MEDIASELECT
+MEDIASTOP
+MINUS
+MULTIPLY
+MUTE
+MYCOMPUTER
+N
+NEXTTRACK
+NOCONVERT
+NUMLOCK
+NUMPAD0
+NUMPAD1
+NUMPAD2
+NUMPAD3
+NUMPAD4
+NUMPAD5
+NUMPAD6
+NUMPAD7
+NUMPAD8
+NUMPAD9
+NUMPADCOMMA
+NUMPADENTER
+NUMPADEQUALS
+O
+OEM_102
+P
+PAUSE
+PERIOD
+PGDOWN
+PGUP
+PLAYPAUSE
+POWER
+PREVTRACK
+Q
+R
+RBRACKET
+RCONTROL
+RETURN
+RIGHT
+RMENU
+RSHIFT
+RWIN
+S
+SCROLL
+SEMICOLON
+SLASH
+SLEEP
+SPACE
+STOP
+SUBTRACT
+SYSRQ
+T
+TAB
+U
+UNDERLINE
+UNLABELED
+UP
+V
+VOLUMEDOWN
+VOLUMEUP
+W
+WAKE
+WEBBACK
+WEBFAVORITES
+WEBFORWARD
+WEBHOME
+WEBREFRESH
+WEBSEARCH
+WEBSTOP
+X
+Y
+YEN
+Z
+```
+
 
 ## Joystick, Wheel or gamepad
 
@@ -296,398 +442,294 @@ Arguments:
 TRUCK_MANUAL_CLUTCH    JoystickSliderY    0    Y    0    REVERSE+DEADZONE = -30
 ```
 
-Mouse
------
+# Mouse
 
-Here is a simple tutorial/example, how to implement mouse control for Rigs of Rods.
 
-You will need 2 applications:
+### Required applications
 
--   vJoy joystick emulator:
+[vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
 
-<http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download>
+[FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
 
--   FreePIE input emulator:
+### Setting up the input map and FreePIE script
 
-<http://andersmalmgren.github.io/FreePIE/index.html>
+After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
 
-After installing these you have to edit your input map and define there joystick axises/buttons for the things you want to control with mouse.
-Input map is located in: <b>Documents/Rigs of Rods 0.xx/config</b> and open a file called <b>Input.map</b>.
- I use mouse to control steering and throttle but I suppose you could use it to control anything you want. Add these lines in the input.map to get steering and throttle control: 
- 
-    TRUCK_ACCELERATE    JoystickAxis    0    1    LOWER
-    TRUCK_BRAKE         JoystickAxis    0    1    UPPER
-    TRUCK_STEER_LEFT    JoystickAxis    0    0    LOWER + DEADZONE = 0.00
-    TRUCK_STEER_RIGHT   JoystickAxis    0    0    UPPER + DEADZONE = 0.00
+There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
 
-Then you will need a python script for the FreePIE:
+Extract both files into `Documents\Rigs of Rods 0.4\config`.
 
-```
-from System import Int16
+### Using FreePIE
 
-if (starting):
-    mousex = 0
-    mousey = 0
-    xlimit = 15600
-    ylimit = 15600
+Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
 
-mousex = mousex + (mouse.deltaX \* 40) mousey = mousey + (mouse.deltaY \* 80)
+![1](/images/FreePIE-1.png)
 
-if (mouse.middleButton):
-    mousex = 0
-    mousey = 0
+![2](/images/FreePIE-2.png)
 
-if (mousex >  xlimit): mousex =  xlimit
-if (mousex < -xlimit): mousex = -xlimit
-if (mousey >  ylimit): mousey =  ylimit
-if (mousey < -ylimit): mousey = -ylimit
+![3](/images/FreePIE-3.png)
 
-vJoy[0].x = mousex
-vJoy[0].y = mousey
+Then press `Script -> Run script`:
 
-diagnostics.watch(vJoy[0].x)
-diagnostics.watch(vJoy[0].y)
-```
+![4](/images/FreePIE-4.png)
 
-Open FreePIE, paste the script above in the code area and save the script.
+The script should now be running. If you get an error, install vJoy.
 
-For the mouse input to function, you have to run the script in FreePIE. Click Script -&gt; Run script. Leave it running, open RoR and start playing.
+Leave FreePIE running, launch RoR and you should now have mouse control!
 
-You can modify both the script and the input map to make them better suit for your use. For example the numbers 40 and 80 in the script are the sensitivity of the controls.
+You can modify both the script and the input map to make them better suit for your use. 
+
+For example the numbers `40` and `80` in the script are the sensitivity of the controls.
 
 Mouse middle button in the script above, will reset the axises in game, in this case the steering and throttle.
 
-%%%%%%%%%%%%%%%%%% old keypress events \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
 
-**Keypress event identification in RoR 0.37.70+**
- These can be used as event option for prop animations.( add\_animation ), not all make sense though for animated props.
- AIRPLANE\_STEER\_RIGHT
-AIRPLANE\_BRAKE
-AIRPLANE\_ELEVATOR\_DOWN
-AIRPLANE\_ELEVATOR\_UP
-AIRPLANE\_FLAPS\_FULL
-AIRPLANE\_FLAPS\_LESS
-AIRPLANE\_FLAPS\_MORE
-AIRPLANE\_FLAPS\_NONE
-AIRPLANE\_PARKING\_BRAKE
-AIRPLANE\_REVERSE
-AIRPLANE\_RUDDER\_LEFT
-AIRPLANE\_RUDDER\_RIGHT
-AIRPLANE\_STEER\_LEFT
-AIRPLANE\_STEER\_RIGHT
-AIRPLANE\_THROTTLE\_AXIS
-AIRPLANE\_THROTTLE\_DOWN
-AIRPLANE\_THROTTLE\_FULL
-AIRPLANE\_THROTTLE\_NO
-AIRPLANE\_THROTTLE\_UP
-AIRPLANE\_TOGGLE\_ENGINES
-BOAT\_CENTER\_RUDDER
-BOAT\_REVERSE
-BOAT\_STEER\_LEFT
-BOAT\_STEER\_LEFT\_AXIS
-BOAT\_STEER\_RIGHT
-BOAT\_STEER\_RIGHT\_AXIS
-BOAT\_THROTTLE\_AXIS
-BOAT\_THROTTLE\_DOWN
-BOAT\_THROTTLE\_UP
-CAELUM\_DECREASE\_TIME
-CAELUM\_DECREASE\_TIME\_FAST
-CAELUM\_INCREASE\_TIME
-CAELUM\_INCREASE\_TIME\_FAST
-CAMERA\_CHANGE
-CAMERA\_LOOKBACK
-CAMERA\_RESET
-CAMERA\_ROTATE\_DOWN
-CAMERA\_ROTATE\_LEFT
-CAMERA\_ROTATE\_RIGHT
-CAMERA\_ROTATE\_UP
-CAMERA\_ZOOM\_IN
-CAMERA\_ZOOM\_IN\_FAST
-CAMERA\_ZOOM\_OUT
-CAMERA\_ZOOM\_OUT\_FAST
-CHARACTER\_BACKWARDS
-CHARACTER\_FORWARD
-CHARACTER\_JUMP
-CHARACTER\_LEFT
-CHARACTER\_RIGHT
-CHARACTER\_RUN
-CHARACTER\_SIDESTEP\_LEFT
-CHARACTER\_SIDESTEP\_RIGHT
-COMMANDS\_01
-COMMANDS\_02
-COMMANDS\_03
-COMMANDS\_04
-COMMANDS\_05
-COMMANDS\_06
-COMMANDS\_07
-COMMANDS\_08
-COMMANDS\_09
-COMMANDS\_10
-COMMANDS\_11
-COMMANDS\_12
-COMMANDS\_13
-COMMANDS\_14
-COMMANDS\_15
-COMMANDS\_16
-COMMANDS\_17
-COMMANDS\_18
-COMMANDS\_19
-COMMANDS\_20
-COMMANDS\_21
-COMMANDS\_22
-COMMANDS\_23
-COMMANDS\_24
-COMMANDS\_25
-COMMANDS\_26
-COMMANDS\_27
-COMMANDS\_28
-COMMANDS\_29
-COMMANDS\_30
-COMMANDS\_31
-COMMANDS\_32
-COMMANDS\_33
-COMMANDS\_34
-COMMANDS\_35
-COMMANDS\_36
-COMMANDS\_37
-COMMANDS\_38
-COMMANDS\_39
-COMMANDS\_40
-COMMANDS\_41
-COMMANDS\_42
-COMMANDS\_43
-COMMANDS\_44
-COMMANDS\_45
-COMMANDS\_46
-COMMANDS\_47
-COMMANDS\_48
-COMMON\_CONSOLEDISPLAY
-COMMON\_CONSOLEMODE
-COMMON\_ENTER\_CHATMODE
-COMMON\_SEND\_CHAT
-COMMON\_ENTER\_OR\_EXIT\_TRUCK
-COMMON\_HIDE\_GUI
-COMMON\_LOCK
-COMMON\_ROPELOCK
-COMMON\_MAP\_ALPHA
-COMMON\_OUTPUT\_POSITION
-COMMON\_PRESSURE\_LESS
-COMMON\_PRESSURE\_MORE
-COMMON\_QUIT\_GAME
-COMMON\_SHOW\_MENU
-COMMON\_REPAIR\_TRUCK
-COMMON\_RESCUE\_TRUCK
-COMMON\_RESET\_TRUCK
-COMMON\_SCREENSHOT
-COMMON\_SCREENSHOT\_BIG
-COMMON\_SAVE\_TERRAIN
-COMMON\_SECURE\_LOAD
-COMMON\_SHOW\_SKELETON
-COMMON\_START\_TRUCK\_EDITOR
-COMMON\_TOGGLE\_CUSTOM\_PARTICLES
-COMMON\_TOGGLE\_MAT\_DEBUG
-COMMON\_TOGGLE\_RENDER\_MODE
-COMMON\_TOGGLE\_REPLAY\_MODE
-COMMON\_TOGGLE\_STATS
-COMMON\_TOGGLE\_TRUCK\_BEACONS
-COMMON\_TOGGLE\_TRUCK\_LIGHTS
-COMMON\_TRUCK\_INFO
-COMMON\_VIEW\_MAP
-COMMON\_FOV\_LESS
-COMMON\_FOV\_MORE
-GRASS\_LESS
-GRASS\_MORE
-GRASS\_MOST
-GRASS\_NONE
-GRASS\_SAVE
-MAP\_IN
-MAP\_INTERACTIVE\_TOGGLE
-MAP\_OUT
-MENU\_DOWN
-MENU\_LEFT
-MENU\_RIGHT
-MENU\_SELECT
-MENU\_UP
-TERRAINEDITOR\_BUILT
-TERRAINEDITOR\_PITCHBACKWARD
-TERRAINEDITOR\_PITCHFOREWARD
-TERRAINEDITOR\_ROTATELEFT
-TERRAINEDITOR\_ROTATERIGHT
-TERRAINEDITOR\_SELECTROAD
-TERRAINEDITOR\_TOGGLEOBJECT
-TERRAINEDITOR\_TOGGLEROADTYPE
-TRUCK\_ACCELERATE
-TRUCK\_AUTOSHIFT\_DOWN
-TRUCK\_AUTOSHIFT\_UP
-TRUCK\_BLINK\_LEFT
-TRUCK\_BLINK\_RIGHT
-TRUCK\_BLINK\_WARN
-TRUCK\_BRAKE
-TRUCK\_HORN
-TRUCK\_LIGHTTOGGLE1
-TRUCK\_LIGHTTOGGLE2
-TRUCK\_LIGHTTOGGLE3
-TRUCK\_LIGHTTOGGLE4
-TRUCK\_LIGHTTOGGLE5
-TRUCK\_LIGHTTOGGLE6
-TRUCK\_LIGHTTOGGLE7
-TRUCK\_LIGHTTOGGLE8
-TRUCK\_LIGHTTOGGLE9
-TRUCK\_LIGHTTOGGLE10
-TRUCK\_MANUAL\_CLUTCH
-TRUCK\_PARKING\_BRAKE
-TRUCK\_SHIFT\_DOWN
-TRUCK\_SHIFT\_NEUTRAL
-TRUCK\_SHIFT\_UP
-TRUCK\_SHIFT\_GEAR\_REVERSE
-TRUCK\_SHIFT\_GEAR1
-TRUCK\_SHIFT\_GEAR2
-TRUCK\_SHIFT\_GEAR3
-TRUCK\_SHIFT\_GEAR4
-TRUCK\_SHIFT\_GEAR5
-TRUCK\_SHIFT\_GEAR6
-TRUCK\_SHIFT\_GEAR7
-TRUCK\_SHIFT\_GEAR8
-TRUCK\_SHIFT\_GEAR9
-TRUCK\_SHIFT\_GEAR10
-TRUCK\_SHIFT\_GEAR11
-TRUCK\_SHIFT\_GEAR12
-TRUCK\_SHIFT\_GEAR13
-TRUCK\_SHIFT\_GEAR14
-TRUCK\_SHIFT\_GEAR15
-TRUCK\_SHIFT\_GEAR16
-TRUCK\_SHIFT\_GEAR17
-TRUCK\_SHIFT\_GEAR18
-TRUCK\_SHIFT\_LOWRANGE
-TRUCK\_SHIFT\_MIDRANGE
-TRUCK\_SHIFT\_HIGHRANGE
-TRUCK\_STARTER
-TRUCK\_STEER\_LEFT
-TRUCK\_STEER\_RIGHT
-TRUCK\_SWITCH\_SHIFT\_MODES
-TRUCK\_SWITCH\_SHIFT\_MODE
-TRUCK\_TOGGLE\_AXLE\_LOC
-TRUCK\_TOGGLE\_CONTAC
-COMMON\_SHOWTRUCKTOOL
-COMMON\_RELOAD\_ROADS
-COMMON\_FULLSCREEN\_TOGGLE
-CAMERA\_FREE\_MODE\_FIX
-CAMERA\_FREE\_MODE
-TRUCK\_LEFT\_MIRROR\_LEFT
-TRUCK\_LEFT\_MIRROR\_RIGHT
-TRUCK\_RIGHT\_MIRROR\_LEFT
-TRUCK\_RIGHT\_MIRROR\_RIGHT
-COMMON\_REPLAY\_FORWARD
-COMMON\_REPLAY\_BACKWARD
-COMMON\_REPLAY\_FAST\_FORWARD
-COMMON\_REPLAY\_FAST\_BACKWARD
-AIRPLANE\_AIRBRAKES\_NONE
-AIRPLANE\_AIRBRAKES\_FULL
-AIRPLANE\_AIRBRAKES\_LESS
-AIRPLANE\_AIRBRAKES\_MORE
-AIRPLANE\_THROTTLE
-COMMON\_TRUCK\_REMOVE
-COMMON\_NETCHATDISPLAY
-COMMON\_NETCHATMODE
-CHARACTER\_ROT\_UP
-CHARACTER\_ROT\_DOWN
-CHARACTER\_UP
-CHARACTER\_DOWN
-TRUCK\_SAVE\_POS1
-TRUCK\_SAVE\_POS2
-TRUCK\_SAVE\_POS3
-TRUCK\_SAVE\_POS4
-TRUCK\_SAVE\_POS5
-TRUCK\_SAVE\_POS6
-TRUCK\_SAVE\_POS7
-TRUCK\_SAVE\_POS8
-TRUCK\_SAVE\_POS9
-TRUCK\_SAVE\_POS10
-TRUCK\_LOAD\_POS1
-TRUCK\_LOAD\_POS2
-TRUCK\_LOAD\_POS3
-TRUCK\_LOAD\_POS4
-TRUCK\_LOAD\_POS5
-TRUCK\_LOAD\_POS6
-TRUCK\_LOAD\_POS7
-TRUCK\_LOAD\_POS8
-TRUCK\_LOAD\_POS9
-TRUCK\_LOAD\_POS10
-DOF\_TOGGLE
-DOF\_DEBUG
-DOF\_DEBUG\_TOGGLE\_FOCUS\_MODE
-DOF\_DEBUG\_ZOOM\_IN
-DOF\_DEBUG\_ZOOM\_OUT
-DOF\_DEBUG\_APERTURE\_MORE
-DOF\_DEBUG\_APERTURE\_LESS
-DOF\_DEBUG\_FOCUS\_IN
-DOF\_DEBUG\_FOCUS\_OUT
+# Keypress Events
 
-# Configuring controls with RoRConfig (Outdated as of version 0.37.126 - See [this post](https://forum.rigsofrods.org/thread-1068.html).
+**Keypress event identification in RoR 0.4.7.0+**
 
-1. Plug in your device, open the Configurator and go to the **"Controls"** tab.
+These are all the valid keypress events, they can be used in a input map or for [prop animations](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#add_animation). not all make sense though for animated props.
 
-![](/images/rorconfig-controls-tutorial-1.png)
-
-2. Click the **"Add"** button.
-
-![](/images/rorconfig-controls-tutorial-2.png)
-
-3. In the box, choose an event from the top combo box, a description will appear below it, then choose an input type from the bottom combo box. (Keyboard, Joystick axis, Joystick button)
-
-4. Click on **"Add"** and then press/move the button/axis you want to control the event.
-
-![](/images/rorconfig-controls-tutorial-3.png)
-
-5. Do step 4 for all the controls you want to map.
-
-5. (Optional) Click the **"Test"** button, then press/move a mapped control to test the control, The top bar is the raw input from the button/axis, the lower bar is what the game "sees" after deadzone and linearity options have been applied.
-
-6. Go test your control in the game! It may be a good idea to click on **"Export keymap"** to export your current keymap for later use.
-
-# How to contribute input maps
-
-1. Attach your wheel/joystick/gamepad that you want to map.
-
-2. Download [rorconfig-inputtool-devbuild.zip](https://forum.rigsofrods.org/attachment.php?aid=6249). Unpack into a new folder and run `RoRConfig.exe` - Click `Controls` -> `Device info` tab. This tab contains the relevant 'VendorMapFilename'.
-
-3. Create a mapping file named like the value of 'VendorMapFilename' you just found out in the Rigs of Rods/config/ folder.
-
-4. Improve and test the mapping by using RoR and a text editor. (see also [Input.map](https://xror.avrintech.net/rorwikibackup/index.php/Input.map))
-
-5. When you are finished with your configuration, copy and paste relevant infos from the `Device info` tab into your map file. Also make a comment (";" marks the rest of the line as a comment) after every command which button is used so others can easily see what button they have to use. See template:
-
-``` text
-;This is the input map for the Rigs of Rods game for the following device:
-;
-;"Xbox 360 Wireless Controller for Windows" by Microsoft
-;
-; created by Foobar in September 2012. 
-;
-;Joystick 1
-;   Vendor: Controller (Xbox 360 Wireless Receiver for Windows)
-;   VendorMapFilename: Controller__Xbox_360_Wireless_Receiver_for_Windows_.map
-;   ID: 0
-;   Type: [3] OISJoyStick
-;   Axes: 5
-;   Sliders: 0
-;   POV/HATs: 1
-;   Buttons: 10
-;   Vector3: 0
-;   Vector3Sensitivity: 2.28
-;
-;Control Overview:
-;* Axis 1 (the up/down): accelerate/brake
-;* Button 1 : (big red thing in the middle) : Horn
-;...
-
-; AIRPLANE
-AIRPLANE_PARKING_BRAKE          JoystickButton       0 6 ;back
-AIRPLANE_THROTTLE_DOWN          JoystickButton       0 2 ;X
-AIRPLANE_THROTTLE_UP            JoystickButton       0 1 ;B
-...
 ```
-
-6. Submit a zip file containing <your map filename>.map as a new post [here](https://forum.rigsofrods.org/thread-1068.html).
-
-Thank you!
+AIRPLANE_AIRBRAKES_FULL     
+AIRPLANE_AIRBRAKES_LESS     
+AIRPLANE_AIRBRAKES_MORE     
+AIRPLANE_AIRBRAKES_NONE     
+AIRPLANE_BRAKE              
+AIRPLANE_ELEVATOR_DOWN      
+AIRPLANE_ELEVATOR_UP        
+AIRPLANE_FLAPS_FULL         
+AIRPLANE_FLAPS_LESS         
+AIRPLANE_FLAPS_MORE         
+AIRPLANE_FLAPS_NONE         
+AIRPLANE_PARKING_BRAKE      
+AIRPLANE_REVERSE            
+AIRPLANE_RUDDER_LEFT        
+AIRPLANE_RUDDER_RIGHT       
+AIRPLANE_STEER_LEFT         
+AIRPLANE_STEER_RIGHT        
+AIRPLANE_THROTTLE_AXIS      
+AIRPLANE_THROTTLE_DOWN      
+AIRPLANE_THROTTLE_FULL      
+AIRPLANE_THROTTLE_NO        
+AIRPLANE_THROTTLE_UP        
+AIRPLANE_TOGGLE_ENGINES     
+BOAT_CENTER_RUDDER          
+BOAT_REVERSE                
+BOAT_STEER_LEFT             
+BOAT_STEER_RIGHT            
+BOAT_THROTTLE_AXIS          
+BOAT_THROTTLE_UP            
+BOAT_THROTTLE_DOWN          
+CAMERA_CHANGE               
+CAMERA_FREE_MODE            
+CAMERA_FREE_MODE_FIX        
+CAMERA_LOOKBACK             
+CAMERA_RESET                
+CAMERA_UP                   
+CAMERA_DOWN                 
+CAMERA_ROTATE_DOWN          
+CAMERA_ROTATE_LEFT          
+CAMERA_ROTATE_RIGHT         
+CAMERA_ROTATE_UP            
+CAMERA_ZOOM_IN              
+CAMERA_ZOOM_IN_FAST         
+CAMERA_ZOOM_OUT             
+CAMERA_ZOOM_OUT_FAST        
+SKY_DECREASE_TIME           
+SKY_DECREASE_TIME_FAST      
+SKY_INCREASE_TIME           
+SKY_INCREASE_TIME_FAST      
+CHARACTER_BACKWARDS         
+CHARACTER_FORWARD           
+CHARACTER_JUMP              
+CHARACTER_LEFT              
+CHARACTER_RIGHT             
+CHARACTER_ROT_DOWN          
+CHARACTER_ROT_UP            
+CHARACTER_RUN               
+CHARACTER_RUN               
+CHARACTER_SIDESTEP_LEFT     
+CHARACTER_SIDESTEP_RIGHT    
+COMMANDS_01                 
+COMMANDS_02                 
+COMMANDS_03                 
+COMMANDS_04                 
+COMMANDS_05                 
+COMMANDS_06                 
+COMMANDS_07                 
+COMMANDS_08                 
+COMMANDS_09                 
+COMMANDS_10                 
+COMMANDS_11                 
+COMMANDS_12                 
+COMMANDS_13                 
+COMMANDS_14                 
+COMMANDS_15                 
+COMMANDS_16                 
+COMMANDS_17                 
+COMMANDS_18                 
+COMMANDS_19                 
+COMMANDS_20                 
+COMMANDS_21                 
+COMMANDS_22                 
+COMMANDS_23                 
+COMMANDS_24                 
+COMMANDS_25                 
+COMMANDS_26                 
+COMMANDS_27                 
+COMMANDS_28                 
+COMMANDS_29                 
+COMMANDS_30                 
+COMMANDS_31                 
+COMMANDS_32                 
+COMMANDS_33                 
+COMMANDS_34                 
+COMMANDS_35                 
+COMMANDS_36                 
+COMMANDS_37                 
+COMMANDS_38                 
+COMMANDS_39                 
+COMMANDS_40                 
+COMMANDS_41                 
+COMMANDS_42                 
+COMMANDS_43                 
+COMMANDS_44                 
+COMMANDS_45                 
+COMMANDS_46                 
+COMMANDS_47                 
+COMMANDS_48                 
+COMMANDS_49                 
+COMMANDS_50                 
+COMMANDS_51                 
+COMMANDS_52                 
+COMMANDS_53                 
+COMMANDS_54                 
+COMMANDS_55                 
+COMMANDS_56                 
+COMMANDS_57                 
+COMMANDS_58                 
+COMMANDS_59                 
+COMMANDS_60                 
+COMMANDS_61                 
+COMMANDS_62                 
+COMMANDS_63                 
+COMMANDS_64                 
+COMMANDS_65                 
+COMMANDS_66                 
+COMMANDS_67                 
+COMMANDS_68                 
+COMMANDS_69                 
+COMMANDS_70                 
+COMMANDS_71                 
+COMMANDS_72                 
+COMMANDS_73                 
+COMMANDS_74                 
+COMMANDS_75                 
+COMMANDS_76                 
+COMMANDS_77                 
+COMMANDS_78                 
+COMMANDS_79                 
+COMMANDS_80                 
+COMMANDS_81                 
+COMMANDS_82                 
+COMMANDS_83                 
+COMMANDS_84                 
+COMMON_ACCELERATE_SIMULATION
+COMMON_DECELERATE_SIMULATION
+COMMON_RESET_SIMULATION_PACE
+COMMON_CONSOLE_TOGGLE       
+COMMON_ENTER_OR_EXIT_TRUCK  
+COMMON_ENTER_NEXT_TRUCK     
+COMMON_ENTER_PREVIOUS_TRUCK 
+COMMON_REMOVE_CURRENT_TRUCK 
+COMMON_RESPAWN_LAST_TRUCK   
+COMMON_FULLSCREEN_TOGGLE    
+COMMON_HIDE_GUI             
+COMMON_LOCK                 
+COMMON_AUTOLOCK             
+COMMON_ROPELOCK             
+COMMON_OUTPUT_POSITION      
+COMMON_GET_NEW_VEHICLE      
+COMMON_PRESSURE_LESS        
+COMMON_PRESSURE_MORE        
+COMMON_QUIT_GAME            
+COMMON_REPLAY_BACKWARD      
+COMMON_REPLAY_FAST_BACKWARD 
+COMMON_REPLAY_FAST_FORWARD  
+COMMON_REPLAY_FORWARD       
+COMMON_RESCUE_TRUCK         
+COMMON_RESET_TRUCK          
+COMMON_SCREENSHOT           
+COMMON_SECURE_LOAD          
+COMMON_SHOW_SKELETON        
+COMMON_TOGGLE_TERRAIN_EDITOR
+COMMON_TOGGLE_CUSTOM_PARTICL
+COMMON_TOGGLE_MAT_DEBUG     
+COMMON_TOGGLE_RENDER_MODE   
+COMMON_TOGGLE_REPLAY_MODE   
+COMMON_TOGGLE_STATS         
+COMMON_TOGGLE_TRUCK_BEACONS 
+COMMON_TOGGLE_TRUCK_LIGHTS  
+COMMON_TRUCK_INFO           
+COMMON_TRUCK_DESCRIPTION    
+COMMON_FOV_LESS             
+COMMON_FOV_MORE             
+GRASS_LESS                  
+GRASS_MORE                  
+GRASS_MOST                  
+GRASS_NONE                  
+GRASS_SAVE                  
+SURVEY_MAP_ZOOM_IN          
+SURVEY_MAP_ZOOM_OUT         
+SURVEY_MAP_TOGGLE_VIEW      
+SURVEY_MAP_TOGGLE_ALPHA     
+SURVEY_MAP_TOGGLE_ICONS     
+MENU_DOWN                   
+MENU_LEFT                   
+MENU_RIGHT                  
+MENU_SELECT                 
+MENU_UP                     
+TRUCK_ACCELERATE            
+TRUCK_ACCELERATE_MODIFIER_25
+TRUCK_ACCELERATE_MODIFIER_50
+TRUCK_ANTILOCK_BRAKE        
+TRUCK_AUTOSHIFT_DOWN        
+TRUCK_AUTOSHIFT_UP          
+TRUCK_BLINK_LEFT            
+TRUCK_BLINK_RIGHT           
+TRUCK_BLINK_WARN            
+TRUCK_BRAKE                 
+TRUCK_BRAKE_MODIFIER_25     
+TRUCK_BRAKE_MODIFIER_50     
+TRUCK_CRUISE_CONTROL        
+TRUCK_CRUISE_CONTROL_READJUS
+TRUCK_CRUISE_CONTROL_ACCL   
+TRUCK_CRUISE_CONTROL_DECL   
+TRUCK_HORN                  
+TRUCK_LIGHTTOGGLE1          
+TRUCK_LIGHTTOGGLE2          
+TRUCK_LIGHTTOGGLE3          
+TRUCK_LIGHTTOGGLE4          
+TRUCK_LIGHTTOGGLE5          
+TRUCK_LIGHTTOGGLE6          
+TRUCK_LIGHTTOGGLE7          
+TRUCK_LIGHTTOGGLE8          
+TRUCK_LIGHTTOGGLE9          
+TRUCK_LIGHTTOGGLE10         
+TRUCK_MANUAL_CLUTCH         
+TRUCK_PARKING_BRAKE         
+TRUCK_SHIFT_DOWN            
+TRUCK_SHIFT_NEUTRAL         
+TRUCK_SHIFT_UP              
+TRUCK_STARTER               
+TRUCK_STEER_LEFT            
+TRUCK_STEER_RIGHT           
+TRUCK_SWITCH_SHIFT_MODES    
+TRUCK_TOGGLE_AXLE_LOCK      
+TRUCK_TOGGLE_CONTACT        
+TRUCK_TOGGLE_FORWARDCOMMANDS
+TRUCK_TOGGLE_IMPORTCOMMANDS 
+TRUCK_TOGGLE_VIDEOCAMERA    
+TRUCK_TRACTION_CONTROL      
+```
