@@ -2373,7 +2373,7 @@ Specials: Limits do not apply for **mode:sequential**. In this case the options 
   
 *event:*
 
--   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](https://archives.rigsofrods.org/wiki/index.php/Keypress_Events).)
+-   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](/gameplay/controls-config/#keypress-events).)
 
 **How to use:**
 
