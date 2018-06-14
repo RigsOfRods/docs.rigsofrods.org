@@ -53,6 +53,7 @@ Input is configured using configuration file 'input.map'. In-game configuration 
     <!--caelum-->
     <tr><td style="color: #ced925">Increase time</td><td style="color: #ced925">+</td></tr>
     <tr><td style="color: #ced925">Decrease time</td><td style="color: #ced925">-</td></tr>
+    <tr><td style="color: #ced925">Increase time change rate</td><td style="color: #ced925">Shift</td></tr>
 </table>
 
 ## Land vehicle keys
