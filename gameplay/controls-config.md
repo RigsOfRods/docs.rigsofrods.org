@@ -13,7 +13,7 @@ categories: [gameplay]
 
 Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
-Input is configured using configuration file 'input.map'. In-game configuration of controls is not implemented yet.
+Input is configured by editing configuration file [input.map](#config-file-inputmap) or by using the [Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool). In-game configuration of controls is not implemented yet.
 
 # Keyboard layout
 
@@ -44,7 +44,7 @@ Input is configured using configuration file 'input.map'. In-game configuration 
 
 <table style="display: inline-block; vertical-align: top;">
     <tr>
-        <th><span style="color: #6692b3">Camera</span> / <span style="color: #ced925">Caelum</span></th>
+        <th><span style="color: #6692b3">Camera</span> / <span style="color: #ced925">Caelum Sky</span></th>
         <th>Key</th>
     </tr>
     <!--camera-->
@@ -53,6 +53,7 @@ Input is configured using configuration file 'input.map'. In-game configuration 
     <!--caelum-->
     <tr><td style="color: #ced925">Increase time</td><td style="color: #ced925">+</td></tr>
     <tr><td style="color: #ced925">Decrease time</td><td style="color: #ced925">-</td></tr>
+    <tr><td style="color: #127220">Increase time change rate</td><td style="color: #127220">Shift (Use in combination with Inc./Dec. time keys)</td></tr>
 </table>
 
 ## Land vehicle keys
@@ -191,7 +192,7 @@ because some planes could have more than 4 engines and you couldn't control them
 
 # Config file 'input.map'
 
-For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/bin/resources/skeleton/config/input.map) file on GitHub.
+For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/input.map) file on GitHub.
 
 
 This file defines all key alias for RoR. It has the following format:
@@ -203,6 +204,8 @@ For example:
     BOAT_CENTER_RUDDER     Keyboard    DOWN
 
 This binds the <b>BOAT\_CENTER\_RUDDER</b> event to the <b>Down</b> arrow on your keyboard.
+
+A list of all valid events can be found in the [Keypress Events](#keypress-events) section.
 
 ## Keyboard
 
@@ -441,48 +444,6 @@ Arguments:
 ```
 TRUCK_MANUAL_CLUTCH    JoystickSliderY    0    Y    0    REVERSE+DEADZONE = -30
 ```
-
-# Mouse
-
-
-### Required applications
-
-[vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
-
-[FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
-
-### Setting up the input map and FreePIE script
-
-After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
-
-There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
-
-Extract both files into `Documents\Rigs of Rods 0.4\config`.
-
-### Using FreePIE
-
-Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
-
-![1](/images/FreePIE-1.png)
-
-![2](/images/FreePIE-2.png)
-
-![3](/images/FreePIE-3.png)
-
-Then press `Script -> Run script`:
-
-![4](/images/FreePIE-4.png)
-
-The script should now be running. If you get an error, install vJoy.
-
-Leave FreePIE running, launch RoR and you should now have mouse control!
-
-You can modify both the script and the input map to make them better suit for your use. 
-
-For example the numbers `40` and `80` in the script are the sensitivity of the controls.
-
-Mouse middle button in the script above, will reset the axises in game, in this case the steering and throttle.
-
 
 # Keypress Events
 
@@ -733,3 +694,131 @@ TRUCK_TOGGLE_IMPORTCOMMANDS
 TRUCK_TOGGLE_VIDEOCAMERA    
 TRUCK_TRACTION_CONTROL      
 ```
+
+# Mouse
+
+
+### Required applications
+
+[vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
+
+[FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
+
+### Setting up the input map and FreePIE script
+
+After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
+
+There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
+
+Extract both files into `Documents\Rigs of Rods 0.4\config`.
+
+### Using FreePIE
+
+Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
+
+![1](/images/FreePIE-1.png)
+
+![2](/images/FreePIE-2.png)
+
+![3](/images/FreePIE-3.png)
+
+Then press `Script -> Run script`:
+
+![4](/images/FreePIE-4.png)
+
+The script should now be running. If you get an error, install vJoy.
+
+Leave FreePIE running, launch RoR and you should now have mouse control!
+
+You can modify both the script and the input map to make them better suit for your use. 
+
+For example the numbers `40` and `80` in the script are the sensitivity of the controls.
+
+Mouse middle button in the script above, will reset the axises in game, in this case the steering and throttle.
+
+# Configuring controls with the Input Mapping Tool
+
+The easiest way to configure your device for use in Rigs of Rods is to use the [Input Mapping Tool](https://forum.rigsofrods.org/downloads.php?do=file&id=156).
+
+**NOTE: If you have vJoy installed, you will have to disable it before running the tool!**
+
+![vJoyDisable](/images/vJoyDisable.png)
+
+After downloading, extract the zip into a new folder. Then double-click `Run.bat` to launch the tool. 
+
+![5](/images/InputMappingTool-1.png)
+
+To begin adding inputs, click `Add`.
+
+![6](/images/InputMappingTool-2.png)
+
+Select the event you want to assign an input to. In this exanmple, I will use `TRUCK_ACCELERATE`
+
+Then select the correct input type:
+
+<table style="color: #111111; display: inline-block; vertical-align: top;">
+<tr><td>Event type</td><td>Description</td></tr>
+<tr><td>Keyboard</td><td>All keys on the keyboard.</td></tr>
+<tr><td>JoystickAxis</td><td>Used for steering wheels/sticks/etc.</td></tr>
+<tr><td>JoystickSlider</td><td>Any type of slider, mainly seen on flight sticks.</td></tr>
+<tr><td>JoystickButton</td><td>Buttons! (e.g. `A` button on an Xbox controller)</td></tr>
+<tr><td>JoystickPov</td><td>Used for D-Pad controls.</td></tr>
+</table>
+
+Click `Add` once ready, the tool will then ask you to move the axis/press a button. 
+
+The popup will automatically close once the requested action is completed.
+
+![7](/images/InputMappingTool-3.png)
+
+Repeat the process for all the inputs you want to add.
+
+![8](/images/InputMappingTool-4.png)
+
+Once you're done, it's time to export the keymap.
+
+First, you'll need to get the correct file name of your file.
+
+To do this, double-click `getdeviceinfo.exe`. This will generate a `inputinfo.txt` file. Open the text file.
+
+Example output:
+
+```
+System info:
+	OIS Version: 1.3.0
+	OIS Release Name: 1.3.0
+	Input Manager: Win32InputManager
+	Total Keyboards: 1
+	Total Mice: 1
+	Total JoySticks: 1
+
+Devices:
+	- OISKeyboard, Vendor: Win32InputManager
+	- OISMouse, Vendor: Win32InputManager
+	- OISJoyStick, Vendor: Logitech Extreme 3D
+
+
+Joystick 0:
+	Vendor: Logitech Extreme 3D
+	VendorMapFilename: Logitech_Extreme_3D.map
+	ID: 0
+	Type: [3] OISJoyStick
+	Axes: 3
+	Sliders: 1
+	POV/HATs: 1
+	Buttons: 12
+	Vector3: 0
+	Vector3Sensitivity: 2.28
+```
+
+`VendorMapFilename` will be the name of your exported file. In this example, the name will be `Logitech_Extreme_3D.map`.
+
+Click `Export Keymap` then select your device from the list.
+
+![9](/images/InputMappingTool-5.png)
+
+![10](/images/InputMappingTool-6.png)
+
+And finally, run Rigs of Rods and test your device! You can make further edits to your input map by clicking `Import Keymap`.
+
+If you want to share your created input map, upload it to the Miscellaneous section of the [Repository](https://forum.rigsofrods.org/downloads.php). Thanks!
