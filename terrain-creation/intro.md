@@ -101,14 +101,16 @@ my-terrain.tobj=
 my-script.as=
 ```
 
-* **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display. See below for a example file.
+* **.otc**: "Ogre Terrain Config". Configures the OGRE::Terrain subsystem which RoR uses for terrain display. See below for example files.
 * **-page-x-x.otc**: Configures the terrain's ground textures. Most terrains only have 1 page, so this file is usually named `mapname-page-0-0.otc`. See below for a example file.
 * **.tobj**: Placements for static objects/trees/grass/etc. See the [Static objects](#static-objects-1) section for more info.
 * **.os**: Caelum system (sky/weather) config. Visuals only. [Example file here.](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/caelum/RoRSkies.os)
 * **.hdx**: Hydrax config (0.4.5 and up). Water display. [Example file here.](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/hydrax/HydraxDefault.hdx)
 * **.as**: Terrain script file, usually used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
 
-Note that, to this date (11/2017), there is no editor which would create these files for you. You need to copy a template and work manually from there.
+Note that, there is no editor which would create these files for you. You need to copy a template and work manually from there.
+
+Templates can be found [here.](https://forum.rigsofrods.org/content-creation/150-template-raw-png-terrains.html).
 
 ## The heightmap
 
@@ -134,8 +136,9 @@ convert mymap.bmp -resize 1025x1025 -endian LSB -flip gray:mymap.raw
 
 - For more information, see ImageMagick's [command-line processing](http://www.imagemagick.org/script/command-line-processing.php) page. 
 
-A standard `.otc` file:
+The layout of an `.otc` is different depending on which format your heightmap is. 
 
+An example `.otc` file for a RAW heightmap:
 ```
 ;Heightmap values
 ;size (horizontal/vertical)
@@ -156,13 +159,87 @@ WorldSizeY=300
 disableCaching=1
 
 ;Filename to define the textures.
-PageFileFormat=mapname-page-0-0.otc
+PageFileFormat=my-terrain-page-0-0.otc
 
 ;Advanced texture values, best to leave them as the defaults.
 LightmapEnabled=0
 SpecularMappingEnabled=1
 NormalMappingEnabled=0
 ```
+
+Example for a PNG heightmap:
+```
+# the amount of pages in this terrain
+# 0, 0 means that you only have one page
+PagesX=0
+PagesZ=0
+
+PageFileFormat=my-terrain-page-{X}-{Z}.otc
+
+# the factor with what the heightmap values get multiplied with
+WorldSizeY=0
+
+# The world size of the terrain
+WorldSizeX=3000
+WorldSizeZ=3000
+
+# Sets the default size of blend maps for a new terrain. This is the resolution of each blending layer for a new terrain. default: 1024
+LayerBlendMapSize=2048
+
+# disableCaching=1 will always enforce regeneration of the terrain, useful if you want to change the terrain config (.otc) and test it. Does not cache the objects on it.
+disableCaching=1
+
+#optimizations
+
+# Minimum batch size (along one edge) in vertices; must be 2^n+1. The terrain will be divided into tiles, and this is the minimum size of one tile in vertices (at any LOD). default: 17
+minBatchSize=17
+
+# Maximum batch size (along one edge) in vertices; must be 2^n+1 and <= 65. The terrain will be divided into hierarchical tiles, and this is the maximum size of one tile in vertices (at any LOD). default: 65
+maxBatchSize=65
+
+# Whether to support a light map over the terrain in the shader, if it's present (default true).
+LightmapEnabled=1
+
+# Whether to support normal mapping per layer in the shader (default true). 
+NormalMappingEnabled=1
+
+# Whether to support specular mapping per layer in the shader (default true). 
+SpecularMappingEnabled=1
+
+# Whether to support parallax mapping per layer in the shader (default true). 
+ParallaxMappingEnabled=0
+
+# Whether to support a global colour map over the terrain in the shader, if it's present (default true). 
+GlobalColourMapEnabled=0
+
+# Whether to use depth shadows (default false). 
+ReceiveDynamicShadowsDepth=0
+
+# Sets the default size of composite maps for a new terrain, default: 1024
+CompositeMapSize=1024
+
+# Set the distance at which to start using a composite map if present, default: 4000
+CompositeMapDistance=5000
+
+# the default size of 'skirts' used to hide terrain cracks, default: 30
+SkirtSize=30
+
+#  Sets the default size of lightmaps for a new terrain, default: 1024
+LightMapSize=1024
+
+# Whether the terrain will be able to cast shadows, default: 0
+CastsDynamicShadows=0
+
+# Set the maximum screen pixel error that should  be allowed when rendering, default:
+MaxPixelError=0
+
+# dump the blend maps to files named blendmap_layer_X.png
+DebugBlendMaps=0
+```
+
+
+
+
 ## Ground textures
 
 The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
