@@ -1,5 +1,5 @@
 ---
-title: "Nautical vehicles"
+title: "Boats"
 layout: page
 categories: [vehicle-creation]
 ---
