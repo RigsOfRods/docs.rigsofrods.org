@@ -11,11 +11,11 @@ categories: [vehicle-creation]
 
 "Truck" is a text-based file format which defines all physically simulated objects in the game, be it vehicles of any kind, machinery, loads or any other things. The name is historical - Rigs of Rods was originally a heavy truck simulator, other kinds of vehicles came later.
 
-Recognized filename extensions for this format are: ".truck", ".car", ".boat", ".airplane", ".train", ".machine", ".trailer", ".load", ".fixed". Note the extension is only informative, the actual type of object is determined by file contents.
+Recognized filename extensions for this format are: `.truck`, `.car`, `.boat`, `.airplane`, `.train`, `.machine`, `.trailer`, `.load`, `.fixed`. Note the extension is only informative, the actual type of object is determined by file contents.
 
 The truckfile is divided into sections, each with defined purpose. Except the title, every section starts with a keyword. Order of sections matters (for example: cinecams requires beams).
 
-Comment lines can be inserted by putting ";" or "//" at the beginning of the line.
+Comment lines can be inserted by putting `;` or `//` at the beginning of the line.
 
 # Building Philosophy
 
@@ -27,7 +27,7 @@ See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the bui
 -   When the chassis seems to work well; add wheels, suspension, hydros, etc; And then test drive.
 -   When the truck is all working; do the bodywork and texture, and mark most beams as invisible (displaying too many beams has a large performance impact)
 
-To see a simple truck file example, see the [Step by Step Truck Construction](https://archives.rigsofrods.org/wiki/index.php/Step_by_Step_Truck_Construction).
+To see a simple truck file example, see the [Step by Step Truck Construction](/vehicle-creation/making-softbodies).
 
 # Is It a Truck, Plane, Train or Boat?
 
@@ -36,12 +36,12 @@ Before we start, let's ask an important question: **Is it a truck, plane, train,
 -   A truck is a description file containing an **engine** section
 -   A plane is a description file containing a **turboprops**, **turbojets**, or **pistonprops** section
 -   A boat is a description file containing a **screwprops** section
--   A train is a vehicle that drives on a rail (see [TrainDocumentation](https://archives.rigsofrods.org/wiki/index.php/TrainDocumentation)
+-   A train is a vehicle that drives on a rail (see [Building rail vehicles](/vehicle-creation/rail-vehicles))
 
 Also, notice that:
 
 -   You should not combine more than one propulsion (eg have both an **engine** and a **turboprops** section in the same file)
--   If you have no propulsion, then you are making a load, and the file extension should be .load (see [Creating a Load](https://archives.rigsofrods.org/wiki/index.php/Creating_a_Load))
+-   If you have no propulsion, then you are making a load, and the file extension should be `.load`
 -   You can have a **wings** section on a truck or a boat (e.g. to add aerodynamic spoilers for stability).
 -   You should have a **fusedrag** section on a plane to have a better aerodynamic modeling.
 -   A boat needs to have a hull which is defined in the **submesh** section.
@@ -54,7 +54,7 @@ Here a few recommendations for those who want to build a **light car**: RoR is o
 -   Use **brakes** to reduce braking force
 -   Use and abuse **set\_beam\_defaults** to soften the car body, or it will be too strong and springy, i.e. almost indestructible.
 -   Experiment with the **engine** section to use higher RPM and correct gear ratios.
--   Lighten the **wheels** as much as possible. This is not very easy as they become unstable. Reducing the spring and damping of the wheels helps a lot. Suggested values for 100kg wheels: spring 150000 and damping 1000.
+-   Lighten the **wheels** as much as possible. This is not very easy as they become unstable. Reducing the spring and damping of the wheels helps a lot. Suggested values for 100kg wheels: spring `150000` and damping `1000`.
 -   Use the **dashboard-small.mesh prop** as a dashboard. (unless you have a custom dashboard you want to use.)
 
 # Documentation style guide
@@ -63,10 +63,10 @@ Every keyword (directive, inline-section or section) which has parameters should
 
 -   **Required parameter**:
     <span style="color:#BD0058">Data type</span>;
-    <span style="color:#0B8A00">default = VALUE</span>; Explanatory text.
+    <span style="color:#0B8A00">default = `VALUE`</span>; Explanatory text.
 -   **Example required parameter**:
     <span style="color:#BD0058">Real number</span>;
-    <span style="color:#0B8A00">default = -1.0</span>; Parameters are written as shown, followed by a colon. 
+    <span style="color:#0B8A00">default = `-1.0`</span>; Parameters are written as shown, followed by a colon. 
     The data type should be easy to understand for a human, not technically accurate.
 -   **Another required parameter**:
     <span style="color:#BD0058">Positive decimal</span>;
@@ -74,21 +74,21 @@ Every keyword (directive, inline-section or section) which has parameters should
     The "data type" field should always be followed by semicolon.
 -   **Optional parameter**
     <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Data type</span>;
-    <span style="color:#0B8A00">default = VALUE</span>;
+    <span style="color:#0B8A00">default = `VALUE`</span>;
     Optional parameters have "(optional)" text after them.
 -   **Required nullable parameter**
     <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Data type</span>; 
-    <span style="color: #008079">Empty value = -1</span>;
+    <span style="color: #008079">Empty value = `-1`</span>;
     Parameters which must be entered but can contain "empty value" are described (nullable) and have "Empty value" section.
 -   **New parameter** 
     <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span>
-    <span style="color:#BD0058">Data type</span>; Parameters with version requirements have a \[ Version \] box.
+    <span style="color:#BD0058">Data type</span>; Parameters with version requirements have a <span style="background-color:#fb7">\[ Version \]</span> box.
 -   **Options**
     <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>,
     <span style="color:#0B8A00">default = none</span> Options are enumerated as sub-list.
-    -   **a**: What this option does.
-    -   **b**: Another option
-    -   **c** or **C**: Case insensitive option.
+    -   `a`: What this option does.
+    -   `b`: Another option
+    -   `c` or `C`: Case insensitive option.
 
 # Required Sections
 
@@ -98,7 +98,9 @@ The game will not run without these sections. Every one of these sections must b
 
 This is the only section not introduced by a keyword. It is the name of the truck, and it absolutely positively must be the first line of the file.
 
-    My nice truck
+```
+My nice truck
+```
 
 ## Globals
 
@@ -113,11 +115,12 @@ This section defines some global parameters. Those parameters are:
     The name of the material that will be used to texture the truck's submesh.
     This material must be defined in a separate material file.
 
-<!-- -->
 
-    globals
-    ;dry mass, cargo mass, material
-     10000.0,  1000.0,     tracks/semi
+```
+globals
+;dry mass, cargo mass, material
+10000.0,  1000.0,     tracks/semi
+```
 
 ## Nodes
 
@@ -146,87 +149,109 @@ This section begins the structural definition of the vehicle. Each line defines 
 
 NOTE: You can put a comment at the end of a node-line.
 
-    nodes
-    ;id,    x,    y,    z,     options
-    ;main chassis
-      0, 0.00, 0.75, 0.66
-      1, 0.00, 0.75, 1.84
-      2, 0.63, 0.75, 0.66
-      3, 0.63, 0.36, 0.66, l
-      4, 0.63, 0.75, 1.84
-      5, 0.63, 0.36, 1.84, n
-      6, 1.48, 0.75, 0.66, l
-      7, 1.48, 0.00, 0.66
-      8, 1.48, 0.75, 1.84, c
-      9, 1.48, 0.00, 1.84, x
-     10, 2.33, 0.75, 0.66, y
-     11, 2.33, 0.00, 0.66
+```
+nodes
+;id,    x,    y,    z,     options
+;main chassis
+0, 0.00, 0.75, 0.66
+1, 0.00, 0.75, 1.84
+2, 0.63, 0.75, 0.66
+3, 0.63, 0.36, 0.66, l
+4, 0.63, 0.75, 1.84
+5, 0.63, 0.36, 1.84, n
+6, 1.48, 0.75, 0.66, l
+7, 1.48, 0.00, 0.66
+8, 1.48, 0.75, 1.84, c
+9, 1.48, 0.00, 1.84, x
+10, 2.33, 0.75, 0.66, y
+11, 2.33, 0.00, 0.66
+```
 
-    ; This section supports multiple options as argument.
-    ; If you want a 'f' and 'b' node together you could write something like this:
-    nodes
-    11, 2.33, 0.00, 0.66, fb
+This section supports multiple options as argument.
 
-    ; This setting will set the node mass to 2000 kilograms:
-    nodes
-    14, 1.36, 0.00, 1.97, l 2000
+If you want a `f` and `b` node together you could write something like this:
 
-    ; This setting will set the node as non-contactable and set the mass to 2000 kilograms:
-    nodes
-    14, 1.36, 0.00, 1.97, cl 2000
+```
+nodes
+11, 2.33, 0.00, 0.66, fb
+```
 
-<span style="background-color:#fb7">\[ Version 0.35+ \]</span> You can debug your Truck's Node masses by adding
+This setting will set the node mass to 2000 kilograms:
 
-    Debug Truck Mass   Yes
+```
+nodes
+14, 1.36, 0.00, 1.97, l 2000
+```
 
-to your RoR.cfg. (Be sure to use a TAB before Yes and not to start the configurator). Look into your RoR.log after loading and you could see something like this:
 
-    04:09:05: Node 141 mass (20kg) too light. Resetting to minimass (50kg).
-    04:09:05: Node 0 : 3662 kg
-    04:09:05: Node 1 : 1730 kg
-    ...
-    04:09:05: Node 13 : 1180 kg (normal load node: 6000 kg / 6 nodes)
-    04:09:05: Node 14 : 1180 kg (normal load node: 6000 kg / 6 nodes)
-    ...
-    04:09:05: Node 136 : 5026 kg (overridden by node mass)
-    ...
-    04:09:05: TOTAL VEHICLE MASS: 32399 kg
+This setting will set the node as non-contactable and set the mass to 2000 kilograms:
 
-You can set any option property, loadweight, friction-, volume- and surface-coefficients as default with [set\_node\_defaults](#set_node_defaults).
+```
+nodes
+14, 1.36, 0.00, 1.97, cl 2000
+```
+
+You can debug your truck's node masses by enabling `Debug Truck Mass` in RoRConfig:
+
+![rorconfig-truckmassdebug](/images/rorconfig-truckmassdebug.png)
+
+Look into your `RoR.log` after loading and you could see something like this:
+
+```
+Node 0 : 3662 kg
+Node 1 : 1730 kg
+...
+Node 13 : 1180 kg (normal load node: 6000 kg / 6 nodes)
+Node 14 : 1180 kg (normal load node: 6000 kg / 6 nodes)
+...
+Node 136 : 5026 kg (overridden by node mass)
+Node 141 mass (20kg) too light. Resetting to minimass (50kg).
+...
+TOTAL VEHICLE MASS: 32399 kg
+```
+
+You can set any option property, loadweight, friction, volume, and surface-coefficients as default with [set\_node\_defaults](#set_node_defaults).
 
 ## Nodes2
 
 Nodes2 use the same syntax as nodes, except the first argument can be any string instead of a number. After using a name for a node in the nodes2 section, you can use it for any node parsing throughout the rest of the file. valid characters for the string: a-z,A-Z,0-9, \_
 
-for example:
+For example:
 
-    nodes2
-     ;name,    x,    y,    z,     options
-     ;main chassis
-      0, 0.00, 0.75, 0.66
-      1, 0.00, 0.75, 1.84
-      special_node, 0.63, 0.75, 0.66
-      3, 0.63, 0.36, 0.66,l
-      4, 0.63, 0.75, 1.84
-      another_one, 0.63, 0.36, 1.84
-      hook_node, 1.48, 0.75, 0.66,lh 50
+```
+nodes2
+name,    x,    y,    z,     options
+main chassis
+0, 0.00, 0.75, 0.66
+1, 0.00, 0.75, 1.84
+special_node, 0.63, 0.75, 0.66
+3, 0.63, 0.36, 0.66,l
+4, 0.63, 0.75, 1.84
+another_one, 0.63, 0.36, 1.84
+hook_node, 1.48, 0.75, 0.66,lh 50
+```
 
-we advise to use the following scheme for naming the nodes:
 
-    function_section_name
+We advise to use the following scheme for naming the nodes:
 
-so for example a rear hook node could look like this:
+```
+function_section_name
+```
 
-    hook_rear_hook1
+So for example a rear hook node could look like this:
 
-there is also a fallback in place which will resolve named nodes to normal node numbers. For example if you convert an existing truck to named nodes (nodes2) and don't want to replace all occurrences, just leave the numbers there, it will take them up as classic node numbers.
+```
+hook_rear_hook1
+```
 
-things to keep in mind:
+There is also a fallback in place which will resolve named nodes to normal node numbers. For example if you convert an existing truck to named nodes (nodes2) and don't want to replace all occurrences, just leave the numbers there, it will take them up as classic node numbers.
 
--   transition from 'nodes' to 'nodes2' is easy: just replace nodes with nodes2, the numbers will act as the name strings
--   transition from nodes2 to nodes is impossible, since nodes rely on the linear numbering of nodes
--   only use node names without any special characters or spaces (only a-z, A-Z, 0-9, \_, -)
--   you don't need to convert all nodes to nodes2 with names, if a nodes2 named node is not found, it will fallback to using the number as classic node.
+Things to keep in mind:
+
+-   Transition from `nodes` to `nodes2` is easy: just replace `nodes` with `nodes2`, the numbers will act as the name strings
+-   Transition from `nodes2` to `nodes` is impossible, since nodes rely on the linear numbering of nodes
+-   Only use node names without any special characters or spaces (only a-z, A-Z, 0-9, \_, -)
+-   You don't need to convert all nodes to nodes2 with names, if a nodes2 named node is not found, it will fallback to using the number as classic node.
 
 ## Beams
 
@@ -243,38 +268,48 @@ This section defines all the beams connecting nodes. Each line describes a beam.
 
 TIP: Support beams are very useful for limiting movement of body panels like trunks, hoods, and doors from going inside the car while still allowing rotation without costly and complicated collisions. Default expansion break length is . User set break length factor is optional. Valid factors are &gt; 0.0. .
 
-    beams
-    ;node1, node2, options
-         0,     1
-         2,     4
-         3,     5,       i
-         6,     8,       i
-         7,     9
-        10,    12,       i
-        11,    13,       i
-    ; support beam, default extension break limit
-        11,    23,       s
-    ; visible support beam, user set extension break limit original spawn length * 12.5
-        11,    24,       s 12.5
+```
+beams
+;node1, node2, options
+0,     1
+2,     4
+3,     5,        i
+6,     8,        i
+7,     9
+10,    12,       i
+11,    13,       i
+; support beam, default extension break limit
+11,    23,       s
+; visible support beam, user set extension break limit original spawn length * 12.5
+11,    24,       s 12.5
+```
 
 This section supports multiple options as argument. If you want a 'i' and 'r' node together you could write something like this:
 
-    ;invisible rope
-        11,    13,       ir
-    ; invisible support beam, default extension break limit
-        11,    25,       is
-    ; invisible support beam, user set extension break limit original spawn length * 25
-        11,    26,       si 25.0
+```
+;invisible rope
+11,    13,       ir
+; invisible support beam, default extension break limit
+11,    25,       is
+; invisible support beam, user set extension break limit original spawn length * 25
+11,    26,       si 25.0
+```
 
 ## Cameras
 
-This section is important. It helps to position the truck in space, by defining a local direction reference. This is used to measure the pitch and the roll of the truck. It is also very important to orient the truck's cameras. The three parameters are node numbers. The first is the reference node and may be anywhere. The second must be behind the first (if you look at the front of the truck, it is hidden behind the first). The third must be at the left of the first (if you look to the right of the truck, it is hidden by the first). Correct relative placement of these nodes is important, or it may break the inside camera view.
+This section is important. It helps to position the truck in space, by defining a local direction reference. This is used to measure the pitch and the roll of the truck. It is also very important to orient the truck's cameras. 
+
+The three parameters are node numbers. The first is the reference node and may be anywhere. The second must be behind the first (if you look at the front of the truck, it is hidden behind the first). The third must be at the left of the first (if you look to the right of the truck, it is hidden by the first). 
+
+Correct relative placement of these nodes is important, or it may break the inside camera view.
 
 ![Cameras](/images/truckfile-cameras.gif)
 
-    cameras
-    ;center, back, left
-          0,    2,    1
+```
+cameras
+;center, back, left
+0, 2, 1
+```
 
 ## Cinecam
 
@@ -293,9 +328,11 @@ Optional parameters:
 
 Example:
 
-    cinecam
-    ;  x,   y,   z, <---------8 bindings--------->, Opt: spring, damping, node-weight
-    0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
+```
+cinecam
+;  x,   y,   z, <---------8 bindings--------->, Opt: spring, damping, node-weight
+0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
+```
 
 ## End
 
@@ -303,7 +340,9 @@ This section will stop the parser. Everything after it will be ignored.
 
 Since version 0.4.5, it's optional. In previous versions it's STRICTLY REQUIRED - without it, the vehicle will crash the game.
 
-    end
+```
+end
+```
 
 # Organizational Sections
 
@@ -311,56 +350,64 @@ These sections are not required, but will make it easier to locate your file or 
 
 ## GUID
 
-you should use the guid feature to allow RoR to recognize your truck uniquely. We will use this feature later on to push truck updates to clients or skin selections.
+You should use the guid feature to allow RoR to recognize your truck uniquely. 
 
-    ;guid <GUID>
-    guid 6daaee29-e462-4d99-96d2-4577294f7b10
+This section is required for [skins](/vehicle-creation/alternate-skins).
 
-you can generate some GUIDs there: <http://www.guidgenerator.com/>
+```
+;guid <GUID>
+guid 6daaee29-e462-4d99-96d2-4577294f7b10
+```
+
+You can generate some GUIDs [here](https://www.guidgenerator.com).
 
 ## Fileformatversion
 
-This tells RoR what version of RoR your truck is built for. Most trucks built today should use "fileformatversion 3"
-
-IMPORTANT: Version 0.4.5 contains a reworked file format parser which introduces a new format version '450' (to signify version 0.4.5.0). Earlier versions will be parsed in legacy compatibility mode.
+This tells RoR what version of RoR your truck is built for. Most trucks built today should use `fileformatversion 3`
 
 -   Version 1 = Pre-RoR 0.32
 -   Version 2 = RoR 0.32 - 0.35
 -   Version 3 = Post-RoR 0.36
 -   Leaving out this tag will result in version 1.
 
-<!-- -->
 
-    ; Legacy
-    fileformatversion 3
-    ; v0.4.5
-    fileformatversion 450
+```
+fileformatversion 3
+```
 
 ## Author
 
-    author <type> <authorid> <authorname> <email>
+```
+author <Type> <AuthorID> <AuthorName> <Email>
+```
 
--   type = Tells what the author referenced in the next section did. Recommended types to put: chassis, texture, support, etc.
--   AuthorID = ID of the author's RoR Forum account, so the user may write him or her a message or view his or her other trucks. Use "-1" if he or she does not have a RoR Forum account.
-    -   To get the AuthorID: Log into the forums and visit [the Repository](http://repository.rigsofrods.com/). The AuthorID should be displayed on the left side.
--   authorname = The author's name.
--   email = The author's e-mail. (optional)
+-   Type = Tells what the author referenced in the next section did. Recommended types to put: chassis, texture, support, etc.
+
+-   AuthorID = ID of the author's RoR Forum account. As of January 2018 there's no way to get the Author ID, so just use `-1`. 
+
+-   AuthorName = The author's name.
+
+-   Email = The author's e-mail. (optional)
 
 Each author requires a separate line.
 
-    author chassis 4    heinz_peter               heinz@mail.com
-    author texture 123  forname_surname_othername someuser@mail.com
-    author support 5487 otheruser                 otheruser@mail.com
+```
+author chassis 4    heinz_peter               heinz@mail.com
+author texture 123  forname_surname_othername someuser@mail.com
+author support 5487 otheruser                 otheruser@mail.com
+```
 
 Please note: **Do not use spaces** in the type, authorname, or email. Instead, use an underscore ( \_ ). In the game, the underscore will be replaced with a space.
 
 ## Description
 
-    description
-    Lorem ipsum dolor sit amet, consectetur adipisicing
-    elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua.
-    end_description
+```
+description
+Lorem ipsum dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua.
+end_description
+```
 
 Pretty self-explanatory. **Only the first 3 lines** will get displayed in the Truck HUD. **Do not put keywords in the description;** they will mess up the truck file.
 
@@ -369,66 +416,69 @@ Pretty self-explanatory. **Only the first 3 lines** will get displayed in the Tr
 General info about the vehicle.
 
 -   **Unique ID** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = -1</span>; <span style="color: #008079">Empty value = -1</span>; This field specifies the unique file ID (you get one by uploading it to the repository).
-    [You can get a unique ID here.](http://repository.rigsofrods.com/uniqueid/)
+
 -   **Category ID** <span style="color:#666">(optional)</span> <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = -1</span>; <span style="color: #008079">Empty value = -1</span>; This is the category number from the repository. It is recommended that you give your truck a category.
-    [You can find a list of valid numbers here.](https://archives.rigsofrods.org/wiki/index.php/Truck_Categories)
+
 -   **File version** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = 0</span>; Version of the vehicle, read by users and the repository. For backwards compatibility, this field also accepts real number (a warning is reported).
 
-<!-- -->
 
-    ; syntax:
-    ;fileinfo <uniqueid>, <categoryid>, <fileversion>
-    ; example:
-    fileinfo      000UID,          107,             2
+```
+; syntax:
+;fileinfo <uniqueid>, <categoryid>, <fileversion>
+; example:
+fileinfo      000UID,          107,             2
+```
 
 **Available category IDs**
-    
-    ;;; vehicles
-    108, Other Land Vehicles
-    
-    146, Street Cars
-    147, Light Racing Cars
-    148, Offroad Cars
-    149, Fantasy Cars
-    150, Bikes
-    155, Crawlers
-    
-    152, Towercranes
-    153, Mobile Cranes
-    154, Other cranes
-    
-    107, Buses
-    151, Tractors
-    156, Forklifts
-    159, Fantasy Trucks
-    160, Transport Trucks
-    161, Racing Trucks
-    162, Offroad Trucks
-    
-    110, Boats
-    
-    113, Helicopters
-    114, Aircraft
-    
-    117, Trailers
-    118, Other Loads
-    
-    ;;; terrains
-    129, Addon Terrains
-    
-    859, Container
-    
-    875, Submarine
-    
-    ;note: these categories are NOT in the repository:
-    5000, Official Terrains
-    5001, Night Terrains
-    
-    ;do not use category numbers above 9000!
-    9990, Unsorted
-    9991, All
-    9992, Fresh
-    9993, Hidden
+
+```
+;;; vehicles
+108, Other Land Vehicles
+
+146, Street Cars
+147, Light Racing Cars
+148, Offroad Cars
+149, Fantasy Cars
+150, Bikes
+155, Crawlers
+
+152, Towercranes
+153, Mobile Cranes
+154, Other cranes
+
+107, Buses
+151, Tractors
+156, Forklifts
+159, Fantasy Trucks
+160, Transport Trucks
+161, Racing Trucks
+162, Offroad Trucks
+
+110, Boats
+
+113, Helicopters
+114, Aircraft
+
+117, Trailers
+118, Other Loads
+
+;;; terrains
+129, Addon Terrains
+
+859, Container
+
+875, Submarine
+
+;note: these categories are NOT in the repository:
+5000, Official Terrains
+5001, Night Terrains
+
+;do not use category numbers above 9000!
+9990, Unsorted
+9991, All
+9992, Fresh
+9993, Hidden
+```
 
 ## Help
 
@@ -438,31 +488,37 @@ The help section gives the name of the material used for the help panel on the i
 
 NOTE: This setting can be overriden by [section "guisettings"](#guisettings)
 
-    help
-    tracks/semihelp
+```
+help
+tracks/semihelp
+```
 
 ## Comments
 
-Comments are ignored by RoR. They are useful for telling users what things do in the truck file. Comments can be put anywhere by putting a semicolon ( ; ) as the first character of the line to be commented.
+Comments are ignored by RoR. They are useful for telling users what things do in the truck file. Comments can be put anywhere by putting a semicolon ( `;` ) as the first character of the line to be commented.
 
 You can also comment out several lines of text using this format:
 
-    comment
-    One morning, as Gregor Samsa was waking up from anxious dreams,
-    he discovered that in bed he had been changed into a monstrous vermin.
-    He lay on his armour-hard back and saw, as he lifted his head up
-    a little, his brown, arched abdomen divided up into rigid bow-like
-    sections. From this height the blanket, just about ready to slide off
-    completely, could hardly stay in place. His numerous legs, pitifully
-    thin in comparison to the rest of his circumference, flickered helplessly
-    before his eyes.
-    end_comment
+```
+comment
+One morning, as Gregor Samsa was waking up from anxious dreams,
+he discovered that in bed he had been changed into a monstrous vermin.
+He lay on his armour-hard back and saw, as he lifted his head up
+a little, his brown, arched abdomen divided up into rigid bow-like
+sections. From this height the blanket, just about ready to slide off
+completely, could hardly stay in place. His numerous legs, pitifully
+thin in comparison to the rest of his circumference, flickered helplessly
+before his eyes.
+end_comment
+```
 
 ## hideInChooser
 
 Excludes the vehicle/load from being shown in the vehicle menu on top of the screen. Place the single keyword somewhere in the vehicle/load file.
 
-    hideInChooser
+```
+hideInChooser
+```
 
 # Vehicle-specific
 
@@ -481,15 +537,13 @@ The engine section contains the engine parameters. Parameters are:
 -   **First gear ratio**: <span style="color:#BD0058">Real number</span> Gear ratio of 1st gear.
 -   **Second/etc gear ratio**: <span style="color:#BD0058">Real number</span> Gear ratio of all further gears. Note there must be between 1 and 21 forward gears. The final gear **must be followed by a -1 value** (parser will emit a warning if the terminator is missing).
 
-<!-- -->
-
-    engine
-    ;min rpm, max rpm, torque, differential, reverse, neutral,   1st,  2nd,  3rd,  4th,  5th,  6th...
-      1000.0,  1500.0, 8000.0,         2.00,   10.85,   10.00, 13.86, 9.52, 6.56, 5.48, 4.58, 3.83, 3.02, 2.53, 2.08, 1.74, 1.43, 1.20, 1.00, -1.0
+```
+engine
+;min rpm, max rpm, torque, differential, reverse, neutral,   1st,  2nd,  3rd,  4th,  5th,  6th...
+  1000.0,  1500.0, 8000.0,         2.00,   10.85,   10.00, 13.86, 9.52, 6.56, 5.48, 4.58, 3.83, 3.02, 2.53, 2.08, 1.74, 1.43, 1.20, 1.00, -1.0
+```
 
 One good source of practical gear ratios is [Eaton Fuller](http://www.roadranger.com/Roadranger/productssolutions/transmissions/index.htm). To see the ratios, click the name of the transmission and find "Product Specifications Guide". It's wise to make sure you can get into final gear. If your vehicle decelerates in a gear you may not have enough power, or the gear ratio may be too high.
-
-A guide to transform real engine specs into RoR-specs: <http://www.rigsofrods.com/threads/107140#post1222623>
 
 ## Engoption
 
@@ -506,12 +560,13 @@ Engoption sets optional parameters to the engine. It is mainly used for car engi
 -   **Max Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.2</span>. Defines the maximum amount of throttle the truck will use to maintain the idle RPM.
 -   **Min Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.0</span>. Defines the minimum amount of throttle the truck will use to maintain the idle RPM.
 
-<!-- -->
 
-    engoption
-    ;inertia, type, clutchforce, shifttime, clutchtime, postshifttime, stallRPM, idleRPM, maxIdleMixture, minIdleMixture
-         0.5,    c,      5000.0,      0.75,        0.9,          0.75,     500,      700,           0.25,           0.06
-    ;sample shift timings for a mid size truck
+```
+engoption
+;inertia, type, clutchforce, shifttime, clutchtime, postshifttime, stallRPM, idleRPM, maxIdleMixture, minIdleMixture
+     0.5,    c,      5000.0,      0.75,        0.9,          0.75,     500,      700,           0.25,           0.06
+;sample shift timings for a mid size truck
+```
 
 PROTIP: Use the "Engine inertia" value to make the engine start faster. With a value of 0.1, the engine will start instantly. With a value of 10, the engine requires about 30 seconds of cranking before it starts. Values between 1 and 3.5 are great for vehicles that you drive frequently, or race vehicles and the like that you want to start fast. However, using a higher value makes it harder to stall the engine. Making something to tow a lot of weight? Raise it up to 9 or 10 and it won't really stall, ever. (With values over 10, it may not start at all, so be careful.)
 
@@ -533,11 +588,12 @@ Using <b>Version 1</b> you have more control over the power added to the engine,
 -   **additionalTorque** <span style="color:#BD0058">Positive real number</span>; Torque in Nm that will be added at max turbo rpm.
 -   **engine\_rpm\_op**;<span style="color:#666">(optional)</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 0</span>; Engine's RPM at which turbo will start to spool up.
 
-<!-- -->
 
-    engturbo
-    ;type, inertiaFactor, numTurbo, additionalTorque, engine_rpm_op
-    1, 0.2, 1, 430, 3200
+```
+engturbo
+;type, inertiaFactor, numTurbo, additionalTorque, engine_rpm_op
+1, 0.2, 1, 430, 3200
+```
 
  <b>Version 2:</b>
 
@@ -556,11 +612,12 @@ Using <b>Version 1</b> you have more control over the power added to the engine,
 -   **antilag\_minRPM**; <span style="color:#666">(optional)</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 3000</span>; Minimum engine's RPM on which the anti lag system start to work.
 -   **antilag\_power**; <span style="color:#666">(optional)</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 170</span>; Power factor which will be used to sustain the turbo's spinning while anti lag is working.
 
-<!-- -->
 
-    engturbo
-    ;type, inertiaFactor, numTurbos, maxPSI, rpm_op, bov, bov_minPSI, wastegate, wastegate_maxpsi, wastegate_threshold, antilag, antilag_chance, antilag_minRPM, antilag_power
-    2, 4, 1, 35, 3500, 1, 11, 1, 32, 0.02, 1, 0.9985, 3000, 250
+```
+engturbo
+;type, inertiaFactor, numTurbos, maxPSI, rpm_op, bov, bov_minPSI, wastegate, wastegate_maxpsi, wastegate_threshold, antilag, antilag_chance, antilag_minRPM, antilag_power
+2, 4, 1, 35, 3500, 1, 11, 1, 32, 0.02, 1, 0.9985, 3000, 250
+```
 
 ## Brakes
 
@@ -569,11 +626,11 @@ Parameters:
 -   **Default braking force**: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 30000</span>; This allows you to change the default braking force value. The default is 30000, which is generally too high a value for smaller cars and trucks.
 -   **Parking brake force** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span> <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = (brake\_force \* 2)</span>;
 
-<!-- -->
-
-    brakes
-    ; brake_force, [park_brake_force]
-            20000,              15000
+```
+brakes
+; brake_force, [park_brake_force]
+20000,              15000
+```
 
 ## AntiLockBrakes
 
@@ -588,28 +645,34 @@ AntiLockBrakes settings:
     -   **NODASH**: No dashboard indicator
     -   **NOTOGGLE**: The system cannot be turned on/off and stays ON or OFF
 
-<!-- -->
-
-    ;AntiLockBrakes regulation-force, minspeed, pulse/sec, mode
-    AntiLockBrakes                12,       15,      2000, mode: ON & NODASH
+```
+;AntiLockBrakes regulation-force, minspeed, pulse/sec, mode
+AntiLockBrakes                12,       15,      2000, mode: ON & NODASH
+```
 
 Examples of MODE settings:
 
-    ; System is activate at spawn and 
-    mode: ON & NODASH
-    ; System is activate at spawn and can NOT be shut off
-    mode: ON & NOTOGGLE
-    ; System is activate at spawn, no dashboard indicator and can NOT be shut off
-    mode: ON & NODASH &  NOTOGGLE
+System is activated at spawn with no dashboard indicator:
 
-    ; System deactivated at spawn and no dashboard indicator
-    mode: OFF & NODASH
+`mode: ON & NODASH`
 
-In game, you can toggle the anti-lock brakes on/off with SHIFT-B Anti-lock Brakes do NOT have any impact on your parking brake behavior.
+System is activated at spawn and can NOT be shut off:
+
+`mode: ON & NOTOGGLE`
+
+System is activated at spawn, no dashboard indicator and can NOT be shut off
+
+`mode: ON & NODASH &  NOTOGGLE`
+
+System deactivated at spawn and no dashboard indicator:
+
+`mode: OFF & NODASH`
+
+In game, you can toggle the anti-lock brakes on/off with `SHIFT+B` Anti-lock Brakes do NOT have any impact on your parking brake behavior.
 
 ## TractionControl
 
-In game, you can toggle the traction control on/off with SHIFT-V
+In game, you can toggle the traction control on/off with SHIFT+V
 
 Parameters:
 
@@ -635,12 +698,14 @@ Valid modes:
 -   **OFF**: System deactivated at spawn
 -   **OFF & NODASH**: System deactivated at spawn and no dashboard indicator
 
-<!-- -->
-
-    ;TractionControl regulation-force, wheelslip, fadespeed, pulse/sec, mode
-    TractionControl                 6,      0.01,       100,      2000, mode: ON
+```
+;TractionControl regulation-force, wheelslip, fadespeed, pulse/sec, mode
+TractionControl                 6,      0.01,       100,      2000, mode: ON
+```
 
 ## SlopeBrake
+
+**NOTE: This section has been made obsolete with the `HighResWheelNodeCollisions` setting added in 0.4.7.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/issues/1438>)
 
 This section fixes the bug, where trucks slowly roll down a slope no matter how much brake-force is applied.
 
@@ -650,10 +715,10 @@ SlopeBrake settings:
 -   **attach-angle**: <span style="color:#BD0058">Positive real number from range <1 - 45>; </span> Valid range any positive integer 1 - 45. The angle where the slope brake tries to activate at full force
 -   **release-angle**: <span style="color:#BD0058">Positive real number from range <5 - 45>; </span> Valid range any positive integer 5 - 45. Adds to attach-angle. The angle where the slope brake will reset and restart when it was not able to keep the wheel from spinning. Use small numbers here.
 
-<!-- -->
-
-    ;SlopeBrake regulating force, attach-angle, release-angle
-    SlopeBrake                10,            5,            12
+```
+;SlopeBrake regulating force, attach-angle, release-angle
+SlopeBrake                10,            5,            12
+```
 
 ## Wheels
 
@@ -661,27 +726,27 @@ This section is important: it defines the wheels! Parameters are:
 
 -   **Radius** - <span style="color:#BD0058">Real number</span>; The radius of the wheel, in meters.
 -   **Width (ignored)** - <span style="color:#BD0058">Real number</span>; Use any number (must be present for compatibility), wheel width is auto-calculated from distance between node1 and node2.
--   **number of rays** - <span style="color:#BD0058">Real number</span>;The number of 'pie pieces' that make up the wheel. For reference, "3" makes the wheel triangular, and "4" makes the wheel square. Recommended values are between 10 and 16.
+-   **number of rays** - <span style="color:#BD0058">Real number</span>;The number of 'pie pieces' that make up the wheel. For reference, `3` makes the wheel triangular, and `4` makes the wheel square. Recommended values are between `10` and `16`.
 -   **Node 1** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where the one side of the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where one side of the wheel ends.
     To clarify, if you imagine a beam that goes right through the middle of the wheel along the axis of rotation, Node 1 and Node 2 would be at the intersection between one side of the wheel and the beam and the intersection between other side of the wheel and the beam.
--   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use "9999" if there is no rigidity node.
--   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span>"0" for unbraked wheels, "1" for braked wheels. For directional braking, as found in airplanes, use "2" for a left wheel, "3" for a right wheel. In 0.37, "4" is used for a wheel with a footbrake, but no parking brake.
--   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> "0" for undriven wheels, "1" for wheels driven forwards, "2" for wheels driven backwards
+-   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
+-   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span>`0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
+-   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for undriven wheels, `1` for wheels driven forwards, `2` for wheels driven backwards
 -   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
 -   **Mass** - <span style="color:#BD0058">Real number</span>; Mass of the wheel, in kilograms.
 -   **Springiness** - <span style="color:#BD0058">Real number</span>; The stiffness of the wheel, somewhat equivalent to tire pressure. Having too much spring will make the steering wheels bounce back and forth during understeer, sending vibrations through the entire vehicle.
 -   **Damping** - <span style="color:#BD0058">Real number</span>; The rebound rate of the wheel
--   **Materials** - <span style="color:#BD0058">String</span>; Face material and band material. (no comma between them) If you don't have a custom material, use "tracks/wheelface" for the face and "tracks/wheelband1" for a single wheel or "tracks/wheelband2" for dual mounted wheels.
+-   **Materials** - <span style="color:#BD0058">String</span>; Face material and band material. (no comma between them) If you don't have a custom material, use `tracks/wheelface` for the face and `tracks/wheelband1` for a single wheel or `tracks/wheelband2` for dual mounted wheels.
 
-<!-- -->
-
-    wheels
-    ;radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping,          facemat           bandmat
-       0.54,    -1,      12,    35,    36,  9999,      1,         0,   3, 200.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband1
-       0.54,    -1,      12,    37,    38,  9999,      1,         0,   5, 200.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband1
-       0.54,    -1,      12,    39,    40,    41,      1,         1,  25, 400.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband2
-       0.54,    -1,      12,    41,    42,    40,      1,         1,  23, 400.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband2
+```
+wheels
+;radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping,          facemat           bandmat
+0.54,    -1,      12,    35,    36,  9999,      1,         0,   3, 200.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband1
+0.54,    -1,      12,    37,    38,  9999,      1,         0,   5, 200.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband1
+0.54,    -1,      12,    39,    40,    41,      1,         1,  25, 400.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband2
+0.54,    -1,      12,    41,    42,    40,      1,         1,  23, 400.0, 800000.0,  4000.0, tracks/wheelface tracks/wheelband2
+```
 
 Notes:
 
@@ -695,71 +760,75 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Rim radius** - <span style="color:#BD0058">Real number</span> The radius of the wheel rim in meters
 -   **Tyre radius** - <span style="color:#BD0058">Real number</span> The radius of the tire in meters, measured from the center of the wheel.
 -   **Width** - <span style="color:#BD0058">Real number</span> Use any number (must be present for compatibility), wheel width is auto-calculated from distance between node1 and node2.
--   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, "3" makes the wheel triangular, and "4" makes the wheel square. Recommended values are between 10 and 16.
+-   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, `3` makes the wheel triangular, and `4` makes the wheel square. Recommended values are between `10` and `16`.
 -   **Node 1** - <span style="color:#BD0058">Node number/name</span> The node where the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](#wheels) for an explanation of how this works.)
--   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use "9999" if there is no rigidity node.
--   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> "0" for unbraked wheels, "1" for braked wheels. For directional braking, as found in airplanes, use "2" for a left wheel, "3" for a right wheel. In 0.37, "4" is used for a wheel with a footbrake, but no parking brake.
--   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> "0" for an undriven wheel, "1" for a wheel driven forwards, "2" for a wheel driven backwards.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
+-   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> `0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
+-   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for an undriven wheel, `1` for a wheel driven forwards, `2` for a wheel driven backwards.
 -   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
 -   '''Rim damping '''- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
 -   **Tyre springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the tire.
 -   **Tyre damping** - <span style="color:#BD0058">Real number</span> The rebound rate of the tire.
--   **Materials** - <span style="color:#BD0058">String</span> Face material and band material. (no comma between them) If you don't have a custom material, use "tracks/wheelface" for the face and "tracks/wheelband1" for a single wheel or "tracks/wheelband2" for dual mounted wheels.
+-   **Materials** - <span style="color:#BD0058">String</span> Face material and band material. (no comma between them) If you don't have a custom material, use `tracks/wheelface` for the face and `tracks/wheelband1` for a single wheel or `tracks/wheelband2` for dual mounted wheels.
 
-<!-- -->
-
-    wheels2
-    ;radius, radius2, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass, rim spring, rim damping, simple spring, simple damping,              facemat             bandmat
-      0.335,   0.625,    -1,      12,   44,    45,   9999,      1,         1,   3, 280.0,   900000.0,       200.0,      400000.0,         2000.0, tracks/daffwheelface tracks/dafwheelband
-      0.335,   0.625,    -1,      12,   46,    47,   9999,      1,         1,   5, 280.0,   900000.0,       200.0,      400000.0,         2000.0, tracks/daffwheelface tracks/dafwheelband
-      0.335,   0.625,    -1,      12,   48,    49,     50,      1,         1,  31, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
-      0.335,   0.625,    -1,      12,   50,    51,     49,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
-      0.335,   0.625,    -1,      12,   52,    53,     54,      1,         1,  31, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
-      0.335,   0.625,    -1,      12,   54,    55,     53,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
+```
+wheels2
+;radius, radius2, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass, rim spring, rim damping, simple spring, simple damping,              facemat             bandmat
+0.335,   0.625,    -1,      12,   44,    45,   9999,      1,         1,   3, 280.0,   900000.0,       200.0,      400000.0,         2000.0, tracks/daffwheelface tracks/dafwheelband
+0.335,   0.625,    -1,      12,   46,    47,   9999,      1,         1,   5, 280.0,   900000.0,       200.0,      400000.0,         2000.0, tracks/daffwheelface tracks/dafwheelband
+0.335,   0.625,    -1,      12,   48,    49,     50,      1,         1,  31, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
+0.335,   0.625,    -1,      12,   50,    51,     49,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
+0.335,   0.625,    -1,      12,   52,    53,     54,      1,         1,  31, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
+0.335,   0.625,    -1,      12,   54,    55,     53,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
+```
 
 Please note:
 
 -   wheels2 will be replaced with normal wheels during multiplayer game play.
--   wheels2 can be deactivated completely in the [configurator](https://archives.rigsofrods.org/wiki/index.php/configurator).
 
 ## Meshwheels
 
-Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the "wheels" command, though there are a few differences.
+Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the [wheels](#wheels) section, though there are a few differences.
 
-The side value should be 'l' or 'r' depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](/images/truckfile-meshwheel-tire-texture.jpg)
+The side value should be `l` or `r` depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](/images/truckfile-meshwheel-tire-texture.jpg)
 
 Here is an example picture of a rim mesh, as it should be modeled. The tire geometry is added dynamically afterward by the game, and will flex like a real tire.
 
 ![Rim mesh](/images/truckfile-meshwheel-rim-mesh.jpg)
 
-    meshwheels 
-    ;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping, side,               meshname         material
-            0.35,       0.21,   0.5,      14,    32,    33,    34,      1,         1,  18, 200.0, 300000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
-            0.35,       0.21,   0.5,      14,    34,    35,    33,      1,         1,  26, 200.0, 300000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
-            0.35,       0.21,   0.5,      14,    44,    45,  9999,      1,         0,  53, 200.0, 350000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
-            0.35,       0.21,   0.5,      14,    46,    47,  9999,      1,         0,  50, 200.0, 350000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
+```
+meshwheels 
+;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,   spring, damping, side,               meshname         material
+0.35,       0.21,   0.5,      14,    32,    33,    34,      1,         1,  18, 200.0, 300000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
+0.35,       0.21,   0.5,      14,    34,    35,    33,      1,         1,  26, 200.0, 300000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
+0.35,       0.21,   0.5,      14,    44,    45,  9999,      1,         0,  53, 200.0, 350000.0,  2000.0,    l, dodgechargerwheel.mesh dodgechargerband
+0.35,       0.21,   0.5,      14,    46,    47,  9999,      1,         0,  50, 200.0, 350000.0,  2000.0,    r, dodgechargerwheel.mesh dodgechargerband
+```
+
 
 ## Meshwheels2
 
-This section works exactly the same way then meshwheels, except one difference.
+This section works exactly the same way as meshwheels, except one difference.
 
-The tread of the wheel you generate does use the meshwheels section spring and damping ratios while the rim will use the ones from the set\_beam\_defaults.
+The tread of the wheel you generate does use the meshwheels section spring and damping ratios while the rim will use the ones from the [set_beam_defaults](#set_beam_defaults).
 
 It enables you to make quite soft and flexing wheels, which have a lot lateral grip and are very reliable and predictable in comparison to normal meshwheels.
 
 Very useful for flex body tires, since the **nodeflip-bug** is mostly gone with this used the right way.
 
-Use set\_beam\_defaults that make sense for rims (high spring, low damping) while the tires itself can be soft and have high damping values:
+Use [set_beam_defaults](#set_beam_defaults). that make sense for rims (high spring, low damping) while the tires itself can be soft and have high damping values:
 
-    set_beam_defaults 700000, 350, 60000000, 80000000
-    ;set_beam_defaults for the rim
+```
+set_beam_defaults 700000, 350, 60000000, 80000000
+;set_beam_defaults for the rim
 
-    meshwheels2
-    ;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,  tirespring,   tiredamping, side, meshname    material
-           0.660,      0.315, 0.375,      12,    27,    26,    38,      4,         1,  22, 100.0,    150000.0,        1500.0,    r, my-rim.mesh my-tire-material
+meshwheels2
+;tire_radius, rim_radius, width, numrays, node1, node2, snode, braked, propulsed, arm,  mass,  tirespring,   tiredamping, side, meshname    material
+0.660,      0.315, 0.375,      12,    27,    26,    38,      4,         1,  22, 100.0,    150000.0,        1500.0,    r, my-rim.mesh my-tire-material
+```
 
 ## Flexbodywheels
 
@@ -771,10 +840,12 @@ For now, the rim mesh is a prop. Might be upgraded to flexbody later.
 
 This one has complete new tire physics, so for now, happy testing, please give feedback.
 
-    set_beam_defaults 100000, 350, 60000000, 80000000
-    flexbodywheels
-    ;radius, rimradius, width, rays, n1, n2, ref-n, braked, propulsed, force-n, weight, tire-spring, tire-damp, rim-spring, rim-damp, rim-orientation,           rim-mesh            tire-mesh
-       0.50,     0.300, 0.300,   16, 13, 11,  9999,      1,         1,      19,   92.5,      4500.0,     300.0,    3000000,      350,               r, testtruck-rim.mesh testtruck-wheel.mesh
+```
+set_beam_defaults 100000, 350, 60000000, 80000000
+flexbodywheels
+;radius, rimradius, width, rays, n1, n2, ref-n, braked, propulsed, force-n, weight, tire-spring, tire-damp, rim-spring, rim-damp, rim-orientation,           rim-mesh            tire-mesh
+0.50,     0.300, 0.300,   16, 13, 11,  9999,      1,         1,      19,   92.5,      4500.0,     300.0,    3000000,      350,               r, testtruck-rim.mesh testtruck-wheel.mesh
+```
 
 ## Shocks
 
@@ -784,23 +855,23 @@ Shocks can be seen as tunable beams, useful for suspensions.
 -   **node\_2**: <span style="color:#BD0058">Node number/name</span> The node where the shock ends.
 -   **spring\_rate**: <span style="color:#BD0058">Real number</span> The 'stiffness' of the shock. The higher the value, the less the shock will move for a given bump.
 -   **damping**: <span style="color:#BD0058">Real number</span> The 'resistance to motion' of the shock. The best value is given by this equation: <span style="font-family: monospace;">\[ 2 \* sqrt(suspended\_mass \* spring\_rate) \]</span>
--   **max\_contraction**: <span style="color:#BD0058">Real number</span> The shortest length the shock can be, as a proportion of its original length. "0" means the shock will not be able to contract at all, "1" will let it contract all the way to zero length. If the shock tries to shorten more than this value allows, it will become as rigid as a normal beam.
--   **max\_extension**: <span style="color:#BD0058">Real number</span> The longest length a shock can be, as a proportion of its original length. "0" means the shock will not be able to extend at all. "1" means the shock will be able to double its length. Higher values allow for longer extension.
--   **precompression**: <span style="color:#BD0058">Real number</span> Changes compression or extension of the suspension when the truck spawns. This can be used to "level" the suspension of a truck if it sags in game. The default value is 1.0.
+-   **max\_contraction**: <span style="color:#BD0058">Real number</span> The shortest length the shock can be, as a proportion of its original length. `0` means the shock will not be able to contract at all, `1` will let it contract all the way to zero length. If the shock tries to shorten more than this value allows, it will become as rigid as a normal beam.
+-   **max\_extension**: <span style="color:#BD0058">Real number</span> The longest length a shock can be, as a proportion of its original length. `0` means the shock will not be able to extend at all. `1` means the shock will be able to double its length. Higher values allow for longer extension.
+-   **precompression**: <span style="color:#BD0058">Real number</span> Changes compression or extension of the suspension when the truck spawns. This can be used to "level" the suspension of a truck if it sags in game. The default value is `1.0`.
 -   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>, <span style="color:#0B8A00">default = no options (shock is visible)</span>
-    -   **i**: This shock is invisible (default is visible).
-    -   **l** OR **L**: Stability active suspension for left side.
-    -   **r** OR **R**: Stability active suspension for right side.
-    -   **n**: Placeholder. Does nothing, parser ignores it silently.
+    -   `i`: This shock is invisible (default is visible).
+    -   `l` OR **L**: Stability active suspension for left side.
+    -   `r` OR **R**: Stability active suspension for right side.
+    -   `n`: Placeholder. Does nothing, parser ignores it silently.
 
-<!-- -->
-
-    shocks
-    ;critical damping=2*sqrt(mass*spring)
-    ;id1, id2, spring, damping, shortbound, longbound, precomp, options
-      36,   6, 200000,   10000,        0.3,       0.3,     1.0
-      37,   8, 200000,   10000,        0.3,       0.3,     1.0,       l
-      38,   2, 200000,   10000,        0.3,       0.3,     1.0,       r
+```
+shocks
+;critical damping=2*sqrt(mass*spring)
+;id1, id2, spring, damping, shortbound, longbound, precomp, options
+36,   6, 200000,   10000,        0.3,       0.3,     1.0
+37,   8, 200000,   10000,        0.3,       0.3,     1.0,       l
+38,   2, 200000,   10000,        0.3,       0.3,     1.0,       r
+```  
 
 ## Shocks2
 
@@ -812,52 +883,55 @@ Parameters:
 -   **node\_2**: <span style="color:#BD0058">Node number/name</span> The node where the shock ends.
 -   **spring\_in\_rate**: <span style="color:#BD0058">Real number</span> The 'stiffness' of the shock, applied when the shock is compressing. The higher the value, the less the shock will move for a given bump.
 -   **damping\_in\_rate**: <span style="color:#BD0058">Real number</span> The 'resistance to motion' of the shock, applied when the shock is compressing. The best value is given by this equation: <span style="font-family: monospace;">\[ 2 \* sqrt(suspended\_mass \* spring\_rate) \]</span>
--   **spring\_in\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for spring\_in\_rate. A value of 0 disables this option. 1...x as multipliers, example: <span style="font-family: monospace;">\[ maximum springrate == springrate + (factor\*springrate) \]</span>
--   **damping\_in\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for damp\_in\_rate. 0 = disabled, 1...x as multipliers, example:<span style="font-family: monospace;">\[ maximum dampingrate == springrate + (factor\*dampingrate) \]</span>
+-   **spring\_in\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for spring\_in\_rate. A value of `0` disables this option. 1...x as multipliers, example: <span style="font-family: monospace;">\[ maximum springrate == springrate + (factor\*springrate) \]</span>
+-   **damping\_in\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for damp\_in\_rate. `0` = disabled, 1...x as multipliers, example:<span style="font-family: monospace;">\[ maximum dampingrate == springrate + (factor\*dampingrate) \]</span>
 -   **spring\_out\_rate**: <span style="color:#BD0058">Real number</span> The 'stiffness' of the shock, applied when the shock is extending. The higher the value, the less the shock will move for a given bump.
 -   **damping\_out\_rate**: <span style="color:#BD0058">Real number</span> The 'resistance to motion' of the shock, applied when the shock is extending. The best value is given by this equation: <span style="font-family: monospace;">\[ 2 \* sqrt(suspended\_mass \* spring\_rate) \]</span>
--   **spring\_out\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for spring\_out\_rate. A value of 0 disables this option. 1...x as multipliers, example: <span style="font-family: monospace;">\[ maximum springrate == springrate + (factor\*springrate) \]</span>
--   **damping\_out\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for damp\_out\_rate. 0 = disabled, 1...x as multipliers, example:<span style="font-family: monospace;">\[ maximum dampingrate == springrate + (factor\*dampingrate) \]</span>
--   **max\_contraction**: <span style="color:#BD0058">Real number</span> The shortest length the shock can be, as a proportion of its original length. "0" means the shock will not be able to contract at all, "1" will let it contract all the way to zero length. If the shock tries to shorten more than this value allows, it will become as rigid as a normal beam.
--   **max\_extension**: <span style="color:#BD0058">Real number</span> The longest length a shock can be, as a proportion of its original length. "0" means the shock will not be able to extend at all. "1" means the shock will be able to double its length. Higher values allow for longer extension.
--   **precompression**: <span style="color:#BD0058">Real number</span> Changes compression or extension of the suspension when the truck spawns. This can be used to "level" the suspension of a truck if it sags in game. The default value is 1.0.
+-   **spring\_out\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for spring\_out\_rate. A value of `0` disables this option. 1...x as multipliers, example: <span style="font-family: monospace;">\[ maximum springrate == springrate + (factor\*springrate) \]</span>
+-   **damping\_out\_progression\_factor**: <span style="color:#BD0058">Real number</span> Progression factor for damp\_out\_rate. `0` = disabled, 1...x as multipliers, example:<span style="font-family: monospace;">\[ maximum dampingrate == springrate + (factor\*dampingrate) \]</span>
+-   **max\_contraction**: <span style="color:#BD0058">Real number</span> The shortest length the shock can be, as a proportion of its original length. `0` means the shock will not be able to contract at all, `1` will let it contract all the way to zero length. If the shock tries to shorten more than this value allows, it will become as rigid as a normal beam.
+-   **max\_extension**: <span style="color:#BD0058">Real number</span> The longest length a shock can be, as a proportion of its original length. `0` means the shock will not be able to extend at all. `1` means the shock will be able to double its length. Higher values allow for longer extension.
+-   **precompression**: <span style="color:#BD0058">Real number</span> Changes compression or extension of the suspension when the truck spawns. This can be used to "level" the suspension of a truck if it sags in game. The default value is `1.0`.
 -   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>, <span style="color:#0B8A00">default = no options (shock is visible)</span>
-    -   **i**: This shock is invisible (default is visible).
-    -   **s**: soft bump boundaries, use when shocks reach limiters too often and "jumprebound" (default is hard bump boundaries)
-    -   **m**: metric values for shortbound/longbound applying to the length of the beam
-    -   **M**: Absolute metric values for shortbound/longbound, settings apply without regarding to the original length of the beam. Use with caution, check ror.log for errors.
+    -   `i`: This shock is invisible (default is visible).
+    -   `s`: soft bump boundaries, use when shocks reach limiters too often and "jumprebound" (default is hard bump boundaries)
+    -   `m`: metric values for shortbound/longbound applying to the length of the beam
+    -   `M`: Absolute metric values for shortbound/longbound, settings apply without regarding to the original length of the beam. Use with caution, check `RoR.log` for errors.
 
 **IMPORTANT**:
 
--   shocks2 need at least 1500+ as a minimum damping value when using them as inbound/outbound only. (When your shocks2 truck bottoms out at spawn, damping is too low (or the springs don't support the weight of the truck)
+-   shocks2 needs at least 1500+ as a minimum damping value when using them as inbound/outbound only. (When your shocks2 truck bottoms out at spawn, damping is too low (or the springs don't support the weight of the truck)
 -   soft bump shocks need some boundary limit ( 5%+ ) to work proper as soft bump boundaries.
--   You will find any errors in the ror.log regarding to wrong values in 'M' setting or any other shock values.
+-   You will find any errors in the `RoR.log` regarding to wrong values in 'M' setting or any other shock values.
 
-<!-- -->
+```
+shocks2
+;invisible softbump shock, high value progressive for inbound, linear low values for outbound
+;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
+45,    80,    22000,   2000,            5,          5,      2000,    1500,             0,           0,        0.8,       0.1,       1,      is
 
-    shocks2
-    ;invisible softbump shock, high value progressive for inbound, linear low values for outbound
-    ;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
-       45,    80,    22000,   2000,            5,          5,      2000,    1500,             0,           0,        0.8,       0.1,       1,      is
+;visible hardbump shock, high value progressive for inbound and outbound, boundaries apply metric in meters
+;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
+45,    80,    22000,   2000,           15,         10,      22000,    2000,           15,          10,        0.5,       0.5,       1,       m
 
-    ;visible hardbump shock, high value progressive for inbound and outbound, boundaries apply metric in meters
-    ;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
-       45,    80,    22000,   2000,           15,         10,      22000,    2000,           15,          10,        0.5,       0.5,       1,       m
-
-    ;visible hardbump shock, high value progressive inbound only shock, boundaries apply metric as absolute values in meters
-    ;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
-       45,    80,    22000,   2000,            5,          5,          0,       0,            0,           0,        0.2,       2.5,       1,       M
+;visible hardbump shock, high value progressive inbound only shock, boundaries apply metric as absolute values in meters
+;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
+45,    80,    22000,   2000,            5,          5,          0,       0,            0,           0,        0.2,       2.5,       1,       M
+```
 
 **Shockswapping help:**
+
 This is an example how to get started with replacing shocks with shocks2. In this example, the shocks2 have exactly the same functionality then the original shocks. After adding the shocks2 delete the old shock and you are fine to tune/tweak your truck.
 
-    shocks
-    ;id1, id2, spring, damping, shortbound, longbound, precomp, options
-      36,   6, 200000,   10000,        0.3,       0.3,     1.0
+```
+shocks
+;id1, id2, spring, damping, shortbound, longbound, precomp, options
+36,   6, 200000,   10000,        0.3,       0.3,     1.0
 
-    shocks2
-    ;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
-       36,     6,   200000,  10000,            0,          0,    200000,   10000,             0,           0,        0.3,       0.3,     1.0
+shocks2
+;node1, node2, springin, dampin, progspringin, progdampin, springout, dampout, progspringout, progdampout, shortbound, longbound, precomp, options
+36,     6,   200000,  10000,            0,          0,    200000,   10000,             0,           0,        0.3,       0.3,     1.0
+```
 
 ## Hydros
 
@@ -869,30 +943,30 @@ Parameters:
 -   **node\_2**: <span style="color:#BD0058">Node name or number</span> The node where the hydro ends.
 -   **lengthening\_factor**: <span style="color:#BD0058">Real number</span> How much the hydro extends or contracts when a steering key is pressed (expressed as a proportion of the original length). Positive values extend when steering left and contract when steering right. Negative values do the reverse.
 -   **options** <span style="color:#666">(optional)</span> <span style="color:#BD0058">String</span>, <span style="color:#0B8A00">default = no options (hydro is visible)</span>
-    -   **i**: Makes the hydro invisible
-    -   **s**: (Land vehicles) Disables the hydro at high speed (as seen sometimes with rear steering axles on large trucks)
-    -   **a**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by aileron input.
-    -   **r**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by rudder input.
-    -   **e**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by elevator input.
-    -   **u**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and elevator input.
-    -   **v**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and elevator input.
-    -   **x**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and rudder input.
-    -   **y**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and rudder input.
-    -   **g**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of elevator input and rudder input.
-    -   **h**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse elevator input and rudder input.
+    -   `i`: Makes the hydro invisible
+    -   `s`: (Land vehicles) Disables the hydro at high speed (as seen sometimes with rear steering axles on large trucks)
+    -   `a`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by aileron input.
+    -   `r`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by rudder input.
+    -   `e`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by elevator input.
+    -   `u`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and elevator input.
+    -   `v`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and elevator input.
+    -   `x`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and rudder input.
+    -   `y`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and rudder input.
+    -   `g`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of elevator input and rudder input.
+    -   `h`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse elevator input and rudder input.
 -   **start\_delay** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span> Inertia.
 -   **stop\_delay** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span> Inertia.
 -   **start\_function** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> Inertia.
 -   **stop\_function** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> Inertia.
 
-<!-- -->
-
-    hydros
-    ;node1, node2, factor, options
-        43,   37,    -0.2
-        45,   37,     0.2
-        46,   36,     0.2,       s
-        48,   36,    -0.2,       s
+```
+hydros
+;node1, node2, factor, options
+43,   37,    -0.2
+45,   37,     0.2
+46,   36,     0.2,       s
+48,   36,    -0.2,       s
+```
 
 ## Animators
 
@@ -907,54 +981,66 @@ The parameters are:
 
 Options:
 
-- **vis** - This creates a visible animator. ( It's not necessarily needed, but can help users read the truck file.)
-- **inv** - This creates an invisible animator.
-- **airspeed** - This animator extends or contracts with the actual speed (not speedometer indicated speed) for any vehicle.
-- **vvi** - This animator extends or contracts with the vehicle's vertical velocity.
-- **altimeter100k** - This animator extends or contracts with the vehicle's altitude up to 100,000 feet.
-- **altimeter10k** - This animator extends or contracts with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
-- **altimeter1k** - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](#add_animation) be used.
-- **aoa** - This animator extends or contracts with the dashboard's angle of attack.
-- **flap** - This animator extends or contracts with the flap setting on the vehicle.
-- **airbrake** - This animator extends or contracts with the airbrake setting on the vehicle.
-- **roll** - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
-- **pitch** - This animator extends or contracts with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
-- **throttle1** - This animator extends or contracts with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
-- **rpm1** - This animator extends or contracts with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
-- **aerotorq1** - This animator extends or contracts with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
-- **aeropit1** - This animator extends or contracts with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
-- **aerostatus1** - This animator extends with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
-- **brakes** - This animator extends or contracts with the vehicle's brake status.
-- **accel** - This animator extends or contracts with the vehicle's accelerator status.
-- **clutch** - This animator extends or contracts with the vehicle's clutch status.
-- **speedo** - This animator extends or contracts with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
-- **tacho** - This animator extends or contracts with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
-- **turbo** - This animator extends or contracts with the vehicle's turbocharger PSI.
-- **parking** - This animator extends or contracts with the vehicle's parking brake status.
-- **shifterman1** - H-shift left right animator ( ```Reverse | 1-2 | 3-4 | 5-6...11-12``` as positions, scales with engine settings (maxGear)
-- **shifterman2** - H-shift forth/back animator ```Reverse-2-6-8-10-12 | 1-3-5-7-9-11``` as positions
-- **sequential** - sequential shift animator ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
-- **shifterlin** - for auto transmission animations or gearselect indicators
-- **torque** - animator to simulate engine torque, useful in addition to wheel nodearms
-- **difflock** - This animator extends or contracts with the difflock status of the truck (It only works when differentials are present in the truck.)
-- **rudderboat** - This animator extends or contracts with the steering hydro on boats.
-- **throttleboat** - This animator extends or contracts with the throttle status on boats.
-- **shortlimit:** - Add s shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
-- **longlimit:** - Add s longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. **Requires RoR 0.38.24+**
+- `vis` - This creates a visible animator. ( It's not necessarily needed, but can help users read the truck file.)
+- `inv` - This creates an invisible animator.
+- `airspeed` - This animator extends or contracts with the actual speed (not speedometer indicated speed) for any vehicle.
+- `vvi` - This animator extends or contracts with the vehicle's vertical velocity.
+- `altimeter100k` - This animator extends or contracts with the vehicle's altitude up to 100,000 feet.
+- `altimeter10k` - This animator extends or contracts with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
+- `altimeter1k` - This animator extends or contracts with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects, though for those small applications it is usually recommended that [Add\_animation](#add_animation) be used.
+- `aoa` - This animator extends or contracts with the dashboard's angle of attack.
+- `flap` - This animator extends or contracts with the flap setting on the vehicle.
+- `airbrake` - This animator extends or contracts with the airbrake setting on the vehicle.
+- `roll` - This animator extends or contracts with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
+- `pitch` - This animator extends or contracts with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
+- `throttle1` - This animator extends or contracts with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
+- `rpm1` - This animator extends or contracts with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
+- `aerotorq1` - This animator extends or contracts with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
+- `aeropit1` - This animator extends or contracts with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
+- `aerostatus1` - This animator extends with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
+- `brakes` - This animator extends or contracts with the vehicle's brake status.
+- `accel` - This animator extends or contracts with the vehicle's accelerator status.
+- `clutch` - This animator extends or contracts with the vehicle's clutch status.
+- `speedo` - This animator extends or contracts with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
+- `tacho` - This animator extends or contracts with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
+- `turbo` - This animator extends or contracts with the vehicle's turbocharger PSI.
+- `parking` - This animator extends or contracts with the vehicle's parking brake status.
+- `shifterman1` - H-shift left right animator ( ```Reverse | 1-2 | 3-4 | 5-6...11-12``` as positions, scales with engine settings (maxGear)
+- `shifterman2` - H-shift forth/back animator ```Reverse-2-6-8-10-12 | 1-3-5-7-9-11``` as positions
+- `sequential` - sequential shift animator ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
+- `shifterlin` - for auto transmission animations or gearselect indicators
+- `torque` - animator to simulate engine torque, useful in addition to wheel nodearms
+- `difflock` - This animator extends or contracts with the difflock status of the truck (It only works when differentials are present in the truck.)
+- `rudderboat` - This animator extends or contracts with the steering hydro on boats.
+- `throttleboat` - This animator extends or contracts with the throttle status on boats.
+- `shortlimit` - Adds shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#fb7">\[ Version 0.38.24+ \]</span>
+- `longlimit` - Adds longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#fb7">\[ Version 0.38.24+ \]</span>
 
-All options need to be connected by an vertical bar "\|", please refer to the example below. You can stack multiple options (like: airpseed \| vvi \| inv), but it is not recommended and may result in weird behaviors. All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff shock2. The harder you make the shock, the more engine-rpm torque effect you get. Animators can use [set\_inertia\_defaults](#set_inertia_defaults). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
+All options need to be connected by an vertical bar `|`, please refer to the example below. 
 
-    animators
-    ;node1, node2, factor, options
-        32,    26,   0.09, shifterlin | inv
-         5,    27,   0.10, accel | inv
-         5,    28,   0.10, brake | inv
-         5,    29,   0.10, clutch | inv
-        36,    41,  -0.40, speedo | inv
-    ;this one is visible
-        49,     3,  -0.90, torque | vis
-    ;this one is visible and has a short and a longbound limit
-        49,     3,  -0.25, roll | vis | shortlimit: 0.02 | longlimit: 0.05
+You can stack multiple options (like: `airpseed | vvi | inv`), but it is not recommended and may result in weird behaviors. 
+
+All animators are scaled to a maximum of -1/+1 as default coefficient, use the ratio setting to get the movement you want. 
+
+Speed or force of the animators is NOT settable, though you can alter movement speed just with simple lever mechanics. 
+
+The longer the lever arm, the slower the node will move. To tune your torque-animator to the needs of the truck, let it just work against a stiff [shocks2](#shocks2). The harder you make the shock, the more engine-rpm torque effect you get. 
+
+Animators can use [set\_inertia\_defaults](#set_inertia_defaults). Inertia helps a lot to smooth instant movement like with shifters or airbrakes.
+
+```
+animators
+;node1, node2, factor, options
+32,    26,   0.09, shifterlin | inv
+ 5,    27,   0.10, accel | inv
+ 5,    28,   0.10, brake | inv
+ 5,    29,   0.10, clutch | inv
+36,    41,  -0.40, speedo | inv
+;this one is visible
+49,     3,  -0.90, torque | vis
+;this one is visible and has a short and a longbound limit
+49,     3,  -0.25, roll | vis | shortlimit: 0.02 | longlimit: 0.05
+```
 
 # Behavior
 
@@ -972,100 +1058,100 @@ The commands section describes the "real" hydros, that is, those you command wit
 -   **Contraction key**: <span style="color:#BD0058">Function key code (decimal number)</span> A number representing the function key used to control the command beam. More than one can be controlled with the same key. (See below for the keymap.)
 -   **Extension key**: <span style="color:#BD0058">Function key code (decimal number)</span> The key used to extend the command beam.
 -   **Option flag** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Single character</span>
-    -   **i**: makes the command beam invisible.
-    -   **r**: makes the command behave like a rope or a winch (no compression strength).
-    -   **n**: Placeholder, does nothing (useful as filler when you need to specify description)
--   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing "CTRL+T" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
+    -   `i`: makes the command beam invisible.
+    -   `r`: makes the command behave like a rope or a winch (no compression strength).
+    -   `n`: Placeholder, does nothing (useful as filler when you need to specify description)
+-   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing `CTRL+T` ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 
-<!-- -->
-
-    commands
-    ;id1, id2, rate, short, long, keys, keyl, options description
-      10,  91,  0.1,   1.0,    7,    1,    2,       i Death_machine
-      12,  93,  0.1,   1.0,    7,    1,    2,       i
-      14,  90,  0.1,   1.0,    7,    1,    2
-      16,  92,  0.1,   1.0,    7,    1,    2
-     114, 122,  0.2,   1.0,   19,    3,    4
-     115, 123,  0.2,   1.0,   19,    3,    4,       n Happy_butterfly_wings
-     126, 132,  0.1,   0.1,  1.0,    5,    6,       r
+```
+commands
+;id1, id2, rate, short, long, keys, keyl, options description
+10,  91,  0.1,   1.0,    7,    1,    2,       i Death_machine
+12,  93,  0.1,   1.0,    7,    1,    2,       i
+14,  90,  0.1,   1.0,    7,    1,    2
+16,  92,  0.1,   1.0,    7,    1,    2
+114, 122,  0.2,   1.0,   19,    3,    4
+115, 123,  0.2,   1.0,   19,    3,    4,       n Happy_butterfly_wings
+126, 132,  0.1,   0.1,  1.0,    5,    6,       r
+```
 
 This is the default keymap:
 
--   1 = F1
--   2 = F2
--   3 = F3
+-   1 = `F1`
+-   2 = `F2`
+-   3 = `F3`
 
 etc. etc.
 
--   12 = F12
--   13 = CTRL+F1
--   14 = CTRL+F2
+-   12 = `F12`
+-   13 = `CTRL+F1`
+-   14 = `CTRL+F2`
 
 etc. etc.
 
--   24 = CTRL+F12
--   25 = ALT+F1
--   26 = ALT+F2
+-   24 = `CTRL+F12`
+-   25 = `ALT+F1`
+-   26 = `ALT+F2`
 
 etc. etc.
 
--   36 = ALT+F12
--   37 = CTRL+ALT+F1
--   38 = CTRL+ALT+F2
+-   36 = `ALT+F12`
+-   37 = `CTRL+ALT+F1`
+-   38 = `CTRL+ALT+F2`
 
 etc. etc.
 
--   46 = CTRL+ALT+F10
+-   46 = `CTRL+ALT+F10`
 
 **Since RoR 0.4.0.5 it is possible to use up to 84 commands. The keymap changed because of that:**
 
--   1 = F1
--   2 = F2
--   3 = F3
+-   1 = `F1`
+-   2 = `F2`
+-   3 = `F3`
 
 etc. etc.
 
--   12 = F12
--   13 = CTRL+F1
--   14 = CTRL+F2
+-   12 = `F12`
+-   13 = `CTRL+F1`
+-   14 = `CTRL+F2`
 
 etc. etc.
 
--   24 = CTRL+F12
--   25 = SHIFT+F1
--   26 = SHIFT+F2
+-   24 = `CTRL+F12`
+-   25 = `SHIFT+F1`
+-   26 = `SHIFT+F2`
 
 etc. etc.
 
--   36 = SHIFT+F12
--   37 = ALT+F1
--   38 = ALT+F2
+-   36 = `SHIFT+F12`
+-   37 = `ALT+F1`
+-   38 = `ALT+F2`
 
 etc. etc.
 
--   46 = ALT+F10
--   49 = CTRL+SHIFT+F1
--   50 = CTRL+SHIFT+F2
+-   46 = `ALT+F10`
+-   49 = `CTRL+SHIFT+F1`
+-   50 = `CTRL+SHIFT+F2`
 
 etc. etc.
 
--   59 = CTRL+SHIFT+F11
--   61 = CTRL+ALT+F1
--   62 = CTRL+ALT+F2
+-   59 = `CTRL+SHIFT+F11`
+-   61 = `CTRL+ALT+F1`
+-   62 = `CTRL+ALT+F2`
 
 etc. etc.
 
--   72 = CTRL+ALT+F12
--   73 = CTRL+SHIFT+ALT+F1
--   74 = CTRL+SHIFT+ALT+F2
+-   72 = `CTRL+ALT+F12`
+-   73 = `CTRL+SHIFT+ALT+F1`
+-   74 = `CTRL+SHIFT+ALT+F2`
 
 etc. etc
 
--   84 = CTRL+SHIFT+ALT+F12
+-   84 = `CTRL+SHIFT+ALT+F12`
 
-Note that some keymapped commands are by default assigned to Windows commands.. i.e. ALT+F4 closes the active window (in this case the RoR render window). It is best to avoid using those buttons if at all possible.
+Note that some keymapped commands are by default assigned to Windows commands.. i.e. `ALT+F4` closes the active window (in this case the RoR render window). It is best to avoid using those buttons if at all possible.
 
-**I have found that if you hold F4 then hold/press Alt, the window should stay open and the command will work.**
+**If you hold `F4` then hold/press `ALT`, the window should stay open and the command will work.**
 
 ## Commands2
 
@@ -1086,14 +1172,14 @@ The parameters are:
 -   **Shortening key**: <span style="color:#BD0058">Key code (decimal number)</span>; A number representing the function key needed to compress the command beam. More than one can be controlled with the same key. (see above for keymap)
 -   **Lengthening key**: <span style="color:#BD0058">Key code (decimal number)</span>; The key used to extend the command beam.
 -   **Option flag(s)** <span style="color:#666">(optional)</span>:
-    - **n** Filler option, does nothing.
-    - **i** Makes the command beam invisible.
-    - **r** Makes the command beam behave like a rope or a winch.
-    - **c** Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
-    - **f** Stops the command moving faster when engine revs increase.
-    - **p** Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
-    - **o** is like **p**, but it will stop in the center position.
--   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing "CTRL+T" ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
+    - `n`: Filler option, does nothing.
+    - `i`: Makes the command beam invisible.
+    - `r`: Makes the command beam behave like a rope or a winch.
+    - `c`: Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
+    - `f`: Stops the command moving faster when engine revs increase.
+    - `p`: Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
+    - `o`: is like `p`, but it will stop in the center position.
+-   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing `CTRL+T` ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 -   **Inertia: Start delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command start. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Stop delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command stop. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
 -   **Inertia: Start function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for start. See diagram below.
@@ -1103,41 +1189,45 @@ The parameters are:
 
 ![Inertia models](/images/truckfile-inertia-models.png)
 
-    commands2
-    ;id1, id2, rateShort, rateLong, short, long, keys, keyl, options Description
-      61, 113,       0.1,      0.5,   1.0,    4,    1,    2,      of
-      62, 112,       0.1,      0.5,   1.0,    4,    1,    2,     onf desc
+```
+commands2
+;id1, id2, rateShort, rateLong, short, long, keys, keyl, options Description
+61, 113,       0.1,      0.5,   1.0,    4,    1,    2,      of
+62, 112,       0.1,      0.5,   1.0,    4,    1,    2,     onf desc
 
-    commands2
-    ;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options      description startDelay, stopDelay, startFunction  stopFunction
-     115, 123,      0.10,     0.10,  1.00, 19.0,    3,    4,       n      First_Joint        0.5,       0.5,   smoothcrane revprogressiv
-     127, 133,      0.10,     0.10,  1.00, 10.5,    5,    6,       n     Second_Joint        0.7,       0.5,   smoothcrane revprogressiv
-     137, 147,      0.10,     0.10,  1.00, 10.5,    7,    8,       n      Third_Joint        0.7,       0.5,   smoothcrane revprogressiv
-     143, 148,      0.05,     0.05,  0.50,  2.0,    9,   10,       n  Extremity_Joint        0.7,       0.5,   smoothcrane revprogressiv
+commands2
+;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options      description startDelay, stopDelay, startFunction  stopFunction
+115, 123,      0.10,     0.10,  1.00, 19.0,    3,    4,       n      First_Joint        0.5,       0.5,   smoothcrane revprogressiv
+127, 133,      0.10,     0.10,  1.00, 10.5,    5,    6,       n     Second_Joint        0.7,       0.5,   smoothcrane revprogressiv
+137, 147,      0.10,     0.10,  1.00, 10.5,    7,    8,       n      Third_Joint        0.7,       0.5,   smoothcrane revprogressiv
+143, 148,      0.05,     0.05,  0.50,  2.0,    9,   10,       n  Extremity_Joint        0.7,       0.5,   smoothcrane revprogressiv
 
-    commands2
-    ;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options      description startDelay, stopDelay, startFunction  stopFunction affectEngine needsEngine
-     115, 123,      0.10,     0.10,  1.00, 19.0,    3,    4,       n      First_Joint        0.5,       0.5,   smoothcrane revprogressiv            0           1
-     127, 133,      0.10,     0.10,  1.00, 10.5,    5,    6,       n     Second_Joint        0.7,       0.5,   smoothcrane revprogressiv            0           0
-     137, 147,      0.10,     0.10,  1.00, 10.5,    7,    8,       n      Third_Joint        0.7,       0.5,   smoothcrane revprogressiv            1           1
-     143, 148,      0.05,     0.05,  0.50,  2.0,    9,   10,       n  Extremity_Joint        0.7,       0.5,   smoothcrane revprogressiv            1           0
+commands2
+;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options      description startDelay, stopDelay, startFunction  stopFunction affectEngine needsEngine
+115, 123,      0.10,     0.10,  1.00, 19.0,    3,    4,       n      First_Joint        0.5,       0.5,   smoothcrane revprogressiv            0           1
+127, 133,      0.10,     0.10,  1.00, 10.5,    5,    6,       n     Second_Joint        0.7,       0.5,   smoothcrane revprogressiv            0           0
+137, 147,      0.10,     0.10,  1.00, 10.5,    7,    8,       n      Third_Joint        0.7,       0.5,   smoothcrane revprogressiv            1           1
+143, 148,      0.05,     0.05,  0.50,  2.0,    9,   10,       n  Extremity_Joint        0.7,       0.5,   smoothcrane revprogressiv            1           0
+```
 
-Note: you may mix command/command2 sections, depending on what you want to use. example:
+Note: You may mix `commands`/`commands2` sections, depending on what you want to use. Example:
 
-    commands2
-    ;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options description
-      61, 113,       0.1,      0.5,   1.0,    4,    1,    2,      of
-      62, 112,       0.1,      0.5,   1.0,    4,    1,    2,     onf Boom
+```
+commands2
+;id1, id2, rateShort, rateLong, short, long, keyS, keyL, options description
+61, 113,       0.1,      0.5,   1.0,    4,    1,    2,      of
+62, 112,       0.1,      0.5,   1.0,    4,    1,    2,     onf Boom
 
-    commands
-    ;id1, id2,      rate,           short, long, keyS, keyL, options description
-     116, 124,       0.1,             1.0,  2.6,    3,    4
-     117, 125,       0.1,             1.0,  2.6,    3,    4,       n Underlift
+commands
+;id1, id2,      rate,           short, long, keyS, keyL, options description
+116, 124,       0.1,             1.0,  2.6,    3,    4
+117, 125,       0.1,             1.0,  2.6,    3,    4,       n Underlift
 
-    commands2
-    ;id1, id2, rateShort, rateLong, short, long, keys, keyl, options Description
-     136, 116,       0.4,      4.4,   1.0,   10,    5,    6
-     136, 117,       0.4,      4.4,   1.0,   10,    5,    6
+commands2
+;id1, id2, rateShort, rateLong, short, long, keys, keyl, options Description
+136, 116,       0.4,      4.4,   1.0,   10,    5,    6
+136, 117,       0.4,      4.4,   1.0,   10,    5,    6
+```
 
 ## Set\_inertia\_defaults
 
@@ -1148,15 +1238,16 @@ This command will set the defaults for all following commands, hydros, animators
 -   **start\_function** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Inertia function name</span>, <span style="color:#0B8A00">default = none</span>.
 -   **stop\_function** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Inertia function name</span>, <span style="color:#0B8A00">default = none</span>.
 
-<!-- -->
+```
+;set_inertia_defaults startDelay, stopDelay, startFunction  stopFunction
+set_inertia_defaults         0.5,       0.5,   smoothcrane revprogressiv
+...
+set_inertia_defaults         0.7,       0.5,   smoothcrane revprogressiv
+...
+; reset:
+set_inertia_defaults -1
+```
 
-    ;set_inertia_defaults startDelay, stopDelay, startFunction  stopFunction
-    set_inertia_defaults         0.5,       0.5,   smoothcrane revprogressiv
-    ...
-    set_inertia_defaults         0.7,       0.5,   smoothcrane revprogressiv
-    ...
-    ; reset:
-    set_inertia_defaults -1
 
 NOTE: Both commas and spaces are accepted as delimiters between parameters.
 
@@ -1170,22 +1261,24 @@ Rotators are alternate commands(hydros) that allows you to do turntables, like i
 
 Then, in a similar way to commands, comes the rate of rotation, and the numbers of the left and right function keys.
 
-New in 0.4+
+New in <span style="background-color:#fb7">\[ Version 0.4+ \]</span>
 
--   start\_delay. Real, default 0.0
--   stop\_delay. Real, default 0.0
+-   start\_delay. Real, default `0.0`
+-   stop\_delay. Real, default `0.0`
 -   start\_function.
 -   stop\_function.
--   engine\_coupling. Real, default 1.0
+-   engine\_coupling. Real, default `1.0`
 -   needs\_engine. Boolean, default false
 
 Rotators can use [inertia](#inertia).
 
 The reference nodes for the baseplate and rotator plate must also match each other in order. (i.e. if you start at the front left for the base plate and work clockwise, do the same for the rotator plate!) See the example rotators code and attached picture. Both plates must be identical!
 
-    rotators
-    ;axis1, axis2,   a1, a2, a3, a4,   b1, b2  b3, b4,   rate, keyleft, keyright, (Ver. 0.4+) start_delay, stop_delay, start_function, stop_function, engine_coupling, needs_engine 
-        29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2,                       1,          1,         smooth,        smooth,             0.5,         true
+```
+rotators
+;axis1, axis2,   a1, a2, a3, a4,   b1, b2  b3, b4,   rate, keyleft, keyright, (Ver. 0.4+) start_delay, stop_delay, start_function, stop_function, engine_coupling, needs_engine 
+29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2,                       1,          1,         smooth,        smooth,             0.5,         true
+```
 
 ![Rotators](/images/truckfile-rotators.jpg)
 
@@ -1193,31 +1286,35 @@ The reference nodes for the baseplate and rotator plate must also match each oth
 
 Same as rotators section, but more options that allow lightweight rotators, rotator force setting and tolerance (anti jitter) setting and correct description parsing. Additional options:
 
--   **Force**: the rotating power of the rotator, default is 10000000
--   **Tolerance**: anti jitter setting for lightweight rotators, default is 0.0. Rise gently to make your rotator spawn and rotate stable if needed
+-   **Force**: the rotating power of the rotator, default is `10000000`
+-   **Tolerance**: anti jitter setting for lightweight rotators, default is `0.0`. Rise gently to make your rotator spawn and rotate stable if needed
 -   **Description**: descriptive text visible in the t-screen
 
-<!-- -->
-
-    rotators2
-    ;axis1, axis2,   a1, a2, a3, a4,   b1, b2  b3, b4,   rate, keyleft, keyright,   force, tolerance,               description, (Ver. 0.4+) start_delay, stop_delay, start_function, stop_function, engine_coupling, needs_engine 
-        29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2, 1000000,     0.025, Superstructure_left/right,                       1,          1,         smooth,        smooth,             0.5,         true
+```
+rotators2
+;axis1, axis2,   a1, a2, a3, a4,   b1, b2  b3, b4,   rate, keyleft, keyright,   force, tolerance,               description, (Ver. 0.4+) start_delay, stop_delay, start_function, stop_function, engine_coupling, needs_engine 
+29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2, 1000000,     0.025, Superstructure_left/right,                       1,          1,         smooth,        smooth,             0.5,         true
+```
 
 ## Forwardcommands
 
 Forwards the command keys pressed while riding a truck to loads in close proximity. It is used to remote control the commands of a load. The load must have the "importcommands" tag.
 
-    forwardcommands
+```
+forwardcommands
+```
 
-In 0.4.0.5 and above it is possible to toggle forwardcommands on/off for the current beam object. The standard button assignment for this is CTRL+SHIFT+F.
+In 0.4.0.5 and above it is possible to toggle forwardcommands on/off for the current beam object. The standard button assignment for this is `CTRL+SHIFT+F`.
 
 ## Importcommands
 
 Enables a load to receive command keys from a manned vehicle in close proximity. The controlling vehicle must have the "forwardcommands" tag. The load only receives the keys that are pressed by the player, it must contain a commands section. Commands section for loads is defined in the same manner as in manned trucks.
 
-    importcommands
+```
+importcommands
+```
 
-In 0.4.0.5 and above it is possible to toggle importcommands on/off for the current beam object. The standard button assignment for this is CTRL+SHIFT+I.
+In 0.4.0.5 and above it is possible to toggle importcommands on/off for the current beam object. The standard button assignment for this is `CTRL+SHIFT+I`.
 
 ## Set\_beam\_defaults
 
@@ -1227,78 +1324,96 @@ Parameters:
 
 -   **Springiness**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 9000000</span>;
+        <span style="color:#0B8A00">Default: `9000000`</span>;
         The overall stiffness of a beam. The higher the value the stiffer the beam.
 -   **Damping constant**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 12000</span>;
+        <span style="color:#0B8A00">Default: `12000<`/span>;
         The resistance to motion of a beam. Higher values make the beam less likely to deform.
 -   **Deformation threshold constant**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 400000</span>;
+        <span style="color:#0B8A00">Default: `400000`</span>;
         The amount of force that must be applied to a beam before it will not return to its original length. The lower the value, the easier it is to deform.
 -   **Breaking threshold constant**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 1000000</span>;
+        <span style="color:#0B8A00">Default: `1000000`</span>;
         The amount of force that must be applied to a beam before it will break.
 -   **Beam diameter**:
         <span style="color:#666">(optional)</span>;
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 0.05 (= 5cm)</span>
+        <span style="color:#0B8A00">Default: `0.05` (= 5cm)</span>
         The visual size of a beam in meters. This setting only has a visual effect. Changing it does not modify how a truck will drive.
 -   **Beam material**
         <span style="color:#666">(optional)</span>;
         <span style="color:#BD0058">String</span>;
         <span style="color:#0B8A00">Default: <i>tracks/beam</i></span>;
-        The material used to color the beam. It must be defined in a separate _.material_ file. 
+        The material used to color the beam. It must be defined in a separate `.material` file. 
 -   **Plastic deformation coefficient**:
         <span style="color:#666">(optional)</span>;
-        <span style="color:#BD0058">Real number in range: 0.0 - 1.0</span>;
-        <span style="color:#0B8A00">Default: 0.0</span>;
+        <span style="color:#BD0058">Real number in range: `0.0` - `1.0`</span>;
+        <span style="color:#0B8A00">Default: `0.0`</span>;
         This defines how elastic the deformation of a beam is. It is explained in greater detail below.
 
-To use default values without having to type the numbers, use "-1" in each field. Example:
+To use default values without having to type the numbers, use `-1` in each field. Example:
 
-    set_beam_defaults -1, -1, -1, -1
+```
+set_beam_defaults -1, -1, -1, -1
+```
 	
 Or if you want to use the default values as a base:
-	
-    set_beam_defaults 9000000, 12000, 400000, 1000000, 0.05, tracks/beam, 0.0
+
+```	
+set_beam_defaults 9000000, 12000, 400000, 1000000, 0.05, tracks/beam, 0.0
+```
 
 Beware: Excessive spring will result in an unstable chassis. Increasing the damping will help with this, but excessive damping will crash RoR. Higher chassis mass may mitigate that problem if applicable. If you create a light car, you may want to reduce the spring, damping and deformation values to match the real, softer frame of a car, and also increase stability.
 
 Be aware that the current default values are "overspringy", or "underdamped" for stability reasons (that is why trucks often look too springy when they fall down a slope), but on softer designs you can correct this and have a better damping ratio. Missing beam textures may make RoR unstable. Example for a car:
 
-    ;set_beam_defaults spring, damping, deform,  break, diameter, material
-    set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack
+```
+;set_beam_defaults spring, damping, deform,  break, diameter, material
+set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack
+```
 
 If you want to keep a rigid chassis base and drivetrain, you can do:
 
-    beams
-    ;base chassis and drivetrain with the default high-strength settings
-    1,2
-    2,3
-    ...
-    3,4
-    ;car body, softer setting
-    set_beam_defaults 3000000, 10000, 100000, 250000
-    5,6
-    6,7
-    ...
-    ;return to stronger defaults for the rest (e.g. hydros)
-    set_beam_defaults -1, -1, -1, -1
-    ...
+```
+beams
+;base chassis and drivetrain with the default high-strength settings
+1,2
+2,3
+...
+3,4
+;car body, softer setting
+set_beam_defaults 3000000, 10000, 100000, 250000
+5,6
+6,7
+...
+;return to stronger defaults for the rest (e.g. hydros)
+set_beam_defaults -1, -1, -1, -1
+...
+```
 
 If you want to to make something deform well (like for flexbodies), use these settings for the beam group you want to deform together with the global [enable\_advanced\_deformation](#enable_advanced_deformation) option to unleash unlimited beam physics for best results in crash deformation:
 
-    ;set_beam_defaults spring, damping, deform,  break, diameter,         material, deform_coef
-    set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack,         0.9
+```
+;set_beam_defaults spring, damping, deform,  break, diameter,         material, deform_coef
+set_beam_defaults 3000000,   10000, 100000, 250000,     0.02, tracks/beamblack,         0.9
+```
 
-The plastic deformation coefficient is 0.0 by default (elastic deformation). By setting it as property you can tune the related beam group to your needs. For example, if a cube made of nodes and beams is crashed to a wall, then the placement of the nodes are displaced, altering the original shape to an irregular one. This also affects the length of beams, if nodes are displaced, the beams may conform to a new shorter or longer length, and staying that way until another outside force is applied. Valid values: 0.0 - 1.0, do not exceed that range! A plastic deformation coefficient setting of 0.0 is close to the original beam behavior of RoR 0.36.2 (quite elastic). 1.0 is close to the maximum plastic deformation you were able to reach with the former experimental enable\_advanced\_deformation patch. Never use a break setting lower then a deform setting! This will result in a beam breaking instantly when it starts deforming!
+The plastic deformation coefficient is `0.0` by default (elastic deformation). By setting it as property you can tune the related beam group to your needs. 
+
+For example, if a cube made of nodes and beams is crashed to a wall, then the placement of the nodes are displaced, altering the original shape to an irregular one. 
+
+This also affects the length of beams, if nodes are displaced, the beams may conform to a new shorter or longer length, and staying that way until another outside force is applied. 
+
+Valid values: `0.0` - `1.0`, do not exceed that range! A plastic deformation coefficient setting of `0.0` is close to the original beam behavior of RoR 0.36.2 (quite elastic). `1.0` is close to the maximum plastic deformation you were able to reach with the former experimental `enable_advanced_deformation` patch. 
+
+Never use a break setting lower then a deform setting! This will result in a beam breaking instantly when it starts deforming!
 
 ## Set\_beam\_defaults\_scale
 
-This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the scale of all following set\_beam\_defaults lines to a certain factor:
+This is not a section, but a self-contained line that can be inserted anywhere in the truck file. It changes the scale of all following `set_beam_defaults` lines to a certain factor:
 
 -   **Springiness** - Scale: 0-1
 -   **Damping constant** - Scale: 0-1
@@ -1307,16 +1422,20 @@ This is not a section, but a self-contained line that can be inserted anywhere i
 
 The default is all 1 for all arguments.
 
-    set_beam_defaults_scale 1, 1, 1, 1
+```
+set_beam_defaults_scale 1, 1, 1, 1
+```
 
 Example that scales spring to 50%:
 
-    set_beam_defaults_scale 0.5, 1, 1, 1
+```
+set_beam_defaults_scale 0.5, 1, 1, 1
+```
 
 Take note:
 
--   Unlike set\_beam\_defaults, you must always give all four arguments. Its not possible to leave some out.
--   Any set\_beam\_defaults line that is scaled will output a line to RoR.log saying "Due to using set\_beam\_defaults\_scale, this set\_beam\_defaults was interpreted as ..."
+-   Unlike `set_beam_defaults`, you must always give all four arguments. Its not possible to leave some out.
+-   Any `set_beam_defaults` line that is scaled will output a line to `RoR.log` saying `Due to using set_beam_defaults_scale, this set_beam_defaults was interpreted as ...`
 
 ## Set\_node\_defaults
 
@@ -1327,54 +1446,72 @@ The parameters are:
 
 -   **loadweight**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 0.0</span>; 
-        The default loadweight mass applied to a node. Will be overridden by a per node definition (the option "l").
+        <span style="color:#0B8A00">Default: `0.0`</span>; 
+        The default loadweight mass applied to a node. Will be overridden by a per node definition (the option `l`).
         Minimass calculation is unaffected.
 -   **friction**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 1.0</span>; 
+        <span style="color:#0B8A00">Default: `1.0`</span>; 
         The amount to multiply the node's friction by. 
-        A setting of 2 will double the friction; a setting of 0 will create a frictionless node.
+        A setting of `2` will double the friction; a setting of `0` will create a frictionless node.
 -   **volume**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 1.0</span>; 
+        <span style="color:#0B8A00">Default: `1.0`</span>; 
         The amount to multiply the node's buoyancy. 
-        A setting of 2 will double the buoyancy; a setting of 0 will create a non-buoyant node. This only applies when the node is in a fluid.
+        A setting of `2` will double the buoyancy; a setting of `0` will create a non-buoyant node. This only applies when the node is in a fluid.
 -   **surface**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: 1.0</span>; 
+        <span style="color:#0B8A00">Default: `1.0`</span>; 
         The amount to multiply the node's surface by. 
-        A setting of 2 will double the surface; a setting of 0 will create a node with no surface. This only applies when the node is in a fluid.
+        A setting of `2` will double the surface; a setting of `0` will create a node with no surface. This only applies when the node is in a fluid.
 -   **options**:
         <span style="color:#666">(optional)</span>;
         <span style="color:#BD0058">Options string</span>;
-        Set any node-option property as default. You do not need to set the **"l"** property if a default loadweight is set.
+        Set any node-option property as default. You do not need to set the `l` property if a default loadweight is set.
 
-Important: Buoyancy volume and drag surface settings only have effect on fluids defined in groundmodels.cfg (mud definitions), so right now they do not work with the standard RoR Water.
+Important: Buoyancy volume and drag surface settings only have effect on fluids defined in `ground_models.cfg` (mud definitions), so right now they do not work with the standard RoR Water.
 
 To use default values without having to type the numbers, use "-1" in each field. For example:
 
-    set_node_defaults -1, -1, -1, -1
+```
+set_node_defaults -1, -1, -1, -1
+```
 
 Beware: Excessive friction, surface and volume will result in an unstable node/beam structure when driving in mud. If your wheels/truck explodes when driving from solid ground onto mud, lower the friction and/or volume setting. If a wheel cracks while in the mud, lower the volume and/or the surface setting.
 
-    ; syntax is set_node_defaults loadweight, traction, buoyancy, surface
-    ;mud tire example, unloaded, increased traction, higher buoyancy, higher drag surface and set to extra per node buoyancy
-    set_node_defaults -1, 1.1, 5, 1.25, b
+Syntax is `set_node_defaults loadweight, traction, buoyancy, surface`
 
-    ;chassis, loaded with 5 kg per node, reduced traction, no buoyancy, higher drag surface
-    set_node_defaults 5, 0.5, 0, 2
+Mud tire example, unloaded, increased traction, higher buoyancy, higher drag surface and set to extra per node buoyancy:
 
-    ; tracks example, high traction, low buoyancy, low surface, loaded with 50 kg per node
-    set_node_defaults 50, 1.2, 0.3, 0.5
+```
+set_node_defaults -1, 1.1, 5, 1.25, b
+```
 
-    ;steam boat paddlewheel, loaded with 75 kg per node, no traction, no buoyancy, high drag surface
-    set_node_defaults 75, 0, 0, 3
+Chassis, loaded with `5` kg per node, reduced traction, no buoyancy, higher drag surface:
 
-    ;contactless with default settings
-    set_node_defaults -1, -1, -1, -1, c
+```
+set_node_defaults 5, 0.5, 0, 2
+```
 
-The new **"L"** node option will help to understand and use set\_node\_defaults , **"p"** node option will boost fps even with tracked vehicles on slower computers. -&gt; [nodes](#nodes)
+Tracks example, high traction, low buoyancy, low surface, loaded with `50` kg per node:
+
+```
+set_node_defaults 50, 1.2, 0.3, 0.5
+```
+
+Steam boat paddlewheel, loaded with `75` kg per node, no traction, no buoyancy, high drag surface:
+
+```
+set_node_defaults 75, 0, 0, 3
+```
+
+Ccontactless with default settings:
+
+```
+set_node_defaults -1, -1, -1, -1, c
+```
+
+The new `L` node option will help to understand and use `set_node_defaults`, `p` node option will boost fps even with tracked vehicles on slower computers. See: [nodes](#nodes)
 
 ## Enable\_advanced\_deformation
 
@@ -1384,7 +1521,9 @@ Use this only once per truck file, it's a general activation and setting of adva
 
 Truck file syntax:
 
-    enable_advanced_deformation
+```
+enable_advanced_deformation
+```
 
 This will remove any limit and thresholds from the [set\_beam\_defaults](#set_beam_defaults) processing. Its recommended to use it for the development of properly deforming flexbody node\\beam structures.
 
@@ -1392,22 +1531,26 @@ This will remove any limit and thresholds from the [set\_beam\_defaults](#set_be
 
 Enables collision between wheels and the contactable textured surfaces of a truck.
 
-    rollon
+```
+rollon
+```
 
 ## Contacters
 
 The contacters section lists the nodes that may contact with cab triangles. This concerns only contacts with other trucks or loads. You can easily omit this section at first.
 
-    contacters
-    34
-    18
-    20
-    22
-    24
-    26
-    28
-    30
-    32
+```
+contacters
+34
+18
+20
+22
+24
+26
+28
+30
+32
+```
 
 ## Triggers
 
@@ -1422,89 +1565,91 @@ Parameters:
 -   **shortbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at shortbound (1 - 48 <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
 -   **longbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at longbound (1 - 48 <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
 -   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
-    -   **i**: Makes the trigger beam invisible
-    -   **c**: Set the boundary calculation to command-style, just for convenience
-    -   **x**: Set the trigger to disabled on startup ( default = enabled ), will get useless after first activation by a triggerblocker
-    -   **b**: Blocks other commandkeys, shortkey at shortbound, longkey at longbound. If longkey is set to -1, shortkey will get blocked at short and at longbound. It does not block of manual user inputs, just triggers.
-    -   **B**: Blocks other triggers when triggered, a number in shortkey represent the number of triggers to block at shortbound , a number in longkey the number of triggers to release at longbound.
-    -   **A**: <span style="background-color:#fb7">\[ Version 0.38.23+ \]</span> Same as the Blocker "B", but inverted activation. Will block while between shotbound and longbound a number of triggers (shortkey) and release if not (longkey).
-    -   **s**: Switches commandnumbers when triggered set in shortkey and longkey. Good to build wipers or similar, see examples
-    -   **h**: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= -3 ); Unlocks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
-    -   **H**: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= -3 ); Locks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
-    -   **t**: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Continuous trigger, delivers a value of "0" below and at shortbound, a value of "1" over and at longbound. Between these boundaries, this trigger will deliver a value between "0" and "1" (linear), depending on the current position. See "engine trigger" for details on how to use this.
-    -   **E**: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a "t"-trigger to get precise, continous control. Works as follows:
-        -   ''' *(remapped)* shortbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the engine to be controlled, starting with "0". As RoR only supports one engine per vehicle at the moment, always put "0" here.
+    -   `i`: Makes the trigger beam invisible
+    -   `c`: Set the boundary calculation to command-style, just for convenience
+    -   `x`: Set the trigger to disabled on startup ( default = `enabled` ), will get useless after first activation by a triggerblocker
+    -   `b`: Blocks other commandkeys, shortkey at shortbound, longkey at longbound. If longkey is set to `-1`, shortkey will get blocked at short and at longbound. It does not block of manual user inputs, just triggers.
+    -   `B`: Blocks other triggers when triggered, a number in shortkey represent the number of triggers to block at shortbound , a number in longkey the number of triggers to release at longbound.
+    -   `A`: <span style="background-color:#fb7">\[ Version 0.38.23+ \]</span> Same as the Blocker `B`, but inverted activation. Will block while between shotbound and longbound a number of triggers (shortkey) and release if not (longkey).
+    -   `s`: Switches commandnumbers when triggered set in shortkey and longkey. Good to build wipers or similar, see examples
+    -   `h`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Unlocks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
+    -   `H`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Locks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
+    -   `t`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Continuous trigger, delivers a value of `0` below and at shortbound, a value of `1` over and at longbound. Between these boundaries, this trigger will deliver a value between `0` and `1` (linear), depending on the current position. See "engine trigger" for details on how to use this.
+    -   `E`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a `t`-trigger to get precise, continous control. Works as follows:
+        -   ''' *(remapped)* shortbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the engine to be controlled, starting with `0`. As RoR only supports one engine per vehicle at the moment, always put `0` here.
         -   ''' *(remapped)* longbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the function you want to control:
-            -   **0**: Clutch
-            -   **1**: Brake
-            -   **2**: Accelerator
-            -   **3**: RPM Control (not available at the moment)
-            -   **4**: Shift Up (use no "t"-trigger here). Will shift up on short and longbound.
-            -   **5**: Shift Down (use no "t"-trigger here). Will shift down on short and longbound.
-    -   **boundary\_timer** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; Represents the time a boundarycheck is disabled for trigger switches ( option "s" ) to avoid lockup.
+            -   `0`: Clutch
+            -   `1`: Brake
+            -   `2`: Accelerator
+            -   `3`: RPM Control (not available at the moment)
+            -   `4`: Shift Up (use no "t"-trigger here). Will shift up on short and longbound.
+            -   `5`: Shift Down (use no "t"-trigger here). Will shift down on short and longbound.
+    -   **boundary\_timer** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = `1.0`</span>; Represents the time a boundarycheck is disabled for trigger switches ( option `s` ) to avoid lockup.
 
-<!-- -->
+```
+triggers
+;id1, id2,  short,  long, shortbound action, longbound action, options
+; a trigger between node 11 and 109 triggering commandkey 13 ( ctrl-F1) while in shortbound -10% of original length
+; and commandkey 14 (ctrl-F2) when in longbound +10% of original length
+11, 109,  0.100,  0.100,      13,      14
 
-    triggers
-    ;id1, id2,  short,  long, shortbound action, longbound action, options
-    ; a trigger between node 11 and 109 triggering commandkey 13 ( ctrl-F1) while in shortbound -10% of original length
-    ; and commandkey 14 (ctrl-F2) when in longbound +10% of original length
-      11, 109,  0.100,  0.100,      13,      14
+; a trigger between using command boundaries, does exactly the same then the one above
+11, 109,  0.900,  1.100,      13,      14, c
 
-    ; a trigger between using command boundaries, does exactly the same then the one above
-      11, 109,  0.900,  1.100,      13,      14, c
+; a trigger blocked at startup, needs to be released by a triggerblocker once to work as a normal trigger,
+; good for simple robotic programming
+11, 109,  0.900,  1.100,      13,      14, cx
 
-    ; a trigger blocked at startup, needs to be released by a triggerblocker once to work as a normal trigger,
-    ; good for simple robotic programming
-      11, 109,  0.900,  1.100,      13,      14, cx
+; special case triggers: cmdkeyblocker, triggerblocker, triggerswitch
+; a commandkeyblocker blocking commandkeys when active, 15 (ctrl-F3) at shortbound and  16 (ctrl-F4) at longbound.
+11, 109,  0.900,  1.100,      15,      16, cb
 
-    ;special case triggers: cmdkeyblocker, triggerblocker, triggerswitch
-    ; a commandkeyblocker blocking commandkeys when active, 15 (ctrl-F3) at shortbound and  16 (ctrl-F4) at longbound.
-      11, 109,  0.900,  1.100,      15,      16, cb
+; a commandkeyblocker blocking one commandkey when active, 15 (ctrl-F3) at shortbound and  at longbound.
+11, 109,  0.900,  1.100,      15,      -1, cb
 
-    ; a commandkeyblocker blocking one commandkey when active, 15 (ctrl-F3) at shortbound and  at longbound.
-      11, 109,  0.900,  1.100,      15,      -1, cb
+; a triggerblocker blocking the following triggers from checking, blocking 5 at shortbound and releasing 4 at longbound, 
+; Most times it will block and release the same amount of triggers, but its good for robotics programming to set separate amounts in some cases.
+11, 109,  0.900,  1.100,       5,       4, cB
 
-    ; a triggerblocker blocking the following triggers from checking, blocking 5 at shortbound and releasing 4 at longbound, 
-    ; Most times it will block and release the same amount of triggers, but its good for robotics programming to set separate amounts in some cases.
-      11, 109,  0.900,  1.100,       5,       4, cB
+; a triggerswitch switching commandkeys when active, also for user inputs,  will switch F1 to F2 and vice versa every time it hits short or longbound,
+;  release timer is set to 1 second by default, before it can be triggered again.
+11, 109,  0.900,  1.100,       1,       2, cs
 
-    ; a triggerswitch switching commandkeys when active, also for user inputs,  will switch F1 to F2 and vice versa every time it hits short or longbound,
-    ;  release timer is set to 1 second by default, before it can be triggered again.
-      11, 109,  0.900,  1.100,       1,       2, cs
+; a triggerswitch switching commandkeys when active, also for user inputs,  will switch F1 to F2 and vice versa every time it hits short or longbound,
+; release timer is set to 3 seconds.
+11, 109,  0.900,  1.100,       1,       2, cs 3.0
 
-    ; a triggerswitch switching commandkeys when active, also for user inputs,  will switch F1 to F2 and vice versa every time it hits short or longbound,
-    ; release timer is set to 3 seconds.
-      11, 109,  0.900,  1.100,       1,       2, cs 3.0
-
-    ;  an enginetrigger, controlling the accelerator (option "2") of engine nr. 0. Will give zero throttle in initial position (shortbound), full throttle at longbound, and a linear crossover in between.
-      11, 109,  1.000,  1.500,       0,       2, ctE
+;  an engine trigger, controlling the accelerator (option "2") of engine nr. 0. Will give zero throttle in initial position (shortbound), full throttle at longbound, and a linear crossover in between.
+11, 109,  1.000,  1.500,       0,       2, ctE
+```
 
 ## Lockgroups
 
-This section defines lockgroups for nodes. It has to be AFTER the nodes section
+This section defines lockgroups for nodes. It has to be AFTER the [nodes](#nodes) section
 
-Lockgroup Default = -1, all nodes can be locked by standard hooks with no special lockgroup set
+Lockgroup Default = `-1`, all nodes can be locked by standard hooks with no special lockgroup set
 
 **Important:**
 
--   *Special lockgroup*: 9999 skip the node from any locking attempts
+-   *Special lockgroup*: `9999` skip the node from any locking attempts
 -   *POSITIVE* lockgroups are free to use, the negative range is reserved for RoR built in standard lock-setups.
 
-<!-- -->
+```
+lockgroups
+;lockgroup,  nodeIDs
+; node 5 added to lockgroup 1
+1,        5
+;nodes 6, 7, 9 added to lockgroup 2
+2,  7, 6, 9
+```
 
-    lockgroups
-    ;lockgroup,  nodeIDs
-    ; node 5 added to lockgroup 1
-             1,        5
-    ;nodes 6, 7, 9 added to lockgroup 2
-             2,  7, 6, 9
+Performance boost option (needs to be BEFORE the [nodes](#nodes) section):
 
-Performance boost option ( needs to be BEFORE the nodes section ):
+```
+lockgroup_default_nolock
+```
 
-    lockgroup_default_nolock
-
-This will set all nodes to 9999 (deny locking) of the truck by default.
+This will set all nodes to `9999` (deny locking) of the truck by default.
 
 Any lockgroups defined later in the truck will override this setting for the specified node.
 
@@ -1516,36 +1661,36 @@ Allows you to define exactly where standard hooks can lock to your truck and boo
 
 This section defines special options for hooknodes setup in the nodes section. It has to be placed after the nodes section.
 
--   *id*: A node number to identify the hooknode the options apply to. The node number needs to exist and it has to be a hooknode with option *h*
+-   *id*: A node number to identify the hooknode the options apply to. The node number needs to exist and it has to be a hooknode with option `h`
 -   *options*: no order needed, just place what you need, here is a list of possible options:
-    -   *hookrange:* The range a hook scans for a valid node to lock to, Default: 0.4
-    -   *speedcoef:* The speed a hook pulls the node to lock into locking position. Default: 1.0
-    -   *maxforce:* The force limit where a locking attempt is canceld. Default: 100000000.0
-    -   *hookgroup:* The hookgroup a hook belongs to. Standard hook: -1 (Default), Reserved for autolock: -2, any special hookgroup for triggerd hooks -3 or less. Only signed integer are valid. Keyword variants: *hookgroup / hgroup*
-    -   *lockgroup:* The lockgroup a hook belongs to. Lock everything: -1 (Default), all other numbers the hook will lock only to a node with the same lockgroup set. Only signed integer are valid. Keyword variants: *lockgroup / lgroup*
-        -   Lockgroup 9999 is reseved for nodes that are skipped while locking attempts. Do NOT use lockgroup 9999 with a hook.
-    -   *timer:* Delay timer for autolocking hooks before they attempt to relock. Default: 5.0. Only positive settings are valid
-    -   *self-lock:* This hook can lock to the truck its placed on too. Keyword variants: *self-lock / selflock / self\_lock*
-    -   *auto-lock:* This hook will lock automatically to valid nodes in range. Keyword variants: *auto-lock / autolock / auto\_lock:*
-    -   *nodisable:* When the force limit defined by maxforce is exceed the locking attempt will NOT disable the linkage beam, but the hook node will stop pulling the node to lock. Works similar to ties then. Variants: *nodisable / no-disable / no\_disable*
-    -   *shortlimit*: Minimum range in meters the hook will pull the node to lock to. Default = 0.0. Keyword variants: *shortlimit / short\_limit*
-    -   *norope*: Linkage between hook and node to be locked will act like a beam and not like a rope. Variants: *norope / no-rope / no\_rope*
-    -   *visible*: Linkage between hook and node will be visible while locking process and locked. Variants: *visible / vis*
+    -   `hookrange:` The range a hook scans for a valid node to lock to, Default: `0.4`
+    -   `speedcoef:` The speed a hook pulls the node to lock into locking position. Default: `1.0`
+    -   `maxforce:` The force limit where a locking attempt is canceled. Default: `100000000.0`
+    -   `hookgroup:` The hookgroup a hook belongs to. Standard hook: `-1` (Default), Reserved for autolock: `-2`, any special hookgroup for triggerd hooks `-3` or less. Only signed integer are valid. Keyword variants: *`hookgroup` / `hgroup`*
+    -   `lockgroup:` The lockgroup a hook belongs to. Lock everything: `-1` (Default), all other numbers the hook will lock only to a node with the same lockgroup set. Only signed integer are valid. Keyword variants: *`lockgroup` / `lgroup`*
+        - **Lockgroup `9999` is reseved for nodes that are skipped while locking attempts. Do NOT use lockgroup `9999` with a hook.**
+    -   `timer:` Delay timer for autolocking hooks before they attempt to relock. Default: `5.0`. Only positive settings are valid
+    -   `self-lock:` This hook can lock to the truck its placed on too. Keyword variants: *`self-lock`/ `selflock` / `self_lock`*
+    -   `auto-lock:` This hook will lock automatically to valid nodes in range. Keyword variants: *`auto-lock` / `autolock` / `auto_lock:`*
+    -   `nodisable:` When the force limit defined by maxforce is exceed the locking attempt will NOT disable the linkage beam, but the hook node will stop pulling the node to lock. Works similar to ties then. Variants: *`nodisable` / `no-disable` / `no_disable`*
+    -   `shortlimit`: Minimum range in meters the hook will pull the node to lock to. Default = `0.0`. Keyword variants: *`shortlimit` / `short_limit`*
+    -   `norope`: Linkage between hook and node to be locked will act like a beam and not like a rope. Variants: *`norope` / `no-rope` / `no_rope`*
+    -   `visible`: Linkage between hook and node will be visible while locking process and locked. Variants: *`visible` / `vis`*
 
-<!-- -->
+```
+hooks
+; id, options
+;standard hook, increased scanrange
+144, hookrange: 2.15
+;as above, but will cancel locking attempt if pulling force exceeds 100k
+145, hookrange: 2.15, maxforce: 100000
+;triggered hook, locks 50% faster, is autlocking with a delay-timer of 7.5 seconds, belongs to hookgroup 12 ( for tiggers with option ''h'' or ''H'' ) and will only lock to nodes with lockgroup 2 set
+146, speedcoef: 1.5, auto-lock, timer: 7.5, hookgroup: -12, lockgroup: 2
+```
 
-    hooks
-    ; id, options
-    ;standard hook, increased scanrange
-     144, hookrange: 2.15
-    ;as above, but will cancel locking attempt if pulling force exceeds 100k
-     145, hookrange: 2.15, maxforce: 100000
-    ;triggered hook, locks 50% faster, is autlocking with a delay-timer of 7.5 seconds, belongs to hookgroup 12 ( for tiggers with option ''h'' or ''H'' ) and will only lock to nodes with lockgroup 2 set
-     146, speedcoef: 1.5, auto-lock, timer: 7.5, hookgroup: -12, lockgroup: 2
+Standard hooks toggle with `L`, autolock and triggerd hooks detach with `ALT+L` manually.
 
-Standard hooks toggle with **L**, autolock and triggerd hooks detach with **ALT+L** manually.
-
-Hooks with hookgroups < -2 can only be locked automatically or by a trigger.
+Hooks with hookgroups < `-2` can only be locked automatically or by a trigger.
 
 ## Slide Nodes
 
@@ -1561,31 +1706,29 @@ A slidenode without a rail is invalid, naturally.
 Parameters:
 
 -   **slide\_node**: <span style="color:#BD0058">Node number/name</span>; A node to become slide-node.
--   **rail\_nodes (<u>sequence</u>)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Comma-separated list of nodes</span>; <span style="color:#0B8A00">default = none, expects <span style="font-family: monospace;">**railgroup\_id:**</span> to be used</span>; Nodes forming a rail the node can slide along. Each two consecutive nodes from this list must have a beam defined between them; for example a list containing {7, 8, 9, 10} would require beams {7 - 8}, {8 - 9}, {9 - 10} to be defined.
--   **s (spring\_rate)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 's' or 'S'</span>; <span style="color:#0B8A00">default = 9000000</span>; Force that holds the node to the rail (in N/m). Write as: s10.98
--   **b (break\_force)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 'b' or 'B'</span>; <span style="color:#0B8A00">default = infinity (never)</span>; Force at which the node will separate from the rail (in N). Write as: b10.98
--   **t (tolerance)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 't' or 'T'</span>; <span style="color:#0B8A00">default = 0</span>; Distance from the rail before rail forces are applied to the node.
--   **g (railgroup\_id)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal prefixed with 'g' or 'G'</span>; <span style="color:#0B8A00">default = none, expects <span style="font-family: monospace;">**rail\_nodes:**</span> to be used.</span>; <span style="font-family: monospace;">**railgroup**</span> defining a rail. Write as: g2
--   **r (attachment\_rate)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'r' or 'R'</span>; <span style="color:#0B8A00">default = disabled</span>; Attachment rate in seconds. Write as: r2.3
--   **d (max\_attachment\_distance)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'd' or 'D'</span>; <span style="color:#0B8A00">default = 0.1</span>; Maximum attachment Distance in meters. Write as: d0.23
+-   **rail\_nodes (<u>sequence</u>)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Comma-separated list of nodes</span>; <span style="color:#0B8A00">default = none, expects <span style="font-family: monospace;">**railgroup\_id:**</span> to be used</span>; Nodes forming a rail the node can slide along. Each two consecutive nodes from this list must have a beam defined between them; for example a list containing `7, 8, 9, 10` would require beams `7` - `8`, `8` - `9`, `9` - `10` to be defined.
+-   **s (spring\_rate)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 's' or 'S'</span>; <span style="color:#0B8A00">default = 9000000</span>; Force that holds the node to the rail (in N/m). Write as: `s10.98`
+-   **b (break\_force)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 'b' or 'B'</span>; <span style="color:#0B8A00">default = infinity (never)</span>; Force at which the node will separate from the rail (in N). Write as: `b10.98`
+-   **t (tolerance)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 't' or 'T'</span>; <span style="color:#0B8A00">default = `0`</span>; Distance from the rail before rail forces are applied to the node.
+-   **g (railgroup\_id)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal prefixed with 'g' or 'G'</span>; <span style="color:#0B8A00">default = `none`, expects <span style="font-family: monospace;">**rail\_nodes:**</span> to be used.</span>; <span style="font-family: monospace;">**railgroup**</span> defining a rail. Write as: `g2`
+-   **r (attachment\_rate)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'r' or 'R'</span>; <span style="color:#0B8A00">default = disabled</span>; Attachment rate in seconds. Write as: `r2.3`
+-   **d (max\_attachment\_distance)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'd' or 'D'</span>; <span style="color:#0B8A00">default = 0.1</span>; Maximum attachment Distance in meters. Write as: `d0.23`
 -   **q (quantity)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'q' or 'Q'</span>; <span style="color:#0B8A00">default = infinity</span>; Ignored by parser. Original meaning: number of beams the node can slide along.
--   **c (attachment\_constraints)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Two character string: \[c|C\] + \[a|f|s|n\]</span>; <span style="color:#0B8A00">default = none</span>
+-   **c (attachment\_constraints)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Two character string: \[c|C\] + \[a|f|s|n\]</span>; <span style="color:#0B8A00">default = `none`</span>
     -   **a**: Attach all.
     -   **f**: Attach foreign.
     -   **s**: Attach self.
     -   **n**: Attach none.
 
-<!-- -->
+```
+slidenodes
+;id, node id list
+1,  7, 8, 9, 10
 
-    slidenodes
-    ;id, node id list
-      1,  7, 8, 9, 10
-
-    slidenodes
-    ;id, node id list, spring,  break, tolerance
-      1,  7, 8, 9, 10,  s9000, b10000,      t0.1
-
-more info: <http://forum.rigsofrods.com/index.php?topic=23005.msg248986#msg248986>
+slidenodes
+;id, node id list, spring,  break, tolerance
+1,  7, 8, 9, 10,  s9000, b10000,      t0.1
+```
 
 ## slidenode_connect_instantly
 
@@ -1598,27 +1741,29 @@ Allows specifying a separate rail which can be linked to slidenode(s) later.
 Parameters:
 
 -   **rail\_group\_id**: <span style="color:#BD0058">Positive decimal number</span>; ID of this railgroup.
--   **rail\_nodes (<u>sequence</u>)**: <span style="color:#BD0058">Comma-separated list of \[nodes/node-ranges\]</span>; Nodes forming a rail the node can slide along. Each two consecutive nodes from this list must have a beam defined between them; for example a list containing {7, 8, 9, 10} would require beams {7 - 8}, {8 - 9}, {9 - 10} to be defined. Ranges are supported (for example: 1-10)
+-   **rail\_nodes (<u>sequence</u>)**: <span style="color:#BD0058">Comma-separated list of \[nodes/node-ranges\]</span>; Nodes forming a rail the node can slide along. Each two consecutive nodes from this list must have a beam defined between them; for example a list containing `7, 8, 9, 10` would require beams `7` - `8`, `8` - `9`, `9` - `10` to be defined. Ranges are supported (for example: `1-10`)
 
-<!-- -->
+```
+railgroups
+;railgroupID, node id list
+1,  7, 8, 9, 10
 
-    railgroups
-    ;railgroupID, node id list
-               1,  7, 8, 9, 10
-
-    slidenodes
-    ;id, railgroupID
-      1,          g1
+slidenodes
+;id, railgroupID
+1,          g1
+```
 
 To create a looped rail group, simply make the last node of the list the same as the first node of the list. Please note that all segments must have beams defined.
 
-    railgroups
-    ;railgroupID, node id list
-               1,  7, 8, 9, 7
+```
+railgroups
+;railgroupID, node id list
+1,  7, 8, 9, 7
 
-    slidenodes
-    ;id, railgroupID
-      1,          g1
+slidenodes
+;id, railgroupID
+1, g1
+```
 
 ## Detacher\_group
 
@@ -1626,128 +1771,136 @@ This section defines group of the beams that are deleted if one beam in this gro
 
 **Valid detacher group numbers:** any positive or negative integer
 
-**Valid end lines:** Detacher\_group 0, Detacher\_group end
+**Valid end lines:** `detacher_group 0`, `detacher_group end`
 
-Group 0 its the default setting and means **no group** set and is used to end groups.
+Group `0` its the default setting and means **no group** set and is used to end groups.
 
 Use positive group numbers for master beams and negative ones for minor beams. A master detacher-beam breaking will brake all beams with the sames group number and all minor beams with the same negative group number (abs(detacher\_group)). A minor beam will not break any other beams at all, its just set to break with a group of beams if a master detacher-beam in its group breaks.
 
-    beams
-    detacher_group 1
-      0,    1
-    detacher_group 0
-      2,    4
-      3,    5
-    detacher_group 1
-      6,    8
-      7,    9
-     10,   12
-    detacher_group 2
-     11,   13
-    detacher_group 0
-     22,   14
-    detacher_group -1
-     16,   17
-    detacher_group 0
+```
+beams
+detacher_group 1
+0,    1
+detacher_group 0
+2,    4
+3,    5
+detacher_group 1
+6,    8
+7,    9
+10,   12
+detacher_group 2
+11,   13
+detacher_group 0
+22,   14
+detacher_group -1
+16,   17
+detacher_group 0
+```
      
 
-This will add beams 0,1 + 6,8 + 7,9 + 10,12 to group 1, beam 16,17 to group 1(minor) and beam 11, 13 to group 2. Breaking beam 16,17 will not break any other beam. Breaking beam 6,8 i.e, will break and disable beams 0,1 + 7,9 + 10,12 + 16,17 too in the same simulation cycle.
+This will add beams `0,1` + `6,8` + `7,9` + `10,12` to group `1`, beam `16,17` to group `1(minor)` and beam `11,13` to group `2`. Breaking beam `16,17` will not break any other beam. Breaking beam `6,8` i.e, will break and disable beams `0,1` + `7,9` + `10,12` + `16,17` too in the same simulation cycle.
 
 ## Ropes
 
-Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the 'O' key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
+Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the `O` key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
 
-Option: **i** for invisible ( 0.38.18+ )
+Option: `i` for invisible <span style="background-color:#fb7">\[ Version 0.38.18+ \]</span>
 
-    ropes
-    ;order is important: root->end
-    116,134
-    130,136, i
-    116,135
-    130,137
+```
+ropes
+;order is important: root->end
+116,134
+130,136, i
+116,135
+130,137
+```
 
 ## Fixes
 
-Fixes are nodes that are fixed in place. That means that once put in place in the terrain, they will never move, whatever happens. This is useful for making fixed scenery elements from beams, like bridges. Just add the node number that you want to fix.
+Fixes are nodes that are fixed in place. That means that once put in place in the terrain, they will never move, whatever happens. 
 
-    fixes
-    2
-    3
-    12
+This is useful for making fixed scenery elements from beams, like bridges. 
+
+Just add the node number that you want to fix.
+
+```
+fixes
+2
+3
+12
+```
 
 ## Minimass
 
 This sets the minimum node mass. Useful for very light vehicles with lots of nodes (e.g. small airplanes).
 
-(Tip: When using a very low minimass, i.e. below 10, you should use a low damping value in the [Beam defaults](#set_beam_defaults) in your beams section)
+(Tip: When using a very low minimass, i.e. below `10`, you should use a low damping value in the [Beam defaults](#set_beam_defaults) in your beams section)
 
-    minimass
-    10.0
+```
+minimass
+10.0
+```
 
 ## Ties
 
 Ties are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain.
 
-Like ropes, ties grab the nearest reachable ropable node with the 'O' key. But there is a twist: unlike ropes, they disappear when not attached (because they have no extremity node at rest) and they automatically shorten until the extension forces reaches a threshold. They are very useful to solidly strap a load to a chassis.
+Like ropes, ties grab the nearest reachable ropable node with the `O` key. But there is a twist: unlike ropes, they disappear when not attached (because they have no extremity node at rest) and they automatically shorten until the extension forces reaches a threshold. They are very useful to solidly strap a load to a chassis.
 
 Parameters:
 
 -   **Root node**: <span style="color:#BD0058">Node number/name</span>; The root node (the starting point of the beam)
 -   **Max. reach length**: <span style="color:#BD0058">Real number</span>; The maximum reach length
 -   **Auto shorten rate**: <span style="color:#BD0058">Real number</span>; The rate of auto-shortening
--   **Min. length**: <span style="color:#BD0058">Real number</span>; The shortest length possible (proportional to original length; 1.0 means no shortening)
--   **Max. length**: <span style="color:#BD0058">Real number</span>; The greatest length possible (proportional to original length; 1.0 means no extension; recommended you keep it as 1.0).
--   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = n</span>
-    -   **n**: Visible (default)
-    -   **i**: Invisible.
+-   **Min. length**: <span style="color:#BD0058">Real number</span>; The shortest length possible (proportional to original length; `1.0` means no shortening)
+-   **Max. length**: <span style="color:#BD0058">Real number</span>; The greatest length possible (proportional to original length; `1.0` means no extension; recommended you keep it as `1.0`).
+-   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = `n`</span>
+    -   `n`: Visible (default)
+    -   `i`: Invisible.
 -   **Max. stress** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 12000</span>; The force (in Newtons) when the ties stop to shorten.
--   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = none</span>
+-   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = `none`</span>
 
-<!-- -->
-
-    ties
-    ;root, max len, rate, short, long (, flag, max_stress, group)
-       58,     1.5,  0.5,   0.3,  1.0
-       62,     1.5,  0.5,   0.3,  1.0
-       59,     1.5,  0.5,   0.3,  1.0
-       63,     1.5,  0.5,   0.3,  1.0, n, 5000, 2
+```
+ties
+;root, max len, rate, short, long (, flag, max_stress, group)
+58,     1.5,  0.5,   0.3,  1.0
+62,     1.5,  0.5,   0.3,  1.0
+59,     1.5,  0.5,   0.3,  1.0
+63,     1.5,  0.5,   0.3,  1.0, n, 5000, 2
+```
 
 ## Ropables
 
 This section lists the nodes that can be caught by ropes or ties. Good use is to define some ropable nodes at the front and back of the truck to allow towing the truck.
 
-    ropables
-    ;node-id, group, multilock
-           0,     0,         0
-           1,    -1
+```
+ropables
+;node-id, group, multilock
+0,     0,         0
+1,    -1
+```
 
 The group and multilock arguments are only available in RoR 0.36.3 and later.
 
 -   Group:
-    -   Default: -1 = all groups.
+    -   Default: `-1` = all groups.
 -   Multilock:
-    -   0=disable, 1=enable: This specifies if this ropable can be locked by many ties/ropes.
+    -   `0`=disable, `1`=enable: This specifies if this ropable can be locked by many ties/ropes.
 
 ## Particles
 
-This enables/disables a particle cannon in the game (use the 'G' key).
+This enables/disables a particle cannon in the game (with the `G` key).
 
-    particles
-    ;source, back reference,  particle_system_name
-         19,              5,  tracks/particles/water1
-         19,              5,  tracks/particles/waterGreen
-         16,              3,  tracks/particles/water1
-         16,              3,  tracks/particles/waterRed
+```
+particles
+;source, back reference,  particle_system_name
+19,              5,  tracks/particles/water1
+19,              5,  tracks/particles/waterGreen
+16,              3,  tracks/particles/water1
+16,              3,  tracks/particles/waterRed
+```
 
-(You can create your own particle. A template can be found in data/water.particle)
-
-## Rigidifiers
-
-![Rigidifiers](/images/truckfile-rigidifiers.png) **Important note: Rigidifiers don't work with the actual version (0.38.67), so they shouldn't be used anymore. In many cases, e.g. for building McPherson struts, they can easily be replaced with slidenodes.** Rigidifiers enforce the relative angle of two interconnected beams. Say you have three nodes: **a**, **b**, **c** with two beams *"ab"* and *"bc"*. This operator applied to **a** and **b** and **c** will have a similar effect of trussing with an *"ac"* beam, but it will work in any configuration, including if **a** and **b** and **c** are aligned. This operator can help a lot to do constructions that are hard to achieve by trussing, like landing gear, parts of cranes or support legs, and to keep a pair of beams aligned. Note that this operator is computationally expensive, and it should be used sparingly. Trussing with beams is comparatively cheap and should be preferred to this operator.
-
-    rigidifiers
-    ;node a, node b, node c,     spring, damping
-          1,      2,      3,  1000000.0, 50000.0
+(You can create your own particle. A template can be found in `Rigs of Rods\resources\particles.zip\water.particle`)
 
 ## Torque Curve
 
@@ -1755,95 +1908,111 @@ Torque curves affect the behavior of the engine. This section allows you to assi
 
 ## Usage \#1: Predefined curve
 
--   **curve\_name**: <span style="color:#BD0058">Torque curve name</span>; <span style="color:#0B8A00">default = default</span>; Predefined options are: <span style="font-family: monospace;">**default, diesel, turbodiesel, gas, turbogas, wheelloader, compacttractor, tractor, hydrostatic**</span>.
+-   **curve\_name**: <span style="color:#BD0058">Torque curve name</span>; <span style="color:#0B8A00">default = default</span>; Predefined options are: `default`, `diesel`, `turbodiesel`, `gas`, `turbogas`, `wheelloader`, `compacttractor`, `tractor`, `hydrostatic`.
 
-<!-- -->
-
+```
     torquecurve
     turbogas
+```
 
 ## Usage \#2: Defining custom curve
 
 -   **power**: <span style="color:#BD0058">Real number</span>; RPM where the power begins
--   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#engine) parameter \#3 "Torque" (0 = 0%, 0.5 = 50%, 1.5 = 150%)
+-   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#engine) parameter \#3 "Torque" (0 = 0%, `0.5` = 50%, `1.5` = 150%)
 
 It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overev area defined.
 
 The following example would be good for a maximum engine RPM set to 2800:
 
-    torquecurve
-       0, 0.00
-    1000, 0.79
-    1500, 0.90
-    2000, 0.97
-    2500, 0.99
-    3000, 0.90
-    3500, 0.77
+```
+torquecurve
+   0, 0.00
+1000, 0.79
+1500, 0.90
+2000, 0.97
+2500, 0.99
+3000, 0.90
+3500, 0.77
+```
 
-Engine dying in idle and first gear? Just define a single higher peak value where you want the engine to idle... like adding
+Engine dying in idle and first gear? Just define a single higher peak value where you want the engine to idle... like adding:
 
-    ...
-    700, 0.2
-    800, 0.6
-    900, 0.4
-    ...
+```
+...
+700, 0.2
+800, 0.6
+900, 0.4
+...
+```
 
-![Torque curve](/images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then 800 rpm in first gear.
+![Torque curve](/images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then `800` rpm in first gear.
 
 The example to the left shows a screenshot of a torquecurve made for a small diesel engine:
 
-Idle: ~600 RpM, Max @ 1900 RPM, slight and constant torque increase over the used RPM bandwidth, hard torque drop off in the over-rev area.
+Idle: `~600` RPM, Max @ `1900` RPM, slight and constant torque increase over the used RPM bandwidth, hard torque drop off in the over-rev area.
 
 ## Cruise Control
 
-This section offers options to the cruise control feature:
+This section offers options to the cruise control feature (activated by pressing space bar):
 
--   lower limit: Sets the minimum speed cruise control can be activated. Unit is meters per second (divide kph by 3.6. Example: 36 kph/3.6 =10 mps)
--   auto brake: If activated, the vehicle breaks if velocity is faster than set in cruise control. 0=auto brake off, 1=auto brake on
+-   **lower limit**: Sets the minimum speed cruise control can be activated. Unit is meters per second (divide kph by `3.6`. Example: `36` kph/`3.6` =`10` mps)
+-   **auto brake**: If activated, the vehicle brakes if velocity is faster than set in cruise control. `0`=auto brake off, `1`=auto brake on
 
-<!-- -->
+```
+;cruisecontrol lowlimit autobrake
+cruisecontrol        10         1
+```
 
-    ;cruisecontrol lowlimit autobrake
-    cruisecontrol        10         1
-
-In the example above, minimum speed for cruise control to be activated is 10mps (36kph). The auto brake feature is activated.
+In the example above, minimum speed for cruise control to be activated is `10`mps (`36`kph). The auto brake feature is activated.
 
 ## Speedlimiter
 
-Limits the speed of a vehicle. If the speed is above the limit, the vehicle will not accelerate any further. Insert the limit in meters per second (divide kph by 3.6. Example: 36 kph/3.6 =10 mps)
+Limits the speed of a vehicle. If the speed is above the limit, the vehicle will not accelerate any further. 
 
-    ;speedlimiter <speed in m/s>
-    speedlimiter 10
+Insert the limit in meters per second (divide kph by `3.6`. Example: `36` kph/`3.6` =`10` mps)
 
-In the example above, the maximum speed of the vehicle is 10mps (36kph), it will not accelerate any further.
+```
+;speedlimiter <speed in m/s>
+speedlimiter 10
+```
+
+In the example above, the maximum speed of the vehicle is `10`mps (`36`kph), it will not accelerate any further.
 
 ## Axles
 
 This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels.
 
-Sample axle section
+The axle section introduces open differentials, and spooled (aka locked) differentials. 
 
-    axles
-    w1(1 2), w2(3 4), d(ol) ; axle 1
-    w1(5 6), w2(7 8), d(l) ; axle 2
+By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. 
 
-The axle section introduces open differentials, and spooled (aka locked) differentials. By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. Because the axle sections looks up already defined wheels, **it must be defined AFTER the wheels have been defined.**
+Because the axle sections looks up already defined wheels, **it must be defined AFTER the wheels have been defined.**
 
 The axle section is different from other sections in that it is broken into properties. Properties are not order dependent. Currently the available properties are:
 
--   **w1(&lt;node1&gt; &lt;node2&gt;)** - This defines which wheel the axle is attached to, &lt;node1&gt; and &lt;node2&gt; Refer to the node1 and node2 as defined in the wheel section
--   **w2(&lt;node1&gt; &lt;node2&gt;)** - Wheel 2, same as w1, this is the second wheel attached to the axle. w1 and w2 are interchangeable.
--   **d(<list of diff types>)** - Defines the available differential types for this axle. the list of axles is cycled through in the order specified, differential types maybe specified more than once. Each differential type is specified by a single letter, the letters are not to be separated by spaces or any other character. If no differentials are specified the axles will default to opened and locked.
+-   **w1(&lt;node1&gt; &lt;node2&gt;)** - This defines which wheel the axle is attached to, **&lt;node1&gt;** and **&lt;node2&gt;** Refer to the node1 and node2 as defined in the wheel section
+-   **w2(&lt;node1&gt; &lt;node2&gt;)** - Wheel 2, same as w1, this is the second wheel attached to the axle. `w1` and `w2` are interchangeable.
+-   **d(type)** - Defines the available differential types for this axle. the list of axles is cycled through in the order specified, differential types maybe specified more than once. Each differential type is specified by a single letter, the letters are not to be separated by spaces or any other character. If no differentials are specified the axles will default to opened and locked.
     -   **Available differential types**
-        -   **o** - open
-        -   **l** - locked
-        -   **s** - Split evenly (each wheel gets equal torque regardless of wheel speed)
+        -   `o` - open
+        -   `l` - locked
+        -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
+		
+Sample axle section:
+
+```
+axles
+; axle 1
+w1(1 2), w2(3 4), d(ol)
+; axle 2
+w1(5 6), w2(7 8), d(l)
+```
 
 ## Wheeldetachers
 
 **This section is still highly experimental and could cause wheels to become unstable!**
 
-Added in 0.4.7.0, this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
+<span style="background-color:#fb7">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
 
 ```
 wheeldetachers
@@ -1854,8 +2023,8 @@ wheeldetachers
 
 Parameters:
 
--   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at 1.
--   **detacher_group**: <span style="color:#BD0058">Real number</span>; The detacher_group number. 
+-   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at `1`.
+-   **detacher_group**: <span style="color:#BD0058">Real number</span>; The d`etacher_group` number. 
 
 Example usage:
 
@@ -1895,34 +2064,38 @@ In RoR 0.4.0.5 and above you can define collisionboxes. In earlier versions of R
 
 Syntax:
 
-    collisionboxes
-    ;node id list box 1
-    48, 58, 59, 67
-    ;node id list box 2
-    5, 6
-    ...
-    ;node id list box n
-    ...
+```
+collisionboxes
+;node id list box 1
+48, 58, 59, 67
+;node id list box 2
+5, 6
+...
+;node id list box n
+...
+```
 
 Collisionboxes can give you a huge performance increase in situations where many beam objects would have been activated before, for example a container crane with many containers underneath.
 
 ## Rescuer
 
-    rescuer
+```
+rescuer
+```
 
-This single keyword placed in the truck file will make the truck a rescuer, like the Scania Wrecker. These vehicles can be entered by pressing "R".
+This single keyword placed in the truck file will make the truck a rescuer, like the Scania Wrecker. These vehicles can be entered by pressing `R`.
 
 # Look & Feel
 
 ## Managedmaterials
 
-Managed materials helps you to use complex material effects (for example reflective materials like chromes, dynamic damage materials, bumpmapped materials) without having to deal with the technical complexity of writing a shader for Ogre3D. Rigs of Rods comes with a set of standard shader effects, and with the Managedmaterial section you can pick the effect you want and adapt it for your vehicle. The shader library will grow with time, so the set of effects available in this section will grow with time.
+Managed materials helps you to use complex material effects (for example reflective materials like chromes, dynamic damage materials) without having to deal with the technical complexity of writing a shader for Ogre3D. Rigs of Rods comes with a set of standard shader effects, and with the Managedmaterial section you can pick the effect you want and adapt it for your vehicle. The shader library will grow with time, so the set of effects available in this section will grow with time.
 
-The generic format of this section is :
+The generic format of this section is:
 
--   **Material name** - the name of the material you are creating. You can use this material for any of your meshes (flexmeshes, props, etc.). This material name **must not be defined anywhere else** (for example in a .material file).
--   **Effect name** - the name of the effect you want to use. Valid names are defined below.
--   **Effect parameters** - a variable number of parameters, depending on the effect your are using. See below for the description.
+-   **Material name** - The name of the material you are creating. You can use this material for any of your meshes (flexmeshes, props, etc.). This material name **must not be defined anywhere else** (for example in a .material file).
+-   **Effect name** - The name of the effect you want to use. Valid names are defined below.
+-   **Effect parameters** - A variable number of parameters, depending on the effect your are using. See below for the description.
 
 Do not use a comma to separate parameters in a managedmaterial section! Also, you must declare your managed material before they are used. That means that the managedmaterial section should come before the flexmesh, props, wheels, or any section that will use this material.
 
@@ -1931,36 +2104,42 @@ Currently available effects:
 -   **flexmesh\_standard** - This effect defines an opaque, reflective and damageable material for flexmeshes. This will work only for flexmeshes! It takes 3 parameters:
 
 1.  A standard texture name: this is the base, undamaged texture. (The diffuse map.)
-2.  A damaged texture name (or "-" if no damage texture): Should be similar to the standard texture, but with damage.
-3.  A specular map texture name (or "-" if no specular map texture): a greyscale image that maps the "shinyness" of the material, from dark for matte to white for chromed. Technically this isn't a specular map but a reflectivity map.
+2.  A damaged texture name (or `-` if no damage texture): Should be similar to the standard texture, but with damage.
+3.  A specular map texture name (or `-` if no specular map texture): a greyscale image that maps the "shininess" of the material, from dark for matte to white for chromed. Technically this isn't a specular map but a reflectivity map.
 
 -   **flexmesh\_transparent** - This effect defines a semi-transparent, reflective and damageable material for flexmeshes. This will work only for flexmeshes! It takes 3 parameters:
 
 1.  A standard texture name: this is the base, undamaged texture. The alpha channel of this texture is used to define transparency. (The diffuse map.)
-2.  A damaged texture name (or "-" if no damage texture): Should be similar to the standard texture, but with damage.
-3.  A specular map texture name (or "-" if no specular map texture): A greyscale image that maps the "shinyness" of the material, from dark for matte to white for chromed. Again, technically this isn't a specular map but instead a reflectivity map.
+2.  A damaged texture name (or `-` if no damage texture): Should be similar to the standard texture, but with damage.
+3.  A specular map texture name (or `-` if no specular map texture): A greyscale image that maps the "shininess" of the material, from dark for matte to white for chromed. Again, technically this isn't a specular map but instead a reflectivity map.
 
--   **mesh\_standard** - This effect defines an opaque, reflective material for any mesh (like wheel rims, props, etc.) It takes 2 parameters:
+-   **mesh\_standard** - This effect defines an opaque, reflective material for any mesh (e.g. wheel rims, props, etc.) It takes 2 parameters:
 
 1.  a standard texture name: This is the base texture.
-2.  a specular map texture name (or "-" if no specular map texture): A greyscale image that maps the "shinyness" of the material, from dark for matte to white for chromed.
+2.  a specular map texture name (or `-` if no specular map texture): A greyscale image that maps the "shininess" of the material, from dark for matte to white for chromed.
 
--   **mesh\_transparent** - This effect defines a semi-transparent, reflective material for any mesh (like wheel rims, props, etc.) It takes 2 parameters:
+-   **mesh\_transparent** - This effect defines a semi-transparent, reflective material for any mesh (e.g. windows) It takes 2 parameters:
 
 1.  a standard texture name: This is the base, undamaged texture. The alpha channel of this texture is used to define transparency.
-2.  a specular map texture name (or "-" if no specular map texture): A greyscale image that maps the "shinyness" of the material, from dark for matte to white for chromed.
+2.  a specular map texture name (or `-` if no specular map texture): A greyscale image that maps the "shininess" of the material, from dark for matte to white for chromed.
 
-WARNING: Your texture file names must not start with "-". The parser would treat the "-" as "no texture placeholder" and ignore the rest.
+**WARNING: Your texture file names must not start with `-`. The parser would treat the `-` as "no texture placeholder" and ignore the rest.**
 
 Examples:
 
-    managedmaterials
-    ;new_material    effect               parameters...
-    mytruck/mainbody flexmesh_standard    mytruckbody.png mytruckbody-dmg.png mytruckbody-spec.png
-    mytruck/windows  flexmesh_transparent mytruckbody.png mytruckbody-dmg.png mytruckbody-spec.png
-    mytruck/rims     mesh_standard        mytruckrims.png allshiny-spec.png
+```
+managedmaterials
+;new_material    effect               parameters...
+mainbody flexmesh_standard    mytruckbody.png mytruckbody-dmg.png mytruckbody-spec.png
+windows   flexmesh_transparent mytruckbody.png mytruckbody-dmg.png mytruckbody-spec.png
+wheels    mesh_standard        mytruckwheels.png mytruckwheels-spec.png
+```
 
-A note about shaders for power-users: you can still use your own, non managed, Cg shaders by manually defining your .material, .program and .cg. Consult the Ogre3D documentation for more details. If you think you have made a good shader that can be helpful to other modders, submit it to the game authors (Thomas or Pricorde) for inclusion to the managedmaterial library of RoR.
+A note about shaders for power-users: 
+
+You can still use your own, non managed, Cg shaders by manually defining your `.material`, `.program` and `.cg`. Consult the Ogre3D documentation for more details. 
+
+If you think you have made a good shader that can be helpful to other modders, submit it to [GitHub](https://github.com/RigsOfRods/rigs-of-rods) for inclusion to the managedmaterial library of RoR.
 
 ## Set\_managedmaterials\_options
 
@@ -1968,19 +2147,19 @@ This specifies options for all <u>FOLLOWING</u> managed material lines.
 
 Parameters:
 
--   **doublesided**: <span style="color:#BD0058">0 (single sided) or 1 (double sided)</span>; <span style="color:#0B8A00">default = 0 (single sided)</span>; . Determines if the mesh should be visible from both sides or not.
-    IMPORTANT: This parameter treats 1 as "yes" and anything else as "no". This is required for backwards compatibility.
+-   **doublesided**: <span style="color:#BD0058">`0` (single sided) or `1` (double sided)</span>; <span style="color:#0B8A00">default = `0` (single sided)</span>; . Determines if the mesh should be visible from both sides or not.
+    IMPORTANT: This parameter treats `1` as "yes" and anything else as "no". This is required for backwards compatibility.
 
-<!-- -->
-
-    ; set_managedmaterials_options doublesided
-    set_managedmaterials_options 1
+```
+; set_managedmaterials_options doublesided
+set_managedmaterials_options 1
+```
 
 ## Flares
 
 Flares allow you to add lights to your truck. They work as light sources in OGRE and will illuminate other objects (if enabled in settings).
 
-''See also: [Flares Tutorial](http://docs.rigsofrods.org/vehicle-creation/flares)
+See also: [Flares Tutorial](/vehicle-creation/flares)
 
 Parameters:
 
@@ -1990,87 +2169,97 @@ Parameters:
 -   **Flare X offset**: <span style="color:#BD0058">Real number</span>; Flare position on X axis in % of distance from ref-node to X-node
 -   **Flare Y offset**: <span style="color:#BD0058">Real number</span>; Flare position on Y axis in % of distance from ref-node to Y-node
 -   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>; Type of flare
-    -   *f* (default mode when not stated): Headlight.
-    -   *b* : Brakelight.
-    -   *l* : Left blinker.
-    -   *r* : Right blinker.
-    -   *R* : Reverse light (on when driving in R gear)
-    -   *u* : User controlled light. (i.e. fog light) (see control numbers))
--   **Control number**: <span style="color:#BD0058">Decimal number</span>; - This determines how this light is switched on and off, if you chose a user controlled light. Valid user defined control numbers are 0-500. If you chose a non-user controlled light(i.e. brake light) you should put "-1" here.
-    Some custom control numbers found in 0.38:
-    -   11 Clutch
-    -   12 Parking Brake
-    -   40 Starter
-    -   45 Axle Lock
-    -   55 Steer right
-    -   56 Steer left
-    -   65 Hide GUI
--   **Blink delay (miliseconds)**: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = -2 (special)</span>; &lt;!--
+    -   `f` (default mode when not stated): Headlight.
+    -   `b` : Brakelight.
+    -   `l` : Left blinker.
+    -   `r` : Right blinker.
+    -   `R` : Reverse light (on when driving in R gear)
+    -   `u` : User controlled light. (i.e. fog light) (see control numbers)
+-   **Control number**: <span style="color:#BD0058">Decimal number</span>; - This determines how this light is switched on and off, if you chose a user controlled light. Valid user defined control numbers are `0-500`. If you chose a non-user controlled light(i.e. brake light) you should put `-1` here. `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on.
+ 
+Some custom control numbers found in 0.38+:
+    
+	-   `11` Clutch
+    -   `12` Parking Brake
+    -   `40` Starter
+    -   `45` Axle Lock
+    -   `55` Steer right
+    -   `56` Steer left
+    -   `65` Hide GUI
+	
+-   **Blink delay (miliseconds)**: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = `-2` (special)</span>; &lt;!--
 
 --&gt;This defines how long the delay is between the light changes in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
 
--   -   Special value: "-1" to use the default value of 500ms.
-    -   Special value: "-2" non-blinking light except blinkers, which will have default 500ms.
--   **Flare size**: <span style="color:#BD0058">Real number</span>; This determines how big the flare will be. Reasonable values are between 0.1 and 5 (0.1 = 10% of default size). If the size is smaller then 0, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
--   **Material Name**: <span style="color:#BD0058">String</span>; This field determines what material should be used for the flare display. If you want to use the standard material, use **default**. Please note that there is not comma between the material name and the size argument. You can use *tracks/aimflare* to position your flare.
+-   -   Special value: `-1` to use the default value of 500ms.
+    -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.
+-   **Flare size**: <span style="color:#BD0058">Real number</span>; This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
+-   **Material Name**: <span style="color:#BD0058">String</span>; This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
 
-<!-- -->
+```
+flares
+;RefNode,  X,  Y, OffsetX, OffsetY, Type, ControlNumber, BlinkDelay, size MaterialName
 
-    flares
-    ;RefNode,  X,  Y, OffsetX, OffsetY, Type, ControlNumber, BlinkDelay, size MaterialName
+;example for a most default one:
+51,  1, 79,    0.23,    0.50,    b,            -1,          0,   -1 default
 
-    ;example for a most default one:
-          51,  1, 79,    0.23,    0.50,    b,            -1,          0,   -1 default
+;example for a custom brake light
+51,  1, 79,    0.23,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
 
-    ;example for a custom brake light
-          51,  1, 79,    0.23,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
-
-    ;example for a User controlled Fog Light (by light control-event 0)
-          51,  1, 79,    0.23,    0.50,    u,             0,          0,  0.3 myTruck/MyFogFlare
+;example for a user controlled Fog Light (by light control-event 1)
+51,  1, 79,    0.23,    0.50,    u,             0,          0,  0.3 myTruck/MyFogFlare
+```
 
 ## Flares2
 
 Flares2 are the same as normal flares, except that they add an offset-z argument in between:
 
-    flares2
-    ;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
-          51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
+```
+flares2
+;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
+51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
+```
 
 ## Materialflarebindings
 
-*See also: [Flares Tutorial](http://docs.rigsofrods.org/vehicle-creation/flares)*
- This can bind a material to a flare, so that the material changes with the flare's on/off status.
+See also: [Flares Tutorial](/vehicle-creation/flares)
+
+This can bind a material to a flare, so that the material changes with the flare's on/off status.
 
 The format is as follows:
 
 -   **flare number**: Counting starts from zero. Just count down your flares in the flares section to find the correct number.
 -   **material name**: The material that you want to change. It must contain one technique, one pass and a special Texture Unit State (see below for an example)
 
-<!-- -->
+```
+flares
+51,1,79, 0.23, 0.50, b, -1, 300, 0.2 myTruck/MyBrakeFlare
 
-    flares
-    51,1,79, 0.23, 0.50, b, -1, 300, 0.2 myTruck/MyBrakeFlare
-
-    materialflarebindings
-    1, myBrakeMaterial
+materialflarebindings
+1, myBrakeMaterial
+```
 
 The material must use an animated texture, as shown below:
 
-    material myBrakeMaterial
+```
+material myBrakeMaterial
+{
+    technique
     {
-        technique
+        pass
         {
-            pass
+            texture_unit
             {
-                texture_unit
-                {
-                    anim_texture truck_brake_material.png 2 0
-                }
+                anim_texture truck_brake_material.png 2 0
             }
         }
     }
+}
+```
 
-Put the off-state of the brakelight into the file "truck\_brake\_material\_0.png" and the on-state into "truck\_brake\_material\_1.png". The 2 and 0 at the end should not be changed. This section should be after the flares section and before the props and flexbodies section in order for the lights to work properly.
+Put the off-state of the brakelight into the file `truck\_brake\_material\_0.png` and the on-state into `truck\_brake\_material\_1.png`. The `2` and `0` at the end should not be changed. 
+
+This section should be after the flares section and before the props and flexbodies section in order for the lights to work properly.
 
 COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, the parser will silently accept it.
 
@@ -2094,47 +2283,54 @@ Parameters are:
 -   **mesh\_name\_or\_special\_prop**: <span style="color:#BD0058">String (may start with a keyword)</span>; The name of the Ogre3D mesh object used for the prop.
     If the mesh name starts with one of the following keywords, it will have special behavior:
 
-<!-- -->
-
 -   -   <span style="color:#892500">"dashboard"</span>: A custom dashboard + steering wheel mesh. See below.
     -   <span style="color:#892500">"dashboard-rh"</span>: A custom dashboard +steering wheel mesh on right side. See below.
     -   <span style="color:#892500">"leftmirror"</span>: Left rear view mirror.
     -   <span style="color:#892500">"rightmirror"</span>: Right rear view mirror.
-    -   <span style="color:#892500">"seat"</span>: Driver's seat: Positions the driver character and turns translucent if appropriate. Skins the prop using material "driversseat".
+    -   <span style="color:#892500">"seat"</span>: Driver's seat: Positions the driver character and turns translucent if appropriate. Skins the prop using material `driversseat`.
         Note: if multiple "seat\[2\]" props are defined, the **first** one is the driver's seat.
-    -   <span style="color:#892500">"seat2"</span>: Driver's seat: Same as "seat" except it doesn't force the "driversseat" material.
+    -   <span style="color:#892500">"seat2"</span>: Driver's seat: Same as "seat" except it doesn't force the `driversseat` material.
         Note: if multiple "seat\[2\]" props are defined, the **first** one is the driver's seat.
     -   <span style="color:#892500">"beacon"</span>: A beacon. Color and flare material are adjustable (default = orange)
     -   <span style="color:#892500">"redbeacon"</span>: A red beacon which flashes red. Fixed color and flare material.
     -   <span style="color:#892500">"lightbar"</span>: Police lightbar beacon, flashes red and blue (fixed). Also marks the vehicle as "police car" and sets up some special sounds and controls.
-    -   <span style="color:#892500">"spinprop"</span>: Undocumented :-(
+    -   <span style="color:#892500">"spinprop"</span>: Plane propeller.
 
 Please note that if you want to stick wheel meshes on a wheel, the third node has to be taken from one of the outer segments.
 
-    props
-    ;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
-      93, 95, 92,    0.50,    0.37,     0.0,   90,    0,    0, airintake.mesh
+```
+props
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
+93, 95, 92,    0.50,    0.37,     0.0,   90,    0,    0, airintake.mesh
+```
 
 Note:
 
--   The **X offset** and the **Y offset** should logically between 0 and 1, or if the body flexes too much the prop will not stick to the body correctly.
--   The coordinate system is actually really similar to 'normal coordinates', but it allows the angle between the two axes (ie. the angle between the **X node**, the **Reference node**, and the **Y node**) to be any value, not just 90 degrees. If that angle can be made to be 90 degrees, then the weird coordinate system will turn into 'normal coordinates'. This can be used to make prop placement easier.
+-   The **X offset** and the **Y offset** should logically between `0` and `1`, or if the body flexes too much the prop will not stick to the body correctly.
+-   The coordinate system is actually really similar to 'normal coordinates', but it allows the angle between the two axes (ie. the angle between the **X node**, the **Reference node**, and the **Y node**) to be any value, not just `90` degrees. If that angle can be made to be `90` degrees, then the weird coordinate system will turn into 'normal coordinates'. This can be used to make prop placement easier.
 
 **For 0.38.8 and later:**
 
-you can set the cameramode in which the prop should be shown:
+You can set the cameramode in which the prop should be shown:
 
+```
     ; -2 = all the time, -1 = external only, >=0  cinecam number
     prop_camera_mode -1
+```
 
-you can disable shadows of the last specified flexbody:
+You can disable shadows of the last specified flexbody:
 
-    disable_flexbody_shadows
+```
+disable_flexbody_shadows
+```
 
 <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
 
-    disable_prop_shadow
-    ;disables shadow casting of the last prop to improve complex truck FPS.
+Disables shadow casting of the last prop to improve complex truck FPS.
+
+```
+disable_prop_shadow
+```
 
 COMPATIBILITY NOTE: Parameters \#9 "Z rotation" and \#10 "Mesh name" can be delimited by just space. Parser will emit a warning.
 
@@ -2181,7 +2377,7 @@ Here you can see the standard reference nodes, and offset for the dashboard. The
 
 <!-- -->
 
--   **mesh\_1**: <span style="color:#BD0058">String with keyword "dashboard"</span>; Mesh1: See rules below; MUST contain keyword "dashboard"
+-   **mesh\_1**: <span style="color:#BD0058">String with keyword "dashboard"</span>; Mesh1: See rules below; MUST contain keyword `dashboard`
 
 <!-- -->
 
@@ -2189,50 +2385,55 @@ Here you can see the standard reference nodes, and offset for the dashboard. The
 
 <!-- -->
 
--   **dashboard\_x\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -0.67</span>
+-   **dashboard\_x\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = `-0.67`</span>
 
 <!-- -->
 
--   **dashboard\_y\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -0.61</span>
+-   **dashboard\_y\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = `-0.61`</span>
 
 <!-- -->
 
--   **dashboard\_z\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 0.24</span>
+-   **dashboard\_z\_offset** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = `0.24`</span>
 
 <!-- -->
 
--   **max\_turn\_angle\_degrees** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 160</span>
+-   **max\_turn\_angle\_degrees** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = `160`</span>
 
 **Examples:**
 
-    ; NOTE: Lines starting with ; are comments
+```
+; NOTE: Lines starting with ; are comments
 
-    ; No optional parameters: The default wheel.
-    ; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
-    ; Param mesh#2 is ignored, can contain a placeholder string.
-    ; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle
-       72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh
+; No optional parameters: The default wheel.
+; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
+; Param mesh#2 is ignored, can contain a placeholder string.
+; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle
+72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh
 
-    ; -------------------------------------------------------
-    ; BAD EXAMPLE: Params "Mesh#2, X, Y, Z" only take effect if they are all present. The following line has the same effect like line above (Z offset is missing)!
-    ; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
-    ; Param mesh#2 is ignored
-    ; Params X, Y, Z are ignored because Z is missing.
-    ; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle
-       72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh           ~~~   -0.67,   -0.61,    
+; -------------------------------------------------------
+; BAD EXAMPLE: Params "Mesh#2, X, Y, Z" only take effect if they are all present. The following line has the same effect like line above (Z offset is missing)!
+; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
+; Param mesh#2 is ignored
+; Params X, Y, Z are ignored because Z is missing.
+; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle
+72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh           ~~~   -0.67,   -0.61,    
 
-    ; -------------------------------------------------------
-    ; Params "X, Y, Z" are present: an example for a custom one with 720 degree:
-    ; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
-    ; Param mesh#2 must contain a mesh name.
-    ; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle 
-       72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh my-wheel.mesh   -0.67,   -0.51,    0.14,           720
+; -------------------------------------------------------
+; Params "X, Y, Z" are present: an example for a custom one with 720 degree:
+; Param mesh#1 must contain "dashboard" keyword and point to a valid mesh.
+; Param mesh#2 must contain a mesh name.
+; ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,                 mesh#1        mesh#2 xoffset, yoffset, zoffset, rotationangle 
+72, 71, 74,    0.50,     1.0,   -0.05,    0,    0,    0,      my-dashboard.mesh my-wheel.mesh   -0.67,   -0.51,    0.14,           720
+```
 
 ## Special Prop: Beacon
 
 Change the beacon's color and flare material <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
-If you want to use you own mesh as beacon it should be named beacon-&lt;somename&gt;.mesh, e.g. beacon-blue.mesh
-The only difference between this and a standard beacon is the flarematerialname e.g. tracks/redbeaconflare which sets the color of the light, and the RGB value of the flash (The last three numbers), that sets the color of the light that is reflected from objects when the beacon lights them.
+
+If you want to use you own mesh as beacon it should be named beacon-&lt;somename&gt;.mesh, e.g. `beacon-blue.mesh`
+
+The only difference between this and a standard beacon is the flarematerialname e.g. `tracks/redbeaconflare` which sets the color of the light, and the RGB value of the flash (The last three numbers), that sets the color of the light that is reflected from objects when the beacon lights them.
+
 NOTE: All special parameters are required, otherwise none of them will take effect.
 
 **Parameters:**
@@ -2273,7 +2474,7 @@ NOTE: All special parameters are required, otherwise none of them will take effe
 
 <!-- -->
 
--   **beacon\_mesh\_name**: <span style="color:#BD0058">String with keyword "beacon"</span>; The beacon mesh; MUST contain keyword "beacon"
+-   **beacon\_mesh\_name**: <span style="color:#BD0058">String with keyword "beacon"</span>; The beacon mesh; MUST contain keyword `beacon`
 
 <!-- -->
 
@@ -2281,27 +2482,29 @@ NOTE: All special parameters are required, otherwise none of them will take effe
 
 <!-- -->
 
--   **flare\_color\_red**: <span style="color:#BD0058">Real number (0 - 1)</span>; Intensity (0 = full dark, 1 = full bright) . This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
+-   **flare\_color\_red**: <span style="color:#BD0058">Real number (`0` - `1`)</span>; Intensity (`0` = full dark, `1` = full bright) . This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
 
 <!-- -->
 
--   **flare\_color\_green**: <span style="color:#BD0058">Real number (0 - 1)</span>; Intensity (0 = full dark, 1 = full bright). This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
+-   **flare\_color\_green**: <span style="color:#BD0058">Real number (`0 - 1`)</span>; Intensity (`0` = full dark, `1` = full bright). This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
 
 <!-- -->
 
--   **flare\_color\_blue**: <span style="color:#BD0058">Real number (0 - 1)</span>; Intensity (0 = full dark, 1 = full bright). This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
+-   **flare\_color\_blue**: <span style="color:#BD0058">Real number (`0` - `1`)</span>; Intensity (`0` = full dark, `1` = full bright). This color will be mixed with color of the flare texture. If the texture is white, all coloring is specified this way.
 
 **Examples:**
 
-    ; NOTE: Lines starting with ; are comments
+```
+; NOTE: Lines starting with ; are comments
 
-    ;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,        mesh     flareMaterialName    colorRed, colorGreen, colorBlue
-    ; the default beacon would be:
-      19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh    tracks/beaconflare           1,        0.5,         0
-    ; the red beacon would be:
-      19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh tracks/redbeaconflare           1,          0,         0
-    ; example for a custom beacon:
-      19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh     tracks/greenflare           0,          1,         0
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz,        mesh     flareMaterialName    colorRed, colorGreen, colorBlue
+; the default beacon would be:
+19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh    tracks/beaconflare           1,        0.5,         0
+; the red beacon would be:
+19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh tracks/redbeaconflare           1,          0,         0
+; example for a custom beacon:
+19, 73, 16,     0.1,     0.1,       0,   90,    0,    0, beacon.mesh     tracks/greenflare           0,          1,         0
+```
 
 ## Add\_animation
 
@@ -2313,63 +2516,63 @@ Parameters:
 -   **Lower limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; The lower limit for the animation, remember to use a negative value when source can be negative (as in wheel steering.) Use **0** for both options to get default limits (Full circle rotation ( -180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
 -   **Upper limit**: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Upper Limiter for movement, remember to use a positive value when source can be negative (as in wheel steering.). Use **0** for both options to get default limits ( Full circle rotation (-180/+180°) or -10/+10 for offsets. Limits always apply to the props' spawning position.
 -   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
-    - **"source:"** <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
-    - **"mode:"** <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
-    - **"event:"** <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
-    - **"autoanimate"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
+    - `source:` <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
+    - `mode:` <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
+    - `event:` <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
+    - `autoanimate` <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
 -   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
 -   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current sttus, useful for switches and staus levers. Only works with **mode:event** and a correct defined **event:**
 
 *source:*
 
--   **airspeed** - This prop animates with the actual speed (not speedometer indicated speed) for any vehicle.
--   **vvi** - This prop animates with the vehicle's vertical velocity.
--   **altimeter100k** - This prop animates with the vehicle's altitude up to 100,000 feet.
--   **altimeter10k** - This prop animates with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
--   **altimeter1k** - This prop animates with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects/
--   **aoa** - This prop animates with the dashboard's angle of attack.
--   **flap** - This prop animates with the flap setting on the vehicle.
--   **airbrake** - This prop animates with the airbrake setting on the vehicle.
--   **roll** - This prop animates with the vehicle's roll. It will flip at 180 degrees roll to -180 degrees roll. This option can be used for an automatic trim feature.
--   **pitch** - This prop animates with the vehicle's pitch. It will flip back at 180 degrees pitch to -180 degrees pitch. This option can be used for an automatic trim feature.
--   **throttle1** - This prop animates with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include throttle1, throttle2, etc. etc. up to throttle8.
--   **rpm1** - This prop animates with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include rpm1, rpm2, etc. etc. up to rpm8.
--   **aerotorq1** - This prop animates with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include aerotorq1, aerotorq2, etc. etc. up to aerotorq8.
--   **aeropit1** - This prop animates with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include aeropit1, aeropit2, etc. etc. up to aerotorq8.
--   ***aerostatus1** - This prop animates with the On/Off/Fire status of an aircraft's first engine. Valid sources include aerostatus1, aerostatus2, etc. etc. up to aerostatus8.
--   **brakes** - This prop animates with the vehicle's brake status.
--   **accel** - This prop animates with the vehicle's accelerator status.
--   **clutch** - This prop animates with the vehicle's clutch status.
--   **speedo** - This prop animates with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
--   **tacho** - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
--   **turbo** - This prop animates with the vehicle's turbocharger PSI.
--   **parking** - This prop animates with the vehicle's parking brake status.
--   **shifterman1** - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
--   **shifterman2** - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
--   **sequential** - sequentiell shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too ( no settable limits then )
--   **shifterlin** - for auto transmission animations or gearselect indicators ( special limits rules apply for this one, see below! )
--   **torque** - current engine torque
--   **heading** - This prop animates with the current heading of the truck.
--   **difflock** - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
--   **rudderboat** - This prop animates with the steering hydro on boats.
--   **throttleboat**- This prop animates with the throttle status on boats.
--   **steeringwheel** - This prop animates with the steering status for trucks.
--   **aileron** - This prop animates with the aileron status for airplanes.
--   **elevator** - This prop animates with the elevator status for airplanes.
--   **rudderair** - This prop animates with the rudder status for airplanes.
--   **permanent** - This is a permanent source, which is always active when you are in the truck.
--   **event** - A source triggered by a keypress, needs exactly one defined event.
+-   `airspeed` - This prop animates with the actual speed (not speedometer indicated speed) for any vehicle.
+-   `vvi` - This prop animates with the vehicle's vertical velocity.
+-   `altimeter100k` - This prop animates with the vehicle's altitude up to 100,000 feet.
+-   `altimeter10k` - This prop animates with the vehicle's altitude up to 10,000 feet, at which point it will revert back to its original length.
+-   `altimeter1k` - This prop animates with the vehicle's altitude up to 1,000 feet, at which point it will revert back to its original length. These three animators can be used to create altimeters with three needles or similar objects/
+-   `aoa` - This prop animates with the dashboard's angle of attack.
+-   `flap` - This prop animates with the flap setting on the vehicle.
+-   `airbrake` - This prop animates with the airbrake setting on the vehicle.
+-   `roll` - This prop animates with the vehicle's roll. It will flip at `180` degrees roll to `-180` degrees roll. This option can be used for an automatic trim feature.
+-   `pitch` - This prop animates with the vehicle's pitch. It will flip back at `180` degrees pitch to `-180` degrees pitch. This option can be used for an automatic trim feature.
+-   `throttle1` - This prop animates with the throttle setting of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include `throttle1`, `throttle2`, etc. etc. up to `throttle8`.
+-   `rpm1` - This prop animates with the RPM of an aircraft's first engine. This option can be used for thruster mechanics. Valid sources include `rpm1`, `rpm2`, etc. etc. up to `rpm8`.
+-   `aerotorq1` - This prop animates with the torque of an aircraft's first engine. Note that this only works for propeller engines, because torque is not applicable to jets. Valid sources include `aerotorq1`, `aerotorq2`, etc. etc. up to `aerotorq8`.
+-   `aeropit1` - This prop animates with the pitch of an aircraft's first engine. Note that this only makes sense with propeller engines, pitch is not applicable to jets. Valid sources include `aeropit1`, `aeropit2`, etc. etc. up to `aerotorq8`.
+-   `aerostatus1` - This prop animates with the On/Off/Fire status of an aircraft's first engine. Valid sources include `aerostatus1`, `aerostatus2`, etc. etc. up to `aerostatus8`.
+-   `brakes` - This prop animates with the vehicle's brake status.
+-   `accel` - This prop animates with the vehicle's accelerator status.
+-   `clutch` - This prop animates with the vehicle's clutch status.
+-   `speedo` - This prop animates with the speedometer indication. It scales with the guisetting speedometer. (It is best to use it even if there is no custom overlay dashboard; it simplifies the adjustment a lot.)
+-   `tacho` - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
+-   `turbo` - This prop animates with the vehicle's turbocharger PSI.
+-   `parking` - This prop animates with the vehicle's parking brake status.
+-   `shifterman1` - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
+-   `shifterman2` - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
+-   `sequential` - sequentiell shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
+-   `shifterlin` - for auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
+-   `torque` - current engine torque
+-   `heading` - This prop animates with the current heading of the truck.
+-   `difflock` - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
+-   `rudderboat` - This prop animates with the steering hydro on boats.
+-   `throttleboat`- This prop animates with the throttle status on boats.
+-   `steeringwheel` - This prop animates with the steering status for trucks.
+-   `aileron` - This prop animates with the aileron status for airplanes.
+-   `elevator` - This prop animates with the elevator status for airplanes.
+-   `rudderair` - This prop animates with the rudder status for airplanes.
+-   `permanent` - This is a permanent source, which is always active when you are in the truck.
+-   `event` - A source triggered by a keypress, needs exactly one defined event.
 
 Specials: Limits do not apply for **mode:sequential**. In this case the options are the F-Keynumbers of the command-movement you want to catch. Option 0, 0 with **mode:sequential** provides a shift\_up/shift\_down animation for a sequential shifter. Look into the Examples.
 
 *mode:*
 
--   **x-rotation** - Rotate around the x-axis, in some cases special rules apply here see below (gimbal lock)
--   **y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
--   **y-rotation** - rotate around the y-axis, in some cases special rules apply here see below ( gimbal lock )
--   **x-offset** - offset along the x-axis
--   **y-offset** - offset along the y-axis
--   **z-offset** - offset along the z-axis
+-   `x-rotation` - Rotate around the x-axis, in some cases special rules apply here see below (gimbal lock)
+-   `y-rotation` - Rotate around the y-axis, in some cases special rules apply here see below (gimbal lock)
+-   `y-rotation` - Rotate around the y-axis, in some cases special rules apply here see below (gimbal lock)
+-   `x-offset` - Offset along the x-axis
+-   `y-offset` - Offset along the y-axis
+-   `z-offset` - Offset along the z-axis
   
 *event:*
 
@@ -2379,82 +2582,94 @@ Specials: Limits do not apply for **mode:sequential**. In this case the options 
 
 It's best to test is a prop that has no rotations or offsets set on a node triangle like this:
 
-      n1, 0, 1, 0
-      n2, 0, 1, 1
-      n3, 0, 0, 0
+```
+n1, 0, 1, 0
+n2, 0, 1, 1
+n3, 0, 0, 0
+```
 
 Add the **add\_animation** line **AFTER** the prop in your prop section that you want to animate:
 
 **Sources**
 
-    add_animation 200, 0, 0, source: steeringwheel, mode: x-rotation
-    ;Prop now animated by steeringwheel input.
-    ;Refer to the '''source:''' list above for the different sources avail.
+```
+add_animation 200, 0, 0, source: steeringwheel, mode: x-rotation
+;Prop now animated by steeringwheel input.
+;Refer to the '''source:''' list above for the different sources avail.
 
-    add_animation 10, 1, 2, source: sequential, mode: y-rotation
-    add_animation 10, 3, 4, source: sequential, mode: x-rotation
-    ;a joystick animation related to F1-F4 ( look below for the GIMBAL LOCK issue!)
+add_animation 10, 1, 2, source: sequential, mode: y-rotation
+add_animation 10, 3, 4, source: sequential, mode: x-rotation
+;a joystick animation related to F1-F4 ( look below for the GIMBAL LOCK issue!)
 
 
-    add_animation 0.02, 1, 0, source: sequential, mode: y-offset
-    ;button animation getting pressed on F1
+add_animation 0.02, 1, 0, source: sequential, mode: y-offset
+;button animation getting pressed on F1
 
-    add_animation 10, 0, 0, source: sequential, mode: y-offset
-    ;sequential shifter reacting to shift up/down
+add_animation 10, 0, 0, source: sequential, mode: y-offset
+;sequential shifter reacting to shift up/down
+```
 
 **Modes**
 
-    add_animation 145, 0, 0, source: airspeed, mode: x-rotation
-    ;Airspeed indicator needle rotating x axis
+```
+add_animation 145, 0, 0, source: airspeed, mode: x-rotation
+;Airspeed indicator needle rotating x axis
 
-    add_animation 145, 0, 0, source: airspeed, mode: y-rotation
-    ;Airspeed indicator needle rotating y axis
+add_animation 145, 0, 0, source: airspeed, mode: y-rotation
+;Airspeed indicator needle rotating y axis
 
-    add_animation 145, 0, 0, source: airspeed, mode: z-offset
-    ;Airspeed indicator sliding z axis
+add_animation 145, 0, 0, source: airspeed, mode: z-offset
+;Airspeed indicator sliding z axis
 
-    add_animation -90, 0, 0, source: pitch , mode: y-rotation
-    add_animation 180, 0, 0, source: roll, mode:x-rotation
-    ;virtual attitude indicator (artificial horizon)( look below for the GIMBAL LOCK issue!)
+add_animation -90, 0, 0, source: pitch , mode: y-rotation
+add_animation 180, 0, 0, source: roll, mode:x-rotation
+;virtual attitude indicator (artificial horizon)( look below for the GIMBAL LOCK issue!)
+```
 
 **Events**
 
-    add_animation 45, 0, 0, source: event, mode: x-rotation, event: TRUCK_TOGGLE_CONTACT
-    ;Prop will rotate 45° x-axis when the starter key is pressed.
-    ;There is only one event allowed with '''mode:event'''
+```
+add_animation 45, 0, 0, source: event, mode: x-rotation, event: TRUCK_TOGGLE_CONTACT
+;Prop will rotate 45° x-axis when the starter key is pressed.
+;There is only one event allowed with '''mode:event'''
 
-    add_animation 45, 0, 0, source:event, mode:x-rotation, eventlock, event:TRUCK_TOGGLE_CONTACT
-    add_animation 45, 0, 0, source:event, mode:x-rotation, event:TRUCK_STARTER
-    ;This rotates the prop related to ignition status and additional 45° when the starter is pressed
-    ;It is valid to stack up to 10 animations of any kind to one single prop.
+add_animation 45, 0, 0, source:event, mode:x-rotation, eventlock, event:TRUCK_TOGGLE_CONTACT
+add_animation 45, 0, 0, source:event, mode:x-rotation, event:TRUCK_STARTER
+;This rotates the prop related to ignition status and additional 45° when the starter is pressed
+;It is valid to stack up to 10 animations of any kind to one single prop.
+```
 
 **Autoanimation**
 
-    add_animation 0.005, 0, 0, source: permanent, mode: x-offset, autoanimate
-    ;It will animate the related prop on the x-offset
+```
+add_animation 0.005, 0, 0, source: permanent, mode: x-offset, autoanimate
+;It will animate the related prop on the x-offset
 
-    add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate
-    ;Moving direction changed.
+add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate
+;Moving direction changed.
 
-    add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate, noflip
-    ;Will stop now at the limit and not flip anymore. So now it just moves one direction and thats it.
+add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate, noflip
+;Will stop now at the limit and not flip anymore. So now it just moves one direction and thats it.
 
-    add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate, noflip, bounce
-    ;Will start moving left / right itself just according to the default limits
+add_animation -0.005, 0, 0, source: permanent, mode: x-offset, autoanimate, noflip, bounce
+;Will start moving left / right itself just according to the default limits
 
-    add_animation -0.005, -5, 20, source: permanent, mode: x-offset, autoanimate, noflip, bounce
-    ;Will start moving left / right itself just according to the user custom limits.
-    ;Keep in mind: for rotation and offset, first limits needs to be <=0  second >=0
-    ;Limits are like prop offsets for offsets, default ( opt1=opt2=0) limit is +-10
+add_animation -0.005, -5, 20, source: permanent, mode: x-offset, autoanimate, noflip, bounce
+;Will start moving left / right itself just according to the user custom limits.
+;Keep in mind: for rotation and offset, first limits needs to be <=0  second >=0
+;Limits are like prop offsets for offsets, default ( opt1=opt2=0) limit is +-10
 
-    add_animation -0.005, 15, 20, source: permanent, mode: x-offset, autoanimate, noflip, bounce
-    ;The prop will jump instantly at start and bounce between that limits, which might be a bit confusing.
+add_animation -0.005, 15, 20, source: permanent, mode: x-offset, autoanimate, noflip, bounce
+;The prop will jump instantly at start and bounce between that limits, which might be a bit confusing.
 
-    add_animation -0.005, 15, 20, source: permanent, mode: x-rotation, autoanimate
-    ;Rotating instead of sliding. All the settings for offsets can be used with rotation too.
-    ;Limits are in degree for rotations, default ( opt1=opt2=0) limit is +-180° ( a full circle)
+add_animation -0.005, 15, 20, source: permanent, mode: x-rotation, autoanimate
+;Rotating instead of sliding. All the settings for offsets can be used with rotation too.
+;Limits are in degree for rotations, default ( opt1=opt2=0) limit is +-180° ( a full circle)
+```
 
-**GIMBAL LOCK** To avoid axis corruption when rotating props: - Always place your prop with a y-rotation of 0 or 180°. If you need to align your prop in another way, rotate the mesh in your mesh-editor! To avoid axis corruption when rotating multiple props: - Use only the x and y axis together, skip z. If you need 3 axis rotation, do the z-axis with a n/b-rotator as the base for your prop definition nodes. [Gimbal lock](http://wapedia.mobi/en/Gimbal_lock)
+**GIMBAL LOCK** To avoid axis corruption when rotating props: - Always place your prop with a y-rotation of `0` or `180°`. If you need to align your prop in another way, rotate the mesh in your mesh-editor! 
+
+To avoid axis corruption when rotating multiple props: - Use only the x and y axis together, skip z. If you need 3 axis rotation, do the z-axis with a n/b-rotator as the base for your prop definition nodes. [Gimbal lock](http://wapedia.mobi/en/Gimbal_lock)
 
 ## Flexbodies
 
@@ -2466,7 +2681,7 @@ You can declare several flexbodies. Each must be composed of the two lines (prop
 
 The first line of this section is exactly the same format as on the props section. Parameters:
 
--   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system. If you want to place your flexbody globally, declare -1 as the reference node.
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system. If you want to place your flexbody globally, declare `-1` as the reference node.
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
 -   **x\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the X direction from the **reference\_node**.
@@ -2486,9 +2701,9 @@ As next, a line beginning with the word *forset* follows. Behind the word *forse
 Notes about backwards compatibility:
 
 -   If you use a node range \[A-B\], RoR will tolerate if node B doesn't exist (warning will be emitted).
--   If you enter multiple commas ",," between forset entries, parser will ignore it silently.
+-   If you enter multiple commas `,,` between forset entries, parser will ignore it silently.
 -   If there's a comma after last element, parser will ignore it silently.
--   Accepted separators between keyword "forset" and node ranges are: whitespace, comma ",", colon ":", or nothing at all (line like "forset12,34,56" will be correctly evaluated as "forset 12, 34, 56") for backwards compatibility.
+-   Accepted separators between keyword "forset" and node ranges are: whitespace, comma `,`, colon `:`, or nothing at all (lines like `forset12,34,56` will be correctly evaluated as `forset 12, 34, 56`) for backwards compatibility.
 
 ## (sub-directive) disable\_flexbody\_shadow
 
@@ -2502,28 +2717,22 @@ No parameters. Disables shadow casting of the last flexbody to improve complex t
 
 Sets the cameramode in which the flexbody should be shown:
 
--   **mode**: <span style="color:#BD0058">Decimal number</span> <span style="color:#0B8A00">default = -2 (always visible)</span>; Flexbody visibility: -2 = all the time (default), -1 = external only, &gt;=0 cinecam number
+-   **mode**: <span style="color:#BD0058">Decimal number</span> <span style="color:#0B8A00">default = `-2` (always visible)</span>; Flexbody visibility: `-2` = all the time (default), `-1` = external only, &gt;=`0` cinecam number
 
-<!-- -->
+```
+flexbodies
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
+3,  4, 19,       0,       0,   0.027,   90,    0,   90, dodgecharger.mesh
+forset 0-16, 23-24, 31, 54-125
 
-    flexbodies
-    ;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
-       3,  4, 19,       0,       0,   0.027,   90,    0,   90, dodgecharger.mesh
-    forset 0-16, 23-24, 31, 54-125
+disable_flexbody_shadow
 
-    disable_flexbody_shadow
+; -2 = all the time, -1 = external only, >=0  cinecam number
+flexbody_camera_mode -1
+```
 
-    ; -2 = all the time, -1 = external only, >=0  cinecam number
-    flexbody_camera_mode -1
 
-Note: It's important to keep an eye on the number of vertices of your meshes. Not that there is a hard limit, but beyond 10000 vertices there could be a noticeable slowdown. As reference: the Dodge mesh is about 4000 vertices.
-
-Further reading:
-
--   Refer to [this thread](http://forum.rigsofrods.com/index.php?topic=9341.msg77404#msg77404) for more information.
--   Read this guide if you want to use high quality meshes: [Mesh LODs](https://archives.rigsofrods.org/wiki/index.php/Mesh_LODs)
--   [How to get a good Flexbody](https://archives.rigsofrods.org/wiki/index.php/How_to_get_a_good_Flexbody)
--   [Separate (flexbody) deforming/detaching parts](https://archives.rigsofrods.org/wiki/index.php/Separate_(flexbody)_deforming/detaching_parts)
+Note: It's important to keep an eye on the number of vertices of your meshes. Not that there is a hard limit, but beyond `10000` vertices there could be a noticeable slowdown. As reference: the Dodge Charger mesh is about `4000` vertices.
 
 ## Submesh
 
@@ -2531,7 +2740,7 @@ Defines the most visible part of the truck: the body. It will dress the chassis 
 
 Most modern flexbodied trucks do not need a submesh section for visual purposes. However, the section is still required for collision to work.
 
-A submesh has two subsections: the texcoords, that places nodes of the submesh on the texture image (coordinates between 0.0 and 1.0) , and then the cab subsection, that draws the triangles, with triplets of node numbers.
+A submesh has two subsections: the texcoords, that places nodes of the submesh on the texture image (coordinates between `0.0` and `1.0`) , and then the cab subsection, that draws the triangles, with triplets of node numbers.
 
 ### (sub-section) texcoords
 
@@ -2545,69 +2754,77 @@ A submesh has two subsections: the texcoords, that places nodes of the submesh o
 -   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
 -   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
 -   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
-    -   **n**: Placeholder. Does nothing.
-    -   **c**: This triangle will be a contact triangle that can contact with contacters nodes.
-    -   **b**: This triangle will be part of a buoyant hull.
-    -   **s**: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging will be disabled.
-    -   **r**: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging only.
-    -   **D**: (Combination of **b** and **c** flags) This triangle will be both a contact triangle AND a buoyant hull part.
-    -   **p**: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
-    -   **u**: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes it impossible to pierce the submesh.
-    -   **F**: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as **p** but also a boat hull.
-    -   **S**: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as **u** but also a boat hull.
+    -   `n`: Placeholder. Does nothing.
+    -   `c`: This triangle will be a contact triangle that can contact with contacters nodes.
+    -   `b`: This triangle will be part of a buoyant hull.
+    -   `s`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging will be disabled.
+    -   `r`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging only.
+    -   `D`: (Combination of **b** and **c** flags) This triangle will be both a contact triangle AND a buoyant hull part.
+    -   `p`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
+    -   `u`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes it impossible to pierce the submesh.
+    -   `F`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `p` but also a boat hull.
+    -   `S`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `u` but also a boat hull.
 
 The order in which the three points forming the triangles is given is important, as its winding defines in which direction it will be visible. The winding must be counterclockwise to be visible.
 
-mcreed has contributed a cool [Texturing Tutorial](https://archives.rigsofrods.org/wiki/index.php/Texturing_Tutorial) that describes how to fill the submesh and cab parts of the truck file.
+The easiest way to create a submesh is to use [Blender 2.49b](https://forum.rigsofrods.org/downloads.php?do=file&id=180).
 
 ### (sub-directive) backmesh
 
 No params. If added, the triangles' backsides will be black instead of see-through.
 
-    ;cabin top
-    submesh
-    texcoords
-    75, 0.172, 0.334
-    76, 0.172, 0.665
-    77, 0.291, 0.334
-    78, 0.291, 0.665
-    cab
-    75,76,78
-    75,78,77
+```
+;cabin top
+submesh
+texcoords
+75, 0.172, 0.334
+76, 0.172, 0.665
+77, 0.291, 0.334
+78, 0.291, 0.665
+cab
+75,76,78
+75,78,77
 
-    ;cabin back
-    submesh
-    texcoords
-    77, 0.291, 0.334
-    78, 0.291, 0.665
-    53, 0.422, 0.334
-    54, 0.422, 0.665
-    6, 0.422, 0.334
-    8, 0.422, 0.665
-    cab
-    77,78,54
-    77,54,53
-    53,54,8,c
-    53,8,6,c
-    backmesh
+;cabin back
+submesh
+texcoords
+77, 0.291, 0.334
+78, 0.291, 0.665
+53, 0.422, 0.334
+54, 0.422, 0.665
+6, 0.422, 0.334
+8, 0.422, 0.665
+cab
+77,78,54
+77,54,53
+53,54,8,c
+53,8,6,c
+backmesh
+```
 
 When making an invisible collision submesh for a flexbody vehicle, the "texcoords" section is not needed and should not be used.
 
-    ;front bumper
-    submesh
-    cab
-    126,121,127,c
-    132,126,127,c
-    133,132,127,c
-    125,120,121,c
-    126,125,121,c
-    ...
+```
+;front bumper
+submesh
+cab
+126,121,127,c
+132,126,127,c
+133,132,127,c
+125,120,121,c
+126,125,121,c
+...
+```
 
 ## set_collision_range
 
-set\_collision\_range is 0.02 as default value, and defines the maximum range (2 cm) around a truck's collision triangles that collisions start to happen. By increasing it, for example to 0.04, penetrations become a lot more difficult.
+set\_collision\_range is `0.02` as default value, and defines the maximum range (`2` cm) around a truck's collision triangles that collisions start to happen. 
 
-    set_collision_range 0.02
+By increasing it, for example to `0.04`, penetrations become a lot more difficult.
+
+```
+set_collision_range 0.02
+```
 
 ## submesh\_groundmodel
 
@@ -2617,37 +2834,43 @@ Parameter:
 
 -   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.org/wiki/index.php/Groundmodel_Description_File)
 
-<!-- -->
-
-    ;submesh_groundmodel groundModelName
-    submesh_groundmodel rock
+```
+;submesh_groundmodel groundModelName
+submesh_groundmodel rock
+```
 
 ## Exhausts
 
 This replaces the x or y node options. The **factor** parameter should be "1", because it is not used yet. The material should be "default" if no user-created one is made. (You could create your own particle emitter based on the default one: data/smoke.particle). Remember: The direction node is behind the ref node!
 
-    exhausts
-    ;ref node, direction node, factor material
-          103,             99,      1 default
-          105,             98,      1 default
+```
+exhausts
+;ref node, direction node, factor material
+103,             99,      1 default
+105,             98,      1 default
+```
 
 ## Sections
 
-    sectionconfig 0 lowspeed
-    sectionconfig 0 highspeed
+This section allows you to have different options selectable from the vehicle spawner menu. Almost any section (`managedmaterials`, `engine`, `props`, `flexbodies`, etc) can be used with this. 
 
-    section 0 lowspeed
-    engine
-    1000.000000, 1500.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
-    end_section
-    section 0 highspeed
-    engine
-    1000.000000, 15000.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
-    end_section
+```
+sectionconfig 0 lowspeed
+sectionconfig 0 highspeed
 
-    section 0 highspeed lowspeed
-    ;triggered with both
-    end_section
+section 0 lowspeed
+engine
+1000.000000, 1500.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
+end_section
+section 0 highspeed
+engine
+1000.000000, 15000.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
+end_section
+
+section 0 highspeed lowspeed
+;triggered with both
+end_section
+```
 
 ## Guisettings
 
@@ -2669,41 +2892,48 @@ Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored o
 
 Example:
 
-    guisettings
-        interactiveOverviewMap zoom
-        dashboard dash_test.layout
-        dashboard dash_test2.layout
-        texturedashboard dashGauges.layout
-        ; legacy settings
-        tachoMaterial tracks/MyTacho
-        speedoMaterial tracks/MySpeedo
-        speedoMax 80
-        useMaxRPM 1
+```
+guisettings
+interactiveOverviewMap zoom
+dashboard dash_test.layout
+dashboard dash_test2.layout
+texturedashboard dashGauges.layout
+; legacy settings
+tachoMaterial tracks/MyTacho
+speedoMaterial tracks/MySpeedo
+speedoMax 80
+useMaxRPM 1
+```
    
 
 ## Set\_skeleton\_settings
 
-Inline-section; modifies the skeleton display of the truck. Has module-wide effect; only needs to be issued once per file.
+Inline-section; modifies the skeleton display (activated by pressing `K`) of the truck. Has module-wide effect; only needs to be issued once per file.
 
 Parameters:
 
 -   **visibility\_range\_in\_meters** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 150</span>; <span style="color: #008079">Empty value = -1</span>
 
-<!-- -->
-
 -   **beam\_thickness\_in\_meters** <span style="color:#666">(optional) (nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 0.01 (1 centimeter)</span>; <span style="color: #008079">Empty value = -1</span>
 
-For example:
+Examples:
 
-    ; Beams visible from 150 meters away, beams are 1 centimeter in width (default values).
-    set_skeleton_settings 150, 0.01
+Beams visible from `150` meters away, beams are `1` centimeter in width (default values):
+```
+set_skeleton_settings 150, 0.01
+```
 
-    ; 2km sight range with 9 centimeter wide beams.
-    set_skeleton_settings 2000, 0.09
+2km sight range with `9` centimeter wide beams:
+
+```
+set_skeleton_settings 2000, 0.09
+```
 
 ## Videocamera
 
-The videocamera section describes how to set up multiple mirrors and extra cameras like a backup-camera for a truck or hook-camera for a crane. Both, cameras and mirrors, use the same technique, cameras just add a reflective calculation and flip (mirror) the image generated.
+The videocamera section describes how to set up multiple mirrors and extra cameras like a backup-camera for a truck or hook-camera for a crane. 
+
+Both, cameras and mirrors, use the same technique, cameras just add a reflective calculation and flip (mirror) the image generated.
 
 Parameters:
 
@@ -2719,71 +2949,103 @@ Parameters:
 -   **rotation\_y** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Optional camera Y-rotation. Works like props rotation, relates to the plane of Node 1-3 as frustum. Adjust camera orientation without moving nodes. Avoid the gimbal lock, using Y-rotation is not recommended together with other axis.
 -   **rotation\_z** <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Real number</span>; <span style="color: #008079">Empty value = 0</span>; Optional camera Z-rotation. Works like props rotation, relates to the plane of Node 1-3 as frustum. Adjust camera orientation without moving nodes.
 -   **fov**: <span style="color:#BD0058">Real number, valid: 0.01 -179.9</span>; Camera field of view.
--   **texture\_width**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; X-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum 256, watch your FPS.
--   **texture\_height**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; Y-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum 256, watch your FPS.
--   **min\_clip\_distance**: <span style="color:#BD0058">Real number</span>; Minimum distance in meters of objects to be rendered Valid: 0.1 - value&lt;maxclipdistance. Useful to blend out things that should not be displayed. Good to tune FPS.
--   **max\_clip\_distance**: <span style="color:#BD0058">Real number</span> Maximum distance in meters of objects to be rendered Valid: value&gt;minclipdistance - 32000. Useful to blend out things that should not be displayed. Watch your FPS.
--   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: **-1** == camera, **0** == tracker camera (requires an alternative camera orientation node), **1** == mirrors.
--   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a **-2** in here.
+-   **texture\_width**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; X-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum `256`, watch your FPS.
+-   **texture\_height**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; Y-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum `256`, watch your FPS.
+-   **min\_clip\_distance**: <span style="color:#BD0058">Real number</span>; Minimum distance in meters of objects to be rendered Valid: `0.1` - value&lt;maxclipdistance. Useful to blend out things that should not be displayed. Good to tune FPS.
+-   **max\_clip\_distance**: <span style="color:#BD0058">Real number</span> Maximum distance in meters of objects to be rendered Valid: value&gt;minclipdistance - `32000`. Useful to blend out things that should not be displayed. Watch your FPS.
+-   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: `-1` == camera, `0` == tracker camera (requires an alternative camera orientation node), `1` == mirrors.
+-   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a `-2` in here.
 -   **material**: <span style="color:#BD0058">String</span>; The material the generated textured should be displayed on. Requires a prop (mesh) using this material to get any visual results.
 -   **name**: <span style="background-color:#fb7">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
 
 **Important**:
 
--   place the videocamera section **before loading any meshes** that should display the material
+-   Videocameras only work with [props](#props).
+-   Place the videocamera section **before loading any meshes** that should display the material
 -   Its recommended that mirrors always use the alternative cam position node placed precise in the center of the mirror-mesh (the reflecting part) of the related mirror. Otherwise, reflective calculation might be wrong. Mirrors can use y-axis rotation presets for easy adjustment, to rotate x/z axis move the reference nodes accordingly to avoid gimbal lock, offset preset work too, but are not recommended to use.
--   Wrong or not existing materials will make RoR crash while parsing the truck. Be accurate !
--   .material file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
+-   Wrong or not existing materials might make RoR crash while parsing the truck. Be accurate !
+-   `.material` file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
 -   Do **NOT** the set alternative camera orientation node to the same node\# then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
+-   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds. 
 
 **Samples:**
 
-    videocamera
-    ;nref, nx, ny, ncam, nlookat,    offx,  offy,  offz, rotx, roty, rotz, fov, texX, texY, minclip, maxclip, cRole, cMode, material
-    ; camera with no offsets and rotations
-       43, 42,  1,   -1,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,    -1,    -2, video-camera1
+```
+videocamera
+;nref, nx, ny, ncam, nlookat,    offx,  offy,  offz, rotx, roty, rotz, fov, texX, texY, minclip, maxclip, cRole, cMode, material
+; camera with no offsets and rotations
+43, 42,  1,   -1,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,    -1,    -2, video-camera1
 
-    ; camera with no offsets and rotations placed on an alternative camNode
-       43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,    -1,    -2, video-camera1
+; camera with no offsets and rotations placed on an alternative camNode
+43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,    -1,    -2, video-camera1
 
-    ; tracker camera with no offsets and rotations placed on an alternative camNode
-       43, 42,  1,  185,     363,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     0,    -2, video-camera1
+; tracker camera with no offsets and rotations placed on an alternative camNode
+43, 42,  1,  185,     363,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     0,    -2, video-camera1
 
-    ; camera  with offsets and rotations
-       42, 43,  1,  362,      -1,   -3.22,  1.20,  0.00,  -45,    0,    0, 100,  128,  128,    0.01,    2500,    -1,    -2, video-camera1
+; camera  with offsets and rotations
+42, 43,  1,  362,      -1,   -3.22,  1.20,  0.00,  -45,    0,    0, 100,  128,  128,    0.01,    2500,    -1,    -2, video-camera1
 
-    ; camera  with offsets and rotations placed on an alternative camNode (offsets apply from here)
-       42, 43,  1,  362,      -1,   -3.22,  1.20,  0.00,  -45,    0,    0, 100,  128,  128,    0.01,    2500,    -1,    -2, video-camera1
+; camera  with offsets and rotations placed on an alternative camNode (offsets apply from here)
+42, 43,  1,  362,      -1,   -3.22,  1.20,  0.00,  -45,    0,    0, 100,  128,  128,    0.01,    2500,    -1,    -2, video-camera1
 
-    ; mirror no offsets and rotations placed on an alternative camNode
-       43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
+; mirror no offsets and rotations placed on an alternative camNode
+43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
+```
 
-**material sample:**
+**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/downloads.php?do=file&id=274): (They are currently disabled)**
 
-    material video-camera1
+```
+videocamera
+;nref, nx, ny, ncam, nlookat,    offx,  offy,  offz, rotx, roty, rotz, fov, texX, texY, minclip, maxclip, cRole, cMode, material
+;left
+317,308,315,  318,     -1,   0,   2,   0,   0,   10,   0,  40,  400,  400,     0.1,    6000,     1,    -2, Quattro_LM 
+```
+
+**UV Mapped mirror mesh:**
+
+![videocamera-uv-blender](/images/videocamera-uv-blender.png)
+
+**You can use this texture to help UV map your mirror mesh:**
+
+![vidscreen-disabled](/images/vidscreen-disabled.png)
+
+**`.material` file:**
+
+```
+material Quattro_LM
+ {
+    technique
     {
-        technique
+       pass
         {
-            pass
-            {
-                texture_unit
-                {
-                    texture video-screen-disabled.png
-                }
-            }
-        }
+          texture_unit
+          {
+            texture vidscreen-disabled.png
+          }
+       }   
     }
+}
+```
 
-Make sure **video-screen-disabled.png** is in your truck folder. **Use your own texture and material names to avoid conflicts !**
+**Node position reference:**
 
-**Debug Mode:** RoR.cfg file: **VideoCameraDebug=Yes** activates helpfull meshes which show position and orientation of the video-cameras set up
+![videocamera-nodes](/images/videocamera-nodes.png)
 
-notes:
+Make sure `vidscreen-disabled.png` is in your truck folder. **Use your own texture and material names to avoid conflicts !**
 
--   any value 2^n (POW) means that you have to choose a number out of the following numbers:
+**Note: Only works in the development builds** 
 
-<!-- -->
+You can enable videocamera debug in RoRConfig which activates helpful meshes which show position and orientation of the video-cameras set up:
 
+![rorconfig-debugvideocameras](/images/rorconfig-debugvideocameras.png)
+
+![videocamera-debug-ingame](/images/videocamera-debug-ingame.png)
+
+Notes:
+
+-   Any value `2^n` (POW) means that you have to choose a number out of the following numbers:
+
+```
     2^0 = 1
     2^1 = 2
     2^2 = 4
@@ -2798,6 +3060,7 @@ notes:
     2^11 = 2048
     2^12 = 4096
     2^13 = 8192
+```
 
 ## Extcamera
 
@@ -2805,19 +3068,25 @@ The extcamera command allows you to change the 3rd person camera behavior.
 
 Currently, there are three modes you can use:
 
-1. The classic mode (also default if you do not use this command)
+The classic mode (also default if you do not use this command)
 
-    extcamera classic
+```
+extcamera classic
+```
 
-2. The cinecam mode: it will rotate the camera around the cinecamera
+The cinecam mode: it will rotate the camera around the cinecamera
 
-    extcamera cinecam
+```
+extcamera cinecam
+```
 
-3. The node mode: it will rotate the camera around a specified node
+The node mode: it will rotate the camera around a specified node
 
-    extcamera node <nodeid>
-    ;for example:
-    extcamera node 123
+```
+;extcamera node <nodeid>
+;for example:
+extcamera node 123
+```
 
 The final two modes are useful for a vehicle with detaching parts, so the camera is fixed in the view of the main vehicle.
 
@@ -2828,27 +3097,33 @@ In RoR 0.39.7 and above you can add a camerarail section to your beam objects. T
 Camera controls:
 
 -   Right-click: Rotate camera
--   Right-click + CTRL (left) + move mouse left/right: Move camera on spline. Speed up with Shift or slow down with Alt.
--   CTRL (left) + Shift + Space: Enable/disable auto-tracking
+-   Right-click + `CTRL` (left) + move mouse left/right: Move camera on spline. Speed up with `Shift` or slow down with `Alt`.
+-   `CTRL` (left) + `Shift`+ `Space`: Enable/disable auto-tracking
 
 Syntax:
 
-    camerarail
-    <node1>
-    [node2]
-    ...
-    [node50]
+```
+camerarail
+<node1>
+[node2]
+...
+[node50]
+```
 
-You can define up to 50 nodes per beam object. You can use one node several times. If the first node is the same as the last one, the spline will be closed and the camera can move on the rail continuously. Example:
+You can define up to `50` nodes per beam object. You can use one node several times. If the first node is the same as the last one, the spline will be closed and the camera can move on the rail continuously. Example:
 
-    camerarail
-    5
-    6
-    7
-    8
-    5
+```
+camerarail
+5
+6
+7
+8
+5
+```
 
-If multiple beam objects, each with a "camerarail"-section, are connected with hooks, the game will try to connect the splines. This way you can move the camera over multiple hooked vehicles without the need to switch the vehicle:
+If multiple beam objects, each with a `camerarail` section, are connected with hooks, the game will try to connect the splines. 
+
+This way you can move the camera over multiple hooked vehicles without the need to switch the vehicle:
 
 Object A (active) - Object B (hooked) - Object C (hooked)
 
@@ -2862,7 +3137,9 @@ Since version 0.36, vehicles can have custom sounds. By default, RoR uses a set 
 
 Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
 
-    disabledefaultsounds
+```
+disabledefaultsounds
+```
 
 ## Soundsources
 
@@ -2871,15 +3148,15 @@ Adds a sound source to your vehicle.
 Parameters:
 
 -   **node**: <span style="color:#BD0058">Node number</span>; The place where your sound will come from. Doesn't support named nodes.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](http://docs.rigsofrods.org/vehicle-creation/fileformat-soundscript/). You can use game-defined sound scripts or your own sound scripts.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](/vehicle-creation/fileformat-soundscript/). You can use game-defined sound scripts or your own sound scripts.
 
-<!-- -->
-
-    soundsources
-    ;nodeID, sound
-         23, my_diesel
-         23, my_turbo
-        135, tracks/default_horn
+```
+soundsources
+;nodeID, sound
+23, my_diesel
+23, my_turbo
+135, tracks/default_horn
+```
 
 ## Soundsources2
 
@@ -2890,16 +3167,16 @@ Parameters:
     -   **-2**: Global; enabled all the time
     -   **-1**: Enabled in external camera only
     -   **0 (or higher)**: Enabled for cinecamera number specified.
-        Note: for backwards compatibility, the parser will read invalid values as 0 and emit a warning.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](http://docs.rigsofrods.org/vehicle-creation/fileformat-soundscript). You can use game-defined sound scripts or your own sound scripts.
+        Note: for backwards compatibility, the parser will read invalid values as `0` and emit a warning.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](/vehicle-creation/fileformat-soundscript). You can use game-defined sound scripts or your own sound scripts.
 
-<!-- -->
-
-    soundsources2
-    ;node, mode, sound
-       23,   -2, my_diesel
-       23,   -1, my_turbo
-      135,    0, tracks/default_horn
+```
+soundsources2
+;node, mode, sound
+23,   -2, my_diesel
+23,   -1, my_turbo
+135,    0, tracks/default_horn
+```
 
 ## List of default soundsources
 
@@ -2909,149 +3186,162 @@ This can be inserted in the file as is.
 
 ### Engine (Diesel)
 
-    soundsources
-    1, tracks/default_diesel
-    1, tracks/default_force
-    1, tracks/default_starter
-    1, tracks/default_turbo
-    1, tracks/default_air_purge
-    1, tracks/default_horn
-    1, tracks/default_pump
-    1, tracks/default_screetch
-    1, tracks/default_brakes
-    1, tracks/default_parkbrakes
-    1, tracks/default_air
-    1, tracks/default_shift
-    1, tracks/default_break
-    1, tracks/default_creak
-    1, tracks/default_gear_slide
-    1, tracks/default_reverse_beep
-    1, tracks/default_turn_signal
+```
+soundsources
+1, tracks/default_diesel
+1, tracks/default_force
+1, tracks/default_starter
+1, tracks/default_turbo
+1, tracks/default_air_purge
+1, tracks/default_horn
+1, tracks/default_pump
+1, tracks/default_screetch
+1, tracks/default_brakes
+1, tracks/default_parkbrakes
+1, tracks/default_air
+1, tracks/default_shift
+1, tracks/default_break
+1, tracks/default_creak
+1, tracks/default_gear_slide
+1, tracks/default_reverse_beep
+1, tracks/default_turn_signal
+```
 
 ### Engine (Gasoline)
 
-    soundsources
-    1, tracks/default_car
-    1, tracks/default_starter
-    1, tracks/default_horn
-    1, tracks/default_pump
-    1, tracks/default_police
-    1, tracks/default_screetch
-    1, tracks/default_brakes
-    1, tracks/default_parkbrakes
-    1, tracks/default_shift
-    1, tracks/default_break
-    1, tracks/default_creak
-    1, tracks/default_gear_slide
-    1, tracks/default_turn_signal
+```
+soundsources
+1, tracks/default_car
+1, tracks/default_starter
+1, tracks/default_horn
+1, tracks/default_pump
+1, tracks/default_police
+1, tracks/default_screetch
+1, tracks/default_brakes
+1, tracks/default_parkbrakes
+1, tracks/default_shift
+1, tracks/default_break
+1, tracks/default_creak
+1, tracks/default_gear_slide
+1, tracks/default_turn_signal
+```
 
  
 
 ### Airplane (Prop)
 
-    soundsources
-
-    1, tracks/default_turboprop_start1
-    1, tracks/default_turboprop_lopower1
-    1, tracks/default_turboprop_hipower1
-    1, tracks/default_turboprop_start2
-    1, tracks/default_turboprop_lopower2
-    1, tracks/default_turboprop_hipower2
-    1, tracks/default_turboprop_start3
-    1, tracks/default_turboprop_lopower3
-    1, tracks/default_turboprop_hipower3
-    1, tracks/default_turboprop_start4
-    1, tracks/default_turboprop_lopower4
-    1, tracks/default_turboprop_hipower4
-    1, tracks/default_turboprop_start5
-    1, tracks/default_turboprop_lopower5
-    1, tracks/default_turboprop_hipower5
-    1, tracks/default_turboprop_start6
-    1, tracks/default_turboprop_lopower6
-    1, tracks/default_turboprop_hipower6
-    1, tracks/default_turboprop_start7
-    1, tracks/default_turboprop_lopower7
-    1, tracks/default_turboprop_hipower7
-    1, tracks/default_turboprop_start8
-    1, tracks/default_turboprop_lopower8
-    1, tracks/default_turboprop_hipower8
+```
+soundsources
+1, tracks/default_turboprop_start1
+1, tracks/default_turboprop_lopower1
+1, tracks/default_turboprop_hipower1
+1, tracks/default_turboprop_start2
+1, tracks/default_turboprop_lopower2
+1, tracks/default_turboprop_hipower2
+1, tracks/default_turboprop_start3
+1, tracks/default_turboprop_lopower3
+1, tracks/default_turboprop_hipower3
+1, tracks/default_turboprop_start4
+1, tracks/default_turboprop_lopower4
+1, tracks/default_turboprop_hipower4
+1, tracks/default_turboprop_start5
+1, tracks/default_turboprop_lopower5
+1, tracks/default_turboprop_hipower5
+1, tracks/default_turboprop_start6
+1, tracks/default_turboprop_lopower6
+1, tracks/default_turboprop_hipower6
+1, tracks/default_turboprop_start7
+1, tracks/default_turboprop_lopower7
+1, tracks/default_turboprop_hipower7
+1, tracks/default_turboprop_start8
+1, tracks/default_turboprop_lopower8
+1, tracks/default_turboprop_hipower8
+```
 
  
 
 ### Airplane (Jet)
 
-    soundsources
-    1, tracks/default_turbojet_start1
-    1, tracks/default_turbojet_lopower1
-    1, tracks/default_turbojet_hipower1
-    1, tracks/default_turbojet_afterburner1
-    1, tracks/default_turbojet_start2
-    1, tracks/default_turbojet_lopower2
-    1, tracks/default_turbojet_hipower2
-    1, tracks/default_turbojet_afterburner2
-    1, tracks/default_turbojet_start3
-    1, tracks/default_turbojet_lopower3
-    1, tracks/default_turbojet_hipower3
-    1, tracks/default_turbojet_afterburner3
-    1, tracks/default_turbojet_start4
-    1, tracks/default_turbojet_lopower4
-    1, tracks/default_turbojet_hipower4
-    1, tracks/default_turbojet_afterburner4
-    1, tracks/default_turbojet_start5
-    1, tracks/default_turbojet_lopower5
-    1, tracks/default_turbojet_hipower5
-    1, tracks/default_turbojet_afterburner5
-    1, tracks/default_turbojet_start6
-    1, tracks/default_turbojet_lopower6
-    1, tracks/default_turbojet_hipower6
-    1, tracks/default_turbojet_afterburner6
-    1, tracks/default_turbojet_start7
-    1, tracks/default_turbojet_lopower7
-    1, tracks/default_turbojet_hipower7
-    1, tracks/default_turbojet_afterburner7
-    1, tracks/default_turbojet_start8
-    1, tracks/default_turbojet_lopower8
-    1, tracks/default_turbojet_hipower8
-    1, tracks/default_turbojet_afterburner8
+```
+soundsources
+1, tracks/default_turbojet_start1
+1, tracks/default_turbojet_lopower1
+1, tracks/default_turbojet_hipower1
+1, tracks/default_turbojet_afterburner1
+1, tracks/default_turbojet_start2
+1, tracks/default_turbojet_lopower2
+1, tracks/default_turbojet_hipower2
+1, tracks/default_turbojet_afterburner2
+1, tracks/default_turbojet_start3
+1, tracks/default_turbojet_lopower3
+1, tracks/default_turbojet_hipower3
+1, tracks/default_turbojet_afterburner3
+1, tracks/default_turbojet_start4
+1, tracks/default_turbojet_lopower4
+1, tracks/default_turbojet_hipower4
+1, tracks/default_turbojet_afterburner4
+1, tracks/default_turbojet_start5
+1, tracks/default_turbojet_lopower5
+1, tracks/default_turbojet_hipower5
+1, tracks/default_turbojet_afterburner5
+1, tracks/default_turbojet_start6
+1, tracks/default_turbojet_lopower6
+1, tracks/default_turbojet_hipower6
+1, tracks/default_turbojet_afterburner6
+1, tracks/default_turbojet_start7
+1, tracks/default_turbojet_lopower7
+1, tracks/default_turbojet_hipower7
+1, tracks/default_turbojet_afterburner7
+1, tracks/default_turbojet_start8
+1, tracks/default_turbojet_lopower8
+1, tracks/default_turbojet_hipower8
+1, tracks/default_turbojet_afterburner8
+```
 
 ### Airplane (Piston)
 
-    soundsources
-    1, tracks/default_pistonprop_start1
-    1, tracks/default_pistonprop_lopower1
-    1, tracks/default_pistonprop_hipower1
-    1, tracks/default_pistonprop_start2
-    1, tracks/default_pistonprop_lopower2
-    1, tracks/default_pistonprop_hipower2
-    1, tracks/default_pistonprop_start3
-    1, tracks/default_pistonprop_lopower3
-    1, tracks/default_pistonprop_hipower3
-    1, tracks/default_pistonprop_start4
-    1, tracks/default_pistonprop_lopower4
-    1, tracks/default_pistonprop_hipower4
-    1, tracks/default_pistonprop_lopower5
-    1, tracks/default_pistonprop_hipower5
-    1, tracks/default_pistonprop_lopower6
-    1, tracks/default_pistonprop_hipower6
-    1, tracks/default_pistonprop_lopower7
-    1, tracks/default_pistonprop_hipower7
-    1, tracks/default_pistonprop_lopower8
-    1, tracks/default_pistonprop_hipower8
+```
+soundsources
+1, tracks/default_pistonprop_start1
+1, tracks/default_pistonprop_lopower1
+1, tracks/default_pistonprop_hipower1
+1, tracks/default_pistonprop_start2
+1, tracks/default_pistonprop_lopower2
+1, tracks/default_pistonprop_hipower2
+1, tracks/default_pistonprop_start3
+1, tracks/default_pistonprop_lopower3
+1, tracks/default_pistonprop_hipower3
+1, tracks/default_pistonprop_start4
+1, tracks/default_pistonprop_lopower4
+1, tracks/default_pistonprop_hipower4
+1, tracks/default_pistonprop_lopower5
+1, tracks/default_pistonprop_hipower5
+1, tracks/default_pistonprop_lopower6
+1, tracks/default_pistonprop_hipower6
+1, tracks/default_pistonprop_lopower7
+1, tracks/default_pistonprop_hipower7
+1, tracks/default_pistonprop_lopower8
+1, tracks/default_pistonprop_hipower8
+```
 
 ### Marine (Large)
 
-    1, tracks/default_marine_large
+```
+ 1, tracks/default_marine_large
+```
 
 ### Marine (Small)
 
-    1, tracks/default_marine_small
+```
+1, tracks/default_marine_small
+```
 
 # Aircraft
 
 ## Wings
 
   
-*Please see [RoRBook/Wings](https://archives.rigsofrods.org/wiki/index.php/RoRBook/Wings) for more information*
+**Please see [this page](/vehicle-creation/aircraft-and-aerodynamics/) for more information**
 
 ![Wing reference](/images/truckfile-wing.png)
 
@@ -3078,91 +3368,117 @@ The wings parameters are:
 -   **Minimum deflection of the control surface**: in degrees (negative deflection)
 -   **Maximum deflection of the control surface**: in degree (positive deflection)
 -   **Airfoil file to use**
--   **coefficent** (optional) Default is 1.0 (100%), setting any other positive number increases or decrease overall wing efficacy. Useful for precision flight characteristics tuning.
+-   **coefficent** (optional) Default is `1.0` (100%), setting any other positive number increases or decrease overall wing efficacy. Useful for precision flight characteristics tuning.
 
 The type of control surface is set by a single character, and defines how the control surface will move depending on pilot inputs. Available control surface types are:
 
--   **n** = None
--   **a** = Right aileron
--   **b** = Left aileron
--   **f** = Flap
--   **e** = Elevator
--   **r** = Rudder
--   **S** = Stabilator with right hand axis (full body elevator), useful for e.g. a Mig25
--   **T** = Stabilator with left hand axis (full body elevator), useful for e.g. a Mig25
+-   `n` = None
+-   `a` = Right aileron
+-   `b` = Left aileron
+-   `f` = Flap
+-   `e` = Elevator
+-   `r` = Rudder
+-   `S` = Stabilator with right hand axis (full body elevator), useful for e.g. a Mig25
+-   `T` = Stabilator with left hand axis (full body elevator), useful for e.g. a Mig25
 
--   **c** = Right elevon (right aileron + elevator), useful for e.g. Concorde
--   **d** = Left elevon (left aileron + elevator), useful for e.g. Concorde
--   **g** = Right flaperon (right aileron + flap)
--   **h** = Left flaperon (left aileron + flap)
--   **U** = Taileron with right hand axis (full body elevator+aileron), useful for e.g. a F-15
--   **V** = Taileron with left hand axis (full body elevator+aileron), useful for e.g. a F-15
--   **i** = Right ruddervator (rudder + elevator), useful for V-tails like the Bonanza
--   **j** = Left ruddervator (rudder + elevator), useful for V-tails like the Bonanza
+-   `c` = Right elevon (right aileron + elevator), useful for e.g. Concorde
+-   `d` = Left elevon (left aileron + elevator), useful for e.g. Concorde
+-   `g` = Right flaperon (right aileron + flap)
+-   `h` = Left flaperon (left aileron + flap)
+-   `U` = Taileron with right hand axis (full body elevator+aileron), useful for e.g. a F-15
+-   `V` = Taileron with left hand axis (full body elevator+aileron), useful for e.g. a F-15
+-   `i` = Right ruddervator (rudder + elevator), useful for V-tails like the Bonanza
+-   `j` = Left ruddervator (rudder + elevator), useful for V-tails like the Bonanza
 
-<!-- -->
-
-    wings
-    ;main wing
-    28,22,29,23,18,20,19,21, 0.509, 0.999, 0.555, 0.751, 0.752, 0.999, 0.752, 0.751, a, 0.75, -24, 24, NACA64.1.412.afl
-    ; this wing is force efficacy reduced to 50%
-    26,28,27,29,16,18,17,19, 0.804, 0.711, 0.818, 0.617, 0.999, 0.711, 0.999, 0.617, f, 0.75, -30, 0, NACA64.1.412.afl 0.75
-    ; this wing is force efficacy upgraded to 300% ( equals 3 wings of the same type )
-    90,26,25,27,14,16,15,17, 0.783, 0.844, 0.804, 0.711, 0.999, 0.844, 0.999, 0.711, f, 0.75, -30, 0, NACA64.3.618.afl 3.0
-     0,90,24,25, 4,14,13,15, 0.764, 0.933, 0.784, 0.844, 0.999, 0.933, 0.999, 0.844, f, 0.75, -30, 0, NACA64.3.618.afl
-     2, 0,46,24, 6, 4,12,13, 0.756, 0.999, 0.764, 0.933, 0.999, 0.999, 0.999, 0.933, n, 1.0, 0, 0, NACA0009.afl
-    44, 2,45,46,30, 6,31,12, 0.783, 0.844, 0.764, 0.933, 0.999, 0.844, 0.999, 0.933, f, 0.75, -30, 0, NACA64.3.618.afl
-    42,44,43,45,32,30,33,31, 0.804, 0.711, 0.783, 0.844, 0.999, 0.711, 0.999, 0.844, f, 0.75, -30, 0, NACA64.3.618.afl
-    40,42,41,43,34,32,35,33, 0.818, 0.617, 0.804, 0.711, 0.999, 0.617, 0.999, 0.711, f, 0.75, -30, 0, NACA64.1.412.afl
-    38,40,39,41,36,34,37,35, 0.555, 0.751, 0.509, 0.999, 0.752, 0.751, 0.752, 0.999, b, 0.75, -24, 24, NACA64.1.412.afl
-    ;rudder
-    101,107,102,108,103,109,104,110, 0.017, 0.746, 0.087, 0.492, 0.262, 0.746, 0.204, 0.492, r, 0.56, -35, 35, NACA0009.afl
-    99,101,100,102,105,103,106,104, 0.017, 0.999, 0.132, 0.747, 0.262, 0.999, 0.253, 0.747, n, 1.0, 0, 0, NACA0009.afl
-    ;elevators
-    144,154,146,155,142,152,105,153, 0.763, 0.457, 0.840, 0.244, 0.999, 0.457, 0.983, 0.244, e, 0.64, -33, 33, NACA0009.afl
-    145,144,147,146,143,142,106,105, 0.756, 0.999, 0.764, 0.933, 0.999, 0.999, 0.999, 0.933, n, 1.0, 0, 0, NACA0009.afl
-    150,145,151,147,148,143,149,106, 0.840, 0.244, 0.763, 0.457, 0.983, 0.244, 0.999, 0.457, e, 0.64, -33, 33, NACA0009.afl
+```
+wings
+;main wing
+28,22,29,23,18,20,19,21, 0.509, 0.999, 0.555, 0.751, 0.752, 0.999, 0.752, 0.751, a, 0.75, -24, 24, NACA64.1.412.afl
+; this wing is force efficacy reduced to 50%
+26,28,27,29,16,18,17,19, 0.804, 0.711, 0.818, 0.617, 0.999, 0.711, 0.999, 0.617, f, 0.75, -30, 0, NACA64.1.412.afl 0.75
+; this wing is force efficacy upgraded to 300% ( equals 3 wings of the same type )
+90,26,25,27,14,16,15,17, 0.783, 0.844, 0.804, 0.711, 0.999, 0.844, 0.999, 0.711, f, 0.75, -30, 0, NACA64.3.618.afl 3.0
+ 0,90,24,25, 4,14,13,15, 0.764, 0.933, 0.784, 0.844, 0.999, 0.933, 0.999, 0.844, f, 0.75, -30, 0, NACA64.3.618.afl
+ 2, 0,46,24, 6, 4,12,13, 0.756, 0.999, 0.764, 0.933, 0.999, 0.999, 0.999, 0.933, n, 1.0, 0, 0, NACA0009.afl
+44, 2,45,46,30, 6,31,12, 0.783, 0.844, 0.764, 0.933, 0.999, 0.844, 0.999, 0.933, f, 0.75, -30, 0, NACA64.3.618.afl
+42,44,43,45,32,30,33,31, 0.804, 0.711, 0.783, 0.844, 0.999, 0.711, 0.999, 0.844, f, 0.75, -30, 0, NACA64.3.618.afl
+40,42,41,43,34,32,35,33, 0.818, 0.617, 0.804, 0.711, 0.999, 0.617, 0.999, 0.711, f, 0.75, -30, 0, NACA64.1.412.afl
+38,40,39,41,36,34,37,35, 0.555, 0.751, 0.509, 0.999, 0.752, 0.751, 0.752, 0.999, b, 0.75, -24, 24, NACA64.1.412.afl
+;rudder
+101,107,102,108,103,109,104,110, 0.017, 0.746, 0.087, 0.492, 0.262, 0.746, 0.204, 0.492, r, 0.56, -35, 35, NACA0009.afl
+99,101,100,102,105,103,106,104, 0.017, 0.999, 0.132, 0.747, 0.262, 0.999, 0.253, 0.747, n, 1.0, 0, 0, NACA0009.afl
+;elevators
+144,154,146,155,142,152,105,153, 0.763, 0.457, 0.840, 0.244, 0.999, 0.457, 0.983, 0.244, e, 0.64, -33, 33, NACA0009.afl
+145,144,147,146,143,142,106,105, 0.756, 0.999, 0.764, 0.933, 0.999, 0.999, 0.999, 0.933, n, 1.0, 0, 0, NACA0009.afl
+150,145,151,147,148,143,149,106, 0.840, 0.244, 0.763, 0.457, 0.983, 0.244, 0.999, 0.457, e, 0.64, -33, 33, NACA0009.afl
+```
 
 **Special wing formats to reduce node/beam count and CPU load:**
 
-     (Use at own risk!)
+**(Use at own risk!)**
 
-    All examples lines refer to the node notation sample picture above.
-     'A' means Node A from that schematic diagram.
-    They work, no idea if they produce more or less lift then a wing with defined thickness.
-    Only use them for invisible wings with meshed props/flexbodies for the visual appearance and with a transparent material, skinning them results in an ugly visual appearance.
+All examples lines refer to the node notation sample picture above.
+
+'A' means Node A from that schematic diagram.
+	 
+	 
+They work, no idea if they produce more or less lift then a wing with defined thickness.
+
+Only use them for invisible wings with meshed props/flexbodies for the visual appearance and with a transparent material, skinning them results in an ugly visual appearance.
 
 -   Flarewing using 2 nodes
 
-For precise aviation flare placement you can use a wing defined with only 2 nodes. It has no aerodynamic influence at all It has an extremely low node/beam count -- Vital: Needs to be placed as first wing in the wings section. Use the NACA0009.afl as the airfoil.
+For precise aviation flare placement you can use a wing defined with only 2 nodes. It has no aerodynamic influence at all It has an extremely low node/beam count -- Vital: Needs to be placed as first wing in the wings section. Use `NACA0009.afl` as the airfoil.
 
-    wings
-    A,B,A,B,A,B,A,B,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+```
+wings
+A,B,A,B,A,B,A,B,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+```
 
 -   Trim or main wing using 3 nodes
 
--- Defines a wing using only 3 nodes. -- Placing this wing first in the wing section results in the aviation flares appearing on the nodes A,B ( red/green ) and E (white flash). -- Works horizontally and vertically. (As on the tail.) -- Low node/beam count wing for self built flaps, ailerons, elevators or trimwings, very easy to animate with a single hydro. -- Can be used with any active control surface and any afl-format -- Known Issues: Sometimes vertical tailfin wings work only one direction. If RoR crashes exchange node A and B with each other.
+-- Defines a wing using only 3 nodes. Placing this wing first in the wing section results in the aviation flares appearing on the nodes `A,B` ( red/green ) and `E` (white flash).
 
-    wings
-    A,B,A,B,E,E,E,E,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+Works horizontally and vertically. (As on the tail.) Low node/beam count wing for self built flaps, ailerons, elevators or trimwings, very easy to animate with a single [hydro](#hydros). 
+
+Can be used with any active control surface and any afl-format 
+
+**Known Issues: Sometimes vertical tailfin wings work only one direction. If RoR crashes exchange node `A` and `B` with each other.**
+
+```
+wings
+A,B,A,B,E,E,E,E,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+```
 
 -   Trim or main wing using 4 nodes
 
--- Defines a wing using only 4 nodes. -- Placed first in the wing section results in the aviation flares appearing on the nodes A,B (red/green) and E,F(white flash) -- Works horizontally and vertically (As on the tail.) -- Low node/beam count wing for main wings -- Can be used with any active control surface and any afl-format. --- Known Issues: sometimes vertical tailfin wings work only one direction. If RoR crashes exchange node A,B and E,F with each other
+-- Defines a wing using only 4 nodes. Placed first in the wing section results in the aviation flares appearing on the nodes `A,B` (red/green) and `E,F` (white flash) 
 
-    wings
-    A,B,A,B,E,F,E,F,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+Works horizontally and vertically (As on the tail.) 
+
+Low node/beam count wing for main wings 
+
+Can be used with any active control surface and any afl-format. 
+
+**Known Issues: sometimes vertical tailfin wings work only one direction. If RoR crashes exchange node `A,B` and `E,F` with each other**
+
+```
+wings
+A,B,A,B,E,F,E,F,0,0,0,0,0,0,0,0,n,0,0,0, NACA0009.afl
+```
 
 ## Airbrakes
 
-Airbrakes are a moving panel used to slow down an airplane (key bindings: "3" and "4"). They are positioned similarly to "props". These airbrakes can be easily added to a wing box, with noderef, nodex, nodey and nodea being the four upper nodes of a box.
+Airbrakes are a moving panel used to slow down an airplane (key bindings: `3` and `4`). They are positioned similarly to [props](#props). 
+
+These airbrakes can be easily added to a wing box, with `noderef`, `nodex`, `nodey` and nodea being the four upper nodes of a box.
 
 Parameters:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
--   **additional\_node**: <span style="color:#BD0058">Node number/name</span>; An additional node to make the braking forces symmetric (they are applied to noderef, nodex, nodey and nodea).
+-   **additional\_node**: <span style="color:#BD0058">Node number/name</span>; An additional node to make the braking forces symmetric (they are applied to `noderef`, `nodex`, `nodey` and `nodea`).
 -   **x\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the X direction from the **reference node**. The distance it is moved depends on the distance between the **Reference node** and the '''X direction node '''(it's proportional): (0) leaves the prop on the reference node, (1) moves it all the way to the **X direction node**, and (0.5) puts the prop half-way between the two
 -   **y\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the Y direction from the **reference node**. Like the **X direction offset**, the amount it is proportional to the distance between the **reference node** and the **Y direction node**.
 -   **z\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; Imagine a surface which the X and Y directions pass straight through. If looking along that surface is the forwards direction, then this field moves the prop straight up. Unlike the **X direction offset** and the **Y direction offset**, the amount for the straight up offset is measured in meters
@@ -3175,17 +3491,21 @@ Parameters:
 -   **texcoord\_y2**: <span style="color:#BD0058">Real number <0 - 1></span>; Texture coordinate.
 -   **lift\_coefficient** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -1.0</span>
 
-<!-- -->
-
-    airbrakes
-    ;noderef, nodex, nodey, nodea, offsetx, offsety, offsetz, width, length, max angle, texcord x1, texcoord y1, texcoord x2, texcoord y2
-          95,   105,   113,   125,     0.2,     0.0,     0.0,   2.0,    3.0,      60.0,      0.044,       0.205,       0.124,       0.146
+```
+airbrakes
+;noderef, nodex, nodey, nodea, offsetx, offsety, offsetz, width, length, max angle, texcord x1, texcoord y1, texcoord x2, texcoord y2
+95,   105,   113,   125,     0.2,     0.0,     0.0,   2.0,    3.0,      60.0,      0.044,       0.205,       0.124,       0.146
+```
 
 ## Turboprops
 
 The turboprops section defines the turboprop engines, and makes the truck a plane!
 
-It is important that this section comes AFTER the props section, because you will need to add a 'spinprop.mesh' entry to the props before turboprops will work. One pale.mesh per propeller blade can also be added for visible blades. Easy, eh? Each prop blade is associated to a blade tip node, and you must ensure the blade nodes are correctly interconnected with beams so it will spin freely around its axis, while maintaining a rigid prop disc. See how the Antonov is made. You can also make 2 or 3 blade props by putting a "-1" instead of the blade tip node number(see the Twin Otter for example). Parameters are:
+It is important that this section comes AFTER the [props](#props) section, because you will need to add a `spinprop.mesh` entry to the props before turboprops will work. 
+
+One `pale.mesh` per propeller blade can also be added for visible blades. Easy, eh? Each prop blade is associated to a blade tip node, and you must ensure the blade nodes are correctly interconnected with beams so it will spin freely around its axis, while maintaining a rigid prop disc. 
+
+See how the [Antonov 12](https://forum.rigsofrods.org/downloads.php?do=file&id=313) is made. You can also make 2 or 3 blade props by putting a `-1` instead of the blade tip node number(see the [Twin Otter](https://forum.rigsofrods.org/downloads.php?do=file&id=323) for example). Parameters are:
 
 -   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; Center of the prop
 -   **axis\_node**: <span style="color:#BD0058">Node number/name</span>; Back of the prop
@@ -3196,44 +3516,47 @@ It is important that this section comes AFTER the props section, because you wil
 -   **turbine\_power**: <span style="color:#BD0058">Real number</span>; Power of the turbine (in kW)
 -   **airfoil**: <span style="color:#BD0058">String</span>; Airfoil of the blades
 
-<!-- -->
-
-    turboprops
-    122,173,174,175,176,177, 3000.0, Clark-Y.afl
-    113,168,169,170,171,172, 3000.0, Clark-Y.afl
-    116,158,159,160,161,162, 3000.0, Clark-Y.afl
-    119,163,164,165,166,167, 3000.0, Clark-Y.afl
+```
+turboprops
+122,173,174,175,176,177, 3000.0, Clark-Y.afl
+113,168,169,170,171,172, 3000.0, Clark-Y.afl
+116,158,159,160,161,162, 3000.0, Clark-Y.afl
+119,163,164,165,166,167, 3000.0, Clark-Y.afl
+```
 
 ## Fusedrag
 
-The fusedrag section helps the correct modeling of the fuselage contribution to the aerodynamic drag of a plane. It also makes possible the "masking" of the aerodynamic contribution of an object loaded inside the plane. It models the fuselage as a big wing section, with an airfoil (usually a symmetrical airfoil like NACA0009). Fusedrag can also be used in road vehicles to aid top speed. The parameters are:
+The fusedrag section helps the correct modeling of the fuselage contribution to the aerodynamic drag of a plane. 
+
+It also makes possible the "masking" of the aerodynamic contribution of an object loaded inside the plane. 
+
+It models the fuselage as a big wing section, with an airfoil (usually a symmetrical airfoil like `NACA0009`). Fusedrag can also be used in road vehicles to aid top speed. The parameters are:
 
 -   **Number of the front-most node of the fuselage**
 -   **Number of the rear-most node of the fuselage**
 -   **Approximate width of the fuselage**
 -   **Airfoil name**
 
-<!-- -->
+```
+fusedrag
+131, 51, 4.0, NACA0009.afl
+```
 
-    fusedrag
-    131, 51, 4.0, NACA0009.afl
+-   **autocalc** Automatically calculates the width and height of the truck.
+-   **Fusedrag area coefficient** This is optional, default = "1.0" ( = 100% ) Smaller values will make your truck go faster.
+-   **Airfoil name** This is optional, default = `NACA0009.afl`
 
--   **autocalc**
--   **Fusedrag area coefficient** this is optional, default = "1.0" ( = 100% ) Smaller values will make your truck go faster.
--   **Airfoil name** this is optional, default = "NACA0009.afl"
+```
+fusedrag
+// fusedrag calculated by truck width and height using NACA0009.afl airfoil
+131, 51, autocalc
 
-<!-- -->
+// fusedrag calculated by truck width and height using NACA0009.afl airfoil with coef 0.5
+131, 51, autocalc, 0.5
 
-
-    fusedrag
-    // fusedrag calculated by truck width and height using NACA0009.afl airfoil
-    131, 51, autocalc
-
-    // fusedrag calculated by truck width and height using NACA0009.afl airfoil with coef 0.5
-    131, 51, autocalc, 0.5
-
-    // fusedrag calculated by truck width and height using airfoil_name.afl airfoil with coef 1.75
-    131, 51, autocalc, 1.75 airfoil_name.afl
+// fusedrag calculated by truck width and height using airfoil_name.afl airfoil with coef 1.75
+131, 51, autocalc, 1.75 airfoil_name.afl
+```
 
 ## Turbojets
 
@@ -3242,19 +3565,19 @@ Defines a turbojet. Parameters:
 -   **front\_node**: <span style="color:#BD0058">Node number/name</span>; A node at the air intake.
 -   **back\_node**: <span style="color:#BD0058">Node number/name</span>; A node at the base of the nozzle.
 -   **side\_node**: <span style="color:#BD0058">Node number/name</span>; A node at the side of the engine, for reference.
--   **is\_reversable**: <span style="color:#BD0058">Integer (yes/no)</span>; Boolean meaning: 0 is NO, anything else (including -1) is YES
+-   **is\_reversable**: <span style="color:#BD0058">Integer (yes/no)</span>; Boolean meaning: `0` is NO, anything else (including `-1`) is YES
 -   **dry\_thrust**: <span style="color:#BD0058">Real number</span>; The thrust without afterburner (in kilonewtons).
 -   **wet\_thrust**: <span style="color:#BD0058">Real number</span>; The total thrust with afterburner, or zero if it does not apply.
--   **front\_diameter**: <span style="color:#BD0058">0</span>; Unused.
+-   **front\_diameter**: <span style="color:#BD0058">`0`</span>; Unused.
 -   **back\_diameter**: <span style="color:#BD0058">Real number</span>; The nozzle diameter.
 -   **nozzle\_length**: <span style="color:#BD0058">Real number</span>; The length of the nozzle. This will automatically add a nozzle prop at the end of the engine, with the diameter and length specified.
 
-<!-- -->
-
-    turbojets
-    ;front_node, back_node, side_node, is_reversable, dry_thrust(kN), wet_thrust(kN), front_diameter, back_diameter, nozzle_length
-            272,       273,       277,             0,           73.5,          100.1,            1.2,          1.66,          0.73
-            274,       275,       276,             0,            3.5,          100.1,            1.2,          1.66,          0.73
+```
+turbojets
+;front_node, back_node, side_node, is_reversable, dry_thrust(kN), wet_thrust(kN), front_diameter, back_diameter, nozzle_length
+272,       273,       277,             0,           73.5,          100.1,            1.2,          1.66,          0.73
+274,       275,       276,             0,            3.5,          100.1,            1.2,          1.66,          0.73
+```
 
 ## Pistonprops
 
@@ -3268,27 +3591,33 @@ Parameters:
 -   **blade\_2\_tip\_node**: <span style="color:#BD0058">Node number/name</span>;
 -   **blade\_3\_tip\_node**: <span style="color:#BD0058">Node number/name</span>;
 -   **blade\_4\_tip\_node**: <span style="color:#BD0058">Node number/name</span>;
--   **couple\_node**: <span style="color:#BD0058">Node number/name OR -1</span>; It is unknown of what the couplenode does so it's recommended to leave it at -1.
+-   **couple\_node**: <span style="color:#BD0058">Node number/name OR -1</span>; It is unknown of what the couplenode does so it's recommended to leave it at `-1`.
 -   **turbine\_power**: <span style="color:#BD0058">Real number</span>; Power of the turbine (in kW)
 -   **pitch**: <span style="color:#BD0058">Real number</span>;
 -   **airfoil**: <span style="color:#BD0058">String</span>; Airfoil of the blades
 
-<!-- -->
-
-    pistonprops
-    ;ref, back,  p1,  p2,  p3,  p4, couplenode,  power, pitch,    propfoil
-     122,  173, 174, 175, 176, 177,         -1, 3000.0,   -10, Clark-Y.afl
-     113,  168, 169, 170, 171, 172,         -1, 3000.0,   -10, Clark-Y.afl
-     116,  158, 159, 160, 161, 162,         -1, 3000.0,   -10, Clark-Y.afl
-     119,  163, 164, 165, 166, 167,         -1, 3000.0,   -10, Clark-Y.afl
+```
+pistonprops
+;ref, back,  p1,  p2,  p3,  p4, couplenode,  power, pitch,    propfoil
+ 122,  173, 174, 175, 176, 177,         -1, 3000.0,   -10, Clark-Y.afl
+ 113,  168, 169, 170, 171, 172,         -1, 3000.0,   -10, Clark-Y.afl
+ 116,  158, 159, 160, 161, 162,         -1, 3000.0,   -10, Clark-Y.afl
+ 119,  163, 164, 165, 166, 167,         -1, 3000.0,   -10, Clark-Y.afl
+```
 
 # Boats
 
+See: [Boats](/vehicle-creation/boats)
+
 ## Screwprops
 
-Screwprops are boats' propellers. As of RoR 0.31, the definition of this section is not stabilized, and is bound to change as the propeller model will improve. Currently, steering is only done by thrust vectoring. The current format is prop node, back node, top node, power.
+Screwprops are boats' propellers. Currently, steering is only done by thrust vectoring. 
 
-    screwprops
-    ;prop node, back node, top node,    power
-            88,        93,       91, 100000.0
-            89,        92,       90, 100000.0
+The current syntax is `prop node`, `back node`, `top node`, `power`.
+
+```
+screwprops
+;prop node, back node, top node,    power
+        88,        93,       91, 100000.0
+        89,        92,       90, 100000.0
+```
