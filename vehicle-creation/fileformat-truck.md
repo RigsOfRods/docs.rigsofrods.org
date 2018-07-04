@@ -2681,7 +2681,7 @@ You can declare several flexbodies. Each must be composed of the two lines (prop
 
 The first line of this section is exactly the same format as on the props section. Parameters:
 
--   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system. If you want to place your flexbody globally, declare `-1` as the reference node.
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system.
 -   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
 -   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
 -   **x\_offset**: <span style="color:#BD0058">Real number <0 - 1></span>; The amount the prop should be moved in the X direction from the **reference\_node**.
