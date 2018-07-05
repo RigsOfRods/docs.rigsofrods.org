@@ -242,6 +242,8 @@ DebugBlendMaps=0
 
 ## Ground textures
 
+See also: [Ogre Terrain Page Config (.otc)](/terrain-creation/terrn2-subsystem/#ogre-terrain-page-config-otc)
+
 The system is designed for texturing by several tiling textures combined via built-in texture blending (aka texture splatting).
 Other built-in effects: [normal mapping](http://wiki.polycount.com/wiki/Normal_map), specular mapping, [parallax mapping](http://wiki.polycount.com/wiki/Parallax_Map).
 
