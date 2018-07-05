@@ -49,7 +49,9 @@ Input is configured by editing configuration file [input.map](#config-file-input
     </tr>
     <!--camera-->
     <tr><td style="color: #6692b3">Change        </td><td style="color: #6692b3">C                     </td></tr>
-    <tr><td style="color: #6692b3">control camera</td><td style="color: #6692b3">1, 2, 3, 4, 5, 6, 8, 9</td></tr>
+    <tr><td style="color: #6692b3">Control camera</td><td style="color: #6692b3">1, 2, 3, 4, 5, 6, 8, 9</td></tr>
+    <tr><td style="color: #6692b3">Free camera   </td><td style="color: #6692b3">SHIFT+C               </td></tr>
+    <tr><td style="color: #6692b3">Fixed camera   </td><td style="color: #6692b3">ALT+C               </td></tr>
     <!--caelum-->
     <tr><td style="color: #ced925">Increase time</td><td style="color: #ced925">+</td></tr>
     <tr><td style="color: #ced925">Decrease time</td><td style="color: #ced925">-</td></tr>
@@ -185,7 +187,7 @@ because some planes could have more than 4 engines and you couldn't control them
     <tr><td>Toggle HUD          </td><td>U    </td></tr>
     <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
     <tr><td>Adjust Simulation Speed</td><td>Ctrl+= / Shift+= </td></tr>
-    <tr><td>Switch Between Vehicles </td><td>Ctrl+] / Ctrl+[</td></tr>
+    <tr><td>Switch Between Vehicles </td><td>Ctrl+] / Ctrl+[ </td></tr>
     <tr><td>Remove Current Vehicle</td><td>Ctrl+Del</td></tr>
     <tr><td>Respawn Last Vehicle</td><td>Ctrl+.(period)</td></tr>
 </table>
