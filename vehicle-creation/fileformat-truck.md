@@ -2257,7 +2257,7 @@ material myBrakeMaterial
 }
 ```
 
-Put the off-state of the brakelight into the file `truck\_brake\_material\_0.png` and the on-state into `truck\_brake\_material\_1.png`. The `2` and `0` at the end should not be changed. 
+Put the off-state of the brakelight into the file `truck_brake_material_0.png` and the on-state into `truck_brake_material_1.png`. The `2` and `0` at the end should not be changed. 
 
 This section should be after the flares section and before the props and flexbodies section in order for the lights to work properly.
 
@@ -2265,9 +2265,7 @@ COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, 
 
 ## Props
 
-This allows you to "stick" any 3D mesh to a triangle of points of a truck. You can use it to stick air intakes, horns, seats, dashboard, bumpers, whatever to the truck. Note that there will be no collision detection with these objects. Like flares, they use a vector coordinate system instead of normal right-angle coordinates. Props are positioned relative to 3 nodes of the chassis: One node is the reference node, and the two others define a base (x,y). Props are positioned relative to the reference node by adding proportions of the vectors ref-&gt;X, ref-&gt;Y, with the normal being used as well .
-
-Please read this guide if you want to use high quality meshes: [Mesh LODs](https://archives.rigsofrods.org/wiki/index.php/Mesh_LODs).
+This allows you to "stick" any 3D mesh to a triangle of points of a truck. You can use it to stick air intakes, horns, seats, dashboard, bumpers, whatever to the truck. Note that there will be no collision detection with these objects. Like flares, they use a vector coordinate system instead of normal right-angle coordinates. Props are positioned relative to 3 nodes of the chassis: One node is the reference node, and the two others define a base (x,y). Props are positioned relative to the reference node by adding proportions of the vectors ref-&gt;X, ref-&gt;Y, with the normal being used as well.
 
 Parameters are:
 
