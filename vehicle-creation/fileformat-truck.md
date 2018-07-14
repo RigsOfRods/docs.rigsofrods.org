@@ -785,10 +785,6 @@ wheels2
 0.335,   0.625,    -1,      12,   54,    55,     53,      1,         1,  33, 280.0,   900000.0,       200.0,      200000.0,         2000.0, tracks/dafrwheelface tracks/dafwheelband
 ```
 
-Please note:
-
--   wheels2 will be replaced with normal wheels during multiplayer game play.
-
 ## Meshwheels
 
 Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the [wheels](#wheels) section, though there are a few differences.
