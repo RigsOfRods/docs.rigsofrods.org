@@ -21,7 +21,7 @@ All sizes must be exactly as shown in this tutorial!
 What you need for this tutorial:
 * Some basic knowledge of building objects for RoR
 * A text editor, e.g. Notepad
-* RoREditor for watching the node and beam structure
+* [RoREditor](http://docs.rigsofrods.org/tools-tutorials/editorizer/) for watching the node and beam structure
 
 Please note that this train does not work as well as expected. 
 Main reasons are the low mass of the train, the really short wheelbase and the fact 
@@ -35,8 +35,8 @@ The bogie is the main part of our train.
 It holds the wheels and avoids the train from sliding off the rails. 
 It has the shape of a trapezoid prism, the lower side is smaller than the upper. 
 The 4 upper nodes are for the wheels, the four lower nodes are the guidance nodes. 
-Those need to have low friction (set_node_defaults -1, 0, -1, -1) and need to be contacters. 
-Give them a mass of 50kg using the "l"-option in the nodes section.
+Those need to have low friction (`set_node_defaults -1, 0, -1, -1`) and need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
+Give them a mass of `50`kg using the `l`-option in the nodes section.
 
 [bogie]: /images/rail-vehicles-tutorial-bogie.png
 {: width="100%"}
@@ -46,9 +46,9 @@ Give them a mass of 50kg using the "l"-option in the nodes section.
 ## Step 2: Placement node
 
 In order to spawn the train correctly in the train spawner, 
-node 0 needs to be in the center of the train, 0.53 meters below the lowest edge of the wheel (See Fig. 4). 
-For our tutorial train, we set node 0 in the middle of the bogie. 
-Node 0 needs to have the "c"-option in the nodes section for no ground detection. 
+node `0` needs to be in the center of the train, `0.53` meters below the lowest edge of the wheel (See Fig. 4). 
+For our tutorial train, we set node `0` in the middle of the bogie. 
+Node `0` needs to have the `c`-option in the nodes section for no ground detection. 
 
 [fig2-node0]: /images/rail-vehicles-tutorial-placement-node.png
 {: width="100%"}
@@ -81,8 +81,7 @@ It's time to build a chassis and, on this train, connect it directly to the bogi
 ## Step 5: Couplers
 
 Now we add simple couplers to the front and back of the train. 
-We are using hooknodes with the auto-lock option 
-(Attention: disable high quality reflective effects in RoR, otherwise it will crash).
+We are using hooknodes with the auto-lock option.
 
 [fig6-couplers]: /images/rail-vehicles-tutorial-couplers.png
 {: width="100%"}
@@ -91,7 +90,7 @@ We are using hooknodes with the auto-lock option
 
 ## Step 6: Support beams
 
-The last step is to add more beams to make the structure stable. We can also add contacters and ropables.
+The last step is to add more beams to make the structure stable. We can also add [contacters](/vehicle-creation/fileformat-truck/#contacters) and [ropables](/vehicle-creation/fileformat-truck/#ropables).
 
 [fig7-support-beams]: /images/rail-vehicles-tutorial-support-beams.png
 {: width="100%"}
@@ -107,8 +106,10 @@ The last step is to add more beams to make the structure stable. We can also add
 ## Step 7: Tweaking the truckfile
 
 Now the node and beam of our train is finished, now it's time to tweak the truckfile. 
-Download the finished train and look into the truckfile. 
-Please note the comments in there! *((TODO: Fix link!))* [[File:Railrunner.zip]]
+
+Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/downloads.php?do=file&id=341)
+
+Please note the comments in there!
 
 
 # Building a wagon
@@ -118,8 +119,8 @@ Please note the comments in there! *((TODO: Fix link!))* [[File:Railrunner.zip]]
 The bogie is the main part of our wagon. It holds the wagon on the rails. 
 It has the shape of a trapezoid prism, the lower side is smaller than the upper. 
 The 4 upper nodes slide on top of the rail, the four lower nodes are the guidance nodes. 
-Make them all low friction (set_node_defaults -1, 0, -1, -1). The four lower nodes need to be contacters.
-Give them a mass of 50kg using the "l"-option in the nodes section. 
+Make them all low friction (`set_node_defaults -1, 0, -1, -1`). The four lower nodes need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
+Give them a mass of `50`kg using the "l"-option in the nodes section. 
 
 [fig10-wagon-bogie]: /images/rail-vehicles-tutorial-wagon-bogie.png
 {: width="100%"}
@@ -129,8 +130,8 @@ Give them a mass of 50kg using the "l"-option in the nodes section.
 ## Step 2: Placement node
 
 In order to spawn the wagon correctly in the train spawner, 
-node 0 needs to be in the center of the train, 0.53 meters below the upper four nodes of our bogie. 
-Node 0 needs to have the "c"-option in the nodes section for no ground detection. 
+node `0` needs to be in the center of the train, `0.53` meters below the upper four nodes of our bogie. 
+Node `0` needs to have the "c"-option in the nodes section for no ground detection. 
 
 [fig11-wagon-node0]: /images/rail-vehicles-tutorial-wagon-node0.png
 {: width="100%"}
@@ -174,9 +175,11 @@ The last step is to add more beams to make the structure stable. We can also add
 
 ## Step 7: Tweaking the truckfile
 
-Now the node and beam of our wagon is finished, it's time to tweak the truckfile. 
-Download the finished train and look into the truckfile. Please note the comments in there! [[File:Railrunner.zip]]
-*((TODO: Fix the link!))*
+Now the node and beam of our wagon is finished, it's time to tweak the truckfile.
+
+Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/downloads.php?do=file&id=341)
+
+Please note the comments in there!
 
 # Coupling Systems
 
@@ -211,9 +214,7 @@ triggers
 This is the standard European buffer and chain coupling. 
 It is much more complex than the automatic coupling above. 
 As this is quite complicated and hard to rebuild, please use the node and beam of the 
-[http://www.rigsofrods.com/repository/view/4341 Rbns 641 freight wagon] as a template.
-
-*((TODO: fix the link!))*
+[Rbns 641 freight wagon](https://forum.rigsofrods.org/downloads.php?do=file&id=192) as a template.
 
 ### Chain coupling
 
@@ -277,7 +278,7 @@ One side has a contactable slidenode connected to a shock. The other side has a 
 
 Q: My train is stuck in the rail or positioned wrong when spawning: 
 
-* Check the position of node nr. 0
+* Check the position of node `0`
 
 Q: The train derails on switches: 
 
@@ -288,15 +289,5 @@ Q: The ride is very bumpy
 
 * Raise the numray count on the tires
 * Add a suspension
-
-Q: The train crashes the game when coupling
-
-* Disable high qualitative reflective effects in the configurator
-
-# See also
-
-*TODO: Fix link!*
-
-http://www.rigsofrods.com/threads/88801
 
 
