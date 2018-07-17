@@ -54,7 +54,7 @@ for some reason. Note these changes:
 <td> Front/Back
 </td></tr></table>
 
-#Time Warning
+# Time Warning
 
 Furthermore, be advised that adding flares to a vehicle 
 will sometimes take quite a bit of time, depending on the type of vehicle, 
