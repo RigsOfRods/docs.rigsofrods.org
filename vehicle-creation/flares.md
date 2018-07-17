@@ -19,7 +19,7 @@ values in the `.truck`, `.load`, `.trailer`, .`boat` or `.plane` file.
 There are multiple types of flares, ranging from brake lights, 
 to turn signals, to headlights, to specialty lighting. 
 
-#The Coordinate Plane* 
+# The Coordinate Plane
 
 Flares operate on a different coordinate plane than nodes, 
 for some reason. Note these changes: 
