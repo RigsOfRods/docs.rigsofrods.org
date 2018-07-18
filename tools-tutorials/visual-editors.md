@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Editorizer"
+title:  "Visual editors"
 categories: [tools-tutorials]
 ---
 
