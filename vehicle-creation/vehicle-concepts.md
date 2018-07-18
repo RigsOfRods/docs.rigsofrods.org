@@ -10,7 +10,7 @@ Rigs of Rods uses a very unique way to simulate a truck. In fact, <b>it does not
 
 To grasp the idea, take a look at these games that use the same construction logic:
 
--   [Geomag](http://www.fatbraintoys.com/geomag/) is a real-world construction game that uses metallic balls and magnets.
+-   [Geomag](https://www.geomagworld.com/en/) is a real-world construction game that uses metallic balls and magnets.
 -   [Bridge Construction Set](http://www.chroniclogic.com/pontifex2.htm) is a video game where you build and test bridges.
 
 To build a truck in Rigs of rods, you need to design a structural chassis composed of a lattice of rods. You have to define :
