@@ -21,7 +21,7 @@ All sizes must be exactly as shown in this tutorial!
 What you need for this tutorial:
 * Some basic knowledge of building objects for RoR
 * A text editor, e.g. Notepad
-* [RoREditor](http://docs.rigsofrods.org/tools-tutorials/editorizer/) for watching the node and beam structure
+* [A visual editor](/tools-tutorials/visual-editors/) for watching the node and beam structure
 
 Please note that this train does not work as well as expected. 
 Main reasons are the low mass of the train, the really short wheelbase and the fact 

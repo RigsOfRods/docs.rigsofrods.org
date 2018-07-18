@@ -62,7 +62,7 @@ number of nodes, number of flares, etc. You've been warned.
 
 # Preparing the chassis
 
-Before we begin, you'll absolutely need a truck editor, such as the [Editorizer](/tools-tutorials/editorizer/).
+Before we begin, you'll absolutely need a truck editor, such as the [Editorizer](/tools-tutorials/visual-editors).
 
 This will allow you to see where each node is placed in relationship to the coordinate plane (X,Y,Z). 
 
