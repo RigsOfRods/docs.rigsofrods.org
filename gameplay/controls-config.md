@@ -742,13 +742,19 @@ Mouse middle button in the script above, will reset the axises in game, in this 
 
 The easiest way to configure your device for use in Rigs of Rods is to use the [Input Mapping Tool](https://forum.rigsofrods.org/downloads.php?do=file&id=156).
 
+## vJoy Conflicts
+
 **NOTE: If you have vJoy installed, you will have to disable it before running the tool!**
 
 ![vJoyDisable](/images/vJoyDisable.png)
 
+## Launching the tool
+
 After downloading, extract the zip into a new folder. Then double-click `Run.bat` to launch the tool. 
 
 ![5](/images/InputMappingTool-1.png)
+
+## Adding new inputs
 
 To begin adding inputs, click `Add`.
 
@@ -778,6 +784,8 @@ Repeat the process for all the inputs you want to add.
 ![8](/images/InputMappingTool-4.png)
 
 Once you're done, it's time to export the keymap.
+
+## Exporting the keymap
 
 First, you'll need to get the correct file name of your file.
 
