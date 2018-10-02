@@ -636,7 +636,7 @@ brakes
 
 AntiLockBrakes settings:
 
--   **regulating\_force**: <span style="color:#BD0058">Real number <0 .0 - 20.0></span>; Valid range 0 (no regulation) - 20 (max regulation)
+-   **regulating\_force**: <span style="color:#BD0058">Positive real number from range <1 - 20></span>; Valid range 1 (no regulation) - 20 (max regulation). Any other value is clamped to the <1 - 20> interval.
 -   **min\_speed**: <span style="color:#BD0058">Positive real number</span>; The speed-limit where the anti-lock-brakes system gets active
 -   **pulse/sec** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number <1 - 2000></span>
 -   **mode** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">mode: MODES JOINED WITH &</span>
@@ -672,11 +672,13 @@ In game, you can toggle the anti-lock brakes on/off with `SHIFT+B` Anti-lock Bra
 
 ## TractionControl
 
+**NOTE: wheelslip and fade\_speed have been made obsolete with 0.4.8.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/57dfbba4f16431e7b6db878223d86a17f97a92ce>)
+
 In game, you can toggle the traction control on/off with SHIFT+V
 
 Parameters:
 
--   **regulating\_force**: <span style="color:#BD0058">Positive real number from range <0 - 20></span>; <span style="color:#0B8A00">default = 0</span>; 0 (no regulation) - 20 (max regulation). Any other value is clamped to the <0 - 20> interval.
+-   **regulating\_force**: <span style="color:#BD0058">Positive real number from range <1 - 20></span>; Valid range 1 (no regulation) - 20 (max regulation). Any other value is clamped to the <1 - 20> interval.
 -   **wheelslip**: <span style="color:#BD0058">Positive real number</span>; Allowed wheel-slip in percentage of the actual speed.
 -   **fade\_speed** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive real number</span>; The speed where the allowed wheel-slip doubles (use low settings for drifter setups)
 -   **pulse/sec** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive real number from range <1 - 2000></span>; Any other value is clamped to the <1 - 2000> interval.
