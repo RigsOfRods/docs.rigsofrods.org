@@ -705,7 +705,7 @@ TractionControl                 6,      0.01,       100,      2000, mode: ON
 
 ## SlopeBrake
 
-**NOTE: This section has been made obsolete with the `HighResWheelNodeCollisions` setting added in 0.4.7.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/issues/1438>)
+**NOTE: This section has been made obsolete with 0.4.6.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/523c02f854853cc5159d4aacdd41cf1e73dff5dd>)
 
 This section fixes the bug, where trucks slowly roll down a slope no matter how much brake-force is applied.
 
