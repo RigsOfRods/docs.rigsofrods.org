@@ -2756,8 +2756,8 @@ A submesh has two subsections: the texcoords, that places nodes of the submesh o
     -   `s`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging will be disabled.
     -   `r`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging only.
     -   `D`: (Combination of **b** and **c** flags) This triangle will be both a contact triangle AND a buoyant hull part.
-    -   `p`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
-    -   `u`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Makes it impossible to pierce the submesh.
+    -   `p`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
+    -   `u`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes it impossible to pierce the submesh.
     -   `F`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `p` but also a boat hull.
     -   `S`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `u` but also a boat hull.
 
