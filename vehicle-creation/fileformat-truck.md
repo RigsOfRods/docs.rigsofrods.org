@@ -2008,8 +2008,6 @@ w1(5 6), w2(7 8), d(l)
 
 ## Wheeldetachers
 
-**This section is still highly experimental and could cause wheels to become unstable!**
-
 <span style="background-color:#fb7">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
 
 ```
