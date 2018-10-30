@@ -1527,6 +1527,8 @@ This will remove any limit and thresholds from the [set\_beam\_defaults](#set_be
 
 ## Rollon
 
+**NOTE: This directive has no effect as of version 0.39.5+**
+
 Enables collision between wheels and the contactable textured surfaces of a truck.
 
 ```
