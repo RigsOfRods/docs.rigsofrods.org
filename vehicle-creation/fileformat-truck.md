@@ -2027,6 +2027,25 @@ interaxles
 2, 3, d(vlso)
 ```
 
+## Transfer Case
+
+In RoR 0.4.8.0 and above you can add a transfer case on a vehicle.
+
+Parameters:
+
+-   **axle_1**: The number of the first axle, the one which is always driven.
+-   **axle_2**: The number of the second axle, the one which is only driven in 4WD mode.
+-   **gear_ratio**: The additional gear reduction in Lo mode.
+-   **2wd_lo_mode**: Allows/disallows 2WD Lo mode.
+
+Sample transfercase section:
+
+```
+transfercase
+;default driven axle, alternate axle, alternate ratio, 2wd lo mode
+2, 1, 3.0, 1
+```
+
 ## Wheeldetachers
 
 <span style="background-color:#fb7">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
