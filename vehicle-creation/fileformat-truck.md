@@ -1997,6 +1997,7 @@ The axle section is different from other sections in that it is broken into prop
         -   `o` - open
         -   `l` - locked
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
+        -   `v` - viscous (added in 0.4.8.0)
 		
 Sample axle section:
 
@@ -2006,6 +2007,24 @@ axles
 w1(1 2), w2(3 4), d(ol)
 ; axle 2
 w1(5 6), w2(7 8), d(l)
+```
+
+## Interaxles
+
+In RoR 0.4.8.0 and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles.
+
+Parameters:
+
+-   **axle_1**: The number of the first axle, with the first defined axle starting at `1`.
+-   **axle_2**: The number of the second axle, with the first defined axle starting at `1`.
+-   **d(type)**: Similar to the axles section
+
+Sample interaxles section:
+
+```
+interaxles
+; axle_1, axle_2, d(type)
+2, 3, d(vlso)
 ```
 
 ## Wheeldetachers
