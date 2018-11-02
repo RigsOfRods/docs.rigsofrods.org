@@ -2027,7 +2027,7 @@ interaxles
 2, 3, d(vlso)
 ```
 
-## Transfer Case
+## Transfercase
 
 In RoR 0.4.8.0 and above you can add a transfer case on a vehicle.
 
@@ -2035,15 +2035,16 @@ Parameters:
 
 -   **axle_1**: The number of the first axle, the one which is always driven.
 -   **axle_2**: The number of the second axle, the one which is only driven in 4WD mode.
--   **gear_ratio**: The additional gear reduction in Lo mode.
+-   **2wd_mode**: Allows/disallows 2WD mode.
 -   **2wd_lo_mode**: Allows/disallows 2WD Lo mode.
+-   **gear_ratio(s)**: Alternate gear ratios in Lo mode.
 
 Sample transfercase section:
 
 ```
 transfercase
-;default driven axle, alternate axle, alternate ratio, 2wd lo mode
-2, 1, 3.0, 1
+;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode, alternate ratio(s)
+2, 1, 1, 0, 4.11, 3.1, 2.72
 ```
 
 ## Wheeldetachers
