@@ -559,6 +559,7 @@ Engoption sets optional parameters to the engine. It is mainly used for car engi
 -   **Idle RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 800</span>. Idle RPM the engine should attempt to maintain.
 -   **Max Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.2</span>. Defines the maximum amount of throttle the truck will use to maintain the idle RPM.
 -   **Min Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.0</span>. Defines the minimum amount of throttle the truck will use to maintain the idle RPM.
+-   **Braking torque** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = engine_torque / 5</span>. Defines the amount of engine braking when you let go of the throttle.
 
 
 ```
