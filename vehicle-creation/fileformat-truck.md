@@ -932,6 +932,38 @@ shocks2
 36,     6,   200000,  10000,            0,          0,    200000,   10000,             0,           0,        0.3,       0.3,     1.0
 ```
 
+## Shocks3
+
+<span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
+
+Parameters:
+
+-   **node\_1**: <span style="color:#BD0058">Node number/name</span> The node where the shock starts.
+-   **node\_2**: <span style="color:#BD0058">Node number/name</span> The node where the shock ends.
+-   **spring\_in\_rate**: <span style="color:#BD0058">Real number</span> The 'stiffness' of the shock, applied when the shock is compressing. The higher the value, the less the shock will move for a given bump.
+-   **damping\_in\_rate**: <span style="color:#BD0058">Real number</span> The 'resistance to motion' of the shock, applied when the shock is compressing. The best value is given by this equation: <span style="font-family: monospace;">\[ 2 \* sqrt(suspended\_mass \* spring\_rate) \]</span>
+-   **damp\_in\_slow**: <span style="color:#BD0058">Real number</span> Damping factor for compression speeds below split\_vel\_in, example: <span style="font-family: monospace;">\[ damping == damp_in * damp_in_slow * vel \]</span>
+-   **split\_vel\_in**: <span style="color:#BD0058">Real number</span> Velocity threshold for the slow / fast compression speed
+-   **damp\_in\_fast**: <span style="color:#BD0058">Real number</span> Damping factor for compression speeds above split\_vel\_in, example:<span style="font-family: monospace;">\[ damping == damp_ing * damp_in_slow * split_vel_ing + damp_in * damp_in_fast * (vel - split_vel_in) \]</span>
+-   **spring\_out\_rate**: <span style="color:#BD0058">Real number</span> The 'stiffness' of the shock, applied when the shock is extending. The higher the value, the less the shock will move for a given bump.
+-   **damping\_out\_rate**: <span style="color:#BD0058">Real number</span> The 'resistance to motion' of the shock, applied when the shock is extending. The best value is given by this equation: <span style="font-family: monospace;">\[ 2 \* sqrt(suspended\_mass \* spring\_rate) \]</span>
+-   **damp\_out\_slow**: <span style="color:#BD0058">Real number</span> Damping factor for extension speeds below split\_vel\_out, example: <span style="font-family: monospace;">\[ damping == damp_out * damp_out_slow * vel \]</span>
+-   **split\_vel\_out**: <span style="color:#BD0058">Real number</span> Velocity threshold for the slow / fast extension speed
+-   **damp\_out\_fast**: <span style="color:#BD0058">Real number</span> Damping factor for extension speeds above split\_vel\_out, example:<span style="font-family: monospace;">\[ damping == damp_out * damp_out_slow * split_vel_out + damp_out * damp_out_fast * (vel - split_vel_out) \]</span>
+-   **max\_contraction**: <span style="color:#BD0058">Real number</span> The shortest length the shock can be, as a proportion of its original length. `0` means the shock will not be able to contract at all, `1` will let it contract all the way to zero length. If the shock tries to shorten more than this value allows, it will become as rigid as a normal beam.
+-   **max\_extension**: <span style="color:#BD0058">Real number</span> The longest length a shock can be, as a proportion of its original length. `0` means the shock will not be able to extend at all. `1` means the shock will be able to double its length. Higher values allow for longer extension.
+-   **precompression**: <span style="color:#BD0058">Real number</span> Changes compression or extension of the suspension when the truck spawns. This can be used to "level" the suspension of a truck if it sags in game. The default value is `1.0`.
+-   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>, <span style="color:#0B8A00">default = no options (shock is visible)</span>
+    -   `i`: This shock is invisible (default is visible).
+    -   `m`: metric values for shortbound/longbound applying to the length of the beam
+    -   `M`: Absolute metric values for shortbound/longbound, settings apply without regarding to the original length of the beam. Use with caution, check `RoR.log` for errors.
+
+```
+shocks3
+;node1, node2, springin(N/m), dampin(N/m/s), slowdampin, splitin(m/s), fastdampin, springout(N/m), dampout(N/m/s), slowdampout, splitout(m/s), fastdampout, shortbound, longbound, precomp, options 
+46, 55, 65000, 5800, 0.5, 1.2, 0.2, 65000, 1080, 0.5, 1.2, 0.2, 0.62, 0.00, 1.2, n
+```
+
 ## Hydros
 
 The hydros section is concerned only with the steering actuators! They are beams which change their length depending on the steering of the truck. Hydros can use [inertia](#set_inertia_defaults).
