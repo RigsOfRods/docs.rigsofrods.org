@@ -1,8 +1,8 @@
 
 # Site settings
 title: Rigs of Rods documentation
-baseurl: "http://docs.rigsofrods.org"
-url: "http://docs.rigsofrods.org"
+baseurl: "https://docs.rigsofrods.org"
+url: "https://docs.rigsofrods.org"
 
 # Build settings
 markdown: kramdown
