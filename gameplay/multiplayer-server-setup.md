@@ -178,9 +178,10 @@ The programs listed below are required to build the server, restart your compute
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
-While in the folder, do `SHIFT + Right click -> Open command prompt window here`.
+While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
+If you are running Windows 10, click `Open PowerShell window here`, then type `cmd` once the PowerShell window appears:
 
-A Command Prompt window should now be open.
+![powershell](/images/powershell-win10.png)
 
 Depending on what RoR version you are using, the clone command will be different.
 
