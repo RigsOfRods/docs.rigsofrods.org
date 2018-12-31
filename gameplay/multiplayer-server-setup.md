@@ -158,9 +158,9 @@ We're now ready to start setting up the Rigs of Rods server.
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
-[For 0.4.7.0](https://github.com/Michael10055/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
+[For 0.4.7.0](https://github.com/CuriousMike56/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
 
-[For 0.38.67 to 0.4.6RC3](https://github.com/Michael10055/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
+[For 0.38.67 to 0.4.6RC3](https://github.com/CuriousMike56/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
 
 
 ### Building yourself
@@ -178,29 +178,30 @@ The programs listed below are required to build the server, restart your compute
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
-While in the folder, do `SHIFT + Right click -> Open command prompt window here`.
+While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
+If you are running Windows 10, click `Open PowerShell window here`, then type `cmd` once the PowerShell window appears:
 
-A Command Prompt window should now be open.
+![powershell](/images/powershell-win10.png)
 
 Depending on what RoR version you are using, the clone command will be different.
 
-### 0.4.7.0
+#### 0.4.7.0
 
 If you want to run a server for 0.4.7.0, run this command:
 
-`git clone https://github.com/Michael10055/ror-server-rornet238.git`
+`git clone https://github.com/CuriousMike56/ror-server-rornet238.git`
 
-### Latest GitHub commit/AppVeyor builds
+#### Development builds
 
-To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
+To run a server for the latest development builds, run this command:
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
-### 0.38.67 to 0.4.6RC3
+#### 0.38.67 to 0.4.6RC3
 
 If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git clone https://github.com/Michael10055/ror-server-rornet237.git`
+`git clone https://github.com/CuriousMike56/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
@@ -307,11 +308,11 @@ Depending on what RoR version you are using, the clone command will be different
 
 If you want to run a server for 0.4.7.0, run this command:
 
-`git clone https://github.com/Michael10055/ror-server-rornet238.git`
+`git clone https://github.com/CuriousMike56/ror-server-rornet238.git`
 
-#### Latest GitHub commit/AppVeyor builds
+#### Development builds
 
-To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run this command:
+To run a server for the latest development builds, run this command:
 
 `git clone https://github.com/RigsOfRods/ror-server.git`
 
@@ -319,7 +320,7 @@ To run a server for the latest `rigs-of-rods` repo commit/AppVeyor builds, run t
 
 If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
-`git clone https://github.com/Michael10055/ror-server-rornet237.git`
+`git clone https://github.com/CuriousMike56/ror-server-rornet237.git`
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
