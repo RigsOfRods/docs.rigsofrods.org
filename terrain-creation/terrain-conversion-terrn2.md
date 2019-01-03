@@ -219,7 +219,7 @@ When you load the terrain in Rigs of Rods, You should have a working 0.4-ported 
 
 ![FinishedMap](/images/terrain-conversionfin.png)
 
-### Download the finished terrain [here.](https://forum.rigsofrods.org/downloads.php?do=file&id=248)
+### Download the finished terrain [here.](https://forum.rigsofrods.org/resources/cliff-drop-crash-test-map.66/)
 
 # Removing the alpha mask 
 
