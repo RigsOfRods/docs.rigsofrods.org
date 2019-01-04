@@ -18,7 +18,7 @@ Rigs of Rods is a soft-body physics simulator aiming to be as realistic as possi
 
 | The Symbol for Dark backgrounds |
 |-------|--------|
-| ![7](/images/branding/RoR_Logo_TT_Dark.png) | ![8](/images/branding/RoR_Logo_TT_Dark2.png)|
+| ![7](/images/branding/RoR_Logo_TT_Dark.png) | ![8](/images/branding/RoR_Logo_TT_Dark2.png) |
 
 ### Typeface
 
