@@ -1,5 +1,5 @@
 
-$ror-orange          : #EE7700;
+$ror-blue          : #226699;
 $ror-content-width   : 1000px;
 $ror-titlegrad-bottom: #2D2D2D;
 $ror-titlegrad-top   : #606060;
@@ -13,7 +13,7 @@ body {
 }
 
 #page-header {
-	background: $ror-orange; 
+	background: $ror-blue; 
 	padding-top: $spacing-unit/2; 
 	padding-bottom: $spacing-unit/2;
 }
@@ -46,7 +46,7 @@ body {
 
 .page h1 {
 	font-weight: bold;
-	color: $ror-orange;
+	color: $ror-blue;
 	font-size: 1.6em;
 }
 
