@@ -3,6 +3,7 @@
 title: Rigs of Rods documentation
 baseurl: "https://docs.rigsofrods.org"
 url: "https://docs.rigsofrods.org"
+name: Rigs of Rods Documentation
 
 # Build settings
 markdown: kramdown
