@@ -12,20 +12,9 @@ Rigs of Rods is a soft-body physics simulator aiming to be as realistic as possi
 |-------|--------|---------|
 | ![1](/images/branding/RoR_Logo.png) | ![1](/images/branding/RoR_Logo_Text.png)| ![1](/images/branding/RoR_Logo_TT.png) |
 
-![2](/images/branding/RoR_Logo_dark.png)
-Author: [Travis Wilber](https://forum.rigsofrods.org/members/charger.4/)
-
-![3](/images/branding/RoR_Logo_discord_icon.png)
-Author: [Travis Wilber](https://forum.rigsofrods.org/members/charger.4/)
-
-![4](/images/branding/RoR_Logo_TT.png)
-Author: [Travis Wilber](https://forum.rigsofrods.org/members/charger.4/)
-
-![5](/images/branding/RoR_Logo_TT_Dark.png)
-Author: [Travis Wilber](https://forum.rigsofrods.org/members/charger.4/)
-
-![6](/images/branding/RoR_Logo_TT_Dark2.png)
-Author: [Travis Wilber](https://forum.rigsofrods.org/members/charger.4/)
+| Logotype reversed to White | The Symbol with Background | The Symbol with Typeface below |
+|-------|--------|---------|
+| ![1](/images/branding/RoR_Logo_Text_Dark.png) | ![1](/images/branding/RoR_Logo_discord_icon.png)| ![1](/images/branding/RoR_Logo_github.png) |
 
 ### Typeface
 
