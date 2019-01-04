@@ -10,7 +10,7 @@ Rigs of Rods is a soft-body physics simulator aiming to be as realistic as possi
 
 | The Standard Logo | The Logotype | The Symbol |
 |-------|--------|---------|
-| ![1](/images/branding/RoR_Logo.png) <hr> [.svg](/images/branding/RoR_Logo.svg) *or* [.png](/images/branding/RoR_Logo.png) | ![2](/images/branding/RoR_Logo_Text.png) <hr> [.svg](/images/branding/RoR_Logo_Text.svg) *or* [.png](/images/branding/RoR_Logo_Text.png) | ![3](/images/branding/RoR_Logo_TT.png) <hr> [.svg](/images/branding/RoR_Logo_TT.svg) *or* [.png](/images/branding/RoR_Logo_TT.png) |
+| <div style="background-color: #000;">![1](/images/branding/RoR_Logo.png)</div> <hr> [.svg](/images/branding/RoR_Logo.svg) *or* [.png](/images/branding/RoR_Logo.png) | <div style="background-color: #000;">![2](/images/branding/RoR_Logo_Text.png)</div> <hr> [.svg](/images/branding/RoR_Logo_Text.svg) *or* [.png](/images/branding/RoR_Logo_Text.png) | ![3](/images/branding/RoR_Logo_TT.png) <hr> [.svg](/images/branding/RoR_Logo_TT.svg) *or* [.png](/images/branding/RoR_Logo_TT.png) |
 
 | Logotype reversed to White | The Symbol with Background | The Symbol with Typeface below |
 |-------|--------|---------|
