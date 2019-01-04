@@ -17,7 +17,19 @@
 	<meta name="author" content="Rigs of Rods Community" />
 	<meta name="description" content="The official documentation for Rigs of Rods,
 		a free and open source soft-body physics vehicle simulator." />
+	<meta name="theme-color" content="#226699">
+	<meta property="og:image" content="ror-meta.png" />
+	<meta property="og:site_name" content="Rigs of Rods Documentation" />
+	<meta property="og:title" content="{% if page.url == "/" %}
+		{{ page.title }}
+		{% else %}
+		{{ page.title }} - {{ site.name }}
+		{% endif %}" />
+	<meta property="og:description" content="The official documentation for Rigs of Rods,
+		a free and open source soft-body physics vehicle simulator." />
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<link rel="icon" type="image/png" href="ror-favicon.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="ror-meta.png">
 </head>
 <body>
 	<div id="page-container">
