@@ -12,13 +12,7 @@ How to make a collision mesh
 Step I: Getting the Resources
 -----------------------------
 
-In order to success in this tutorial/guide, you must have the following programs and utilities. SketchUp will be used as an example, but any other modeling program with an OGRE exporter shall work fine.
-
-[Google SketchUp 6](http://sketchup.google.com/) (Google SketchUp 7 may or may not work)
-
-[SketchUp 6 Plug-Ins](http://wiki.rigsofrods.com/pages/Modeling_PluginsGoogle)
-
-[1](http://wiki.rigsofrods.com/pages/Making_an_object_in_Google_SketchUp) (For object placement and more information)
+In order to success in this tutorial/guide, you must have a modeling program with an OGRE exporter. SketchUp will be used as an example.
 
 Step II: Modeling the complex object
 ------------------------------------
