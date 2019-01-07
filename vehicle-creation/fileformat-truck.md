@@ -1089,8 +1089,9 @@ The commands section describes the "real" hydros, that is, those you command wit
 -   **Contraction key**: <span style="color:#BD0058">Function key code (decimal number)</span> A number representing the function key used to control the command beam. More than one can be controlled with the same key. (See below for the keymap.)
 -   **Extension key**: <span style="color:#BD0058">Function key code (decimal number)</span> The key used to extend the command beam.
 -   **Option flag** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Single character</span>
-    -   `i`: makes the command beam invisible.
-    -   `r`: makes the command behave like a rope or a winch (no compression strength).
+    -   `i`: Makes the command beam invisible.
+    -   `r`: Makes the command behave like a rope or a winch (no compression strength).
+	- 	`c`: Makes the command beam auto-center: It will automatically return it to its starting position when a lengthening/shortening key is released.
     -   `n`: Placeholder, does nothing (useful as filler when you need to specify description)
 -   **Description** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> A text description that tells the user what the command beam does when the it is activated. This is shown by pressing `CTRL+T` ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
 
