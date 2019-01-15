@@ -2016,7 +2016,7 @@ In the example above, the maximum speed of the vehicle is `10`mps (`36`kph), it 
 
 This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels.
 
-The axle section introduces open differentials, and spooled (aka locked) differentials. 
+The axle section introduces open differentials, and spooled (aka locked) differentials. They are toggled with the `W` key.
 
 By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. 
 
