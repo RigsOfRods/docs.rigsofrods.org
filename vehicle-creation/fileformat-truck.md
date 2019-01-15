@@ -2016,7 +2016,7 @@ In the example above, the maximum speed of the vehicle is `10`mps (`36`kph), it 
 
 This section defines axles on a vehicle, allowing more accurate distribution of torque among the wheels.
 
-The axle section introduces open differentials, and spooled (aka locked) differentials. 
+The axle section introduces open differentials, and spooled (aka locked) differentials. They are toggled with the `W` key.
 
 By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. 
 
@@ -2028,10 +2028,10 @@ The axle section is different from other sections in that it is broken into prop
 -   **w2(&lt;node1&gt; &lt;node2&gt;)** - Wheel 2, same as w1, this is the second wheel attached to the axle. `w1` and `w2` are interchangeable.
 -   **d(type)** - Defines the available differential types for this axle. the list of axles is cycled through in the order specified, differential types maybe specified more than once. Each differential type is specified by a single letter, the letters are not to be separated by spaces or any other character. If no differentials are specified the axles will default to opened and locked.
     -   **Available differential types**
-        -   `o` - open
-        -   `l` - locked
+        -   `o` - Open
+        -   `l` - Locked (wheels locked together regardless of torque input)
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
-        -   `v` - viscous (added in 0.4.8.0)
+        -   `v` - Viscous <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> (applies locking force based on the amount of torque)
 		
 Sample axle section:
 
@@ -2045,13 +2045,13 @@ w1(5 6), w2(7 8), d(l)
 
 ## Interaxles
 
-In RoR 0.4.8.0 and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles.
+In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `ALT+W`.
 
 Parameters:
 
 -   **axle_1**: The number of the first axle, with the first defined axle starting at `1`.
 -   **axle_2**: The number of the second axle, with the first defined axle starting at `1`.
--   **d(type)**: Similar to the axles section
+-   **d(type)**: Similar to the `axles` section
 
 Sample interaxles section:
 
@@ -2063,19 +2063,32 @@ interaxles
 
 ## Transfercase
 
-In RoR 0.4.8.0 and above you can add a transfer case on a vehicle.
+In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can add a transfer case on a vehicle.
 
 Parameters:
 
 -   **axle_1**: The number of the first axle, the one which is always driven.
 -   **axle_2**: The number of the second axle, the one which is only driven in 4WD mode.
--   **2wd_mode**: Allows/disallows 2WD mode.
--   **2wd_lo_mode**: Allows/disallows 2WD Lo mode.
--   **gear_ratio(s)**: Alternate gear ratios in Lo mode.
+-   **2wd_mode**: Allows/disallows 2WD mode. 
+-   **2wd_lo_mode**: Allows/disallows 2WD Lo mode. 
+-   **gear_ratio(s)**: Alternate gear ratios in Lo mode. If none are specified, Lo mode will be disabled.
+
+Notes:
+
+- 	`CTRL+W` switches between 2WD/4WD mode.
+- 	If alternate gear ratios are specified, `SHIFT+W` switches between Hi/Lo mode.
 
 Sample transfercase section:
 
 ```
+;Basic transfer case, no alternate ratio(s) 
+
+transfercase
+;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode
+1, 2, 1, 0
+
+;Transfer case with alternate ratio(s)
+
 transfercase
 ;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode, alternate ratio(s)
 2, 1, 1, 0, 4.11, 3.1, 2.72
