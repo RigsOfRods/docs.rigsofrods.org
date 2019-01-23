@@ -740,7 +740,7 @@ Mouse middle button in the script above, will reset the axises in game, in this 
 
 # Configuring controls with the Input Mapping Tool
 
-The easiest way to configure your device for use in Rigs of Rods is to use the [Input Mapping Tool](https://forum.rigsofrods.org/downloads.php?do=file&id=156).
+The easiest way to configure your device for use in Rigs of Rods is to use the [Input Mapping Tool](https://forum.rigsofrods.org/resources/windows-input-mapping-tool.13/).
 
 ## vJoy Conflicts
 
