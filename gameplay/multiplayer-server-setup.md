@@ -26,7 +26,7 @@ Ok, so some people probably don't understand a lot of this so I'm going to expla
 
 Before you begin it is important for you to test the speed of your internet connection, most importantly your upload speed.
 
-Head on over to [Speedtest.net](http://speedtest.net) and click on the testing site located closest to you.
+Head on over to [Speedtest.net](https://speedtest.net) and click on the testing site located closest to you.
 
 When the test is complete, you will see the results in an image similar to the one below:
 
@@ -42,57 +42,66 @@ Ping is also a determining factor as to how enjoyable playing on your server wil
 
 You are connected via a 100Mb/s connection to a computer across the room. When you ping the other computer, you receive the following replies:
 
-    PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
-    64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.151 ms
-    64 bytes from 192.168.0.2: icmp_seq=2 ttl=64 time=0.149 ms
-    64 bytes from 192.168.0.2: icmp_seq=3 ttl=64 time=0.150 ms
-    64 bytes from 192.168.0.2: icmp_seq=4 ttl=64 time=0.153 ms
-    64 bytes from 192.168.0.2: icmp_seq=5 ttl=64 time=0.156 ms
 
-    --- 192.168.0.2 ping statistics ---
-    5 packets transmitted, 5 received, 0% packet loss, time 4004ms
-    rtt min/avg/max/mdev = 0.149/0.151/0.156/0.015 ms
+```
+PING 192.168.0.2 (192.168.0.2) 56(84) bytes of data.
+64 bytes from 192.168.0.2: icmp_seq=1 ttl=64 time=0.151 ms
+64 bytes from 192.168.0.2: icmp_seq=2 ttl=64 time=0.149 ms
+64 bytes from 192.168.0.2: icmp_seq=3 ttl=64 time=0.150 ms
+64 bytes from 192.168.0.2: icmp_seq=4 ttl=64 time=0.153 ms
+64 bytes from 192.168.0.2: icmp_seq=5 ttl=64 time=0.156 ms
+
+--- 192.168.0.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4004ms
+rtt min/avg/max/mdev = 0.149/0.151/0.156/0.015 ms
+```
 
 Now, let's pretend that there is some extremely lucky person who lives across the world from you that has a server that sits right on a major OC-768 internet backbone with a connection speed of almost 40 Gbps.
 
 When you ping that server, you receive the following replies:
 
-    PING game.ro (61.250.91.13) 56(84) bytes of data.
-    64 bytes from 61.250.91.13: icmp_seq=1 ttl=42 time=236 ms
-    64 bytes from 61.250.91.13: icmp_seq=2 ttl=42 time=239 ms
-    64 bytes from 61.250.91.13: icmp_seq=3 ttl=43 time=236 ms
-    64 bytes from 61.250.91.13: icmp_seq=4 ttl=43 time=238 ms
-    64 bytes from 61.250.91.13: icmp_seq=5 ttl=42 time=241 ms
+```
+PING game.ro (61.250.91.13) 56(84) bytes of data.
+64 bytes from 61.250.91.13: icmp_seq=1 ttl=42 time=236 ms
+64 bytes from 61.250.91.13: icmp_seq=2 ttl=42 time=239 ms
+64 bytes from 61.250.91.13: icmp_seq=3 ttl=43 time=236 ms
+64 bytes from 61.250.91.13: icmp_seq=4 ttl=43 time=238 ms
+64 bytes from 61.250.91.13: icmp_seq=5 ttl=42 time=241 ms
 
-    --- game.ro ping statistics ---
-    5 packets transmitted, 5 received, 0% packet loss, time 6594ms
-    rtt min/avg/max/mdev = 236.520/238.384/241.252/1.829 ms
+--- game.ro ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 6594ms
+rtt min/avg/max/mdev = 236.520/238.384/241.252/1.829 ms
+```
 
 Notice how even though the server across the world may be on a much faster connection, the time it takes for the ICMP packet to reply, or "ping latency", is much longer.
 
 Why? Let's consider the traceroute to the computer across the room:
 
-    traceroute to 192.168.0.2 (192.168.0.2), 30 hops max, 46 byte packets
-     1  * * *
+```
+traceroute to 192.168.0.2 (192.168.0.2), 30 hops max, 46 byte packets
+ 1  * * *
+```
 
 Now look at the computer with the extremely fast connection that is located across the world:
 
-    traceroute to 61.250.91.13 (61.250.91.13), 30 hops max, 46 byte packets
-     1  192.168.0.1 (192.168.0.1)  0.224 ms  0.179 ms  0.170 ms
-     2  10.121.160.1 (10.121.160.1)  8.016 ms  7.166 ms  8.146 ms
-     3  srp5-0.rlghnca-rtr1.nc.rr.com (24.25.2.161)  6.158 ms  5.832 ms  7.868 ms
-     4  gig2-3-0.rlghncrdc-pop1.southeast.rr.com (24.93.64.164)  10.308 ms  6.590 ms  8.062 ms
-     5  ge-1-3-0.chrlncsa-rtr6.southeast.rr.com (24.93.64.169)  13.493 ms  13.146 ms ge-0-3-0.chrlncsa-rtr6.southeast.rr.com (24.93.64.173)  14.754 ms
-     6  pop1-cha-P7-0.atdn.net (66.185.138.69)  15.374 ms  13.180 ms pop1-cha-P4-0.atdn.net (66.185.132.45)  15.945 ms
-     7  bb2-cha-P3-0.atdn.net (66.185.132.38)  14.206 ms  12.320 ms  13.732 ms
-         MPLS Label=296 CoS=0 TTL=0 S=1
-     8  bb2-ash-P14-0.atdn.net (66.185.152.50)  19.355 ms  20.676 ms  21.891 ms
-         MPLS Label=78 CoS=0 TTL=0 S=1
-     9  pop1-ash-S1-1-0.atdn.net (66.185.144.35)  19.147 ms  18.850 ms  23.749 ms
-    10  BeyondTheNetwork.atdn.net (66.185.148.242)  18.547 ms  20.887 ms  20.849 ms
-    11  211.115.201.76 (211.115.201.76)  240.212 ms  240.007 ms  241.266 ms
-    12  211.115.197.57 (211.115.197.57)  241.276 ms  240.056 ms  238.505 ms
-    13  * * *
+```
+traceroute to 61.250.91.13 (61.250.91.13), 30 hops max, 46 byte packets
+ 1  192.168.0.1 (192.168.0.1)  0.224 ms  0.179 ms  0.170 ms
+ 2  10.121.160.1 (10.121.160.1)  8.016 ms  7.166 ms  8.146 ms
+ 3  srp5-0.rlghnca-rtr1.nc.rr.com (24.25.2.161)  6.158 ms  5.832 ms  7.868 ms
+ 4  gig2-3-0.rlghncrdc-pop1.southeast.rr.com (24.93.64.164)  10.308 ms  6.590 ms  8.062 ms
+ 5  ge-1-3-0.chrlncsa-rtr6.southeast.rr.com (24.93.64.169)  13.493 ms  13.146 ms ge-0-3-0.chrlncsa-rtr6.southeast.rr.com (24.93.64.173)  14.754 ms
+ 6  pop1-cha-P7-0.atdn.net (66.185.138.69)  15.374 ms  13.180 ms pop1-cha-P4-0.atdn.net (66.185.132.45)  15.945 ms
+ 7  bb2-cha-P3-0.atdn.net (66.185.132.38)  14.206 ms  12.320 ms  13.732 ms
+     MPLS Label=296 CoS=0 TTL=0 S=1
+ 8  bb2-ash-P14-0.atdn.net (66.185.152.50)  19.355 ms  20.676 ms  21.891 ms
+     MPLS Label=78 CoS=0 TTL=0 S=1
+ 9  pop1-ash-S1-1-0.atdn.net (66.185.144.35)  19.147 ms  18.850 ms  23.749 ms
+10  BeyondTheNetwork.atdn.net (66.185.148.242)  18.547 ms  20.887 ms  20.849 ms
+11  211.115.201.76 (211.115.201.76)  240.212 ms  240.007 ms  241.266 ms
+12  211.115.197.57 (211.115.197.57)  241.276 ms  240.056 ms  238.505 ms
+13  * * *
+```
 
 See how much farther the packets have to travel to reach the second server than the first server, even though the second server is on a faster connection?
 
@@ -102,9 +111,11 @@ This is important to consider when it comes to deciding if it is realistic for y
 
 Packet loss is the next important issue we will cover. Think about the words "packet loss". In simple terms, if you experience packet loss, some packets that are being set to/from the client/server are being lost, or dropped. This packet loss can cause a number of things, such as delayed reactions of what the client sees and what the server "sees". Packet loss can be tested by the ping command. Lets look closely again at the ping commands that we performed above:
 
-    --- 192.168.0.2 ping statistics ---
-    5 packets transmitted, 5 received, ---&gt;0% packet loss&lt;---, time 4004ms
-    rtt min/avg/max/mdev = 0.149/0.151/0.156/0.015 ms
+```
+--- 192.168.0.2 ping statistics ---
+5 packets transmitted, 5 received, ---&gt;0% packet loss&lt;---, time 4004ms
+rtt min/avg/max/mdev = 0.149/0.151/0.156/0.015 ms
+```
 
 No packets were lost in this transmission. If you see a number larger than say, 1-2%, this is of concern because the symptoms discussed above may occur.
 
@@ -114,31 +125,27 @@ Chances are that if you are on a home connection, then your computer is connecte
 
 However, since most people *are* behind one of these boxes, you will need to forward the ports to your computer. You may need to look in the manual for your box to see how to do this. Often times this is done by accessing a web interface. Most Linksys boxes use 192.168.1.1 as the default IP address, and and D-Link uses 192.168.0.1. Netgear I think uses 192.168.1.1. If you do not know what the IP address of your all-in-one box is, it is oftentimes the "Default Gateway" address. Skip down a section to where we talking about the ipconfig /all command and how to use it. Try using the address that is displayed for "Default Gateway".
 
-Due to many different models this section can't be tailored down to a simple process. Please see your equipment manual or this site \[www.portforward.com\] for more instructions.
+Due to many different models this section can't be tailored down to a simple process. Please see your equipment manual or this [site](https://portforward.com/) for more instructions.
 
 You need to forward one of the following:
 
--   The TCP port you specify if you are aware of which port you will be using
+- The TCP port you specify if you are aware of which port you will be using
 
 --or--
 
--   TCP Port range 12000-12500.
+- TCP Port range 12000-12500.
 
 ## How to Open a port on your Router
 
-I will be using a generic D-Link system for this tutorial. Please check your manual or the link above for your own equipment.
+Since every router is different, please check your manual or the link above for your own equipment.
 
-1. Make sure you know your PUBLIC IP Address. You can get this [here](http://www.whatismyip.com/)
+-  Connect to your router using your default gateway IP address. Usually `192.168.1.1`, but check [here](https://www.techspot.com/guides/287-default-router-ip-addresses/) for yours.
 
-2. Connect to your router using your default gateway IP address. Usually 192.168.0.1, but check [here](http://www.answersthatwork.com/Download_Area/ATW_Library/Networking/Network__4-List_of_default_Router_Admin_Passwords_and_IP_addresses.pdf) for yours.
+-  Poke around in your settings/advanced tabs and look for a tab named Port Forwarding or something along those lines.
 
-3. Poke around in your settings/advanced tabs and look for a tab named Port Forwarding or something along those lines.
+-  Enter the desired ports you want to open. This is generally a number between 12000 and 12100
 
-4. Enter the desired ports you want to open. This is generally a number between 12000 and 12100
-
-5. Enter **YOUR PUBLIC** IP address into the IP Column.
-
-6. Press save!
+-  Press save!
 
 You should have successfully opened a port now!
 
@@ -158,9 +165,30 @@ We're now ready to start setting up the Rigs of Rods server.
 
 If you don't want to compile the server yourself, you can download the correct pre-compiled build below then skip to the [Configuration](#configuration) section:
 
-[For 0.4.7.0](https://github.com/CuriousMike56/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
+[0.4.8.0 (RoRNet 2.40)](https://sourceforge.net/projects/rigs-of-rods/files/ror-server/CI-build/)
 
-[For 0.38.67 to 0.4.6RC3](https://github.com/CuriousMike56/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
+[0.4.7.0 (RoRNet 2.38)](https://github.com/CuriousMike56/ror-server-rornet238/releases/download/2.38-v1/rorserver-rornet238-windows.zip)
+
+[0.38.67-0.4.6RC3 (RoRNet 2.37)](https://github.com/CuriousMike56/ror-server-rornet237/releases/download/2.37/ror-server-237-windows.zip)
+
+### Quick setup 
+
+If you just want to quickly get a server running without any fuss, follow these steps:
+
+- Download a pre-built package above that matches your RoR version.
+
+- Extract the zip into any folder.
+
+- While in the folder, press `SHIFT + Right click -> Open command prompt window here`. 
+If you are running Windows 10, click `Open PowerShell window here`, then type `cmd` once the PowerShell window appears:
+
+![powershell](/images/powershell-win10.png)
+
+- Make sure you've port forwarded.
+
+- Use this command to launch the server, change the options to fit your liking:
+
+`rorserver.exe -name Private_Server -port 12000 -password secret` 
 
 
 ### Building yourself
@@ -178,24 +206,24 @@ The programs listed below are required to build the server, restart your compute
 
 Create a folder where you want the source to be ( I will be using `C:\ror-server`)
 
-While in the folder, do `SHIFT + Right click -> Open command prompt window here`. 
+While in the folder, press `SHIFT + Right click -> Open command prompt window here`. 
 If you are running Windows 10, click `Open PowerShell window here`, then type `cmd` once the PowerShell window appears:
 
 ![powershell](/images/powershell-win10.png)
 
 Depending on what RoR version you are using, the clone command will be different.
 
+#### 0.4.8.0
+
+If you want to run a server for 0.4.8.0, run this command:
+
+`git clone https://github.com/RigsOfRods/ror-server.git`
+
 #### 0.4.7.0
 
 If you want to run a server for 0.4.7.0, run this command:
 
 `git clone https://github.com/CuriousMike56/ror-server-rornet238.git`
-
-#### Development builds
-
-To run a server for the latest development builds, run this command:
-
-`git clone https://github.com/RigsOfRods/ror-server.git`
 
 #### 0.38.67 to 0.4.6RC3
 
@@ -304,23 +332,24 @@ Change into the created directory:
 
 Depending on what RoR version you are using, the clone command will be different.
 
+#### 0.4.8.0
+
+If you want to run a server for 0.4.8.0, run this command:
+
+`git clone https://github.com/RigsOfRods/ror-server.git`
+
 #### 0.4.7.0
 
 If you want to run a server for 0.4.7.0, run this command:
 
 `git clone https://github.com/CuriousMike56/ror-server-rornet238.git`
 
-#### Development builds
-
-To run a server for the latest development builds, run this command:
-
-`git clone https://github.com/RigsOfRods/ror-server.git`
-
 #### 0.38.67 to 0.4.6RC3
 
 If you want to run a server for versions 0.38.67 to 0.4.6RC3, run this command:
 
 `git clone https://github.com/CuriousMike56/ror-server-rornet237.git`
+
 
 After running the correct command, you should now have a folder named `ror-server` inside of the folder you created earlier.
 
@@ -355,6 +384,25 @@ Your build should be successful:
 ![linux1](/images/server-linux-finish.png)
 
 You should now have a `rorserver` binary in the `/bin` directory.
+
+### Quick setup
+
+If you just want to get a server running without having to setup a config file:
+
+- Change into the `bin` directory:
+
+`cd bin`
+
+- Use this command to launch the server, change the options to fit your liking:
+
+`./rorserver -name Private_Server -port 12000 -password secret` 
+
+- If you get permission denied:
+
+`sudo chmod +x rorserver`
+
+- If you want to run the server in the foreground, add the `-fg` argument.
+
 
 ### Configuration
 
@@ -436,9 +484,9 @@ Many things can go wrong with your server, here's a small selection of problems 
 
 2.  Problems while connecting to your server
     1.  **Network fatal error: server uses a different protocol version**
-        *You need to download the correct game version to match your server version. 0.4.7.0+ supports RoRNet 2.38, the latest server protocol.*
+        *You need to download the correct game version to match your server version. 0.4.8.0+ supports RoRNet 2.40, the latest server protocol.*
 
-If you come across a problem, please post in the appropriate [help/support forum](https://forum.rigsofrods.org/forum-15.html).
+If you come across a problem, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/game-support.8/).
 If you have a solution for your problem, please add the problem and solution to this list.
 
 # UserAuth setup
