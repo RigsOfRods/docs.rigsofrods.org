@@ -41,7 +41,7 @@ It is recommended to make a copy of the truck file made for editing, then copy t
 
 ## Download and run on Windows
 
-[Download here](https://forum.rigsofrods.org/downloads.php?do=file&id=486) (ZIP archive)
+[Download here](https://forum.rigsofrods.org/resources/editorizer.20/) (ZIP archive)
 
 Run as administrator! (only needed on the first run or if you move Editorizer's directory)
 
@@ -158,7 +158,7 @@ It is recommended to export to a copy of the truck file made for editing, then c
 
 ## Download
 
-[Download here](https://forum.rigsofrods.org/downloads.php?do=file&id=180) (Windows only)
+[Download here](http://www.austingratzer.com/rigs/downloads.php?do=file&id=180) (Windows only)
 
 # TruckViewer
 
@@ -177,5 +177,5 @@ Cons:
 
 ## Download 
 
-[Download here](https://forum.rigsofrods.org/downloads.php?do=file&id=487)
+[Download here](https://forum.rigsofrods.org/resources/truckviewer.19/)
 
