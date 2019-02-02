@@ -32,14 +32,6 @@ Due to the lack of MacOS developers, the last MacOS supported version is [0.37](
 
 It has been confirmed that the latest version does work in [WINE](https://www.winehq.org/).
 
-# Installing content
-
-## **Q:**How do I install vehicles and terrains?
-
-**A:**On Windows, the RoR user directory is located in `%userprofile%\Documents\Rigs of Rods 0.x` and on Linux it is in `~/.rigsofrods.` (On Linux, you may have to enable "show hidden folders".)
-
-Most `*.zip` files can be simply placed in the packs folder. Or you can place maps in the `terrains` folder and vehicles/loads/etc in the `vehicles` folder if you want to be more organized.
-
 # Website/Forum
 
 ## **Q:**What happened to the old websites? 
