@@ -1,0 +1,9 @@
+
+# Site settings
+title: Rigs of Rods documentation
+name: Local Rigs of Rods Documentation
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
