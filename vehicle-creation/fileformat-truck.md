@@ -2948,10 +2948,6 @@ section 0 highspeed
 engine
 1000.000000, 15000.000000, 5000.000000, 2.000000, 10.850000, 9.520000, 6.560000, -1.000000
 end_section
-
-section 0 highspeed lowspeed
-;triggered with both
-end_section
 ```
 
 ## Guisettings
