@@ -23,7 +23,7 @@ The steps below only apply to the latest source, use a [pre-built package](/game
 
 The programs listed below are required to build the server, restart your computer after installing all the below tools!
 
-- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/)
+- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/) (In the "Workloads" tab enable **Desktop development with C++**)
 
 - [CMake](https://cmake.org/download/)
 
