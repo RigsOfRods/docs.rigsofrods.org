@@ -48,6 +48,8 @@ If you want more organization, you can place the `.zip` file into `vehicles` or 
 
 That's it! You can launch Rigs of Rods now and your shiny new mod should be ready to use.
 
+**If mod appears to be white or missing parts you should regen and/or update your cache.**
+
 # Installing skinzips
 
 Some mods may provide a `*.skinzip` which contains some extra liveries/skins for the vehicle. To install these, they are also placed in the `packs` folder.
