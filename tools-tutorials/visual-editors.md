@@ -19,7 +19,7 @@ These are programs that help you visualize and edit a node/beam.
 
 To help you get started with creating a new node/beam, you can download this truck file template which contains all the required sections.
 
-[Blank Truck File](https://forum.rigsofrods.org/content-creation/15-blank-truck-file.html)
+[Blank Truck File](https://forum.rigsofrods.org/threads/blank-truck-file.8/)
 
 # Editorizer
 
