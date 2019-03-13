@@ -7,3 +7,8 @@ name: Local Rigs of Rods Documentation
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
+  
