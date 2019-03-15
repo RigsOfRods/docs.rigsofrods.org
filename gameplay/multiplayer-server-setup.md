@@ -19,8 +19,8 @@ Download a pre-built package that matches your RoR version and operating system 
 
 | Server version                 | Link                                                                                                        | Supported OS(s) | Included build options   |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------|--------------------------|
-| 0.4.8.0 (RoRNet 2.40 - WIP)    | [Download](https://sourceforge.net/projects/rigs-of-rods/files/ror-server/CI-build/)                        | Windows         | Angelscript & Webserver  |
-| 0.4.8.0 (RoRNet 2.40 - WIP)    | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0-linux.208/)    | Linux           | Angelscript & Webserver  |
+| 0.4.8.0 (RoRNet 2.41 - WIP)    | [Download](https://sourceforge.net/projects/rigs-of-rods/files/ror-server/CI-build/)                        | Windows         | Angelscript & Webserver  |
+| 0.4.8.0 (RoRNet 2.41 - WIP)    | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0-linux.208/)    | Linux           | Angelscript & Webserver  |
 | 0.4.7.0 (RoRNet 2.38)          | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-7-0.206/)         | Windows & Linux | Angelscript              |
 | 0.38.67-0.4.6RC3 (RoRNet 2.37) | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-38-67-0-4-6rc3.207/) | Windows & Linux | Angelscript              |
 
@@ -41,7 +41,7 @@ If you are running Windows 10, click `Open PowerShell window here`, then type `c
 
 The easiest way to get a server running is by using the CLI arguments.
 
-List of arguments used by RoRNet 2.40/2.38:
+List of arguments used by RoRNet 2.41/2.38:
 
 | Argument        | Description                                                                          | Example                          |
 |-----------------|--------------------------------------------------------------------------------------|----------------------------------|
@@ -123,7 +123,7 @@ If the server launched successfully, it should be now displayed on the server li
 
 If you plan on running a server for extended periods of time, it is recoomended that you set up a config file.
 
-**Note: If you downloaded a RoRNet 2.40 Windows package, you will have to [download](/download/rorserver-example-configs.zip) the config files separately.**
+**Note: If you downloaded a RoRNet 2.41 Windows package, you will have to [download](/download/rorserver-example-configs.zip) the config files separately.**
 
 First rename the included files: (example: `tutorial-`):
 
@@ -131,7 +131,7 @@ First rename the included files: (example: `tutorial-`):
 
 Open each file in a text editor and fill it out with your server's info.
 
-If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section. Otherwise you can skip editing the `*.auth` file.
+To set up the `.auth` file, see the [Setting up admins/moderators](#userauth-setup) section.
 
 Once you're done, use this command to start the server:
 
@@ -151,11 +151,11 @@ First download the correct package and upload it to your server.
 
 Then extract the zip file (Name will be different depending on which package you downloaded)
 
-`unzip rorserver-rornet240-linux.zip -d rorserver-240`
+`unzip rorserver-rornet241-linux.zip -d rorserver-241`
 
 Change to the extracted directory:
 
-`cd rorserver-240`
+`cd rorserver-241`
 
 Copy `libmysocketw.so` to the `/lib` directory (requires superuser access):
 
@@ -211,7 +211,7 @@ nano tutorial-rules.rules
 
 Use the arrow keys to navigate. After you fill out the file(s), press `CTRL+O` to write the changes and `CTRL+X` to exit.
 
-If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future), see the [Setting up admins/moderators](#userauth-setup) section.
+To set up the `.auth` file, see the [Setting up admins/moderators](#userauth-setup) section.
 
 Once you're done, use this command to start the server:
 
@@ -245,14 +245,14 @@ Problems while connecting to your server:
 
 - **Network fatal error: server uses a different protocol version**
 
-You need to download the correct game version to match your server version. 0.4.8.0+ supports RoRNet 2.40, the latest server protocol.*
+You need to download the correct game version to match your server version. 0.4.8RC4 supports RoRNet 2.41, the latest server protocol.
 
 
 If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/game-support.8/).
 
 # UserAuth setup
 
-If you're running a RoRNet 2.38/2.37 server (UserAuth support for 2.40 will come in the future) and have your server working, this section will teach you how to set up the `.auth` file.
+This section will teach you how to set up the `.auth` file.
 
 Open the `.auth` file in a text editor. It should look like this:
 
@@ -300,11 +300,12 @@ If you want the user to be a admin, set the number in the `.auth` file to `1`, o
 
 Save the file and restart your server. If the server read the auth file correctly, it should log this:
 
-` INFO| found X auth overrides in the authorizations file!`
+`INFO| found X auth overrides in the authorizations file!`
 
 The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
 
 Admin/moderator commands:
+
 ```
 !list - Lists all users on a server with their UID
 
