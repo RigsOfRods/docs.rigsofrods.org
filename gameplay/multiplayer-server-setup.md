@@ -304,6 +304,8 @@ Save the file and restart your server. If the server read the auth file correctl
 
 The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
 
+![userauth-ingame](/images/userauth-ingame.png)
+
 Admin/moderator commands:
 
 ```
