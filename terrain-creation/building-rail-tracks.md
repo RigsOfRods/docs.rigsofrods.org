@@ -85,7 +85,7 @@ It will show you how to extract a Spline from a heightmap and use it for placing
 
 ## Step 1
 
-Convert heightmap raw to bmp with ImageMagick
+Convert heightmap raw to bmp with [ImageMagick](http://www.imagemagick.org/script/download.php)
 
 ## Step 2
 
