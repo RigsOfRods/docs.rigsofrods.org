@@ -133,7 +133,7 @@ If your object has an animation you can play it with this additional line:
 
 `playanimation speedfactorMin speedfactorMax AnimationName`
 
-Example from the terrain [Fall Run](https://forum.rigsofrods.org/downloads.php?do=file&id=207):
+Example from the terrain [Fall Run](http://forum.rigsofrods.org/resources/fall-run.149/):
 
 `playanimation 0.5, 0.6, CAT_330c_diging`
 
