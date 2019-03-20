@@ -153,7 +153,7 @@ Antonov 12 - Green Skin
     // Preview image. Should be at least 256x256 pixels.
 	preview          = an-12-green-skin-mini.png
 	// Short description
-	description      = sarens skin for the sennebogen 5500
+	description      = Green skin for the An-12
     // Name of the author, optional
 	AuthorName = Yourname
     // Forum ID of the author, optional
@@ -174,7 +174,7 @@ Like above - package your skin files to .skinzip, and enjoy it ingame!
 
 ## More examples
 
-An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](https://forum.rigsofrods.org/downloads.php?do=file&id=242)
+An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](http://forum.rigsofrods.org/resources/1982-di-sportster-390c.252/)
 
 ```
 HotWheels Challenge Livery
