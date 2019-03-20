@@ -383,9 +383,13 @@ author <Type> <AuthorID> <AuthorName> <Email>
 
 -   Type = Tells what the author referenced in the next section did. Recommended types to put: chassis, texture, support, etc.
 
--   AuthorID = ID of the author's RoR Forum account. As of January 2018 there's no way to get the Author ID, so just use `-1`. 
+-   AuthorID = ID of the author's RoR Forum account. To get your ID, view your forum profile and check the number shown in the URL. For example: 
 
--   AuthorName = The author's name.
+<https://forum.rigsofrods.org/members/curiousmike.5831/> 
+
+`5831` would be the ID. 
+
+-   AuthorName = The author's username.
 
 -   Email = The author's e-mail. (optional)
 
