@@ -40,6 +40,8 @@ If you see ![repository-no-perms](/images/repository-download-no-perms.png) that
 
 Once the mod is downloaded, simply place the `*.zip` file into `Documents\Rigs of Rods 0.4\packs` or `~/.rigsofrods/packs` on Linux:
 
+**Note:** As of 0.4.8 RC4, the default content folder is now called `mods`. Place the zip in that folder if you don't have the `packs` folder.
+
 ![repository-install](/images/repository-installing-mod.png) 
 
 **NEVER extract the zip file unless specifically mentioned in the file description! I cannot stress this enough.**
