@@ -174,7 +174,7 @@ Like above - package your skin files to .skinzip, and enjoy it ingame!
 
 ## More examples
 
-An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](http://forum.rigsofrods.org/resources/1982-di-sportster-390c.252/)
+An example skin that replaces materials: [1982 DI Sportster Scheme: HotWheels Challenge](https://forum.rigsofrods.org/resources/1982-di-sportster-390c.252/)
 
 ```
 HotWheels Challenge Livery
