@@ -100,7 +100,11 @@ You can use this line as much as you like. As noted earlier, this only works wit
 
 `authorName` - Your username.
 
-`AuthorID` - Your forum ID. This ID cannot be acquired without contacting a staff member now, so it can be just set to `0`.
+`AuthorID` - Your forum ID. To get your ID, view your forum profile and check the number shown in the URL. For example: 
+
+<https://forum.rigsofrods.org/members/curiousmike.5831/> 
+
+`5831` would be the ID.
 
 `GUID` - The GUID that matches the GUID in the `.truck` file. See [Step 1 - GUID](#step-1---guid).
 
