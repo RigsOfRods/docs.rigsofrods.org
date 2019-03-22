@@ -17,72 +17,102 @@ Input is configured by editing configuration file [input.map](#config-file-input
 
 # Keyboard layout
 
-## General keys
+<img src="/images/input-map-general.png" alt="General keyboard layout" width="600"/>
 
-![](/images/input-map-general.png) 
+## General controls 
 
-<table style="color: #ab7e3a; display: inline-block; vertical-align: top;">
-    <tr><th>Misc</th><th>Key</th></tr>
-
-    <tr><td>Enter or exit truck</td><td>ENTER   </td></tr>
-    <tr><td>Quit Game          </td><td>ESC     </td></tr>
-    <tr><td>Toggle Statistics  </td><td>T       </td></tr>
+<table style="display: inline-block; vertical-align: top;">
+	<tr bgcolor="#E5A36C"><th style="color: #000000">General</th><th style="color: #000000">Key</th></tr>
+    <tr><td>Pause game            </td><td>ESC</td></tr>
+    <tr><td>Quit game            </td><td>ALT+F4</td></tr>
+	<tr><td>Spawn new vehicle</td><td>CTRL+G</td></tr>
+    <tr><td>Enter or exit vehicle</td><td>ENTER</td></tr>
+    <tr><td>Reset vehicle       </td><td>I    </td></tr>
+    <tr><td>Reset vehicle in place</td><td>BACKSPACE</td></tr>
+    <tr><td>View vehicle statistics </td><td>T</td></tr>
+    <tr><td>View vehicle commands</td><td>CTRL+T</td></tr>
     <tr><td>Screenshot         </td><td>PRINTSCR</td></tr>
-    <tr><td>chat (Multiplayer) </td><td>Y       </td></tr>
+    <tr><td>Chat (Multiplayer) </td><td>Y</td></tr>
+    <tr><td>Toggle HUD          </td><td>U    </td></tr>
+    <tr><td>Toggle soft reset mode</td><td>APOSTROPHE</td></tr>
+    <tr><td>Toggle limited camera movement</td><td>SHIFT+SPACE</td></tr>
+    <tr><td>Adjust simulation speed</td><td>CTRL+= / SHIFT+= </td></tr>
+    <tr><td>Switch between vehicles </td><td>CTRL+RBRACKET / CTRL+LBRACKET </td></tr>
+    <tr><td>Remove current vehicle</td><td>CTRL+Del</td></tr>
+    <tr><td>Respawn last vehicle</td><td>CTRL+.(period)</td></tr>
 </table>
 
-<table style="color: #127220; display: inline-block; vertical-align: top;">
-    <tr><th>Character control</th><th>Key</th></tr>
+<br>
 
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#5FAC5E"><th style="color: #000000">Character</th><th style="color: #000000">Key</th></tr>
     <tr><td>Jump          </td><td>SPACE   </td></tr>
-    <tr><td>Turn Right    </td><td>RIGHT   </td></tr>
-    <tr><td>Turn Left     </td><td>LEFT    </td></tr>
-    <tr><td>Walk Fordwards</td><td>UP      </td></tr>
-    <tr><td>Walk Backwards</td><td>DOWN    </td></tr>
+    <tr><td>Turn right    </td><td>RIGHT   </td></tr>
+    <tr><td>Turn left     </td><td>LEFT    </td></tr>
+    <tr><td>Walk fordwards</td><td>UP      </td></tr>
+    <tr><td>Walk backwards</td><td>DOWN    </td></tr>
     <tr><td>Run           </td><td>SHIFT+UP</td></tr>
 </table>
 
-<table style="display: inline-block; vertical-align: top;">
-    <tr>
-        <th><span style="color: #6692b3">Camera</span> / <span style="color: #ced925">Caelum Sky</span></th>
-        <th>Key</th>
-    </tr>
-    <!--camera-->
-    <tr><td style="color: #6692b3">Change        </td><td style="color: #6692b3">C                     </td></tr>
-    <tr><td style="color: #6692b3">Control camera</td><td style="color: #6692b3">1, 2, 3, 4, 5, 6, 8, 9</td></tr>
-    <tr><td style="color: #6692b3">Free camera   </td><td style="color: #6692b3">SHIFT+C               </td></tr>
-    <tr><td style="color: #6692b3">Fixed camera   </td><td style="color: #6692b3">ALT+C               </td></tr>
-    <!--caelum-->
-    <tr><td style="color: #ced925">Increase time</td><td style="color: #ced925">+</td></tr>
-    <tr><td style="color: #ced925">Decrease time</td><td style="color: #ced925">-</td></tr>
-    <tr><td style="color: #127220">Increase time change rate</td><td style="color: #127220">Shift (Use in combination with Inc./Dec. time keys)</td></tr>
-</table>
-
-## Land vehicle keys
-
-![](/images/input-map-truck.png) 
+<br>
 
 <table style="display: inline-block; vertical-align: top;">
-    <tr><th>Drive controls</th><th>Key</th></tr>
-    
-    <!--Truck control-->
-    <tr><td style="color: #127220">Steer Left                               </td><td style="color: #127220">LEFT     </td></tr>
-    <tr><td style="color: #127220">Steer Right                              </td><td style="color: #127220">RIGHT    </td></tr>
-    <tr><td style="color: #127220">Accelerate/Brake                         </td><td style="color: #127220">UP / DOWN</td></tr>
-    <tr><td style="color: #127220">Tire Pressure +/-<br>(not for all trucks)</td><td style="color: #127220">[ ]      </td></tr>
-    
-    <!--Gear / clutch-->
-    <tr><td style="color: #ced925">Autoshift Up      </td><td style="color: #ced925">PAGE-UP  </td></tr>
-    <tr><td style="color: #ced925">Autoshift Down    </td><td style="color: #ced925">PAGE-DOWN</td></tr>
-    <tr><td style="color: #ced925">Switch Shift Modes</td><td style="color: #ced925">Q        </td></tr>
-    <tr><td style="color: #ced925">Manual Clutch     </td><td style="color: #ced925">SHIFT    </td></tr>
-    <tr><td style="color: #ced925">Shift Up          </td><td style="color: #ced925">A        </td></tr>
-    <tr><td style="color: #ced925">Shift Down        </td><td style="color: #ced925">Z        </td></tr>
+    <tr bgcolor="#74A9E1"><th style="color: #000000">Camera</th><th style="color: #000000">Key</th></tr>
+    <tr><td>Change view        </td><td>C</td></tr>
+    <tr><td>Rotate up/down     </td><td>Numpad 8 / Numpad 2</td></tr>
+    <tr><td>Rotate left/right  </td><td>Numpad 4 / Numpad 6</td></tr>
+    <tr><td>Zoom in/out        </td><td>Numpad 9 / Numpad 3</td></tr>
+    <tr><td>Zoom in/out (fast) </td><td>SHIFT+Numpad 9 / SHIFT+Numpad 3</td></tr>
+    <tr><td>Free camera   </td><td>SHIFT+C</td></tr>
+    <tr><td>Fixed camera  </td><td>ALT+C</td></tr>
 </table>
 
-<table style="color: #ab7e3a; display: inline-block; vertical-align: top;">
-    <tr><th>Misc</th><th>Key</th></tr>
+<br>
 
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#DFDD78"><th style="color: #000000">Time Adjust</th><th style="color: #000000">Key</th></tr>
+    <tr><td>Change time        </td><td>Numpad + (plus) / Numpad - (minus)</td></tr>
+    <tr><td>Change time (fast)</td><td>SHIFT+Numpad + (plus) / SHIFT+Numpad - (minus)</td></tr>
+</table>
+
+<br>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#928578"><th style="color: #000000">Map</th><th style="color: #000000">Key</th></tr>
+    <tr><td>Toggle map view </td><td>TAB</td></tr>
+    <tr><td>Zoom in/out     </td><td>CTRL+TAB / SHIFT+TAB</td></tr>
+    <tr><td>Toggle alpha     </td><td>CTRL+SHIFT+TAB</td></tr>
+    <tr><td>Toggle icons     </td><td>CTRL+SHIFT+ALT+TAB</td></tr>
+</table>
+
+## Common vehicle controls
+
+<img src="/images/input-map-truck.png" alt="Vehicle keyboard layout" width="600"/>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#5FAC5E"><th style="color: #000000">Basic vehicle controls</th><th>Key</th></tr>
+    <tr><td>Steer Left                               </td><td>LEFT     </td></tr>
+    <tr><td>Steer Right                              </td><td>RIGHT    </td></tr>
+    <tr><td>Accelerate/Brake                         </td><td>UP / DOWN</td></tr>
+    <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET / LBRACKET</td></tr>
+</table>
+
+<br>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#DFDD78"><th style="color: #000000">Shifting</th><th>Key</th></tr>
+    <tr><td>Autoshift Up      </td><td>PGUP  </td></tr>
+    <tr><td>Autoshift Down    </td><td>PGDOWN</td></tr>
+    <tr><td>Switch Shift Modes</td><td>Q        </td></tr>
+    <tr><td>Manual Clutch     </td><td>SHIFT    </td></tr>
+    <tr><td>SHIFT Up          </td><td>A        </td></tr>
+    <tr><td>SHIFT Down        </td><td>Z        </td></tr>
+</table>
+
+<br>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#E5A36C"><th style="color: #000000">Misc</th><th>Key</th></tr>
     <tr><td>Truck Horn        </td><td>H     </td></tr>
     <tr><td>Parking Brake     </td><td>P     </td></tr>
     <tr><td>Blinker Left      </td><td>COMMA </td></tr>
@@ -97,14 +127,14 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Toggle Lights     </td><td>N     </td></tr>
     <tr><td>Toggle beacons    </td><td>M     </td></tr>
     <tr><td>Rescue Truck      </td><td>R     </td></tr>
-    <tr><td>Toggle HUD        </td><td>U     </td></tr>
     <tr><td>Enter / Exit truck</td><td>ENTER </td></tr>
     <tr><td>particle Cannon   </td><td>G     </td></tr>
 </table>
 
-<table style="color: red; display: inline-block; vertical-align: top;">
-    <tr><th>Function keys</th><th>Combo</th></tr>
-    
+<br>
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#EC3F41"><th style="color: #000000">Function keys</th><th>Combo</th></tr>
     <tr><td>COMMANDS 01</td><td>F1</td></tr>
     <tr><td>...</td><td>...</td></tr>
     <tr><td>COMMANDS 12</td><td>F12</td></tr>
@@ -132,13 +162,12 @@ Input is configured by editing configuration file [input.map](#config-file-input
 	<tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
 </table>
 
-## Aerial and marine keys
+## Aerial and marine controls
 
-![](/images/input-map-aerial-and-marine.png)
+<img src="/images/input-map-aerial-and-marine.png" alt="Vehicle keyboard layout" width="600"/>
 
-<table style="color: #127220; display: inline-block; vertical-align: top;">
-    <tr><th>Airplane controls</th><th>Key</th></tr>
-
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#5FAC5E"><th style="color: #000000">Airplane controls</th><th>Key</th></tr>
     <tr><td>Steer Left   </td><td>LEFT              </td></tr>
     <tr><td>Steer Right  </td><td>RIGHT             </td></tr>
     <tr><td>Elevator Up  </td><td>UP                </td></tr>
@@ -148,8 +177,8 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Brake        </td><td>B                 </td></tr>
     <tr><td>Parking Brake</td><td>P                 </td></tr>
     <tr><td>Reverse      </td><td>R                 </td></tr>
-    <tr><td>Less Flaps   </td><td>1                 </td></tr>
-    <tr><td>More Flaps   </td><td>2                 </td></tr>
+    <tr><td>Less Flaps*  </td><td>1                 </td></tr>
+    <tr><td>More Flaps*  </td><td>2                 </td></tr>
     <tr><td>Less Airbrakes*</td><td>3               </td></tr>
     <tr><td>More Airbrakes*</td><td>4               </td></tr>
     <tr><td>Throttle Down</td><td>PAGE-DOWN         </td></tr>
@@ -157,13 +186,8 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Start Engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
-`*` Depending on the plane setup
-
-It is recommended to use: `CTRL+Home` to start all engine of a plane and `CTRL+PAGE-UP` to full throttle all engines
-because some planes could have more than 4 engines and you couldn't control them with your mouse.
-
-<table style="color: #ced925; display: inline-block; vertical-align: top;">
-    <tr><th>Boat controls</th><th>Key</th></tr>
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#E5A36C"><th style="color: #000000">Boat controls</th><th>Key</th></tr>
 
     <tr><td>Throttle Down  </td><td>DOWN   </td></tr>
     <tr><td>Throttle Up    </td><td>UP    </td></tr>
@@ -173,24 +197,10 @@ because some planes could have more than 4 engines and you couldn't control them
     <tr><td>Center Throttle</td><td>PGDOWN   </td></tr>
 </table>
 
-<table style="color: #ab7e3a; display: inline-block; vertical-align: top;">
-    <tr><th>Misc</th><th>Key</th></tr>
+`*` Depending on the plane setup
 
-    <tr><td>Parking Brake       </td><td>P    </td></tr>
-    <tr><td>Lock Load           </td><td>L    </td></tr>
-    <tr><td>Secure Load         </td><td>O    </td></tr>
-    <tr><td>Reset Vehicle       </td><td>I    </td></tr>
-    <tr><td>Reset Vehicle In Place  </td><td>BACKSPACE</td></tr>
-    <tr><td>Show Skeleton       </td><td>K    </td></tr>
-    <tr><td>Toggle Lights       </td><td>N    </td></tr>
-    <tr><td>Toggle beacons      </td><td>M    </td></tr>
-    <tr><td>Toggle HUD          </td><td>U    </td></tr>
-    <tr><td>Enter / Exit vehicle</td><td>ENTER</td></tr>
-    <tr><td>Adjust Simulation Speed</td><td>Ctrl+= / Shift+= </td></tr>
-    <tr><td>Switch Between Vehicles </td><td>Ctrl+] / Ctrl+[ </td></tr>
-    <tr><td>Remove Current Vehicle</td><td>Ctrl+Del</td></tr>
-    <tr><td>Respawn Last Vehicle</td><td>Ctrl+.(period)</td></tr>
-</table>
+It is recommended to use: `CTRL+Home` to start all engine of a plane and `CTRL+PAGE-UP` to full throttle all engines
+because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
 # Config file 'input.map'
 
