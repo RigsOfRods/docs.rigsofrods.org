@@ -49,7 +49,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Jump          </td><td>SPACE   </td></tr>
     <tr><td>Turn right    </td><td>RIGHT   </td></tr>
     <tr><td>Turn left     </td><td>LEFT    </td></tr>
-    <tr><td>Walk fordwards</td><td>UP      </td></tr>
+    <tr><td>Walk forwards </td><td>UP      </td></tr>
     <tr><td>Walk backwards</td><td>DOWN    </td></tr>
     <tr><td>Run           </td><td>SHIFT+UP</td></tr>
 </table>
@@ -101,34 +101,37 @@ Input is configured by editing configuration file [input.map](#config-file-input
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#DFDD78"><th style="color: #000000">Shifting</th><th>Key</th></tr>
-    <tr><td>Autoshift Up      </td><td>PGUP  </td></tr>
-    <tr><td>Autoshift Down    </td><td>PGDOWN</td></tr>
-    <tr><td>Switch Shift Modes</td><td>Q        </td></tr>
-    <tr><td>Manual Clutch     </td><td>SHIFT    </td></tr>
-    <tr><td>SHIFT Up          </td><td>A        </td></tr>
-    <tr><td>SHIFT Down        </td><td>Z        </td></tr>
+    <tr><td>Autoshift up      </td><td>PGUP  </td></tr>
+    <tr><td>Autoshift down    </td><td>PGDOWN</td></tr>
+    <tr><td>Switch shift modes</td><td>Q        </td></tr>
+    <tr><td>Manual clutch     </td><td>SHIFT    </td></tr>
+    <tr><td>Shift up          </td><td>A        </td></tr>
+    <tr><td>Shift down        </td><td>Z        </td></tr>
 </table>
 
 <br>
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#E5A36C"><th style="color: #000000">Misc</th><th>Key</th></tr>
-    <tr><td>Truck Horn        </td><td>H     </td></tr>
-    <tr><td>Parking Brake     </td><td>P     </td></tr>
-    <tr><td>Blinker Left      </td><td>COMMA </td></tr>
-    <tr><td>blinker Right     </td><td>DOT   </td></tr>
-    <tr><td>Blink Warn        </td><td>PERIOD</td></tr>
-    <tr><td>Toggle Contact    </td><td>X     </td></tr>
-    <tr><td>Starter           </td><td>S     </td></tr>
-    <tr><td>Lock Load         </td><td>L     </td></tr>
+    <tr><td>Truck horn        </td><td>H     </td></tr>
+    <tr><td>Parking brake     </td><td>P     </td></tr>
+    <tr><td>Trailer parking brake</td><td>CTRL+P</td></tr>
+    <tr><td>Blinker left      </td><td>COMMA </td></tr>
+    <tr><td>Blinker right     </td><td>DOT   </td></tr>
+    <tr><td>Blinker warn      </td><td>PERIOD</td></tr>
+    <tr><td>Toggle contact    </td><td>X     </td></tr>
+    <tr><td>Starter (hold)    </td><td>S     </td></tr>
+    <tr><td>Attach trailer    </td><td>L     </td></tr>
+    <tr><td>Inter-wheel differentals</td><td>W</td></tr>
+    <tr><td>Inter-axle differentals</td><td>CTRL+W</td></tr>
+    <tr><td>Transfer case</td><td>ALT+W</td></tr>
     <tr><td>Secure Load       </td><td>O     </td></tr>
-    <tr><td>Reset Truck       </td><td>I     </td></tr>
-    <tr><td>Show Skeleton     </td><td>K     </td></tr>
-    <tr><td>Toggle Lights     </td><td>N     </td></tr>
+    <tr><td>Show skeleton     </td><td>K     </td></tr>
+    <tr><td>Cycle skeleton views </td><td>CTRL+K</td></tr>
+    <tr><td>Toggle lights     </td><td>N     </td></tr>
     <tr><td>Toggle beacons    </td><td>M     </td></tr>
-    <tr><td>Rescue Truck      </td><td>R     </td></tr>
-    <tr><td>Enter / Exit truck</td><td>ENTER </td></tr>
-    <tr><td>particle Cannon   </td><td>G     </td></tr>
+    <tr><td>Rescue truck      </td><td>R     </td></tr>
+    <tr><td>Particle cannon   </td><td>G     </td></tr>
 </table>
 
 <br>
@@ -164,37 +167,37 @@ Input is configured by editing configuration file [input.map](#config-file-input
 
 ## Aerial and marine controls
 
-<img src="/images/input-map-aerial-and-marine.png" alt="Vehicle keyboard layout" width="600"/>
+<img src="/images/input-map-aerial-and-marine.png" alt="Planes and boats keyboard layout" width="600"/>
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#5FAC5E"><th style="color: #000000">Airplane controls</th><th>Key</th></tr>
-    <tr><td>Steer Left   </td><td>LEFT              </td></tr>
-    <tr><td>Steer Right  </td><td>RIGHT             </td></tr>
-    <tr><td>Elevator Up  </td><td>UP                </td></tr>
-    <tr><td>Elevator Down</td><td>DOWN              </td></tr>
-    <tr><td>Rudder Right </td><td>X                 </td></tr>
-    <tr><td>Rudder Left  </td><td>Z                 </td></tr>
+    <tr><td>Steer left   </td><td>LEFT              </td></tr>
+    <tr><td>Steer right  </td><td>RIGHT             </td></tr>
+    <tr><td>Elevator up  </td><td>UP                </td></tr>
+    <tr><td>Elevator down</td><td>DOWN              </td></tr>
+    <tr><td>Rudder right </td><td>X                 </td></tr>
+    <tr><td>Rudder left  </td><td>Z                 </td></tr>
     <tr><td>Brake        </td><td>B                 </td></tr>
-    <tr><td>Parking Brake</td><td>P                 </td></tr>
+    <tr><td>Parking brake</td><td>P                 </td></tr>
     <tr><td>Reverse      </td><td>R                 </td></tr>
-    <tr><td>Less Flaps*  </td><td>1                 </td></tr>
-    <tr><td>More Flaps*  </td><td>2                 </td></tr>
-    <tr><td>Less Airbrakes*</td><td>3               </td></tr>
-    <tr><td>More Airbrakes*</td><td>4               </td></tr>
-    <tr><td>Throttle Down</td><td>PAGE-DOWN         </td></tr>
-    <tr><td>Throttle Up  </td><td>PAGE-UP           </td></tr>
-    <tr><td>Start Engines</td><td>CLICK BUTTONS "ON"</td></tr>
+    <tr><td>Less flaps   </td><td>1                 </td></tr>
+    <tr><td>More flaps   </td><td>2                 </td></tr>
+    <tr><td>Less airbrakes*</td><td>3               </td></tr>
+    <tr><td>More airbrakes*</td><td>4               </td></tr>
+    <tr><td>Throttle down</td><td>PAGE-DOWN         </td></tr>
+    <tr><td>Throttle up  </td><td>PAGE-UP           </td></tr>
+    <tr><td>Start engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#E5A36C"><th style="color: #000000">Boat controls</th><th>Key</th></tr>
 
-    <tr><td>Throttle Down  </td><td>DOWN   </td></tr>
-    <tr><td>Throttle Up    </td><td>UP    </td></tr>
-    <tr><td>Steer Left     </td><td>LEFT </td></tr>
-    <tr><td>Steer Right    </td><td>RIGHT</td></tr>
-    <tr><td>Center Rudder  </td><td>PGUP  </td></tr>
-    <tr><td>Center Throttle</td><td>PGDOWN   </td></tr>
+    <tr><td>Throttle down  </td><td>DOWN   </td></tr>
+    <tr><td>Throttle up    </td><td>UP    </td></tr>
+    <tr><td>Steer left     </td><td>LEFT </td></tr>
+    <tr><td>Steer right    </td><td>RIGHT</td></tr>
+    <tr><td>Center rudder  </td><td>PGUP  </td></tr>
+    <tr><td>Center throttle</td><td>PGDOWN   </td></tr>
 </table>
 
 `*` Depending on the plane setup
