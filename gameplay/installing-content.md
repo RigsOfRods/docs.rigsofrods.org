@@ -18,8 +18,6 @@ This page will show you how to install vehicles and terrains for Rigs of Rods.
   {:toc}
 </div>
 
-**To download mods from the Repository, you must have a registered & verified account on the Forum.**
-
 ## Downloading
 
 Visit the [Repository](https://forum.rigsofrods.org/resources/).
@@ -33,8 +31,6 @@ Find something you like. For example, how about the nice [1996 Dodge Viper GTS C
 Click the *Download* button at the top right of the page:
 
 ![repository-dl](/images/repository-download.png)
-
-If you see ![repository-no-perms](/images/repository-download-no-perms.png) that means you are either not logged into your Forum account or your account is not verified.
 
 ## Installing
 
