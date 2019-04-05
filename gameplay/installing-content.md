@@ -48,6 +48,10 @@ If you have 0.4.8 RC4, you can place subfolders inside the `mods` folder. (e.g. 
 
 That's it! You can launch Rigs of Rods now and your shiny new mod should be ready to use.
 
+# Installing packs 
+
+To install packs (a zip file containing multiple zips inside) such as the [Gabester Vehicle Pack](http://forum.rigsofrods.org/resources/gabester-vehicle-pack.12/) or the [content packs](http://archives.rigsofrods.net/contentpacks/), just extract the zip into the `packs`/`mods` folder.
+
 # Installing skinzips
 
 Some mods may provide a `*.skinzip` which contains some extra liveries/skins for the vehicle. To install these, they are also placed in the `packs`/`mods` folder.
