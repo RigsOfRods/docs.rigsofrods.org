@@ -164,7 +164,7 @@ PageFileFormat=my-terrain-page-0-0.otc
 ;Advanced texture values, best to leave them as the defaults.
 LightmapEnabled=0
 SpecularMappingEnabled=1
-NormalMappingEnabled=0
+NormalMappingEnabled=1
 ```
 
 Example for a PNG heightmap:
