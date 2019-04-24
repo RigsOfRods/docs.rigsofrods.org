@@ -110,7 +110,7 @@ my-script.as=
 
 Note that, there is no editor which would create these files for you. You need to copy a template and work manually from there.
 
-Templates can be found [here.](https://forum.rigsofrods.org/content-creation/150-template-raw-png-terrains.html).
+Templates can be found [here](https://forum.rigsofrods.org/resources/template-raw-png-terrains.262/).
 
 ## The heightmap
 
