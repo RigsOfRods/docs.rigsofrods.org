@@ -226,7 +226,7 @@ A list of all valid events can be found in the [Keypress Events](#keypress-event
 
 For the keyboard there are several special things:
 
-### Modifiers:
+### Modifiers
 -   <b>CTRL</b>
 -   <b>SHIFT</b>
 -   <b>ALT</b>
