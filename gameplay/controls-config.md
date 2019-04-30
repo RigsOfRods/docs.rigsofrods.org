@@ -31,7 +31,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Reset vehicle in place</td><td>BACKSPACE</td></tr>
     <tr><td>View vehicle statistics </td><td>T</td></tr>
     <tr><td>View vehicle commands</td><td>CTRL+T</td></tr>
-    <tr><td>Screenshot         </td><td>PRINTSCR</td></tr>
+    <tr><td>Screenshot         </td><td>Print Screen/SYSRQ</td></tr>
     <tr><td>Chat (Multiplayer) </td><td>Y</td></tr>
     <tr><td>Toggle HUD          </td><td>U    </td></tr>
     <tr><td>Toggle soft reset mode</td><td>APOSTROPHE</td></tr>
@@ -844,4 +844,4 @@ Click `Export Keymap` then select your device from the list.
 
 And finally, run Rigs of Rods and test your device! You can make further edits to your input map by clicking `Import Keymap`.
 
-If you want to share your created input map, upload it to the Miscellaneous section of the [Repository](https://forum.rigsofrods.org/downloads.php). Thanks!
+If you want to share your created input map, upload it to the Miscellaneous section of the [Repository](https://forum.rigsofrods.org/resources/). Thanks!
