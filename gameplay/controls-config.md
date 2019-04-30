@@ -39,10 +39,10 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Adjust simulation speed</td><td>CTRL+= / SHIFT+= </td></tr>
     <tr><td>Switch between vehicles </td><td>CTRL+RBRACKET / CTRL+LBRACKET </td></tr>
     <tr><td>Remove current vehicle</td><td>CTRL+Del</td></tr>
-    <tr><td>Respawn last vehicle</td><td>CTRL+.(period)</td></tr>
+    <tr><td>Respawn last vehicle</td><td>CTRL+ . (period)</td></tr>
 </table>
 
-<br>
+### Character 
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#5FAC5E"><th style="color: #000000">Character</th><th style="color: #000000">Key</th></tr>
@@ -54,7 +54,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Run           </td><td>SHIFT+UP</td></tr>
 </table>
 
-<br>
+### Camera
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#74A9E1"><th style="color: #000000">Camera</th><th style="color: #000000">Key</th></tr>
@@ -67,7 +67,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Fixed camera  </td><td>ALT+C</td></tr>
 </table>
 
-<br>
+### Time
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#DFDD78"><th style="color: #000000">Time Adjust</th><th style="color: #000000">Key</th></tr>
@@ -75,7 +75,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Change time (fast)</td><td>SHIFT+Numpad + (plus) / SHIFT+Numpad - (minus)</td></tr>
 </table>
 
-<br>
+### Overview map
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#928578"><th style="color: #000000">Map</th><th style="color: #000000">Key</th></tr>
@@ -84,6 +84,26 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Toggle alpha     </td><td>CTRL+SHIFT+TAB</td></tr>
     <tr><td>Toggle icons     </td><td>CTRL+SHIFT+ALT+TAB</td></tr>
 </table>
+
+### Saves
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#928578"><th style="color: #000000">Savegames</th><th style="color: #000000">Key</th></tr>
+    <tr><td>Quick save</td><td>NUMPAD / (divide)</td></tr>
+    <tr><td>Quick load</td><td>NUMPAD * (multiply)</td></tr>
+    <tr><td>Save slot 1</td><td>CTRL+ALT+1</td></tr>
+    <tr><td>Save slot 2</td><td>CTRL+ALT+2</td></tr>
+    <tr><td>Save slot 3</td><td>CTRL+ALT+3</td></tr>
+    <tr><td>Save slot 4</td><td>CTRL+ALT+4</td></tr>
+    <tr><td>Save slot 5</td><td>CTRL+ALT+5</td></tr>
+    <tr><td>Load slot 1</td><td>ALT+1</td></tr>
+    <tr><td>Load slot 2</td><td>ALT+2</td></tr>
+    <tr><td>Load slot 3</td><td>ALT+3</td></tr>
+    <tr><td>Load slot 4</td><td>ALT+4</td></tr>
+    <tr><td>Load slot 5</td><td>ALT+5</td></tr>
+</table>
+
+Note: You can load a savegame from the main menu.
 
 ## Common vehicle controls
 
@@ -97,7 +117,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET / LBRACKET</td></tr>
 </table>
 
-<br>
+### Shifting
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#DFDD78"><th style="color: #000000">Shifting</th><th>Key</th></tr>
@@ -109,7 +129,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Shift down        </td><td>Z        </td></tr>
 </table>
 
-<br>
+### Misc
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#E5A36C"><th style="color: #000000">Misc</th><th>Key</th></tr>
@@ -134,7 +154,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Particle cannon   </td><td>G     </td></tr>
 </table>
 
-<br>
+### Commands
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#EC3F41"><th style="color: #000000">Function keys</th><th>Combo</th></tr>
@@ -169,6 +189,8 @@ Input is configured by editing configuration file [input.map](#config-file-input
 
 <img src="/images/input-map-aerial-and-marine.png" alt="Planes and boats keyboard layout" width="600"/>
 
+### Planes
+
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#5FAC5E"><th style="color: #000000">Airplane controls</th><th>Key</th></tr>
     <tr><td>Steer left   </td><td>LEFT              </td></tr>
@@ -189,6 +211,13 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Start engines</td><td>CLICK BUTTONS "ON"</td></tr>
 </table>
 
+`*` Depending on the plane setup
+
+It is recommended to use: `CTRL+Home` to start all engine of a plane and `CTRL+PAGE-UP` to full throttle all engines
+because some planes could have more than 4 engines and you couldn't control them with your mouse.
+
+### Boats
+
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#E5A36C"><th style="color: #000000">Boat controls</th><th>Key</th></tr>
 
@@ -199,11 +228,6 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Center rudder  </td><td>PGUP  </td></tr>
     <tr><td>Center throttle</td><td>PGDOWN   </td></tr>
 </table>
-
-`*` Depending on the plane setup
-
-It is recommended to use: `CTRL+Home` to start all engine of a plane and `CTRL+PAGE-UP` to full throttle all engines
-because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
 # Config file 'input.map'
 
