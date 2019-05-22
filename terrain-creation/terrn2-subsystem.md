@@ -272,8 +272,6 @@ For explanation of used images, see [Images & color channels](/tools-tutorials/i
 
 # Terrain Objects (.tobj)
 
-Defines object placement on terrain. More info in archived wikipage "Placing_objects_on_terrains_(For_0.38_and_0.4)"
-
-Usage is equal to [legacy 'terrn' files](/terrain-creation/old-terrn-subsystem).
+Defines object placement on terrain. More info: [Static objects](/terrain-creation/intro/#static-objects-1)
 
 
