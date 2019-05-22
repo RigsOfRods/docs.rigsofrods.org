@@ -68,7 +68,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
 </table>
 
 ### Time
-
+(Sky type must be set to Caelum or SkyX)
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#DFDD78"><th style="color: #000000">Time Adjust</th><th style="color: #000000">Key</th></tr>
     <tr><td>Change time        </td><td>Numpad + (plus) / Numpad - (minus)</td></tr>
