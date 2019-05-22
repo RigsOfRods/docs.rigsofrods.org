@@ -290,6 +290,7 @@ A normal terrain object is usually formatted like this:
 
 RoR uses Paged Geometry for trees/grass, see [this page](http://docs.rigsofrods.org/terrain-creation/old-terrn-subsystem/#grass) for more info.
 
+For help editing terrain objects, see: [Adding/moving terrain objects](/terrain-creation/editing-terrain-objects/)
 
 A `.tobj` file featuring trees, grass, objects, and roads:
 
@@ -331,7 +332,3 @@ trees 0, 360, 0.1, 0.12, 2, 60, 3000, fir05_30.mesh aspen-test.dds aspen_grass_d
 933.910156, 34.260723, 1064.348389, 0.000000, -160.000000, 1.000000, road
 924.580017, 34.435394, 1067.741699, 0.000000, -161.000000, 1.000000, road
 ```
-
-
-
-
