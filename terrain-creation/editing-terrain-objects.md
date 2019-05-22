@@ -15,7 +15,7 @@ As of Rigs of Rods 0.4.x, terrain objects are stored in `.tobj` files, they cont
 
 # Adding a new object 
 
-For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0. 
+For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0+. 
 
 Open Rigs of Rods and select the map you want to add an object to. 
 
@@ -60,17 +60,15 @@ Save the file and reopen Rigs of Rods. Your new object should appear roughly whe
 
 ![3](/images/adding-terrain-object3.png)
 
-To precisely place your object, you can use the built-in "terrain/object editor" that is included with 0.4.7.0. I'll explain how to use it below.
+To precisely place your object, you can use the built-in "terrain/object editor" that is included with 0.4.7.0+. I'll explain how to use it below.
 
 # Moving objects 
 
-Note: The editor cannot move roads/Paged Geometry trees/grass.
+**Note: The editor cannot move roads/Paged Geometry trees/grass.**
 
-First, make sure you have the correct `input.map` line needed to open the editor. Open the `input.map` (Located in `/config/input.map`) and search for this line:
+First, make sure you're running RoR version 0.4.7.0 or newer.
 
-`COMMON_TOGGLE_TERRAIN_EDITOR   Keyboard             EXPL+CTRL+Y`
-
-If you don't have this line, add it and save the file. Now open Rigs of Rods and load the map. When you press `CTRL+Y` (while not in a vehicle), a notification box should appear at the top right of the screen:
+Next, load the terrain you want to edit. While not in a vehicle, press `CTRL+Y`. A notification box should appear in the top right:
 
 ![4](/images/adding-terrain-object4.png)
 
@@ -85,7 +83,7 @@ WASD - Movement
 Arrow keys - Rotation
 R - Change rotation axis
 I - Reset object position
-CTRL+Y - Exit editor and save changes 
+CTRL+Y - Exit editor and save changes (see notice below for 0.4.8RC4)
 ```
 
 In this example I will rotate the truckshop. Move RoRBot near the object and press `Enter`. The object should now be selected:
@@ -95,6 +93,11 @@ In this example I will rotate the truckshop. Move RoRBot near the object and pre
 Use the keys listed above to move/rotate. You may have to switch the rotation axis using the `R` key to correctly rotate the object.
 
 Once you have your object(s) placed where you want it press `CTRL+Y` again to exit the editor:
+
+<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
+    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
+    <div style="margin-left:40px"><strong>IMPORTANT NOTE:</strong><br />In 0.4.8RC4, to save your changes you must enter the editor again by pressing CTRL+Y after exiting. This has been fixed in the development builds.</div>
+</div>
 
 ![6](/images/adding-terrain-object6.png)
 
