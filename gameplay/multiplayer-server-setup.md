@@ -24,6 +24,8 @@ Download a pre-built package that matches your RoR version and operating system 
 | 0.4.7.0 (RoRNet 2.38)          | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-7-0.206/)         | Windows & Linux | Angelscript              |
 | 0.38.67-0.4.6RC3 (RoRNet 2.37) | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-38-67-0-4-6rc3.207/) | Windows & Linux | Angelscript              |
 
+**NOTE:** *Versions older than 0.4.8.0 (RoRNet 2.41) are unsupported.*
+
 # Windows
 
 ## Setting up
@@ -131,7 +133,7 @@ First rename the included files: (example: `tutorial-`):
 
 Open each file in a text editor and fill it out with your server's info.
 
-To set up the `.auth` file, see the [Setting up admins/moderators](#userauth-setup) section.
+To set up the `.auth` file, see the [UserAuth setup](#userauth-setup) section.
 
 Once you're done, use this command to start the server:
 
@@ -211,7 +213,7 @@ nano tutorial-rules.rules
 
 Use the arrow keys to navigate. After you fill out the file(s), press `CTRL+O` to write the changes and `CTRL+X` to exit.
 
-To set up the `.auth` file, see the [Setting up admins/moderators](#userauth-setup) section.
+To set up the `.auth` file, see the [UserAuth setup](#userauth-setup) section.
 
 Once you're done, use this command to start the server:
 
@@ -223,39 +225,55 @@ To stop the server, press `CTRL+C` or kill the server if launched in the backgro
 
 `sudo kill pid`
 
-# Troubleshooting
-
-Many things can go wrong with your server, here's a small selection of problems that may occur:
-
-Common error messages:
-
--  **Error upon registration: error: cannot connect from the master server. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the Master server.**
- 
-This usually means that you didn't forward your port. Another cause may be that you specified the wrong IP address. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.
-
--  **FATAL Listerer: SWInetSocket::bind() error: Address already in use**
-	
-The port that you filled in is already in use by another program. Please use another port number.
-  
-- **error opening admin configuration file '/admins.txt**'
-  
-This means that you didn't specify an authorizations file. You can safely ignore this error message.
-
-Problems while connecting to your server:
-
-- **Network fatal error: server uses a different protocol version**
-
-You need to download the correct game version to match your server version. 0.4.8RC4 supports RoRNet 2.41, the latest server protocol.
-
-
-If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/game-support.8/).
-
 # UserAuth setup
 
-This section will teach you how to set up the `.auth` file.
+This section will teach you how to set up the `.auth` file. This is used to define who is staff on your server.
 
-Open the `.auth` file in a text editor. It should look like this:
+Shut down your server before following these steps.
 
+## Setting your user token
+
+First, you need to set a user token in your game's settings. To do this, open RoR and click `Multiplayer` -> `Settings`:
+
+![mp-settings](/images/mp-settings-window.png)
+
+Click on the `User token` textbox and set your token. It's kind of like a password, so make it unique. 
+
+Press Enter to submit your changes, then restart the game and go back to that menu to confirm it saved.
+
+## Setting file location
+
+Next, you need to specify where your authorization file is either by using a config file or CLI arguments. Follow the appropriate steps below depending on what you're using.
+
+### CLI arguments
+
+If you're starting your server using CLI arguments, just add `-auth-file tutorial-auth.auth` to your command, for example:
+
+`rorserver.exe -name Private_Server -port 12000 -password secret -auth-file tutorial-auth.auth`
+
+Replace `tutorial-auth.auth` with the name of your file.
+
+### Config file
+
+If you're using a config file, open it and you should find this line:
+
+```
+## The location of the authorizations file
+## syntax: authfile = <path-to-file>
+authfile = /etc/rorserver/simple.auth
+```
+
+If the line is commented out, remove the `#` before `authfile`.
+
+Since you have the auth file in the same folder as the server executable, just set the path to your file's name, for example: 
+
+`authfile = tutorial-auth.auth`
+
+Replace `tutorial-auth.auth` with the name of your file. Save and close the file once you're finished.
+
+## Editing the file
+
+And finally, Open your `.auth` file in a text editor. The contents should look like this:
 
 ```
 ; This files defines who is an admin, moderator etc on your server
@@ -281,13 +299,11 @@ Open the `.auth` file in a text editor. It should look like this:
 1 9b3c463506f128319a0f16ef08d39d876ca25c68 admin_user
 ```
 
-Open RoRConfig and set your unhashed token `Gameplay tab -> User Token` box. It's kind of like a password, so make it unique.
-
 Now join your server and check your server's log. You should see a line similar to this:
 
 `INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
 
-This is the hashed token for the user.
+`0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9` is the hashed token for the user, which is what you will set in your auth file. 
 
 If you want the user to be a admin, set the number in the `.auth` file to `1`, or `4` if you want the user to be a moderator.
 
@@ -298,7 +314,7 @@ If you want the user to be a admin, set the number in the `.auth` file to `1`, o
 4 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
 ```
 
-Save the file and restart your server. If the server read the auth file correctly, it should log this:
+Save the file and start your server. If the server read the auth file correctly, it should log this:
 
 `INFO| found X auth overrides in the authorizations file!`
 
@@ -320,4 +336,42 @@ Usage: !kick UID reason or !ban UID reason
 Usage: !say 10 message or !say -1 message
 
 ```
+
+# Troubleshooting
+
+Many things can go wrong with your server, here's a small selection of problems that may occur:
+
+## Common error messages
+
+### Cannot connect to master server
+
+`Registration failed, response code: HTTP 503, body: {"result":false,"message":"Could not connect to your server and verify it's version. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the master server!`
+ 
+This usually means that you didn't forward your port. Another cause may be that you specified the wrong IP address. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.
+
+### Address already in use
+
+`FATAL Listerer: SWInetSocket::bind() error: Address already in use`
+	
+The port that you filled in is already in use by another program. Please use another port number.
+
+### Failed to open authorization file
+  
+`Couldn't open the local authorizations file ('/etc/rorserver/simple.auth'). No authorizations were loaded.`
+  
+This means that the server failed to read your authorization file. Make sure your filename matches the one you specified and refer back to the [UserAuth setup](#userauth-setup) section.
+
+If you didn't setup an authorization file, you can safely ignore this error message.
+
+## Connection issues
+
+### Server uses a different protocol version
+
+`Network fatal error: server uses a different protocol version`
+
+You need to download the correct game version to match your server version. 0.4.8RC4 supports RoRNet 2.41, the latest server protocol.
+
+The latest version may be downloaded from the [homepage](https://www.rigsofrods.org/).
+
+If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/game-support.8/).
 
