@@ -214,7 +214,7 @@ Walk around to the front of the building and enter the open door. Choose the Wah
 
 ![boatselect](/images/bg-boatselect.png)
 
-Use `UP`/`DOWN` to throttle and `LEFT`/`RIGHT` to steer. Use `PGUP` to center the throttle (to neutral) and `PGDOWN` to center the rudder. It may take you awhile to get your sea legs. If you have waves enabled, see how far out you can go before you flip over waves!
+Use `UP`/`DOWN` to throttle and `LEFT`/`RIGHT` to steer. Use `PGUP` to center the throttle (to neutral) and `PGDOWN` to center the rudder. It may take you a while to get your sea legs. If you have waves enabled, see how far out you can go before you flip over waves!
 
 ![boat2](/images/bg-boat2.png)
 
