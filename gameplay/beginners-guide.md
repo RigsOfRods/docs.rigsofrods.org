@@ -135,11 +135,13 @@ Use the mouse or arrow keys to move through the menus. Select the *DAF Semi truc
 
 # Driving
 
-The DAF semi isn't the most agile or best looking truck in the game, but it serves us a purpose later. The camera inside the Rig-a-Deal is fixed, so you will be unable to move it until you leave. Switch to the in-cab camera by hitting `C` twice. Use the `UP` arrow key to accelerate out of the *Rig-a-Deal* (Rigs of Rods uses a simulated clutch which begins to engages at a specific point. This why the semi doesn't move until 1000 RPM). Use `DOWN` to brake, and `LEFT`/`RIGHT` arrows to steer. Use `PGUP`/`PGDOWN` to select your transmission direction/speed.
+The DAF semi isn't the most agile or best looking truck in the game, but it serves us a purpose later. The camera inside the Rig-a-Deal is fixed, so you will be unable to move it until you leave. Switch to the in-cab camera by hitting `C`. Use the `UP` arrow key to accelerate out of the *Rig-a-Deal* (Rigs of Rods uses a simulated clutch which begins to engages at a specific point. This why the semi doesn't move until 1000 RPM). Use `DOWN` to brake, and `LEFT`/`RIGHT` arrows to steer. Use `PGUP`/`PGDOWN` to select your transmission direction/speed.
 
-Start by exploring Coldwater, the town you begin in. It isn't very big but provides some decent moving room. If you get stuck, or wreck, hit `I` to reset back to the *Rig-a-Deal*, or `BACKSPACE` to reset the truck in its current position. If you hold `BACKSPACE` for one second, you will enable the "advanced repair mode" which lets you move the vehicle to any position by using the `WASD` keys to move and the arrow keys to rotate. Press `BACKSPACE` again to exit.
+Start by exploring Coldwater, the town you begin in. It isn't very big but provides some decent moving room. If you get stuck, or wreck, hit `I` to reset back to the *Rig-a-Deal*, or `BACKSPACE` to reset the truck in its current position. 
 
-You can switch transmission modes by hitting `Q`. There are 5 transmission modes are available: 
+If you hold `BACKSPACE` for one second, you will enable the "advanced repair mode" which lets you move the vehicle to any position by using the `WASD` keys to move and the arrow keys to rotate. Press `BACKSPACE` again to exit.
+
+You can switch transmission modes by hitting `Q`. There are 5 transmission modes available: 
 * Automatic shift
   * The gear change is fully automatic, the player only has to set the gear by pressing `PGUP`/`PGDOWN`.
 * Manual shift: Auto clutch
