@@ -1364,7 +1364,7 @@ Parameters:
         The overall stiffness of a beam. The higher the value the stiffer the beam.
 -   **Damping constant**:
         <span style="color:#BD0058">Real number</span>;
-        <span style="color:#0B8A00">Default: `12000<`/span>;
+        <span style="color:#0B8A00">Default: `12000`</span>;
         The resistance to motion of a beam. Higher values make the beam less likely to deform.
 -   **Deformation threshold constant**:
         <span style="color:#BD0058">Real number</span>;
