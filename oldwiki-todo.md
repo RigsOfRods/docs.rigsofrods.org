@@ -159,7 +159,6 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/Standard_wheels_to_mesh_wheels
 * https://archives.rigsofrods.net/wiki/index.php/Starting_RoR_under_Linux
 * https://archives.rigsofrods.net/wiki/index.php/Submeshing_in_Blender
-* https://archives.rigsofrods.net/wiki/index.php/Terms_of_Service
 * https://archives.rigsofrods.net/wiki/index.php/Terrain_finishing
 * https://archives.rigsofrods.net/wiki/index.php/Testbusdoors.truck
 * https://archives.rigsofrods.net/wiki/index.php/Texture_File
@@ -185,19 +184,6 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/UserGroups - old forum
 * https://archives.rigsofrods.net/wiki/index.php/User_token - historical
 * https://archives.rigsofrods.net/wiki/index.php/Rigs_of_Rods_Wiki:Language_policy
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Backseat
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Begging
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Grammar
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Language
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Links
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Nice
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Privacy
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Singularity
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Search
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Profanity
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Stolen_Content
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Unwritten
-* https://archives.rigsofrods.net/wiki/index.php/Rules_Useless 
 
 # TODO -> changelog/history
 
