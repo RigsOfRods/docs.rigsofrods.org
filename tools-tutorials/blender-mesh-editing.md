@@ -244,7 +244,7 @@ Congratulations!
 
 **Q:**: I get a plug-in install error/other Blender errors!
 
-**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [Forums](https://forum.rigsofrods.org/forum-23.html) about it.
+**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/).
 
 
 ---------------------------------------
