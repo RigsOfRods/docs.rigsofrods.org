@@ -26,7 +26,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 - [Torchlight-To-Blender plug-in](/download/ImportExportTL_blender25x_v0.6.2.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreCommandLineTools-Windows](https://sourceforge.net/projects/ogre/files/ogre-tools/1.7.2/OgreCommandLineTools_1.7.2.zip/download) (If you don't want to use the OgreXMLConverter located in your RoR install directory)
-- (Optional) [OgreMeshTool](https://code.google.com/archive/p/ogre-meshtool/downloads)
+- (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
 
 # Getting started
 
