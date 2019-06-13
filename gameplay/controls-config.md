@@ -37,6 +37,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Toggle soft reset mode</td><td>APOSTROPHE</td></tr>
     <tr><td>Toggle limited camera movement</td><td>SHIFT+SPACE</td></tr>
     <tr><td>Adjust simulation speed</td><td>CTRL+= / SHIFT+= </td></tr>
+    <tr><td>Reset simulation speed/set preset</td><td>BACKSLASH</td></tr>
     <tr><td>Switch between vehicles </td><td>CTRL+RBRACKET / CTRL+LBRACKET </td></tr>
     <tr><td>Remove current vehicle</td><td>CTRL+Del</td></tr>
     <tr><td>Respawn last vehicle</td><td>CTRL+ . (period)</td></tr>
