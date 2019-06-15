@@ -2079,6 +2079,7 @@ Parameters:
 
 Notes:
 
+- 	Requires an `axles` section defined first!
 - 	`CTRL+W` switches between 2WD/4WD mode.
 - 	If alternate gear ratios are specified, `SHIFT+W` switches between Hi/Lo mode.
 
