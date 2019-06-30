@@ -191,11 +191,11 @@ nodes
 14, 1.36, 0.00, 1.97, cl 2000
 ```
 
-You can debug your truck's node masses by enabling `Debug Truck Mass` in RoRConfig:
+You can debug your truck's node masses by enabling `Debug actor mass` in settings:
 
-![rorconfig-truckmassdebug](/images/rorconfig-truckmassdebug.png)
+![massdebug](/images/fileformat-truck-massdebug.png)
 
-Look into your `RoR.log` after loading and you could see something like this:
+Look into your `RoR.log` after spawning and you could see something like this:
 
 ```
 Node 0 : 3662 kg
@@ -770,10 +770,10 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, `3` makes the wheel triangular, and `4` makes the wheel square. Recommended values are between `10` and `16`.
 -   **Node 1** - <span style="color:#BD0058">Node number/name</span> The node where the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](#wheels) for an explanation of how this works.)
--   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.org/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://archives.rigsofrods.net/wiki/index.php/Axle_Rigidity)). Use `9999` if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> `0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for an undriven wheel, `1` for a wheel driven forwards, `2` for a wheel driven backwards.
--   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://archives.rigsofrods.org/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
+-   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://archives.rigsofrods.net/wiki/index.php/Arm_node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
 -   '''Rim damping '''- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
@@ -2919,7 +2919,7 @@ Specifies groundmodel should be used for the trucks contactive submeshes. It has
 
 Parameter:
 
--   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.org/wiki/index.php/Groundmodel_Description_File)
+-   **groundmodel\_name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = concrete</span>; The groundmodel to use. See also [Groundmodel Description File](https://archives.rigsofrods.net/wiki/index.php/Groundmodel_Description_File)
 
 ```
 ;submesh_groundmodel groundModelName
@@ -3075,7 +3075,7 @@ videocamera
 43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
 ```
 
-**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/downloads.php?do=file&id=274): (They are currently disabled)**
+**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/): (They are currently disabled)**
 
 ```
 videocamera
@@ -3114,13 +3114,9 @@ material Quattro_LM
 
 ![videocamera-nodes](/images/videocamera-nodes.png)
 
-Make sure `vidscreen-disabled.png` is in your truck folder. **Use your own texture and material names to avoid conflicts !**
+Make sure `vidscreen-disabled.png` is in your truck zip. **Use your own texture and material names to avoid conflicts!**
 
-**Note: Only works in the development builds** 
-
-You can enable videocamera debug in RoRConfig which activates helpful meshes which show position and orientation of the video-cameras set up:
-
-![rorconfig-debugvideocameras](/images/rorconfig-debugvideocameras.png)
+You can enable videocamera debug in settings (Diagnostic tab) which activates helpful meshes which show position and orientation of the video-cameras set up:
 
 ![videocamera-debug-ingame](/images/videocamera-debug-ingame.png)
 
@@ -3175,7 +3171,7 @@ The final two modes are useful for a vehicle with detaching parts, so the camera
 
 ## Camerarail
 
-In RoR 0.39.7 and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
+In <span style="background-color:#fb7">\[ Version 0.39.7+ \]</span> and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
 
 Camera controls:
 
@@ -3214,7 +3210,7 @@ The distance between the last camerarail node of one and the first camerarail no
 
 # Sounds
 
-Since version 0.36, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
+Since <span style="background-color:#fb7">\[ Version 0.36+ \]</span>, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
 
 ## disabledefaultsounds
 
