@@ -2049,7 +2049,7 @@ w1(5 6), w2(7 8), d(l)
 
 ## Interaxles
 
-In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `ALT+W`.
+In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
 
 Parameters:
 
@@ -2080,8 +2080,8 @@ Parameters:
 Notes:
 
 - 	Requires an `axles` section defined first!
-- 	`CTRL+W` switches between 2WD/4WD mode.
-- 	If alternate gear ratios are specified, `SHIFT+W` switches between Hi/Lo mode.
+- 	`SHIFT+W` switches between 2WD/4WD mode.
+- 	If alternate gear ratios are specified, `ALT+W` switches between Hi/Lo mode.
 
 Sample transfercase section:
 
