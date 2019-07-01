@@ -47,7 +47,7 @@ If you're new to terrain creation, read [intro to terrain creation](/terrain-cre
     WaterLine = 6
     
     # (Real) Height of the black ground plane
-    WaterBottomLine = 1
+    WaterBottomLine = -150
     
     # (RGB, float notation) Color of the ambient light.
     AmbientColor = 1,1,1
