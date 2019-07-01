@@ -145,7 +145,8 @@ Note: You can load a savegame from the main menu.
     <tr><td>Attach trailer    </td><td>L     </td></tr>
     <tr><td>Inter-wheel differentals</td><td>W</td></tr>
     <tr><td>Inter-axle differentals</td><td>CTRL+W</td></tr>
-    <tr><td>Transfer case</td><td>ALT+W</td></tr>
+    <tr><td>Transfer case (2WD/4WD)</td><td>SHIFT+W</td></tr>
+    <tr><td>Alternate gear ratios</td><td>ALT+W</td></tr>
     <tr><td>Secure Load       </td><td>O     </td></tr>
     <tr><td>Show skeleton     </td><td>K     </td></tr>
     <tr><td>Cycle skeleton views </td><td>CTRL+K</td></tr>
