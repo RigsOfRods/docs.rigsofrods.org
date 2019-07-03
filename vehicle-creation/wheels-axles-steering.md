@@ -173,11 +173,11 @@ See Also: [Suspension](/vehicle-creation/suspension)
 
 ## How it is Implemented
 
- The arm node is implemented through the <a rel="nofollow" class="external text" href="http://wiki.rigsofrods.com/index.php?title=Truck_Description_File#Wheels">wheels</a> section of a .truck file.
+ The arm node is implemented through the [wheels](/vehicle-creation/fileformat-truck#wheels) section of a `.truck` file.
 
 ## Example Vehicle
 
- A good example vehicle that shows how the arm node works is box5diesel's <a rel="nofollow" class="external text" href="http://forum.rigsofrods.com/index.php?topic=6904.0">Baja Trophy Truck</a>. When in the air, if you accelerate in 6th gear, the nose of the truck will be lifted up. If you brake while in the air, the nose of the truck will be pushed down.  This is due to the arm nodes of the rear wheels being located in front of the rear axle, and the arm nodes for the front wheels, located behind the front axle.
+ A good example vehicle that shows how the arm node works is box5diesel's [Baja Trophy Truck](http://archives.rigsofrods.net/repo/files/repofiles-2nd-batch/BajaTrophyTruck.zip). When in the air, if you accelerate in 6th gear, the nose of the truck will be lifted up. If you brake while in the air, the nose of the truck will be pushed down.  This is due to the arm nodes of the rear wheels being located in front of the rear axle, and the arm nodes for the front wheels, located behind the front axle.
 
 ## Example Diagram 
 
