@@ -54,7 +54,7 @@ To play multiplayer, see [this section](/gameplay/beginners-guide/#multiplayer) 
 
 This means you're trying to join a server that is running an earlier/later RoRNet version than what your current RoR version supports.
 
-The latest version, 0.4.8RC4, supports RoRNet 2.41.
+The latest version, 0.4.8.0-RC5, supports RoRNet 2.41.
 
 
 # Errors
@@ -102,7 +102,7 @@ You can report bugs and other issues on RoR's [GitHub repo issue tracker.](https
 
 Make sure your issue hasn't already been reported.
 
-**The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8RC4 please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 
+**The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8.0-RC5, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 
 
 ### Windows XP support
 
