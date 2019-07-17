@@ -29,6 +29,8 @@ Do not steal content from other people and claim it as yours. Do not use content
 Do not use copyrighted content without written permission of the original authors. 
 Do not show pictures or videos of stolen content.
 
+**A good rule of thumb: Any content you find that isn't on our official forum/archives is more than likely stolen in most cases.**
+
 # INSULTING
 
 Don't insult other members. Do not tell members to kill themselves or things in that category, there will be hard consequences.
