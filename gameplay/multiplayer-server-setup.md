@@ -19,12 +19,11 @@ Download a pre-built package that matches your RoR version and operating system 
 
 | Server version                 | Link                                                                                                        | Supported OS(s) | Included build options   |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------|--------------------------|
-| 0.4.8.0 (RoRNet 2.41 - WIP)    | [Download](https://sourceforge.net/projects/rigs-of-rods/files/ror-server/CI-build/)                        | Windows         | Angelscript & Webserver  |
-| 0.4.8.0 (RoRNet 2.41 - WIP)    | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0-linux.208/)    | Linux           | Angelscript & Webserver  |
+| 0.4.8.0-RC5 (RoRNet 2.41)    | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/)    | Windows & Linux           | Angelscript |
 | 0.4.7.0 (RoRNet 2.38)          | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-7-0.206/)         | Windows & Linux | Angelscript              |
-| 0.38.67-0.4.6RC3 (RoRNet 2.37) | [Download](http://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-38-67-0-4-6rc3.207/) | Windows & Linux | Angelscript              |
+| 0.38.67-0.4.6RC3 (RoRNet 2.37) | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-38-67-0-4-6rc3.207/) | Windows & Linux | Angelscript              |
 
-**NOTE:** *Versions older than 0.4.8.0 (RoRNet 2.41) are unsupported.*
+**NOTE:** *Versions older than 0.4.8.0-RC5 (RoRNet 2.41) are unsupported.*
 
 # Windows
 
@@ -124,8 +123,6 @@ If the server launched successfully, it should be now displayed on the server li
 ## Running the server using a config file
 
 If you plan on running a server for extended periods of time, it is recoomended that you set up a config file.
-
-**Note: If you downloaded a RoRNet 2.41 Windows package, you will have to [download](/download/rorserver-example-configs.zip) the config files separately.**
 
 First rename the included files: (example: `tutorial-`):
 
