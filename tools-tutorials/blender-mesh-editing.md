@@ -19,14 +19,18 @@ categories: [tools-tutorials]
 
 Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the plug-ins to exporting.
 
+**Please read everything carefully and do not skip any steps.**
+
+**If you've created a model yourself and just want to export it to RoR, skip to the [Exporting](#exporting) section.**
+
 # Required software
 
-- [Blender](https://www.blender.org/download/) (2.79b is the latest at the time of writing)
-- [Blender2ogre plug-in](/download/blender2ogre-0.6.0.zip)
-- [Torchlight-To-Blender plug-in](/download/ImportExportTL_blender25x_v0.6.2.zip)
+- Rigs of Rods installed to the default location (`C:\Program Files\Rigs of Rods`)
+- [Blender](https://www.blender.org/download/) (2.79b)
+- [OGRE Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
-- (Optional) [OgreCommandLineTools-Windows](https://sourceforge.net/projects/ogre/files/ogre-tools/1.7.2/OgreCommandLineTools_1.7.2.zip/download) (If you don't want to use the OgreXMLConverter located in your RoR install directory)
 - (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
+- A brain, some basic computer knowledge, and some patience
 
 # Getting started
 
@@ -36,24 +40,13 @@ Open the `.zip` file for the vehicle, and extract the correct `.mesh` file(s) an
 
 ![1](/images/blender-edit-meshandtextures.png)
 
+Next, open a new File Explorer window and browse to `C:\Program Files\Rigs of Rods`, this is where `OgreXMLConverter.exe` is located. 
 
-Next you will need to convert the `.mesh` file into a `.mesh.xml` using OgreXMLConverter which can be found in your RoR install directory (Where `RoR.exe` is) or by downloading it from the link above. Just simply drag the mesh file into `OgreXMLConverter.exe`:
+Simply drag and drop the mesh onto `OgreXMLConverter.exe` to get a `.mesh.xml`:
 
 ![2](/images/blender-edit-converting-mesh-to-xml.png)
 
-
-If you're on Linux, you can use WINE to run `OgreXMLConverter.exe`by running this command in a terminal:
-```
-wine PATH/OgreXmlConverter.exe PATH/MESH_NAME.mesh
-```
-
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />Some meshes are exported in OGRE 1.8 format, which only RoR 0.4+ supports. You'll have to use OgreXMLConverter from those versions. The OgreCommandLineTools download only supports OGRE 1.7.2.</div>
-</div>
-
 You should now have a `.mesh.xml` file in the same folder:
-
 
 ![3](/images/blender-edit-converted-xml.png)
 
@@ -61,10 +54,9 @@ We're ready to launch Blender now.
 
 # Installing Blender plug-ins
 
-First, download the two plug-ins from the links above and place them in any folder. **Do not extract.**
+First, download the [OGRE Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip) and place it into any folder. **Do not extract.**
 
 Now open Blender. Click `File` -> `User Preferences`:
-
 
 ![4](/images/blender-edit-userprefs1.png)
 
@@ -72,11 +64,11 @@ Click `Add-ons` -> `Install from File`:
 
 ![5](/images/blender-edit-userprefs2.png)
 
-Select the `blender2ogre-0.6.0.zip` file you downloaded earlier. You should now see the Add-on installed, but it is not enabled yet. Click the check box to enable it:
+Select the `OGRE_ImportExport_RoR.zip` file you downloaded earlier.
+
+Type "rigs" into the search bar and both add-ons should appear:
 
 ![6](/images/blender-edit-userprefs3.png)
-
-Now click `Install from File` again and select the `ImportExportTL_blender25x_v0.6.2.zip` file. Enable the add-on.
 
 Once both plug-ins are enabled, select "Save User Settings":
 
@@ -86,12 +78,11 @@ You can now close the `User Preferences` window.
 
 # Importing the mesh
 
-Select `File` -> `Import` -> `Torchlight OGRE (.mesh)`:
-
+Select `File` -> `Import` -> `Ogre3D (.mesh)`:
 
 ![8](/images/blender-edit-import1.png)
 
-Find & select the `.mesh` file. If you don't want it to delete the `.mesh.xml` file then select "Keep XML":
+Find & select the `.mesh` file.
 
 ![9](/images/blender-edit-import2.png)
 
@@ -105,7 +96,7 @@ Press the `Z` key twice to get out of that shading mode. You should now see this
 
 <div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
     <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />The importer will automatically separate the meshes if the `.mesh.xml` contains multiple groups. The object names match the material name. If there's many objects with the same name, you should be safe to join them:
+    <div style="margin-left:40px"><strong>Notice</strong><br />The importer will automatically separate meshes if the `.mesh.xml` contains multiple materials. The object names match the material name. If there's many objects with the same material name, you should be safe to join them by pressing `CTRL+J`:
 <br>
 <a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
 </div>
@@ -117,7 +108,7 @@ It should look similar to this now:
 
 # Fixing object shading
 
-You'll probably notice that your mesh is very blocky/has lots of shading errors. To fix this:
+You'll probably notice that your mesh is very blocky and/or has lots of shading errors. To fix this:
 
 On the left menu (Press `T` if it's not already open) select `Smooth`. You need to be in Object Mode (`TAB` key) for this to appear:
 
@@ -131,13 +122,15 @@ Select `Remove Doubles` from the `T` menu:
 
 ![15](/images/blender-edit-removingdoubles.png)
 
-Now head over to the tool menu on the right and find the blue tool icon -> `Add Modifier` -> `Edge Split`:
+Now head over to the tool menu on the right and find the blue wrench icon -> `Add Modifier` -> `Edge Split`:
 
 ![16](/images/blender-edit-edgesplit1.png)
 
 The `Edge Split` Modifier should now be selected. The default `Split Angle` (30) should be fine in most cases. **Do not apply the modifier. The exporter will do this for you.**
 
 ![17](/images/blender-edit-edgesplit2.png)
+
+**Note: For some models just applying edge split won't be enough, further work may be required (such as marking faces sharp).**
 
 # Applying the texture
 
@@ -174,21 +167,29 @@ It should now look similar to this:
 
 # Editing the mesh
 
-You're now ready to start editing the mesh. For this tutorial, I removed the stacks from the bed:
+You're now ready to start editing the mesh. For this tutorial, I removed the exhaust stacks from the bed:
 
 ![25](/images/blender-edit-editedmesh.png)
 
-# Setting the object name and material
+# Setting the object name
 
-Go to the right tool menu and select the triangle icon -> Change the name. This will be the name of your object when you export it:
+Go to the right tool menu and select the triangle icon, then change the name in the box. This will be the name of your object when you export it:
 
 ![26](/images/blender-edit-naming-mesh.png)
 
-Now select the circle icon next to the triangle icon -> `New`:
+In this example, I'll name it `BoxDodgeCummins-NoStacks`.
+
+# Adding a material
+
+Now select the circle icon next to the triangle icon and click `New`:
 
 ![27](/images/blender-edit-mat1.png)
 
-To find your material name, either look at the object name or open the `.mesh.xml` file in a text editor and search "material":
+In most cases your material name is the one shown in the object tree:
+
+![27.1](/images/blender-edit-mat1.2.png)
+
+You can also open the `.mesh.xml` file in a text editor and search "material":
 
 ![28](/images/blender-edit-finding-mat.png)
 
@@ -196,7 +197,7 @@ To find your material name, either look at the object name or open the `.mesh.xm
 
 # Exporting
 
-Before we export, if you moved the object while editing it you will need to apply `Scale/Rotation/Location` by pressing `CTRL+A` otherwise it will be placed wrong in-game:
+Before we export, if you moved the object while editing it you will need to apply `Location/Rotation/Scale` by pressing `CTRL+A` otherwise it will be placed incorrectly in-game:
 
 ![30](/images/blender-edit-ctrla.png)
 
@@ -208,43 +209,44 @@ Change your export settings to match the screenshot (all other settings can be l
 
 ![32](/images/blender-edit-export2.png)
 
-You should now have a new `.mesh.xml` file in your folder.
+You should now have a new `.mesh.xml` and `.mesh` file in your folder:
 
-And finally, just drag the `.mesh.xml` into OgreXMLConverter to get a `.mesh`:
+![32.1](/images/blender-edit-exported.png)
 
-![33](/images/blender-edit-converting-new-xml.png)
+The exporter will automatically convert the `.mesh.xml` to `.mesh` as long RoR is installed to the default location.
 
-If you want to "preview" your `.mesh` instead of going in-game, you can use [Ogre Meshy](https://sourceforge.net/projects/ogremeshy/) to view it:
+If you want to preview your exported model, you can use [Ogre Meshy](https://sourceforge.net/projects/ogremeshy/) to view it:
 (You can make a `.material` file if you want it to be textured in Ogre Meshy)
 
 ![35](/images/blender-edit-preview-ogremeshtool.png)
 
 # Testing in-game
 
-Now just edit the `.truck` file to match the name of your new mesh and drag the new mesh file back into the `.zip` and test in-game:
+Now just edit the vehicle's `.truck` file to match the name of your new mesh and drag the new mesh file back into the `.zip` and test in-game:
+
+```
+17,14,2, 0.73, 0.5, 0.07, 0, 0, 0, BoxDodgeCummins-NoStacks.mesh
+forset 7, 12, 40, 41, 44-66, 69-87, 111
+```
 
 ![35](/images/blender-edit-ingame.png)
 
 Congratulations!
 
-
 # Troubleshooting
 
-**Q:** My mesh is flipped in-game!
+### [Error 2] No such file or directory
 
-**A:** Change the "swap axis" option in the export settings.
+You forgot to convert the `.mesh` to `.mesh.xml`.
 
----------------------------------------
+### Mesh is flipped
 
-**Q:** My mesh is white in-game!
+Change the "swap axis" option in the export settings.
 
-**A:** You did not assign the correct material. Make sure it matches.
+### Mesh appears white/pink
 
----------------------------------------
+You did not assign the correct material. Make sure it matches.
 
-**Q:**: I get a plug-in install error/other Blender errors!
+### Other errors
 
-**A:**: First, just Google the issue. If you can't find a solution then you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/).
-
-
----------------------------------------
+First, just Google the issue. If you can't find a solution then you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/).
