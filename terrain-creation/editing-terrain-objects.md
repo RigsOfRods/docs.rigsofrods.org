@@ -94,11 +94,6 @@ Use the keys listed above to move/rotate. You may have to switch the rotation ax
 
 Once you have your object(s) placed where you want it press `CTRL+Y` again to exit the editor:
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>IMPORTANT NOTE:</strong><br />In 0.4.8RC4, to save your changes you must enter the editor again by pressing CTRL+Y after exiting. This has been fixed in the development builds.</div>
-</div>
-
 ![6](/images/adding-terrain-object6.png)
 
 ![7](/images/adding-terrain-object7.png)
