@@ -115,7 +115,6 @@ Note: You can load a savegame from the main menu.
     <tr><td>Steer Left                               </td><td>LEFT     </td></tr>
     <tr><td>Steer Right                              </td><td>RIGHT    </td></tr>
     <tr><td>Accelerate/Brake                         </td><td>UP / DOWN</td></tr>
-    <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET / LBRACKET</td></tr>
 </table>
 
 ### Shifting
@@ -154,6 +153,7 @@ Note: You can load a savegame from the main menu.
     <tr><td>Toggle beacons    </td><td>M     </td></tr>
     <tr><td>Rescue truck      </td><td>R     </td></tr>
     <tr><td>Particle cannon   </td><td>G     </td></tr>
+    <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET [ / LBRACKET ] </td></tr>
 </table>
 
 ### Commands
