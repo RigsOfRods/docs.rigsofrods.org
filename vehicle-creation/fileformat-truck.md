@@ -2823,42 +2823,35 @@ Note: It's important to keep an eye on the number of vertices of your meshes. No
 
 ## Submesh
 
-Defines the most visible part of the truck: the body. It will dress the chassis with solid triangles. You must define each body panel (a continuous almost-flat section) in a different submesh section, in order to have sharp body angles, and to simplify texturing.
+Defines the collision surface of the truck; see required subsection `cab` and option `c`
 
-Most modern flexbodied trucks do not need a submesh section for visual purposes. However, the section is still required for collision to work.
+It may also generate textured mesh to visualize the truck; see optional subsection `texcoords`
 
-A submesh has two subsections: the texcoords, that places nodes of the submesh on the texture image (coordinates between `0.0` and `1.0`) , and then the cab subsection, that draws the triangles, with triplets of node numbers.
+### (sub-section) cab
+
+Specifies a series of triangles. Order of nodes defines orientation - the side with counterclockwise winding will be 'front' (or 'positive'), the other 'rear' (or 'negative'). If `texcoords` are used, only the 'front' side will be visible, the 'rear' side will be see-through (or black if you use `backmesh`).
+
+-   **node\_1**: <span style="color:#BD0058">Node number</span>; First point of collision triangle.
+-   **node\_2**: <span style="color:#BD0058">Node number</span>; Second point of collision triangle.
+-   **node\_2**: <span style="color:#BD0058">Node number</span>; Third point of collision triangle.
+-   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
+    -   `n`: Placeholder. Does nothing.
+    -   `c`: This triangle will be a contact triangle that can contact with contacters nodes. Deprecated aliases: `p`, `u`.
+    -   `b`: This triangle will be part of a buoyant hull. Deprecated aliases: `D`, `F`, `S`.
+    -   `s`: This triangle will be part of a buoyant hull, mouse dragging will be disabled.
+    -   `r`: This triangle will be part of a buoyant hull, mouse dragging only.
 
 ### (sub-section) texcoords
+
+Specifies texture coordinates (also called 'UV coordinates') for `cab` triangles. Only triangles with all 3 texcoords are displayed. The texture is specified in `globals` section.
 
 -   **node**: <span style="color:#BD0058">Node number</span>; Node representing a vertex in the resulting geometry.
 -   **u**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The U texture coordinate: Position of this vertex on the X axis of the image.
 -   **v**: <span style="color:#BD0058">Real number 0.0 - 1.0</span>; The V texture coordinate: Position of this vertex on the Y axis of the image.
 
-### (sub-section) cab
-
--   **node\_1**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 1 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **node\_2**: <span style="color:#BD0058">Node number</span>; Node representing a vertex 2 in the resulting geometry. Must be present in the <span style="font-family: monospace; font-weight: bold;">texcoords</span> subsection.
--   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
-    -   `n`: Placeholder. Does nothing.
-    -   `c`: This triangle will be a contact triangle that can contact with contacters nodes.
-    -   `b`: This triangle will be part of a buoyant hull.
-    -   `s`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging will be disabled.
-    -   `r`: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> This triangle will be part of a buoyant hull, mouse dragging only.
-    -   `D`: (Combination of **b** and **c** flags) This triangle will be both a contact triangle AND a buoyant hull part.
-    -   `p`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes the force required to pierce through the submesh triangle ten times bigger.
-    -   `u`: <span style="background-color:#fb7">\[ Version 0.36a - 0.4.7.0 \]</span> Makes it impossible to pierce the submesh.
-    -   `F`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `p` but also a boat hull.
-    -   `S`: <span style="background-color:#fb7">\[ Version 0.36a+ \]</span> Same as `u` but also a boat hull.
-
-The order in which the three points forming the triangles is given is important, as its winding defines in which direction it will be visible. The winding must be counterclockwise to be visible.
-
-The easiest way to create a submesh is to use [Blender 2.49b](https://forum.rigsofrods.org/downloads.php?do=file&id=180).
-
 ### (sub-directive) backmesh
 
-No params. If added, the triangles' backsides will be black instead of see-through.
+No params. If added, the triangles' backsides (see `texcoords`) will be black instead of see-through.
 
 ```
 ;cabin top
@@ -2889,7 +2882,7 @@ cab
 backmesh
 ```
 
-When making an invisible collision submesh for a flexbody vehicle, the "texcoords" section is not needed and should not be used.
+Example of invisible collision submesh for a flexbody vehicle (`texcoords` section is not used):
 
 ```
 ;front bumper
