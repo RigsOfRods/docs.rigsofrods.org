@@ -13,264 +13,139 @@ categories: [gameplay]
 
 This tutorial will guide you through the process of setting up a Rigs of Rods multiplayer server.
 
-## Downloads
-
-Download a pre-built package that matches your RoR version and operating system from the links below:
-
-| Server version                 | Link                                                                                                        | Supported OS(s) | Included build options   |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------|-----------------|--------------------------|
-| 0.4.8.0-RC5 (RoRNet 2.41)    | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/)    | Windows & Linux           | Angelscript |
-| 0.4.7.0 (RoRNet 2.38)          | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-7-0.206/)         | Windows & Linux | Angelscript              |
-| 0.38.67-0.4.6RC3 (RoRNet 2.37) | [Download](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-38-67-0-4-6rc3.207/) | Windows & Linux | Angelscript              |
-
-**NOTE:** *Versions older than 0.4.8.0-RC5 (RoRNet 2.41) are unsupported.*
-
 # Windows
 
-## Setting up
+## Download
 
-After you've downloaded a pre-built package, extract it into a folder. 
+First, download `rorserver-rornet241-windows.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/).
 
-While in the folder, press `SHIFT + Right click -> Open command prompt window here`. 
-If you are running Windows 10, click `Open PowerShell window here`, then type `cmd` once the PowerShell window appears:
+Extract the zip into a new folder:
+![server-filelist-win](/images/server-filelist-win.png)
 
-![powershell](/images/powershell-win10.png)
+## server.cfg
 
-**Make sure you've forwarded the port you wish to use. There are many tutorials online on how to do this.**
+Browse to the `config` folder and open `server.cfg` with Notepad. 
 
-## Running the server using CLI arguments
+![server-config-notepad](/images/server-config-notepad.png)
 
-The easiest way to get a server running is by using the CLI arguments.
+This is the main configuration file for your server.
 
-List of arguments used by RoRNet 2.41/2.38:
+Each section contains a comment explaining what it does, pretty self-explanatory.
 
-| Argument        | Description                                                                          | Example                          |
-|-----------------|--------------------------------------------------------------------------------------|----------------------------------|
-| -name           | The server name. Use underscores instead of spaces.                                  | -name Private_Server             |
-| -config (-c)    | Path to a configuration file                                                         | -config /path/to/server.cfg      |
-| -terrain        | Map name (defaults to 'any')                                                         | -terrain a1da0UID-nhelens.terrn2 |
-| -inet           | Registers the server on the [server list](https://forum.rigsofrods.org/multiplayer/) | -inet                            |
-| -lan            | Will not register the server on the server list                                      | -lan                             |
-| -password       | Private server password                                                              | -password secret                 |
-| -ip             | Public IP address to register with                                                   | -ip 127.0.0.1                    |
-| -port           | Port to use (defaults to random 12000-12500)                                         | -port 12000                      |
-| -verbosity      | Sets displayed verbosity in foreground                                               | -verbosity 1                     |
-| -log-verbosity  | Sets verbosity of the log                                                            | -log-verbosity 1                 |
-| -log-file       | Sets the filename of the log                                                         | -log-file myserver.log           |
-| -script-file    | Server script to execute                                                             | -script-file scripts\Main.as     |
-| -use-webserver  | Enables the built-in webserver                                                       | -use-webserver                   |
-| -webserver-port | Sets the port for the webserver, default is game port + 100                          | -webserver-port 12100            |
-| -version        | Prints the server version number                                                     | -version                         |
-| -fg             | Starts the server in the foreground (background by default)                          | -fg                              |
-| -resource-dir   | Sets the path to the resource directory                                              | -resource-dir /path/to/resources |
-| -auth-file      | Sets the filename of the file that contains authorization info                       | -auth-file server.auth           |
-| -motd-file      | Sets the filename of the file that contains the message of the day                   | -motd-file server.motd           |
-| -rules-file     | Sets the filename of the file that contains rules for this server                    | -rules-file server.rules         |
-| -vehicle-limit  | Sets the maximum number of vehicles that a user is allowed to have                   | -vehicle-limit 6                 |
-| -owner          | Sets the owner of this server (for the !owner command)                               | -owner Name                      |
-| -website        | Sets the website of this server (for the !website command)                           | -website example.com             |
-| -irc            | Sets the IRC url for this server (for the !irc command)                              | -irc chat.freenode.net           |
-| -voip           | Sets the voip url for this server (for the !voip command)                            | -voip voice.teamspeak.com        |
-| -help           | Displays this list                                                                   | -help                            |
+For simplicity's sake, you only need to change the `name`, `terrain`, `port`, and `password` lines.
 
-The arguments in RoRNet 2.37 are slightly different:
+Save and close the file once you're done. 
 
-| Argument        | Description                                                                          | Example                          |
-|-----------------|--------------------------------------------------------------------------------------|----------------------------------|
-| -name           | The server name. Use underscores instead of spaces.                                  | -name Private_Server             |
-| -config (-c)    | Path to a configuration file                                                         | -config /path/to/server.cfg      |
-| -terrain        | Map name (defaults to 'any')                                                         | -terrain a1da0UID-nhelens.terrn2 |
-| -inet           | Not working on RoRNet 2.37. Use -lan instead. 										 | -inet                            |
-| -lan            | Will not register the server on the server list                                      | -lan                             |
-| -password       | Private server password                                                              | -password secret                 |
-| -ip             | Public IP address to register with                                                   | -ip 127.0.0.1                    |
-| -port           | Port to use (defaults to random 12000-12500)                                         | -port 12000                      |
-| -verbosity      | Sets displayed verbosity in foreground                                               | -verbosity 1                     |
-| -logverbosity   | Sets verbosity of the log                                                            | -logverbosity 1                  |
-| -logfilename    | Sets the filename of the log                                                         | -logfilename myserver.log        |
-| -script    	  | Server script to execute                                                             | -script scripts\Main.as          |
-| -webserver      | Enables the built-in webserver                                                       | -use-webserver                   |
-| -webserverport  | Sets the port for the webserver, default is game port + 100                          | -webserver-port 12100            |
-| -version        | Prints the server version number                                                     | -version                         |
-| -fg             | Starts the server in the foreground (background by default)                          | -fg                              |
-| -resdir   	  | Sets the path to the resource directory                                              | -resdir /path/to/resources 		|
-| -authfile       | Sets the filename of the file that contains authorization info                       | -authfile server.auth            |
-| -motdfile       | Sets the filename of the file that contains the message of the day                   | -motdfile server.motd            |
-| -rulesfile      | Sets the filename of the file that contains rules for this server                    | -rulesfile server.rules          |
-| -vehiclelimit   | Sets the maximum number of vehicles that a user is allowed to have                   | -vehiclelimit 6                  |
-| -owner          | Sets the owner of this server (for the !owner command)                               | -owner Name                      |
-| -website        | Sets the website of this server (for the !website command)                           | -website example.com             |
-| -irc            | Sets the IRC url for this server (for the !irc command)                              | -irc chat.freenode.net           |
-| -voip           | Sets the voip url for this server (for the !voip command)                            | -voip voice.teamspeak.com        |
-| -help           | Displays this list                                                                   | -help                            |
+## server.motd 
 
-Here are a few examples:
+This file sets your server's Message of the Day (MOTD), shown on server join:
 
-A basic password-protected server:
+![server-motd](/images/server-motd.png)
 
-`rorserver.exe -name Private_Server -port 12000 -password secret`
+Fill it out with whatever you'd like. 
 
-Public server with the terrain set to North St. Helens and a client limit of 4:
+## server.rules
 
-`rorserver.exe -name Public_Server -port 12000 -terrain a1da0UID-nhelens.terrn2 -max-clients 4`
+This file contains the rules for your server, shown by typing `!rules`.
 
-**Note**: If you're running a RoRNet 2.37 server, you must set the `-lan` argument otherwise the server will crash!
+Just as before, fill it out with rules you want players to follow. 
 
-If the server launched successfully, it should be now displayed on the server list (if allowed) and your log should look similar to this:
+## server.auth 
 
-![rorserver-launch](/images/rorserver-launch.png)
+This file configures who is staff on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
 
-## Running the server using a config file
+## Running
 
-If you plan on running a server for extended periods of time, it is recoomended that you set up a config file.
+Once you're finished configuring your server, double-click `StartServer.bat` to launch the server:
 
-First rename the included files: (example: `tutorial-`):
+![server-win-start](/images/server-win-start.png)
 
-![f2](/images/server-config-2.png)
+If successful, your server should now be running and registered on the server list!
 
-Open each file in a text editor and fill it out with your server's info.
-
-To set up the `.auth` file, see the [UserAuth setup](#userauth-setup) section.
-
-Once you're done, use this command to start the server:
-
-`rorserver.exe -c tutorial-config.cfg`
-
-Your server should now be running and (if allowed) registered on the server list!
-
-To stop the server, press `CTRL+C`.
+Please see the [troubleshooting](#troubleshooting) section if you receive an error.
 
 # Linux
 
-## Setting up
+## Download
 
-I will assume that you are running the server on a VPS and that you have `nano` installed.
+I will assume you're running the server on a VPS with SSH/FTP access and have `unzip`/`nano` installed.
 
-First download the correct package and upload it to your server.
+First, download `rorserver-rornet241-linux.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/).
 
-Then extract the zip file (Name will be different depending on which package you downloaded)
+Upload the file to your VPS using an FTP client such as WinSCP or FileZilla.
 
-`unzip rorserver-rornet241-linux.zip -d rorserver-241`
+Now SSH into your VPS and change to the directory where you uploaded the zip file. 
 
-Change to the extracted directory:
+Extract the zip with the following command:
 
-`cd rorserver-241`
+`unzip rorserver-rornet241-linux.zip -d rorserver`
 
-Copy `libmysocketw.so` to the `/lib` directory (requires superuser access):
+The server files should now be located in the `rorserver` folder:
 
-`sudo cp libmysocketw.so /lib`
+![server-filelist-linux](/images/server-filelist-linux.png)
 
-## Running the server using CLI arguments
+## server.cfg
 
-The easiest way to get a server running is by using the CLI arguments.
+In SSH, Change to the `config` directory and type `nano server.cfg`.
 
-For a list of available arguments, see the above tables.
+![server-config-nano](/images/server-config-nano.png)
 
-Here are a few examples:
+This is the main configuration file for your server.
 
-A basic password-protected server:
+Each section contains a comment explaining what it does, pretty self-explanatory.
 
-`./rorserver -name Private_Server -port 12000 -password secret`
+For simplicity's sake, you only need to change the `name`, `terrain`, `port`, and `password` lines.
 
-Public server with the terrain set to North St. Helens and a client limit of 4:
+Once you're done, press `CTRL+O` to save the file and `CTRL+X` to exit.
 
-`./rorserver -name Public_Server -port 12000 -terrain a1da0UID-nhelens.terrn2 -max-clients 4`
+## server.motd 
 
-If you get permission denied:
+This file sets your server's Message of the Day (MOTD), shown on server join:
 
-`sudo chmod +x rorserver`
+![server-motd](/images/server-motd.png)
 
-To run the server in the foreground, set the `-fg` argument.
+Fill it out with whatever you'd like. 
 
-**Note**: If you're running a RoRNet 2.37 server, you must set the `-lan` argument otherwise the server will crash!
+## server.rules
 
-If the server launched successfully, it should be now displayed on the server list (if allowed) and your log should look similar to this:
+This file contains the rules for your server, shown by typing `!rules`.
 
-![rorserver-launch](/images/rorserver-launch-linux.png)
+Just as before, fill it out with rules you want players to follow. 
 
-## Running the server using a config file
+## server.auth 
 
-If you plan on running a server for extended periods of time, it is recoomended that you set up a config file.
+This file configures who is staff on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
 
-First rename the included files: (example: `tutorial-`):
-```
-mv example-auth.auth tutorial-auth.auth
-mv example-motd.motd tutorial-motd.motd
-mv example-config.cfg tutorial-config.cfg
-mv example-rules.rules tutorial-rules.rules
-```
+## Running
 
-Edit the files using `nano`:
+Once you're finished configuring your server, change back to the `rorserver` directory and run the following:
 
 ```
-nano tutorial-motd.motd
-nano tutorial-config.cfg
-nano tutorial-rules.rules
+chmod +x rorserver
+sh StartServer.sh
 ```
 
-Use the arrow keys to navigate. After you fill out the file(s), press `CTRL+O` to write the changes and `CTRL+X` to exit.
+`chmod +x rorserver` only needs to be run once to set permissions.
 
-To set up the `.auth` file, see the [UserAuth setup](#userauth-setup) section.
+![server-linux-start](/images/server-linux-start.png)
 
-Once you're done, use this command to start the server:
+If successful, your server should now be running and registered on the server list!
 
-`./rorserver -c tutorial-config.cfg`
-
-Your server should now be running and (if allowed) registered on the server list!
-
-To stop the server, press `CTRL+C` or kill the server if launched in the background:
-
-`sudo kill pid`
+Please see the [troubleshooting](#troubleshooting) section if you receive an error.
 
 # UserAuth setup
 
-This section will teach you how to set up the `.auth` file. This is used to define who is staff on your server.
+This section will teach you how to set up the `server.auth` file. This is used to define who is staff on your server.
 
 Shut down your server before following these steps.
 
-## Setting your user token
+## User token
 
-First, you need to set a user token in your game's settings. To do this, open RoR and click `Multiplayer` -> `Settings`:
+First, you need to set a user token in your game's settings. To do this, please follow [this tutorial](https://forum.rigsofrods.org/account/user-token).
 
-![mp-settings](/images/mp-settings-window.png)
+## server.auth
 
-Click on the `User token` textbox and set your token. It's kind of like a password, so make it unique. 
-
-Press Enter to submit your changes, then restart the game and go back to that menu to confirm it saved.
-
-## Setting file location
-
-Next, you need to specify where your authorization file is either by using a config file or CLI arguments. Follow the appropriate steps below depending on what you're using.
-
-### CLI arguments
-
-If you're starting your server using CLI arguments, just add `-auth-file tutorial-auth.auth` to your command, for example:
-
-`rorserver.exe -name Private_Server -port 12000 -password secret -auth-file tutorial-auth.auth`
-
-Replace `tutorial-auth.auth` with the name of your file.
-
-### Config file
-
-If you're using a config file, open it and you should find this line:
-
-```
-## The location of the authorizations file
-## syntax: authfile = <path-to-file>
-authfile = /etc/rorserver/simple.auth
-```
-
-If the line is commented out, remove the `#` before `authfile`.
-
-Since you have the auth file in the same folder as the server executable, just set the path to your file's name, for example: 
-
-`authfile = tutorial-auth.auth`
-
-Replace `tutorial-auth.auth` with the name of your file. Save and close the file once you're finished.
-
-## Editing the file
-
-And finally, Open your `.auth` file in a text editor. The contents should look like this:
+Open the `server.auth` file in a text editor. The contents should look like this:
 
 ```
 ; This files defines who is an admin, moderator etc on your server
@@ -293,16 +168,16 @@ And finally, Open your `.auth` file in a text editor. The contents should look l
 ; note: Empty lines and lines starting with a ";" will be ignored.
 
 ; EXAMPLE ADMIN (replace these with your username and encoded token)
-1 9b3c463506f128319a0f16ef08d39d876ca25c68 admin_user
+;1 9b3c463506f128319a0f16ef08d39d876ca25c68 admin_user
 ```
 
-Now join your server and check your server's log. You should see a line similar to this:
+Start your server, join it and open the log file located at `config/server.log`. You should see a line similar to this:
 
 `INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
 
 `0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9` is the hashed token for the user, which is what you will set in your auth file. 
 
-If you want the user to be a admin, set the number in the `.auth` file to `1`, or `4` if you want the user to be a moderator.
+If you want the user to be a admin, set the number to `1`, or `4` if you want the user to be a moderator.
 
 ```
 ;example admin
@@ -311,7 +186,9 @@ If you want the user to be a admin, set the number in the `.auth` file to `1`, o
 4 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
 ```
 
-Save the file and start your server. If the server read the auth file correctly, it should log this:
+Make sure to remove the comment (`;`) before the line. 
+
+Save the file and restart your server. If the server read the auth file correctly, it should log this:
 
 `INFO| found X auth overrides in the authorizations file!`
 
@@ -324,7 +201,7 @@ Admin/moderator commands:
 ```
 !list - Lists all users on a server with their UID
 
-!kick/!ban - Kicks or bans a user. Note that server bans will be removed when the server restarts.
+!kick/!ban - Kicks or bans a user. Note that server bans are currently removed when the server restarts.
 
 Usage: !kick UID reason or !ban UID reason
 
@@ -366,9 +243,9 @@ If you didn't setup an authorization file, you can safely ignore this error mess
 
 `Network fatal error: server uses a different protocol version`
 
-You need to download the correct game version to match your server version. 0.4.8RC4 supports RoRNet 2.41, the latest server protocol.
+You need to download the correct game version to match your server version. 0.4.8 RC5 supports RoRNet 2.41, the latest server protocol.
 
 The latest version may be downloaded from the [homepage](https://www.rigsofrods.org/).
 
-If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/game-support.8/).
+If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/webservices-support.9/)
 
