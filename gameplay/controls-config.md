@@ -206,16 +206,17 @@ Note: You can load a savegame from the main menu.
     <tr><td>Reverse      </td><td>R                 </td></tr>
     <tr><td>Less flaps   </td><td>1                 </td></tr>
     <tr><td>More flaps   </td><td>2                 </td></tr>
-    <tr><td>Less airbrakes*</td><td>3               </td></tr>
-    <tr><td>More airbrakes*</td><td>4               </td></tr>
+    <tr><td>Less airbrakes</td><td>3               </td></tr>
+    <tr><td>More airbrakes</td><td>4               </td></tr>
     <tr><td>Throttle down</td><td>PAGE-DOWN         </td></tr>
     <tr><td>Throttle up  </td><td>PAGE-UP           </td></tr>
     <tr><td>Start engines</td><td>CLICK BUTTONS "ON"</td></tr>
+    <tr><td>Start all engines</td><td>CTRL+HOME</td></tr>
+    <tr><td>Full throttle</td><td>CTRL+PAGEUP</td></tr>
+    <tr><td>No throttle</td><td>CTRL+PAGEDOWN</td></tr>
 </table>
 
-`*` Depending on the plane setup
-
-It is recommended to use: `CTRL+Home` to start all engine of a plane and `CTRL+PAGE-UP` to full throttle all engines
+It is recommended to use: `CTRL+Home` to start all engines of a plane and `CTRL+PAGE-UP` to full throttle all engines
 because some planes could have more than 4 engines and you couldn't control them with your mouse.
 
 ### Boats
