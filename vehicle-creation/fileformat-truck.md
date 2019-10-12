@@ -1894,7 +1894,8 @@ Parameters:
 -   **Max. length**: <span style="color:#BD0058">Real number</span>; The greatest length possible (proportional to original length; `1.0` means no extension; recommended you keep it as `1.0`).
 -   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = `n`</span>
     -   `n`: Visible (default)
-    -   `i`: Invisible.
+    -   `i`: Invisible
+    -	`s`: <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Prevents self locking.
 -   **Max. stress** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 12000</span>; The force (in Newtons) when the ties stop to shorten.
 -   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = `none`</span>
 
