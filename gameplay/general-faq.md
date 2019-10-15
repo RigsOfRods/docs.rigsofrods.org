@@ -77,6 +77,7 @@ When the site asks what version to download, just install both.
 
 
 ### Cannot open Xbox 360 input map 
+### Failed to generate list of installed content
 
 When you launch RoR, you may receive this error: 
 
