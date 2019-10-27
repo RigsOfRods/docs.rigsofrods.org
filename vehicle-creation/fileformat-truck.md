@@ -2107,13 +2107,13 @@ transfercase
 ```
 wheeldetachers
 ;wheel_id, detacher_group
-1, 1
-2, 2
+0, 1
+1, 2
 ```
 
 Parameters:
 
--   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at `1`.
+-   **wheel_id**: <span style="color:#BD0058">Real number</span>; The wheel number, with the first defined wheel starting at `0`.
 -   **detacher_group**: <span style="color:#BD0058">Real number</span>; The d`etacher_group` number. 
 
 Example usage:
@@ -2144,8 +2144,8 @@ meshwheels
 
 wheeldetachers
 ;wheel_id, detacher_group
-1, 1
-2, 2
+0, 1
+1, 2
 ```
 
 ## Collisionboxes
