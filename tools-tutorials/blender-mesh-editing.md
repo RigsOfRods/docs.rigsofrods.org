@@ -78,7 +78,7 @@ You can now close the `User Preferences` window.
 
 # Importing the mesh
 
-Select `File` -> `Import` -> `Ogre3D (.mesh)`:
+Select `File` -> `Import` -> `Ogre3D (.mesh.xml)`:
 
 ![8](/images/blender-edit-import1.png)
 
@@ -201,7 +201,7 @@ Before we export, if you moved the object while editing it you will need to appl
 
 ![30](/images/blender-edit-ctrla.png)
 
-Select your mesh then click `File` -> `Export` -> `Ogre3D (.scene and .mesh)`:
+Select your mesh then click `File` -> `Export` -> `Ogre3D (.scene and .mesh.xml)`:
 
 ![31](/images/blender-edit-export1.png)
 
