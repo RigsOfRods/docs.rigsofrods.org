@@ -14,7 +14,7 @@ Rigs of Rods is a soft-body physics simulator aiming to be as realistic as possi
 
 | Logotype reversed to White | The Symbol with Background | The Symbol with Typeface below |
 |-------|--------|---------|
-| ![4](/images/branding/RoR_Logo_Text_Dark.png)  [.svg](/images/branding/RoR_Logo_Text_Dark.svg) *or* [.png](/images/branding/RoR_Logo_Text_Dark.png) | ![5](/images/branding/RoR_Logo_discord_icon.png) <br/> [.svg](/images/branding/RoR_Logo_discord_icon.svg) *or* [.png](/images/branding/RoR_Logo_discord_icon.png) | ![6](/images/branding/RoR_Logo_github.png) <br/> [.svg](/images/branding/RoR_Logo_github.svg) *or* [.png](/images/branding/RoR_Logo_github.png) |
+| ![4](/images/branding/RoR_Logo_Text_Dark.png) | ![5](/images/branding/RoR_Logo_discord_icon.png) | ![6](/images/branding/RoR_Logo_github.png)|
 
 | The Symbol Alternate |
 |-------|
