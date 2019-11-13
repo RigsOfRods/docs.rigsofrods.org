@@ -26,11 +26,17 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 # Required software
 
 - Rigs of Rods installed to the default location (`C:\Program Files\Rigs of Rods`)
-- [Blender](https://www.blender.org/download/) (2.79b)
-- [OGRE Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip)
+- [Blender](https://www.blender.org/download/previous-versions/) (2.79b)
+- [Ogre Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
 - A brain, some basic computer knowledge, and some patience
+
+# Blender version warning 
+
+The latest version of Blender (2.80) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/).
+
+If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
 
 # Getting started
 
@@ -54,7 +60,7 @@ We're ready to launch Blender now.
 
 # Installing Blender plug-ins
 
-First, download the [OGRE Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip) and place it into any folder. **Do not extract.**
+First, download the [Ogre Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip) and place it into any folder. **Do not extract.**
 
 Now open Blender. Click `File` -> `User Preferences`:
 
