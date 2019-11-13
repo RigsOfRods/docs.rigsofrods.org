@@ -12,25 +12,34 @@ categories: [gameplay]
 Welcome to the General FAQ! Here you'll find answers to common questions and errors.
 It is organized into sections to make finding answers easier.
 
-# Downloading Rigs of Rods
+# Supported operating systems 
  
-### Latest version
+Rigs of Rods supports Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
+
+Windows XP & Vista are no longer supported as of 0.4.8 RC5. 
+
+ChromeOS (Chromebooks), MacOS, and mobile platforms (Android/iOS) are not supported and most likely never will be.
+
+# Downloading Rigs of Rods
+
+### Windows
 
 You can find the latest version on the [home page](https://www.rigsofrods.org/). If you need help, check out the [Beginner's Guide](/gameplay/beginners-guide/).
 
-### Old versions 
+### Linux
 
-You can find old RoR versions on [SourceForge](https://sourceforge.net/projects/rigsofrods/files/rigsofrods/). These versions are entirely unsupported!
+Linux users can download the latest version from [Itch.io](https://rigs-of-rods.itch.io/rigs-of-rods).
 
-### Linux/MacOS
-
-For Linux, You can download the latest version from [Itch.io](https://rigs-of-rods.itch.io/rigs-of-rods).
-
-Due to the lack of MacOS developers, RoR does not currently support MacOS. The only way is to run the Windows version using [Wine](https://www.winehq.org/).
+It is recommended to install using the [Itch desktop app](https://itch.io/app).
 
 ### Development builds 
 
 If you want to try the latest changes to RoR, you can download a [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-0-4-8-for-windows-and-linux.696/).
+
+
+### Old versions 
+
+You can find old RoR versions on [SourceForge](https://sourceforge.net/projects/rigsofrods/files/rigsofrods/). These versions are entirely unsupported!
 
 # Mods
 
@@ -79,11 +88,13 @@ When the site asks what version to download, just install both.
 ### Cannot open Xbox 360 input map 
 ### Failed to generate list of installed content
 
-When you launch RoR, you may receive this error: 
+When you launch RoR, you may receive the following errors:
 
 ![error](/images/error-special-chars.png)
 
-This is caused by having special characters in your Windows username (e.g. `Miké`). 
+![error2](/images/error-generatecontent.png)
+
+This is caused by having special characters in your Windows username (e.g. `Usér`).  
 
 Current workaround:
 
@@ -104,8 +115,3 @@ You can report bugs and other issues on RoR's [GitHub repo issue tracker.](https
 Make sure your issue hasn't already been reported.
 
 **The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8.0-RC5, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 
-
-### Windows XP support
-
-The latest RoR version does not support any Windows version older than Vista.
-
