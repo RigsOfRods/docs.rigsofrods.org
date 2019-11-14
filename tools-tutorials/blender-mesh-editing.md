@@ -72,11 +72,11 @@ Click `Add-ons` -> `Install from File`:
 
 Select the `OGRE_ImportExport_RoR.zip` file you downloaded earlier.
 
-Type "rigs" into the search bar and both add-ons should appear:
+Type `rigs` into the search bar and both add-ons should appear:
 
 ![6](/images/blender-edit-userprefs3.png)
 
-Once both plug-ins are enabled, select "Save User Settings":
+Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`:
 
 ![7](/images/blender-edit-userprefs4.png)
 
