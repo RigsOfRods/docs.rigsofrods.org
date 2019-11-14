@@ -21,12 +21,102 @@ To help you get started with creating a new node/beam, you can download this tru
 
 [Blank Truck File](https://forum.rigsofrods.org/threads/blank-truck-file.8/)
 
+# Blender
+
+As of November 2018, Blender supports creating/editing Node/Beam structures with a plugin created by Ulteq.
+
+![blender](/images/blender-nb.png)
+
+Features:
+- Full vertex group support
+- Automatic column alignment
+- Sophisticated vertex position rounding
+- Full preservation of the original truck file
+- Automatic beam sorting based on the vertex groups
+- All node, beam and cab options are preserved during import / export
+- All `set_node_defaults`, `set_beam_defaults` and `set_beam_defaults_scale` entries are preserved
+
+## Version warning 
+
+The latest version of Blender (2.80) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/).
+
+If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
+
+## Installation 
+
+First, download the plugins from the [Repository](https://forum.rigsofrods.org/resources/blender-n-b-import-export-plugin.25/). **Do not extract.**
+
+In Blender, go to `File` -> `User Preferences`:
+
+![bnb1](/images/blender-edit-userprefs1.png)
+
+Click `Add-ons` -> `Install from File`:
+
+![bnb2](/images/blender-edit-userprefs2.png)
+
+Select the `blender_plugins.zip` file you downloaded earlier. 
+
+Type "RoR" into the search bar and both add-ons should appear:
+
+![bnb3](/images/blender-nb-addoninstall.png)
+
+Once both plug-ins are enabled, by clicking the checkbox, select `Save User Settings`. 
+
+You can now close the `User Preferences` window, the plugins are now ready to use. 
+
+## Node visualization
+
+By default, the plugin will enable Blender's debug mode which provides node ID visualization, however they are usually difficult to read. 
+
+To fix this, download [this plugin by GitHub user zeffii](https://gist.github.com/zeffii/9451340) ([mirror](/download/view3d_idx_view.py)) 
+
+Install it following the above instructions:
+
+![bnb4](/images/blender-nb-nodev-install.png)
+
+To enable it, go to the top right and find the little plus icon, or press `N` to open it:
+
+![bnb4](/images/blender-edit-applyingtexture5.png)
+
+While in edit mode, open the `Mesh Display` menu and select `Visualize indices`:
+
+![bnb5](/images/blender-nb-nodev.png)
+
+You should now have readable node IDs. 
+
+## Notes 
+
+- You can use [vertex groups](https://easyblend.org/html/modeling/meshes/vertex_groups/vertex_groups.html) to organize your structure. In the `.truck` file, a "vertex group" starts with `;grp:`.
+- Due to how the plugin reads/writes the `.truck` file, it is recommended to remove and reimport your N/B if you want to make changes in Blender, otherwise changes you've made after exporting will be reverted.
+ 
+
+# TruckViewer
+
+A Java program made by Gouranga designed for viewing a node/beam structure.
+
+![truckviewer](/images/truckviewer.png)
+
+Pros:
+- Auto-reloading of the file
+- Supports nodes2
+- 4 independent views, each can be either be rotated in 3d or snapped to the front/sides/back.
+
+Cons:
+- Only displays pure nodes and beams.
+- Cannot edit the n/b structure, it is designed only for viewing it.
+
+## Download 
+
+[Download here](https://forum.rigsofrods.org/resources/truckviewer.19/)
+
 # Editorizer
+
+**NOTICE: This program is very old and thus shouldn't be used. It is recommended to create N/Bs using [Blender](#blender) instead.**
 
 ![Editorizer](/images/editorizer.png)
 
 
-Arguably the most popular editor, the Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
+The Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
 
 It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. A  _.truck_ file with the basic structure has been included to get you started.
 
@@ -137,45 +227,3 @@ To scale your vehicle if you find it a little bit too big, just go to the Visibl
 ## Tools to avoid
 
 In the _Visible Nodes_ tab at the top, I would advise to not use the _Interconnect_ or _Variable Interconnect_ options with any vehicle as it can mess up the structure and other things. Basically these options will join every node to every other node in the object... 
-
-# Blender 2.49b
-
-Sometimes used in combination with the Editorizer, this very old version of Blender includes plugins for importing/exporting truck files.
-
-![blender249b](/images/blender_249b.png)
-
-Pros:
-- Easily create/edit nodes and beams 
-- Create and UV map submesh 
-- Can import a 3d model to help you shape your node/beam.
-
-Cons:
-- Only displays nodes/beams/shocks. 
-- As it is an old version, the UI and controls are vastly different from the latest Blender version. It is possible to build the node/beam in the latest Blender, then open it in 2.49b to export to a `.truck` file.
-- Beams that are connected to non-existant nodes (e.g. beams attached to wheel nodes) will have to be commented out as Blender will fail to import the file.
-
-It is recommended to export to a copy of the truck file made for editing, then copy the changes over to your main truck file.
-
-## Download
-
-[Download here](http://www.austingratzer.com/rigs/downloads.php?do=file&id=180) (Windows only)
-
-# TruckViewer
-
-A Java program made by Gouranga designed for viewing a node/beam structure.
-
-![truckviewer](/images/truckviewer.png)
-
-Pros:
-- Auto-reloading of the file
-- Supports nodes2
-- 4 independent views, each can be either be rotated in 3d or snapped to the front/sides/back.
-
-Cons:
-- Only displays pure nodes and beams.
-- Cannot edit the n/b structure, it is designed only for viewing it.
-
-## Download 
-
-[Download here](https://forum.rigsofrods.org/resources/truckviewer.19/)
-
