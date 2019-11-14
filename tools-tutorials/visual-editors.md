@@ -60,7 +60,7 @@ Type "RoR" into the search bar and both add-ons should appear:
 
 ![bnb3](/images/blender-nb-addoninstall.png)
 
-Once both plug-ins are enabled, by clicking the checkbox, select `Save User Settings`. 
+Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`. 
 
 You can now close the `User Preferences` window, the plugins are now ready to use. 
 
