@@ -69,8 +69,7 @@ AmbientColor = 0.93, 0.86, 0.76
 #The position RoRBot spawns at when the terrain is loaded.
 #The numbers do not have to be seperated by commas.
 StartPosition = 1364.25 121.028  1272.22
-#Where the map will be located in the terrain selector menu. Best to leave it as the default. More about ID's here:
-#https://archives.rigsofrods.org/wiki/index.php/Truck_Categories
+#Where the map will be located in the terrain selector menu. Best to leave it as the default.
 CategoryID = 129
 #Version of the terrain.
 Version = 1
