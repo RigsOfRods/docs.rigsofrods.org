@@ -366,7 +366,32 @@ Easy as that. There is a rule when it comes to making custom flashes:
 
 When `Flash1` is on, `Flash2` is off. When `Flash1` is off, `Flash2` is on. 
 
-You can make a traffic advisor using this rule, or strobes, or anything you like. 
+You can also use more than 2 images in the material. For example:
+
+```
+material tracks/Strobe
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+ 			scene_blend alpha_blend
+			alpha_rejection greater 2
+			depth_write off
+			//depth_check off
+
+			texture_unit
+			{
+				anim_texture Strobe1.png Strobe2.png Strobe3.png .5
+			}
+		}
+	}
+}
+```
+
+You can make a traffic advisor using these rules, or strobes, or anything you like. 
 
 Just refer to this tutorial and be creative.
 
