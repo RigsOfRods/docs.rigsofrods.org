@@ -32,10 +32,6 @@ So, for soft suspension you would want low spring and relatively low damp, and t
 
 Leaf spring suspension is a very simple (in real life; it is much harder to model in RoR) and efficient design found on almost all trucks using beam axles. The design consists of a spring and a shackle, the spring is a long metal arc that bend when a force is exerted on the spring. One end of the spring is securely mounted to the frame and the other to a shackle. The shackle allows for one end of the spring to move back and forth as the spring straightens out under force.
 
-A fully working concept vehicle is available in the repository.
-
-<div style="clear: both;"></div>
-
 # Dependent suspension
 
 The wheels of each axle are securely connected to each other using non independent suspension systems. The force from every bump that a wheel on one side goes over is transmitted into the other wheel too. These systems do not tend produce very good handling, and therefore are not often used on sports cars. Non independent suspension is much more commonly found on heavy duty vehicles, where the link between the wheels makes axles much stronger
@@ -52,10 +48,6 @@ The lateral location of a beam axle can be controlled in a number of ways; the e
 
 [Example truck](/download/suspension-demo-beam-axle.truck) using a beam axle on the rear, with simple truss for lateral location.
 
-<div markdown="1" style="float: left;">
-
-Simple beam Axle:
-
 -    Top image: Normal extension
 -    Middle image: Full compression
 -    Bottom image: Full extension.
@@ -63,15 +55,9 @@ Simple beam Axle:
 -    <span style="color:#866219">light brown: Frame and trailing arms.</span> 
 -    <span style="color:#19ac58"> Green: Simple truss for lateral location</span>
 
-</div>
-
-<div style="clear: both; margin-bottom: 10px;"></div>
-
 ## Watt's linkage
 
 ![wattslinkage](/images/softbody-suspension-watts-linkage.jpg)
-
-<div markdown="1" style="float: left;">
 
 [Example truck](/download/suspension-demo-watts-linkage.truck) using Watt's linkage method of laterial location.
 
@@ -81,21 +67,15 @@ Watt's Linkage:
 -    <span style="color:#866219">Light brown: Frame and trailing arms</span>.
 -    <span style="color:#aa19c4">Purple: Holder for Watt's Linkage</span> 
 -    <span style="color:#19ac58">Green: Watt's linkage (the 2d elements of it)</span>. 
--    Yellow: Trusses and A-arms to hold linkage in place
+-    <span style="color:#9e8f02">Yellow: Trusses and A-arms to hold linkage in place</span>
 -    <span style="color:#cc0000">Red: Connector for Watt's linkage and axle</span>
-
-</div>
-
-<div style="clear: both;"></div>
 
 ## Panhard rod
 
 
 ![panhardrod](/images/softbody-suspension-panhard-rod.jpg)
 
-<div markdown="1" style="float: left;">
-
-[Panhard rod method of lateral location](/download/suspension-demo-panhard-rod.truck)
+[Example panhard rod truck](/download/suspension-demo-panhard-rod.truck)
 
 Panhard rod: 
 
@@ -103,10 +83,6 @@ Panhard rod:
 -   <span style="color:#866219">Light brown: Frame and trailing arms</span>. 
 -   <span style="color:#19ac58">Green: Panhard rod</span>. 
 -   <span style="color:#aa19c4">Purple: Holder for Panhard rod</span>
-
-</div>
-
-<div style="clear: both; margin-bottom: 10px;"></div>
 
 ## De Dion tube
 
@@ -122,64 +98,38 @@ Due to their complexity, De Dion tubes are uncommon on modern vehicles.
 
 The wheels connected to the tube are kept parallel, regardless of body roll or suspension travel on either side... The tube's length can change.
 
-<div markdown="1" style="float: left;">
-
--   Top: Normal extension
--   Middle: Full compression
--   Bottom: Full extension
--   Blue: A-arms.
--   Green: De Deion Tube
-
-</div>
-
-<div style="clear: both; margin-bottom: 10px;"></div>
+-   Top image: Normal extension
+-   Middle image: Full compression
+-   Bottom image : Full extension
+-    <span style="color:#191985">Blue: A-arms.</span>
+-   <span style="color:#19ac58">Green: De Deion Tube</span>
 
 ## Walking beam
 
-
 ![walkingbeam1](/images/softbody-suspension-walking-beam.png)
-
-
-![walkingbeam2](/images/softbody-suspension-walking-beam-frame.png)
 
 Walking beam is a special form of suspension: It solidly links two axles together, meaning that all four wheels on those axles must move in unison. Indeed, the setup is know as walking beam due to the way that trucks are see to 'walk' over obstacles. This design allows the tires to conform to the landscape, evening out the pressure on each tire. 
 
 [An example truck](/download/suspension-demo-walking-beam.truck) using extremely simple walking beam suspension on the rear.
 
-<div markdown="1" style="float: left;">
-
 -   <span style="color:#191985">Blue: Axles.</span>
 -   <span style="color:#866219">Light brown: Frame and trailing arms</span>
 -   <span style="color:#19ac58">Green: simple truss for lateral location.</span>
--   Yellow: Frame for walking beam
+-   <span style="color:#9e8f02">Yellow: Frame for walking beam</span>
 
-On the right: The bogie that holds the truck's four back wheels together.
+![walkingbeam2](/images/softbody-suspension-walking-beam-frame.png)
 
-A fully working concept vehicle is also available in the repository.
-
-</div>
-
-<div style="clear: both;"></div>
-
+The bogie that holds the truck's four back wheels together.
 
 ![walkingbeam3](/images/softbody-suspension-walking-beam-ingame.jpg)
 
+A concept vehicle in game.
 
 ![walkingbeam4](/images/softbody-suspension-walking-beam-diagram.jpg)
 
-<div markdown="1" style="float: left;">
-
-Key:
-
--    Black beams are structural beam
--    Green beams are the suspension
--    Blue beams are shocks
-
-On the right: the concept vehicle in game.
-
-</div>
-
-<div style="clear: both;"></div>
+- Black: Structural beams
+- <span style="color:#19ac58">Green: The suspension</span>
+- <span style="color:#191985">Blue: Shocks</span>
 
 # Independent suspension
 
@@ -195,53 +145,36 @@ Because of its strange handling characteristics, swing axle suspension is uncomm
 
 [An example truck](/download/suspension-demo-swing-axle.truck) using swing axles on the rear. The axles on this truck are quite short, which encourages the inside wheel to tuck under when cornering.
 
-<div markdown="1" style="float: left;">
-
--   Top: Normal extension
--   Middle: Full compression
--   Bottom: Full extension
+-   Top image: Normal extension
+-   Middle image: Full compression
+-   Bottom image: Full extension
 -   <span style="color:#191985">Blue: Axles.</span>
--   <span style="color:#866219">light brown: trusses and A-arm for axles.</span>
-
-</div>
-
-<div style="clear: both; margin-bottom: 10px;"></div>
+-   <span style="color:#866219">Light brown: trusses and A-arm for axles.</span>
 
 ## Double wishbone
-
 
 ![doublewishbone](/images/softbody-suspension-double-wishbone.jpg)
 
 Double wishbone suspension is most common in racing cars and larger passenger cars. The wheels are kept perpendicular to the road through the use of two A-arms, one above the other. It is relatively easy to tune for handling.
 
-[An example truck](/download/suspension-demo-double-wishbone.truck) using double wishbone suspension on the rear]]. The front axles also carry double wishbone suspension and are used for steering. The front wheels have also been rotated to place them inside the wishbones, which makes them much stronger; any object they collide with exerts less leverage on them.
+[An example truck](/download/suspension-demo-double-wishbone.truck) using double wishbone suspension on the rear. The front axles also carry double wishbone suspension and are used for steering. The front wheels have also been rotated to place them inside the wishbones, which makes them much stronger; any object they collide with exerts less leverage on them.
 
-<div markdown="1" style="float: left;">
-
--   Top: Normal extension, 
--   Middle: Full compression, 
--   Bottom: Full extension
+-   Top image: Normal extension, 
+-   Middle image: Full compression, 
+-   Bottom image: Full extension
 -   <span style="color:#19ac58">Green: Upper wishbones</span>
 -   <span style="color:#191985">Blue: Lower wishbones</span>
 -   <span style="color:#866219">Light brown: Extra truss arms.<br>Hydros could go here when modelling steering axles</span>
 
-</div>
-
-<div style="clear: both; margin-bottom: 10px;"></div>
-
 ## McPherson strut
-
-![mcph](/images/softbody-suspension-mcpherson.jpg)
 
 By far and away the most common form of front suspension for passenger cars, the spring/shock assembly must not only provide suspension to the wheel, but hold it in place, keeping the wheel aligned to the shock at all times. This requires the use of some sort of straight line mechanism with the shock
 
-![mcphslidenodes](/images/softbody-suspension-mcpherson-slidenodes.jpg)
+### Example 1
 
-On the right: [An example truck using slidenodes](/download/suspension-demo-mcpherson-using-slidenodes.truck) to keep the beam count down. No beams in the suspension mechanism have been hidden, the shocks are hold in line with slidenodes.
+![mcph](/images/softbody-suspension-mcpherson.jpg)
 
-On the left: [An old-style example truck](/download/suspension-demo-mcpherson-without-slidenodes.truck) using McPherson strut suspension on the front. The straight line mechanism has been hidden on the right hand side to provide a better view of the overall setup.
-
-<div markdown="1" style="float: left;">
+[An old-style example truck](/download/suspension-demo-mcpherson-without-slidenodes.truck) using McPherson strut suspension on the front. The straight line mechanism has been hidden on the right hand side to provide a better view of the overall setup.
 
 -    Top: Normal extension
 -    Middle: Full compression
@@ -251,9 +184,26 @@ On the left: [An old-style example truck](/download/suspension-demo-mcpherson-wi
 -    <span style="color:#19ac58">Green: Straight line mechanism,<br>to keep the shock and the wheel holder pointing in the same line</span>.
 -    <span style="color:#cc0000">Red: connector from the straight line mechanism<br>to the bottom of the wheel holder</span>
 
-</div>
+### Example 2
 
-<div style="clear: both; margin-bottom: 10px;"></div>
+![mcphslidenodes](/images/softbody-suspension-mcpherson-slidenodes.jpg)
+
+[An example truck using slidenodes](/download/suspension-demo-mcpherson-using-slidenodes.truck) to keep the beam count down. No beams in the suspension mechanism have been hidden, the shocks are hold in line with slidenodes.
+
+## Torsion bar
+
+![torsionbar](/images/suspension-torsion-bar.jpg)
+
+A torsion bar is a simple form of independent suspension that uses a flexible rod to provide spring force instead of a coil spring. 
+It can be found on many vehicles from the VW beetle, to light trucks and SUVs, or even trailers.
+
+[An example truck](/download/suspension-torsion-bar-example.truck) using torsion bar suspension front and rear. You will notice the wheels tend to gain camber while cornering like swing arm suspension, however since the pivot point is perpendicular to the wheels, they will not fold under the chassis like a swing arm.
+
+-   Top image: Normal extension
+-   Middle image: Full compression
+-   Bottom image: Full extension
+-   Grey: Axles.
+-   <span style="color:#800000">Red: Torsion bar beams.</span>
 
 ## Other forms of independent suspension
 
@@ -283,21 +233,24 @@ The two trucks here are identical except the second truck does not have an anti 
 
 Liftable axles have been implemented in a couple of ways in RoR.
 
+### Example 1
 
 ![liftaxle](/images/softbody-suspension-liftable-axle-diagram.jpg)
 
-**Method1**: Creating a basic liftable axle is as easy as replacing part of the supporting beams with commands.  Note that if your commands are too long/too short, your shocks will break. In the picture to the right, the commands lift the node that the shock is attached to, effectively moving the axle.
+Creating a basic liftable axle is as easy as replacing part of the supporting beams with commands.  Note that if your commands are too long/too short, your shocks will break. In the picture above, the commands lift the node that the shock is attached to, effectively moving the axle.
 
 <div style="clear: both; margin-bottom: 10px;"></div>
+
+### Example 2
+
+Another way of accomplishing this same concept without stressing the axles is to lift the shocks, instead of the wheel.  
+The commands will lift the shock and, consequently, the wheel will travel with the shock thus lifting the axle without stressing the shocks.  This allows you to have very stiff shocks without fear of breaking.
 
 ![liftaxle2](/images/softbody-suspension-liftable-axle.jpg)
 
-**Method2**: Another way of accomplishing this same concept without stressing the axles is to lift the shocks, instead of the wheel.  The commands will lift the shock and, consequently, the wheel will travel with the shock thus lifting the axle without stressing the shocks.  This allows you to have very stiff shocks without fear of breaking.
-
-Top: axle lowered. Bottom:Axle raised. <span style="color:#191985">Blue: A-arms.</span>
-<span style="color:#19ac58">Green: A arm to connect shocks and commands (Shocks are on outside, commands on inside)</span>.
-
 [Example truck](/download/suspension-demo-lifter-axle-low-stress.truck)
 
-<div style="clear: both; margin-bottom: 10px;"></div>
-
+- Top image: Axle lowered. 
+- Bottom image: Axle raised. 
+- <span style="color:#191985">Blue: A-arms.</span>
+- <span style="color:#19ac58">Green: A arm to connect shocks and commands (Shocks are on outside, commands on inside)</span>.
