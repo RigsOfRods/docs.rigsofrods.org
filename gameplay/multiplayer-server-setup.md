@@ -15,6 +15,24 @@ This tutorial will guide you through the process of setting up a Rigs of Rods mu
 
 # Windows
 
+## Requirements 
+
+- [VS 2015 Redistributable x86](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+- Text editor (such as Notepad)
+- Router access (for port forwarding)
+- Good internet connection speed
+- A brain, basic computer knowledge, and patience
+
+## Port forwarding
+
+Before we begin, you must be able to forward the server port (`12000` by default). This requires accessing your router's firewall settings. 
+
+All routers/ISPs are different, so just search on how to do this. If you're unable to figure it out, don't bother trying to host a server. 
+
+You also may have to allow `rorserver.exe` through Windows Firewall. 
+
+Got that? Great! Let's begin. 
+
 ## Download
 
 First, download `rorserver-rornet241-windows.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/).
@@ -68,7 +86,7 @@ Please see the [troubleshooting](#troubleshooting) section if you receive an err
 
 ## Download
 
-I will assume you're running the server on a VPS with SSH/FTP access and have `unzip`/`nano` installed.
+I will assume you're running the server on a 64-bit VPS with SSH/FTP access and have `unzip` and `nano` installed.
 
 First, download `rorserver-rornet241-linux.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server-for-0-4-8-0.208/).
 
