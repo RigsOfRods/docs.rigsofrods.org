@@ -3043,7 +3043,6 @@ Parameters:
 -   Wrong or not existing materials might make RoR crash while parsing the truck. Be accurate !
 -   `.material` file material definition is strictly necessary and needs to match the material in the truck-file line. Material definition features a fall-back texture when camera is not active or not set. Just add a texture unit with a texture definition, it will be replaced with the generated texture when camera is setup correct and active automatically.
 -   Do **NOT** the set alternative camera orientation node to the same node\# then your reference node or ( if used ) the alternative cam position node. Makes no sense and might crash.
--   In 0.4.7.0, videocameras do not work with [skins](/vehicle-creation/alternate-skins). This has been fixed in the development builds. 
 
 **Samples:**
 
