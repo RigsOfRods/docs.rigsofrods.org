@@ -24,7 +24,7 @@ This page will teach you how to export an L3DT terrain into Rigs of Rods version
 
 - [L3DT (Standard or Professional)](http://www.bundysoft.com/L3DT/) ([Pro 16.05](http://www.bundysoft.com/L3DT/downloads/pro-trial.php) will be used here)
 - [GIMP 2.10](https://www.gimp.org/downloads/)
-- [DDS plugin for GIMP](https://code.google.com/archive/p/gimp-dds/downloads) (This page will not show you how to install it, ask Google)
+- [DDS plugin for GIMP](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gimp-dds/gimp-dds-win64-3.0.1.zip) (See the included readme file for installation instructions)
 - [Notepad++](https://notepad-plus-plus.org/)
 - A brain, some basic computer knowledge, and some patience
 
@@ -435,37 +435,25 @@ Download the finished terrain [here](/download/l3dt_tutorial_V2.zip).
 
 ## Stream size does not match calculated image size
 
-**Q**:`Ogre::InvalidParametersException::InvalidParametersException: Stream size does not match calculated image size`
-
-**A**: Your `Heightmap.0.0.raw.size` value does not match the size of your exported raw file. Make sure the size you set in the export dialog is the same.
+Your `Heightmap.0.0.raw.size` value does not match the size of your exported raw file. Make sure the size you set in the export dialog is the same.
 
 ## In-game world scale doesn't match the L3DT terrain
 
-**Q**: My terrain isn't sized correctly in-game!
-
-**A**: Make sure your `WorldSizeX`/`WorldSizeZ` matches the size in L3DT. Also check if you calculated the `WorldSizeY` value correctly.
+Make sure your `WorldSizeX`/`WorldSizeZ` matches the size in L3DT. Also check if you calculated the `WorldSizeY` value correctly.
 
 ## Terrain texture is solid black
 
-**Q**: My terrain's textures appear as solid black in-game!
-
-**A**: Your texture names in your page file don't match the filename. 
+Your texture names in your page file don't match the filename. 
 
 ## Terrain texture is shiny 
 
-**Q**: My terrain's texture is very shiny in-game!
-
-**A**: You didn't apply the alpha mask in GIMP correctly.
+You didn't apply the alpha mask in GIMP correctly.
 
 ## RoR crashes while loading the terrain
 
-**Q**: My game crashes when I try to load my terrain!
-
-**A**: Check all your files and make sure you didn't make any syntax errors. You can also check your `RoR.log` to see where the crash occurs at.
+Check all your files and make sure you didn't make any syntax errors. You can also check your `RoR.log` to see where the crash occurs at.
 
 ## More help
 
-**Q**: My issue isn't listed, please help!
-
-**A**: If you have a different issue than the one listed here and you're sure you didn't do anything obviously wrong, 
+If you have a different issue than the one listed here and you're sure you didn't do anything obviously wrong, 
 then please make a thread in the [correct subforum](https://forum.rigsofrods.org/forums/content-creation.15/) or join our [Discord](https://discord.gg/rigsofrods) server and ask your question in the `#content-creation` channel.
