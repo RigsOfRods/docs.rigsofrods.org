@@ -9,16 +9,18 @@ categories: [terrain-creation]
   {:toc}
 </div>
 
-Rigs of Rods is using the PSSM (Parallel-split Shadow Maps) shadows technique. Shadows textures are splited into 3 different texture with different resolutions and size. The closest one to the camera is the smallest and has the biggest resolution. the second and the thirds are sometimes equal in resolution but not in size. Shadows details progressively degrade as soon as you get into the 2nd and 3rd split.
+As of version 0.4.5.0, Rigs of Rods uses the PSSM (Parallel-split Shadow Maps) shadows technique. 
+
+Shadow textures are splited into 3 different texture with different resolutions and size. 
+
+The closest one to the camera is the smallest and has the biggest resolution. 
+The second and the thirds are sometimes equal in resolution but not in size. 
+
+Shadow details progressively degrade as soon as you get into the 2nd and 3rd split.
 
 # How to make your models receive shadows
-I have been working hard on making material management easier for modders so it will be the last thing they'll take care of.
-Note that using these, your vehicles won't work in any version lower than 0.4.5 anymore!
 
-## Vehicles
-For vehicles, you can simply use the [managedmaterials](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#managedmaterials) section of the truck file, which will give you shadows instantly without any problems.
-
-If you want to use your own material file, you will have to proceed in this way:
+## Objects
 
 On the 1st line of the material file, put this line of code:
 ```
@@ -57,11 +59,15 @@ Notice here that in addition to the `: RoR/Managed_Mats/Base`, the technique has
 
 As soon as you put all these three, you will get working shadows with a detailed material file. You can still add as many techniques/passes as you want but do not use the same names again, you can simply not name them.
 
-## Objects
-Use the same technique as explained above.
+## Vehicles
+
+For vehicles, you can simply use the [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials) section of the truck file, which will give you shadows instantly without any problems.
+
+If you want to use a material file instead, use the same technique as explained above.
 
 ## Misc
-Other than the " RoR/Managed_Mats/Base" inheritance, you can use all these for each type of texture/model used.
+Other than the `RoR/Managed_Mats/Base` inheritance, you can use all these for each type of texture/model used.
+
 ```
 RoR/Managed_Mats/Base
 RoR/Managed_Mats/BaseNoShadows
