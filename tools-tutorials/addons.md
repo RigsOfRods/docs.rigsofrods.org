@@ -293,7 +293,7 @@ Before we continue, a few notes:
 
 - Some wheels may include a tire with the wheel mesh, in this case you'll have to set the tire material to `tracks/trans`. The examples below already have it set. 
 
-- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](vehicle-creation/flexbody-wheels/)
+- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](/vehicle-creation/flexbody-wheels/)
 
 - If the wheel is inside out ingame, swap the `l` and `r` values before the mesh name. The second example below had to be swapped.
 
