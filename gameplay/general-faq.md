@@ -14,9 +14,11 @@ It is organized into sections to make finding answers easier.
 
 # Supported operating systems 
  
-Rigs of Rods supports Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
+Rigs of Rods supports 64 bit Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
 
-Windows XP & Vista are no longer supported as of 0.4.8 RC5. 
+Windows XP & Vista are no longer supported as of version 0.4.8 RC5. 
+
+32 bit is no longer supported as of version 2020.01.
 
 ChromeOS (Chromebooks), MacOS, and mobile platforms (Android/iOS) are not supported and most likely never will be.
 
@@ -63,7 +65,7 @@ To play multiplayer, see [this section](/gameplay/beginners-guide/#multiplayer) 
 
 This means you're trying to join a server that is running an earlier/later RoRNet version than what your current RoR version supports.
 
-The latest version, 0.4.8.0-RC5, supports RoRNet 2.41.
+The latest version, 2020.01, supports RoRNet 2.42.
 
 
 # Errors
@@ -114,4 +116,4 @@ You can report bugs and other issues on RoR's [GitHub repo issue tracker.](https
 
 Make sure your issue hasn't already been reported.
 
-**The issue tracker is only for issues relating to the latest development build, if you're using 0.4.8.0-RC5, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 
+**The issue tracker is only for issues relating to the latest development build, if you're using an official release, please post on the [correct support forum](https://forum.rigsofrods.org/#troubleshooting.7) instead.** 

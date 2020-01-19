@@ -83,7 +83,7 @@ Installation is now completed. Leave `Launch Rigs of Rods` checked then click `F
 
 # First Run
 
-When launching RoR for the first time, the user directory will be created. On Windows this is located at `Documents\Rigs of Rods 0.4` or at `~/.rigsofrods` on Linux. This is where configuration files, logs, and mods are stored.   
+When launching RoR for the first time, the user directory will be created. On Windows this is located at `Documents\My Games\Rigs of Rods` or at `~/.rigsofrods` on Linux. This is where configuration files, logs, and mods are stored.   
 
 The game should open in a small window:
 
@@ -109,7 +109,7 @@ The following settings should be fine for most people, but feel free to adjust t
 
 ![firstrun5](/images/bg-firstrun5.png)
 
-Then click the `Audio` tab and set the volume. Due to a bug in RC4, it is muted by default. 
+Then click the `Audio` tab and set the device and volume.
 
 ![firstrun6](/images/bg-firstrun6.png)
 

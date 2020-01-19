@@ -12,9 +12,23 @@ categories: [terrain-creation]
 # Introduction
 
 The `.odef` format specifies a static object that can be placed on a terrain. 
-These files are placed in the same zip as the object's mesh files. Rigs of Rods will not load the object if the file does not exist! 
+These files are placed in the same zip as the object's mesh files. Rigs of Rods will not load the object if the file does not exist!     
 
-Example file:
+
+Basic example with a collision mesh:   
+<br>
+```
+Building.mesh
+1, 1, 1
+
+beginmesh
+mesh BuildingCollision.mesh
+endmesh
+
+end
+```
+
+Advanced example file featuring event boxes:
 
 ```
 hangar.mesh
@@ -46,6 +60,7 @@ The format is described below:
 The first line specifies the visual mesh to use 
 
 The second line specifies the scale of it (`x`, `y`, `z`) 
+Default: `1,1,1`
 
 After that, several sections can follow (`beginbox`, `beginmesh`, `playanimation`) 
 
@@ -55,11 +70,36 @@ If there are no Begin box nor Begin mesh sections, the object will be throughabl
 
 # Commands 
 
-These commands can be called outside or inside a beginbox or beginmesh 
+These commands can be called outside or inside a `beginbox` or `beginmesh`:
 
-`setMeshMaterial tracks/bigsign/town`  You can create different materials (red, blue, green skins) for your object and now, you only need to create 3 different `.odef` files, one for each color. 
+## setMeshMaterial
 
-For example you create a file called `myRedBuilding.odef` and inside you specify `setMeshMaterial myRedColor`, `myRedColor` is defined on any .material file you need to create.
+`setMeshMaterial tracks/bigsign/town` 
+
+ You can create different materials (red, blue, green skins) for your object and now, you only need to create 3 different `.odef` files, one for each color. 
+
+For example you create a file called `myRedBuilding.odef` and inside you specify `setMeshMaterial myRedColor`, `myRedColor` is defined on any `.material` file you need to create.
+
+## nocast
+
+Disables shadow casting for the object. Useful for skyboxes.
+
+Example:
+
+```
+Building.mesh
+1, 1, 1
+
+beginmesh
+mesh BuildingCollision.mesh
+endmesh
+
+nocast
+
+end
+```
+
+
 
 # Begin box 
 
@@ -83,11 +123,19 @@ Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and
 
 **optional:**`forcecamera x, y, z`: Coordinates to place the camera, and force to change to this camera point of view when player enter at the box coords. 
 
+**optional:**`frictionconfig name-groundmodel.cfg` 
+
+Loads a custom groundmodel config. Use this if you want to use a groundmodel not specified in `ground_models.cfg`. 
+
+`name-groundmodel.cfg` is the name of your groundmodel config file. 
+
 **optional:**`stdfriction name` 
 
-Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision box will do. The physical parameters of these standard friction materials are defined if the configuration file `ground_models.cfg`.
+Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision box will do. The physical parameters of these standard friction materials are defined in the configuration file `ground_models.cfg`.
 
 **optional:**`friction adhesion velocity, static friction coef, dynamic friction coef, hydrodynamic coef, Stribeck velocity, alpha, strength, fx_type, [fx_color]`: this will set the parameters of the friction the collision box will do. The physical parameters are manually given.
+
+
 
 `endbox` must close the box
 

@@ -78,12 +78,13 @@ These are the controls for the editor:
 ```
 CTRL+Y - Activates the editor
 Enter - Selects nearest object based on free camera or RoRBot's position
-CTRL+[ and CTRL+] - Cycles through objects as listed in the `.tobj` file
+Middle mouse click - Select object 
+CTRL+[ and CTRL+] - Cycles through objects as listed in the `.tobj` file. If the terrain features a race, race checkpoints will appear first.
 WASD - Movement
 Arrow keys - Rotation
 R - Change rotation axis
-I - Reset object position
-CTRL+Y - Exit editor and save changes (see notice below for 0.4.8RC4)
+I - Reset object rotation
+CTRL+Y - Exit editor and save changes 
 ```
 
 In this example I will rotate the truckshop. Move RoRBot near the object and press `Enter`. The object should now be selected:
