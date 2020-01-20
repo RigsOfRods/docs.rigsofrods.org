@@ -34,7 +34,7 @@ Click the *Download* button at the top right of the page:
 
 ## Installing
 
-Once the mod is downloaded, simply place the `*.zip` file into `Documents\Rigs of Rods 0.4\mods` or `~/.rigsofrods/mods` on Linux:
+Once the mod is downloaded, simply place the `*.zip` file into `Documents\My Games\Rigs of Rods\mods` or `~/.rigsofrods/mods` on Linux:
 
 ![repository-install](/images/repository-installing-mod.png) 
 
