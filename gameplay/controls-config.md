@@ -172,20 +172,24 @@ Note: You can load a savegame from the main menu.
     <tr><td>COMMANDS 37</td><td>CTRL + ALT + F1</td></tr>
     <tr><td>...</td><td>...</td></tr>
     <tr><td>COMMANDS 48</td><td>CTRL + ALT + F12</td></tr>
-	<tr><td>COMMANDS 49</td><td>CTRL+ SHIFT + F1</td></tr>
-	<tr><td>...</td><td>...</td></tr>
-	<tr><td>COMMANDS 58</td><td>CTRL + SHIFT + F10</td></tr>
-	<tr><td>COMMANDS 59</td><td>CTRL + SHIFT + F11</td></tr>
-	<tr><td>...</td><td>...</td></tr>
-	<tr><td>COMMANDS 68</td><td>CTRL + ALT + F8</td></tr>	
-	<tr><td>COMMANDS 69</td><td>CTRL + ALT + F9</td></tr>	
-	<tr><td>...</td><td>...</td></tr>
-	<tr><td>COMMANDS 78</td><td>CTRL + SHIFT + ALT + F6</td></tr>	
-	<tr><td>COMMANDS 79</td><td>CTRL + SHIFT + ALT + F7</td></tr>	
-	<tr><td>...</td><td>...</td></tr>
-	<tr><td>COMMANDS 83</td><td>CTRL + SHIFT + ALT + F11</td></tr>	
-	<tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
+    <tr><td>COMMANDS 49</td><td>CTRL+ SHIFT + F1</td></tr>
+    <tr><td>...</td><td>...</td></tr>
+    <tr><td>COMMANDS 58</td><td>CTRL + SHIFT + F10</td></tr>
+    <tr><td>COMMANDS 59</td><td>CTRL + SHIFT + F11</td></tr>
+    <tr><td>...</td><td>...</td></tr>
+    <tr><td>COMMANDS 68</td><td>CTRL + ALT + F8</td></tr>	
+    <tr><td>COMMANDS 69</td><td>CTRL + ALT + F9</td></tr>	
+    <tr><td>...</td><td>...</td></tr>
+    <tr><td>COMMANDS 78</td><td>CTRL + SHIFT + ALT + F6</td></tr>	
+    <tr><td>COMMANDS 79</td><td>CTRL + SHIFT + ALT + F7</td></tr>	
+    <tr><td>...</td><td>...</td></tr>
+    <tr><td>COMMANDS 83</td><td>CTRL + SHIFT + ALT + F11</td></tr>	
+    <tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
 </table>
+
+Notes:
+- Some vehicles use ALT+F4 as a command, which closes the game window. To avoid this press F4 then ALT.
+- Some laptops require you to hold the FN key in order to use commands.
 
 ## Aerial and marine controls
 
@@ -223,7 +227,6 @@ because some planes could have more than 4 engines and you couldn't control them
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#E5A36C"><th style="color: #000000">Boat controls</th><th>Key</th></tr>
-
     <tr><td>Throttle down  </td><td>DOWN   </td></tr>
     <tr><td>Throttle up    </td><td>UP    </td></tr>
     <tr><td>Steer left     </td><td>LEFT </td></tr>
