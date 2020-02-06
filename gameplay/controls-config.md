@@ -752,7 +752,7 @@ After installing the above applications, download [this zip file](/download/RoR_
 
 There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
 
-Extract both files into `Documents\Rigs of Rods 0.4\config`.
+Extract both files into `Documents\My Games\Rigs of Rods\config`.
 
 ### Using FreePIE
 
