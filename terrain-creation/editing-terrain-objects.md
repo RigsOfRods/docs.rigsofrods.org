@@ -21,7 +21,7 @@ Open Rigs of Rods and select the map you want to add an object to.
 
 Go to where you want the object to be without being in a vehicle, for example here:
 ![image1](/images/adding-terrain-object1.png)
-Now press the `h` key. The current position coordinates will be written to the `RoR.log` (Located in `Documents/Rigs of Rods 0.4/logs` on Windows or `~/.rigsofrods/logs` on Linux.
+Now press the `h` key. The current position coordinates will be written to the `RoR.log` (Located in `Documents\My Games\Rigs of Rods\logs` on Windows or `~/.rigsofrods/logs` on Linux.
 Open the `RoR.log` file in any text editor and scroll down to the end of the file. You should see a line similar to this:
 
 `Position: 875.549, 67.6607, 1155.26, 0, 366.073, 0`
