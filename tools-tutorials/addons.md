@@ -204,7 +204,7 @@ Next, browse to `Documents\Rigs of Rods 0.4\mods` and open `ChevyK3500.zip`:
 
 Find the `.truck` file you want to edit. For this example I'll be editing the `Standard cab Single rear wheels (lift)` version (`1990K3500_STD_LIFT.truck`)
 
-Once you've figured out which truck you want the bumper on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
+Once you've figured out which truck you want the wheels on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
 
 ![3](/images/addon-wheel-truckfolder.png)
 
