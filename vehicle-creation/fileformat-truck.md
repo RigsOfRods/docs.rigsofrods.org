@@ -1704,7 +1704,7 @@ This section defines special options for hooknodes setup in the nodes section. I
     -   `hookrange:` The range a hook scans for a valid node to lock to, Default: `0.4`
     -   `speedcoef:` The speed a hook pulls the node to lock into locking position. Default: `1.0`
     -   `maxforce:` The force limit where a locking attempt is canceled. Default: `100000000.0`
-    -   `hookgroup:` The hookgroup a hook belongs to. Standard hook: `-1` (Default), Reserved for autolock: `-2`, any special hookgroup for triggerd hooks `-3` or less. Only signed integer are valid. Keyword variants: *`hookgroup` / `hgroup`*
+    -   `hookgroup:` The hookgroup a hook belongs to. Standard hook: `-1` (Default), Reserved for autolock: `-2`, any special hookgroup for triggered hooks `-3` or less. Only signed integer are valid. Keyword variants: *`hookgroup` / `hgroup`*
     -   `lockgroup:` The lockgroup a hook belongs to. Lock everything: `-1` (Default), all other numbers the hook will lock only to a node with the same lockgroup set. Only signed integer are valid. Keyword variants: *`lockgroup` / `lgroup`*
         - **Lockgroup `9999` is reseved for nodes that are skipped while locking attempts. Do NOT use lockgroup `9999` with a hook.**
     -   `timer:` Delay timer for autolocking hooks before they attempt to relock. Default: `5.0`. Only positive settings are valid
@@ -1726,7 +1726,7 @@ hooks
 146, speedcoef: 1.5, auto-lock, timer: 7.5, hookgroup: -12, lockgroup: 2
 ```
 
-Standard hooks toggle with `L`, autolock and triggerd hooks detach with `ALT+L` manually.
+Standard hooks toggle with `L`, autolock and triggered hooks detach with `ALT+L` manually.
 
 Hooks with hookgroups < `-2` can only be locked automatically or by a trigger.
 
