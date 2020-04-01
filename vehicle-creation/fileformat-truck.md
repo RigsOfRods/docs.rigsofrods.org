@@ -3620,13 +3620,13 @@ fusedrag
 
 ```
 fusedrag
-// fusedrag calculated by truck width and height using NACA0009.afl airfoil
+;fusedrag calculated by truck width and height using NACA0009.afl airfoil
 131, 51, autocalc
 
-// fusedrag calculated by truck width and height using NACA0009.afl airfoil with coef 0.5
+;fusedrag calculated by truck width and height using NACA0009.afl airfoil with coef 0.5
 131, 51, autocalc, 0.5
 
-// fusedrag calculated by truck width and height using airfoil_name.afl airfoil with coef 1.75
+;fusedrag calculated by truck width and height using airfoil_name.afl airfoil with coef 1.75
 131, 51, autocalc, 1.75 airfoil_name.afl
 ```
 
