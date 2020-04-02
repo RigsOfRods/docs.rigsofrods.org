@@ -25,9 +25,12 @@ This tutorial will guide you through the process of setting up a Rigs of Rods mu
 
 ## Port forwarding
 
-Before we begin, you must be able to forward the server port (`12000` by default). This requires accessing your router's firewall settings. 
+Before we begin, you must be able to forward the server port (TCP `12000` by default). This requires accessing your router's firewall settings. 
 
-All routers/ISPs are different, so just search on how to do this. If you're unable to figure it out, don't bother trying to host a server. 
+<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
+    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
+    <div style="margin-left:40px"><strong>Notice</strong><br />All routers/ISPs are different, so just search on how to do this. If you're unable to figure it out, don't bother trying to host a server. </div>
+</div>
 
 You also may have to allow `rorserver.exe` through Windows Firewall. 
 
