@@ -104,9 +104,9 @@ Current workaround:
 2. Right click `RoR.exe` and click `Properties`
 3. Under the `Compatibility` tab, check the `Run this program as administrator` box, then click `Apply` and close the window. 
 
-RoR will now use the `config` folder instead of the default `Documents\Rigs of Rods 0.4` folder. 
+RoR will now use the `config` folder instead of the default `Documents\My Games\Rigs of Rods` folder. 
 
-If you installed the content packs, you will have to move the `*.zip` files from `Documents\Rigs of Rods 0.4\mods` to `config\mods`. New mods are also installed there.
+If you installed the content packs, you will have to move the `*.zip` files from `Documents\My Games\Rigs of Rods\mods` to `config\mods`. New mods are also installed there.
 
 # Miscellaneous
 
