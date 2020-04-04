@@ -107,7 +107,7 @@ The last step is to add more beams to make the structure stable. We can also add
 
 Now the node and beam of our train is finished, now it's time to tweak the truckfile. 
 
-Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/downloads.php?do=file&id=341)
+Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/resources/railrunner.178/)
 
 Please note the comments in there!
 
@@ -177,7 +177,7 @@ The last step is to add more beams to make the structure stable. We can also add
 
 Now the node and beam of our wagon is finished, it's time to tweak the truckfile.
 
-Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/downloads.php?do=file&id=341)
+Download the finished train and look into the truckfile: [Railrunner](https://forum.rigsofrods.org/resources/railrunner.178/)
 
 Please note the comments in there!
 
