@@ -15,7 +15,7 @@ This tutorial will guide you through the process of setting up a Rigs of Rods mu
 
 ## Port forwarding
 
-**THIS STEP IS EXTREMELY IMPORTANT - YOUR SERVER WILL NOT APPEAR ON THE SERVER LIST AND OTHER PLAYERS WILL NOT BE ABLE TO JOIN!**
+**THIS STEP IS EXTREMELY IMPORTANT - FAILURE TO PORT FORWARD WILL RESULT IN YOUR SERVER TO NOT APPEAR ON THE SERVER LIST AND OTHER PLAYERS WILL NOT BE ABLE TO JOIN!**
 
 Before we begin, you **MUST** be able to forward the server port (TCP `12000` by default). This requires accessing your router's firewall settings. 
 
