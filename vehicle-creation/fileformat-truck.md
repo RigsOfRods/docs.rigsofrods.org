@@ -776,7 +776,7 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
--   '''Rim damping '''- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
+-   **Rim damping**- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
 -   **Tyre springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the tire.
 -   **Tyre damping** - <span style="color:#BD0058">Real number</span> The rebound rate of the tire.
 -   **Materials** - <span style="color:#BD0058">String</span> Face material and band material. (no comma between them) If you don't have a custom material, use `tracks/wheelface` for the face and `tracks/wheelband1` for a single wheel or `tracks/wheelband2` for dual mounted wheels.
@@ -1840,7 +1840,7 @@ This will add beams `0,1` + `6,8` + `7,9` + `10,12` to group `1`, beam `16,17` t
 
 ## Ropes
 
-Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the `O` key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
+Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the `CTRL+L` key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
 
 Option: `i` for invisible <span style="background-color:#fb7">\[ Version 0.38.18+ \]</span>
 
