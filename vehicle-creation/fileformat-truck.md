@@ -324,7 +324,7 @@ Optional parameters:
 
 -   **beam spring**: <span style="color:#BD0058">Real number</span>; Default=8000
 -   **beam damping**: <span style="color:#BD0058">Real number</span>; Default=800
--   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#fb7">\[ Upcoming versions 0.4.8+ \]</span> Weight of the camera point. Default=20Kg
+-   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#fb7">\[  Version 2020.01+ \]</span> Weight of the camera point. Default=20Kg
 
 Example:
 
@@ -563,7 +563,7 @@ Engoption sets optional parameters to the engine. It is mainly used for car engi
 -   **Idle RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 800</span>. Idle RPM the engine should attempt to maintain.
 -   **Max Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.1</span>. Defines the maximum amount of throttle the truck will use to maintain the idle RPM.
 -   **Min Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.0</span>. Defines the minimum amount of throttle the truck will use to maintain the idle RPM.
--   **Braking torque** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = engine_torque / 5</span>. Defines the amount of engine braking when you let go of the throttle.
+-   **Braking torque** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = engine_torque / 5</span>. Defines the amount of engine braking when you let go of the throttle.
 
 
 ```
@@ -677,7 +677,7 @@ In game, you can toggle the anti-lock brakes on/off with `SHIFT+B` Anti-lock Bra
 
 ## TractionControl
 
-**NOTE: wheelslip and fade\_speed have been made obsolete with 0.4.8.0** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/57dfbba4f16431e7b6db878223d86a17f97a92ce>)
+**NOTE: wheelslip and fade\_speed have been made obsolete with version 2020.01** (see: <https://github.com/RigsOfRods/rigs-of-rods/commit/57dfbba4f16431e7b6db878223d86a17f97a92ce>)
 
 In game, you can toggle the traction control on/off with SHIFT+V
 
@@ -938,7 +938,7 @@ shocks2
 
 ## Shocks3
 
-<span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
+<span style="background-color:#fb7">\[ Version 2020.01+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
 
 Parameters:
 
@@ -1870,14 +1870,48 @@ fixes
 
 ## Minimass
 
-This sets the minimum node mass. Useful for very light vehicles with lots of nodes (e.g. small airplanes).
+This sets the minimum node mass. Useful for very light vehicles with lots of nodes (i.e. small airplanes).
 
-(Tip: When using a very low minimass, i.e. below `10`, you should use a low damping value in the [Beam defaults](#set_beam_defaults) in your beams section)
+Notes:
+
+- Without this section, the minimum node weight is 50 kilograms.
+- When using a very low minimass, i.e. below `10`, you should use a low damping value in the [Beam defaults](#set_beam_defaults) in your beams section
+- Nodes with a load weight (`l`) value below the value set in minimass will default to the minimass value.
+- Minimass can be overridden by [set_default_minimass](#set_default_minimass).
 
 ```
 minimass
 10.0
 ```
+
+## Set_default_minimass
+
+<span style="background-color:#fb7">\[ Version 2020.01+ \]</span> This section allows nodes to override the minimum node weight, either the value set in `minimass` or the default 50kg if not using minimass. This is very useful if you already have a light vehicle tuned for a certain minimass value and you need to add a lighter node than what is set in your minimass value.
+
+It is placed in the [nodes](#nodes) section, the new minimum weight will be applied to all following nodes.  Example:
+
+```
+nodes
+
+;standard 50kg nodes
+
+0, 0.54, 0, -0.567, n
+1, 0.54, 0.18, -0.567, n
+2, 0.54, 0, -0.4536, n
+
+;set nodes 3-5 minimum weight to 2kg
+
+set_default_minimass 2
+
+3, 0.54, 0.18, -0.4536, n
+4, 2.1, 0.2, -0.567, n
+5, 2.1, 0.2, -0.4536, n
+
+;reset to default
+set_default_minimass 50
+```
+
+Note: When adding light nodes to a vehicle which features heavy nodes, you may have to lower the [set_beam_defaults](#set_beam_defaults) spring/damping values to accommodate for the lighter weight!
 
 ## Ties
 
@@ -1895,7 +1929,7 @@ Parameters:
 -   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = `n`</span>
     -   `n`: Visible (default)
     -   `i`: Invisible
-    -	`s`: <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> Prevents self locking.
+    -	`s`: <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> Prevents self locking.
 -   **Max. stress** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 12000</span>; The force (in Newtons) when the ties stop to shorten.
 -   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = `none`</span>
 
@@ -2036,7 +2070,7 @@ The axle section is different from other sections in that it is broken into prop
         -   `o` - Open
         -   `l` - Locked (wheels locked together regardless of torque input)
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
-        -   `v` - Viscous <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> (applies locking force based on the amount of torque)
+        -   `v` - Viscous <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> (applies locking force based on the amount of torque)
 		
 Sample axle section:
 
@@ -2050,7 +2084,7 @@ w1(5 6), w2(7 8), d(l)
 
 ## Interaxles
 
-In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
+In <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
 
 Parameters:
 
@@ -2068,7 +2102,7 @@ interaxles
 
 ## Transfercase
 
-In <span style="background-color:#fb7">\[ Version 0.4.8.0+ \]</span> and above you can add a transfer case on a vehicle.
+In <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> and above you can add a transfer case on a vehicle.
 
 Parameters:
 
