@@ -1911,7 +1911,7 @@ set_default_minimass 2
 set_default_minimass 50
 ```
 
-Note: When adding light nodes to a vehicle which features heavy nodes, you may have to lower the [set_beam_defaults](#set_beam_defaults) spring/damping values to accommodate for the lighter weight!
+Note: When adding light nodes to a vehicle which features heavy nodes, you may have to lower the [beam defaults](#set_beam_defaults) spring/damping values to accommodate for the lighter weight!
 
 ## Ties
 
