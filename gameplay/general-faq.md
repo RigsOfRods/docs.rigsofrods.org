@@ -36,7 +36,7 @@ It is recommended to install using the [Itch desktop app](https://itch.io/app).
 
 ### Development builds 
 
-If you want to try the latest changes to RoR, you can download a [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-0-4-8-for-windows-and-linux.696/).
+If you want to try the latest changes to RoR, you can download a [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-windows-and-linux.696/).
 
 
 ### Old versions 
@@ -107,6 +107,27 @@ Current workaround:
 RoR will now use the `config` folder instead of the default `Documents\My Games\Rigs of Rods` folder. 
 
 If you installed the content packs, you will have to move the `*.zip` files from `Documents\My Games\Rigs of Rods\mods` to `config\mods`. New mods are also installed there.
+
+### Full screen crash (Cannot create device)
+
+![error-createdevice](/images/error-createdevice.png) 
+
+This error is usually caused by enabling full screen with the wrong resolution (video mode) set. 
+
+1. Browse to `Documents\My Games\Rigs of Rods` and delete the `config` folder inside.
+2. Start RoR, the game will be in a small window. Click Settings -> Render system and change the Video Mode setting to your monitor's native resolution. Enable full screen if you want.
+3. Restart RoR.
+
+If this doesn't fix your error, then your GPU is most likely too old to run RoR. 
+
+### Null program bound
+
+![error-nullprogrambound](/images/error-nullprogrambound.png)
+
+This error occurs with some Intel integrated graphics chips. Unfortunately there's currently no fix.
+
+More info: [GitHub issue](https://github.com/RigsOfRods/rigs-of-rods/issues/2385)
+ 
 
 # Miscellaneous
 
