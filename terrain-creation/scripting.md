@@ -42,31 +42,32 @@ Example:
 
 -   create a file named <filename>.terrn.as, so in our case the file should be called "a1da0UID-nhelens.terrn.as" when the terrain we use is called "a1da0UID-nhelens.terrn"
 
-<!-- -->
 
-    // Always include the base.as file!
-    #include "base.as"
+```
+// Always include the base.as file!
+#include "base.as"
 
-    string calledLast="";
+string calledLast="";
 
-    void main()
-    {
-        // spawn an oil-well
-        game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
-    }
+void main()
+{
+    // spawn an oil-well
+    game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
+}
 
-    void myCallBack(int trigger_type, string inst, string box, int nodeid)
-    {
-        if(calledLast == inst) return; // already triggered, discard
+void myCallBack(int trigger_type, string inst, string box, int nodeid)
+{
+    if(calledLast == inst) return; // already triggered, discard
 
-        // we log a message to the logfile
-        log(inst + " event triggered");
+    // we log a message to the logfile
+    log(inst + " event triggered");
 
-        // We show a message ingame
-        game.flashMessage(inst + " event triggered", 3, -1);
+    // We show a message ingame
+    game.flashMessage(inst + " event triggered", 3, -1);
 
-        calledLast = inst;
-    }
+    calledLast = inst;
+}
+```
 
 ## Test-Run
 
@@ -83,13 +84,15 @@ note: We're only interested in the pink boxes here, as they represent event boxe
 
 if you do not see an oil loader, check the AngelScript.log file for errors. With no errors the log could read like this:
 
-    17:31:04: ScriptEngine initialized
-    17:31:04: ScriptEngine (SE) initializing ...
-    17:31:04: Type registrations done. If you see no error above everything should be working
-    17:31:05: ScriptEngine running
-    17:31:14: saving script bytecode to file c:\users\jeroen\docume~1\rigs of rods 0.38\cache\script_a1da0UID-nhelens.terrn.asc
-    17:31:14: Executing main()
-    17:31:14: The script finished successfully.
+```
+ ScriptEngine initialized
+ ScriptEngine (SE) initializing ...
+ Type registrations done. If you see no error above everything should be working
+ ScriptEngine running
+ saving script bytecode to file c:\users\jeroen\docume~1\rigs of rods 0.38\cache\script_a1da0UID-nhelens.terrn.asc
+ Executing main()
+ The script finished successfully.
+ ```
 
 ## Result
 
@@ -116,75 +119,77 @@ you could:
 
 for example this script will create two oil rigs and will redirect the user to collect and drop oil between them:
 
-    #include "base.as"
+```
+ #include "base.as"
 
-    float timer = 0;
-    int timerSet = 0;
+ float timer = 0;
+ int timerSet = 0;
 
-    int state = 0;
+ int state = 0;
 
-    vector3 pos_oil1(1099, 33.933, 924.982);
-    vector3 pos_oil2(1030, 33.4509, 1125.37);
+ vector3 pos_oil1(1099, 33.933, 924.982);
+ vector3 pos_oil2(1030, 33.4509, 1125.37);
 
-    void main()
-    {
-        // spawn some oil-wells
-        game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
-        game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
-    }
+ void main()
+ {
+     // spawn some oil-wells
+     game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
+     game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
+ }
 
-    void frameStep(float dt)
-    {
-        // count down the timer
-        if(timer > 0)
-            timer -= dt;
-    }
+ void frameStep(float dt)
+ {
+     // count down the timer
+     if(timer > 0)
+         timer -= dt;
+ }
 
-    void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
-    {
-        //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-        if(state != 0) return; // only process this if state is valid
-        
-        if(timerSet == 0)
-        {
-            // set timer
-            timerSet = 1;
-            timer = 5;
-            game.flashMessage("Loading oil ...", timer, -1);
-            return;
-        }
-        
-        if(timerSet == 1 && timer < 0)
-        {
-            // timer ran out, do something
-            game.setDirectionArrow("unload oil", pos_oil2);
-            state = 1;
-            timerSet=0;
-        }
-    }
+ void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
+ {
+     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+     if(state != 0) return; // only process this if state is valid
+     
+     if(timerSet == 0)
+     {
+         // set timer
+         timerSet = 1;
+         timer = 5;
+         game.flashMessage("Loading oil ...", timer, -1);
+         return;
+     }
+     
+     if(timerSet == 1 && timer < 0)
+     {
+         // timer ran out, do something
+         game.setDirectionArrow("unload oil", pos_oil2);
+         state = 1;
+         timerSet=0;
+     }
+ }
 
-    void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
-    {
-        //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-        if(state != 1) return; // only process this if state is valid
-        
-        if(timerSet == 0)
-        {
-            // set timer
-            timerSet = 1;
-            timer = 5;
-            game.flashMessage("Unloading oil ...", timer, -1);
-            return;
-        }
-        
-        if(timerSet == 1 && timer < 0)
-        {
-            // timer ran out, do something
-            game.setDirectionArrow("load some new oil", pos_oil1);
-            state = 0;
-            timerSet=0;
-        }
-    }
+ void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
+ {
+     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+     if(state != 1) return; // only process this if state is valid
+     
+     if(timerSet == 0)
+     {
+         // set timer
+         timerSet = 1;
+         timer = 5;
+         game.flashMessage("Unloading oil ...", timer, -1);
+         return;
+     }
+     
+     if(timerSet == 1 && timer < 0)
+     {
+         // timer ran out, do something
+         game.setDirectionArrow("load some new oil", pos_oil1);
+         state = 0;
+         timerSet=0;
+     }
+ }
+ ```
 
     
     In this tutorial, we will add a race to our terrain.
