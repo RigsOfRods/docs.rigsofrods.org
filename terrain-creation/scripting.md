@@ -9,6 +9,13 @@ categories: [terrain-creation]
   {:toc}
 </div>
 
+<br>
+
+<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em; display: table;">
+    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
+    <div style="margin-left:40px"><strong>Notice</strong><br />This page is currently NOT up-to-date with the latest version of Rigs of Rods. Script examples should still work, but links, directory locations and settings may not be accurate with the current version. </div>
+</div>
+
 # Event box
 
 this simple example will create an oil depot that reacts on trucks that drive into it.
@@ -42,31 +49,32 @@ Example:
 
 -   create a file named <filename>.terrn.as, so in our case the file should be called "a1da0UID-nhelens.terrn.as" when the terrain we use is called "a1da0UID-nhelens.terrn"
 
-<!-- -->
 
-    // Always include the base.as file!
-    #include "base.as"
+```
+// Always include the base.as file!
+#include "base.as"
 
-    string calledLast="";
+string calledLast="";
 
-    void main()
-    {
-        // spawn an oil-well
-        game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
-    }
+void main()
+{
+    // spawn an oil-well
+    game.spawnObject("oil-well", "my-oil-well-1", vector3(1119.44f, 33.933f, 924.982f), vector3(0, 0, 0), "myCallBack", false);
+}
 
-    void myCallBack(int trigger_type, string inst, string box, int nodeid)
-    {
-        if(calledLast == inst) return; // already triggered, discard
+void myCallBack(int trigger_type, string inst, string box, int nodeid)
+{
+    if(calledLast == inst) return; // already triggered, discard
 
-        // we log a message to the logfile
-        log(inst + " event triggered");
+    // we log a message to the logfile
+    log(inst + " event triggered");
 
-        // We show a message ingame
-        game.flashMessage(inst + " event triggered", 3, -1);
+    // We show a message ingame
+    game.flashMessage(inst + " event triggered", 3, -1);
 
-        calledLast = inst;
-    }
+    calledLast = inst;
+}
+```
 
 ## Test-Run
 
@@ -83,13 +91,15 @@ note: We're only interested in the pink boxes here, as they represent event boxe
 
 if you do not see an oil loader, check the AngelScript.log file for errors. With no errors the log could read like this:
 
-    17:31:04: ScriptEngine initialized
-    17:31:04: ScriptEngine (SE) initializing ...
-    17:31:04: Type registrations done. If you see no error above everything should be working
-    17:31:05: ScriptEngine running
-    17:31:14: saving script bytecode to file c:\users\jeroen\docume~1\rigs of rods 0.38\cache\script_a1da0UID-nhelens.terrn.asc
-    17:31:14: Executing main()
-    17:31:14: The script finished successfully.
+```
+ ScriptEngine initialized
+ ScriptEngine (SE) initializing ...
+ Type registrations done. If you see no error above everything should be working
+ ScriptEngine running
+ saving script bytecode to file c:\users\jeroen\docume~1\rigs of rods 0.38\cache\script_a1da0UID-nhelens.terrn.asc
+ Executing main()
+ The script finished successfully.
+ ```
 
 ## Result
 
@@ -116,75 +126,77 @@ you could:
 
 for example this script will create two oil rigs and will redirect the user to collect and drop oil between them:
 
-    #include "base.as"
+```
+ #include "base.as"
 
-    float timer = 0;
-    int timerSet = 0;
+ float timer = 0;
+ int timerSet = 0;
 
-    int state = 0;
+ int state = 0;
 
-    vector3 pos_oil1(1099, 33.933, 924.982);
-    vector3 pos_oil2(1030, 33.4509, 1125.37);
+ vector3 pos_oil1(1099, 33.933, 924.982);
+ vector3 pos_oil2(1030, 33.4509, 1125.37);
 
-    void main()
-    {
-        // spawn some oil-wells
-        game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
-        game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
-    }
+ void main()
+ {
+     // spawn some oil-wells
+     game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
+     game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
+ }
 
-    void frameStep(float dt)
-    {
-        // count down the timer
-        if(timer > 0)
-            timer -= dt;
-    }
+ void frameStep(float dt)
+ {
+     // count down the timer
+     if(timer > 0)
+         timer -= dt;
+ }
 
-    void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
-    {
-        //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-        if(state != 0) return; // only process this if state is valid
-        
-        if(timerSet == 0)
-        {
-            // set timer
-            timerSet = 1;
-            timer = 5;
-            game.flashMessage("Loading oil ...", timer, -1);
-            return;
-        }
-        
-        if(timerSet == 1 && timer < 0)
-        {
-            // timer ran out, do something
-            game.setDirectionArrow("unload oil", pos_oil2);
-            state = 1;
-            timerSet=0;
-        }
-    }
+ void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
+ {
+     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+     if(state != 0) return; // only process this if state is valid
+     
+     if(timerSet == 0)
+     {
+         // set timer
+         timerSet = 1;
+         timer = 5;
+         game.flashMessage("Loading oil ...", timer, -1);
+         return;
+     }
+     
+     if(timerSet == 1 && timer < 0)
+     {
+         // timer ran out, do something
+         game.setDirectionArrow("unload oil", pos_oil2);
+         state = 1;
+         timerSet=0;
+     }
+ }
 
-    void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
-    {
-        //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-        if(state != 1) return; // only process this if state is valid
-        
-        if(timerSet == 0)
-        {
-            // set timer
-            timerSet = 1;
-            timer = 5;
-            game.flashMessage("Unloading oil ...", timer, -1);
-            return;
-        }
-        
-        if(timerSet == 1 && timer < 0)
-        {
-            // timer ran out, do something
-            game.setDirectionArrow("load some new oil", pos_oil1);
-            state = 0;
-            timerSet=0;
-        }
-    }
+ void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
+ {
+     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+     if(state != 1) return; // only process this if state is valid
+     
+     if(timerSet == 0)
+     {
+         // set timer
+         timerSet = 1;
+         timer = 5;
+         game.flashMessage("Unloading oil ...", timer, -1);
+         return;
+     }
+     
+     if(timerSet == 1 && timer < 0)
+     {
+         // timer ran out, do something
+         game.setDirectionArrow("load some new oil", pos_oil1);
+         state = 0;
+         timerSet=0;
+     }
+ }
+ ```
 
     
     In this tutorial, we will add a race to our terrain.
@@ -301,7 +313,7 @@ void main() {
    // * This race has 1 lap.
    // * You can use 'races.LAPS_NoLaps' to have no laps 
    //       (~the race start point is not the same checkpoint as the race finish point).
-   // * You can also use 'races.LAPS\_Unlimited' to have a never ending race (~unlimited amount of laps)
+   // * You can also use 'races.LAPS_Unlimited' to have a never ending race (~unlimited amount of laps)
    races.addRace("Rigbreaker", coordinates, 1);
 
 } // end of the main function
@@ -398,9 +410,9 @@ void eventCallback(int eventnum, int value) {
 
 ### Flat Map (v10.1)
 
-This example script illustrates how to add multiple races to one terrain and is usable for the Flat Map terrain (f4afUID-flat\_map\_full32xa.terrn).
+This example script illustrates how to add multiple races to one terrain and is usable for the Flat Map terrain (f4afUID-flat_map_full32xa.terrn).
 
-File: f4afUID-flat\_map\_full32xa.terrn.as
+File: f4afUID-flat_map_full32xa.terrn.as
 
 ```
 #include "base.as"
@@ -461,9 +473,9 @@ void eventCallback(int eventnum, int value) {
 
 ### F1 Test Track
 
-This example script illustrates how to use custom checkpoint objects and multiple races on one terrain. The script can be used with the F1 Test Track terrain (2af11UID-f1\_testtrack.terrn).
+This example script illustrates how to use custom checkpoint objects and multiple races on one terrain. The script can be used with the F1 Test Track terrain (2af11UID-f1_testtrack.terrn).
 
-File: 2af11UID-f1\_testtrack.terrn.as 
+File: 2af11UID-f1_testtrack.terrn.as 
 
 ```
 #include "base.as"
@@ -569,7 +581,7 @@ void eventCallback(int eventnum, int value) {
 We can also penalty events if the player hits a specific part of the checkpoint.
 
 For this race, we've edited the 2af11UID-new-checkpoint.odef file 
-from [f1track\_improved.zip](http://www.rigsofrods.com/repository/repo_files/view/3739) 
+from [f1track_improved.zip](http://www.rigsofrods.com/repository/repo_files/view/3739) 
 to have penalty event boxes: 
 
 ```
@@ -577,9 +589,9 @@ to have penalty event boxes:
 
 beginbox boxcoords -7.5, 6.95, -4.0, 5.2, -0.5, 0.5 virtual event checkpoint truck endbox
 
-beginbox boxcoords -8.6, -7.65, 0.0, 0.55, -0.65, 0.0 virtual event race\_penalty truck endbox
+beginbox boxcoords -8.6, -7.65, 0.0, 0.55, -0.65, 0.0 virtual event race_penalty truck endbox
 
-beginbox boxcoords 8.05, 7.1, 0.0, 0.55, -0.65, 0.0 virtual event race\_penalty truck endbox
+beginbox boxcoords 8.05, 7.1, 0.0, 0.55, -0.65, 0.0 virtual event race_penalty truck endbox
 
 end
 ```
@@ -589,8 +601,8 @@ As you can see, there are 2 small event boxes that will trigger the penalty even
 
 We'll also need this PenaltyEvent callback function when we want to show a message if a penalty event was triggered. For this we'll need to:
 
-1.  Define the callback function ('on\_penaltyEvent' in the script below)
-2.  Tell the races script about this callback function ('races.setCallback("PenaltyEvent", on\_penaltyEvent);')
+1.  Define the callback function ('on_penaltyEvent' in the script below)
+2.  Tell the races script about this callback function ('races.setCallback("PenaltyEvent", on_penaltyEvent);')
 
 This is all done in the following script. Pay attention to every difference with the script above.
 
@@ -718,7 +730,7 @@ void on_penaltyEvent(dictionary@ info)
 
 **Notes:**
 
-1.  We've only used the 'race\_penalty' event here, but you can also use the 'race\_abort' event, which will abort the race when the event box is triggered.
+1.  We've only used the 'race_penalty' event here, but you can also use the 'race_abort' event, which will abort the race when the event box is triggered.
 2.  Another way to add penalty seconds is using the [races.addPenaltySeconds(int seconds)](http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2) method.
 3.  You can also register callback functions for other events: <http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2>
 
