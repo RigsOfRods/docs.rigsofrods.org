@@ -306,7 +306,7 @@ void main() {
    // * This race has 1 lap.
    // * You can use 'races.LAPS_NoLaps' to have no laps 
    //       (~the race start point is not the same checkpoint as the race finish point).
-   // * You can also use 'races.LAPS\_Unlimited' to have a never ending race (~unlimited amount of laps)
+   // * You can also use 'races.LAPS_Unlimited' to have a never ending race (~unlimited amount of laps)
    races.addRace("Rigbreaker", coordinates, 1);
 
 } // end of the main function
@@ -403,9 +403,9 @@ void eventCallback(int eventnum, int value) {
 
 ### Flat Map (v10.1)
 
-This example script illustrates how to add multiple races to one terrain and is usable for the Flat Map terrain (f4afUID-flat\_map\_full32xa.terrn).
+This example script illustrates how to add multiple races to one terrain and is usable for the Flat Map terrain (f4afUID-flat_map_full32xa.terrn).
 
-File: f4afUID-flat\_map\_full32xa.terrn.as
+File: f4afUID-flat_map_full32xa.terrn.as
 
 ```
 #include "base.as"
@@ -466,9 +466,9 @@ void eventCallback(int eventnum, int value) {
 
 ### F1 Test Track
 
-This example script illustrates how to use custom checkpoint objects and multiple races on one terrain. The script can be used with the F1 Test Track terrain (2af11UID-f1\_testtrack.terrn).
+This example script illustrates how to use custom checkpoint objects and multiple races on one terrain. The script can be used with the F1 Test Track terrain (2af11UID-f1_testtrack.terrn).
 
-File: 2af11UID-f1\_testtrack.terrn.as 
+File: 2af11UID-f1_testtrack.terrn.as 
 
 ```
 #include "base.as"
@@ -574,7 +574,7 @@ void eventCallback(int eventnum, int value) {
 We can also penalty events if the player hits a specific part of the checkpoint.
 
 For this race, we've edited the 2af11UID-new-checkpoint.odef file 
-from [f1track\_improved.zip](http://www.rigsofrods.com/repository/repo_files/view/3739) 
+from [f1track_improved.zip](http://www.rigsofrods.com/repository/repo_files/view/3739) 
 to have penalty event boxes: 
 
 ```
@@ -582,9 +582,9 @@ to have penalty event boxes:
 
 beginbox boxcoords -7.5, 6.95, -4.0, 5.2, -0.5, 0.5 virtual event checkpoint truck endbox
 
-beginbox boxcoords -8.6, -7.65, 0.0, 0.55, -0.65, 0.0 virtual event race\_penalty truck endbox
+beginbox boxcoords -8.6, -7.65, 0.0, 0.55, -0.65, 0.0 virtual event race_penalty truck endbox
 
-beginbox boxcoords 8.05, 7.1, 0.0, 0.55, -0.65, 0.0 virtual event race\_penalty truck endbox
+beginbox boxcoords 8.05, 7.1, 0.0, 0.55, -0.65, 0.0 virtual event race_penalty truck endbox
 
 end
 ```
@@ -594,8 +594,8 @@ As you can see, there are 2 small event boxes that will trigger the penalty even
 
 We'll also need this PenaltyEvent callback function when we want to show a message if a penalty event was triggered. For this we'll need to:
 
-1.  Define the callback function ('on\_penaltyEvent' in the script below)
-2.  Tell the races script about this callback function ('races.setCallback("PenaltyEvent", on\_penaltyEvent);')
+1.  Define the callback function ('on_penaltyEvent' in the script below)
+2.  Tell the races script about this callback function ('races.setCallback("PenaltyEvent", on_penaltyEvent);')
 
 This is all done in the following script. Pay attention to every difference with the script above.
 
@@ -723,7 +723,7 @@ void on_penaltyEvent(dictionary@ info)
 
 **Notes:**
 
-1.  We've only used the 'race\_penalty' event here, but you can also use the 'race\_abort' event, which will abort the race when the event box is triggered.
+1.  We've only used the 'race_penalty' event here, but you can also use the 'race_abort' event, which will abort the race when the event box is triggered.
 2.  Another way to add penalty seconds is using the [races.addPenaltySeconds(int seconds)](http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2) method.
 3.  You can also register callback functions for other events: <http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2>
 
