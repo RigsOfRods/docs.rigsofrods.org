@@ -779,7 +779,8 @@ The easiest way to configure your device for use in Rigs of Rods is to use the [
 
 ### vJoy Conflicts
 
-**NOTE: If you have vJoy installed, you will have to disable it before running the tool!**
+!!! note
+    If you have vJoy installed, you will have to disable it before running the tool!
 
 ![vJoyDisable](/images/vJoyDisable.png)
 

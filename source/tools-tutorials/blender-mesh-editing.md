@@ -1,11 +1,8 @@
 Blender mesh editing
 ============
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.</div>
-</div>
-
+!!! warning
+    This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
 
 
 
@@ -94,13 +91,11 @@ Press the `Z` key twice to get out of that shading mode. You should now see this
 
 ![11](/images/blender-edit-zkeytwice.png)
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />The importer will automatically separate meshes if the `.mesh.xml` contains multiple materials. The object names match the material name. If there's many objects with the same material name, you should be safe to join them by pressing `CTRL+J`:
-<br>
-<a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
-</div>
-</div>
+!!! warning
+    The importer will automatically separate meshes if the `.mesh.xml` contains multiple materials. The object names match the material name. If there's many objects with the same material name, you should be safe to join them by pressing `CTRL+J`:
+    <br>
+    <a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
+
 
 It should look similar to this now:
 

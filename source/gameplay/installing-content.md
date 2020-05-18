@@ -5,11 +5,8 @@ This page will show you how to install vehicles and terrains for Rigs of Rods.
 
 ## Installing mods from the Repository 
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />Not all content has been re-uploaded to the new Repository yet. The old Repository may be found <a href="http://www.austingratzer.com/rigs/downloads.php">here</a>.</div>
-</div>
-
+!!! warning
+    Not all content has been re-uploaded to the new Repository yet. The old Repository may be found <a href="http://www.austingratzer.com/rigs/downloads.php">here</a>.
 
 
 ### Downloading

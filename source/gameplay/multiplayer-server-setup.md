@@ -13,10 +13,8 @@ This tutorial will guide you through the process of setting up a Rigs of Rods mu
 
 Before we begin, you **MUST** be able to forward the server port (TCP `12000` by default). This requires accessing your router's firewall settings. 
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em; display: table;">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />All routers/ISPs are different, so just search for a tutorial for your router. A general port forwarding guide can be found <a href="https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/">here</a>. If you're unable to figure it out, don't bother trying to host a server. </div>
-</div>
+!!! warning
+    All routers/ISPs are different, so just search for a tutorial for your router. A general port forwarding guide can be found <a href="https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/">here</a>. If you're unable to figure it out, don't bother trying to host a server.
 
 If you fail to port forward, the [Cannot connect to master server](#cannot-connect-to-master-server) error will appear on startup.
 

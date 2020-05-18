@@ -1,12 +1,8 @@
 Making softbody objects
 ============
 
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em 5em">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />NOTICE:  This page is very outdated now and shouldn't be used as a guide. It is not in line with our current N/B creation methods. It is now unlisted and will only be kept for legacy purposes. </div>
-</div>
-
-
+!!! danger
+    NOTICE:  This page is very outdated now and shouldn't be used as a guide. It is not in line with our current N/B creation methods. It is now unlisted and will only be kept for legacy purposes. 
 
 This is an introduction and overview of making a softbody object (also called "nodebeam", or shortly "N/B") in Rigs of Rods. It may be vehicles of any sort, trailers, loads or any other objects. Since most of our softbody actors are vehicles, specifically heavy land vehicles, this documentation is included under "Vehicle creation".
 
