@@ -1,0 +1,16 @@
+dist: bionic
+language: python
+python: 3.7
+cache: pip
+
+script:
+ - mkdocs build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: site
+  token: $GITHUB_TOKEN
+  verbose: true
+  on:
+    branch: master
