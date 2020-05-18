@@ -1,13 +1,9 @@
 Terrain Scripting
 ============
 
+!!! warning
+    This page is currently NOT up-to-date with the latest version of Rigs of Rods. Script examples should still work, but links, directory locations and settings may not be accurate with the current version. 
 
-<br>
-
-<div style="background-color:#FFFFCC; border: 1px solid #FFCC00; padding:0.2em; margin:1em; display: table;">
-    <div style="float:left;"><a href="/images/NoticeIcon.png" class="image"><img alt="NoticeIcon.png" src="/images/NoticeIcon.png" width="32" height="32" /></a></div>
-    <div style="margin-left:40px"><strong>Notice</strong><br />This page is currently NOT up-to-date with the latest version of Rigs of Rods. Script examples should still work, but links, directory locations and settings may not be accurate with the current version. </div>
-</div>
 
 ## Event box
 
