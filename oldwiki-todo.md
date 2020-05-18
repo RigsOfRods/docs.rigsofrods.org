@@ -3,11 +3,11 @@ layout: page
 title:  "Wiki porting checklist - TODO"
 ---
 
-# WIP
+## WIP
 
 * https://archives.rigsofrods.net/wiki/index.php/Step_by_Step_Truck_Construction_%28old%29 - processed intro and softbody, TODO: suspension, wheels, other
 
-# pending
+## pending
 
 
 * https://archives.rigsofrods.net/wiki/index.php/RoRBook/Cinecam/Cameras
@@ -23,9 +23,9 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/RoRBook/Submeshes
 * https://archives.rigsofrods.net/wiki/index.php/RoRBook/Submeshs
 
-# ------ pending - blender -------
+## ------ pending - blender -------
 
-# blender - general
+## blender - general
 
 
 
@@ -42,12 +42,12 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/Blender_Tutorial_2  - Vehicles - basic soapbox vehicle construction
   >> vehicles/blender
 
-# blender - maps
+## blender - maps
 
 * https://archives.rigsofrods.net/wiki/index.php/Creating_a_road_in_Blender - very good, but old blender
 * https://archives.rigsofrods.net/wiki/index.php/Blender_Race_Track_Tutorial - useless, duplicate with "making heightmaps in Blender" -> discard
 
-# ------------------- pending - SketchUp -----------------
+## ------------------- pending - SketchUp -----------------
 
 * https://archives.rigsofrods.net/wiki/index.php/Making_a_prop_in_Google_Sketchup
 * https://archives.rigsofrods.net/wiki/index.php/Making_an_object_in_Google_SketchUp
@@ -58,7 +58,7 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/Sketchup_Tutorial
 * https://archives.rigsofrods.net/wiki/index.php/Complete_sketchup_truck_mesh
 
-# ------------- Docs -----------------
+## ------------- Docs -----------------
 
 * https://archives.rigsofrods.net/wiki/index.php/Making_a_prop_in_Google_Sketchup - workable.
 * https://archives.rigsofrods.net/wiki/index.php/Making_an_object_in_Google_SketchUp - not so bad
@@ -70,7 +70,7 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/SketchUp_truck_tutorial - useless, almost empty. Discard.
 * https://archives.rigsofrods.net/wiki/index.php/Sketchup_Plugins - outdated, discard.
 
-# ------------- Docs -----------------
+## ------------- Docs -----------------
 
 
 * https://archives.rigsofrods.net/wiki/index.php/AC3D_Plugins
@@ -174,7 +174,7 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/Windows_Crash_Report_Tool
 * https://archives.rigsofrods.net/wiki/index.php/WiresharkDissector
 
-# TODO forums/website
+## TODO forums/website
 
 * https://archives.rigsofrods.net/wiki/index.php/Meaningful_Subject
 * https://archives.rigsofrods.net/wiki/index.php/Forum_Chat - IRC
@@ -185,17 +185,17 @@ title:  "Wiki porting checklist - TODO"
 * https://archives.rigsofrods.net/wiki/index.php/User_token - historical
 * https://archives.rigsofrods.net/wiki/index.php/Rigs_of_Rods_Wiki:Language_policy
 
-# TODO -> changelog/history
+## TODO -> changelog/history
 
 * https://archives.rigsofrods.net/wiki/index.php/0.38
 * https://archives.rigsofrods.net/wiki/index.php/Guide_to_0.36
 
-# TODO -> repository
+## TODO -> repository
 
 * https://archives.rigsofrods.net/wiki/index.php/Repository
 * https://archives.rigsofrods.net/wiki/index.php/Repository_Guidelines
 
-# TODO -> Doxygen
+## TODO -> Doxygen
 
 * https://archives.rigsofrods.net/wiki/index.php/Changelog
 * https://archives.rigsofrods.net/wiki/index.php/Changelog_old
