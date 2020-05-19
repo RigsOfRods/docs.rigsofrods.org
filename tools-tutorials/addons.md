@@ -37,7 +37,7 @@ To begin, download & extract the part zip (in our case, `CHeavyBumper.zip`) into
 
 ![1](/images/addon-bumper-folder.png)
 
-Next, browse to `Documents\Rigs of Rods 0.4\mods` and open `ChevyK3500.zip`:
+Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
 ![2](/images/addon-bumper-zip.png)
 
@@ -198,7 +198,7 @@ To begin, download & extract the part zip (in our case, `5SpokeRim.zip`) into a 
 
 ![1](/images/addon-wheel-folder.png)
 
-Next, browse to `Documents\Rigs of Rods 0.4\mods` and open `ChevyK3500.zip`:
+Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
 ![2](/images/addon-bumper-zip.png)
 
