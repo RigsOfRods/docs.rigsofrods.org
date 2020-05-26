@@ -220,8 +220,8 @@ For example:
 
 ```
 nodes2
-name,    x,    y,    z,     options
-main chassis
+;name,    x,    y,    z,     options
+;main chassis
 0, 0.00, 0.75, 0.66
 1, 0.00, 0.75, 1.84
 special_node, 0.63, 0.75, 0.66
