@@ -237,10 +237,7 @@ because some planes could have more than 4 engines and you couldn't control them
 
 # Config file 'input.map'
 
-For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/input.map) file on GitHub.
-
-
-This file defines all key alias for RoR. It has the following format:
+This file defines all key alias for RoR, located at `Documents\My Games\Rigs of Rods\config` by default. It has the following format:
 
     EVENT_NAME    EVENT_TYPE    MAPPING
 
