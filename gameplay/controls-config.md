@@ -867,6 +867,8 @@ Click `Export Keymap` then select your device from the list.
 
 ![9](/images/InputMappingTool-5.png)
 
+Browse to `Documents\My Games\Rigs of Rods\config`, set the name you copied earlier in the `File name` box, then click `Open` to save the file.
+
 ![10](/images/InputMappingTool-6.png)
 
 And finally, run Rigs of Rods and test your device! You can make further edits to your input map by clicking `Import Keymap`.
