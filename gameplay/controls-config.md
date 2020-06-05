@@ -66,6 +66,9 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Zoom in/out (fast) </td><td>SHIFT+Numpad 9 / SHIFT+Numpad 3</td></tr>
     <tr><td>Free camera   </td><td>SHIFT+C</td></tr>
     <tr><td>Fixed camera  </td><td>ALT+C</td></tr>
+    <tr><td>Decrease FOV  </td><td>Numpad 7</td></tr>
+    <tr><td>Increase FOV  </td><td>CTRL+Numpad 7</td></tr>
+    <tr><td>Reset FOV  </td><td>SHIFT+Numpad 7</td></tr>
 </table>
 
 ### Time
