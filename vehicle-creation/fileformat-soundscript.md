@@ -122,7 +122,7 @@ The output value of the gain modifier is clamped to the interval from 0.0 to 1.0
 These parameters define the WAV sound files used by the soundscript. All sounds parameters takes two parameters&nbsp;: 
 
 * a reference pitch value&nbsp;: this is the "true" pitch value corresponding to the recorded sound. For example, if you record an engine at 100 RPM, the resulting sound will have a reference pitch value of 100, and will be correctly pitched by the source engine RPM (as long as the units match, if not, use the modifiers). You can also use the keyword "unpitched" to say that this sound shall never be pitched. 
-* a WAV file name. This WAV file must be mono, uncompressed PCM.
+* a WAV file name. This WAV file **MUST** be mono, and exported as 16-bit PCM with no metadata.
 
 ### start_sound 
 
