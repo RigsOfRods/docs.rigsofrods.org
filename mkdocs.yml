@@ -1,0 +1,26 @@
+site_name: Rigs of Rods documentation
+site_description: Rigs of Rods project documentation
+site_author: Rigs of Rods Community
+site_url: https://docs.rigsofrods.org/
+
+docs_dir: source
+
+repo_name: RigsOfRods/docs.rigsofrods.org
+repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
+edit_uri: blob/master/source/
+
+copyright: 'Copyright &copy; 2020 Rigs of Rods Community'
+
+theme:
+  name: 'material'
+  favicon: ror-favicon.png
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+  features:
+    - instant
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
