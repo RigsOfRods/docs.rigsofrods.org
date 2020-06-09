@@ -10,7 +10,6 @@ Race script generator
 		- Add introductory text to every fieldset
 		- Add colour to fieldset width low opcacity (or only to big fieldsets)
 -->
-<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">-->
 
 <style type="text/css">
     body, fieldset {
