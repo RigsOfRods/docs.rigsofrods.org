@@ -58,6 +58,9 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Zoom in/out (fast) </td><td>SHIFT+Numpad 9 / SHIFT+Numpad 3</td></tr>
     <tr><td>Free camera   </td><td>SHIFT+C</td></tr>
     <tr><td>Fixed camera  </td><td>ALT+C</td></tr>
+    <tr><td>Decrease FOV  </td><td>Numpad 7</td></tr>
+    <tr><td>Increase FOV  </td><td>CTRL+Numpad 7</td></tr>
+    <tr><td>Reset FOV  </td><td>SHIFT+Numpad 7</td></tr>
 </table>
 
 #### Time
@@ -229,10 +232,7 @@ because some planes could have more than 4 engines and you couldn't control them
 
 ## Config file 'input.map'
 
-For all keys, see the [input.map](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/input.map) file on GitHub.
-
-
-This file defines all key alias for RoR. It has the following format:
+This file defines all key alias for RoR, located at `Documents\My Games\Rigs of Rods\config` by default. It has the following format:
 
     EVENT_NAME    EVENT_TYPE    MAPPING
 
@@ -862,6 +862,8 @@ Joystick 0:
 Click `Export Keymap` then select your device from the list.
 
 ![9](/images/InputMappingTool-5.png)
+
+Browse to `Documents\My Games\Rigs of Rods\config`, set the name you copied earlier in the `File name` box, then click `Open` to save the file.
 
 ![10](/images/InputMappingTool-6.png)
 
