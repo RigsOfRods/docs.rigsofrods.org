@@ -1,10 +1,7 @@
 Wheels, axles, steering
 ============
 
-
-
 ## Wheels
-
 
  wheels are simply structures that the game creates automatically out of standard features to make creating vehicles easier. They are simply [nodes](/vehicle-creation/fileformat-truck#nodes) connected by [beams](/vehicle-creation/fileformat-truck#beams) with a contactable [submesh](/vehicle-creation/fileformat-truck#submesh). They are unique in that they will rotate when given input to accelerate.
  
@@ -22,27 +19,30 @@ The optional snode option allows for game-managed [Axle Rigidity](#axle-rigidity
     </div>
  </div>
  
-<pre>wheels
+```
+wheels
 ;radius, width, numrays, node1, node2, snode, braked, propulsed, arm, mass,  spring,   damping,   facemat          bandmat
 0.54,   1,  12,       1,     2,   9999,    1,      1,         25,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
 0.54,   1,  12,       3,     4,   9999,    1,      1,         23,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
-</pre>
+```
  
  <p>First step: The snode is Disabled ( The data is 9999), the nodes 1 and 4 are hanging just down. </p>
 
- <pre>wheels
- ;radius, width, numrays, node1, node2, snode, braked, propulsed, arm, mass,  spring,   damping,   facemat          bandmat
- 0.54,   1,  12,       1,     2,      3,    1,      1,         25,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
+```
+wheels
+;radius, width, numrays, node1, node2, snode, braked, propulsed, arm, mass,  spring,   damping,   facemat          bandmat
+0.54,   1,  12,       1,     2,      3,    1,      1,         25,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
 0.54,   1,  12,       3,     4,   9999,    1,      1,         23,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
-</pre>
+```
  
  Second step: You type 3 to the snode option of the wheel 1,2. Now node 1 will always have the ambition to be at the same "line" like the nodes 2 and 3. </p>
 
- <pre>wheels
+```
+wheels
 ;radius, width, numrays, node1, node2, snode, braked, propulsed, arm, mass,  spring,   damping,   facemat          bandmat
 0.54,   1,  12,       1,     2,      3,    1,      1,         25,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
 0.54,   1,  12,       3,     4,      2,    1,      1,         23,  400.0, 800000.0, 4000.0, tracks/wheelface tracks/wheelband2
-</pre>
+```
 
  Third step: You type 2 to the snode option of the wheel 3,4. 
  
