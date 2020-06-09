@@ -19,6 +19,13 @@ theme:
     accent: "blue"
   features:
     - instant
+    - tabs
+
+plugins:
+  - search # necessary for search to work
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
 
 markdown_extensions:
   - admonition
