@@ -215,26 +215,6 @@ The first three numbers are the X, Y and Z coordinates of the spawning point. Th
 
 If these lines do not exist in the terrn code, the game will eventually crash or the vehicle will spawn at the standard spawning position
 
-Decals
-------
-
-(since 0.38.3) (not working in 0.38.67)
-
-it is possible to define textures that should overlay the ground. RoR will create a simple 2d plane at the specified position that is aligned to the ground and apply the specified texture to it
-
-![](DecalsExample.jpg "DecalsExample.jpg")
-
-    // decal x, y(ignored), z, width, height, rotation(ignored), material
-    decal 479.694,10.55,512.767, 1, 1, 0, decals/stone1
-    decal 479.694,0,512.767, 1, 1, 0, decals/stone1
-    decal 478.694,0,512.767, 1, 1, 0, decals/stone1
-    decal 477.694,0,512.767, 1, 1, 0, decals/stone1
-    decal 479.694,0,513.767, 1, 1, 0, decals/stone2
-    decal 478.694,0,513.767, 1, 1, 0, decals/stone2
-    decal 477.694,0,513.767, 1, 1, 0, decals/stone2
-
-this will add 5 stones to the terrain
-
 Caelum Sky
 ----------
 

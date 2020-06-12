@@ -1,4 +1,4 @@
-Rules: Stolen Content
+Stolen Content
 ============
 
 
