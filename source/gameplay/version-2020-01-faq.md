@@ -20,10 +20,6 @@ But as we made more changes and bugfixes, mods became dependent on the [developm
 
 With RoR now considered 'stable enough' to do another stable release, we wanted to break away from release candidates. The original plan was to finally officially release 0.4.8.0, however compatibility issues with the Documents user folder (explained below) made it nearly impossible to correctly handle upgrades. After long discussions on Discord and GitHub([1](https://github.com/RigsOfRods/rigs-of-rods/issues/2415) / [2](https://github.com/RigsOfRods/rigs-of-rods/pull/2422)) we ultimately decided to change the version format.
 
-### How does this affect me?
-
-With the new version format, new releases will happen much more frequently.  Nearly every month, you'll be able to download a new version. These versions may be packed with new features or just have some minor bugfixes. Official releases will be more 'in-line' with our [development repository](https://github.com/RigsOfRods/rigs-of-rods/).
-
 ## User folder location change 
 
 Since 0.38, the user directory, where mods and configuration files are stored, was named after the version number (`Rigs of Rods 0.38/0.39/0.4`). All 0.4 versions have used the same `Documents\Rigs of Rods 0.4` directory. Over time, the config file format has received major updates, making it increasingly difficult to be backwards compatible. In most cases, attempting to upgrade from older versions caused RoR to either outright crash or have other major glitches.

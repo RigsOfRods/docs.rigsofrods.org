@@ -1,4 +1,4 @@
-Rules: Singularity
+Singularity
 ============
 
 

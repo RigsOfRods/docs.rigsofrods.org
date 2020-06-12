@@ -1,4 +1,4 @@
-Rules: Begging
+Begging
 ============
 
 

@@ -8,7 +8,7 @@ It is organized into sections to make finding answers easier.
 
 ## Supported operating systems 
  
-Rigs of Rods supports 64 bit Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
+Rigs of Rods is officially supported on 64 bit Windows 7 SP1, Windows 8/8.1, Windows 10, and Linux.
 
 Windows XP & Vista are no longer supported as of version 0.4.8 RC5. 
 

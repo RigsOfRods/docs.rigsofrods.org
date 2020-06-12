@@ -1,6 +1,9 @@
 Making custom HUD
 ============
 
+!!! danger
+    In a future RoR release, the current MyGUI-based dashboard UI will be replaced by a much more modder-friendly DearIMGUI dashboard. This page will become obsolete once that happens. See [this GitHub pull request](https://github.com/RigsOfRods/rigs-of-rods/pull/2490) for more info.
+
 
 ## Fundamental Concepts
 
