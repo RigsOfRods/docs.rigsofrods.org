@@ -147,7 +147,7 @@ forset 149-160
 
 Since the vehicle obviously already has a bumper, you will have to remove or comment (`;`) the original bumper line. For example: 
  
- ```
+```
 ;39, 62, 34,    0.50,    0.32,     -0.5,   0,    180,    180, K3500_FBump.mesh
 ;forset 175-178, 76-79, 28-31
 ```
