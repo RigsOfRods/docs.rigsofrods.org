@@ -8,17 +8,17 @@ Blender mesh editing
 
 ## Introduction 
 
-Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the plug-ins to exporting.
+Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the add-ons to exporting.
 
 **Please read everything carefully and do not skip any steps.**
 
-**If you've created a model yourself and just want to export it to RoR, skip to the [Exporting](#exporting) section.**
+**If you've created a model yourself and just want to export it to RoR, [install the add-ons](#installing-blender-add-ons) and skip to the [Exporting](#exporting) section.**
 
 ## Required software
 
 - Rigs of Rods installed to the default location (`C:\Program Files\Rigs of Rods`)
 - [Blender](https://www.blender.org/download/previous-versions/) (2.79b)
-- [Ogre Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip)
+- [Ogre Import/Export add-ons](https://github.com/CuriousMike56/RoROgreAddons)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
 - A brain, some basic computer knowledge, and some patience
@@ -49,9 +49,9 @@ You should now have a `.mesh.xml` file in the same folder:
 
 We're ready to launch Blender now.
 
-## Installing Blender plug-ins
+## Installing Blender add-ons
 
-First, download the [Ogre Import/Export plug-ins](/download/OGRE_ImportExport_RoR.zip) and place it into any folder. **Do not extract.**
+First, download the latest [Ogre Import/Export add-ons](https://github.com/CuriousMike56/RoROgreAddons/releases) from GitHub (`RoR_ImportExport_*.zip`) and place it into any folder. **Do not extract.**
 
 Now open Blender. Click `File` -> `User Preferences`:
 
@@ -61,13 +61,13 @@ Click `Add-ons` -> `Install from File`:
 
 ![5](/images/blender-edit-userprefs2.png)
 
-Select the `OGRE_ImportExport_RoR.zip` file you downloaded earlier.
+Select the `RoR_ImportExport_*.zip` file you downloaded earlier.
 
 Type `rigs` into the search bar and both add-ons should appear:
 
 ![6](/images/blender-edit-userprefs3.png)
 
-Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`:
+Once both add-ons are enabled by clicking the checkbox, select `Save User Settings`:
 
 ![7](/images/blender-edit-userprefs4.png)
 
@@ -93,8 +93,8 @@ Press the `Z` key twice to get out of that shading mode. You should now see this
 
 !!! warning
     The importer will automatically separate meshes if the `.mesh.xml` contains multiple materials. The object names match the material name. If there's many objects with the same material name, you should be safe to join them by pressing `CTRL+J`:
-    <br>
-    <a href="/images/blender-edit-joiningobjects.png" class="image"><img alt="blender-edit-joiningobjects.png" src="/images/blender-edit-joiningobjects.png" width="620" height="320" /></a>
+	
+    ![blender-edit-joiningobjects.png](/images/blender-edit-joiningobjects.png)
 
 
 It should look similar to this now:
@@ -168,9 +168,9 @@ You're now ready to start editing the mesh. For this tutorial, I removed the exh
 
 ## Setting the object name
 
-Go to the right tool menu and select the triangle icon, then change the name in the box. This will be the name of your object when you export it:
+In the outliner (object list), double-click the object name to rename it. This will be the name of your mesh when exporting.
 
-![26](/images/blender-edit-naming-mesh.png)
+![26](/images/blender-edit-naming-mesh2.png)
 
 In this example, I'll name it `BoxDodgeCummins-NoStacks`.
 
@@ -180,11 +180,7 @@ Now select the circle icon next to the triangle icon and click `New`:
 
 ![27](/images/blender-edit-mat1.png)
 
-In most cases your material name is the one shown in the object tree:
-
-![27.1](/images/blender-edit-mat1.2.png)
-
-You can also open the `.mesh.xml` file in a text editor and search "material":
+The easiest way to find the material name is by opening the `.mesh.xml` file in a text editor and search "material":
 
 ![28](/images/blender-edit-finding-mat.png)
 
@@ -210,8 +206,8 @@ You should now have a new `.mesh.xml` and `.mesh` file in your folder:
 
 The exporter will automatically convert the `.mesh.xml` to `.mesh` as long RoR is installed to the default location.
 
-If you want to preview your exported model, you can use [Ogre Meshy](https://sourceforge.net/projects/ogremeshy/) to view it:
-(You can make a `.material` file if you want it to be textured in Ogre Meshy)
+If you want to preview your exported model, you can use [OgreMeshy](https://forum.rigsofrods.org/resources/ogremeshy.595/) to view it:
+(You can make a `.material` file if you want it to be textured in OgreMeshy)
 
 ![35](/images/blender-edit-preview-ogremeshtool.png)
 
@@ -232,7 +228,10 @@ Congratulations!
 
 #### [Error 2] No such file or directory
 
-You forgot to convert the `.mesh` to `.mesh.xml`.
+You forgot to convert the `.mesh` to `.mesh.xml`, as described in the [Getting started](#getting-started) section.
+
+!!! warning
+	On Linux there is currently a bug preventing `.mesh.xml` imports in uppercase paths (e.g. `/home/user/Downloads/rorimportfiles`. You will have to place the `.mesh` and `.mesh.xml` files into a different folder without uppercases (e.g. `/home/user/rorimportfiles`)
 
 #### Mesh is flipped
 
