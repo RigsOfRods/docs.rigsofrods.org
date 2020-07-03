@@ -20,19 +20,25 @@ As of November 2018, Blender supports creating/editing Node/Beam structures with
 ![blender](/images/blender-nb.png)
 
 Features:
+
 - Full vertex group support
+
 - Automatic column alignment
+
 - Sophisticated vertex position rounding
+
 - Full preservation of the original truck file
+
 - Automatic beam sorting based on the vertex groups
+
 - All node, beam and cab options are preserved during import / export
+
 - All `set_node_defaults`, `set_beam_defaults` and `set_beam_defaults_scale` entries are preserved
 
-### Version warning 
-
-The latest version of Blender (2.80) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/).
-
-If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
+!!! warning 
+	The latest version of Blender (2.8x) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/). 
+	
+	If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
 
 ### Installation 
 
@@ -89,12 +95,17 @@ A Java program made by Gouranga designed for viewing a node/beam structure.
 ![truckviewer](/images/truckviewer.png)
 
 Pros:
+
 - Auto-reloading of the file
+
 - Supports nodes2
+
 - 4 independent views, each can be either be rotated in 3d or snapped to the front/sides/back.
 
 Cons:
+
 - Only displays pure nodes and beams.
+
 - Cannot edit the n/b structure, it is designed only for viewing it.
 
 ### Download 
@@ -103,7 +114,9 @@ Cons:
 
 ## Editorizer
 
-**NOTICE: This program is very old and thus shouldn't be used. It is recommended to create N/Bs using [Blender](#blender) instead.**
+!!! warning
+	This program is very old and thus shouldn't be used to edit existing vehicles. It is recommended to create N/Bs using [Blender](#blender) instead.
+
 
 ![Editorizer](/images/editorizer.png)
 
@@ -113,11 +126,14 @@ The Editorizer is a free program written by Ben for making vehicles. Contributio
 It's a fairly old and simple program. Note you can't use it to create a new vehicle from scratch, you need to manually create a _.truck_ file with a basic structure. A  _.truck_ file with the basic structure has been included to get you started.
 
 Pros:
+
 - Designed for editing node/beam, very feature-rich
+
 - Colors can be changed to suit your liking
 
 Cons:
-- Does not support newer `.truck` sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
+
+- Does not support newer [truck](/vehicle-creation/fileformat-truck/) sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
 
 It is recommended to make a copy of the truck file made for editing, then copy the changes over to your main truck file.
 
