@@ -21,7 +21,7 @@ Place the `*.zip` file inside the `mods` folder, either by cut (CTRL+X) and past
 
 ![repository-install](/images/repository-installing-mod.png) 
 
-You can also organize your mod zips by creating subfolders
+You can also organize your mod zips by creating subfolders (e.g. `mods\cars\DodgeViperGTS.zip`).
 
 That's it! You can launch Rigs of Rods now and your shiny new mod should be ready to use.
 
@@ -43,6 +43,8 @@ Once enabled, open the ![Ubuntu .rigsofrods Folder](/images/ubuntu-rigsofrods.pn
 Place the `*.zip` file inside the `mods` folder, either by cut (CTRL+X) and paste (CTRL+V) or drag and drop. Your mods folder should now have the zip inside: 
 
 ![Ubuntu Mod Installed](/images/ubuntu-installed-mod.png)
+
+You can also organize your mod zips by creating subfolders (e.g. `mods\cars\DodgeViperGTS.zip`).
 
 That's it! You can launch Rigs of Rods now and your shiny new mod should be ready to use.
 
