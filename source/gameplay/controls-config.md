@@ -64,7 +64,7 @@ Input is configured by editing configuration file [input.map](#config-file-input
 </table>
 
 #### Time
-(Sky type must be set to Caelum or SkyX)
+Sky type must be set to Caelum or SkyX. Sandstorm sky does not support time change.
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#DFDD78"><th style="color: #000000">Time Adjust</th><th style="color: #000000">Key</th></tr>
     <tr><td>Change time        </td><td>Numpad + (plus) / Numpad - (minus)</td></tr>
@@ -83,6 +83,9 @@ Input is configured by editing configuration file [input.map](#config-file-input
 
 #### Saves
 
+!!! note
+You can load a savegame from the main menu.
+
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#928578"><th style="color: #000000">Savegames</th><th style="color: #000000">Key</th></tr>
     <tr><td>Quick save</td><td>NUMPAD / (divide)</td></tr>
@@ -98,8 +101,6 @@ Input is configured by editing configuration file [input.map](#config-file-input
     <tr><td>Load slot 4</td><td>ALT+4</td></tr>
     <tr><td>Load slot 5</td><td>ALT+5</td></tr>
 </table>
-
-Note: You can load a savegame from the main menu.
 
 ### Common vehicle controls
 
@@ -124,6 +125,18 @@ Note: You can load a savegame from the main menu.
     <tr><td>Shift down        </td><td>Z        </td></tr>
 </table>
 
+#### Lights
+
+<table style="display: inline-block; vertical-align: top;">
+    <tr bgcolor="#E5A36C"><th style="color: #000000">Misc</th><th>Key</th></tr>
+    <tr><td>Toggle headlights     </td><td>N     </td></tr>
+    <tr><td>Toggle beacons    </td><td>M     </td></tr>
+    <tr><td>Blinker left      </td><td>, (comma) </td></tr>
+    <tr><td>Blinker right     </td><td>. (period)   </td></tr>
+    <tr><td>Blinker hazards  </td><td>- (hyphen)</td></tr>
+    <tr><td>Custom lights (e.g. lightbars) </td><td>CTRL+1, CTRL+2 ... CTRL+9, CTRL+0</td></tr>
+</table>
+
 #### Misc
 
 <table style="display: inline-block; vertical-align: top;">
@@ -131,10 +144,7 @@ Note: You can load a savegame from the main menu.
     <tr><td>Truck horn        </td><td>H     </td></tr>
     <tr><td>Parking brake     </td><td>P     </td></tr>
     <tr><td>Trailer parking brake</td><td>CTRL+P</td></tr>
-    <tr><td>Blinker left      </td><td>COMMA </td></tr>
-    <tr><td>Blinker right     </td><td>DOT   </td></tr>
-    <tr><td>Blinker warn      </td><td>PERIOD</td></tr>
-    <tr><td>Toggle contact    </td><td>X     </td></tr>
+    <tr><td>Toggle contact (ignition)    </td><td>X     </td></tr>
     <tr><td>Starter (hold)    </td><td>S     </td></tr>
     <tr><td>Attach trailer    </td><td>L     </td></tr>
     <tr><td>Inter-wheel differentals</td><td>W</td></tr>
@@ -144,11 +154,9 @@ Note: You can load a savegame from the main menu.
     <tr><td>Secure Load       </td><td>O     </td></tr>
     <tr><td>Show skeleton     </td><td>K     </td></tr>
     <tr><td>Cycle skeleton views </td><td>CTRL+K</td></tr>
-    <tr><td>Toggle lights     </td><td>N     </td></tr>
-    <tr><td>Toggle beacons    </td><td>M     </td></tr>
     <tr><td>Rescue truck      </td><td>R     </td></tr>
-    <tr><td>Particle cannon   </td><td>G     </td></tr>
-    <tr><td>Tire Pressure<br>(not for all trucks)</td><td>RBRACKET [ / LBRACKET ] </td></tr>
+    <tr><td>Particle cannon<br>(e.g. water cannons on fire trucks)   </td><td>G     </td></tr>
+    <tr><td>Tire Pressure<br>(not supported by most vehicles)</td><td>RBRACKET [ / LBRACKET ] </td></tr>
 </table>
 
 #### Commands
@@ -182,8 +190,10 @@ Note: You can load a savegame from the main menu.
     <tr><td>COMMANDS 84</td><td>CTRL + SHIFT + ALT + F12</td></tr>	
 </table>
 
-Notes:
+
+!!! notes
 - Some vehicles use ALT+F4 as a command, which closes the game window. To avoid this press F4 then ALT.
+
 - Some laptops require you to hold the FN key in order to use commands.
 
 ### Aerial and marine controls
