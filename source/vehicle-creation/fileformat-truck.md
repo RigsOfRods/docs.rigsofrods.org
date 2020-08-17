@@ -21,8 +21,6 @@ See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the bui
 -   When the chassis seems to work well; add wheels, suspension, hydros, etc; And then test drive.
 -   When the truck is all working; do the bodywork and texture, and mark most beams as invisible (displaying too many beams has a large performance impact)
 
-To see a simple truck file example, see the [Step by Step Truck Construction](/vehicle-creation/making-softbodies).
-
 ## Is It a Truck, Plane, Train or Boat?
 
 Before we start, let's ask an important question: **Is it a truck, plane, train, or boat?** Or what makes a truck a truck and a plane a plane and a train a train, or a boat a boat? Simple:
@@ -328,11 +326,28 @@ cinecam
 0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
 ```
 
+**Note:** If you have mutiple cinecams, you also need to have multiple `cameras`. You can simply duplicate the line per cinecam. Example:
+
+```
+cameras
+;center, back, left
+0, 2, 1
+0, 2, 1
+0, 2, 1
+
+cinecam
+;  x,   y,   z, <---------8 bindings--------->, Opt: spring, damping, node-weight
+0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
+0.56, 1.0, 1.4, 74, 75, 76, 77, 72, 73, 52, 53,      8000.0,   800.0,        20.0
+0.36, 2.5, 1.9, 70, 75, 73, 76, 74, 79, 53, 50,      8000.0,   800.0,        20.0
+```
+
+
 ### End
 
 This section will stop the parser. Everything after it will be ignored.
 
-Since version 0.4.5, it's optional. In previous versions it's STRICTLY REQUIRED - without it, the vehicle will crash the game.
+Since <span style="background-color:#fb7">\[  Version 0.4.5.0 \]</span>, it's optional. In previous versions it's STRICTLY REQUIRED - without it, the vehicle will crash the game.
 
 ```
 end
