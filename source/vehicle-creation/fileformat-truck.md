@@ -326,7 +326,7 @@ cinecam
 0.66, 2.0, 1.8, 75, 76, 77, 78, 73, 74, 53, 54,      8000.0,   800.0,        20.0
 ```
 
-**Note:** If you have mutiple cinecams, you also need to have multiple `cameras`. You can simply duplicate the line per cinecam. Example:
+**Note:** If you have multiple cinecams, you also need to have multiple `cameras`. You can simply duplicate the line per cinecam. Example:
 
 ```
 cameras
