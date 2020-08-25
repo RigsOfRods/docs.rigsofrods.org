@@ -62,7 +62,7 @@ This means you're trying to join a server that is running an earlier/later RoRNe
 The latest version, 2020.01, supports RoRNet 2.42.
 
 
-## Errors
+## Errors & glitches
 
 #### MSVCP DLLs missing
 
@@ -121,7 +121,42 @@ If this doesn't fix your error, then your GPU is most likely too old to run RoR.
 This error occurs with some Intel integrated graphics chips. Unfortunately there's currently no fix.
 
 More info: [GitHub issue](https://github.com/RigsOfRods/rigs-of-rods/issues/2385)
+
+#### Glitchy vehicle shadows
+
+With some GPUs (mostly integrated ones), shadows on vehicles may appear glitchy: 
+
+![shadows-glitch](/images/shadows-glitch.gif)
+
+This is caused by your GPU not supporting self-shadowing (Shadows from other objects casting onto the vehicle). Please try one of the following workarounds:
+
+##### #1: Disable shadows 
+
+The simplest workaround is to just disable shadows. (Settings -> Graphics -> Set shadows to "None" -> Restart RoR).
+
+##### #2: Enable classic materials
  
+Starting with version 2020.01, an option to enable classic (0.38-era) material shaders is available. This can be found under Settings -> Graphics -> Classic material shaders. 
+
+Currently they do not support self-shadowing, so the glitch is not present using these.
+
+##### #3: Disable self-shadowing from default materials 
+
+If you prefer to use the default materials instead, do the following: 
+
+1. Browse to where RoR is installed. This is usually `C:\Program Files\Rigs of Rods` by default. 
+
+2. Open the `resources` folder, followed by the  `managed_materials` folder. 
+
+3. Copy the `managed_mats_vehicles.material` file onto your Desktop. 
+
+4. Open the file with Notepad (Right click -> Open with -> Notepad)
+
+5. Add `//` to the beginning of the first line: `//import * from "shadows.material"`
+
+6. Save the file, then copy it back to `resources\managed_materials`, overwriting the original file. Allow administrator permission when prompted.
+
+
 
 ## Miscellaneous
 
