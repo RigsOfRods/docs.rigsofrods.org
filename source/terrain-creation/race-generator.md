@@ -13,18 +13,15 @@ Race script generator
 
 <style type="text/css">
     body, fieldset {
-        min-width: 800px;
+        min-width: 400px;
     }
 
     label {
         display: inline-table;
-        width: 150px;
-
-        text-align: right;
     }
 
     .info {
-        color: #555;
+        color: #C1C1C1;
         /*font-size: x-small;*/
     }
 
@@ -32,25 +29,17 @@ Race script generator
         font-style: italic;
     }
 
-    span:hover {
-        /*font-size: small;*/
-        color: #000;
-    }
-
-    #scriptResult {
-        display: block;
-        width: 750px;
+    .scriptResult {
+        width: 100%;
         height: 300px;
-
-        margin-left: 20px;
     }
 
     .checkpointsInputField {
 
-        width: 600px;
+        width: 100%;
         height: 300px;
 
-        vertical-align: top;
+        #vertical-align: top;
     }
 
     .closeIcon {
@@ -64,20 +53,32 @@ Race script generator
         width: 200px;
         height: 30px;
         font-weight: bold;
+		background: #000;
+    }
+	
+    .smallButton {
+		background: #000;
     }
 
     .smallNumberField {
         width: 50px;
+		background: black;
     }
 
     .shortTextField {
         width: 150px;
+		background: #000;
     }
 
     .longTextField {
         width: 428px;
+		background: #000;
     }
-
+	
+	.inputBox {
+		background-color: black;
+	}
+	
     #errorMessageField {
         margin-left: 20px;
     }
@@ -91,7 +92,7 @@ Race script generator
         -moz-border-radius: 10px;
         border-radius: 10px;
 
-        background-color: #FAFAFA;
+        background-color: #333;
     }
 </style>
 
@@ -1250,8 +1251,8 @@ Race script generator
     <div id="formDiv">
     </div>
 
-    <fieldset style="background-color: rgb(238, 238, 238); --darkreader-inline-bgcolor:#1d1f20;"
-              data-darkreader-inline-bgcolor="">
+    <fieldset style="background-color: rgb(1, 1, 1); "
+             
         <legend>General</legend>
 
         <fieldset>
@@ -1264,71 +1265,71 @@ Race script generator
             <br>
 
             <label for="general_terrnFilename">Script filename:</label>
-            <input type="text" id="general_terrnFilename" name="general_terrnFilename">
+            <input type="text" class="inputBox" id="general_terrnFilename" name="general_terrnFilename">
             <span class="info">[optional, the extension of this file should be .as.]</span>
             <br>
         </fieldset>
 
         <fieldset>
             <legend>General abort points (advanced)</legend>
-            <label>&nbsp;</label><span class="intro">The race abort points defined here, will abort whichever race is running at that moment.</span><br>
-            <label for="race_-1_raceAbort">General abort points:</label>
+            <span class="intro">The race abort points defined here, will abort whichever race is running at that moment.</span>
+            <span>General abort points:</span>
             <textarea id="race_-1_raceAbort" class="checkpointsInputField" style="height: 100px;"></textarea><br>
-            <input type="text" id="race_-1_raceAbort_posx" value="pos x" class="smallNumberField"
+            <input type="text"id="race_-1_raceAbort_posx" value="pos x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos x', ' 0.0 ');"
-                   style="margin-left: 154px;">
-            <input type="text" id="race_-1_raceAbort_posy" value="pos y" class="smallNumberField"
+                   style="margin-left: 1px;">
+            <input type="text"id="race_-1_raceAbort_posy" value="pos y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos y', ' 0.0 ');">
-            <input type="text" id="race_-1_raceAbort_posz" value="pos z" class="smallNumberField"
+            <input type="text"id="race_-1_raceAbort_posz" value="pos z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos z', ' 0.0 ');">
-            <input type="text" id="race_-1_raceAbort_rotx" value="rot x" class="smallNumberField"
+            <input type="text"id="race_-1_raceAbort_rotx" value="rot x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot x', ' 0.0 ');">
-            <input type="text" id="race_-1_raceAbort_roty" value="rot y" class="smallNumberField"
+            <input type="text"id="race_-1_raceAbort_roty" value="rot y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot y', ' 0.0 ');">
-            <input type="text" id="race_-1_raceAbort_rotz" value="rot z" class="smallNumberField"
+            <input type="text"id="race_-1_raceAbort_rotz" value="rot z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot z', ' 0.0 ');">
-            <input type="text" id="race_-1_raceAbort_cobj" value="object" class="shortTextField"
+            <input type="text"id="race_-1_raceAbort_cobj" value="object" class="shortTextField"
                    onfocus="javascript: on_checkpointField_focus(this, 'object', ' [default] ');"
                    onblur="javascript: on_checkpointField_blur(this, 'object', ' [default] ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'object', ' [default] ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'object', ' [default] ');">
             <br>
             <label>&nbsp;</label>
-            <input type="text" id="race_-1_raceAbort_cmsg" value="message to show" class="longTextField"
+            <input type="text"id="race_-1_raceAbort_cmsg" value="message to show" class="longTextField"
                    onfocus="javascript: on_checkpointField_focus(this, 'message to show', ' [default] ');"
                    onblur="javascript: on_checkpointField_blur(this, 'message to show', ' [default] ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'message to show', ' [default] ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'message to show', ' [default] ');">
-            <input type="button" value="Add" onclick="javascript: on_fieldAdd_click(-1, 'raceAbort', 'raceAbort');"
+            <input type="button" value="Add" class="smallButton" onclick="javascript: on_fieldAdd_click(-1, 'raceAbort', 'raceAbort');"
                    style="width: 43px;"><br>
-            <span class="info" style="margin-left: 200px;">[Note: Leave the object or message field empty to use the default. You can change the defaults below.]</span>
+            <span class="info" style="margin-left: 1px;">[Note: Leave the object or message field empty to use the default. You can change the defaults below.]</span>
             <br>
 
             <label for="race_-1_defaultAbort">Default abort object:</label>
-            <input type="text" id="race_-1_defaultAbort" name="race_-1_defaultAbort" value="trucktrigger"
+            <input type="text" class="inputBox"id="race_-1_defaultAbort" name="race_-1_defaultAbort" value="trucktrigger"
                    onblur="javascript: enforceDefault(this, 'trucktrigger');">
             <span class="info" id="race_-1_defaultAbort_info">[optional, the object that should be used for race abort points if no object (or [default]) is specified above.]</span>
             <br>
             <label for="race_-1_abortMessage">Default abort message:</label>
-            <input type="text" id="race_-1_abortMessage" name="general_abortMessage" value="[noMessage]"
+            <input type="text" class="inputBox"id="race_-1_abortMessage" name="general_abortMessage" value="[noMessage]"
                    onblur="javascript: enforceDefault(this, '[noMessage]');">
             <span class="info" id="race_-1_abortMessage_info">[optional, the message that should be shown when a race is aborted and the [default] message is used above.]</span>
             <br>
@@ -1352,16 +1353,15 @@ Race script generator
         </fieldset>
     </fieldset>
 
-    <fieldset style="background-color: rgb(238, 238, 238); --darkreader-inline-bgcolor:#1d1f20;"
-              data-darkreader-inline-bgcolor="">
+    <fieldset style="background-color: rgb(1, 1, 1); "
         <legend>Resulting script file</legend>
-        <textarea id="scriptResult"></textarea>
+        <textarea id="scriptResult" class="scriptResult"></textarea>
     </fieldset>
 </form>
 
 <div style="display: none; width: 0px; height: 0px;" id="formTemplate">
-    <fieldset id="race_{RACE_NUMBER}" style="background-color: rgb(238, 238, 238); --darkreader-inline-bgcolor:#1d1f20;"
-              data-darkreader-inline-bgcolor="">
+    <fieldset id="race_{RACE_NUMBER}" style="background-color: rgb(1, 1, 1); "
+             
         <legend>Race {RACE_NUMBER}</legend>
         <div class="closeIcon" onclick="javascript: on_closeIcon_click({RACE_NUMBER});">remove this race</div>
 
@@ -1369,7 +1369,7 @@ Race script generator
             <legend>General race info</legend>
 
             <label for="race_{RACE_NUMBER}_raceName">Race name:</label>
-            <input type="text" id="race_{RACE_NUMBER}_raceName" name="race_{RACE_NUMBER}_raceName">
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_raceName" name="race_{RACE_NUMBER}_raceName">
             <br><br>
 
             <label for="race_{RACE_NUMBER}_laps">Amount of laps:</label>
@@ -1395,12 +1395,12 @@ Race script generator
                 <option value="other...">other...</option>
             </select><br>
             <label for="race_{RACE_NUMBER}_lapsOther">&nbsp;</label>
-            <input type="text" id="race_{RACE_NUMBER}_lapsOther" name="race_{RACE_NUMBER}_lapsOther"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_lapsOther" name="race_{RACE_NUMBER}_lapsOther"
                    style="display: none;" value="10 laps">
             <br>
 
             <label for="race_{RACE_NUMBER}_version">Race version:</label>
-            <input type="text" id="race_{RACE_NUMBER}_version" name="race_{RACE_NUMBER}_version">
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_version" name="race_{RACE_NUMBER}_version">
             <span class="info" id="race_{RACE_NUMBER}_version_info">[optional]</span>
             <br>
         </fieldset>
@@ -1457,59 +1457,59 @@ other race will start.]</span>
             <legend>Checkpoint locations and checkpoint objects</legend>
             <label for="race_{RACE_NUMBER}_checkpoints">Checkpoint coordinates:</label>
             <textarea id="race_{RACE_NUMBER}_checkpoints" class="checkpointsInputField"
-                      onchange="javascript: drawPreview({RACE_NUMBER});"></textarea><br>
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_posx" value="pos x" class="smallNumberField"
+                      onchange="javascript: drawPreview({RACE_NUMBER});"></textarea>
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_posx" value="pos x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos x', ' 0.0 ');"
-                   style="margin-left: 154px;">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_posy" value="pos y" class="smallNumberField"
+                   style="margin-left: 1px;">
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_posy" value="pos y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos y', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_posz" value="pos z" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_posz" value="pos z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos z', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_rotx" value="rot x" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_rotx" value="rot x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot x', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_roty" value="rot y" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_roty" value="rot y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot y', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_rotz" value="rot z" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_rotz" value="rot z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot z', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_chpAdd_cobj" value="object" class="shortTextField"
+            <input type="text"id="race_{RACE_NUMBER}_chpAdd_cobj" value="object" class="shortTextField"
                    onfocus="javascript: on_checkpointField_focus(this, 'object', ' [default] ');"
                    onblur="javascript: on_checkpointField_blur(this, 'object', ' [default] ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'object', ' [default] ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'object', ' [default] ');">
-            <input type="button" value="Add"
+            <input type="button" value="Add" class="smallButton"
                    onclick="javascript: on_fieldAdd_click({RACE_NUMBER}, 'chpAdd', 'checkpoints');"><br>
-            <span class="info" style="margin-left: 200px;">[Note: Leave the object field empty to use the default. You can change the defaults below.]</span>
+            <span class="info" style="margin-left: 1px;">[Note: Leave the object field empty to use the default. You can change the defaults below.]</span>
             <br>
             <label for="race_{RACE_NUMBER}_defaultStart">Default start object:</label>
-            <input type="text" id="race_{RACE_NUMBER}_defaultStart" name="race_{RACE_NUMBER}_defaultStart"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_defaultStart" name="race_{RACE_NUMBER}_defaultStart"
                    value="chp-start" onblur="javascript: enforceDefault(this, 'chp-start');">
             <span class="info" id="race_{RACE_NUMBER}_defaultStart_info">[optional, the start line object that should be used if it wasn't specified with in the checkpointlist above.]</span>
             <br>
             <label for="race_{RACE_NUMBER}_defaultCheckpoint">Default chp object:</label>
-            <input type="text" id="race_{RACE_NUMBER}_defaultCheckpoint" name="race_{RACE_NUMBER}_defaultCheckpoint"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_defaultCheckpoint" name="race_{RACE_NUMBER}_defaultCheckpoint"
                    value="chp-checkpoint" onblur="javascript: enforceDefault(this, 'chp-checkpoint');">
             <span class="info" id="race_{RACE_NUMBER}_defaultCheckpoint_info">[optional, the checkpoint object that should be used for all checkpoints that do not have an object specified in the checkpointlist above.]</span>
             <br>
             <label for="race_{RACE_NUMBER}_defaultFinish">Default finish object:</label>
-            <input type="text" id="race_{RACE_NUMBER}_defaultFinish" name="race_{RACE_NUMBER}_defaultFinish"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_defaultFinish" name="race_{RACE_NUMBER}_defaultFinish"
                    value="chp-start" onblur="javascript: enforceDefault(this, 'chp-start');">
             <span class="info" id="race_{RACE_NUMBER}_defaultFinish_info">[optional, the finish line object that should be used if it wasn't specified with in the checkpointlist above.]</span>
             <br>
@@ -1525,62 +1525,62 @@ other race will start.]</span>
             <legend>Race abort points (advanced)</legend>
             <label for="race_{RACE_NUMBER}_raceAbort">Race abort points:</label>
             <textarea id="race_{RACE_NUMBER}_raceAbort" class="checkpointsInputField" style="height: 100px;"></textarea><br>
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_posx" value="pos x" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_posx" value="pos x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos x', ' 0.0 ');"
-                   style="margin-left: 154px;">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_posy" value="pos y" class="smallNumberField"
+                   style="margin-left: 1px;">
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_posy" value="pos y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos y', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_posz" value="pos z" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_posz" value="pos z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'pos z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'pos z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'pos z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'pos z', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_rotx" value="rot x" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_rotx" value="rot x" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot x', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot x', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot x', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot x', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_roty" value="rot y" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_roty" value="rot y" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot y', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot y', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot y', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot y', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_rotz" value="rot z" class="smallNumberField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_rotz" value="rot z" class="smallNumberField"
                    onfocus="javascript: on_checkpointField_focus(this, 'rot z', ' 0.0 ');"
                    onblur="javascript: on_checkpointField_blur(this, 'rot z', ' 0.0 ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'rot z', ' 0.0 ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'rot z', ' 0.0 ');">
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_cobj" value="object" class="shortTextField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_cobj" value="object" class="shortTextField"
                    onfocus="javascript: on_checkpointField_focus(this, 'object', ' [default] ');"
                    onblur="javascript: on_checkpointField_blur(this, 'object', ' [default] ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'object', ' [default] ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'object', ' [default] ');">
             <br>
             <label>&nbsp;</label>
-            <input type="text" id="race_{RACE_NUMBER}_raceAbort_cmsg" value="message to show" class="longTextField"
+            <input type="text"id="race_{RACE_NUMBER}_raceAbort_cmsg" value="message to show" class="longTextField"
                    onfocus="javascript: on_checkpointField_focus(this, 'message to show', ' [default] ');"
                    onblur="javascript: on_checkpointField_blur(this, 'message to show', ' [default] ');"
                    onmouseover="javascript: on_checkpointField_mouseOver(this, 'message to show', ' [default] ');"
                    onmouseout="javascript: on_checkpointField_mouseOut(this, 'message to show', ' [default] ');">
-            <input type="button" value="Add"
+            <input type="button" value="Add" class="smallButton"
                    onclick="javascript: on_fieldAdd_click({RACE_NUMBER}, 'raceAbort', 'raceAbort');"
                    style="width: 43px;"><br>
-            <span class="info" style="margin-left: 200px;">[Note: Leave the object or message field empty to use the default. You can change the defaults below.]</span>
+            <span class="info" style="margin-left: 1px;">[Note: Leave the object or message field empty to use the default. You can change the defaults below.]</span>
             <br>
 
             <label for="race_{RACE_NUMBER}_defaultAbort">Default abort object:</label>
-            <input type="text" id="race_{RACE_NUMBER}_defaultAbort" name="race_{RACE_NUMBER}_defaultAbort"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_defaultAbort" name="race_{RACE_NUMBER}_defaultAbort"
                    value="trucktrigger" onblur="javascript: enforceDefault(this, 'trucktrigger');">
             <span class="info" id="race_{RACE_NUMBER}_defaultAbort_info">[optional, the object that should be used for race abort points if no object (or [default] object) is specified above.]</span>
             <br>
             <label for="race_{RACE_NUMBER}_abortMessage">Default abort message:</label>
-            <input type="text" id="race_{RACE_NUMBER}_abortMessage" name="general_abortMessage" value="[noMessage]"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_abortMessage" name="general_abortMessage" value="[noMessage]"
                    onblur="javascript: enforceDefault(this, '[noMessage]');">
             <span class="info" id="race_{RACE_NUMBER}_abortMessage_info">[optional, the message that should be shown when a race is aborted and the [default] message is used above.]</span>
             <br>
@@ -1592,12 +1592,12 @@ other race will start.]</span>
             You can define 'race_penalty' points in the odef file of your checkpoint.<br>
 
             <label for="race_{RACE_NUMBER}_penaltySeconds">Penalty seconds:</label>
-            <input type="text" id="race_{RACE_NUMBER}_penaltySeconds" name="race_{RACE_NUMBER}_penaltySeconds"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_penaltySeconds" name="race_{RACE_NUMBER}_penaltySeconds"
                    value="10" onblur="javascript: enforceDefault(this, '10');">
             <span class="info" id="race_{RACE_NUMBER}_penaltySeconds_info">[the amount of seconds that should be added to the lap time when the penalty event is triggered.]</span>
             <br>
             <label for="race_{RACE_NUMBER}_penaltyMessage">Message:</label>
-            <input type="text" id="race_{RACE_NUMBER}_penaltyMessage" name="race_{RACE_NUMBER}_penaltyMessage"
+            <input type="text" class="inputBox"id="race_{RACE_NUMBER}_penaltyMessage" name="race_{RACE_NUMBER}_penaltyMessage"
                    value="[noMessage]" onblur="javascript: enforceDefault(this, '[noMessage]');">
             <span class="info" id="race_{RACE_NUMBER}_penaltyMessage_info">[optional, the message that should be shown when a penalty event is triggered.]</span>
             <br>
