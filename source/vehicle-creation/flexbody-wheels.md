@@ -1,6 +1,15 @@
 Flexbody wheels
 ============
 
+<style type="text/css">
+    .smallNumberField {
+		background: #D8D8D8;
+		color: black;
+    }
+}
+</style>
+
+
 <script type="text/javascript">
 
     // version control necessary in case I change the storage format.
@@ -48,6 +57,8 @@ Flexbody wheels
             $field = document.createElement('input');
             $field.id = 'inside[' + $i + ']';
             $field.type = 'text';
+            $field.style.background = '#D8D8D8';
+            $field.style.color = 'black';
             $field.size = 3;
             $item.appendChild($field);
 
@@ -59,6 +70,8 @@ Flexbody wheels
             $field = document.createElement('input');
             $field.id = 'outside[' + $i + ']';
             $field.type = 'text';
+            $field.style.background = '#D8D8D8';
+            $field.style.color = 'black';
             $field.size = 3;
             $item.appendChild($field);
 
@@ -70,6 +83,8 @@ Flexbody wheels
             $field = document.createElement('input');
             $field.id = 'mesh[' + $i + ']';
             $field.type = 'text';
+            $field.style.background = '#D8D8D8';
+            $field.style.color = 'black';
             $field.size = 15;
             $item.appendChild($field);
             $container.appendChild($item);
@@ -150,12 +165,12 @@ Flexbody wheels
 </script>
 
 <form method="post">
-    Number of wheels <input type="text" id="wheels" onkeyup="BuildFormFields(parseInt(this.value, 10)); ">
-    <br>Wheel rays <input type="text" id="wrays">
-    <br>Chassis nodes <input type="text" id="cnodes">
-    <br>Cameras before wheel section <input type="text" id="cams">
+    Number of wheels <input type="text" id="wheels" class="smallNumberField" onkeyup="BuildFormFields(parseInt(this.value, 10)); ">
+    <br>Wheel rays <input type="text" class="smallNumberField" id="wrays">
+    <br>Chassis nodes <input type="text" class="smallNumberField" id="cnodes">
+    <br>Cameras before wheel section <input type="text" class="smallNumberField" id="cams">
     <div id="wheelFields" style="margin:20px 0px; "></div>
-    <input type="button" value="Generate code" onclick="GenerateCode(this.form)">
+    <input type="button" value="Generate code" class="smallNumberField" onclick="GenerateCode(this.form)">
 </form>
 <div id="fillin" style="white-space: pre; font-family: monospace; ">
 </div>

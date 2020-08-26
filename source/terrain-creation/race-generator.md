@@ -15,15 +15,98 @@ Race script generator
     body, fieldset {
         min-width: 400px;
     }
+	
+@media (prefers-color-scheme: light) {
+    .info {
+        color: #3F3F3F;
+        /*font-size: x-small;*/
+    }
+    .bigButton {
+        width: 200px;
+        height: 30px;
+        font-weight: bold;
+		background: white;
+    }
+	
+    .smallButton {
+		background: white;
+    }
+
+    .smallNumberField {
+        width: 50px;
+		background: white;
+    }
+
+    .shortTextField {
+        width: 150px;
+		background: white;
+    }
+
+    .longTextField {
+        width: 428px;
+		background: white;
+    }
+	
+	.inputBox {
+		background-color: white;
+	}
+    fieldset {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+
+        background-color: #E5E5E5;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .info {
+        color: #C1C1C1;
+        /*font-size: x-small;*/
+    }
+    .bigButton {
+        width: 200px;
+        height: 30px;
+        font-weight: bold;
+		background: #191919;
+    }
+	
+    .smallButton {
+		background: #191919;
+    }
+
+    .smallNumberField {
+        width: 50px;
+		background: #191919;
+    }
+
+    .shortTextField {
+        width: 150px;
+		background: #191919;
+    }
+
+    .longTextField {
+        width: 428px;
+		background: #191919;
+    }
+	
+	.inputBox {
+		background-color: #191919;
+	}
+    fieldset {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+
+        background-color: #333;
+    }
+}
 
     label {
         display: inline-table;
     }
 
-    .info {
-        color: #C1C1C1;
-        /*font-size: x-small;*/
-    }
+
 
     .intro {
         font-style: italic;
@@ -48,36 +131,6 @@ Race script generator
         text-decoration: underline;
         color: red;
     }
-
-    .bigButton {
-        width: 200px;
-        height: 30px;
-        font-weight: bold;
-		background: #000;
-    }
-	
-    .smallButton {
-		background: #000;
-    }
-
-    .smallNumberField {
-        width: 50px;
-		background: black;
-    }
-
-    .shortTextField {
-        width: 150px;
-		background: #000;
-    }
-
-    .longTextField {
-        width: 428px;
-		background: #000;
-    }
-	
-	.inputBox {
-		background-color: black;
-	}
 	
     #errorMessageField {
         margin-left: 20px;
@@ -85,14 +138,6 @@ Race script generator
 
     legend {
         font-weight: bold;
-    }
-
-    fieldset {
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        border-radius: 10px;
-
-        background-color: #333;
     }
 </style>
 
@@ -1251,7 +1296,7 @@ Race script generator
     <div id="formDiv">
     </div>
 
-    <fieldset style="background-color: rgb(1, 1, 1); "
+    <fieldset>
              
         <legend>General</legend>
 
@@ -1353,14 +1398,14 @@ Race script generator
         </fieldset>
     </fieldset>
 
-    <fieldset style="background-color: rgb(1, 1, 1); "
+    <fieldset>
         <legend>Resulting script file</legend>
         <textarea id="scriptResult" class="scriptResult"></textarea>
     </fieldset>
 </form>
 
 <div style="display: none; width: 0px; height: 0px;" id="formTemplate">
-    <fieldset id="race_{RACE_NUMBER}" style="background-color: rgb(1, 1, 1); "
+    <fieldset id="race_{RACE_NUMBER}"
              
         <legend>Race {RACE_NUMBER}</legend>
         <div class="closeIcon" onclick="javascript: on_closeIcon_click({RACE_NUMBER});">remove this race</div>
