@@ -157,6 +157,12 @@ If you prefer to use the default materials instead, do the following:
 6. Save the file, then copy it back to `resources\managed_materials`, overwriting the original file. Allow administrator permission when prompted.
 
 
+#### Airplane spawning crash
+
+If the game crashes when spawning an aircraft, change the Lights setting (Graphics tab) to anything that isn't `None (fastest)`:
+
+![airplane-crash-lights-fix](/images/airplane-crash-lights-fix.png)
+
 
 ## Miscellaneous
 
