@@ -1,7 +1,7 @@
-site_name: Rigs of Rods documentation
+site_name: Rigs of Rods Documentation
 site_description: Rigs of Rods project documentation
 site_author: Rigs of Rods Community
-site_url: https://docs.rigsofrods.org/
+site_url: https://rigsofrods.org/
 
 docs_dir: source
 
