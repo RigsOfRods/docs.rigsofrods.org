@@ -18,7 +18,7 @@ The game should open in a small window:
 
 Before playing, you should first change your settings. Begin by clicking `Settings`.
 
-First, make sure the rendering system is set to `Direct3D9 Rendering Subsystem`. If it's set to `OpenGL Rendering Subsystem`, change it then restart RoR. If Direct3D9 doesn't appear on the list, install the [DirectX Runtime](https://www.microsoft.com/en-us/Download/confirmation.aspx?id=35) and restart your PC.
+First, make sure the rendering system is set to `Direct3D9 Rendering Subsystem`. If it's set to `OpenGL Rendering Subsystem`, change it then restart RoR. If Direct3D9 doesn't appear on the list, install the [DirectX Runtime](https://cloudflare-ipfs.com/ipfs/Qmb5Qix9ikns8n83m2CJgXiFYjjF4i5mLHYVi7xCVuAZG5?filename=directx_Jun2010_redist.exe) and restart your PC.
 
 If you're running Linux, ignore this as DirectX is not available. 
 
