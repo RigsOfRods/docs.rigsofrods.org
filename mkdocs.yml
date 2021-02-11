@@ -28,72 +28,73 @@ plugins:
   - git-revision-date-localized
   - minify:
       minify_html: true
-      
+
 nav:
   - Home: README.md
   - Gameplay:
-    - Beginner's Guide: gameplay/beginners-guide.md
-    - General FAQ: gameplay/general-faq.md
-    - Version 2020.01 FAQ: gameplay/version-2020-01-faq.md
-    - Installing content (mods): gameplay/installing-content.md
-    - Controls and configuration: gameplay/controls-config.md
-    - Aircraft handling: gameplay/aircraft-handling.md
-    - Multiplayer server setup: gameplay/multiplayer-server-setup.md
-    - Jargon: gameplay/jargon.md
+      - Beginner's Guide: gameplay/beginners-guide.md
+      - General FAQ: gameplay/general-faq.md
+      - Version 2020.01 FAQ: gameplay/version-2020-01-faq.md
+      - Installing content (mods): gameplay/installing-content.md
+      - Controls and configuration: gameplay/controls-config.md
+      - Aircraft handling: gameplay/aircraft-handling.md
+      - Multiplayer server setup: gameplay/multiplayer-server-setup.md
+      - Jargon: gameplay/jargon.md
   - Tools and tutorials:
-    - Installing addons: tools-tutorials/addons.md
-    - Blender mesh editing: tools-tutorials/blender-mesh-editing.md
-    - Blender beginner: tools-tutorials/blender-beginner.md
-    - Visual editors: tools-tutorials/visual-editors.md
-    - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
+      - Installing addons: tools-tutorials/addons.md
+      - Blender mesh editing: tools-tutorials/blender-mesh-editing.md
+      - Blender beginner: tools-tutorials/blender-beginner.md
+      - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
+      - Visual editors: tools-tutorials/visual-editors.md
+      - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
   - Vehicle creation:
-    - Truck file format: vehicle-creation/fileformat-truck.md
-    - Soundscript file format: vehicle-creation/fileformat-soundscript.md
-    - Alternate skins (skinzips): vehicle-creation/alternate-skins.md 
-    - Engine: vehicle-creation/engine.md 
-    - Flares: vehicle-creation/flares.md 
-    - Flexbody wheels: vehicle-creation/flexbody-wheels.md
-    - Aircraft and aerodynamics: vehicle-creation/aircraft-and-aerodynamics.md 
-    - Rail vehicles: vehicle-creation/rail-vehicles.md 
-    - Boats: vehicle-creation/boats.md 
-    - Motorbikes: vehicle-creation/motorbikes.md 
-    - Tracked vehicles: vehicle-creation/tracked-vehicles.md 
-    - Vehicle (Node/Beam) concepts: vehicle-creation/vehicle-concepts.md 
-    - Suspension: vehicle-creation/suspension.md 
-    - Wheels, axles, steering: vehicle-creation/wheels-axles-steering.md 
-    - Special components: vehicle-creation/special-components.md
-    - Weight tuning: vehicle-creation/weight-tuning.md 
-    - Making custom dashboard HUD: vehicle-creation/making-custom-hud.md 
+      - Truck file format: vehicle-creation/fileformat-truck.md
+      - Soundscript file format: vehicle-creation/fileformat-soundscript.md
+      - Alternate skins (skinzips): vehicle-creation/alternate-skins.md
+      - Engine: vehicle-creation/engine.md
+      - Flares: vehicle-creation/flares.md
+      - Flexbody wheels: vehicle-creation/flexbody-wheels.md
+      - Aircraft and aerodynamics: vehicle-creation/aircraft-and-aerodynamics.md
+      - Rail vehicles: vehicle-creation/rail-vehicles.md
+      - Boats: vehicle-creation/boats.md
+      - Motorbikes: vehicle-creation/motorbikes.md
+      - Tracked vehicles: vehicle-creation/tracked-vehicles.md
+      - Vehicle (Node/Beam) concepts: vehicle-creation/vehicle-concepts.md
+      - Suspension: vehicle-creation/suspension.md
+      - Wheels, axles, steering: vehicle-creation/wheels-axles-steering.md
+      - Special components: vehicle-creation/special-components.md
+      - Weight tuning: vehicle-creation/weight-tuning.md
+      - Making custom dashboard HUD: vehicle-creation/making-custom-hud.md
   - Terrain creation:
-    - Intro to terrain creation: terrain-creation/intro.md
-    - Terrn2 file format: terrain-creation/terrn2-subsystem.md 
-    - Converting old terrain to terrn2 format: terrain-creation/terrain-conversion-terrn2.md 
-    - Editing terrain objects: terrain-creation/editing-terrain-objects.md 
-    - Object (odef) file format: terrain-creation/object-format.md 
-    - Collision meshes: terrain-creation/collision-meshes.md 
-    - L3DT Map Making: terrain-creation/l3dt-map-making.md
-    - Shadows: terrain-creation/shadows.md
-    - Building rail tracks: terrain-creation/building-rail-tracks.md 
-    - Race script generator: terrain-creation/race-generator.md 
-    - Scripting: terrain-creation/scripting.md
-    - RAW Heightmaps: terrain-creation/raw-heightmaps.md 
-    - Alpha splatting: terrain-creation/custom-texture-splatting.md 
-    - Old (0.3x) terrain file format: terrain-creation/old-terrn-subsystem.md 
-  - Rules: 
-    - Terms of Service: rules/terms-of-service.md
-    - UNWRITTEN: rules/rules-unwritten.md 
-    - STOLEN CONTENT: rules/rules-stolen-content.md 
-    - NICE: rules/rules-nice.md 
-    - BACKSEAT: rules/rules-backseat.md 
-    - BEGGING: rules/rules-begging.md 
-    - USELESS: rules/rules-useless.md 
-    - SEARCH: rules/rules-search.md 
-    - GRAMMAR: rules/rules-grammar.md 
-    - SINGULARITY: rules/rules-singularity.md 
-    - LINKS: rules/rules-links.md
-    - Crash Report Privacy Policy: legal/crash-report-privacy-policy.md
-    - Branding: tools-tutorials/branding.md
-    
+      - Intro to terrain creation: terrain-creation/intro.md
+      - Terrn2 file format: terrain-creation/terrn2-subsystem.md
+      - Converting old terrain to terrn2 format: terrain-creation/terrain-conversion-terrn2.md
+      - Editing terrain objects: terrain-creation/editing-terrain-objects.md
+      - Object (odef) file format: terrain-creation/object-format.md
+      - Collision meshes: terrain-creation/collision-meshes.md
+      - L3DT Map Making: terrain-creation/l3dt-map-making.md
+      - Shadows: terrain-creation/shadows.md
+      - Building rail tracks: terrain-creation/building-rail-tracks.md
+      - Race script generator: terrain-creation/race-generator.md
+      - Scripting: terrain-creation/scripting.md
+      - RAW Heightmaps: terrain-creation/raw-heightmaps.md
+      - Alpha splatting: terrain-creation/custom-texture-splatting.md
+      - Old (0.3x) terrain file format: terrain-creation/old-terrn-subsystem.md
+  - Rules:
+      - Terms of Service: rules/terms-of-service.md
+      - UNWRITTEN: rules/rules-unwritten.md
+      - STOLEN CONTENT: rules/rules-stolen-content.md
+      - NICE: rules/rules-nice.md
+      - BACKSEAT: rules/rules-backseat.md
+      - BEGGING: rules/rules-begging.md
+      - USELESS: rules/rules-useless.md
+      - SEARCH: rules/rules-search.md
+      - GRAMMAR: rules/rules-grammar.md
+      - SINGULARITY: rules/rules-singularity.md
+      - LINKS: rules/rules-links.md
+      - Crash Report Privacy Policy: legal/crash-report-privacy-policy.md
+      - Branding: tools-tutorials/branding.md
+
 markdown_extensions:
   - admonition
   - toc:
