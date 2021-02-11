@@ -23,9 +23,6 @@ theme:
     - instant
     - tabs
 
-extra_css:
-  - stylesheets/ror.css
-
 plugins:
   - search # necessary for search to work
   - git-revision-date-localized
