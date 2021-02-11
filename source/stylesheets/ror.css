@@ -1,4 +1,5 @@
 body {
+  color: white;
   background-color: #1d1d1d;
 }
 
@@ -32,4 +33,12 @@ body {
 
 .md-nav__link[data-md-state="blur"] {
   color: #b5b5b59e;
+}
+
+.md-footer {
+  background-color: #131313de;
+}
+
+.md-footer-meta {
+  background-color: #101010;
 }
