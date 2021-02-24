@@ -16,7 +16,7 @@ theme:
     favicon: ror-favicon.png
     logo: images/branding/RoR_Logo_TT.png
     palette:
-        scheme: preference
+        scheme: slate
         primary: "blue"
         accent: "blue"
     features:
