@@ -2321,13 +2321,13 @@ Optional parameters:
 -   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
         For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
     -   Special value: `12` - Parking brake indicator (not working in version 2021.04)        
--   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = `-2`</span>;
+-   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -2</span>;
         Delay between on/off change, in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
     -   Special value: `-1` to use the default value of 500ms.
     -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.        
--   **Flare size**: <span style="color:#BD0058">Real number</span>;
+-   **Flare size**: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -1</span>;
         This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
--   **Material Name**: <span style="color:#BD0058">String</span>;
+-   **Material Name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = 'default'</span>;
         This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
 
 Examples:
