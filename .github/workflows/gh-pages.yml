@@ -1,0 +1,40 @@
+name: Build docs
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare timestamp
+        id: cache_timestamp
+        shell: cmake -P {0}
+        run: |
+          string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
+          message("::set-output name=timestamp::${current_date}")
+
+      - name: Cache pip
+        uses: actions/cache@v2.1.4
+        with:
+          key: pip-${{ steps.cache_timestamp.outputs.timestamp }}
+          path: ~/.cache/
+          restore-keys: |
+            pip-
+
+      - name: Install mk-docs
+        run: pip install -r requirements.txt
+
+      - name: Build
+        run: mkdocs build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true
