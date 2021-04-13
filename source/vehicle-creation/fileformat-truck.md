@@ -68,6 +68,7 @@ Every keyword (directive, inline-section or section) which has parameters should
     <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Data type</span>;
     <span style="color:#0B8A00">default = `VALUE`</span>;
     Optional parameters have "(optional)" text after them.
+    Alternatively, the parameter list may be split into "Required parameters" list, followed by "Optional parameters" list, see 'flares'.
 -   **Required nullable parameter**
     <span style="color:#666">(nullable)</span>: <span style="color:#BD0058">Data type</span>; 
     <span style="color: #008079">Empty value = `-1`</span>;
@@ -2294,40 +2295,42 @@ Flares allow you to add lights to your truck. They work as light sources in OGRE
 
 See also: [Flares Tutorial](/vehicle-creation/flares)
 
-Parameters:
+Required parameters:
 
--   **Reference node**: <span style="color:#BD0058">Node ID</span>; Node which defines origin of flare-placement coordinate system
--   **X axis node**: <span style="color:#BD0058">Node ID</span>; Node which defines X-axis of flare-placement coordinate system
--   **Y axis node**: <span style="color:#BD0058">Node ID</span>; Node which defines Y-axis of flare-placement coordinate system
--   **Flare X offset**: <span style="color:#BD0058">Real number</span>; Flare position on X axis in % of distance from ref-node to X-node
--   **Flare Y offset**: <span style="color:#BD0058">Real number</span>; Flare position on Y axis in % of distance from ref-node to Y-node
--   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>; Type of flare
+-   **Reference node**: <span style="color:#BD0058">Node ID</span>;
+        Node which defines origin of flare-placement coordinate system
+-   **X axis node**: <span style="color:#BD0058">Node ID</span>;
+        Node which defines X-axis of flare-placement coordinate system
+-   **Y axis node**: <span style="color:#BD0058">Node ID</span>;
+        Node which defines Y-axis of flare-placement coordinate system
+-   **Flare X offset**: <span style="color:#BD0058">Real number</span>;
+        Flare position on X axis in % of distance from ref-node to X-node
+-   **Flare Y offset**: <span style="color:#BD0058">Real number</span>;
+        Flare position on Y axis in % of distance from ref-node to Y-node
+        
+Optional parameters:
+
+-   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>;
+        Type of flare.
     -   `f` (default mode when not stated): Headlight.
     -   `b` : Brakelight.
     -   `l` : Left blinker.
     -   `r` : Right blinker.
     -   `R` : Reverse light (on when driving in R gear)
-    -   `u` : User controlled light. (i.e. fog light) (see control numbers)
--   **Control number**: <span style="color:#BD0058">Decimal number</span>; - This determines how this light is switched on and off, if you chose a user controlled light. Valid user defined control numbers are `0-500`. If you chose a non-user controlled light(i.e. brake light) you should put `-1` here. `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on.
- 
-Some custom control numbers found in 0.38+:
-    
-	-   `11` Clutch
-    -   `12` Parking Brake
-    -   `40` Starter
-    -   `45` Axle Lock
-    -   `55` Steer right
-    -   `56` Steer left
-    -   `65` Hide GUI
-	
--   **Blink delay (miliseconds)**: <span style="color:#BD0058">Decimal number</span>; <span style="color:#0B8A00">default = `-2` (special)</span>; &lt;!--
+    -   `u` : User controlled light. (i.e. fog light) (see control numbers)        
+-   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
+        For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
+    -   Special value: `12` - Parking brake indicator (not working in version 2021.04)        
+-   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = `-2`</span>;
+        Delay between on/off change, in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
+    -   Special value: `-1` to use the default value of 500ms.
+    -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.        
+-   **Flare size**: <span style="color:#BD0058">Real number</span>;
+        This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
+-   **Material Name**: <span style="color:#BD0058">String</span>;
+        This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
 
---&gt;This defines how long the delay is between the light changes in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
-
--   -   Special value: `-1` to use the default value of 500ms.
-    -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.
--   **Flare size**: <span style="color:#BD0058">Real number</span>; This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
--   **Material Name**: <span style="color:#BD0058">String</span>; This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
+Examples:
 
 ```
 flares
@@ -2339,8 +2342,8 @@ flares
 ;example for a custom brake light
 51,  1, 79,    0.23,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
 
-;example for a user controlled Fog Light (by light control-event 1)
-51,  1, 79,    0.23,    0.50,    u,             0,          0,  0.3 myTruck/MyFogFlare
+;example for a user controlled Fog Light (toggled by CTRL+1)
+51,  1, 79,    0.23,    0.50,    u,             1,          0,  0.3 myTruck/MyFogFlare
 ```
 
 ### Flares2
