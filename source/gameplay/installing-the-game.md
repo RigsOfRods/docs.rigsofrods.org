@@ -5,6 +5,8 @@ Installing the game
 
 ### Downloading
 
+To get started, download the latest version of the game from our [homepage](https://www.rigsofrods.org/).
+
 ![download](/images/bg-download2021.png)
 
 From here, choose which package you would like to install. We recommend the Installer for beginner users. 
