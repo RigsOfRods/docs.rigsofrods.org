@@ -219,277 +219,44 @@ link=speedo_kph
 
 ## Input sources
 
-Color code represents the input type
-
-<table border="1">
-<tr>
-<td><b>Link-Name</b></td>
-<td><b>Description</b></td>
-<td><b>Type / Values / Ranges</b></td>
-<td><b>Active when</b></td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>rpm</b></td>
-<td>Engine RPM</td>
-<td>Float: 0 - max truck RPM</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>speedo_kph</b></td>
-<td>Wheel Speed in kilometer per hour</td>
-<td>Float: unlimited, minus if driving backwards</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>speedo_mph</b></td>
-<td>Wheel Speed in miles per hour</td>
-<td>Float: unlimited, minus if driving backwards</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>engine_turbo</b></td>
-<td>Engines Turbo PSI value</td>
-<td>Float: unlimited</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>engine_ignition</b></td>
-<td><i>true</i> if engine has contact, <i>false</i> if not</td>
-<td>Boolean: true or false</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>engine_battery</b></td>
-<td><i>true</i> if engine has contact and is nor running, <i>false</i> if not</td>
-<td>Boolean: true or false</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>engine_clutch_warning</b></td>
-<td><i>true</i> if engine torque is greater than the clutch force, <i>false</i> if not</td>
-<td>Boolean: true or false</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>engine_gear</b></td>
-<td>Gear number, negative for reverse</td>
-<td>Integer: -1 for first reverse gear, 0 for neutral, 1 for first gear, etc</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>engine_num_gear</b></td>
-<td>Number of available gears, does not change</td>
-<td>Integer: i.e. 6 for six usable gears</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ddffdd">
-<td><b>engine_gear_string</b></td>
-<td>String that shows the gears in relation to the number of gears</td>
-<td>Character: "&lt;current gear&gt; / &lt;num gears&gt;" or "N" or "R"</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>engine_auto_gear</b></td>
-<td>Automatic gear (R/N/D/1/2)</td>
-<td>Integer: same as gear but for automatic</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>engine_clutch</b></td>
-<td>Current clutch value</td>
-<td>Float: 0 (not pressed) to 1 (fully pressed down)</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>brake</b></td>
-<td>Current brake value</td>
-<td>Float: 0 (not pressed) to 1 (fully pressed down)</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>accelerator</b></td>
-<td>Current accelerator value</td>
-<td>Float: 0 (not pressed) to 1 (fully pressed down)</td>
-<td>Engine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>roll</b></td>
-<td>Current cabin roll - values represents angle in degree</td>
-<td>Float: unlimited</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>roll_corr</b></td>
-<td>Current cabin roll targeted by active shocks - values represents angle in degree</td>
-<td>Float: unlimited</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>roll_corr_active</b></td>
-<td><i>true</i> when the active shocks are working</td>
-<td>Boolean: true/false</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>pitch</b></td>
-<td>Current cabin pitch - values represents angle in degree</td>
-<td>Float: unlimited</td>
-<td>Always</td>
-</tr>
-
-
-<tr style="background-color:#ffddff">
-<td><b>parkingbrake</b></td>
-<td><i>true</i> if parking brake is on</td>
-<td>Boolean: true/false</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>locked</b></td>
-<td><i>true</i> if any hooks are locked to something</td>
-<td>Boolean: true/false</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>low_pressure</b></td>
-<td><i>true</i> if hydraulics cannot work as the RPM is too low</td>
-<td>Boolean: true/false</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>lights</b></td>
-<td><i>true</i> if headlights are on</td>
-<td>Boolean: true/false</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>tractioncontrol_mode</b></td>
-<td>TractionControl (TC) mode</td>
-<td>Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>antilockbrake_mode</b></td>
-<td>Anti Lock Brake (ALB) mode</td>
-<td>Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ffffdd">
-<td><b>ties_mode</b></td>
-<td>Ties locking state</td>
-<td>Integer: 0-2: 0 = not tied, 1 = prelock (currently tightening), 2 = tied (locked)</td>
-<td>Always</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>screw_throttle_X</b></td>
-<td>Boat Screw Throttle. X from 0 to 5 (DD_MAX_SCREWPROP)</td>
-<td>Float: unlimited</td>
-<td>Screwprop exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>screw_steer_X</b></td>
-<td>Boat Screw Steering direction. X from 0 to 5 (DD_MAX_SCREWPROP)</td>
-<td>Float: unlimited, -1 = left, +1 = right?</td>
-<td>Screwprop exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>water_depth</b></td>
-<td>Depth of water below lowest node</td>
-<td>Float: unlimited</td>
-<td>Screwprop exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>water_speed</b></td>
-<td>Speed on water in knots (1 Nautical Mile/Hour)</td>
-<td>Float: unlimited</td>
-<td>Screwprop exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>aeroengine_throttle_X</b></td>
-<td>Airplane Engine Throttle. X from 0 to 5 (DD_MAX_AEROENGINE)</td>
-<td>Float: 0-1</td>
-<td>Aeroengine exists</td>
-</tr>
-
-<tr style="background-color:#ffddff">
-<td><b>aeroengine_failed_X</b></td>
-<td>Airplane Engine Failure. X from 0 to 5 (DD_MAX_AEROENGINE)</td>
-<td>Boolean: true if failed</td>
-<td>Aeroengine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>aeroengine_rpm_X</b></td>
-<td>Airplane Engine RPM. X from 0 to 5 (DD_MAX_AEROENGINE)</td>
-<td>Float: 0 to aeroengine max RPM</td>
-<td>Aeroengine exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>airspeed</b></td>
-<td>Speed above ground in knots/hour</td>
-<td>Float: unlimited</td>
-<td>Aeroengine or wing exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>wing_aoa_X</b></td>
-<td>Wings Angle of Attack. X from 0 to 5 (DD_MAX_WING)</td>
-<td>Float: unlimited</td>
-<td>Wing exists</td>
-</tr>
-
-<tr style="background-color:#ddffff">
-<td><b>altitude</b></td>
-<td>Altitude above ground</td>
-<td>Float: unlimited</td>
-<td>Aeroengine or wing exists</td>
-</tr>
-
-<tr style="background-color:#ddffdd">
-<td><b>altitude_string</b></td>
-<td>Altitude above ground - string</td>
-<td>Characters: three character altitude display: "000"</td>
-<td>Aeroengine or wing exists</td>
-</tr>
-
-<tr style="background-color:#dddddd">
-<td><b>WORK IN PROGRESS</b></td>
-<td>MORE TO COME....</td>
-<td></td>
-<td></td>
-</tr>
-
-</table>
+| <div style="width:165px">Method</div> | Description                                                                       | Type / Values / Ranges                       | Active when    |
+| ------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------- | -------------- |
+| `rpm`                     | Engine RPM                                                                        | Float: 0 - max truck RPM                     | Engine exists  |
+| `speedo_kph`              | Wheel Speed in kilometer per hour                                                 | Float: unlimited, minus if driving backwards | Always         |
+| `speedo_mph`              | Wheel Speed in miles per hour                                                     | Float: unlimited, minus if driving backwards |Always|
+| `engine_turbo`            | Engines Turbo PSI value                                                           | Float: unlimited                             |Engine exists|
+| `engine_ignition`         | true if engine has contact, false if not                                          | Boolean: true or false                       |Engine exists|
+| `engine_battery`          | true if engine has contact and is nor running, false if not                       | Boolean: true or false                       |Engine exists|
+| `engine_clutch_warning`   | true if engine torque is greater than the clutch force, false if not              | Boolean: true or false                       |Engine exists |
+| `engine_gear`             | Number of available gears, does not change            | Integer: -1 for first reverse gear, 0 for neutral, 1 for first gear, etc | Engine exists  |
+| `engine_num_gear`         | Gear number, negative for reverse                                                 | Integer: i.e. 6 for six usable gears         | Engine exists  |
+| `engine_gear_string`      | String that shows the gears in relation to the number of gears                    | Character: "<current gear> / <num gears>" or "N" or "R"| Engine exists  |
+| `engine_auto_gear`        | Automatic gear (R/N/D/1/2)                                                        | Integer: same as gear but for automatic  |Engine exists|
+| `engine_clutch`           | Current clutch value                                                              |Float: 0 (not pressed) to 1 (fully pressed down)|Engine exists|
+| `brake`                   | Current brake value                                                               |Float: 0 (not pressed) to 1 (fully pressed down)	|Always|
+| `accelerator`             | Current accelerator value                                                         |Float: 0 (not pressed) to 1 (fully pressed down)	|Engine exists|
+| `roll`                    | Current cabin roll - values represents angle in degree                            |Float: unlimited	|Always|
+| `roll_corr`               | Current cabin roll targeted by active shocks - values represents angle in degree  |Float: unlimited	|Always|
+| `roll_corr_active`        | true when the active shocks are working                                           |Boolean: true/false	|Always|
+| `pitch`                   | Current cabin pitch - values represents angle in degree                           |Float: unlimited	|Always|
+| `parkingbrake`            | true if parking brake is on                                                       |Boolean: true/false	|Always|
+| `locked`                  | true if any hooks are locked to something                                         |Boolean: true/false	|Always|
+| `low_pressure`            | true if hydraulics cannot work as the RPM is too low                              |Boolean: true/false	|Always|
+| `lights`                  | true if headlights are on                                                         |Boolean: true/false	|Always|
+| `tractioncontrol_mode`    | TractionControl (TC) mode                                                         |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
+| `antilockbrake_mode`      | Anti Lock Brake (ALB)                                                             |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
+| `ties_mode`               | Ties locking state                        |Integer: 0-2: 0 = not tied, 1 = prelock (currently tightening), 2 = tied (locked)	|Always|
+| `screw_throttle_X`        | Boat Screw Throttle. X from 0 to 5 (DD_MAX_SCREWPROP)                             |Float: unlimited	|Screwprop exists|
+| `screw_steer_X`           | Boat Screw Steering direction. X from 0 to 5 (DD_MAX_SCREWPROP)                   |Float: unlimited, -1 = left, +1 = right?	|Screwprop exists|
+| `water_depth`             | Depth of water below lowest node                                                  |Float: unlimited	|Screwprop exists|
+| `water_speed`             | Speed on water in knots (1 Nautical Mile/Hour)                                    |Float: unlimited	|Screwprop exists|
+| `aeroengine_throttle_X`   | Airplane Engine Throttle. X from 0 to 5 (DD_MAX_AEROENGINE)                       |Float: 0-1	|Aeroengine exists|
+| `aeroengine_failed_X`     | Airplane Engine Failure. X from 0 to 5 (DD_MAX_AEROENGINE)                        |Boolean: true if failed	|Aeroengine exists|
+| `aeroengine_rpm_X`        | Airplane Engine RPM. X from 0 to 5 (DD_MAX_AEROENGINE)                            |Float: 0 to aeroengine max RPM	|Aeroengine exists|
+| `airspeed`                | Speed above ground in knots/hour                                                  |Float: unlimited	|Aeroengine or wing exists|
+| `wing_aoa_X`              | Wings Angle of Attack. X from 0 to 5 (DD_MAX_WING)                                |Float: unlimited	|Wing exists|
+| `altitude`                | Altitude above ground                                                             |Float: unlimited	|Aeroengine or wing exists|
+| `altitude_string`         | Altitude above ground - string                                                    |Characters: three character altitude display: "000"|Aeroengine or wing exists|
 
 ## Quickstart
 
