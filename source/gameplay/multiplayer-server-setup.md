@@ -34,7 +34,7 @@ Got that? Great! Let's begin.
 
 ### Download
 
-First, download `rorserver-2020.01-windows.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
+First, download `rorserver-2021.04-windows.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
 
 Extract the zip into a new folder:
 ![server-filelist-win](/images/server-filelist-win.png)
@@ -87,7 +87,7 @@ Please see the [troubleshooting](#troubleshooting) section if you receive an err
 
 I will assume you're running the server on a 64-bit VPS with SSH/FTP access and have `unzip` and `nano` installed.
 
-First, download `rorserver-2020.01-linux.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
+First, download `rorserver-2021.04-linux.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
 
 Upload the file to your VPS using an FTP client such as WinSCP or FileZilla.
 
@@ -95,7 +95,7 @@ Now SSH into your VPS and change to the directory where you uploaded the zip fil
 
 Extract the zip with the following command:
 
-`unzip rorserver-2020.01-linux.zip -d rorserver`
+`unzip rorserver-2021.04-linux.zip -d rorserver`
 
 The server files should now be located in the `rorserver` folder:
 
@@ -260,7 +260,7 @@ If you didn't setup an authorization file, you can safely ignore this error mess
 
 `Network fatal error: server uses a different protocol version`
 
-You need to download the correct game version to match your server version. Version 2020.01 supports RoRNet 2.42, the latest server protocol.
+You need to download the correct game version to match your server version. Version 2021.04 supports RoRNet 2.43, the latest server protocol.
 
 The latest version may be downloaded from the [homepage](https://www.rigsofrods.org/).
 
