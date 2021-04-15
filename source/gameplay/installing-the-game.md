@@ -5,13 +5,15 @@ Installing the game
 
 ### Downloading
 
-To get started, download the latest version of the game from our [homepage](https://www.rigsofrods.org/).
+![download](/images/bg-download2021.png)
 
-![download](/images/bg-ror-download.png)
+From here, choose which package you would like to install. We recommend the Installer for beginner users. 
+
+![options](/images/bg-downloadopt2021.png)
 
 If you're running Linux, you can download the game by following [these instructions](https://forum.rigsofrods.org/threads/test-build-version-0-4-8-rc4.1217/). 
 
-Once downloaded, double-click the file to start the installer.
+You will be redirected to Sourceforge, and the file will automatically download. Once downloaded, double-click the file to start the installer.
 
 ### Windows SmartScreen warning
 
