@@ -13,9 +13,9 @@ From here, choose which package you would like to install. We recommend the Inst
 
 ![options](/images/bg-downloadopt2021.png)
 
-If you're running Linux, you can download the game by following [these instructions](https://forum.rigsofrods.org/threads/test-build-version-0-4-8-rc4.1217/). 
-
 You will be redirected to Sourceforge, and the file will automatically download. Once downloaded, double-click the file to start the installer.
+
+**If you're running Linux, you can download the game by following [these instructions](https://forum.rigsofrods.org/threads/test-build-version-0-4-8-rc4.1217/).**
 
 ### Windows SmartScreen warning
 
