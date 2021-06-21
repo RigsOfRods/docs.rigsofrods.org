@@ -258,6 +258,9 @@ link=speedo_kph
 | `wing_aoa_X`              | Wings Angle of Attack. X from 0 to 5 (DD_MAX_WING)                                |Float: unlimited	|Wing exists|
 | `altitude`                | Altitude above ground                                                             |Float: unlimited	|Aeroengine or wing exists|
 | `altitude_string`         | Altitude above ground - string                                                    |Characters: three character altitude display: "000"|Aeroengine or wing exists|
+| `signal_turnleft`         | Left turn signal is lit.                                                          |Boolean
+| `signal_turnright`        | Right turn signal is lit.                                                         |Boolean
+| `signal_warning`          | Warning signal is lit.                                                            |Boolean
 
 ## Quickstart
 
