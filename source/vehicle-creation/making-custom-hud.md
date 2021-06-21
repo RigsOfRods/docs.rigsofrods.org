@@ -2,7 +2,8 @@ Making custom HUD
 ============
 
 !!! danger
-    In a future RoR release, the current MyGUI-based dashboard UI will be replaced by a much more modder-friendly DearIMGUI dashboard. This page will become obsolete once that happens. See [this GitHub pull request](https://github.com/RigsOfRods/rigs-of-rods/pull/2490) for more info.
+    This feature is being redone, see [this GitHub pull request](https://github.com/RigsOfRods/rigs-of-rods/pull/2764) for details.
+    This page will mostly remain relevant for the new system.
 
 
 ## Fundamental Concepts
@@ -257,6 +258,9 @@ link=speedo_kph
 | `wing_aoa_X`              | Wings Angle of Attack. X from 0 to 5 (DD_MAX_WING)                                |Float: unlimited	|Wing exists|
 | `altitude`                | Altitude above ground                                                             |Float: unlimited	|Aeroengine or wing exists|
 | `altitude_string`         | Altitude above ground - string                                                    |Characters: three character altitude display: "000"|Aeroengine or wing exists|
+| `signal_turnleft`         | Left turn signal is lit.                                                          |Boolean
+| `signal_turnright`        | Right turn signal is lit.                                                         |Boolean
+| `signal_warning`          | Warning signal is lit.                                                            |Boolean
 
 ## Quickstart
 
