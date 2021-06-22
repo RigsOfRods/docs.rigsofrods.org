@@ -1,0 +1,44 @@
+body {
+  color: white;
+  background-color: #1d1d1d;
+}
+
+.md-typeset {
+  font-size: 0.7rem;
+}
+
+.md-typeset h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.md-typeset h2 {
+  font-size: 1rem;
+}
+.md-typeset p {
+  margin: 0.2rem 0;
+}
+
+.md-header {
+  background-color: #226699;
+}
+
+.md-search__input {
+  font-size: 0.65rem;
+}
+
+.md-nav__list {
+  color: #b7b7b7;
+}
+
+.md-nav__link[data-md-state="blur"] {
+  color: #b5b5b59e;
+}
+
+.md-footer {
+  background-color: #131313de;
+}
+
+.md-footer-meta {
+  background-color: #101010;
+}

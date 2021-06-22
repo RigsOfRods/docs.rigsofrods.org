@@ -1,0 +1,277 @@
+EXAMPLE TRUCK: McPherson struts with slidenodes
+ 
+author chassis 40199 Creak
+
+fileinfo -1, 146, 1
+
+description
+This is an example vehicle. It features McPherson strut front suspension and double wishbone suspension in the rear.
+end_description
+ 
+globals
+1000, 0, tracks/semi
+ 
+engine
+;Turbo-Hydramatic THM250, 3-Speed
+;min rpm, max rpm, torque, diff, R,    N,    1,    2,    3
+1500.0,   4500.0,  850.0,  4.57, 2.07, 9.99, 2.52, 1.52, 1.00, -1.0
+ 
+engoption
+;slow shifts, smooth driving for the old 3- and 4-speed transmissions 
+;inertia, type, clutchforce, shifttime, clutchtime, postshifttime
+0.125, c, 400.0, 0.5, 0.75, 0.5
+
+torquecurve
+100,  1.5
+500,  1.5
+750,  0.85
+900,  0.4
+1200, 0.65
+1500, 0.76
+2000, 0.88
+2500, 1.00
+3500, 0.98
+4000, 0.96
+4500, 0.92
+5000, 0.825
+5500, 0.65
+6000, 0.15
+
+brakes
+2500, 6000
+ 
+nodes
+;grp:chassis
+0, 0.5, 0.5, 0.5, n
+1, 0.5, 0.5, -0.5, n
+2, 0.5, 0.75, 0.5, n
+3, 0.5, 0.75, -0.5, n
+4, 1, 0.5, 0.5, 
+5, 1, 0.5, -0.5, 
+6, 1, 0.75, 0.5, 
+7, 1, 0.75, -0.5, 
+8, 3, 0.5, 0.5, 
+9, 3, 0.5, -0.5, 
+10, 3, 0.75, 0.5, 
+11, 3, 0.75, -0.5, 
+12, 3.5, 0.5, 0.5, 
+13, 3.5, 0.5, -0.5, 
+14, 3.5, 0.75, 0.5, 
+15, 3.5, 0.75, -0.5, 
+;grp:shock mounts
+16, 0.75, 1.1, 0.65, n
+17, 0.75, 1.1, -0.65, n
+18, 3.25, 1.1, 0.55, n
+19, 3.25, 1.1, -0.55, n
+;grp:front wheel nodes
+20, 0.75, 0.405, 0.95, n
+21, 0.75, 0.4, 0.75, n
+22, 0.75, 0.4, -0.75, n
+23, 0.75, 0.405, -0.95, n
+;grp:front suspension
+24, 0.75, 0.7, 0.7075, n
+25, 0.75, 0.7, -0.7075, n
+26, 1.1, 0.4, 0.66, n
+27, 1.1, 0.4, -0.66, n
+;grp:rear wheel nodes
+28, 3.25, 0.455, 0.95, n
+29, 3.25, 0.45, 0.75, n
+30, 3.25, 0.45, -0.75, n
+31, 3.25, 0.455, -0.95, n
+;grp:rear suspension
+32, 3.25, 0.7, 0.75, n
+33, 3.25, 0.7, -0.75, n
+34, 3.5, 0.45, 0.75, n
+35, 3.5, 0.45, -0.75, n
+;central hydro mount
+36, 1, 0.45, 0, c
+
+beams
+set_beam_defaults -1, -1, -1, -1, 0.02, tracks/beam
+;chassis
+0, 1, v
+0, 2, v
+0, 3, i
+0, 4, v
+0, 5, i
+0, 6, i
+0, 7, i
+1, 2, i
+1, 3, v
+1, 4, i
+1, 5, v
+1, 6, i
+1, 7, i
+2, 3, v
+2, 4, i
+2, 5, i
+2, 6, v
+2, 7, i
+3, 4, i
+3, 5, i
+3, 6, i
+3, 7, v
+4, 5, v
+4, 6, v
+4, 7, i
+5, 6, i
+5, 7, v
+6, 7, v
+4, 8, v
+4, 9, i
+4, 10, i
+4, 11, i
+5, 8, i
+5, 9, v
+5, 10, i
+5, 11, i
+6, 8, i
+6, 9, i
+6, 10, v
+6, 11, i
+7, 8, i
+7, 9, i
+7, 10, i
+7, 11, v
+8, 9, v
+8, 10, v
+8, 11, i
+9, 10, i
+9, 11, v
+10, 11, v
+8, 12, v
+8, 13, i
+8, 14, i
+8, 15, i
+9, 12, i
+9, 13, v
+9, 14, i
+9, 15, i
+10, 12, i
+10, 13, i
+10, 14, v
+10, 15, i
+11, 12, i
+11, 13, i
+11, 14, i
+11, 15, v
+12, 13, v
+12, 14, v
+12, 15, i
+13, 14, i
+13, 15, v
+14, 15, v
+17, 7, v
+17, 3, v
+17, 6, i
+17, 2, i
+16, 6, v
+16, 2, v
+16, 3, i
+16, 7, i
+16, 17, i
+19, 15, v
+19, 11, v
+19, 14, i
+19, 10, i
+18, 14, v
+18, 10, v
+18, 15, i
+18, 11, i
+19, 18, i
+36, 0, i
+36, 1, i
+36, 4, i
+36, 5, i
+36, 6, v
+36, 7, v
+;front suspension
+20, 21, v
+21, 24, v
+20, 24, v
+20, 26, v
+21, 26, v
+24, 26, v
+21, 0, v
+21, 4, v
+22, 23, v
+22, 27, v
+23, 27, v
+22, 25, v
+23, 25, v
+27, 25, v
+22, 1, v
+22, 5, v
+;rear suspension
+29, 28, v
+29, 32, v
+29, 34, v
+28, 34, v
+28, 32, v
+34, 32, v
+29, 8, v
+29, 12, v
+32, 10, v
+32, 14, v
+34, 12, v
+30, 31, v
+30, 33, v
+31, 33, v
+30, 35, v
+31, 35, v
+33, 35, v
+30, 13, v
+30, 9, v
+33, 15, v
+33, 11, v
+35, 13, v
+;rail beams for the slidenodes, very soft since they have to compress with the suspension
+set_beam_defaults 100, 2, -1, -1, 0.02, tracks/beam
+16, 21
+17, 22
+set_beam_defaults -1, -1, -1, -1, 0.02, tracks/beam
+
+cinecam
+;x,y,z, 8 bindings
+1.35, 1.4, 0, 2, 3, 6, 7, 10, 11, 14, 15
+ 
+cameras
+;center,back,left
+7, 11, 6
+ 
+slidenodes
+;id, node id list
+24, 16, 21
+25, 17, 22
+
+;Slidenodes are used to stabilize the McPherson struts. The first one holds node 24 in line with node 16 and 21, the second one does the same for the nodes 25, 17 and 22.
+
+shocks
+;id1, id2, spring, damping, shortbound, longbound, precomp, options
+;front
+16, 24, 50000, 3000, 0.5, 0.075, 1.05
+17, 25, 50000, 3000, 0.5, 0.075, 1.05
+;rear
+18, 29, 50000, 3000, 0.30, 0.025, 1.05
+19, 30, 50000, 3000, 0.30, 0.025, 1.05
+
+hydros
+;node1, node2, factor
+36, 26, -0.25
+36, 27,  0.25
+
+wheels
+;radius, width, numrays, node1, node2, snode, braked, propulsed, arm, mass,  spring,   damping,   facemat          bandmat
+;front
+0.375, 0.3, 16, 20, 21, 21, 4, 1, 8, 55.0, 125000.0, 850.0, tracks/wheelface tracks/wheelband1
+0.375, 0.3, 16, 22, 23, 22, 4, 1, 9, 55.0, 125000.0, 850.0, tracks/wheelface tracks/wheelband1
+;rear
+0.375, 0.3, 16, 28, 29, 29, 1, 1, 4, 55.0, 125000.0, 850.0, tracks/wheelface tracks/wheelband1
+0.375, 0.3, 16, 30, 31, 30, 1, 1, 5, 55.0, 125000.0, 850.0, tracks/wheelface tracks/wheelband1
+
+fusedrag
+;less air drag
+1, 13, autocalc, 0.25
+
+end
+
