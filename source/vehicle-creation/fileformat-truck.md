@@ -3009,7 +3009,7 @@ Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored o
 
 -   **tachoMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/Tacho</span>; The name of the tachometer face material. (must be defined in a material file).
 -   **speedoMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/Speedo</span>; The name of the speedometer face material. (must be defined in a material file).
--   **Speedo max value (kph)**: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = 140</span>; The highest number that is on the speedometer. (values 10-32000) Speedometer needle goes from -140° to 140°.
+-   **speedoMax**: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = 140</span>; The highest number that is on the speedometer (kph). (values 10-32000) Speedometer needle goes from -140° to 140°.
 -   **useMaxRPM**: <span style="color:#BD0058">0 or 1</span>; <span style="color:#0B8A00">default = 0</span>; \[Yes/No\] Whether or not to use the max rpm (in the engine section) as the highest number on the tachometer. Note that your actual max rpm is MaxRPM+20%. Do not include the 20% on your tachometer or it will be inaccurate. Tachometer needle is from -120° to 120°.
 -   **helpMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/black</span>; The help material (a picture that shows command instructions). NOTE: This value overrides settings from [section "help"](#help)
 
