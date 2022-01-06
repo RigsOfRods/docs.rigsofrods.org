@@ -11,7 +11,7 @@ The RoR.log is a file which contains information from the last session from Rigs
 
 ### A mod
 
-Downloadable game content. The word stands for 'modification', but may describe any content ranging from actually modified vehicles to original and self-contained ones. Maps and other downloads aren't usually reffered to as 'mod' directly, but some terms, such as 'mod cache', include them.
+Downloadable game content. The word stands for 'modification', but may describe any content ranging from actually modified vehicles to original and self-contained ones. Maps and other downloads aren't usually referred to as 'mod' directly, but some terms, such as 'mod cache', include them.
 
 ### A cache (a mod cache)
 
@@ -73,7 +73,7 @@ Visible connections between nodes. Beams do not have any mass and do not interac
 
 ### AO, AO Bake
 
-Ambient occlusion, a very signifficant light/shadow effect used in 3D modelling.
+Ambient occlusion, a very significant light/shadow effect used in 3D modelling.
 
 AO baking is the process of automated generation of AO textures.
 
@@ -91,7 +91,7 @@ Freeware program for making n/b structures.
 
 ### Flares
 
-Flares are lights in Rigs of Rods. The name refers to their visualization - a 2d flare image, the classic simple depicition of a light source in 3D games. 
+Flares are lights in Rigs of Rods. The name refers to their visualization - a 2d flare image, the classic simple depiction of a light source in 3D games. 
 
 ### Props
 

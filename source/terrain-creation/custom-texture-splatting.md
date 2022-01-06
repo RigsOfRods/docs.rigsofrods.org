@@ -90,7 +90,7 @@ These settings are OK for our use but it is useful to understand their meaning: 
 
 Here you have to reference the images you prepared before. AlphaMap1 is your RGB image. AlphaMap2 isn't used as you didn't activate the corresponding channels. Fill Splat 1,2,3 with the name of your detailed textures.
 
-    6.   You just have to tune the terrain CFG file by enabling the vertexnormals (that will automatically shade your map) and adding the name of the material to use for apha-splatting (so replace "DemoSplatTerrainShader" by your material name):
+    6.   You just have to tune the terrain CFG file by enabling the vertexnormals (that will automatically shade your map) and adding the name of the material to use for alpha-splatting (so replace "DemoSplatTerrainShader" by your material name):
 
     ## The name of the material you will define to shade the terrain 
     CustomMaterialName=DemoSplatTerrainShader
@@ -202,7 +202,7 @@ This defines how your terrain should be shaded. Leave this pass as it is for now
 
 #### Referencing your material in the terrain CFG file
 
-You just have to tune the terrain CFG file by enabling the vertexnormals (that will automatically shade your map) and adding the name of the material to use for apha-splatting (so replace "DemoSplatTerrainShader" by your material name):
+You just have to tune the terrain CFG file by enabling the vertexnormals (that will automatically shade your map) and adding the name of the material to use for alpha-splatting (so replace "DemoSplatTerrainShader" by your material name):
 
     ## The name of the material you will define to shade the terrain
     CustomMaterialName=RoRwiki-alpha
@@ -211,7 +211,7 @@ You just have to tune the terrain CFG file by enabling the vertexnormals (that w
 
 Now include everything in your terrain ZIP file (alpha maps, detailed textures, material file, CFG), fire up RoR and cross your fingers!
 
-## Last advices
+## Last advice
 
 And now it only begins!
 

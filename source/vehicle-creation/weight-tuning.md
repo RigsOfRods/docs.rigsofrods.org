@@ -9,15 +9,15 @@ Weight tuning
 **A guide to tune your trucks to a realistic weight**
 
 I will try to explain here how to tune your trucks weight without loosing it characteristics.
-A lot of things have changed with the recent physics updates and there is no need for overweighted trucks at all in ROR anymore.
+A lot of things have changed with the recent physics updates and there is no need for overweighed trucks at all in ROR anymore.
 
 
 This guide is based on RoR version 0.36.3+.
 
 
-All templates in this guide are free to use, you dont need to give any credits.
+All templates in this guide are free to use, you don't need to give any credits.
 
-Why go for a realistic weight ? Well, RoR gets more and more realistic pyhsics in the last updates, so i think for gameplay and especially multiplayer trucks should have realistic weights in the future, so loading, lifting and crashing stuff works propper.
+Why go for a realistic weight ? Well, RoR gets more and more realistic physics in the last updates, so i think for gameplay and especially multiplayer trucks should have realistic weights in the future, so loading, lifting and crashing stuff works propper.
 Since the new physics support this, here is your tutorial:
 
 Here we go...first of all a template truck:
@@ -75,7 +75,7 @@ wheels
 0.45, 0.3, 10,  13,  11,9999, 1, 1,  20, 22.5, 5000.0, 600.0, tracks/wheelface tracks/wheelband1
 ```
 
-Really light weight wheels wich work fine with light trucks. 
+Really light weight wheels which work fine with light trucks. 
 
 If the wheels collapse too often or explode when hitting a wall, gently add some kg and test until you are fine. 
 
@@ -150,32 +150,20 @@ Open RoRConfig -> Debug tab -> Select "Beam Break Debug". This will log broken b
 
 So now spawn your truck, enter it and see it explode.
 
+If it does not explode, you didn't push the limits hard enough, if you are fine with your weight and it works for you, you are successfully understood and managed to use the contents of this tutorial.
 
-If it does not explode, you didnt push the limits hard enough, if you are fine with you weight and it works for you, you are successfully understood and managed to use the contents of this tutorial.
-
-
-Else, you need to see if the truck desintegrates or the wheels explode. You might enable the replay mode in the confuigurator and use it to see.
-
+Else, you need to see if the truck disintegrates or the wheels explode. You might enable the replay mode in the configurator and use it to see.
 
 If the trucks "walks/strafes" around your wheels are too light or their damping is too high. Fix that and try again
 
 If the truck explodes or simply some beams break, exit ror and open your ror log (Located in `Rigs of Rods/logs/RoR.log`)
 
-Search for "xxx" in the log file, the first entry is the beam that broke first. Write down the node numbers, open you truck file and add some kg to both of the nodes.
+Search for "xxx" in the log file, the first entry is the beam that broke first. Write down the node numbers, open your truck file and add some kg to both of the nodes.
 
 Spawn your truck and do this until you can spawn your truck without braking one single beam
 
-When you managed to spawn your truck without any broken beam, start testing it. You might find some more beams that brake when jumping/landing hard or using commands etc.
+When you managed to spawn your truck without any broken beam, start testing it. You might find some more beams that break when jumping/landing hard or using commands etc.
 
-Procedure is always the same, look into you RoR.log file, identify the nodes wich were attached to breaking beams and gently rise their weight until you got them working propper.
+The procedure is always the same, look into your RoR.log file, identify the nodes which were attached to breaking beams and gently rise their weight until you got them working properly.
 
-Overall, this way of weight tuning should lead to a fast and simple way to build really light weight trucks.
-
-
-
-
-
-
-
-
-
+Overall, this way of weight tuning should lead to a fast and simple way to build really lightweight trucks.

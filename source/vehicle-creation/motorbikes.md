@@ -11,7 +11,7 @@ Based off [this archived forum thread](http://archives.rigsofrods.net/old-forum/
 
 Motorbikes are counter-intuitive, to turn left, you must steer right a little first and vice-versa. It is because of this that the player cannot control the steering directly (with hydros) because the response time is too long and there is no feedback like when you ride a bicycle. So you must use [animators](/vehicle-creation/fileformat-truck#animators) and the `roll` option. This is what we use to turn the front wheel.
 
-The roll means the angle between the camera plane and the ground plane, so you can adjust it by rotating the camera. This is the main way of controlling the bike, you essentialy trick the bike into thinking its falling onto one side and it will always try to be level. In other words, you're not steering, just controlling the lean angle.
+The roll means the angle between the camera plane and the ground plane, so you can adjust it by rotating the camera. This is the main way of controlling the bike, you essentially trick the bike into thinking its falling onto one side and it will always try to be level. In other words, you're not steering, just controlling the lean angle.
 
 ![motorbike](/images/motorbike-scheme.png)
 
@@ -72,7 +72,7 @@ You can control the lean angle of the bike by controlling the lean angle of the 
 
 ## Mass
 
-Due to RoR I didnt bother trying to get my bike too light, It wasn't a key issue. 
+Due to RoR I didn't bother trying to get my bike too light, It wasn't a key issue. 
 If you want to get a realistic weight the biggest issue will be the wheels, 
 they are designed to work best on trucks and if your bike is 100kg, then there is clearly going to be a problem.
 
@@ -95,7 +95,7 @@ engoption
 
 ## Suspension
 
-Should be quite stiff with high damping to stop the bike bouncing and jigglying around. Any shaking is bad for the stabilization and control.
+Should be quite stiff with high damping to stop the bike bouncing and jiggling around. Any shaking is bad for the stabilization and control.
 
 ## Example Bike
 

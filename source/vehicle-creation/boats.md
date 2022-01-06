@@ -20,7 +20,7 @@ Once you find your mistake, it will float.
  
 Step1: To create a chassis, or setup for the screwprop, 
 you must have 3 nodes in a triangular shape
-and stabalizing it with beams,
+and stabilizing it with beams,
   
 The picture illustrates the setup. Please imagine the box is actually a boat-hull :)
  

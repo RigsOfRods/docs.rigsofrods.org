@@ -1777,7 +1777,7 @@ A preview of the checkpoint layout will be shown.
 
 At the end of each coordinate line is the name of the checkpoint object. This defines the checkpoint visuals.
 
-Each line can have a different checkpoint object. However, for simplicity's sake, you can set the default object names in the `Default start / checkpoint / finish object` sections. These objects will be used if you specifiy a checkpoint name in the coordinates list as `[default]`.
+Each line can have a different checkpoint object. However, for simplicity's sake, you can set the default object names in the `Default start / checkpoint / finish object` sections. These objects will be used if you specify a checkpoint name in the coordinates list as `[default]`.
 
 By default, RoR includes these checkpoint models:
 

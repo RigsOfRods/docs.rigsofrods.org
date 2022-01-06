@@ -49,7 +49,7 @@
 ## Open a truck file
 
    <p>To open a truck file, simply click on "Open file" under "Actions" and navigate to your desired truck file.</p> 
-   <small><b>Note:</b> nodeSnap supports all Rigs of rods's truck file extentions.</small>
+   <small><b>Note:</b> nodeSnap supports all Rigs of rods's truck file extensions.</small>
 
 ## Interface
 
@@ -186,7 +186,7 @@
          <img alt="" src="/images/nodeSnap-13.jpg" class="thumbimage" /></a>  
       </div>
    </div>
-   <p>nodeSnap allows you to do an offset on the specificed axis.</p>
+   <p>nodeSnap allows you to do an offset on the specified axis.</p>
    <small>All you have to do is to specify the offset (in RoR's one unit of distance) and how many times you want to duplicate the structure</small>
 
    <div class="thumb tleft">
@@ -201,7 +201,7 @@
          <img alt="" src="/images/nodeSnap-14.jpg" class="thumbimage" /></a>  
       </div>
    </div>
-   <p>nodeSnap also allows you to do a mirror on the specificed axis.</p>
+   <p>nodeSnap also allows you to do a mirror on the specified axis.</p>
 
    <div class="thumb tleft">
       <div class="thumbinner" style="width:602px;">
@@ -224,7 +224,7 @@
          <img alt="" src="/images/nodeSnap-18.jpg" class="thumbimage" /></a>  
       </div>
    </div>
-   <p>The edit menu has a few interesting functions. The "Scale" function gives you the ability to scale the whole n/b. The "Move" functions moves the whole n/b by an offset on a specificed axis. The "Rotate" function rotates the whole n/b on a specified axis with a given angle in degrees.</p>
+   <p>The edit menu has a few interesting functions. The "Scale" function gives you the ability to scale the whole n/b. The "Move" functions moves the whole n/b by an offset on a specified axis. The "Rotate" function rotates the whole n/b on a specified axis with a given angle in degrees.</p>
    <p>The "Duplicate Visible" function solves one problem you have when duplicating groups. Instead of duplicating a specific group, all you have to do is to hide all the nodes/groups that you do not want to duplicate, and execute the function, just like duplicating a group.</p>
    <div class="thumb tleft">
       <div class="thumbinner" style="width:602px;">
@@ -243,7 +243,7 @@
    </div>
    <p>The functions are pretty much self explanatory.</p>
    <small><b>Note:</b> nodeSnap has an integrated file watcher. This means that whenever you edit your truck file using a text-editor, nodeSnap will automatically reload the file.</small><br />
-   <small><b>Note 2:</b> nodeSnap has a backup system. Each time you save your file, nodeSnap will make a backup of the previous truckfile and store it inside the ".nodeSnap" folder that is found in the root truck file's directory, orderd by a timestamp.</small><br />
+   <small><b>Note 2:</b> nodeSnap has a backup system. Each time you save your file, nodeSnap will make a backup of the previous truckfile and store it inside the ".nodeSnap" folder that is found in the root truck file's directory, ordered by a timestamp.</small><br />
    <small><b>Note 3:</b> nodeSnap is based on a "project" system, which means, if you leave the editor and go back to the project page, your work will not be lost and you will have an option to go back to your work. (this is integrated for future features)</small>
 
 ### Blueprint system

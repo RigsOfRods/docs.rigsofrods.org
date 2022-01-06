@@ -3,7 +3,7 @@ Controls and configuration
 
 ## Intro
 
-Rigs of Rods is a simulator which strives for maximum reallism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
+Rigs of Rods is a simulator which strives for maximum realism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
 Input is configured by editing configuration file [input.map](#config-file-inputmap) or by using the [Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool). In-game configuration of controls is not implemented yet.
 
@@ -147,8 +147,8 @@ You can load a savegame from the main menu.
     <tr><td>Toggle contact (ignition)    </td><td>X     </td></tr>
     <tr><td>Starter (hold)    </td><td>S     </td></tr>
     <tr><td>Attach trailer    </td><td>L     </td></tr>
-    <tr><td>Inter-wheel differentals</td><td>W</td></tr>
-    <tr><td>Inter-axle differentals</td><td>CTRL+W</td></tr>
+    <tr><td>Inter-wheel differentials</td><td>W</td></tr>
+    <tr><td>Inter-axle differentials</td><td>CTRL+W</td></tr>
     <tr><td>Transfer case (2WD/4WD)</td><td>SHIFT+W</td></tr>
     <tr><td>Alternate gear ratios</td><td>ALT+W</td></tr>
     <tr><td>Secure Load       </td><td>O     </td></tr>
@@ -806,7 +806,7 @@ To begin adding inputs, click `Add`.
 
 ![6](/images/InputMappingTool-2.png)
 
-Select the event you want to assign an input to. In this exanmple, I will use `TRUCK_ACCELERATE`
+Select the event you want to assign an input to. In this example, I will use `TRUCK_ACCELERATE`
 
 Then select the correct input type:
 
