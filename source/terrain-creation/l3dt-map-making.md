@@ -387,7 +387,7 @@ And finally, zip all your files up and place them into your `packs`/`mods` folde
 
 Now launch RoR and load your terrain!
 
-If everything went well, your terrain should look almost indentical to how it does in L3DT's Sapphire:
+If everything went well, your terrain should look almost identical to how it does in L3DT's Sapphire:
 
 ![29](/images/L3DT-ingame1.png)
 

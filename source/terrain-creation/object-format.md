@@ -60,7 +60,7 @@ After that, several sections can follow (`beginbox`, `beginmesh`, `playanimation
 
 The `.odef` file must be always closed with `end`
 
-If there are no Begin box nor Begin mesh sections, the object will be throughable. 
+If there are no Begin box nor Begin mesh sections, the object will have no collisions. 
 
 ## Commands 
 

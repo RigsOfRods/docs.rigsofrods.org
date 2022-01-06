@@ -2,7 +2,7 @@ How to contribute to community projects using GitHub
 ============
 
 
-## Preperation
+## Preparation
 
 This tutorial assumes you already have:
 * A registered [GitHub Account](https://github.com/join)
@@ -39,7 +39,7 @@ After you click on `Open in Desktop` a dialog will appear. This dialog will be d
 
 Make sure `GitHubDesktop.exe` is highlighted and hit `Open link`.
 
-If you have no option here you need to install GitHub Desktop (see [Preperation](#preperation)). 
+If you have no option here you need to install GitHub Desktop (see [Preparation](#preparation)). 
   
 ![6](/images/github-6.png)
 

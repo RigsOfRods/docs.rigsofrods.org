@@ -84,7 +84,7 @@ Predefined Curve Example:
 
 The first number is RPM where the power begins, and the second defines power as a percent of total torque.
 
-It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overev area defined.
+It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overrev area defined.
 
 The following example would be good for a maximum engine RPM set to `2800`.
 
@@ -121,5 +121,5 @@ Idle: `~600` RPM
 
 Max:  `1900` RPM
 
-Slight and constant torque increase over the used RPM bandwidth, hard torque dropoff in the overev area.
+Slight and constant torque increase over the used RPM bandwidth, hard torque dropoff in the overrev area.
 

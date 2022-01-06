@@ -500,7 +500,7 @@ fileinfo      000UID,          107,             2
 
 The help section gives the name of the material used for the help panel on the in-game dashboard. This material must be defined elsewhere in a material file. This is optional. (But it looks cool, so use it!)
 
-NOTE: This setting can be overriden by [section "guisettings"](#guisettings)
+NOTE: This setting can be overridden by [section "guisettings"](#guisettings)
 
 ```
 help
@@ -1551,7 +1551,7 @@ Steam boat paddlewheel, loaded with `75` kg per node, no traction, no buoyancy, 
 set_node_defaults 75, 0, 0, 3
 ```
 
-Ccontactless with default settings:
+Contactless with default settings:
 
 ```
 set_node_defaults -1, -1, -1, -1, c
@@ -1623,7 +1623,7 @@ Parameters:
     -   `h`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Unlocks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
     -   `H`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Locks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
     -   `t`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Continuous trigger, delivers a value of `0` below and at shortbound, a value of `1` over and at longbound. Between these boundaries, this trigger will deliver a value between `0` and `1` (linear), depending on the current position. See "engine trigger" for details on how to use this.
-    -   `E`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a `t`-trigger to get precise, continous control. Works as follows:
+    -   `E`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a `t`-trigger to get precise, continuous control. Works as follows:
         -   ''' *(remapped)* shortbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the engine to be controlled, starting with `0`. As RoR only supports one engine per vehicle at the moment, always put `0` here.
         -   ''' *(remapped)* longbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the function you want to control:
             -   `0`: Clutch
@@ -1716,7 +1716,7 @@ This section defines special options for hooknodes setup in the nodes section. I
     -   `maxforce:` The force limit where a locking attempt is canceled. Default: `100000000.0`
     -   `hookgroup:` The hookgroup a hook belongs to. Standard hook: `-1` (Default), Reserved for autolock: `-2`, any special hookgroup for triggered hooks `-3` or less. Only signed integer are valid. Keyword variants: *`hookgroup` / `hgroup`*
     -   `lockgroup:` The lockgroup a hook belongs to. Lock everything: `-1` (Default), all other numbers the hook will lock only to a node with the same lockgroup set. Only signed integer are valid. Keyword variants: *`lockgroup` / `lgroup`*
-        - **Lockgroup `9999` is reseved for nodes that are skipped while locking attempts. Do NOT use lockgroup `9999` with a hook.**
+        - **Lockgroup `9999` is reserved for nodes that are skipped while locking attempts. Do NOT use lockgroup `9999` with a hook.**
     -   `timer:` Delay timer for autolocking hooks before they attempt to relock. Default: `5.0`. Only positive settings are valid
     -   `self-lock:` This hook can lock to the truck its placed on too. Keyword variants: *`self-lock`/ `selflock` / `self_lock`*
     -   `auto-lock:` This hook will lock automatically to valid nodes in range. Keyword variants: *`auto-lock` / `autolock` / `auto_lock:`*
@@ -2003,7 +2003,7 @@ Torque curves affect the behavior of the engine. This section allows you to assi
 -   **power**: <span style="color:#BD0058">Real number</span>; RPM where the power begins
 -   **torque\_percentage**: <span style="color:#BD0058">Real number</span>; Power as a percent of total torque specified in [section "engine"](#engine) parameter \#3 "Torque" (0 = 0%, `0.5` = 50%, `1.5` = 150%)
 
-It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overev area defined.
+It's suitable to define the torque to the engine RPM set in the engine definition plus 25% ( multiply the value with 1.25) to get the overrev area defined.
 
 The following example would be good for a maximum engine RPM set to 2800:
 
@@ -2683,7 +2683,7 @@ Parameters:
 -   `parking` - This prop animates with the vehicle's parking brake status.
 -   `shifterman1` - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
 -   `shifterman2` - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
--   `sequential` - sequentiell shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
+-   `sequential` - sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
 -   `shifterlin` - for auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
 -   `torque` - current engine torque
 -   `heading` - This prop animates with the current heading of the truck.

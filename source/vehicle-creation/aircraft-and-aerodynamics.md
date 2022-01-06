@@ -235,19 +235,19 @@ A fuse drag can be used for a couple of things.
 
 It can be used to make a vehicle more aerodynamic to make the top speed improve. 
 
-The fusedrag section can help improve modeling of the aerodynamic drag of a plane. 
+The fusedrag section can help improve modelling of the aerodynamic drag of a plane. 
 
 It can model the fuselage of a plane like a big wing section, with an airfoil. 
 
-Example of a symmetrical airfoil is something like NACA0009.afl 
+An example of a symmetrical airfoil is something like NACA0009.afl 
 
-Im going to show you improvements a fusedrag can do to a vehicles top speed. 
+I'm going to show you improvements a fusedrag can do to a vehicles top speed. 
 
-An example im going to use the Dodge Police. 
+An example I'm going to use the Dodge Police. 
 
 The max speed without wheel spin was about 41 mph.  
 
-Now lets add a fusedrag and see what happens. 
+Now let's add a fusedrag and see what happens. 
 
 To add a fuse drag just find two nodes. 
 

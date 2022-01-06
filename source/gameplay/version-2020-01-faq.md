@@ -30,7 +30,7 @@ The user directory on Linux will remain in `~/.rigsofrods` for now.
 
 ### Mods
 
-On first run, players with the old directory will receieve a notice about the directory change. To continue using your mods, you will have to move your mod directories (`mods` on recent RCs, or `packs`,`terrains`, and `vehicles` on older versions) to the new `My Games\Rigs of Rods` directory. RoR itself will not move the folders to prevent data loss. The [Installing content](/gameplay/installing-content/) page has been updated for the new directory. 
+On first run, players with the old directory will receive a notice about the directory change. To continue using your mods, you will have to move your mod directories (`mods` on recent RCs, or `packs`,`terrains`, and `vehicles` on older versions) to the new `My Games\Rigs of Rods` directory. RoR itself will not move the folders to prevent data loss. The [Installing content](/gameplay/installing-content/) page has been updated for the new directory. 
 
 ### Settings and input mappings
 

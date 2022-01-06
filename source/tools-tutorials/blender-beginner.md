@@ -248,16 +248,16 @@ Blender for beginners
      <b>EDIT: in blender 2.46 there isn't a "UV face edit", go to edit mode and press "U"</b>
   </p>
   <h2><span class="editsection">[<a href="/rorwikibackup/index.php?title=Blender_Tutorial_3&amp;action=edit&amp;section=2" title="Edit section: Exporting in Blender">edit</a>]</span> <span class="mw-headline" id="Exporting_in_Blender">Exporting in Blender</span></h2>
-  <p>You must export to an alreading existing truck file. Blender will NOT make the truck file for your when you hit 'Export'.</p>
+  <p>You must export to an already existing truck file. Blender will NOT make the truck file for you when you hit 'Export'.</p>
   <p>Make sure the truck file you're exporting to has the word 'submesh' right above the word 'end'.</p>
   <p><br />
      Now, when in Blender, go into object mode.
   </p>
-  <p>Right-click on the submesh so there is a pink outline around it and you shouldnt see very many beams if you are actually clicked on the submesh. and in the left hand bottom corner make sure it says submesh after ME and OB (there might be some letters and numbers befor the word submesh. this is ok)</p>
-  <p>Also if you try to export and it says "wings section not found, unable to export wings"  just click on the boxes in the bottom left had corner that say OB:(some stuff here) ME:(some stuff here and rename it submesh on BOTH ME and OB and it will now work.</p>
-  <p>After that if you have the blender ror importer and exporter installed.( witch im sure you do if you got the car into blender in the first place) click file-export-RoR exporter, then find the truck file you are exporting to and click export.</p>
+  <p>Right-click on the submesh so there is a pink outline around it and you shouldn't see very many beams if you are actually clicked on the submesh. and in the left-hand bottom corner make sure it says submesh after ME and OB (there might be some letters and numbers before the word submesh. this is ok)</p>
+  <p>Also if you try to export and it says "wings section not found, unable to export wings"  just click on the boxes in the bottom left-hand corner that say OB:(some stuff here) ME:(some stuff here and rename it submesh on BOTH ME and OB and it will now work.</p>
+  <p>After that if you have the blender ror importer and exporter installed.(which I'm sure you do if you got the car into blender in the first place) click file-export-RoR exporter, then find the truck file you are exporting to and click export.</p>
   <p>Blender should just pause for a second and then return to normal activity. and when you go to your truck file you should see all the submesh stuff in the truck file. </p>
-  <p>Also Blender will automatically make a copy of your original truck  file from befor you exported it. open that using notepad and copy the node and beem sections into your new truck file that has the submesh because blender will have messed those up. but by doing that it will put it back to normal.</p>
+  <p>Also Blender will automatically make a copy of your original truck  file from before you exported it. open that using notepad and copy the node and beam sections into your new truck file that has the submesh because blender will have messed those up. but by doing that it will put it back to normal.</p>
 
 
 

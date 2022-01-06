@@ -13,7 +13,7 @@ To grasp the idea, take a look at these games that use the same construction log
 To build a truck in Rigs of rods, you need to design a structural chassis composed of a lattice of rods. You have to define :
 
 -   **Nodes**: these are the points of interconnection of rods (the same as the balls in Geomag). For the physics engine, these nodes are the only concrete elements of the truck: they have a mass and can collide with other elements, but they are dimensionless.
--   **Beams**: (or rods): they interconnect nodes. For the physics engine they are massless and are composed of a spring and a damper, so their length can change depending on the forces it bears. They are monodimensional - they have length, but no thinckness.
+-   **Beams**: (or rods): they interconnect nodes. For the physics engine they are massless and are composed of a spring and a damper, so their length can change depending on the forces it bears. They are monodimensional - they have length, but no thickness.
 
 Also, if you want to "dress" the chassis with a texture, you can "fill" any node triangle with a polygon (like the panels in geomag, but in RoR they deform like if they were made of rubber). This is what the <b>submesh</b> section if for.
 

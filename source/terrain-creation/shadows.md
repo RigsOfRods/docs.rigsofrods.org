@@ -5,7 +5,7 @@ Shadows
 
 As of version 0.4.5.0, Rigs of Rods uses the PSSM (Parallel-split Shadow Maps) shadows technique. 
 
-Shadow textures are splited into 3 different texture with different resolutions and size. 
+Shadow textures are split into 3 different textures with different resolutions and sizes. 
 
 The closest one to the camera is the smallest and has the biggest resolution. 
 The second and the thirds are sometimes equal in resolution but not in size. 

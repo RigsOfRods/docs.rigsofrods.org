@@ -53,7 +53,7 @@ The lateral location of a beam axle can be controlled in a number of ways; the e
 
 ![wattslinkage](/images/softbody-suspension-watts-linkage.jpg)
 
-[Example truck](/download/suspension-demo-watts-linkage.truck) using Watt's linkage method of laterial location.
+[Example truck](/download/suspension-demo-watts-linkage.truck) using Watt's linkage method of lateral location.
 
 Watt's Linkage:
 
