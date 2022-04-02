@@ -41,8 +41,8 @@ If you're new to terrain creation, read [intro to terrain creation](/terrain-cre
     ## (Real) Height of the black ground plane
     WaterBottomLine = -150
     
-    ## (RGB, float notation) Color of the ambient light.
-    AmbientColor = 1,1,1
+    ## UNUSED since v2022.04; (RGB, float notation) Color of the ambient light.
+    # AmbientColor = 1,1,1
     
     ## (FileName) Config file for the Caelum system (sky/weather/sun).
     CaelumConfigFile = YourMap.os
