@@ -57,12 +57,21 @@ To play multiplayer, see [this section](/gameplay/beginners-guide/#multiplayer) 
 
 #### Wrong server version
 
-This means you're trying to join a server that is running an earlier/later RoRNet version than what your current RoR version supports.
+This means you're trying to join a server that is running an older or newer RoRNet version than what your current RoR version supports.
 
-The latest version, 2020.01, supports RoRNet 2.42.
+The latest version, 2022.04, supports RoRNet 2.43.
 
 
 ## Errors & glitches
+
+#### No render system plugin available
+
+![error_no_rendersys_avail](/images/error_no_rendersys_avail.png)
+
+![error_no_render_sys_selected](/images/error_no_render_sys_selected.png)
+
+If you downloaded RoR using the zip file, you may receive these errors. This is caused by the DirectX 9 Runtime not being installed. Install it from [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=8109) then restart your PC.
+
 
 #### MSVCP DLLs missing
 
