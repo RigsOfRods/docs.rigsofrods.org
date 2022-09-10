@@ -13,7 +13,7 @@ Interested in updating existing pages or writing your own page? Here you'll lear
 To begin, head over to the [docs.rigsofrods.org GitHub repository](https://github.com/RigsOfRods/docs.rigsofrods.org) and click the ![github-fork](/images/github-fork.png) button at the top right. This will create a copy of the repository on your GitHub account where your changes will be made. 
 
 ## Using GitHub Desktop 
-After installing GitHub Desktop, launch the app and sign into your GitHub account. After signing in, it'll ask you to clone a repository. Select the repository you cloned earlier along with where you want the repository to be stored locally:
+After installing GitHub Desktop, launch the app and sign into your GitHub account. After signing in, it'll ask you to clone a repository. Select the repository you forked earlier along with where you want the repository to be stored locally:
 
 ![github-desktop-clone](/images/github-desktop-clone.png)
 
@@ -77,7 +77,7 @@ Incorrect:
 Once you're finished editing, your GitHub Desktop app will probably look similar to this:
 ![github-desktop-docs](/images/github-desktop-docs.png)
 
-Write a title and description for your changes, then click "Commit to branchname" to add your changes to the branch. 
+Write a title and description for your changes, then click "Commit to branch" to add your changes to the branch. 
 When ready, select `Branch -> Create pull request` to create a pull request on the main repository, and if everything goes well, it'll be merged! 
 
 ## Syncing your fork 
