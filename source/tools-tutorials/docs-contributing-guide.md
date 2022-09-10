@@ -62,6 +62,17 @@ To create a new page, simply create a new file with the `.md` file extension in 
 
 Make sure you also add the page to the sidebar by editing `mkdocs.yml`, otherwise `mkdocs serve` will show a warning!
 
+### Linking other docs pages 
+
+To link to other pages on the docs, use the following syntax:
+
+```
+Correct:
+[Beginner's Guide](/gameplay/beginners-guide/)
+Incorrect:
+[Beginner's Guide](https://docs.rigsofrods.org/gameplay/beginners-guide/)
+```
+
 ## Making a pull request 
 Once you're finished editing, your GitHub Desktop app will probably look similar to this:
 ![github-desktop-docs](/images/github-desktop-docs.png)
@@ -80,7 +91,7 @@ git fetch upstream
 git merge upstream/master
 ```
 
-To update your fork in the future, run only the last 2 commands.
+To update your fork in the future, run only the last two commands.
 
 In GitHub Desktop, click "Push to origin" after running the above commands. 
 
