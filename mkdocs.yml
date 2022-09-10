@@ -9,7 +9,7 @@ repo_name: RigsOfRods/docs.rigsofrods.org
 repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
 edit_uri: blob/master/source/
 
-copyright: "Copyright &copy; 2021 Rigs of Rods Community"
+copyright: "Copyright &copy; 2022 Rigs of Rods Community"
 
 theme:
     name: "material"
@@ -51,6 +51,7 @@ nav:
           - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
           - Visual editors: tools-tutorials/visual-editors.md
           - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
+          - Documentation contributing guide {How to edit the docs): tools-tutorials/docs-contributing-guide.md
     - Vehicle creation:
           - Truck file format: vehicle-creation/fileformat-truck.md
           - Soundscript file format: vehicle-creation/fileformat-soundscript.md
