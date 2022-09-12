@@ -84,7 +84,7 @@ Sky type must be set to Caelum or SkyX. Sandstorm sky does not support time chan
 #### Saves
 
 !!! note
-You can load a savegame from the main menu.
+	You can load a savegame from the main menu.
 
 <table style="display: inline-block; vertical-align: top;">
     <tr bgcolor="#928578"><th style="color: #000000">Savegames</th><th style="color: #000000">Key</th></tr>
@@ -191,10 +191,10 @@ You can load a savegame from the main menu.
 </table>
 
 
-!!! notes
-- Some vehicles use ALT+F4 as a command, which closes the game window. To avoid this press F4 then ALT.
+!!! note "Notes"
+	- Some vehicles use ALT+F4 as a command, which closes the game window. To avoid this press F4 then ALT.
 
-- Some laptops require you to hold the FN key in order to use commands.
+	- Some laptops require you to hold the FN key in order to use commands.
 
 ### Aerial and marine controls
 
