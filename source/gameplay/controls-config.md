@@ -5,7 +5,7 @@ Controls and configuration
 
 Rigs of Rods is a simulator which strives for maximum realism, and hence you need an appropriate controller, such as a wheel for land vehicles and joystick for aerial or marine vehicles.
 
-Input is configured by editing configuration file [input.map](#config-file-inputmap) or by using the [Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool). In-game configuration of controls is not implemented yet.
+Input is configured from the [in-game Controls menu](#changing-keyboard-controls) (Keyboard only), editing configuration file [input.map](#config-file-inputmap), or by using the [Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool).
 
 ## Keyboard layout
 
@@ -240,9 +240,27 @@ because some planes could have more than 4 engines and you couldn't control them
     <tr><td>Center throttle</td><td>PGDOWN   </td></tr>
 </table>
 
+## Changing keyboard controls 
+
+Starting with Rigs of Rods version 2021.10, it is now possible to remap keyboard controls in-game. Just press the Controls button on the main menu:
+
+![main-menu-controls-button](/images/main-menu-controls-button.png)
+
+![controls-menu](/images/controls-menu.png)
+
+From here it's pretty self-explanatory, just select which control you want to change and press the new key. 
+
+!!! note "Notes"
+
+	- Some common vehicle controls can be found the "Common" category. One example is the key to secure loads, found in the Common category with the label  `COMMON_SECURE_LOAD`.
+	
+	- The menu currently only supports remapping keyboard controls. Remapping other input devices (controllers, steering wheels, joysticks, etc) still have to be done manually. Please see [Configuring controls with the Input Mapping Tool](#configuring-controls-with-the-input-mapping-tool).
+
+
+
 ## Config file 'input.map'
 
-This file defines all key alias for RoR, located at `Documents\My Games\Rigs of Rods\config` by default. It has the following format:
+This file defines all key alias for RoR, located at `Documents\My Games\Rigs of Rods\config` (Windows) or `~/.rigsofrods/config` (Linux) by default. It has the following format:
 
     EVENT_NAME    EVENT_TYPE    MAPPING
 
@@ -810,7 +828,7 @@ Select the event you want to assign an input to. In this example, I will use `TR
 
 Then select the correct input type:
 
-<table style="color: #111111; display: inline-block; vertical-align: top;">
+<table style="display: inline-block; vertical-align: top;">
 <tr><td>Event type</td><td>Description</td></tr>
 <tr><td>Keyboard</td><td>All keys on the keyboard.</td></tr>
 <tr><td>JoystickAxis</td><td>Used for steering wheels/sticks/etc.</td></tr>
