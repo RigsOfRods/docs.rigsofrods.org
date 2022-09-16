@@ -1,20 +1,16 @@
 Terrain Scripting
 ============
 
-!!! warning
-    This page is currently NOT up-to-date with the latest version of Rigs of Rods. Script examples should still work, but links, directory locations and settings may not be accurate with the current version. 
-
-
 ## Event box
 
 this simple example will create an oil depot that reacts on trucks that drive into it.
 
 ### Prerequisites
 
--   move nhelens.zip to the "My Documents/Rigs of Rods/terrains" folder and unpack all its files to a new directory "nhelens"
+-   move nhelens.zip to the  `Documents/My Games/Rigs of Rods/mods` folder and unpack all its files to a new directory "nhelens"
 -   remove the old nhelens.zip to prevent collisions
--   Enable "Debug Collision Meshes" in your RoR configurator ('Settings'&gt;'Debug'&gt;'Debug Collision Meshes') to be able to see the debug visualization for events
--   get an oil-well mesh and a fitting .odef file: <http://forumold.rigsofrods.com/index.php?topic=28551.msg355869#msg355869>
+-   Enable "Debug Collisions" in your RoR settings ('Settings'&gt;'Diagnostic'&gt;'Debug Collisions') to be able to see the debug visualization for events
+-   get an oil-well mesh and a fitting .odef file: ~~<http://forumold.rigsofrods.com/index.php?topic=28551.msg355869#msg355869>~~ (Needs a new link)
 
 ### Defining the event box
 
@@ -36,10 +32,9 @@ Example:
 
 ### Programming the AngelScript file
 
--   create a file named <filename>.terrn.as, so in our case the file should be called "a1da0UID-nhelens.terrn.as" when the terrain we use is called "a1da0UID-nhelens.terrn"
+-   create a file named <filename>.terrn.as, so in our case the file should be called `a1da0UID-nhelens.terrn.as` when the terrain we use is called `a1da0UID-nhelens.terrn`
 
-
-```
+```cpp
 // Always include the base.as file!
 #include "base.as"
 
@@ -72,9 +67,9 @@ you should see something like this:
 ![eventbox-debug1] ![eventbox-debug2]
 
 [eventbox-debug1]: /images/scripting-odef-eventbox-debug-1.jpg
-{: width="40%"}
+
 [eventbox-debug2]: /images/scripting-odef-eventbox-debug-2.jpg
-{: width="40%"}
+
 
 note: We're only interested in the pink boxes here, as they represent event boxes. Light pink boxes do not call back an AngelScript function, while dark pink boxes do call back an AngelScript function when triggered (~when you drive into them).
 
@@ -85,21 +80,20 @@ if you do not see an oil loader, check the AngelScript.log file for errors. With
  ScriptEngine (SE) initializing ...
  Type registrations done. If you see no error above everything should be working
  ScriptEngine running
- saving script bytecode to file c:\users\jeroen\docume~1\rigs of rods 0.38\cache\script_a1da0UID-nhelens.terrn.asc
+ saving script bytecode to file script_a1da0UID-nhelens.terrn.asc
  Executing main()
  The script finished successfully.
- ```
+```
 
 ### Result
 
 What happens if you drive a truck into the pink event box: 
 
 [eventbox-oilrig]: /images/scripting-odef-eventbox-oilrig.jpg
-{: width="40%"}
 
 ![eventbox-oilrig]
 
-look at your AngelScript.log (on Windows, it's located under MyDocuments\Rigs of Rods 0.4\logs):
+look at your AngelScript.log (on Windows, it's located under Documents\My Games\Rigs of Rods\logs):
 
     02:55:05: SE| my-oil-well-1 event triggered
 
@@ -115,83 +109,84 @@ you could:
 
 for example this script will create two oil rigs and will redirect the user to collect and drop oil between them:
 
-```
- #include "base.as"
+```cpp
+#include "base.as"
 
- float timer = 0;
- int timerSet = 0;
+float timer = 0;
+int timerSet = 0;
 
- int state = 0;
+int state = 0;
 
- vector3 pos_oil1(1099, 33.933, 924.982);
- vector3 pos_oil2(1030, 33.4509, 1125.37);
+vector3 pos_oil1(1099, 33.933, 924.982);
+vector3 pos_oil2(1030, 33.4509, 1125.37);
 
- void main()
- {
-     // spawn some oil-wells
-     game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
-     game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
- }
+void main()
+{
+    // spawn some oil-wells
+    game.spawnObject("oil-well", "my-oil-well-1", pos_oil1, vector3(0, 0, 0), "callBackOilWellOne", false);
+    game.spawnObject("oil-well", "my-oil-well-2", pos_oil2, vector3(0, 0, 0), "callBackOilWellTwo", false);
+}
 
- void frameStep(float dt)
- {
-     // count down the timer
-     if(timer > 0)
-         timer -= dt;
- }
+void frameStep(float dt)
+{
+    // count down the timer
+    if(timer > 0)
+        timer -= dt;
+}
 
- void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
- {
-     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-     if(state != 0) return; // only process this if state is valid
-     
-     if(timerSet == 0)
-     {
-         // set timer
-         timerSet = 1;
-         timer = 5;
-         game.flashMessage("Loading oil ...", timer, -1);
-         return;
-     }
-     
-     if(timerSet == 1 && timer < 0)
-     {
-         // timer ran out, do something
-         game.setDirectionArrow("unload oil", pos_oil2);
-         state = 1;
-         timerSet=0;
-     }
- }
-
- void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
- {
-     //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
-     if(state != 1) return; // only process this if state is valid
-     
-     if(timerSet == 0)
-     {
-         // set timer
-         timerSet = 1;
-         timer = 5;
-         game.flashMessage("Unloading oil ...", timer, -1);
-         return;
-     }
-     
-     if(timerSet == 1 && timer < 0)
-     {
-         // timer ran out, do something
-         game.setDirectionArrow("load some new oil", pos_oil1);
-         state = 0;
-         timerSet=0;
-     }
- }
- ```
-
+void callBackOilWellOne(int trigger_type, string inst, string box, int nodeid)
+{
+    //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+    if(state != 0) return; // only process this if state is valid
     
-    In this tutorial, we will add a race to our terrain.
+    if(timerSet == 0)
+    {
+        // set timer
+        timerSet = 1;
+        timer = 5;
+        game.flashMessage("Loading oil ...", timer, -1);
+        return;
+    }
+    
+    if(timerSet == 1 && timer < 0)
+    {
+        // timer ran out, do something
+        game.setDirectionArrow("unload oil", pos_oil2);
+        state = 1;
+        timerSet=0;
+    }
+}
 
-How do races work?
-==================
+void callBackOilWellTwo(int trigger_type, string inst, string box, int nodeid)
+{
+    //if(trigger_type != 1)  return; // we only want to trigger on events where the full truck is in the event box (doesn't work at the moment)
+    if(state != 1) return; // only process this if state is valid
+    
+    if(timerSet == 0)
+    {
+        // set timer
+        timerSet = 1;
+        timer = 5;
+        game.flashMessage("Unloading oil ...", timer, -1);
+        return;
+    }
+    
+    if(timerSet == 1 && timer < 0)
+    {
+        // timer ran out, do something
+        game.setDirectionArrow("load some new oil", pos_oil1);
+        state = 0;
+        timerSet=0;
+    }
+}
+
+```
+
+## Adding a race to a terrain
+
+In this tutorial, we will add a race to our terrain.
+
+### How do races work?
 
 In Rigs of Rods, races are added using a script file. The race that we will create in this tutorial will exist out of multiple checkpoints. The objective of the race is to get from the first till the last checkpoint as fast as possible.
 
@@ -200,10 +195,9 @@ We will discuss 2 methods to add a race to your terrain:
 1.  Using a race script generator (fast method);
 2.  Manually creating the script (advanced method).
 
-Adding a race (fast method)
-===========================
+### Adding a race (fast method)
 
-You can find a race script generator [here](http://ror.ezzg.be/downloads/Tools/race_script_generator.html).
+You can find a race script generator [here](/terrain-creation/race-generator/).
 
 The checkpoints can be added by specifying the position (x,y,z), rotation (x,y,z) and an object for every checkpoint. This is similar to the [old .terrn file](/technical/old-terrn-subsystem) syntax, but be aware: do NOT add the checkpoint objects to the terrain using the [old .terrn file](/technical/old-terrn-subsystem). The objects will already be spawned by the script.
 
@@ -211,26 +205,10 @@ A checkpoint object is like every other object, but has beside a visible mesh al
 
 If you wish, you can also use the default objects, which are available by default in every Rigs of Rods installation. To use these, use objectname "chp-start" for the start and finish line and "chp-checkpoint" for the normal checkpoints. The race script generator will use these objects if you don't specify other objects.
 
-After generating your race, you'll need to copy the script and put it in a new file in your terrain archive. The name of this file should be
+After generating your race, you'll need to copy the script and put it in a new file in your terrain archive. The name of this file should be `terrainFileName.terrn.as`.
+For example, for North Saint Helens, this would become: `a1da0UID-nhelens.terrn.as` because the terrain file name of North Saint Helens is `a1da0UID-nhelens.terrn`, and we just need to add `.as` to that.
 
-    terrainFileName.terrn.as
-
-. For example, for North Saint Helens, this would become:
-
-    a1da0UID-nhelens.terrn.as
-
-because the terrain file name of North Saint Helens is
-
-    a1da0UID-nhelens.terrn
-
-, and we just need to add
-
-    .as
-
-to that.
-
-Adding a race (advanced method)
-===============================
+### Adding a race (advanced method)
 
 The easiest way to explain this method is by looking at some examples.
 
@@ -242,7 +220,7 @@ Every line that starts with '//' is information that explains the line(s) beneat
 
 File: a1da0UID-nhelens.terrn.as
 
-```
+```cpp
 // The following line is required in every script, in order to ensure that
 // the spawnpoints keep working. It includes the script inside the file "base.as" here.
 
@@ -327,7 +305,7 @@ This example script is usable to add a race to the Island terrain (496aUID-islan
 
 File: 496aUID-island.terrn.as
 
-```
+```cpp
 #include "base.as"
 #include "races.as"
 
@@ -362,7 +340,7 @@ This example script shows a race with an unlimited amount of laps (a never endin
 
 File: 8c07UID-bajarama.terrn.as 
 
-```
+```cpp
 #include "base.as"
 #include "races.as"
 
@@ -403,7 +381,7 @@ This example script illustrates how to add multiple races to one terrain and is 
 
 File: f4afUID-flat_map_full32xa.terrn.as
 
-```
+```cpp
 #include "base.as"
 
 #include "races.as"
@@ -466,7 +444,7 @@ This example script illustrates how to use custom checkpoint objects and multipl
 
 File: 2af11UID-f1_testtrack.terrn.as 
 
-```
+```cpp
 #include "base.as"
 
 #include "races.as"
@@ -570,10 +548,10 @@ void eventCallback(int eventnum, int value) {
 We can also penalty events if the player hits a specific part of the checkpoint.
 
 For this race, we've edited the 2af11UID-new-checkpoint.odef file 
-from [f1track_improved.zip](http://www.rigsofrods.com/repository/repo_files/view/3739) 
+from [f1track_improved.zip](https://cdn.anotherfoxguy.com/repo-backup/c1ae6cfbb628afe6e81c511ac8ac65e2a7bddae1_f1track_improved.zip) 
 to have penalty event boxes: 
 
-```
+```ini
 2af11UID-new-checkpoint.mesh 1, 1, 1
 
 beginbox boxcoords -7.5, 6.95, -4.0, 5.2, -0.5, 0.5 virtual event checkpoint truck endbox
@@ -586,7 +564,7 @@ end
 ```
 So the checkpoint looks like this (in debug mode): \[image to be added here\]
 
-As you can see, there are 2 small event boxes that will trigger the penalty event. The penalty event will, when triggered, add an amount of seconds to the lap time. How many seconds can be configured using the [races.setPenaltyTime(int raceID, int seconds)](http://docs.rigsofrods.com/angelscript/classraces_manager.html#af8be93d7040eea2ae75c812fd4f99ef) method or you can just change it using the PenaltyEvent callback function.
+As you can see, there are 2 small event boxes that will trigger the penalty event. The penalty event will, when triggered, add an amount of seconds to the lap time. How many seconds can be configured using the [races.setPenaltyTime(int raceID, int seconds)](https://developer.rigsofrods.org/d9/dce/class_script2_script_1_1races_manager.html#a6d33d12db6fe5798ee9579aab701206d) method or you can just change it using the PenaltyEvent callback function.
 
 We'll also need this PenaltyEvent callback function when we want to show a message if a penalty event was triggered. For this we'll need to:
 
@@ -595,8 +573,7 @@ We'll also need this PenaltyEvent callback function when we want to show a messa
 
 This is all done in the following script. Pay attention to every difference with the script above.
 
-```
-
+```cpp
 #include "base.as"
 #include "races.as"
 
@@ -720,23 +697,22 @@ void on_penaltyEvent(dictionary@ info)
 **Notes:**
 
 1.  We've only used the 'race_penalty' event here, but you can also use the 'race_abort' event, which will abort the race when the event box is triggered.
-2.  Another way to add penalty seconds is using the [races.addPenaltySeconds(int seconds)](http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2) method.
-3.  You can also register callback functions for other events: <http://docs.rigsofrods.com/angelscript/classraces_manager.html#917f58383f551128acac292effdb3ce2>
+2.  Another way to add penalty seconds is using the [races.addPenaltySeconds(int seconds)](https://developer.rigsofrods.org/d9/dce/class_script2_script_1_1races_manager.html#a6d33d12db6fe5798ee9579aab701206d) method.
+3.  You can also register callback functions for other events: <https://developer.rigsofrods.org/d9/dce/class_script2_script_1_1races_manager.html>
 
 ## More Advanced Functionality
 
 ### Documentation and questions
 
-See [reference manual](http://development.rigsofrods.org/angelscript/). Studying the script files of other terrains may also greatly help you.
+See [reference manual](https://developer.rigsofrods.org/d2/d42/group___script_side_a_p_is.html). Studying the script files of other terrains may also greatly help you.
 
-In case of questions/suggestions/complains, get in touch [in the forums](http://www.rigsofrods.org/forum-19.html).
+In case of questions/suggestions/complains, get in touch [in the forums](https://forum.rigsofrods.org/forums/development-discussions.6/).
 
 ### Example: Extending RacesManager
 
 Here's an example where we inherit from the racesManager class and add functionality. (In this case, we limit the allowed vehicles, so the race won't start if certain vehicles aren't used). You can test this script by adding it to the North Saint Helens terrain.
 
-```
-
+```cpp
 #include "base.as";
 #include "races.as";
 
@@ -833,9 +809,8 @@ string arrayToString(array<string>@ arr) {
 
 ```
 
-Troubleshooting
-===============
+### Troubleshooting
 
-If your race doesn't work, feel free to post your terrain file in this forum, and we may have a look at it. <http://rigsofrods.org/forum-19.html>
+If your race doesn't work, feel free to post your terrain file in this forum, and we may have a look at it. <https://forum.rigsofrods.org/forums/content-support.10/>
 
 Further, you may find some help in this archive: <http://rigsofrods.org/old-forum/forums/167-Scripting/page-0001.html>
