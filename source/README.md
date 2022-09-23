@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 ![ror_logo_banner](/images/branding/RoR_Logo_discord_banner.png)
 
 <br>
