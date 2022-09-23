@@ -1,22 +1,54 @@
-body {
-  color: white;
-  background-color: #1d1d1d;
+:root {
+  color-scheme: dark;
 }
 
-.md-typeset {
-  font-size: 0.7rem;
+[data-md-color-scheme="beam"] {
+  --md-default-bg-color: #1d1d1d;
+  --md-default-fg-color: hsla(0,0%,100%,.6);
+  --md-default-fg-color--light: hsla(0,0%,100%,.87);
+  --md-default-fg-color--lighter: hsla(0,0%,100%,.87);
+  --md-default-fg-color--lightest: #2c2c2c;
+
+  --md-primary-fg-color: #226699;
+  --md-primary-fg-color--light: #226699;
+  --md-primary-fg-color--dark: #226699;
+  --md-primary-bg-color: #fff;
+
+  --md-accent-fg-color: #2f84c5;
+  --md-accent-bg-color: #fff;
+
+  --md-code-bg-color: #2c2c2c;
+  --md-code-fg-color: hsla(0,0%,100%,.87);
+
+  --md-typeset-table-color: #2c2c2c;
+  --md-typeset-color: var(--md-default-fg-color);
+  --md-typeset-a-color: #226699;
+
+  --md-typeset-kbd-color: hsla(0,15%,94%,0.12);
+  --md-typeset-kbd-accent-color: hsla(0,15%,94%,0.2);
+  --md-typeset-kbd-border-color: hsla(0,15%,14%,1);
+
+  --md-admonition-bg-color: #222222;
+  --md-admonition-fg-color: var(--md-default-fg-color);
 }
 
-.md-typeset h1 {
-  color: white;
+.admonition-title {
+  color: var(--md-default-fg-color--lighter);
+}
+
+.md-top {
+  background-color: #222222;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-nav__title {
+  color: var(--md-default-fg-color--lighter);
   font-weight: bold;
-}
-
-.md-typeset h2 {
-  font-size: 1rem;
-}
-.md-typeset p {
-  margin: 0.2rem 0;
 }
 
 .md-header {
@@ -42,3 +74,44 @@ body {
 .md-footer-meta {
   background-color: #101010;
 }
+
+.md-typeset .grid {
+  grid-gap: .4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+  margin: 1em 0;
+}
+
+.md-typeset .grid ul {
+  display: contents;
+}
+
+.md-typeset .grid ul li {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-radius: .1rem;
+  display: block;
+  margin: 0;
+  padding: .8rem;
+}
+
+.md-typeset .grid ul li hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.md-extra {
+  margin: auto .6rem;
+  padding: .4rem 0;
+  font-size: .64rem;
+}
+
+.md-extra__link {
+  display: inline-block;
+  text-align: center;
+  margin: 0 .25em !important;
+}
+
+.md-typeset .keys span {
+  color: var(--md-typeset-color);
+}
+
