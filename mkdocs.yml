@@ -15,13 +15,16 @@ theme:
     name: "material"
     favicon: ror-favicon.png
     logo: images/branding/RoR_Logo_TT.png
+    font:
+      text: Maven Pro
     palette:
-        scheme: slate
-        primary: "blue"
-        accent: "blue"
+      scheme: beam
     features:
-        - instant
-        - tabs
+        - navigation.instant
+        - navigation.tabs # missing navigation.*
+        # - toc.integrate
+        - content.code.annotate
+        - navigation.top
 
 extra_css:
     - stylesheets/ror.css

@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 ![ror_logo_banner](/images/branding/RoR_Logo_discord_banner.png)
 
 <br>
@@ -24,7 +30,7 @@ Vehicle creation:<br>
 [Installing addons](tools-tutorials/addons/) - A guide on installing addon parts from the Repository.<br>
 [Truck file format](vehicle-creation/fileformat-truck/) - Information on the file format that defines every vehicle or object in the game.<br>
 [Soundscript file format](vehicle-creation/fileformat-soundscript/) - Information on the file format used to define vehicle sounds.<br>
-[Alternate skins (skinzips)](vehicle-creation/alternate-skins/) - A guide on understanding the format used to create and share custom skins. 
+[Alternate skins (skinzips)](vehicle-creation/alternate-skins/) - A guide on understanding the format used to create and share custom skins.<br>
 [Blender mesh editing](tools-tutorials/blender-mesh-editing/) - Learn the basics of editing vehicle models in Blender.<br>
 Terrain creation:<br>
 [Intro to terrain creation](terrain-creation/intro/) - The basic structure of a RoR terrain.<br>
