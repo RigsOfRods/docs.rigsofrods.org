@@ -96,13 +96,13 @@ Older versions:
 - [MSVCP100.dll](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 
 
-#### Cannot open controller input map 
+#### Special characters crash (Cannot open controller input map)
 
 ![error](/images/error-special-chars.png)
 
 ![error2](/images/error-generatecontent.png)
 
-This is caused by having unicode characters in the path to the `Documents\My Games\Rigs of Rods` folder, usually caused by the  Windows username (e.g. `Usér`).  
+This is caused by having [Unicode](https://en.wikipedia.org/wiki/Unicode) characters in the path to the `Documents\My Games\Rigs of Rods` folder, usually caused by the  Windows username (e.g. `Usér`).  
 
 This will be fixed in a future version. For now, there is a workaround with two methods. Choose the second method if you don't want RoR to run as administrator.
 
