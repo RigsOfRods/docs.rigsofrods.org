@@ -64,6 +64,8 @@ The latest version, 2022.04, supports RoRNet 2.43.
 
 ## Errors & glitches
 
+These errors may occur when launching RoR. 
+
 #### No render system plugin available
 
 ![error_no_rendersys_avail](/images/error_no_rendersys_avail.png)
@@ -83,29 +85,40 @@ Install the correct version that matches the `.dll` name in the error then resta
 
 When the site asks what version to download, just install both. 
 
-- [MSVCP140.dll](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+Latest release:
+
+- [MSVCP140.dll](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)  (Select the x64 version)
+
+Older versions:
 
 - [MSVCP110.dll](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
 
 - [MSVCP100.dll](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 
 
-#### Cannot open Xbox 360 input map 
-#### Failed to generate list of installed content
-
-When you launch RoR, you may receive the following errors:
+#### Special characters crash (Cannot open controller input map)
 
 ![error](/images/error-special-chars.png)
 
 ![error2](/images/error-generatecontent.png)
 
-This is caused by having special characters in your Windows username (e.g. `Usér`).  
+This is caused by having [Unicode](https://en.wikipedia.org/wiki/Unicode) characters in the path to the `Documents\My Games\Rigs of Rods` folder, usually caused by the  Windows username (e.g. `Usér`).  
 
-Current workaround:
+This will be fixed in a future version. For now, there is a workaround with two methods. Choose the second method if you don't want RoR to run as administrator.
 
-1. Inside the installation directory, where RoR.exe is (usually `C:\Program Files\Rigs of Rods`) create a folder called `config`
-2. Right click `RoR.exe` and click `Properties`
-3. Under the `Compatibility` tab, check the `Run this program as administrator` box, then click `Apply` and close the window. 
+##### Method 1
+1. Inside the installation directory, where RoR.exe is (usually `C:\Program Files\Rigs of Rods`) create a folder named `config` <br>
+2. Right click `RoR.exe` and click `Properties` <br>
+3. Under the `Compatibility` tab, check the `Run this program as administrator` box, then click `Apply` and close the window.  <br>
+
+
+##### Method 2
+1. Move any mods from the `Documents\My Games\Rigs of Rods\mods` folder if you have any installed<br>
+2. Uninstall RoR from Windows settings, then remove the `Documents\My Games\Rigs of Rods` folder if required<br>
+3. Download the zipped release from [Itch.io](https://rigs-of-rods.itch.io/rigs-of-rods) and extract `rigs-of-rods-windows.zip` into any directory that isn't in Program Files or the users folder (Documents, Downloads, etc). <br>
+Example: `C:\Games` <br>
+4. Inside the extracted folder, create a folder named `config` <br>
+5. Launch the game by double clicking `RoR.exe`. You can optionally create a shortcut by right clicking.<br>
 
 RoR will now use the `config` folder instead of the default `Documents\My Games\Rigs of Rods` folder. 
 
