@@ -898,3 +898,41 @@ Browse to `Documents\My Games\Rigs of Rods\config`, set the name you copied earl
 And finally, run Rigs of Rods and test your device! You can make further edits to your input map by clicking `Import Keymap`.
 
 If you want to share your created input map, upload it to the Miscellaneous section of the [Repository](https://forum.rigsofrods.org/resources/). Thanks!
+
+## PlayStation controller support using Steam
+
+Currently, Rigs of Rods does not support PlayStation controllers. However, thanks to Steam's excellent input interface,
+it is possible to "disguise" your PlayStation controller as an Xbox controller, allowing it to work with the game. 
+
+This has been tested with a PS4 controller,  these instructions should also work with the PS5 controller as well. 
+
+To begin, install [Steam](https://store.steampowered.com/about/) if you don't already have it and sign in. 
+
+You will first have to enable PlayStation controller support. Click `Steam` -> `Settings`
+![steam-settings](/images/steam-settings.png)
+
+On the Controller tab, select `General controller settings`
+
+![steam-controller-settings](/images/steam-controller-settings.png)
+
+Enable `PlayStation Configuration Support` then click `Back` to return to the settings menu
+
+![steam-ps-support.png](/images/steam-ps-support.png)
+
+Next you'll have to add RoR as a non-Steam game. To do this click `Games` -> `Add a Non-Steam Game to My Library...`
+
+![steam-non-steam-game](/images/steam-non-steam-game.png)
+
+Click ![steam-browse](/images/steam-browse.png), locate where RoR is installed (usually `C:\Program Files\Rigs of Rods`) then double-click `RoR.exe`
+
+![steam-add-non-steam-game](/images/steam-add-non-steam-game.png)
+
+Finally, click `Add selected programs`. RoR will now be in your game library. 
+
+If you've done everything correctly, you should now be able to launch the game from Steam and your controller should be working! 
+
+Controls are listed [here](https://forum.rigsofrods.org/resources/xbox-controller-input-map.146/). 
+
+If you wish to edit the controls, you can use Steam's UI by clicking "Controller layout" under the green play button (only shown when controller is connected). 
+
+For advanced editing you'll need to edit the `Controller__XBOX_360_For_Windows_.map` file inside the `Rigs of Rods\config` folder. See [Config file 'input.map'](#config-file-inputmap) for more info. 
