@@ -901,10 +901,10 @@ If you want to share your created input map, upload it to the Miscellaneous sect
 
 ## PlayStation controller support using Steam
 
-Currently, Rigs of Rods does not natively support PlayStation controllers. However, thanks to Steam's excellent input interface,
+Currently, Rigs of Rods does not support PlayStation controllers. However, thanks to Steam's excellent input interface,
 it is possible to "disguise" your PlayStation controller as an Xbox controller, allowing it to work with the game. 
 
-This has been tested with a DualShock 4 controller,  these intructions should also work with the DualSense (PS5) controller. 
+This has been tested with a PS4 controller,  these instructions should also work with the PS5 controller as well. 
 
 To begin, install [Steam](https://store.steampowered.com/about/) if you don't already have it and sign in. 
 
