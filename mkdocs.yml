@@ -100,7 +100,6 @@ nav:
           - GRAMMAR: rules/rules-grammar.md
           - SINGULARITY: rules/rules-singularity.md
           - LINKS: rules/rules-links.md
-          - Crash Report Privacy Policy: legal/crash-report-privacy-policy.md
           - Branding: tools-tutorials/branding.md
 
 markdown_extensions:
