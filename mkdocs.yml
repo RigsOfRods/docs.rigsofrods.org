@@ -62,6 +62,7 @@ nav:
           - Engine: vehicle-creation/engine.md
           - Flares: vehicle-creation/flares.md
           - Flexbody wheels: vehicle-creation/flexbody-wheels.md
+          - Flexbody deforming/detaching parts: vehicle-creation/flexbody-deforming-detaching-parts.md
           - Aircraft and aerodynamics: vehicle-creation/aircraft-and-aerodynamics.md
           - Rail vehicles: vehicle-creation/rail-vehicles.md
           - Boats: vehicle-creation/boats.md
