@@ -757,8 +757,58 @@ TRUCK_TOGGLE_CONTACT
 TRUCK_TOGGLE_FORWARDCOMMANDS
 TRUCK_TOGGLE_IMPORTCOMMANDS 
 TRUCK_TOGGLE_VIDEOCAMERA    
-TRUCK_TRACTION_CONTROL      
+TRUCK_TRACTION_CONTROL
 ```
+
+## Controllers 
+
+### Xbox 
+
+Rigs of Rods supports Xbox 360 / One / Series controllers out of the box, just plug in your controller and play! 
+
+You can find a list of controls [here](https://forum.rigsofrods.org/resources/xbox-controller-input-map.146/).
+
+If your Xbox controller does not work with RoR, 
+please create a thread on the [support forum](https://forum.rigsofrods.org/forums/game-support.8/) 
+or send a message in the #support channel on the official RoR [Discord](https://discord.gg/rigsofrods) server.
+
+### PlayStation controller support using Steam
+
+Currently, Rigs of Rods does not support PlayStation controllers. However, thanks to Steam's excellent input interface,
+it is possible to "disguise" your PlayStation controller as an Xbox controller, allowing it to work with the game. 
+
+This has been tested with a DualShock 4 controller,  these instructions should also work with the DualSense (PS5) controller as well. 
+
+To begin, install [Steam](https://store.steampowered.com/about/) if you don't already have it and sign in. 
+
+You will first have to enable PlayStation controller support. Click `Steam` -> `Settings`
+![steam-settings](/images/steam-settings.png)
+
+On the Controller tab, select `General controller settings`
+
+![steam-controller-settings](/images/steam-controller-settings.png)
+
+Enable `PlayStation Configuration Support` then click `Back` to return to the settings menu
+
+![steam-ps-support.png](/images/steam-ps-support.png)
+
+Next you'll have to add RoR as a non-Steam game. To do this click `Games` -> `Add a Non-Steam Game to My Library...`
+
+![steam-non-steam-game](/images/steam-non-steam-game.png)
+
+Click ![steam-browse](/images/steam-browse.png), locate where RoR is installed (usually `C:\Program Files\Rigs of Rods`) then double-click `RoR.exe`
+
+![steam-add-non-steam-game](/images/steam-add-non-steam-game.png)
+
+Finally, click `Add selected programs`. RoR will now be in your game library. 
+
+If you've done everything correctly, you should now be able to launch the game from Steam and your controller should be working! 
+
+Controls are listed [here](https://forum.rigsofrods.org/resources/xbox-controller-input-map.146/). 
+
+If you wish to edit the controls, you can use Steam's UI by clicking "Controller layout" under the green play button (only shown when controller is connected). 
+
+For advanced editing you'll need to edit the `Controller__XBOX_360_For_Windows_.map` file inside the `Rigs of Rods\config` folder. See [Config file 'input.map'](#config-file-inputmap) for more info. 
 
 ## Mouse
 
@@ -839,7 +889,8 @@ Then select the correct input type:
 
 Click `Add` once ready, the tool will then ask you to move the axis/press a button. 
 
-The popup will automatically close once the requested action is completed.
+The popup will automatically close once the requested action is completed. 
+If not, press Enter.
 
 ![7](/images/InputMappingTool-3.png)
 
@@ -851,9 +902,26 @@ Once you're done, it's time to export the keymap.
 
 ### Exporting the keymap
 
-First, you'll need to get the correct file name of your file.
+!!! note
+	The latest version of the Input Mapping Tool should automatically set the correct file name for your input device. If it doesn't, please see the troubleshooting section below.
 
-To do this, double-click `getdeviceinfo.exe`. This will generate a `inputinfo.txt` file. Open the text file.
+Click `Export Keymap` then select your device from the list.
+
+![9](/images/InputMappingTool-5.png)
+
+Browse to `Documents\My Games\Rigs of Rods\config`, set the name you copied earlier in the `File name` box, then click `Open` to save the file.
+
+![10](/images/InputMappingTool-6.png)
+
+And finally, run Rigs of Rods and test your device! If you wish to make further edits in the future, you can import your input map by clicking `Import Keymap`.
+
+If you want to share your created input map, upload it to the Input Maps section of the [Repository](https://forum.rigsofrods.org/resources/categories/input-maps.11/). Thanks!
+
+### Troubleshooting
+
+If your input mapping isn't working in-game, you'll first want to check if the name of your input map file is correct.
+
+To do this, you'll find a file named `getdeviceinfo.exe` in the same folder as the tool. Double-click it, a command prompt window will appear for a split second, this is normal.  You will now see a `inputinfo.txt` file in the directory. Open the text file.
 
 Example output:
 
@@ -869,70 +937,31 @@ System info:
 Devices:
 	- OISKeyboard, Vendor: Win32InputManager
 	- OISMouse, Vendor: Win32InputManager
-	- OISJoyStick, Vendor: Logitech Extreme 3D
+	- OISJoyStick, Vendor: Controller (Xbox One For Windows)
 
 
 Joystick 0:
-	Vendor: Logitech Extreme 3D
-	VendorMapFilename: Logitech_Extreme_3D.map
+	Vendor: Controller (Xbox One For Windows)
+	VendorMapFilename: Controller__Xbox_One_For_Windows_.map
 	ID: 0
 	Type: [3] OISJoyStick
-	Axes: 3
-	Sliders: 1
+	Axes: 5
+	Sliders: 0
 	POV/HATs: 1
-	Buttons: 12
+	Buttons: 16
 	Vector3: 0
 	Vector3Sensitivity: 2.28
 ```
 
-`VendorMapFilename` will be the name of your exported file. In this example, the name will be `Logitech_Extreme_3D.map`.
+`VendorMapFilename` will be the name of your exported file. In this example, the name will be `Controller__Xbox_One_For_Windows_.map`.
 
-Click `Export Keymap` then select your device from the list.
+This is what you'll want to name your file. You can choose to just save your input map through the tool again or rename the file from File Explorer.
 
-![9](/images/InputMappingTool-5.png)
+If you rename the file, it is highly recommended you enable file extensions (View -> File name extensions):
 
-Browse to `Documents\My Games\Rigs of Rods\config`, set the name you copied earlier in the `File name` box, then click `Open` to save the file.
+![explorer-file-ext](/images/explorer-file-ext.png)
 
-![10](/images/InputMappingTool-6.png)
+This is to help avoid you naming the file  `.map.map` by mistake. 
 
-And finally, run Rigs of Rods and test your device! You can make further edits to your input map by clicking `Import Keymap`.
-
-If you want to share your created input map, upload it to the Miscellaneous section of the [Repository](https://forum.rigsofrods.org/resources/). Thanks!
-
-## PlayStation controller support using Steam
-
-Currently, Rigs of Rods does not support PlayStation controllers. However, thanks to Steam's excellent input interface,
-it is possible to "disguise" your PlayStation controller as an Xbox controller, allowing it to work with the game. 
-
-This has been tested with a PS4 controller,  these instructions should also work with the PS5 controller as well. 
-
-To begin, install [Steam](https://store.steampowered.com/about/) if you don't already have it and sign in. 
-
-You will first have to enable PlayStation controller support. Click `Steam` -> `Settings`
-![steam-settings](/images/steam-settings.png)
-
-On the Controller tab, select `General controller settings`
-
-![steam-controller-settings](/images/steam-controller-settings.png)
-
-Enable `PlayStation Configuration Support` then click `Back` to return to the settings menu
-
-![steam-ps-support.png](/images/steam-ps-support.png)
-
-Next you'll have to add RoR as a non-Steam game. To do this click `Games` -> `Add a Non-Steam Game to My Library...`
-
-![steam-non-steam-game](/images/steam-non-steam-game.png)
-
-Click ![steam-browse](/images/steam-browse.png), locate where RoR is installed (usually `C:\Program Files\Rigs of Rods`) then double-click `RoR.exe`
-
-![steam-add-non-steam-game](/images/steam-add-non-steam-game.png)
-
-Finally, click `Add selected programs`. RoR will now be in your game library. 
-
-If you've done everything correctly, you should now be able to launch the game from Steam and your controller should be working! 
-
-Controls are listed [here](https://forum.rigsofrods.org/resources/xbox-controller-input-map.146/). 
-
-If you wish to edit the controls, you can use Steam's UI by clicking "Controller layout" under the green play button (only shown when controller is connected). 
-
-For advanced editing you'll need to edit the `Controller__XBOX_360_For_Windows_.map` file inside the `Rigs of Rods\config` folder. See [Config file 'input.map'](#config-file-inputmap) for more info. 
+If you've made sure your input map is named correctly and the device still doesn't function in-game, 
+please create a thread on the [support forum](https://forum.rigsofrods.org/forums/game-support.8/) or send a message in the #support channel on the official RoR [Discord](https://discord.gg/rigsofrods) server.

@@ -721,3 +721,5 @@ deformer
 deformers
 openable
 toc
+DualShock
+DualSense
