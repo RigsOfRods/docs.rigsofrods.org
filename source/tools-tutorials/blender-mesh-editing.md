@@ -18,7 +18,7 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 
 ## Required software
 
-- Rigs of Rods installed to the default location (`C:\Program Files\Rigs of Rods`)
+- Rigs of Rods
 - [Blender 2.79](https://download.blender.org/release/Blender2.79/)
 - [Ogre Import/Export add-ons](https://github.com/CuriousMike56/RoROgreAddons)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
@@ -33,7 +33,11 @@ Open the `.zip` file for the vehicle, and extract the correct `.mesh` file(s) an
 
 ![1](/images/blender-edit-meshandtextures.png)
 
-Next, open a new File Explorer window and browse to `C:\Program Files\Rigs of Rods`, this is where `OgreXMLConverter.exe` is located. 
+!!! warning 
+	As of the past few RoR versions, the XMLConverter is no longer bundled with the game.
+	You will need to download the command line tools from [here](https://forum.rigsofrods.org/resources/ogre-command-line-tools.967/) and extract into a new folder. You can then follow the tutorial as normal.
+
+~~Next, open a new File Explorer window and browse to `C:\Program Files\Rigs of Rods`, this is where `OgreXMLConverter.exe` is located.~~
 
 Simply drag and drop the mesh onto `OgreXMLConverter.exe` to get a `.mesh.xml`:
 
