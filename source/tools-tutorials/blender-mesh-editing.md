@@ -1,10 +1,8 @@
 Blender mesh editing
 ============
 
-!!! warning
-    This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
-
-
+!!! danger "Outdated tutorial"
+	This page was written before Blender version 2.8+ was released. It will be rewritten for 3.x eventually. 
 
 ## Introduction 
 
@@ -14,20 +12,18 @@ Rigs of Rods is a game that is very easy to modify. This tutorial will help you 
 
 **If you've created a model yourself and just want to export it to RoR, [install the add-ons](#installing-blender-add-ons) and skip to the [Exporting](#exporting) section.**
 
+!!! warning
+    This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
+
+
 ## Required software
 
 - Rigs of Rods installed to the default location (`C:\Program Files\Rigs of Rods`)
-- [Blender](https://www.blender.org/download/previous-versions/) (2.79b)
+- [Blender 2.79](https://download.blender.org/release/Blender2.79/)
 - [Ogre Import/Export add-ons](https://github.com/CuriousMike56/RoROgreAddons)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
 - (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
 - A brain, some basic computer knowledge, and some patience
-
-## Blender version warning 
-
-The latest version of Blender (2.80) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/).
-
-If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
 
 ## Getting started
 
