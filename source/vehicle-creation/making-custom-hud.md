@@ -1,11 +1,6 @@
 Making custom HUD
 ============
 
-!!! danger
-    This feature is being redone, see [this GitHub pull request](https://github.com/RigsOfRods/rigs-of-rods/pull/2764) for details.
-    This page will mostly remain relevant for the new system.
-
-
 ## Fundamental Concepts
 
 The GUI is described in a Layout file (*.layout). It is an XML file format.
