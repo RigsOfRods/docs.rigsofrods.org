@@ -31,7 +31,7 @@ Vehicle creation:<br>
 [Truck file format](vehicle-creation/fileformat-truck/) - Information on the file format that defines every vehicle or object in the game.<br>
 [Soundscript file format](vehicle-creation/fileformat-soundscript/) - Information on the file format used to define vehicle sounds.<br>
 [Alternate skins (skinzips)](vehicle-creation/alternate-skins/) - A guide on understanding the format used to create and share custom skins.<br>
-[Blender mesh editing](tools-tutorials/blender-mesh-editing/) - Learn the basics of editing vehicle models in Blender.<br>
+[Blender mesh editing](tools-tutorials/blender-mesh-editing/) - Learn the basics of editing existing vehicle models in Blender.<br>
 Terrain creation:<br>
 [Intro to terrain creation](terrain-creation/intro/) - The basic structure of a RoR terrain.<br>
 [Terrn2 file format](terrain-creation/terrn2-subsystem/) - Information on the file format used to define a terrain.<br>

@@ -1,45 +1,50 @@
-Blender mesh editing
+Blender (2.7) mesh editing
 ============
-
-!!! danger "Outdated tutorial"
-	This page was written before Blender version 2.8+ was released. It will be rewritten for 3.x eventually. 
 
 ## Introduction 
 
 Rigs of Rods is a game that is very easy to modify. This tutorial will help you get started on editing meshes using Blender, from installing the add-ons to exporting.
 
+We assume you already have some basic knowledge on using Blender (navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
+
+We'll also assume you are running Windows, however these instructions should mostly apply to Linux users.
+
 **Please read everything carefully and do not skip any steps.**
 
-**If you've created a model yourself and just want to export it to RoR, [install the add-ons](#installing-blender-add-ons) and skip to the [Exporting](#exporting) section.**
-
-!!! warning
-    This tutorial assumes you have some basic knowledge on using Blender (Navigating UI, basic object editing, etc). There are plenty of tutorials available on YouTube or many other websites.
-
+!!! note "Disclaimer"
+	This page's purpose is not to teach you how to make content from scratch, nor is it meant to discourage anyone from doing so. It is simply for those who are interested in editing existing models.
+	Editing existing content is the easiest way to learn how RoR's content creation works, and this page is meant to help you get started. We currently do not have a tutorial on how to make a mod from scratch.
 
 ## Required software
 
 - Rigs of Rods
 - [Blender 2.79](https://download.blender.org/release/Blender2.79/)
 - [Ogre Import/Export add-ons](https://github.com/CuriousMike56/RoROgreAddons)
+- [Ogre Command Line Tools](https://forum.rigsofrods.org/resources/ogre-command-line-tools.967/)
 - (Optional) [Notepad++](https://notepad-plus-plus.org/)
-- (Optional) [OgreMeshy](https://sourceforge.net/projects/ogremeshy/)
+- (Optional) [OgreMeshy](https://forum.rigsofrods.org/resources/ogremeshy.595/)
 - A brain, some basic computer knowledge, and some patience
+
+## Blender version warning 
+
+On July 2019, Blender 2.8 was released. It was the biggest release in Blender's history, reworking a lot of Blender's core features. 
+This included changes to the addon API, which means addons need to be updated to support the newer versions. 
+
+As of November 2022, the [Ogre Mesh Import/Export plugin](https://github.com/OGRECave/blender2ogre) _technically_  _supports_  Blender 2.8+, 
+it currently suffers from usability bugs that prevent this page from being updated.
+
+For this reason we recommend using Blender 2.79 to edit meshes.
 
 ## Getting started
 
-If you're following this tutorial, chances are you probably already have a mesh you want to edit. In this tutorial I'll be editing Box5Diesel's Ram EXT.
+If you're following this tutorial, chances are you probably already have a mesh you want to edit. In this tutorial I'll be editing [Box5Diesel's Ram EXT](https://forum.rigsofrods.org/resources/box-dodge-ram.319/).
 Open the `.zip` file for the vehicle, and extract the correct `.mesh` file(s) and the textures (`.dds`, `.png`, etc) into a folder you can easily access:
-
 
 ![1](/images/blender-edit-meshandtextures.png)
 
-!!! warning 
-	As of the past few RoR versions, the XMLConverter is no longer bundled with the game.
-	You will need to download the command line tools from [here](https://forum.rigsofrods.org/resources/ogre-command-line-tools.967/) and extract into a new folder. You can then follow the tutorial as normal.
+Next, download the [Ogre Command Line Tools](https://forum.rigsofrods.org/resources/ogre-command-line-tools.967/) and extract the archive into a new folder. Inside you'll find `OgreXMLConverter.exe`.
 
-~~Next, open a new File Explorer window and browse to `C:\Program Files\Rigs of Rods`, this is where `OgreXMLConverter.exe` is located.~~
-
-Simply drag and drop the mesh onto `OgreXMLConverter.exe` to get a `.mesh.xml`:
+Now simply drag and drop the mesh onto `OgreXMLConverter.exe` to get a `.mesh.xml`:
 
 ![2](/images/blender-edit-converting-mesh-to-xml.png)
 
@@ -125,7 +130,8 @@ The `Edge Split` Modifier should now be selected. The default `Split Angle` (30)
 
 ![17](/images/blender-edit-edgesplit2.png)
 
-**Note: For some models just applying edge split won't be enough, further work may be required (such as marking faces sharp).**
+!!! note
+	For some models just applying edge split won't be enough, further work may be required (such as marking faces sharp).**
 
 ## Applying the texture
 
@@ -235,12 +241,23 @@ You forgot to convert the `.mesh` to `.mesh.xml`, as described in the [Getting s
 
 #### Mesh is flipped
 
-Change the "swap axis" option in the export settings.
+Change the "swap axis" option in the export settings:
 
-#### Mesh appears white/pink
+![36](/images/blender-export-swap-axis.png)
 
-You did not assign the correct material. Make sure it matches.
+Rigs of Rods meshes require the axis to be swapped to `xz-y` due to differences in the axises between RoR and Blender:
+
+In RoR x is front-back, y is up-down, z is side to side
+
+In Blender x is side to side, z is up-down, y is front-back
+
+#### Mesh appears white/black/pink
+
+You did not assign the correct material or you named it incorrectly. Make sure it matches.
+
+White/pink means the game can't find the material, while black means the game found the material but not the texture. 
+You can search the mesh name in your RoR.log to find the error. 
 
 #### Other errors
 
-First, just Google the issue. If you can't find a solution then you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/).
+If you're experiencing issues, you can create a thread on the [content creation forum](https://forum.rigsofrods.org/forums/content-creation.15/) or join the [RoR Discord](https://discord.gg/rigsofrods) and ask in the #modding channel.

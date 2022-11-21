@@ -49,7 +49,7 @@ nav:
           - Jargon: gameplay/jargon.md
     - Tools and tutorials:
           - Installing addons: tools-tutorials/addons.md
-          - Blender mesh editing: tools-tutorials/blender-mesh-editing.md
+          - Blender (2.7) mesh editing: tools-tutorials/blender-mesh-editing.md
           - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
           - Visual editors: tools-tutorials/visual-editors.md
           - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
