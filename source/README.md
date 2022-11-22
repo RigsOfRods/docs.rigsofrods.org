@@ -41,6 +41,15 @@ Terrain creation:<br>
 
 ![seperator](/images/branding/ror_seperator.png)
 
+Website - https://rigsofrods.org/ <br>
+Forum - https://forum.rigsofrods.org/ <br>
+Repository - https://forum.rigsofrods.org/resources/ <br>
+Multiplayer server list - https://forum.rigsofrods.org/multiplayer/ <br>
+Discord server - https://discord.gg/rigsofrods <br>
+
+![seperator](/images/branding/ror_seperator.png)
+
+
 [Terms of Service](rules/terms-of-service/)<br><br>
 
 If you wish to help contribute to the docs, please see [this guide](tools-tutorials/docs-contributing-guide/).<br>
