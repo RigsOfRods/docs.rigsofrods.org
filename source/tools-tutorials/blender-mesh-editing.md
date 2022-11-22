@@ -239,7 +239,7 @@ You forgot to convert the `.mesh` to `.mesh.xml`, as described in the [Getting s
 !!! warning
 	On Linux there is currently a bug preventing `.mesh.xml` imports in uppercase paths (e.g. `/home/user/Downloads/rorimportfiles`. You will have to place the `.mesh` and `.mesh.xml` files into a different folder without uppercases (e.g. `/home/user/rorimportfiles`)
 
-#### Mesh is flipped
+#### Mesh is rotated incorrectly
 
 Change the "swap axis" option in the export settings:
 

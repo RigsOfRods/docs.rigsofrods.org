@@ -2318,7 +2318,7 @@ Optional parameters:
     -   `u` : User controlled light. (i.e. fog light) (see control numbers)        
 -   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
         For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
-    -   Special value: `12` - Parking brake indicator (not working in version 2021.04)        
+    -   Special value: `12` - Parking brake indicator 
 -   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -2</span>;
         Delay between on/off change, in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
     -   Special value: `-1` to use the default value of 500ms.
