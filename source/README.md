@@ -33,7 +33,6 @@ Vehicle creation:<br>
 [Alternate skins (skinzips)](vehicle-creation/alternate-skins/) - A guide on understanding the format used to create and share custom skins.<br>
 [Blender mesh editing](tools-tutorials/blender-mesh-editing/) - Learn the basics of editing existing vehicle models in Blender.<br>
 Terrain creation:<br>
-[Intro to terrain creation](terrain-creation/intro/) - The basic structure of a RoR terrain.<br>
 [Terrn2 file format](terrain-creation/terrn2-subsystem/) - Information on the file format used to define a terrain.<br>
 [Editing terrain objects](terrain-creation/editing-terrain-objects/) - How to place objects on terrains using the built-in editor. <br>
 [Object file format](terrain-creation/object-format/) - Information on the file format used to define static objects. <br>
