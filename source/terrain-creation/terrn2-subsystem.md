@@ -77,7 +77,7 @@ RoR implements water as a single body covering the whole map and penetrating all
 
 <span style="color:#BD0058">(Real)</span> Sets the height of the water surface. Higher values = more terrain is flooded. Unused if water is disabled. 
 
-You can change the water level in-game using the console command `setwaterlevel`. 
+You can change the water level in-game using the console command `waterlevel`. 
 
 #### WaterBottomLine
 
