@@ -441,7 +441,9 @@ In Blender x is side to side, z is up-down, y is front-back
 
 The name of the `.odef` file without the file extension. See the [Object file format](terrain-creation/object-format/) page for more info.
 
-#### Special objects 
+### Special objects 
+
+#### Overview map icons
 
 Static objects can also have extra values after the odef name:
 
@@ -470,6 +472,17 @@ ship
 	The icon type and structure names are reversed in-game. `hotel Elk` appears as `Elk hotel` on the overview map.
 	If no icons appear on the overview map, make sure "declutter overview map" is disabled under Settings -> Graphics.
 	
+#### Grid 
+
+Allows you to add a grid, as shown on the default Simple Terrain:
+
+![simple-terrain](/images/simple-terrain.png)
+
+```
+// grid x y z 
+grid 512, 0.1, 512
+```
+
 ### Vehicles and dynamic objects 
 
 Node/Beam structures (actors) such as trucks, loads, trailers, and more can be placed on a terrain. These will only appear in single player, they will not spawn in multiplayer.
