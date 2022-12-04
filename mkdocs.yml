@@ -74,7 +74,6 @@ nav:
           - Weight tuning: vehicle-creation/weight-tuning.md
           - Making custom dashboard HUD: vehicle-creation/making-custom-hud.md
     - Terrain creation:
-          - Intro to terrain creation: terrain-creation/intro.md
           - Terrn2 file format: terrain-creation/terrn2-subsystem.md
           - Converting old terrain to terrn2 format: terrain-creation/terrain-conversion-terrn2.md
           - Editing terrain objects: terrain-creation/editing-terrain-objects.md

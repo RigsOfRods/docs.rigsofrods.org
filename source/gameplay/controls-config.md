@@ -815,7 +815,7 @@ For advanced editing you'll need to edit the `Controller__XBOX_360_For_Windows_.
 
 #### Required applications
 
-[vJoy joystick emulator](http://vjoystick.sourceforge.net/site/index.php/download-a-install/72-download)
+[vJoy joystick emulator](https://sourceforge.net/projects/vjoystick/files/latest/download)
 
 [FreePIE input emulator](http://andersmalmgren.github.io/FreePIE/index.html)
 

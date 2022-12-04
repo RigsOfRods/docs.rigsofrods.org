@@ -11,13 +11,7 @@ Comment lines can be inserted by putting `;` or `//` at the beginning of the lin
 
 ## Building Philosophy
 
-See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the building philosophy. I recommend using the following method for construction:
-
--   Draw the blueprint of your truck on a piece drawing paper; mark the nodes, and write their number (starting with zero).
--   Edit your truck file; put the title, globals, engine, cameras, nodes, and beams sections in.
--   Run the game to see how it goes. If you forget some beams the truck will fold on itself!
--   When the chassis seems to work well; add wheels, suspension, hydros, etc; And then test drive.
--   When the truck is all working; do the bodywork and texture, and mark most beams as invisible (displaying too many beams has a large performance impact)
+See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the building philosophy.
 
 ## Is It a Truck, Plane, Train or Boat?
 
