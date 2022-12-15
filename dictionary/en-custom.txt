@@ -765,3 +765,5 @@ MaxPixelError
 DebugBlendMaps
 declutter
 SkyXConfigFile
+antilock
+tractioncontrol

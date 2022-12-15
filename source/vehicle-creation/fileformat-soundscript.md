@@ -31,25 +31,35 @@ This is the more important source, and it is mandatory. There can be only one tr
 
 | Source                       | Description
 | ---                          | ---
-| always_on                    | the sound will always play 
-| engine                       | the sound will play as long as the car/truck/boat engine is running 
-| aeroengine1 to aeroengine8   | the sound will play as long as the numbered propeller or jet engine is running 
-| afterburner1 to afterburner8 | same for afterburners 
-| horn                         | the horn 
-| brake                        | the brake pedal 
-| pump                         | the hydraulic pump 
-| starter                      | the engine starter 
-| ignition                     | the ignition switch 
-| repair                       | when the truck is repaired 
-| air                          | active air suspension activation 
-| air_purge                    | compressed air purge 
-| shift                        | shifting gears 
-| gear_slide                   | gearbox torture 
-| creak                        | structural creaking 
-| break                        | beam breaking 
-| screetch                     | wheel screetching on tarmac 
-| parking_brake                | parking brake 
+| always_on                    | The sound will always play 
+| engine                       | The sound will play as long as the car/truck/boat engine is running 
+| aeroengine1<br>to aeroengine8   | The sound will play as long as the numbered propeller or jet engine is running 
+| afterburner1<br>to afterburner8 | Same for afterburners 
+| horn                         | The horn 
+| brake                        | The brake pedal 
+| pump                         | The hydraulic pump 
+| starter                      | The engine starter 
+| turbo_BOV				| Turbo blow off valve
+| turbo_waste_gate				| Turbo waste gate 
+| turbo_back_fire				| Turbo back fire 
+| ignition                     | The ignition switch 
+| repair                       | When the truck is repaired 
+| air                          | Active air suspension activation 
+| air_purge                    | Compressed air purge 
+| shift                        | Shifting gears 
+| gear_slide                   | Gearbox torture 
+| reverse_gear                  | In reverse gear 
+| turn_signal                  | Turn signal toggle 
+| turn_signal_tick                  | Turn signal ticking 
+| turn_signal_warn_tick                  | Emergency signals
+| antilock                   | Anti-lock brakes toggle 
+| tractioncontrol                   | Traction control toggle
+| creak                        | Structural creaking 
+| break                        | Beam breaking 
+| screetch                     | Wheel screetching on tarmac 
+| parking_brake                | Parking brake 
 | aoa_horn                     | Stall horn (AOA above 18 degree) 
+| avionic_chat_01<br>to avionic_chat_13 | Airplane chatter
 | gpws_ap_disconnect           | Autopilot disconnect 
 | gpws_10                      | 10 feet warning 
 | gpws_20                      | 20 feet warning 
@@ -57,8 +67,10 @@ This is the more important source, and it is mandatory. There can be only one tr
 | gpws_40                      | 40 feet warning 
 | gpws_50                      | 50 feet warning 
 | gpws_100                     | 100 feet warning 
-| gpws_pull_up                 | woop woop pull up! 
+| gpws_pull_up                 | Woop woop pull up! 
 | gpws_minimums                | Minimums!
+| linked_command                | Command sounds
+| main_menu                | Main menu music
 
 
 #### pitch_source
@@ -68,21 +80,23 @@ A pitch source will alter the pitch of the played sounds (if they are pitchable)
 
 | Name                                            | Description
 | ---                                             | ---
-| none                                            | this is the default, no pitch modulation, with a reference value of 1.0 
-| engine_rpm                                      | engine revolutions per minute 
-| turbo_rpm                                       | turbo revolutions per minute 
-| aeroengine1_rpm<br>to aeroengine8_rpm           | propeller revolutions per minute, or jet engine speed in percent 
-| aeroengine1_throttle<br>to aeroengine8_throttle | throttle setting of the propeller or jet engine 
-| wheel_speed_kmph                                | wheel speed in kilometer per hour 
-| air_speed_knots                                 | air speed in knots 
-| angle_of_attack_degree                          | absolute value of the angle of attack in degree (for airplanes only) 
-| injector_ratio                                  | how much fuel is injected into the engine (from 0.0 to 1.0) 
-| torque_nm                                       | output torque of engine in Newton.Meter 
-| gearbox_rpm                                     | gearbox output speed in RPM 
-| creak                                           | structural creaking effort 
-| break                                           | beam breaking effort 
-| screetch                                        | wheel screetch intensity 
-| pump_rpm                                        | hydraulic pump RPM
+| none                                            | This is the default, no pitch modulation, with a reference value of 1.0 
+| engine_rpm                                      | Engine revolutions per minute 
+| turbo_rpm                                       | Turbo revolutions per minute 
+| aeroengine1_rpm<br>to aeroengine8_rpm           | Propeller revolutions per minute, or jet engine speed in percent 
+| aeroengine1_throttle<br>to aeroengine8_throttle | Throttle setting of the propeller or jet engine 
+| wheel_speed_kmph                                | Wheel speed in kilometer per hour 
+| air_speed_knots                                 | Air speed in knots 
+| angle_of_attack_degree                          | Absolute value of the angle of attack in degree (for airplanes only) 
+| injector_ratio                                  | How much fuel is injected into the engine (from 0.0 to 1.0) 
+| torque_nm                                       | Output torque of engine in Newton.Meter 
+| gearbox_rpm                                     | Gearbox output speed in RPM 
+| creak                                           | Structural creaking effort 
+| break                                           | Beam breaking effort 
+| screetch                                        | Wheel screetch intensity 
+| pump_rpm                                     | Hydraulic pump RPM
+| linked_command_rate                  | Command movement rate 
+| music_volume                           | Main menu music volume
 
 
 #### gain_source

@@ -3200,6 +3200,10 @@ extcamera node 123
 
 The final two modes are useful for a vehicle with detaching parts, so the camera is fixed in the view of the main vehicle.
 
+!!! note 
+	You can manually set the extcamera by middle-clicking a node. Reset by middle-clicking an area away from the vehicle. 
+
+
 ### Camerarail
 
 In <span style="background-color:#fb7">\[ Version 0.39.7+ \]</span> and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.

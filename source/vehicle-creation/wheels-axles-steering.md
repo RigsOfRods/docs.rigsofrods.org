@@ -105,9 +105,10 @@ Sample axle section:
 
 ```
 axles
-w1(1 2), w2(3 4), d(ol) ; axle 1
-w1(5 6), w2(7 8), d(l) ; axle 2
-
+; axle 1
+w1(1 2), w2(3 4), d(ol)
+; axle 2
+w1(5 6), w2(7 8), d(l) 
 ```
 
  <p>The axle section introduces open differentials, and Spooled (aka locked) differentials. By adding axles to your vehicle file you override the propulsed property for the tires. Only wheels connected to an axle are powered, if multiple axles are defined the axles are interconnected in a locked manner. If no axle section is defined the old model of equal power distribution is used. Because the axle sections looks up already defined wheels, it must be defined <b>AFTER</b> the wheels have been defined</p>
@@ -206,7 +207,7 @@ If you find your nodes are contacting the ground and obstructing movement, you c
 
 ### Hydros
 
-After the steering chassis is completed, the hydros](/vehicle-creation/fileformat-truck#hydros) can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted).
+After the steering chassis is completed, the [hydros](/vehicle-creation/fileformat-truck#hydros) can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted).
 
  <p>In order to define a hydro, some specific information is needed. </p>
  <ol>
@@ -226,11 +227,12 @@ After the steering chassis is completed, the hydros](/vehicle-creation/fileforma
  </ol>
 
 Example Syntax:
-
-      hydros
-      ;node1, node2, factor, options</dt>
-      43,    37,    -0.2,   i
-      46,    36,     0.2,   s
+```
+hydros
+;node1, node2, factor, options
+43,    37,    -0.2,   i
+46,    36,     0.2,   s
+```
 
  <p>The following example shows how hydros will push and pull nodes in a direction to induce steering: </p>
  <p>
