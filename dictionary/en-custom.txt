@@ -767,3 +767,11 @@ declutter
 SkyXConfigFile
 antilock
 tractioncontrol
+waypoints
+waypoint
+Agora
+RVI
+ai
+minimap
+JSON
+

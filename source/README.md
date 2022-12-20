@@ -22,6 +22,7 @@ New to Rigs of Rods? Check out these pages to help you get started: <br>
 [Beginner's Guide](gameplay/beginners-guide/) - A guide for new players, teaches the basic controls and gameplay mechanics of RoR.<br>
 [Installing content (mods)](gameplay/installing-content/) - How to install new vehicles and terrains.<br>
 [Controls and configuration](gameplay/controls-config/) - Where you'll find the controls list, along with guides on how to set up controllers and other input devices.<br>
+[Vehicle AI](gameplay/vehicle-ai/) - An introduction to the new AI feature. 
 
 ![seperator](/images/branding/ror_seperator.png)
 
