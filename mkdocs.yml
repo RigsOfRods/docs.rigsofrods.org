@@ -39,12 +39,13 @@ nav:
     - Home: README.md
     - Gameplay:
           - Installing the game: gameplay/installing-the-game.md
+          - General FAQ: gameplay/general-faq.md
           - Beginner's Guide: gameplay/beginners-guide.md
           - Installing content (mods): gameplay/installing-content.md
           - Controls and configuration: gameplay/controls-config.md
+          - Vehicle AI: gameplay/vehicle-ai.md
           - Aircraft handling: gameplay/aircraft-handling.md
           - Multiplayer server setup: gameplay/multiplayer-server-setup.md
-          - General FAQ: gameplay/general-faq.md
           - Version 2020.01 FAQ: gameplay/version-2020-01-faq.md
           - Jargon: gameplay/jargon.md
     - Tools and tutorials:
