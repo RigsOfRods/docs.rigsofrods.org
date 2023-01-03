@@ -35,16 +35,22 @@ Features:
 
 - All `set_node_defaults`, `set_beam_defaults` and `set_beam_defaults_scale` entries are preserved
 
-!!! warning 
-	The latest version of Blender (2.8x) is currently not supported as the plugins have not been updated for it yet. You can download 2.79b [here](https://download.blender.org/release/Blender2.79/). 
-	
-	If you are unsure which file to download, just select `blender-2.79b-windows64.zip ` and extract it into a new folder, then run `blender.exe`.
 
-### Installation 
+### Download
 
-First, download the plugins from the [Repository](https://forum.rigsofrods.org/resources/blender-n-b-import-export-plugin.25/). **Do not extract.**
+First, download the correct version of the plugins from the [Repository](https://forum.rigsofrods.org/resources/blender-n-b-import-export-plugin.25/). 
 
-In Blender, go to `File` -> `User Preferences`:
+For Blender 2.79, download `blender_NB_plugin_2.79.zip`.
+
+For Blender 2.8 and newer, download `blender_NB_plugin_2.8.zip`.
+
+**Do not extract.**
+
+### Installation
+
+#### 2.79
+
+Go to `File` -> `User Preferences`:
 
 ![bnb1](/images/blender-edit-userprefs1.png)
 
@@ -52,7 +58,7 @@ Click `Add-ons` -> `Install from File`:
 
 ![bnb2](/images/blender-edit-userprefs2.png)
 
-Select the `blender_plugins.zip` file you downloaded earlier. 
+Select the `blender_NB_plugin_2.79.zip` file you downloaded earlier. 
 
 Type "RoR" into the search bar and both add-ons should appear:
 
@@ -60,9 +66,35 @@ Type "RoR" into the search bar and both add-ons should appear:
 
 Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`. 
 
-You can now close the `User Preferences` window, the plugins are now ready to use. 
+You can now close the `User Preferences` window.
+
+The plugins are now available in `File` -> `Import` and `Export` -> `Truck (.truck)`.
+
+#### 2.8 and newer
+
+Go to `Edit` -> `Preferences`:
+
+![bnb28-1](/images/blender-edit-userprefs1-2.8.png)
+
+Click `Add-ons` -> `Install`:
+
+![bnb28-2](/images/blender-edit-userprefs2-2.8.png)
+
+Select the `blender_NB_plugin_2.8.zip` file you downloaded earlier. 
+
+Type "RoR" into the search bar and both add-ons should appear:
+
+![bnb28-3](/images/blender-edit-userprefs3-2.8.png)
+
+Enable both `RoR Exporter` and `RoR Importer` addons, then close the Preferences window. 
+
+The plugins are now available in `File` -> `Import` and `Export` -> `Truck (.truck)`.
 
 ### Node visualization
+
+To view the node numbers, follow the steps below for your Blender version.
+
+#### 2.79
 
 By default, the plugin will enable Blender's debug mode which provides node ID visualization, however they are usually difficult to read. 
 
@@ -82,11 +114,34 @@ While in edit mode, open the `Mesh Display` menu and select `Visualize indices`:
 
 You should now have readable node IDs. 
 
-### Notes 
+#### 2.8 and newer 
 
-- You can use [vertex groups](https://easyblend.org/html/modeling/meshes/vertex_groups/vertex_groups.html) to organize your structure. In the `.truck` file, a "vertex group" starts with `;grp:`.
-- Due to how the plugin reads/writes the `.truck` file, it is recommended to remove and reimport your N/B if you want to make changes in Blender, otherwise changes you've made after exporting will be reverted.
+Make sure `Developer Extras` is enabled in `Edit` -> `Preferences` -> `Interface`:
+
+![bnb28-4](/images/blender-edit-devextras-2.8.png)
+
+Now open the Overlays menu, located in the top right:
+
+![bnb28-5](/images/blender-edit-overlays-location-2.8.png)
+
+Enable `Indices` under `Developer`:
+
+![bnb28-5](/images/blender-edit-overlays-indices-2.8.png)
+
+Node numbers should now be visible.
+
+![bnb28-6](/images/blender-edit-indices-2.8.png)
+
+### Notes and known issues
+
+- You can use [vertex groups](https://docs.blender.org/manual/en/latest/modeling/meshes/properties/vertex_groups/index.html) to organize your structure. In the `.truck` file, a "vertex group" starts with `;grp:`.
+- Due to how the plugin reads/writes the `.truck` file, it is recommended to remove and reimport your N/B if you want to make more changes in Blender, otherwise changes you've made in the `.truck` file after exporting will be reverted.
  
+Known issues:
+
+- If the `.truck` file contains [detacher_group](/vehicle-creation/fileformat-truck/#detacher_group) sections, they must be commented `;` out 
+otherwise not all beams will import correctly. See this [GitHub issue ticket](https://github.com/RigsOfRods/rigs-of-rods/issues/3002) for more information.
+
 
 ## TruckViewer
 
@@ -176,7 +231,7 @@ Requires MacOSX Snow Leopard or Higher.
 
 The mac port is standalone with all the files needed built into the app, Huge thanks to MothBird.
 
-Warning: the file is quite large (511.6MB) because of all of the required frameworks.
+Warning: the file is quite large (209.92MB) because of all of the required frameworks.
 
 
 ### Using blueprints
