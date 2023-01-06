@@ -2304,8 +2304,12 @@ Optional parameters:
 
 -   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>;
         Type of flare.
-    -   `f` (default mode when not stated): Headlight.
-    -   `b` : Brakelight.
+    -   `f` (default mode when not stated): Low beams, toggleable with `N` or cycled with `CTRL+N`.
+	-   `h`: High beams,  toggleable with `SHIFT+N` or cycled with `CTRL+N`.
+	-   `s`: Sidelights (running/parking lights), toggleable with `N` or cycled with `CTRL+N`.
+	-   `g`: Fog lights, toggleable with `ALT+N` or cycled with `CTRL+N`.
+    -   `b` : Brake lights.
+	-   `t`: Tail lights, activated together with `f` option. 
     -   `l` : Left blinker.
     -   `r` : Right blinker.
     -   `R` : Reverse light (on when driving in R gear)
@@ -2319,8 +2323,16 @@ Optional parameters:
     -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.        
 -   **Flare size**: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -1</span>;
         This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
--   **Material Name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = 'default'</span>;
+-   **Material name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = 'default'</span>;
         This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
+
+!!! note "Notes"
+	<span style="background-color:#fb7">\[ Version 2022.12+ \]</span>  introduced the `h`, `s`, `g`, and `t` options.<br>
+	Light cycling (CTRL+N) functions based on the available lights:<br>
+    i. All lights off<br>
+    ii. Sidelights on but only if any installed, otherwise skip to 3).<br>
+    iii. Sidelights and lowbeams on.<br>
+    iv. Sidelights, lowbeams and highbeams on, but only if highbeams are installed, otherwise cycle to 1).<br>
 
 Examples:
 
@@ -2344,6 +2356,19 @@ Flares2 are the same as normal flares, except that they add an offset-z argument
 
 ```
 flares2
+;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
+51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
+```
+
+### Flares3
+
+<span style="background-color:#fb7">\[ Version 2022.12+ \]</span>
+
+Flares3 functions the same as Flares2, except they take [set_inertia_defaults](#set_inertia_defaults) into account. This allows for flares which can fade in/out. 
+
+```
+flares3
+set_inertia_defaults 0.4, 0.8, linear, linear
 ;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
 51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
 ```
