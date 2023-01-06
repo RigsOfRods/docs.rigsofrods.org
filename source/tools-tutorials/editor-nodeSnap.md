@@ -49,7 +49,7 @@
 ## Open a truck file
 
    <p>To open a truck file, simply click on "Open file" under "Actions" and navigate to your desired truck file.</p> 
-   <small><b>Note:</b> nodeSnap supports all Rigs of rods's truck file extensions.</small>
+   <small><b>Note:</b> nodeSnap supports all of RoR's truck file extensions.</small>
 
 ## Interface
 
@@ -226,12 +226,6 @@
    </div>
    <p>The edit menu has a few interesting functions. The "Scale" function gives you the ability to scale the whole n/b. The "Move" functions moves the whole n/b by an offset on a specified axis. The "Rotate" function rotates the whole n/b on a specified axis with a given angle in degrees.</p>
    <p>The "Duplicate Visible" function solves one problem you have when duplicating groups. Instead of duplicating a specific group, all you have to do is to hide all the nodes/groups that you do not want to duplicate, and execute the function, just like duplicating a group.</p>
-   <div class="thumb tleft">
-      <div class="thumbinner" style="width:602px;">
-         <a href="/images/nodeSnap-16.gif" class="image">
-         <img alt="" src="/images/nodeSnap-16.gif" class="thumbimage" /></a>  
-      </div>
-   </div>
 
 #### File menu
 
