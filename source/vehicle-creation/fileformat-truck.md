@@ -488,16 +488,16 @@ fileinfo      000UID,          107,             2
 
 ### Help
 
-**NOTE: This section is not used as of version 0.39.5+**
-
-The help section gives the name of the material used for the help panel on the in-game dashboard. This material must be defined elsewhere in a material file. This is optional. (But it looks cool, so use it!)
-
-NOTE: This setting can be overridden by [section "guisettings"](#guisettings)
+The help section gives the name of the material used for the help image in the commands panel (`CTRL+T`).  This material must be defined elsewhere in a material file.
 
 ```
 help
 tracks/semihelp
 ```
+
+![imgui-commands-panel](/images/imgui-commands-panel.png)
+
+This is optional. (But it looks cool, so use it!)
 
 ### Comments
 
