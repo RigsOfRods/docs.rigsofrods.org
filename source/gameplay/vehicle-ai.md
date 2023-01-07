@@ -1,9 +1,6 @@
 Vehicle AI
 ============
 
-!!! note
-	This is an upcoming feature not currently available in the stable version (2022.04). If you would like to try it early, you can download the latest [development build](https://rigs-of-rods.itch.io/rigs-of-rods-dev).
-
 ## Introduction
 
 Introduced in version 2022.12, AI vehicles now can be controlled and customized through the "Vehicle AI" section of the top menu:
