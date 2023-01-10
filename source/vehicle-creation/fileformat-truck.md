@@ -66,8 +66,8 @@ Every keyword (directive, inline-section or section) which has parameters should
     <span style="color: #008079">Empty value = `-1`</span>;
     Parameters which must be entered but can contain "empty value" are described (nullable) and have "Empty value" section.
 -   **New parameter** 
-    <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span>
-    <span style="color:#BD0058">Data type</span>; Parameters with version requirements have a <span style="background-color:#fb7">\[ Version \]</span> box.
+    <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4+ \]</span>
+    <span style="color:#BD0058">Data type</span>; Parameters with version requirements have a <span style="background-color:#854200">\[ Version \]</span> box.
 -   **Options**
     <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>,
     <span style="color:#0B8A00">default = none</span> Options are enumerated as sub-list.
@@ -118,7 +118,7 @@ This section begins the structural definition of the vehicle. Each line defines 
 -   **Z position (in meters)**: <span style="color:#BD0058">Real number</span>; Node's Z coordinate.
 -   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = none</span>; Node options. You can combine multiple flags.
     -   **n**: This node can be grabbed with the mouse. (Standard node)
-    -   **m** <span style="background-color:#fb7">\[ Version 0.39.07+ \]</span>: This node can't be grabbed with the mouse. (Useful for switching levers with the mouse.)
+    -   **m** <span style="background-color:#854200">\[ Version 0.39.07+ \]</span>: This node can't be grabbed with the mouse. (Useful for switching levers with the mouse.)
     -   **f**: This node will not produce sparks. (Useful for support feet or hand made wheels.)
     -   **x**: This node is the exhaust point. (requires a "y" node) (see the [exhausts](#exhausts) section)
     -   **y**: The exhaust reference point. This node should be placed opposite of the direction that you want the exhaust to come from.
@@ -126,8 +126,8 @@ This section begins the structural definition of the vehicle. Each line defines 
     -   **h**: This node is a hook point. (Like the hook on a crane, or a winch, or whatever.) RoR will create a [beam](#beams) between this Node and Node\#0. If this is Node\#0, it will link it to Node\#1 (even if it isn't defined yet).
     -   **e**: This node is a terrain editing point (Like in the terrain editor truck. Not used as of version 0.4.0+)
     -   **b**: This node is assigned an extra buoyancy force (Experimental!)
-    -   **p** <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span>: Disables particle effects for this node (Like dust.)
-    -   **L** <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span>: Enables node settings logging into the ror.log for this node
+    -   **p** <span style="background-color:#854200">\[ Version 0.36.3+ \]</span>: Disables particle effects for this node (Like dust.)
+    -   **L** <span style="background-color:#854200">\[ Version 0.36.3+ \]</span>: Enables node settings logging into the ror.log for this node
     -   **l**: This node bears a part of the cargo load
 -   **Load mass (in Kilograms)** <span style="color:#666">(optional, needs **l** flag)</span>: <span style="color:#BD0058">Real number</span>; Overrides the load mass for this node. Only valid if used with **l** option.
      Please note that the load-nodes where you specify the mass explicitly are not calculated with the global load mass. So if you specify a custom mass on any load, you will also increase the mass on all other nodes if you do not decrease the global mass.
@@ -309,7 +309,7 @@ Optional parameters:
 
 -   **beam spring**: <span style="color:#BD0058">Real number</span>; Default=8000
 -   **beam damping**: <span style="color:#BD0058">Real number</span>; Default=800
--   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#fb7">\[  Version 2020.01+ \]</span> Weight of the camera point. Default=20Kg
+-   **node weight (Kg)**: <span style="color:#BD0058">Real number</span>; <span style="background-color:#854200">\[  Version 2020.01+ \]</span> Weight of the camera point. Default=20Kg
 
 Example:
 
@@ -340,7 +340,7 @@ cinecam
 
 This section will stop the parser. Everything after it will be ignored.
 
-Since <span style="background-color:#fb7">\[  Version 0.4.5.0 \]</span>, it's optional. In previous versions it's STRICTLY REQUIRED - without it, the vehicle will crash the game.
+Since <span style="background-color:#854200">\[  Version 0.4.5.0 \]</span>, it's optional. In previous versions it's STRICTLY REQUIRED - without it, the vehicle will crash the game.
 
 ```
 end
@@ -488,16 +488,16 @@ fileinfo      000UID,          107,             2
 
 ### Help
 
-**NOTE: This section is not used as of version 0.39.5+**
-
-The help section gives the name of the material used for the help panel on the in-game dashboard. This material must be defined elsewhere in a material file. This is optional. (But it looks cool, so use it!)
-
-NOTE: This setting can be overridden by [section "guisettings"](#guisettings)
+The help section gives the name of the material used for the help image in the commands panel (`CTRL+T`).  This material must be defined elsewhere in a material file.
 
 ```
 help
 tracks/semihelp
 ```
+
+![imgui-commands-panel](/images/imgui-commands-panel.png)
+
+This is optional. (But it looks cool, so use it!)
 
 ### Comments
 
@@ -557,15 +557,15 @@ Engoption sets optional parameters to the engine. It is mainly used for car engi
 
 -   **Engine inertia**: <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 10.0</span>. The default game value is correct for a large diesel engine. For smaller engines you probably want smaller values. 1.0 or 0.5 would be appropriate for small atmospheric engines, for instance.
 -   **Engine type**: <span style="color:#BD0058">One Character String</span>, <span style="color:#0B8A00">default = t</span>. Valid types are **t** for truck engine and **c** for car engine. This parameter changes engine sound and other engine characteristics.
--   **Clutch Force** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 10000 for trucks, 5000 for cars</span>.
--   **Shift Time**: <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.2 seconds</span>. Time (in seconds) that it takes to shift. Requires a defined **clutch force** parameter to work.
--   **Clutch Time** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.5 seconds</span>. Time (in seconds) the clutch takes to apply. Requires a defined **clutch force** parameter to work.
--   **Post Shift Time** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.2 seconds</span>. Time (in seconds) until full torque is transferred. Requires a defined **clutch force** parameter to work.
--   **Stall RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 300</span>. RPM where the engine will stall.
--   **Idle RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 800</span>. Idle RPM the engine should attempt to maintain.
--   **Max Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.1</span>. Defines the maximum amount of throttle the truck will use to maintain the idle RPM.
--   **Min Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.0</span>. Defines the minimum amount of throttle the truck will use to maintain the idle RPM.
--   **Braking torque** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = engine_torque / 5</span>. Defines the amount of engine braking when you let go of the throttle.
+-   **Clutch Force** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 10000 for trucks, 5000 for cars</span>.
+-   **Shift Time**: <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.2 seconds</span>. Time (in seconds) that it takes to shift. Requires a defined **clutch force** parameter to work.
+-   **Clutch Time** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.5 seconds</span>. Time (in seconds) the clutch takes to apply. Requires a defined **clutch force** parameter to work.
+-   **Post Shift Time** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span> <span style="color:#BD0058">Positive real number</span>, <span style="color:#0B8A00">default = 0.2 seconds</span>. Time (in seconds) until full torque is transferred. Requires a defined **clutch force** parameter to work.
+-   **Stall RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 300</span>. RPM where the engine will stall.
+-   **Idle RPM** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 800</span>. Idle RPM the engine should attempt to maintain.
+-   **Max Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.1</span>. Defines the maximum amount of throttle the truck will use to maintain the idle RPM.
+-   **Min Idle Mixture** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = 0.0</span>. Defines the minimum amount of throttle the truck will use to maintain the idle RPM.
+-   **Braking torque** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 2020.01+ \]</span> <span style="color:#BD0058">Real number</span>, <span style="color:#0B8A00">default = engine_torque / 5</span>. Defines the amount of engine braking when you let go of the throttle.
 
 
 ```
@@ -631,7 +631,7 @@ engturbo
 Parameters:
 
 -   **Default braking force**: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 30000</span>; This allows you to change the default braking force value. The default is 30000, which is generally too high a value for smaller cars and trucks.
--   **Parking brake force** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.3+ \]</span> <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = (brake\_force \* 2)</span>;
+-   **Parking brake force** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.3+ \]</span> <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = (brake\_force \* 2)</span>;
 
 ```
 brakes
@@ -940,7 +940,7 @@ shocks2
 
 ### Shocks3
 
-<span style="background-color:#fb7">\[ Version 2020.01+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
+<span style="background-color:#854200">\[ Version 2020.01+ \]</span> Shocks can be seen as tunable beams, useful for suspensions.
 
 Parameters:
 
@@ -982,15 +982,15 @@ Parameters:
 -   **options** <span style="color:#666">(optional)</span> <span style="color:#BD0058">String</span>, <span style="color:#0B8A00">default = no options (hydro is visible)</span>
     -   `i`: Makes the hydro invisible
     -   `s`: (Land vehicles) Disables the hydro at high speed (as seen sometimes with rear steering axles on large trucks)
-    -   `a`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by aileron input.
-    -   `r`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by rudder input.
-    -   `e`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by elevator input.
-    -   `u`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and elevator input.
-    -   `v`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and elevator input.
-    -   `x`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and rudder input.
-    -   `y`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and rudder input.
-    -   `g`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of elevator input and rudder input.
-    -   `h`: <span style="background-color:#fb7">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse elevator input and rudder input.
+    -   `a`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by aileron input.
+    -   `r`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by rudder input.
+    -   `e`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by elevator input.
+    -   `u`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and elevator input.
+    -   `v`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and elevator input.
+    -   `x`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of aileron input and rudder input.
+    -   `y`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse aileron input and rudder input.
+    -   `g`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of elevator input and rudder input.
+    -   `h`: <span style="background-color:#854200">\[ Version 0.36+ \]</span> (Airplanes) This hydro is commanded by the combination of inverse elevator input and rudder input.
 -   **start\_delay** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span> Inertia.
 -   **stop\_delay** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span> Inertia.
 -   **start\_function** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span> Inertia.
@@ -1050,8 +1050,8 @@ Options:
 - `difflock` - This animator extends or contracts with the difflock status of the truck (It only works when differentials are present in the truck.)
 - `rudderboat` - This animator extends or contracts with the steering hydro on boats.
 - `throttleboat` - This animator extends or contracts with the throttle status on boats.
-- `shortlimit` - Adds shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#fb7">\[ Version 0.38.24+ \]</span>
-- `longlimit` - Adds longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#fb7">\[ Version 0.38.24+ \]</span>
+- `shortlimit` - Adds shortbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#854200">\[ Version 0.38.24+ \]</span>
+- `longlimit` - Adds longbound movement limit to the animator, needs to be followed by a valid number. Limits are calculated in percentage like shocks. <span style="background-color:#854200">\[ Version 0.38.24+ \]</span>
 
 All options need to be connected by an vertical bar `|`, please refer to the example below. 
 
@@ -1197,7 +1197,7 @@ Improved commands.
 
 Commands are beams which contract and extend when player presses the corresponding key combination.
 
-Since <span style="background-color:#fb7">\[ Version 0.36.2 \]</span> you can specify an inertia function for your command. This reduces the swing of commands since they will operate smoothly with inertia.
+Since <span style="background-color:#854200">\[ Version 0.36.2 \]</span> you can specify an inertia function for your command. This reduces the swing of commands since they will operate smoothly with inertia.
 
 The parameters are:
 
@@ -1218,12 +1218,12 @@ The parameters are:
     - `p`: Activates press-once functionality: A single press of a shortening/lengthening key will lengthen/shorten the command beam as much as possible. A second keypress of the key which started the command moving stops the automatic movement.
     - `o`: is like `p`, but it will stop in the center position.
 -   **Description** <span style="color:#666">(optional)</span>: <span style="color: #008079">Placeholder = underscore '\_'</span> A text description that tells the user what the command beam does when it is activated. This is shown by pressing `CTRL+T` ingame. There is no need to put a key in front of the text (like F1:\_do\_something) this will be done automatically! Writing "hide" will hide the command from the "t-screen".
--   **Inertia: Start delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command start. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
--   **Inertia: Stop delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command stop. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
--   **Inertia: Start function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for start. See diagram below.
--   **Inertia: Stop function** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for stop. See diagram below.
--   **Affects engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; 0 means that moving this command won't affect engine RPM, so it is independent. Value larger than 0 specifies how much engine power will be needed for this command to move.
--   **Needs engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Boolean</span>; <span style="color:#0B8A00">default = true</span>; value of "true" means that the command only works with a running engine. "False" means engine is not needed.
+-   **Inertia: Start delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command start. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
+-   **Inertia: Stop delay factor** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">Positive real number</span>; The delay upon command stop. Note this isn't time in seconds, but are a factor (the lower the value, the more inertia there is)
+-   **Inertia: Start function** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for start. See diagram below.
+-   **Inertia: Stop function** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.36.2+ \]</span>; <span style="color:#BD0058">String</span>; Specifies what spline should be used for stop. See diagram below.
+-   **Affects engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; 0 means that moving this command won't affect engine RPM, so it is independent. Value larger than 0 specifies how much engine power will be needed for this command to move.
+-   **Needs engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Boolean</span>; <span style="color:#0B8A00">default = true</span>; value of "true" means that the command only works with a running engine. "False" means engine is not needed.
 
 ![Inertia models](/images/truckfile-inertia-models.png)
 
@@ -1299,7 +1299,7 @@ Rotators are alternate commands(hydros) that allows you to do turntables, like i
 
 Then, in a similar way to commands, comes the rate of rotation, and the numbers of the left and right function keys.
 
-New in <span style="background-color:#fb7">\[ Version 0.4+ \]</span>
+New in <span style="background-color:#854200">\[ Version 0.4+ \]</span>
 
 -   start\_delay. Real, default `0.0`
 -   stop\_delay. Real, default `0.0`
@@ -1602,20 +1602,20 @@ Parameters:
 -   **Node 2**: <span style="color:#BD0058">Node number/name</span>; The node where the trigger beam ends.
 -   **contraction\_trigger\_limit**: <span style="color:#BD0058">Real number</span>; The length when the shortkey command gets triggered
 -   **extension\_trigger\_limit**: <span style="color:#BD0058">Real number</span>; The length when the longkey command gets triggered
--   **shortbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at shortbound (1 - 48 <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
--   **longbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at longbound (1 - 48 <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
+-   **shortbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at shortbound (1 - 48 <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
+-   **longbound\_trigger\_action**: <span style="color:#BD0058">Positive or negative Decimal number</span>; On normal triggers without a special option this represents the command key to be triggered at longbound (1 - 48 <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> 1 - 84). For other trigger types, look below.
 -   **options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>
     -   `i`: Makes the trigger beam invisible
     -   `c`: Set the boundary calculation to command-style, just for convenience
     -   `x`: Set the trigger to disabled on startup ( default = `enabled` ), will get useless after first activation by a triggerblocker
     -   `b`: Blocks other commandkeys, shortkey at shortbound, longkey at longbound. If longkey is set to `-1`, shortkey will get blocked at short and at longbound. It does not block of manual user inputs, just triggers.
     -   `B`: Blocks other triggers when triggered, a number in shortkey represent the number of triggers to block at shortbound , a number in longkey the number of triggers to release at longbound.
-    -   `A`: <span style="background-color:#fb7">\[ Version 0.38.23+ \]</span> Same as the Blocker `B`, but inverted activation. Will block while between shotbound and longbound a number of triggers (shortkey) and release if not (longkey).
+    -   `A`: <span style="background-color:#854200">\[ Version 0.38.23+ \]</span> Same as the Blocker `B`, but inverted activation. Will block while between shotbound and longbound a number of triggers (shortkey) and release if not (longkey).
     -   `s`: Switches commandnumbers when triggered set in shortkey and longkey. Good to build wipers or similar, see examples
-    -   `h`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Unlocks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
-    -   `H`: <span style="background-color:#fb7">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Locks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
-    -   `t`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Continuous trigger, delivers a value of `0` below and at shortbound, a value of `1` over and at longbound. Between these boundaries, this trigger will deliver a value between `0` and `1` (linear), depending on the current position. See "engine trigger" for details on how to use this.
-    -   `E`: <span style="background-color:#fb7">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a `t`-trigger to get precise, continuous control. Works as follows:
+    -   `h`: <span style="background-color:#854200">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Unlocks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
+    -   `H`: <span style="background-color:#854200">\[ Version 0.38.26+ \]</span> You can use triggers to lock or unlock hookgroups ( only hookgroups &lt;= `-3` ); Locks hookgroups shortkey at shortbound and hookgroup longkey at longbound.
+    -   `t`: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> Continuous trigger, delivers a value of `0` below and at shortbound, a value of `1` over and at longbound. Between these boundaries, this trigger will deliver a value between `0` and `1` (linear), depending on the current position. See "engine trigger" for details on how to use this.
+    -   `E`: <span style="background-color:#854200">\[ Version 0.4.0.7+ \]</span> Engine trigger. This trigger gives you control over various vehicle driving functions. It is recommended to use this in combination with a `t`-trigger to get precise, continuous control. Works as follows:
         -   ''' *(remapped)* shortbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the engine to be controlled, starting with `0`. As RoR only supports one engine per vehicle at the moment, always put `0` here.
         -   ''' *(remapped)* longbound\_trigger\_action''': <span style="color:#BD0058">Positive decimal number</span> Takes the number of the function you want to control:
             -   `0`: Clutch
@@ -1751,10 +1751,10 @@ Parameters:
 -   **b (break\_force)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 'b' or 'B'</span>; <span style="color:#0B8A00">default = infinity (never)</span>; Force at which the node will separate from the rail (in N). Write as: `b10.98`
 -   **t (tolerance)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number prefixed with 't' or 'T'</span>; <span style="color:#0B8A00">default = `0`</span>; Distance from the rail before rail forces are applied to the node.
 -   **g (railgroup\_id)** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal prefixed with 'g' or 'G'</span>; <span style="color:#0B8A00">default = `none`, expects <span style="font-family: monospace;">**rail\_nodes:**</span> to be used.</span>; <span style="font-family: monospace;">**railgroup**</span> defining a rail. Write as: `g2`
--   **r (attachment\_rate)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'r' or 'R'</span>; <span style="color:#0B8A00">default = disabled</span>; Attachment rate in seconds. Write as: `r2.3`
--   **d (max\_attachment\_distance)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'd' or 'D'</span>; <span style="color:#0B8A00">default = 0.1</span>; Maximum attachment Distance in meters. Write as: `d0.23`
--   **q (quantity)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'q' or 'Q'</span>; <span style="color:#0B8A00">default = infinity</span>; Ignored by parser. Original meaning: number of beams the node can slide along.
--   **c (attachment\_constraints)** <span style="color:#666">(optional)</span>: <span style="background-color:#fb7">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Two character string: \[c|C\] + \[a|f|s|n\]</span>; <span style="color:#0B8A00">default = `none`</span>
+-   **r (attachment\_rate)** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'r' or 'R'</span>; <span style="color:#0B8A00">default = disabled</span>; Attachment rate in seconds. Write as: `r2.3`
+-   **d (max\_attachment\_distance)** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'd' or 'D'</span>; <span style="color:#0B8A00">default = 0.1</span>; Maximum attachment Distance in meters. Write as: `d0.23`
+-   **q (quantity)** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Real number prefixed with 'q' or 'Q'</span>; <span style="color:#0B8A00">default = infinity</span>; Ignored by parser. Original meaning: number of beams the node can slide along.
+-   **c (attachment\_constraints)** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4+ \]</span> <span style="color:#BD0058">Two character string: \[c|C\] + \[a|f|s|n\]</span>; <span style="color:#0B8A00">default = `none`</span>
     -   **a**: Attach all.
     -   **f**: Attach foreign.
     -   **s**: Attach self.
@@ -1844,7 +1844,7 @@ This will add beams `0,1` + `6,8` + `7,9` + `10,12` to group `1`, beam `16,17` t
 
 Ropes are special beams that have no compression strength (they can shorten easily) but have standard extension strength, like a cable or a chain. They have also another peculiarity: the second node can "grab" the nearest reachable ropable node with the `CTRL+L` key. Standard use is to use a chassis node as the first node, and a "free" node as the second node (free as in not attached by any other beam). The best example of this are the chains of the Multibennes truck.
 
-Option: `i` for invisible <span style="background-color:#fb7">\[ Version 0.38.18+ \]</span>
+Option: `i` for invisible <span style="background-color:#854200">\[ Version 0.38.18+ \]</span>
 
 ```
 ropes
@@ -1888,7 +1888,7 @@ minimass
 
 ### Set_default_minimass
 
-<span style="background-color:#fb7">\[ Version 2020.01+ \]</span> This section allows nodes to override the minimum node weight, either the value set in `minimass` or the default 50kg if not using minimass. This is very useful if you already have a light vehicle tuned for a certain minimass value and you need to add a lighter node than what is set in your minimass value.
+<span style="background-color:#854200">\[ Version 2020.01+ \]</span> This section allows nodes to override the minimum node weight, either the value set in `minimass` or the default 50kg if not using minimass. This is very useful if you already have a light vehicle tuned for a certain minimass value and you need to add a lighter node than what is set in your minimass value.
 
 It is placed in the [nodes](#nodes) section, the new minimum weight will be applied to all following nodes.  Example:
 
@@ -1931,7 +1931,7 @@ Parameters:
 -   **Options** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = `n`</span>
     -   `n`: Visible (default)
     -   `i`: Invisible
-    -	`s`: <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> Prevents self locking.
+    -	`s`: <span style="background-color:#854200">\[ Version 2020.01+ \]</span> Prevents self locking.
 -   **Max. stress** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = 12000</span>; The force (in Newtons) when the ties stop to shorten.
 -   **Group** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">Positive decimal number</span>; <span style="color:#0B8A00">default = `none`</span>
 
@@ -2072,7 +2072,7 @@ The axle section is different from other sections in that it is broken into prop
         -   `o` - Open
         -   `l` - Locked (wheels locked together regardless of torque input)
         -   `s` - Split evenly (each wheel gets equal torque regardless of wheel speed)
-        -   `v` - Viscous <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> (applies locking force based on the amount of torque)
+        -   `v` - Viscous <span style="background-color:#854200">\[ Version 2020.01+ \]</span> (applies locking force based on the amount of torque)
 		
 Sample axle section:
 
@@ -2086,7 +2086,7 @@ w1(5 6), w2(7 8), d(l)
 
 ### Interaxles
 
-In <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
+In <span style="background-color:#854200">\[ Version 2020.01+ \]</span> and above you can define inter axle differentials on a vehicle, allowing more accurate distribution of torque among the axles. They are toggled with `CTRL+W`.
 
 Parameters:
 
@@ -2104,7 +2104,7 @@ interaxles
 
 ### Transfercase
 
-In <span style="background-color:#fb7">\[ Version 2020.01+ \]</span> and above you can add a transfer case on a vehicle.
+In <span style="background-color:#854200">\[ Version 2020.01+ \]</span> and above you can add a transfer case on a vehicle.
 
 Parameters:
 
@@ -2138,7 +2138,7 @@ transfercase
 
 ### Wheeldetachers
 
-<span style="background-color:#fb7">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
+<span style="background-color:#854200">\[ Version 0.4.7.0+ \]</span> this section allows you to disable power to a wheel when a [detacher_group](#detacher_group) breaks.
 
 ```
 wheeldetachers
@@ -2304,8 +2304,12 @@ Optional parameters:
 
 -   **Type**: <span style="color:#BD0058">Character</span>; <span style="color:#0B8A00">default = f (headlight)</span>;
         Type of flare.
-    -   `f` (default mode when not stated): Headlight.
-    -   `b` : Brakelight.
+    -   `f` (default mode when not stated): Low beams, toggled with `N` or cycled with `CTRL+N`.
+	-   `h`: High beams, toggled with `SHIFT+N` or cycled with `CTRL+N`.
+	-   `s`: Sidelights (running/parking lights), toggled with `N` or cycled with `CTRL+N`.
+	-   `g`: Fog lights, toggled with `ALT+N` or cycled with `CTRL+N`.
+    -   `b` : Brake lights.
+	-   `t`: Tail lights, activated together with `f` option. 
     -   `l` : Left blinker.
     -   `r` : Right blinker.
     -   `R` : Reverse light (on when driving in R gear)
@@ -2319,8 +2323,16 @@ Optional parameters:
     -   Special value: `-2` non-blinking light except blinkers, which will have default 500ms.        
 -   **Flare size**: <span style="color:#BD0058">Real number</span>; <span style="color:#0B8A00">default = -1</span>;
         This determines how big the flare will be. Reasonable values are between `0.1` and `5` (`0.1` = 10% of default size). If the size is smaller then `0`, then the flare will be independent of the camera angle. (So the flare does not get smaller when you move the camera)
--   **Material Name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = 'default'</span>;
+-   **Material name**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = 'default'</span>;
         This field determines what material should be used for the flare display. If you want to use the standard material, use `default`. Please note that there is not comma between the material name and the size argument. You can use `tracks/aimflare` to position your flare.
+
+!!! note "Notes"
+	<span style="background-color:#854200">\[ Version 2022.12+ \]</span>  introduced the `h`, `s`, `g`, and `t` options.<br>
+	Light cycling (CTRL+N) functions based on the available lights:<br>
+    i. All lights off<br>
+    ii. Sidelights on but only if any installed, otherwise skip to 3).<br>
+    iii. Sidelights and low beams on.<br>
+    iv. Sidelights, low beams and high beams on, but only if high beams are installed, otherwise cycle to 1).<br>
 
 Examples:
 
@@ -2344,6 +2356,19 @@ Flares2 are the same as normal flares, except that they add an offset-z argument
 
 ```
 flares2
+;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
+51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
+```
+
+### Flares3
+
+<span style="background-color:#854200">\[ Version 2022.12+ \]</span>
+
+Flares3 functions the same as Flares2, except they take [set_inertia_defaults](#set_inertia_defaults) into account. This allows for flares which can fade in/out. 
+
+```
+flares3
+set_inertia_defaults 0.4, 0.8, linear, linear
 ;RefNode,  X,  Y, OffsetX, OffsetY, OffsetZ, Type, ControlNumber, BlinkDelay, size MaterialName
 51,  1, 79,    0.23,    0.50,    0.50,    b,            -1,        300,  0.2 myTruck/MyBrakeFlare
 ```
@@ -2450,7 +2475,7 @@ You can disable shadows of the last specified flexbody:
 disable_flexbody_shadows
 ```
 
-<span style="background-color:#fb7">\[ Version 0.35+ \]</span>
+<span style="background-color:#854200">\[ Version 0.35+ \]</span>
 
 Disables shadow casting of the last prop to improve complex truck FPS.
 
@@ -2462,7 +2487,7 @@ COMPATIBILITY NOTE: Parameters \#9 "Z rotation" and \#10 "Mesh name" can be deli
 
 ### Special Prop: Dashboard
 
-Steering wheel <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
+Steering wheel <span style="background-color:#854200">\[ Version 0.35+ \]</span>
 Here you can see the standard reference nodes, and offset for the dashboard. Then, there is the steering wheel mesh, and its offsets.
 
 **Parameters:**
@@ -2554,7 +2579,7 @@ Here you can see the standard reference nodes, and offset for the dashboard. The
 
 ### Special Prop: Beacon
 
-Change the beacon's color and flare material <span style="background-color:#fb7">\[ Version 0.35+ \]</span>
+Change the beacon's color and flare material <span style="background-color:#854200">\[ Version 0.35+ \]</span>
 
 If you want to use you own mesh as beacon it should be named beacon-&lt;somename&gt;.mesh, e.g. `beacon-blue.mesh`
 
@@ -2833,13 +2858,13 @@ Notes about backwards compatibility:
 
 ### (sub-directive) disable\_flexbody\_shadow
 
-<span style="color:#666">(optional)</span> <span style="background-color:#fb7">\[ Version 0.38.8+ \]</span>
+<span style="color:#666">(optional)</span> <span style="background-color:#854200">\[ Version 0.38.8+ \]</span>
 
 No parameters. Disables shadow casting of the last flexbody to improve complex truck FPS.
 
 ### (sub-directive) flexbody\_camera\_mode
 
-<span style="color:#666">(optional)</span> <span style="background-color:#fb7">\[ Version 0.38.8+ \]</span>
+<span style="color:#666">(optional)</span> <span style="background-color:#854200">\[ Version 0.38.8+ \]</span>
 
 Sets the cameramode in which the flexbody should be shown:
 
@@ -2993,9 +3018,9 @@ By using this section you can set some parameters of the Truck GUI. This can be 
 
 Format: keyword <space> value
 
--   **dashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for this truck. You can use multiple lines.
--   **texturedashboard**: <span style="background-color:#fb7">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
--   **interactiveOverviewMap**: <span style="background-color:#fb7">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
+-   **dashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for this truck. You can use multiple lines.
+-   **texturedashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
+-   **interactiveOverviewMap**: <span style="background-color:#854200">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
 
 Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored or removed soon.
 
@@ -3071,7 +3096,7 @@ Parameters:
 -   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: `-1` == camera, `0` == tracker camera (requires an alternative camera orientation node), `1` == mirrors.
 -   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a `-2` in here.
 -   **material**: <span style="color:#BD0058">String</span>; The material the generated textured should be displayed on. Requires a prop (mesh) using this material to get any visual results.
--   **name**: <span style="background-color:#fb7">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
+-   **name**: <span style="background-color:#854200">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
 
 **Important**:
 
@@ -3206,7 +3231,7 @@ The final two modes are useful for a vehicle with detaching parts, so the camera
 
 ### Camerarail
 
-In <span style="background-color:#fb7">\[ Version 0.39.7+ \]</span> and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
+In <span style="background-color:#854200">\[ Version 0.39.7+ \]</span> and above you can add a camerarail section to your beam objects. The camerarail generates a cSpline on base of the given nodes, on which you can move a camera. A new camera mode will be added ingame which is accessible with the "c"-button.
 
 Camera controls:
 
@@ -3245,7 +3270,7 @@ The distance between the last camerarail node of one and the first camerarail no
 
 ## Sounds
 
-Since <span style="background-color:#fb7">\[ Version 0.36+ \]</span>, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
+Since <span style="background-color:#854200">\[ Version 0.36+ \]</span>, vehicles can have custom sounds. By default, RoR uses a set of default sounds for your vehicle, but with the following sections you can customize these sounds.
 
 ### disabledefaultsounds
 
