@@ -9,7 +9,7 @@ repo_name: RigsOfRods/docs.rigsofrods.org
 repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
 edit_uri: blob/master/source/
 
-copyright: "Copyright &copy; 2022 Rigs of Rods Community"
+copyright: "Copyright &copy; 2023 Rigs of Rods Community"
 
 theme:
     name: "material"
