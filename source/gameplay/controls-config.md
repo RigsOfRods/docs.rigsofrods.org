@@ -512,253 +512,413 @@ TRUCK_MANUAL_CLUTCH    JoystickSliderY    0    Y    0    REVERSE+DEADZONE = -30
 
 ## Keypress Events
 
-**Keypress event identification in RoR 0.4.7.0+**
+These are all the valid keypress events as of version 2022.12, they can be used in a input map or for [prop animations](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#add_animation). 
+Not all make sense though for animated props.
 
-These are all the valid keypress events, they can be used in a input map or for [prop animations](http://docs.rigsofrods.org/vehicle-creation/fileformat-truck/#add_animation). not all make sense though for animated props.
 
-```
-AIRPLANE_AIRBRAKES_FULL     
-AIRPLANE_AIRBRAKES_LESS     
-AIRPLANE_AIRBRAKES_MORE     
-AIRPLANE_AIRBRAKES_NONE     
-AIRPLANE_BRAKE              
-AIRPLANE_ELEVATOR_DOWN      
-AIRPLANE_ELEVATOR_UP        
-AIRPLANE_FLAPS_FULL         
-AIRPLANE_FLAPS_LESS         
-AIRPLANE_FLAPS_MORE         
-AIRPLANE_FLAPS_NONE         
-AIRPLANE_PARKING_BRAKE      
-AIRPLANE_REVERSE            
-AIRPLANE_RUDDER_LEFT        
-AIRPLANE_RUDDER_RIGHT       
-AIRPLANE_STEER_LEFT         
-AIRPLANE_STEER_RIGHT        
-AIRPLANE_THROTTLE_AXIS      
-AIRPLANE_THROTTLE_DOWN      
-AIRPLANE_THROTTLE_FULL      
-AIRPLANE_THROTTLE_NO        
-AIRPLANE_THROTTLE_UP        
-AIRPLANE_TOGGLE_ENGINES     
-BOAT_CENTER_RUDDER          
-BOAT_REVERSE                
-BOAT_STEER_LEFT             
-BOAT_STEER_RIGHT            
-BOAT_THROTTLE_AXIS          
-BOAT_THROTTLE_UP            
-BOAT_THROTTLE_DOWN          
-CAMERA_CHANGE               
-CAMERA_FREE_MODE            
-CAMERA_FREE_MODE_FIX        
-CAMERA_LOOKBACK             
-CAMERA_RESET                
-CAMERA_UP                   
-CAMERA_DOWN                 
-CAMERA_ROTATE_DOWN          
-CAMERA_ROTATE_LEFT          
-CAMERA_ROTATE_RIGHT         
-CAMERA_ROTATE_UP            
-CAMERA_ZOOM_IN              
-CAMERA_ZOOM_IN_FAST         
-CAMERA_ZOOM_OUT             
-CAMERA_ZOOM_OUT_FAST        
-SKY_DECREASE_TIME           
-SKY_DECREASE_TIME_FAST      
-SKY_INCREASE_TIME           
-SKY_INCREASE_TIME_FAST      
-CHARACTER_BACKWARDS         
-CHARACTER_FORWARD           
-CHARACTER_JUMP              
-CHARACTER_LEFT              
-CHARACTER_RIGHT             
-CHARACTER_ROT_DOWN          
-CHARACTER_ROT_UP            
-CHARACTER_RUN               
-CHARACTER_RUN               
-CHARACTER_SIDESTEP_LEFT     
-CHARACTER_SIDESTEP_RIGHT    
-COMMANDS_01                 
-COMMANDS_02                 
-COMMANDS_03                 
-COMMANDS_04                 
-COMMANDS_05                 
-COMMANDS_06                 
-COMMANDS_07                 
-COMMANDS_08                 
-COMMANDS_09                 
-COMMANDS_10                 
-COMMANDS_11                 
-COMMANDS_12                 
-COMMANDS_13                 
-COMMANDS_14                 
-COMMANDS_15                 
-COMMANDS_16                 
-COMMANDS_17                 
-COMMANDS_18                 
-COMMANDS_19                 
-COMMANDS_20                 
-COMMANDS_21                 
-COMMANDS_22                 
-COMMANDS_23                 
-COMMANDS_24                 
-COMMANDS_25                 
-COMMANDS_26                 
-COMMANDS_27                 
-COMMANDS_28                 
-COMMANDS_29                 
-COMMANDS_30                 
-COMMANDS_31                 
-COMMANDS_32                 
-COMMANDS_33                 
-COMMANDS_34                 
-COMMANDS_35                 
-COMMANDS_36                 
-COMMANDS_37                 
-COMMANDS_38                 
-COMMANDS_39                 
-COMMANDS_40                 
-COMMANDS_41                 
-COMMANDS_42                 
-COMMANDS_43                 
-COMMANDS_44                 
-COMMANDS_45                 
-COMMANDS_46                 
-COMMANDS_47                 
-COMMANDS_48                 
-COMMANDS_49                 
-COMMANDS_50                 
-COMMANDS_51                 
-COMMANDS_52                 
-COMMANDS_53                 
-COMMANDS_54                 
-COMMANDS_55                 
-COMMANDS_56                 
-COMMANDS_57                 
-COMMANDS_58                 
-COMMANDS_59                 
-COMMANDS_60                 
-COMMANDS_61                 
-COMMANDS_62                 
-COMMANDS_63                 
-COMMANDS_64                 
-COMMANDS_65                 
-COMMANDS_66                 
-COMMANDS_67                 
-COMMANDS_68                 
-COMMANDS_69                 
-COMMANDS_70                 
-COMMANDS_71                 
-COMMANDS_72                 
-COMMANDS_73                 
-COMMANDS_74                 
-COMMANDS_75                 
-COMMANDS_76                 
-COMMANDS_77                 
-COMMANDS_78                 
-COMMANDS_79                 
-COMMANDS_80                 
-COMMANDS_81                 
-COMMANDS_82                 
-COMMANDS_83                 
-COMMANDS_84                 
-COMMON_ACCELERATE_SIMULATION
-COMMON_DECELERATE_SIMULATION
-COMMON_RESET_SIMULATION_PACE
-COMMON_CONSOLE_TOGGLE       
-COMMON_ENTER_OR_EXIT_TRUCK  
-COMMON_ENTER_NEXT_TRUCK     
-COMMON_ENTER_PREVIOUS_TRUCK 
-COMMON_REMOVE_CURRENT_TRUCK 
-COMMON_RESPAWN_LAST_TRUCK   
-COMMON_FULLSCREEN_TOGGLE    
-COMMON_HIDE_GUI             
-COMMON_LOCK                 
-COMMON_AUTOLOCK             
-COMMON_ROPELOCK             
-COMMON_OUTPUT_POSITION      
-COMMON_GET_NEW_VEHICLE      
-COMMON_PRESSURE_LESS        
-COMMON_PRESSURE_MORE        
-COMMON_QUIT_GAME            
-COMMON_REPLAY_BACKWARD      
-COMMON_REPLAY_FAST_BACKWARD 
-COMMON_REPLAY_FAST_FORWARD  
-COMMON_REPLAY_FORWARD       
-COMMON_RESCUE_TRUCK         
-COMMON_RESET_TRUCK          
-COMMON_SCREENSHOT           
-COMMON_SECURE_LOAD          
-COMMON_SHOW_SKELETON        
-COMMON_TOGGLE_TERRAIN_EDITOR
-COMMON_TOGGLE_CUSTOM_PARTICL
-COMMON_TOGGLE_MAT_DEBUG     
-COMMON_TOGGLE_RENDER_MODE   
-COMMON_TOGGLE_REPLAY_MODE   
-COMMON_TOGGLE_STATS         
-COMMON_TOGGLE_TRUCK_BEACONS 
-COMMON_TOGGLE_TRUCK_LIGHTS  
-COMMON_TRUCK_INFO           
-COMMON_TRUCK_DESCRIPTION    
-COMMON_FOV_LESS             
-COMMON_FOV_MORE             
-GRASS_LESS                  
-GRASS_MORE                  
-GRASS_MOST                  
-GRASS_NONE                  
-GRASS_SAVE                  
-SURVEY_MAP_ZOOM_IN          
-SURVEY_MAP_ZOOM_OUT         
-SURVEY_MAP_TOGGLE_VIEW      
-SURVEY_MAP_TOGGLE_ALPHA     
-SURVEY_MAP_TOGGLE_ICONS     
-MENU_DOWN                   
-MENU_LEFT                   
-MENU_RIGHT                  
-MENU_SELECT                 
-MENU_UP                     
-TRUCK_ACCELERATE            
-TRUCK_ACCELERATE_MODIFIER_25
-TRUCK_ACCELERATE_MODIFIER_50
-TRUCK_ANTILOCK_BRAKE        
-TRUCK_AUTOSHIFT_DOWN        
-TRUCK_AUTOSHIFT_UP          
-TRUCK_BLINK_LEFT            
-TRUCK_BLINK_RIGHT           
-TRUCK_BLINK_WARN            
-TRUCK_BRAKE                 
-TRUCK_BRAKE_MODIFIER_25     
-TRUCK_BRAKE_MODIFIER_50     
-TRUCK_CRUISE_CONTROL        
-TRUCK_CRUISE_CONTROL_READJUS
-TRUCK_CRUISE_CONTROL_ACCL   
-TRUCK_CRUISE_CONTROL_DECL   
-TRUCK_HORN                  
-TRUCK_LIGHTTOGGLE1          
-TRUCK_LIGHTTOGGLE2          
-TRUCK_LIGHTTOGGLE3          
-TRUCK_LIGHTTOGGLE4          
-TRUCK_LIGHTTOGGLE5          
-TRUCK_LIGHTTOGGLE6          
-TRUCK_LIGHTTOGGLE7          
-TRUCK_LIGHTTOGGLE8          
-TRUCK_LIGHTTOGGLE9          
-TRUCK_LIGHTTOGGLE10         
-TRUCK_MANUAL_CLUTCH         
-TRUCK_PARKING_BRAKE         
-TRUCK_SHIFT_DOWN            
-TRUCK_SHIFT_NEUTRAL         
-TRUCK_SHIFT_UP              
-TRUCK_STARTER               
-TRUCK_STEER_LEFT            
-TRUCK_STEER_RIGHT           
-TRUCK_SWITCH_SHIFT_MODES    
-TRUCK_TOGGLE_AXLE_LOCK      
-TRUCK_TOGGLE_CONTACT        
-TRUCK_TOGGLE_FORWARDCOMMANDS
-TRUCK_TOGGLE_IMPORTCOMMANDS 
-TRUCK_TOGGLE_VIDEOCAMERA    
-TRUCK_TRACTION_CONTROL
-```
+### Common: Generic
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| COMMON_ACCELERATE_SIMULATION  	| CTRL+EQUALS                                                                                    	| accelerate the simulation                                                       	|
+| COMMON_ACCELERATE_SIMULATION 	|  CTRL+EQUALS                                     	|                            accelerate the simulation                            	|
+| COMMON_DECELERATE_SIMULATION 	|  SHIFT+EQUALS                                                                         	| decelerate the simulation                                                       	|
+| COMMON_RESET_SIMULATION_PACE 	|  BACKSLASH                                                                            	| reset the simulation pace                                                       	|
+| COMMON_OUTPUT_POSITION       	|  H                                                                                    	| write current position to log (you can open the logfile and reuse the position) 	|
+| COMMON_QUIT_GAME             	|  ESCAPE                                                                          	| exit the game                                                                   	|
+| COMMON_QUICKLOAD             	|  MULTIPLY                                                                             	| quickload scene                                                                 	|
+| COMMON_QUICKSAVE             	|  DIVIDE                                                                               	| quicksave scene                                                                 	|
+| COMMON_SCREENSHOT            	|  SYSRQ (Print Screen)                                                                           	| take a screenshot                                                               	|
+| COMMON_SCREENSHOT_BIG        	|  CTRL+SYSRQ                                                                      	| take a big screenshot (3 times the screen size)                                 	|
+| COMMON_TOGGLE_MAT_DEBUG      	| None                                                                                             	| debug purpose - dont use                                                        	|
+| COMMON_TOGGLE_PHYSICS        	|  J                                                                               	| enable or disable physics                                                       	|
+| COMMON_FOV_LESS              	|  NUMPAD7                                                                         	| decreases the current FOV value                                                 	|
+| COMMON_FOV_MORE              	|  CTRL+NUMPAD7                                                                    	| increase the current FOV value                                                  	|
+| COMMON_FOV_RESET             	|  SHIFT+NUMPAD7                                                                   	| reset the FOV value                                                             	|
+| COMMON_SAVE_TERRAIN          	| Keyboard ALT+SHIFT+CTRL+M 	| save the currently loaded terrain to a mesh file                                	|
+| COMMON_TOGGLE_TERRAIN_EDITOR 	|  SHIFT+Y                                                                         	| toggle terrain editor                                                           	|
+| COMMON_FULLSCREEN_TOGGLE     	|  ALT+RETURN                                                                      	| toggle between windowed and fullscreen mode                                     	|
+
+### Common: Actor interaction
+	
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| COMMON_ENTER_OR_EXIT_TRUCK     | RETURN              | enter or exit a truck | 
+| COMMON_ENTER_NEXT_TRUCK        | CTRL+RBRACKET  | enter next truck | 
+| COMMON_ENTER_PREVIOUS_TRUCK    | CTRL+LBRACKET  | enter previous truck | 
+| COMMON_REMOVE_CURRENT_TRUCK    | CTRL+DELETE    | remove current truck | 
+| COMMON_TRUCK_REMOVE            | CTRL+SHIFT+DELETE| delete current truck | 
+| COMMON_RESPAWN_LAST_TRUCK      | CTRL+PERIOD    | respawn last truck | 
+| COMMON_GET_NEW_VEHICLE         | CTRL+G         | get new vehicle | 
+| COMMON_PRESSURE_LESS           | LBRACKET            | decrease tire pressure (note: only very few trucks support this) | 
+| COMMON_PRESSURE_MORE           | RBRACKET            | increase tire pressure (note: only very few trucks support this) | 
+| COMMON_LOCK                    | L              | connect hook node to a node in close proximity | 
+| COMMON_AUTOLOCK                | ALT+L          | unlock autolock hook node | 
+| COMMON_ROPELOCK                | CTRL+L         | connect a rope to a node in close proximity | 
+| COMMON_REPAIR_TRUCK            | BACK                | repair truck | 
+| COMMON_RESCUE_TRUCK            | R              | teleport to rescue truck | 
+| COMMON_RESET_TRUCK             | I                   | reset truck to original starting position | 
+| COMMON_TOGGLE_RESET_MODE       | APOSTROPHE     | toggle reset mode | 
+| COMMON_SECURE_LOAD             | O                   | tie a load to the truck | 
+| COMMON_TOGGLE_TRUCK_BEACONS    | M                   | toggle truck beacons | 
+| COMMON_TOGGLE_TRUCK_LOW_BEAMS  | N              | toggle truck low beams | 
+| COMMON_CYCLE_TRUCK_LIGHTS      | CTRL+N         | cycle between light modes | 
+| COMMON_TOGGLE_TRUCK_HIGH_BEAMS| SHIFT+N        | toggle truck high beams | 
+| COMMON_TOGGLE_TRUCK_FOG_LIGHTS| ALT+N          | toggle truck fog lights | 
+| COMMON_TOGGLE_CUSTOM_PARTICLES| G                   | toggle particle cannon | 
+| COMMON_TOGGLE_REPLAY_MODE      | CTRL+J         | enable or disable replay mode | 
+| COMMON_REPLAY_FORWARD          | RIGHT          | more replay forward | 
+| COMMON_REPLAY_BACKWARD         | LEFT           | more replay backward | 
+| COMMON_REPLAY_FAST_FORWARD     | SHIFT+RIGHT    | move replay fast forward | 
+| COMMON_REPLAY_FAST_BACKWARD    | SHIFT+LEFT     | move replay fast backward | 
+
+### Common: UI
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| COMMON_CONSOLE_TOGGLE          | GRAVE          | show / hide the console | 
+| COMMON_ENTER_CHATMODE          | Y              | enter the chat | 
+| COMMON_SEND_CHAT               | RETURN              | sends the entered text | 
+| COMMON_HIDE_GUI                | U              | hide all GUI elements | 
+| COMMON_TOGGLE_DASHBOARD        | CTRL+U         | display or hide the dashboard overlay | 
+| COMMON_TOGGLE_DEBUG_VIEW       | K              | toggle debug view | 
+| COMMON_CYCLE_DEBUG_VIEWS       | CTRL+K         | cycle debug views | 
+| COMMON_TRUCK_INFO              | T              | toggle truck HUD | 
+| COMMON_TRUCK_DESCRIPTION       | CTRL+T         | toggle truck description | 
+| COMMON_NETCHATDISPLAY          | SHIFT+U        | display or hide net chat | 
+| COMMON_NETCHATMODE             | CTRL+U         | toggle between net chat display modes | 
+| COMMON_TOGGLE_STATS            | F              | toggle Ogre statistics (FPS etc.) | 
+
+### Common: Savegames
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| COMMON_QUICKSAVE_01            | ALT+CTRL+1     | save scene in slot 01 | 
+| COMMON_QUICKSAVE_02            | ALT+CTRL+2     | save scene in slot 02 | 
+| COMMON_QUICKSAVE_03            | ALT+CTRL+3     | save scene in slot 03 | 
+| COMMON_QUICKSAVE_04            | ALT+CTRL+4     | save scene in slot 04 | 
+| COMMON_QUICKSAVE_05            | ALT+CTRL+5     | save scene in slot 05 | 
+| COMMON_QUICKSAVE_06            | ALT+CTRL+6     | save scene in slot 06 | 
+| COMMON_QUICKSAVE_07            | ALT+CTRL+7     | save scene in slot 07 | 
+| COMMON_QUICKSAVE_08            | ALT+CTRL+8     | save scene in slot 08 | 
+| COMMON_QUICKSAVE_09            | ALT+CTRL+9     | save scene in slot 09 | 
+| COMMON_QUICKSAVE_10            | ALT+CTRL+0     | save scene in slot 10 | 
+| COMMON_QUICKLOAD_01            | ALT+1          | load scene from slot 01 | 
+| COMMON_QUICKLOAD_02            | ALT+2          | load scene from slot 02 | 
+| COMMON_QUICKLOAD_03            | ALT+3          | load scene from slot 03 | 
+| COMMON_QUICKLOAD_04            | ALT+4          | load scene from slot 04 | 
+| COMMON_QUICKLOAD_05            | ALT+5          | load scene from slot 05 | 
+| COMMON_QUICKLOAD_06            | ALT+6          | load scene from slot 06 | 
+| COMMON_QUICKLOAD_07            | ALT+7          | load scene from slot 07 | 
+| COMMON_QUICKLOAD_08            | ALT+8          | load scene from slot 08 | 
+| COMMON_QUICKLOAD_09            | ALT+9          | load scene from slot 09 | 
+| COMMON_QUICKLOAD_10            | ALT+0          | load scene from slot 10 | 
+
+### Truck: Generic
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| TRUCK_ACCELERATE               | UP                  | accelerate the truck | 
+| TRUCK_ACCELERATE_MODIFIER_25   | ALT+UP              | accelerate with 25 percent pedal input | 
+| TRUCK_ACCELERATE_MODIFIER_50   | CTRL+UP             | accelerate with 50 percent pedal input | 
+| TRUCK_BLINK_LEFT               | COMMA          | toggle left direction indicator (blinker) | 
+| TRUCK_BLINK_RIGHT              | PERIOD         | toggle right direction indicator (blinker) | 
+| TRUCK_BLINK_WARN               | MINUS          | toggle all direction indicators | 
+| TRUCK_BRAKE                    | DOWN                | brake | 
+| TRUCK_BRAKE_MODIFIER_25        | ALT+DOWN            | brake with 25 percent pedal input | 
+| TRUCK_BRAKE_MODIFIER_50        | CTRL+DOWN           | brake with 50 percent pedal input | 
+| TRUCK_HORN                     | H                   | truck horn | 
+| TRUCK_LIGHTTOGGLE1             | CTRL+1         | toggle custom light 1 | 
+| TRUCK_LIGHTTOGGLE2             | CTRL+2         | toggle custom light 2 | 
+| TRUCK_LIGHTTOGGLE3             | CTRL+3         | toggle custom light 3 | 
+| TRUCK_LIGHTTOGGLE4             | CTRL+4         | toggle custom light 4 | 
+| TRUCK_LIGHTTOGGLE5             | CTRL+5         | toggle custom light 5 | 
+| TRUCK_LIGHTTOGGLE6             | CTRL+6         | toggle custom light 6 | 
+| TRUCK_LIGHTTOGGLE7             | CTRL+7         | toggle custom light 7 | 
+| TRUCK_LIGHTTOGGLE8             | CTRL+8         | toggle custom light 8 | 
+| TRUCK_LIGHTTOGGLE9             | CTRL+9         | toggle custom light 9 | 
+| TRUCK_LIGHTTOGGLE10            | CTRL+0         | toggle custom light 10 | 
+| TRUCK_PARKING_BRAKE            | P                   | toggle parking brake | 
+| TRUCK_TRAILER_PARKING_BRAKE    | CTRL+P         | toggle trailer parking brake | 
+| TRUCK_ANTILOCK_BRAKE           | SHIFT+B        | toggle antilock brake | 
+| TRUCK_TOGGLE_VIDEOCAMERA       | CTRL+V         | toggle videocamera | 
+| TRUCK_TRACTION_CONTROL         | SHIFT+T        | toggle traction control | 
+| TRUCK_CRUISE_CONTROL           | SPACE          | toggle cruise control | 
+| TRUCK_CRUISE_CONTROL_READJUST  | CTRL+SPACE     | match target speed / rpm with current truck speed / rpm | 
+| TRUCK_CRUISE_CONTROL_ACCL      | CTRL+R         | increase target speed / rpm | 
+| TRUCK_CRUISE_CONTROL_DECL      | CTRL+F         | decrease target speed / rpm | 
+| TRUCK_STARTER                  | S                   | hold to start the engine | 
+| TRUCK_STEER_LEFT               | LEFT                | steer left | 
+| TRUCK_STEER_RIGHT              | RIGHT               | steer right | 
+| TRUCK_TOGGLE_CONTACT           | X                   | toggle ignition | 
+| TRUCK_TOGGLE_FORWARDCOMMANDS   | CTRL+SHIFT+F   | toggle forwardcommands | 
+| TRUCK_TOGGLE_IMPORTCOMMANDS    | CTRL+SHIFT+I   | toggle importcommands | 
+| TRUCK_TOGGLE_PHYSICS           | END                 | toggle physics | 
+| TRUCK_TOGGLE_INTER_AXLE_DIFF   | ALT+W          | cycle between available inter axle differential modes | 
+| TRUCK_TOGGLE_INTER_WHEEL_DIFF  | W              | cycle between available inter wheel differential modes | 
+| TRUCK_TOGGLE_TCASE_4WD_MODE    | CTRL+W         | toggle transfer case mode | 
+| TRUCK_TOGGLE_TCASE_GEAR_RATIO  | SHIFT+W        | toggle transfer case gear ratio | 
+| TRUCK_LEFT_MIRROR_LEFT         | SEMICOLON      | move left mirror to the left | 
+| TRUCK_LEFT_MIRROR_RIGHT        | CTRL+SEMICOLON | move left mirror to the right | 
+| TRUCK_RIGHT_MIRROR_LEFT        | COLON          | more right mirror to the left | 
+| TRUCK_RIGHT_MIRROR_RIGHT       | CTRL+COLON     | move right mirror to the right | 
+
+### Truck: Transmission
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| TRUCK_AUTOSHIFT_DOWN           | PGDOWN              | shift automatic transmission one gear down | 
+| TRUCK_AUTOSHIFT_UP             | PGUP                | shift automatic transmission one gear up | 
+| TRUCK_MANUAL_CLUTCH            | LSHIFT              | manual clutch (for manual transmission) | 
+| TRUCK_SHIFT_DOWN               | Z                   | shift one gear down in manual transmission mode | 
+| TRUCK_SHIFT_NEUTRAL            | D                   | shift to neutral gear in manual transmission mode | 
+| TRUCK_SHIFT_UP                 | A                   | shift one gear up in manual transmission mode | 
+| TRUCK_SHIFT_GEAR_REVERSE   |    N/A                             | shift directly to reverse gear | 
+| TRUCK_SHIFT_GEAR1          |    N/A                             | shift directly to first gear | 
+| TRUCK_SHIFT_GEAR2          |    N/A                             | shift directly to second gear | 
+| TRUCK_SHIFT_GEAR3          |    N/A                             | shift directly to third gear | 
+| TRUCK_SHIFT_GEAR4          |    N/A                             | shift directly to fourth gear | 
+| TRUCK_SHIFT_GEAR5          |    N/A                             | shift directly to 5th gear | 
+| TRUCK_SHIFT_GEAR6          |    N/A                             | shift directly to 6th gear | 
+| TRUCK_SHIFT_GEAR7          |    N/A                             | shift directly to 7th gear | 
+| TRUCK_SHIFT_GEAR8          |    N/A                             | shift directly to 8th gear | 
+| TRUCK_SHIFT_GEAR9          |    N/A                             | shift directly to 9th gear | 
+| TRUCK_SHIFT_GEAR10        |    N/A                              | shift directly to 10th gear | 
+| TRUCK_SHIFT_GEAR11        |    N/A                              | shift directly to 11th gear | 
+| TRUCK_SHIFT_GEAR12        |    N/A                              | shift directly to 12th gear | 
+| TRUCK_SHIFT_GEAR13        |    N/A                              | shift directly to 13th gear | 
+| TRUCK_SHIFT_GEAR14        |    N/A                              | shift directly to 14th gear | 
+| TRUCK_SHIFT_GEAR15        |    N/A                              | shift directly to 15th gear | 
+| TRUCK_SHIFT_GEAR16        |    N/A                              | shift directly to 16th gear | 
+| TRUCK_SHIFT_GEAR17        |    N/A                              | shift directly to 17th gear | 
+| TRUCK_SHIFT_GEAR18        |    N/A                              | shift directly to 18th gear | 
+| TRUCK_SHIFT_LOWRANGE      |     N/A                             | sets low range (1-6) for H-shaft | 
+| TRUCK_SHIFT_MIDRANGE       |    N/A                             | sets middle range (7-12) for H-shaft | 
+| TRUCK_SHIFT_HIGHRANGE     |     N/A                             | sets high range (13-18) for H-shaft | 
+| TRUCK_SWITCH_SHIFT_MODES       | Q                   | toggle between transmission modes | 
+
+### Airplane
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| AIRPLANE_STEER_RIGHT           | RIGHT               | steer right | 
+| AIRPLANE_BRAKE                 | B                   | normal brake for an aircraft | 
+| AIRPLANE_ELEVATOR_DOWN         | DOWN                | pull the elevator down in an aircraft. | 
+| AIRPLANE_ELEVATOR_UP           | UP                  | pull the elevator up in an aircraft. | 
+| AIRPLANE_FLAPS_FULL            | CTRL+2              | full flaps in an aircraft. | 
+| AIRPLANE_FLAPS_LESS            | 1              | one step less flaps. | 
+| AIRPLANE_FLAPS_MORE            | 2              | one step more flaps. | 
+| AIRPLANE_FLAPS_NONE            | CTRL+1              | no flaps. | 
+| AIRPLANE_PARKING_BRAKE         | P                   | airplane parking brake. | 
+| AIRPLANE_REVERSE               | R                   | reverse the turboprops | 
+| AIRPLANE_RUDDER_LEFT           | Z                   | rudder left | 
+| AIRPLANE_RUDDER_RIGHT          | X                   | rudder right | 
+| AIRPLANE_STEER_LEFT            | LEFT                | steer left | 
+| AIRPLANE_STEER_RIGHT           | RIGHT               | steer right | 
+| AIRPLANE_THROTTLE_AXIS         N/A                         | throttle axis. Only use this if you have fitting hardware :) (i.e. a Slider) | 
+| AIRPLANE_THROTTLE_DOWN         | PGDOWN         | decreases the airplane thrust | 
+| AIRPLANE_THROTTLE_FULL         | CTRL+PGUP           | full thrust | 
+| AIRPLANE_THROTTLE_NO           | CTRL+PGDOWN         | no thrust | 
+| AIRPLANE_THROTTLE_UP           | PGUP           | increase the airplane thrust | 
+| AIRPLANE_TOGGLE_ENGINES        | CTRL+HOME           | switch all engines on / off | 
+| AIRPLANE_AIRBRAKES_NONE        | CTRL+3              | no airbrakes | 
+| AIRPLANE_AIRBRAKES_FULL        | CTRL+4              | full airbrakes | 
+| AIRPLANE_AIRBRAKES_LESS        | 3              | less airbrakes | 
+| AIRPLANE_AIRBRAKES_MORE        | 4              | more airbrakes | 
+| AIRPLANE_THROTTLE              |     N/A                              | airplane throttle | 
+
+### Boat
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| BOAT_CENTER_RUDDER             | PGDOWN              | center the rudder | 
+| BOAT_REVERSE                   | PGUP                | no thrust | 
+| BOAT_STEER_LEFT                | LEFT                | steer left a step | 
+| BOAT_STEER_LEFT_AXIS        |   N/A                         | steer left (analog value!) | 
+| BOAT_STEER_RIGHT               | RIGHT               | steer right a step | 
+| BOAT_STEER_RIGHT_AXIS       |   N/A                         | steer right (analog value!) | 
+| BOAT_THROTTLE_AXIS           |  N/A                         | throttle axis. Only use this if you have fitting hardware :) (i.e. a Slider) | 
+| BOAT_THROTTLE_DOWN             | DOWN                | decrease throttle | 
+| BOAT_THROTTLE_UP               | UP                  | increase throttle | 
+
+### Commands
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| COMMANDS_01                    | F1             | Command 1 | 
+| COMMANDS_02                    | F2             | Command 2 | 
+| COMMANDS_03                    | F3             | Command 3 | 
+| COMMANDS_04                    | F4             | Command 4 | 
+| COMMANDS_05                    | F5             | Command 5 | 
+| COMMANDS_06                    | F6             | Command 6 | 
+| COMMANDS_07                    | F7             | Command 7 | 
+| COMMANDS_08                    | F8             | Command 8 | 
+| COMMANDS_09                    | F9             | Command 9 | 
+| COMMANDS_10                    | F10            | Command 10 | 
+| COMMANDS_11                    | F11            | Command 11 | 
+| COMMANDS_12                    | F12            | Command 12 | 
+| COMMANDS_13                    | CTRL+F1        | Command 13 | 
+| COMMANDS_14                    | CTRL+F2        | Command 14 | 
+| COMMANDS_15                    | CTRL+F3        | Command 15 | 
+| COMMANDS_16                    | CTRL+F4        | Command 16 | 
+| COMMANDS_17                    | CTRL+F5        | Command 17 | 
+| COMMANDS_18                    | CTRL+F6        | Command 18 | 
+| COMMANDS_19                    | CTRL+F7        | Command 19 | 
+| COMMANDS_20                    | CTRL+F8        | Command 20 | 
+| COMMANDS_21                    | CTRL+F9        | Command 21 | 
+| COMMANDS_22                    | CTRL+F10       | Command 22 | 
+| COMMANDS_23                    | CTRL+F11       | Command 23 | 
+| COMMANDS_24                    | CTRL+F12       | Command 24 | 
+| COMMANDS_25                    | SHIFT+F1       | Command 25 | 
+| COMMANDS_26                    | SHIFT+F2       | Command 26 | 
+| COMMANDS_27                    | SHIFT+F3       | Command 27 | 
+| COMMANDS_28                    | SHIFT+F4       | Command 28 | 
+| COMMANDS_29                    | SHIFT+F5       | Command 29 | 
+| COMMANDS_30                    | SHIFT+F6       | Command 30 | 
+| COMMANDS_31                    | SHIFT+F7       | Command 31 | 
+| COMMANDS_32                    | SHIFT+F8       | Command 32 | 
+| COMMANDS_33                    | SHIFT+F9       | Command 33 | 
+| COMMANDS_34                    | SHIFT+F10      | Command 34 | 
+| COMMANDS_35                    | SHIFT+F11      | Command 35 | 
+| COMMANDS_36                    | SHIFT+F12      | Command 36 | 
+| COMMANDS_37                    | ALT+F1         | Command 37 | 
+| COMMANDS_38                    | ALT+F2         | Command 38 | 
+| COMMANDS_39                    | ALT+F3         | Command 39 | 
+| COMMANDS_40                    | ALT+F4         | Command 40 | 
+| COMMANDS_41                    | ALT+F5         | Command 41 | 
+| COMMANDS_42                    | ALT+F6         | Command 42 | 
+| COMMANDS_43                    | ALT+F7         | Command 43 | 
+| COMMANDS_44                    | ALT+F8         | Command 44 | 
+| COMMANDS_45                    | ALT+F9         | Command 45 | 
+| COMMANDS_46                    | ALT+F10        | Command 46 | 
+| COMMANDS_47                    | ALT+F11        | Command 47 | 
+| COMMANDS_48                    | ALT+F12        | Command 48 | 
+| COMMANDS_49                    | CTRL+SHIFT+F1  | Command 49 | 
+| COMMANDS_50                    | CTRL+SHIFT+F2  | Command 50 | 
+| COMMANDS_51                    | CTRL+SHIFT+F3  | Command 51 | 
+| COMMANDS_52                    | CTRL+SHIFT+F4  | Command 52 | 
+| COMMANDS_53                    | CTRL+SHIFT+F5  | Command 53 | 
+| COMMANDS_54                    | CTRL+SHIFT+F6  | Command 54 | 
+| COMMANDS_55                    | CTRL+SHIFT+F7  | Command 55 | 
+| COMMANDS_56                    | CTRL+SHIFT+F8  | Command 56 | 
+| COMMANDS_57                    | CTRL+SHIFT+F9  | Command 57 | 
+| COMMANDS_58                    | CTRL+SHIFT+F10 | Command 58 | 
+| COMMANDS_59                    | CTRL+SHIFT+F11 | Command 59 | 
+| COMMANDS_60                    | CTRL+SHIFT+F12 | Command 60 | 
+| COMMANDS_61                    | CTRL+ALT+F1    | Command 61 | 
+| COMMANDS_62                    | CTRL+ALT+F2    | Command 62 | 
+| COMMANDS_63                    | CTRL+ALT+F3    | Command 63 | 
+| COMMANDS_64                    | CTRL+ALT+F4    | Command 64 | 
+| COMMANDS_65                    | CTRL+ALT+F5    | Command 65 | 
+| COMMANDS_66                    | CTRL+ALT+F6    | Command 66 | 
+| COMMANDS_67                    | CTRL+ALT+F7    | Command 67 | 
+| COMMANDS_68                    | CTRL+ALT+F8    | Command 68 | 
+| COMMANDS_69                    | CTRL+ALT+F9    | Command 69 | 
+| COMMANDS_70                    | CTRL+ALT+F10   | Command 70 | 
+| COMMANDS_71                    | CTRL+ALT+F11   | Command 71 | 
+| COMMANDS_72                    | CTRL+ALT+F12   | Command 72 | 
+| COMMANDS_73                    | CTRL+SHIFT+ALT+F1| Command 73 | 
+| COMMANDS_74                    | CTRL+SHIFT+ALT+F2| Command 74 | 
+| COMMANDS_75                    | CTRL+SHIFT+ALT+F3| Command 75 | 
+| COMMANDS_76                    | CTRL+SHIFT+ALT+F4| Command 76 | 
+| COMMANDS_77                    | CTRL+SHIFT+ALT+F5| Command 77 | 
+| COMMANDS_78                    | CTRL+SHIFT+ALT+F6| Command 78 | 
+| COMMANDS_79                    | CTRL+SHIFT+ALT+F7| Command 79 | 
+| COMMANDS_80                    | CTRL+SHIFT+ALT+F8| Command 80 | 
+| COMMANDS_81                    | CTRL+SHIFT+ALT+F9| Command 81 | 
+| COMMANDS_82                    | CTRL+SHIFT+ALT+F10| Command 82 | 
+| COMMANDS_83                    | CTRL+SHIFT+ALT+F11| Command 83 | 
+| COMMANDS_84                    | CTRL+SHIFT+ALT+F12| Command 84 | 
+
+### Character
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| CHARACTER_BACKWARDS            | S                   | step backwards with the character | 
+| CHARACTER_FORWARD              | W                   | step forward with the character | 
+| CHARACTER_JUMP                 | SPACE               | let the character jump | 
+| CHARACTER_LEFT                 | LEFT                | rotate character left | 
+| CHARACTER_RIGHT                | RIGHT               | rotate character right | 
+| CHARACTER_RUN                  | SHIFT+W             | let the character run | 
+| CHARACTER_SIDESTEP_LEFT        | A                   | sidestep to the left | 
+| CHARACTER_SIDESTEP_RIGHT       | D                   | sidestep to the right | 
+| CHARACTER_ROT_UP               | UP                  | rotate view up | 
+| CHARACTER_ROT_DOWN             | DOWN                | rotate view down | 
+
+### Camera
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| CAMERA_CHANGE                  | C              | change camera mode | 
+| CAMERA_LOOKBACK                | NUMPAD1             | look back (toggles between normal and lookback) | 
+| CAMERA_RESET                   | NUMPAD5             | reset the camera position | 
+| CAMERA_ROTATE_DOWN             | NUMPAD2             | rotate camera down | 
+| CAMERA_ROTATE_LEFT             | NUMPAD4             | rotate camera left | 
+| CAMERA_ROTATE_RIGHT            | NUMPAD6             | rotate camera right | 
+| CAMERA_ROTATE_UP               | NUMPAD8             | rotate camera up | 
+| CAMERA_ZOOM_IN                 | NUMPAD9        | zoom camera in | 
+| CAMERA_ZOOM_IN_FAST            | SHIFT+NUMPAD9       | zoom camera in faster | 
+| CAMERA_ZOOM_OUT                | NUMPAD3        | zoom camera out | 
+| CAMERA_ZOOM_OUT_FAST           | SHIFT+NUMPAD3       | zoom camera out faster | 
+| CAMERA_FREE_MODE_FIX           | ALT+C          | fix the camera to a position | 
+| CAMERA_FREE_MODE               | SHIFT+C        | enable / disable free camera mode | 
+| CAMERA_UP                      | Q                   | move camera up | 
+| CAMERA_DOWN                    | Z                   | move camera down | 
+
+### Sky
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| SKY_DECREASE_TIME              | SUBTRACT       | decrease day-time | 
+| SKY_DECREASE_TIME_FAST         | SHIFT+SUBTRACT      | decrease day-time a lot faster | 
+| SKY_INCREASE_TIME              | ADD            | increase day-time | 
+| SKY_INCREASE_TIME_FAST         | SHIFT+ADD           | increase day-time a lot faster | 
+
+### Grass (Unused)
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| GRASS_LESS                  |   N/A                             | EXPERIMENTAL: remove some grass | 
+| GRASS_MORE               |      N/A                             | EXPERIMENTAL: add some grass | 
+| GRASS_MOST                |     N/A                             | EXPERIMENTAL: set maximum amount of grass | 
+| GRASS_NONE                |    N/A                             | EXPERIMENTAL: remove grass completely | 
+| GRASS_SAVE                 |    N/A                             | EXPERIMENTAL: save changes to the grass density image | 
+
+### Survey map
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| SURVEY_MAP_TOGGLE_ICONS        | CTRL+SHIFT+ALT+TAB| toggle map icons | 
+| SURVEY_MAP_TOGGLE              | CTRL+SHIFT+TAB | toggle map | 
+| SURVEY_MAP_CYCLE               | TAB            | cycle map modes | 
+| SURVEY_MAP_ZOOM_IN             | CTRL+TAB       | zoom in | 
+| SURVEY_MAP_ZOOM_OUT            | SHIFT+TAB      | zoom out | 
+
+### Menu
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| MENU_DOWN                      | DOWN                | select next element in current category | 
+| MENU_LEFT                      | LEFT                | select previous category | 
+| MENU_RIGHT                     | RIGHT               | select next category | 
+| MENU_SELECT                    | RETURN         | select focused item and close menu | 
+| MENU_UP                        | UP                  | select previous element in current category | 
+
+### Truck editing
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| TRUCKEDIT_RELOAD               | SHIFT+CTRL+R   | reload truck | 
+
+### Road editing
+
+| Event                         	| Default keybinding                                                                                    	| Description                                                                     	|
+|-------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------	|
+| ROAD_EDITOR_POINT_INSERT       | INSERT         | insert road point
+| ROAD_EDITOR_POINT_GOTO         | G              | go to road point
+| ROAD_EDITOR_POINT_SET_POS      | M              | set road point position
+| ROAD_EDITOR_POINT_DELETE       | DELETE         | delete road point
+| ROAD_EDITOR_REBUILD_MESH       | B              | regenerate road mesh
 
 ## Controllers 
 

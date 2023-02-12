@@ -1,17 +1,17 @@
-Converting terrain to `terrn2` format
+Converting terrain to terrn2 format
 ============
 
 
 
-## Basic (Single-layer) 0.3x terrain to 0.4 conversion
+## Basic (Single-layer) 0.3x terrain to terrn2 conversion
 
-As of 0.4.0, The terrain format changed into what's now called [.terrn2](/terrain-creation/terrn2-subsystem/), This page will teach you how to easily convert a basic terrain to 0.4.
+As of version 0.4.0, terrains now use the [terrn2](/terrain-creation/terrn2-subsystem/) file format. 
+This page will teach you how to convert a basic terrain to terrn2+.
 
 Programs needed:
 
 - Any text editor (I recommend [Notepad++](http://notepad-plus-plus.org/) as I will use one of its features)
-- [GIMP (Version 2.8.x is used in this tutorial)](https://www.gimp.org/downloads/) 
-- [DDS texture plugin for GIMP](https://code.google.com/archive/p/gimp-dds/downloads) This page will not explain how to install it.
+- Latest version of [GIMP](https://www.gimp.org/downloads/) 
 
 ### What defines a "Single-layer" terrain?
 
@@ -46,8 +46,8 @@ Rename the template_04 files to match your terrain's file name
 
 ![1.3](/images/terrain-conversion3.png)
 
-### Transfering terrain information to 0.4 terrain files
-Now that you've got both the new 0.4 files and the old terrain files in the zip, I will start out by transfering the information from the .terrn file to the .terrn2 file.
+### Transfering terrain information to terrn2 terrain files
+Now that you've got both the new terrn2 files and the old terrain files in the zip, I will start out by transfering the information from the .terrn file to the .terrn2 file.
 If you're using Notepad++, you can open both files and have them side-by-side for easy editing:
 ![3](/images/terrain-conversion4.png)
 ![4](/images/terrain-conversion5.png)
@@ -65,7 +65,7 @@ Water=0
 #WaterLine=1.0
 #Terrain/water color, best to leave it at the default.
 AmbientColor = 0.93, 0.86, 0.76
-#The position RoRBot spawns at when the terrain is loaded. Since 0.4 only has one position and 0.3x has three, copy *only* 
+#The position RoRBot spawns at when the terrain is loaded. Since terrn2 only has one position and 0.3x has three, copy *only* 
 #one of the positions. If one of them spawns in the wrong place ingame, try another one.
 #1364.25, 121.028, 1272.22, 0, -86.6805, 0662842
 #The numbers do not have to be seperated by commas.
@@ -93,7 +93,7 @@ SandStormCubeMap = tracks/skyboxcol
 #Authors of the terrain. If the .terrn file doesn't list who made the map, just put "unknown". You may list yourself for converting the terrain.
 [Authors]
 terrain = Box5Diesel
-converting = Michael10055
+converting = CuriousMike
 
 #Filename for the object file. 
 [Objects]
@@ -135,7 +135,7 @@ PageFileFormat=Cliffdrop-page-0-0.otc
 ;If the .cfg has this defined, set it here. Otherwise, leave it as the default
 MaxPixelError=3
 
-;Advanced 0.4 texture values, best to leave them as the defaults.
+;Advanced terrn2 texture values, best to leave them as the defaults.
 LightmapEnabled=0
 SpecularMappingEnabled=1
 NormalMappingEnabled=0     
@@ -159,9 +159,9 @@ Cliffdrop.raw
 
 #### .terrn -> .tobj
 
-```
-;After the configuration lines in the .terrn (usually after line 4) Copy all the lines after it except "end".
-```
+
+After the configuration lines in the .terrn (usually after line 4) Copy all trees, grass and object placement lines after it except "end".
+
 ```
 1385.381592, 300.027374, 736.709045, 0.000000, 0.000000, 0.000000, truckshop
 
@@ -172,8 +172,8 @@ We're done with the text editor now.
 
 ### Removing the terrain shininess 
 
-If you tried the terrain in-game right now, you'd see there is a large white space over the terrain where the sun is. 
-I will use GIMP with the dds texture plugin to fix this. I recommend backing up your original texture image first.
+If you tried the terrain in-game right now, you'd see there is a bright white spot covering the terrain where the sun is. 
+Using latest version of GIMP, this can be fixed by applying a black layer mask. I recommend backing up your original texture image first.
 
 ##### Open your texture in GIMP (in this case, Cliffdrop.jpg)
 
@@ -207,9 +207,9 @@ You can now close GIMP.
 
 ### Trying the terrain in-game
 
-Now go ahead and zip all the files and place them in your Documents/Rigs of Rods 0.4/packs folder.
+Now go ahead and zip all the files and place them in your `Documents\My Games\Rigs of Rods\mods` folder.
 
-When you load the terrain in Rigs of Rods, You should have a working 0.4-ported terrain!
+When you load the terrain in Rigs of Rods, You should now have a working terrn2 terrain!
 
 ![FinishedMap](/images/terrain-conversionfin.png)
 
