@@ -26,32 +26,38 @@ Got that? Great! Let's begin.
 
 ### Requirements 
 
-- [VS 2015 Redistributable x86](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-- Text editor (such as Notepad)
-- Router access (for port forwarding)
+- [VS 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+- Text editor 
+- Router access for port forwarding
 - Good internet connection speed
 - A brain, basic computer knowledge, and patience
 
 ### Download
 
-First, download `rorserver-2021.04-windows.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
+Let's begin by downloading the latest Windows server release from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
 
-Extract the zip into a new folder:
+Extract the downloaded zip into a new folder:
+
 ![server-filelist-win](/images/server-filelist-win.png)
+
+!!! note "Tip"
+	It is highly recommended to enable file extensions in File Explorer as this will make it easier to differentiate each config file.<br>
+	Windows 10:<br>
+	<img src="/images/file-ext-win10.png"  width="80%" height="30%"><br>
+	Windows 11:<br>
+	<img src="/images/file-ext-win11.png"  width="50%" height="30%"><br>
 
 ### server.cfg
 
-Browse to the `config` folder and open `server.cfg` with Notepad. 
+Inside the folder, open (`server.cfg`) with Notepad or your preferred text editor.
 
 ![server-config-notepad](/images/server-config-notepad.png)
 
-This is the main configuration file for your server.
-
-Each section contains a comment explaining what it does, pretty self-explanatory.
+This is the main configuration file for your server. Each section contains a comment explaining what it does, pretty self-explanatory.
 
 For simplicity's sake, you only need to change the `name`, `terrain`, `port`, and `password` lines.
 
-Save and close the file once you're done. 
+Save and close the file once you're finished.
 
 ### server.motd 
 
@@ -69,11 +75,11 @@ Just as before, fill it out with rules you want players to follow.
 
 ### server.auth 
 
-This file configures who is staff on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
+This file configures the admins and moderators on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
 
 ### Running
 
-Once you're finished configuring your server, double-click `StartServer.bat` to launch the server:
+Once you're finished configuring your server, double-click `run.bat` to launch the server:
 
 ![server-win-start](/images/server-win-start.png)
 
@@ -87,7 +93,7 @@ Please see the [troubleshooting](#troubleshooting) section if you receive an err
 
 I will assume you're running the server on a 64-bit VPS with SSH/FTP access and have `unzip` and `nano` installed.
 
-First, download `rorserver-2021.04-linux.zip` from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
+Let's begin by downloading the latest Linux server release from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
 
 Upload the file to your VPS using an FTP client such as WinSCP or FileZilla.
 
@@ -103,7 +109,7 @@ The server files should now be located in the `rorserver` folder:
 
 ### server.cfg
 
-In SSH, Change to the `config` directory and type `nano server.cfg`.
+In SSH, Go into the newly created `rorserver` folder and type `nano server.cfg`.
 
 ![server-config-nano](/images/server-config-nano.png)
 
@@ -131,15 +137,15 @@ Just as before, fill it out with rules you want players to follow.
 
 ### server.auth 
 
-This file configures who is staff on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
+This file configures the admins and moderators on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
 
 ### Running
 
-Once you're finished configuring your server, change back to the `rorserver` directory and run the following:
+Once you're finished configuring your server, start your server by running the following:
 
 ```
 chmod +x rorserver
-sh StartServer.sh
+sh RunRoR.sh
 ```
 
 `chmod +x rorserver` only needs to be run once to set permissions.
@@ -192,9 +198,9 @@ Start your server, join it and open the log file located at `config/server.log`.
 
 `INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
 
-`0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9` is the hashed token for the user, which is what you will set in your auth file. 
+`0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9` is the hashed token for the player, which is what you will set in your auth file. 
 
-If you want the user to be a admin, set the number to `1`, or `4` if you want the user to be a moderator.
+If you want the player to be a admin, set the number to `1`, or `4` if you want the player to be a moderator.
 
 ```
 ;example admin
@@ -213,20 +219,23 @@ The next time you join your server you should now have a red flag next to your n
 
 ![userauth-ingame](/images/userauth-ingame.png)
 
-Admin/moderator commands:
+### Moderation commands
 
-```
-!list - Lists all users on a server with their UID
+`!list` 
 
-!kick/!ban - Kicks or bans a user. Note that server bans are currently removed when the server restarts.
+Lists all players on a server with their UID.
 
-Usage: !kick UID reason or !ban UID reason
+`!kick` and `!ban` 
 
-!say - Sends a message to a user or the entire server.
+Kicks or bans a player. Banned players are stored in `banned-players.json` which is loaded on server startup. 
 
-Usage: !say 10 message or !say -1 message
+Usage: `!kick UID reason` or `!ban UID reason`
 
-```
+`!say` 
+
+Sends a message to a player using their UID or the entire server.
+
+Usage: `!say 10 message` or `!say -1 message`
 
 ## Troubleshooting
 
@@ -236,9 +245,17 @@ Many things can go wrong with your server, here's a small selection of problems 
 
 #### Cannot connect to master server
 
+By default, the server attempts to connect to the server list (master server) and will exit if the connection fails.
+
 `Registration failed, response code: HTTP 503, body: {"result":false,"message":"Could not connect to your server and verify it's version. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the master server!`
  
-This usually means that you didn't forward your port. Another cause may be that you specified the wrong IP address. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.
+ This happens when:
+
+- You didn't forward the port correctly in your router's settings.
+- You specified the wrong IP address in your server's config. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.
+- Your firewall is blocking network access to the server. 
+
+If you do not want your server advertised on the server list and would rather have players join through the 'Direct IP' tab , change `mode = inet` to `mode = lan` in your server config.
 
 #### Address already in use
 
@@ -260,9 +277,9 @@ If you didn't setup an authorization file, you can safely ignore this error mess
 
 `Network fatal error: server uses a different protocol version`
 
-You need to download the correct game version to match your server version. Version 2021.04 supports RoRNet 2.43, the latest server protocol.
+You need to download the correct game version to match your server version. The latest RoR version supports RoRNet 2.44.
 
 The latest version may be downloaded from the [homepage](https://www.rigsofrods.org/).
 
-If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/webservices-support.9/)
+If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/webservices-support.9/).
 
