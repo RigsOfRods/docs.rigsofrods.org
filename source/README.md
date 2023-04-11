@@ -18,6 +18,7 @@ for content creators.
 New to Rigs of Rods? Check out these pages to help you get started: <br>
 
 [General FAQ](gameplay/general-faq/) - Answers to frequently asked questions.<br>
+[Common issues](gameplay/common-issues/) - Known problems with running RoR and how to fix them.<br>
 [Installing the game](gameplay/installing-the-game/) - Help with installing the game.<br>
 [Beginner's Guide](gameplay/beginners-guide/) - A guide for new players, teaches the basic controls and gameplay mechanics of RoR.<br>
 [Installing content (mods)](gameplay/installing-content/) - How to install new vehicles and terrains.<br>

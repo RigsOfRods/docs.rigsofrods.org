@@ -75,15 +75,21 @@ That's it! You can launch Rigs of Rods now and your shiny new mod should be read
 
 ## Where to download mods 
 
-Mods can be downloaded from the official [Repository](https://forum.rigsofrods.org/resources/) (recommended) and the [Archives](http://archives.rigsofrods.net/). You should not download mods from unofficial sites, explained below.
+Mods can be downloaded from the official [Repository](https://forum.rigsofrods.org/resources/) and the [content](https://forum.rigsofrods.org/#showrooms.11) section of the forum. 
+You should not download mods from unofficial sites, explained below.
 
 ## Things to avoid 
 
 When it comes to installing RoR mods, there are some common mistakes new players make. Here's a list of things you should avoid when installing mods.
 
-### Downloading from unofficial websites
+### Downloading mods from unofficial sources 
 
-If you search for mods, chances are you will find mods from YouTube videos, forums, and other unofficial sites. These contain [stolen content](https://forum.rigsofrods.org/threads/stolen-content-bus-epidemic.2034/) , which is against our [Terms of Service](/rules/terms-of-service/#stolen-content). They are not allowed on any of our services, including multiplayer. They may also contain viruses/malware.
+If you search for RoR mods on Google or YouTube, you'll likely find car mods that aren't available from the Repository. Almost all of these mods contain models ripped from other games/websites, which goes against our Terms of Service. 
+They are not allowed on any of our services, including multiplayer. May also contain viruses and/or malware.
+
+Further reading:<br>
+[ToS - Stolen content](/rules/rules-stolen-content/)<br>
+[Stolen Content (Bus Epidemic)](https://forum.rigsofrods.org/threads/stolen-content-bus-epidemic.2034/)
 
 ### Extracting zips 
 
