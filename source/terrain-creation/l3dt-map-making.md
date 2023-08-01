@@ -10,15 +10,19 @@ L3DT Map Making
 
 >[About L3DT web page](http://www.bundysoft.com/docs/doku.php?id=l3dt:about)
 
-This page will teach you how to export an L3DT terrain into Rigs of Rods version 0.4.8.0+.
+This page will teach you how to export an L3DT terrain into Rigs of Rods version 2020.01+.
 
 **Please read everything carefully and do not skip any steps.**
 
 ## Required applications
 
-- [L3DT (Standard or Professional)](http://www.bundysoft.com/L3DT/) ([Pro 16.05](http://www.bundysoft.com/L3DT/downloads/pro-trial.php) will be used here)
-- [GIMP 2.10](https://www.gimp.org/downloads/)
-- [DDS plugin for GIMP](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gimp-dds/gimp-dds-win64-3.0.1.zip) (See the included readme file for installation instructions)
+!!! note
+	L3DT is now freeware as of [December 11th, 2018.](http://www.bundysoft.com/phpBB2/viewtopic.php?f=2&t=15509) 
+	As the transition isn't complete yet, it is highly recommended you sign up for the 6-month "free trial" [here.](http://www.bundysoft.com/L3DT/downloads/pro-trial.php)
+	Doing so gives you access to the work-in-progress "L3DT Unlimited" version, which doesn't require a license.
+
+- [L3DT Standard or Professional](http://www.bundysoft.com/L3DT/)
+- [GIMP 2.10.10 or higher](https://www.gimp.org/downloads/)
 - [Notepad++](https://notepad-plus-plus.org/)
 - A brain, some basic computer knowledge, and some patience
 
@@ -450,4 +454,4 @@ Check all your files and make sure you didn't make any syntax errors. You can al
 ### More help
 
 If you have a different issue than the one listed here and you're sure you didn't do anything obviously wrong, 
-then please make a thread in the [correct subforum](https://forum.rigsofrods.org/forums/content-creation.15/) or join our [Discord](https://discord.gg/rigsofrods) server and ask your question in the `#content-creation` channel.
+then please make a thread in the [correct subforum](https://forum.rigsofrods.org/forums/content-creation.15/) or join our [Discord](https://discord.gg/rigsofrods) server and ask your question in the `#modding` channel.
