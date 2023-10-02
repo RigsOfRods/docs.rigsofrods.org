@@ -1,6 +1,8 @@
 Heightmap RAW files
 ============
 
+!!! warning "Outdated"
+	This tutorial is from 2007, written for Blender version 2.43. It remains here as it contains some useful information. 
 
 
 A "heightmap", or "elevation map", is an image or binary file where every pixel/number represents world height at the given point.
@@ -16,8 +18,8 @@ Plus blender can go into great detail with the terrain surface and allow the use
 Blender can also export a 16bit grayscale image, which is required by RoR.
 
 ### Requirements
-[http://www.blender.org/ Blender] with exr support (v2.43+ maybe earlier)<br/>
-[http://www.imagemagick.org/ ImageMagick] with exr support (v6.3.4+)
+[Blender](https://www.blender.org/) with EXR support (v2.43+ maybe earlier)<br/>
+[ImageMagick](https://imagemagick.org/index.php) with EXR support (v6.3.4+)
 
 
 ### Setting up the Environment
