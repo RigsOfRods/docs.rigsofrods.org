@@ -19,7 +19,7 @@ jobs:
           message("::set-output name=timestamp::${current_date}")
 
       - name: Cache pip
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: pip-${{ steps.cache_timestamp.outputs.timestamp }}
           path: ~/.cache/
