@@ -2308,12 +2308,12 @@ Optional parameters:
 	-   `h`: High beams, toggled with `SHIFT+N` or cycled with `CTRL+N`.
 	-   `s`: Sidelights (running/parking lights), toggled with `N` or cycled with `CTRL+N`.
 	-   `g`: Fog lights, toggled with `ALT+N` or cycled with `CTRL+N`.
-    -   `b` : Brake lights.
+    -   `b`: Brake lights.
 	-   `t`: Tail lights, activated together with `f` option. 
-    -   `l` : Left blinker.
-    -   `r` : Right blinker.
-    -   `R` : Reverse light (on when driving in R gear)
-    -   `u` : User controlled light. (i.e. fog light) (see control numbers)        
+    -   `l`: Left blinker.
+    -   `r`: Right blinker.
+    -   `R`: Reverse light (on when driving in R gear)
+    -   `u`: User controlled light. (i.e. fog light) (see control numbers)        
 -   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
         For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
     -   Special value: `12` - Parking brake indicator 
@@ -3274,7 +3274,7 @@ Since <span style="background-color:#854200">\[ Version 0.36+ \]</span>, vehicle
 
 ### disabledefaultsounds
 
-Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
+Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example:
 
 ```
 disabledefaultsounds
