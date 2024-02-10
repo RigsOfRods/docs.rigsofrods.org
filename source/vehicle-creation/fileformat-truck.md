@@ -2308,15 +2308,17 @@ Optional parameters:
 	-   `h`: High beams, toggled with `SHIFT+N` or cycled with `CTRL+N`.
 	-   `s`: Sidelights (running/parking lights), toggled with `N` or cycled with `CTRL+N`.
 	-   `g`: Fog lights, toggled with `ALT+N` or cycled with `CTRL+N`.
-    -   `b` : Brake lights.
+    -   `b`: Brake lights.
 	-   `t`: Tail lights, activated together with `f` option. 
-    -   `l` : Left blinker.
-    -   `r` : Right blinker.
-    -   `R` : Reverse light (on when driving in R gear)
-    -   `u` : User controlled light. (i.e. fog light) (see control numbers)        
+    -   `l`: Left blinker.
+    -   `r`: Right blinker.
+    -   `R`: Reverse light. (on when driving in R gear)
+    -   `d`: Dashboard indicator. (see dashboard input source)
+    -   `u`: User controlled light. (i.e. fog light) (see control numbers)        
 -   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
         For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
     -   Special value: `12` - Parking brake indicator 
+-	**Dashboard input source**: <span style="color:#BD0058">String</span> Enter an input source from the [dashboard system](/vehicle-creation/making-custom-hud/#input-sources). This enables flares to toggle based on dashboard UI status, such as engine ignition or locked state.
 -   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -2</span>;
         Delay between on/off change, in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
     -   Special value: `-1` to use the default value of 500ms.
@@ -2348,6 +2350,10 @@ flares
 
 ;example for a user controlled Fog Light (toggled by CTRL+1)
 51,  1, 79,    0.23,    0.50,    u,             1,          0,  0.3 myTruck/MyFogFlare
+
+;example for dashboard indicator
+51,  1, 79,    0.23,    0.50,    d,    engine_ignition,    -1,  -1 default
+
 ```
 
 ### Flares2
@@ -3274,7 +3280,7 @@ Since <span style="background-color:#854200">\[ Version 0.36+ \]</span>, vehicle
 
 ### disabledefaultsounds
 
-Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example :
+Use this simple statement to disable all sounds that RoR automatically adds to your vehicle. This allows you to start from a clean slate, and add your custom sounds without interference from the automatically added sounds. Example:
 
 ```
 disabledefaultsounds
