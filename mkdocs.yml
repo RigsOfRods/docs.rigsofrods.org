@@ -9,7 +9,7 @@ repo_name: RigsOfRods/docs.rigsofrods.org
 repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
 edit_uri: blob/master/source/
 
-copyright: "Copyright &copy; 2023 Rigs of Rods Community"
+copyright: "Copyright &copy; 2024 Rigs of Rods Community"
 
 theme:
     name: "material"
@@ -51,6 +51,7 @@ nav:
           - Jargon: gameplay/jargon.md
     - Tools and tutorials:
           - Installing addons: tools-tutorials/addons.md
+          - Modifying suspension (lifting, lowering, width, camber): tools-tutorials/modding-suspension.md
           - Blender (2.7) mesh editing: tools-tutorials/blender-mesh-editing.md
           - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
           - Visual editors: tools-tutorials/visual-editors.md
