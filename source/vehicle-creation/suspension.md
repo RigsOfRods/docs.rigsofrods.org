@@ -7,6 +7,12 @@ Suspension is a flexible component which connects a car's body to its wheels. be
 
 For syntax, see [truckfile reference](/vehicle-creation/fileformat-truck#shocks).
 
+## Example trucks
+
+A package containing all example trucks featured can be downloaded [here](/download/Suspension-examples.zip).
+
+![Suspension-examples](/images/Suspension-examples.jpg)
+
 ## Types
 
 ### Coilovers
@@ -40,7 +46,7 @@ The easiest way to create a beam axle is to use Axle Rigidity nodes.
 
 The lateral location of a beam axle can be controlled in a number of ways; the easiest way in RoR simply to weakly truss the two arms that hold the axle, but this is generally not possible in real life and limits how much the axle can roll.
 
-[Example truck](/download/suspension-demo-beam-axle.truck) using a beam axle on the rear, with simple truss for lateral location.
+Example using a beam axle on the rear, with simple truss for lateral location.
 
 -    Top image: Normal extension
 -    Middle image: Full compression
@@ -53,7 +59,7 @@ The lateral location of a beam axle can be controlled in a number of ways; the e
 
 ![wattslinkage](/images/softbody-suspension-watts-linkage.jpg)
 
-[Example truck](/download/suspension-demo-watts-linkage.truck) using Watt's linkage method of lateral location.
+Example using Watt's linkage method of lateral location.
 
 Watt's Linkage:
 
@@ -68,8 +74,6 @@ Watt's Linkage:
 
 
 ![panhardrod](/images/softbody-suspension-panhard-rod.jpg)
-
-[Example panhard rod truck](/download/suspension-demo-panhard-rod.truck)
 
 Panhard rod: 
 
@@ -86,7 +90,7 @@ De Dion tube suspension is a relatively complex form of suspension, which falls 
 
 Due to their complexity, De Dion tubes are uncommon on modern vehicles.
 
-[An example truck](/download/suspension-demo-de-dion-tube.truck) using a de Dion tube on the rear. Since a telescoping tube cannot be directly modeled in RoR, a Sarrus Linkage has been used instead. It provides exactly the same effect.
+Example using a de Dion tube on the rear. Since a telescoping tube cannot be directly modeled in RoR, a Sarrus Linkage has been used instead. It provides exactly the same effect.
 
 ![dediontube2](/images/softbody-suspension-dedion-tube-wonky.jpg)
 
@@ -104,7 +108,7 @@ The wheels connected to the tube are kept parallel, regardless of body roll or s
 
 Walking beam is a special form of suspension: It solidly links two axles together, meaning that all four wheels on those axles must move in unison. Indeed, the setup is know as walking beam due to the way that trucks are see to 'walk' over obstacles. This design allows the tires to conform to the landscape, evening out the pressure on each tire. 
 
-[An example truck](/download/suspension-demo-walking-beam.truck) using extremely simple walking beam suspension on the rear.
+Example using extremely simple walking beam suspension on the rear.
 
 -   <span style="color:#191985">Blue: Axles.</span>
 -   <span style="color:#866219">Light brown: Frame and trailing arms</span>
@@ -137,7 +141,7 @@ The swing axle is a small step up from the beam axle. Although it is the most co
 
 Because of its strange handling characteristics, swing axle suspension is uncommon in modern trucks.
 
-[An example truck](/download/suspension-demo-swing-axle.truck) using swing axles on the rear. The axles on this truck are quite short, which encourages the inside wheel to tuck under when cornering.
+Example using swing axles on the rear. The axles on this truck are quite short, which encourages the inside wheel to tuck under when cornering.
 
 -   Top image: Normal extension
 -   Middle image: Full compression
@@ -151,7 +155,7 @@ Because of its strange handling characteristics, swing axle suspension is uncomm
 
 Double wishbone suspension is most common in racing cars and larger passenger cars. The wheels are kept perpendicular to the road through the use of two A-arms, one above the other. It is relatively easy to tune for handling.
 
-[An example truck](/download/suspension-demo-double-wishbone.truck) using double wishbone suspension on the rear. The front axles also carry double wishbone suspension and are used for steering. The front wheels have also been rotated to place them inside the wishbones, which makes them much stronger; any object they collide with exerts less leverage on them.
+Example using double wishbone suspension on the rear. The front axles also carry double wishbone suspension and are used for steering. The front wheels have also been rotated to place them inside the wishbones, which makes them much stronger; any object they collide with exerts less leverage on them.
 
 -   Top image: Normal extension, 
 -   Middle image: Full compression, 
@@ -168,7 +172,7 @@ By far and away the most common form of front suspension for passenger cars, the
 
 ![mcph](/images/softbody-suspension-mcpherson.jpg)
 
-[An old-style example truck](/download/suspension-demo-mcpherson-without-slidenodes.truck) using McPherson strut suspension on the front. The straight line mechanism has been hidden on the right hand side to provide a better view of the overall setup.
+Old-style example using McPherson strut suspension on the front. The straight line mechanism has been hidden on the right hand side to provide a better view of the overall setup.
 
 -    Top: Normal extension
 -    Middle: Full compression
@@ -182,7 +186,7 @@ By far and away the most common form of front suspension for passenger cars, the
 
 ![mcphslidenodes](/images/softbody-suspension-mcpherson-slidenodes.jpg)
 
-[An example truck using slidenodes](/download/suspension-demo-mcpherson-using-slidenodes.truck) to keep the beam count down. No beams in the suspension mechanism have been hidden, the shocks are hold in line with slidenodes.
+An example truck using slidenodes to keep the beam count down. No beams in the suspension mechanism have been hidden, the shocks are hold in line with slidenodes.
 
 ### Torsion bar
 
@@ -191,7 +195,7 @@ By far and away the most common form of front suspension for passenger cars, the
 A torsion bar is a simple form of independent suspension that uses a flexible rod to provide spring force instead of a coil spring. 
 It can be found on many vehicles from the VW beetle, to light trucks and SUVs, or even trailers.
 
-[An example truck](/download/suspension-torsion-bar-example.truck) using torsion bar suspension front and rear. You will notice the wheels tend to gain camber while cornering like swing arm suspension, however since the pivot point is perpendicular to the wheels, they will not fold under the chassis like a swing arm.
+Example using torsion bar suspension front and rear. You will notice the wheels tend to gain camber while cornering like swing arm suspension, however since the pivot point is perpendicular to the wheels, they will not fold under the chassis like a swing arm.
 
 -   Top image: Normal extension
 -   Middle image: Full compression
@@ -218,8 +222,8 @@ Top:Truck with anti roll bars. Bottom: Truck without anti roll bars. Notice how 
 The setup of anti roll bars differs slightly depending on the type of suspension they are being fitted to. In all cases, they must pivot on the truck body itself, but with suspension setups that use transverse A-arms, such as double-wishbone or swing arm, care must be taken to allow for left-right movement in each wheel. If this is not done the suspension will lock up during travel.
 
 The two trucks here are identical except the second truck does not have an anti roll device fitted. The anti roll device shown is suitable for any truck which uses same length double wishbone suspension.
--   [Example truck without anti-roll](/download/suspension-demo-without-anti-roll-bars.truck)
--   [Example truck using anti-roll](/download/suspension-demo-anti-roll-bars.truck)
+
+Examples with and without the anti roll bars are included in the main download.
 
 <div style="clear: both; margin-bottom: 10px;"></div>
 
@@ -241,8 +245,6 @@ Another way of accomplishing this same concept without stressing the axles is to
 The commands will lift the shock and, consequently, the wheel will travel with the shock thus lifting the axle without stressing the shocks.  This allows you to have very stiff shocks without fear of breaking.
 
 ![liftaxle2](/images/softbody-suspension-liftable-axle.jpg)
-
-[Example truck](/download/suspension-demo-lifter-axle-low-stress.truck)
 
 - Top image: Axle lowered. 
 - Bottom image: Axle raised. 
