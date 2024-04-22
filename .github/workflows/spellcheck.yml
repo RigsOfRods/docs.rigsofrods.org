@@ -8,15 +8,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python 3.7
+    - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
-        python-version: 3.7
+        python-version: 3.12
+        cache: 'pip'
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip setuptools
-        python -m pip install pyspelling
+        pip install --upgrade pip setuptools
+        pip install pyspelling
 
     - name: Install Aspell
       run: |
