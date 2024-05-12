@@ -38,7 +38,8 @@ Terrain creation:<br>
 [Terrn2 file format](terrain-creation/terrn2-subsystem/) - Information on the file format used to define a terrain.<br>
 [Editing terrain objects](terrain-creation/editing-terrain-objects/) - How to place objects on terrains using the built-in editor. <br>
 [Object file format](terrain-creation/object-format/) - Information on the file format used to define static objects. <br>
-[L3DT Map Making](terrain-creation/l3dt-map-making/) - A full guide on bringing a terrain created in L3DT into RoR.
+[L3DT Map Making](terrain-creation/l3dt-map-making/) - A full guide on bringing a terrain created in L3DT into RoR.<br>
+[Stunt Rally 3 Track Editor](https://github.com/stuntrally/stuntrally3/blob/main/docs/EditorExportRoR.md) - Full guide on exporting tracks from Stunt Rally 3 Track Editor into RoR.
 
 ![seperator](/images/branding/ror_seperator.png)
 
