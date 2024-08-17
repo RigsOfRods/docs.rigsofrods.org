@@ -1,4 +1,4 @@
-Installing Addons
+Installing Addons (Manual)
 ============
 
 

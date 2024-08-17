@@ -1,0 +1,183 @@
+Addonpart file format
+============
+
+This page serves as a technical overview of the `.addonpart` file format. It is a new text-based file format that enables easy vehicle customization without manually editing a `.truck` file.
+
+For an overview of the Tuning menu, see: [Tuning](/gameplay/tuning)
+
+## Features
+
+- Add or replace meshes (props/flexbodies)
+- Hide unwanted meshes
+- Change wheels and tires
+- Move existing nodes 
+- Add new flares 
+- Hide unwanted flares
+- Hide unwanted exhaust smoke particles
+- Change or remove managedmaterial textures
+- Save/load `.tuneup` presets
+
+## Limitations
+
+These features are not currently supported. They may be added in a future RoR release.
+
+- Multiplayer support. The addonpart system is exclusive to single player for now.
+- Adding new nodes and beams 
+- Engine tweaking 
+- Adding or changing sounds
+- Moving cinecams
+- Adding new animated props (replacing existing prop works)
+- Any other truck file sections not listed here
+
+## Examples
+
+### Adding new flexbodies
+
+Most basic part example, adds a new flexbody (rear spoiler) to the Gavril MV4:
+
+```
+addonpart_name "Gavril MV4 - Dura-Built D1 Spoiler"
+addonpart_description "Add-On by Charger, for use with Gavril MV4"
+
+; GUIDS
+
+;addonpart_guid  ~ multiple GUIDs can be specified, these are only hints, user can force installation of any addon to any vehicle.
+;MV4
+addonpart_guid "8733b9a9-b662-46b3-ac4d-c9b6974aa1cf"
+;MV4S
+addonpart_guid "de88a97c-086e-446b-bdbd-81bb41ef54ae"
+;MV4R
+addonpart_guid "a56e33dd-587e-48be-9ee8-675b57efc57b"
+
+
+; Install instructions - usually props/flexbodies and managedmaterials
+; Format is exactly the same as in truck-definition fileformat.
+; IMPORTANT: `forset` line must be a single string as-is because it's wicked.
+; ---------------------------------------------------------------------------
+
+managedmaterials
+;new_material    effect               parameters...
+DB_D1 mesh_standard DB_D1.png DB_D1_s.png
+
+flexbodies
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
+10,11,26,0.5,-1.17,-0.27,-90,180,0,DB_D1.mesh
+"forset 222-237"
+```
+
+![mv4-db-spoiler](/images/mv4-db-spoiler.jpg)
+
+
+### Tweaking existing flexbodies
+
+This addon uses `addonpart_tweak_flexbody` to replace the grille and spoiler on the Gavril Bandit, 
+along with `addonpart_unwanted_flexbody` to hide the front bumper and `addonpart_unwanted_flare` to hide the now covered headlights:
+
+```
+addonpart_name "Gavril Bandit - Daytona Kit (Default Silver)"
+addonpart_description "Add-On by Charger, for use with Gavril Bandit 400GT/Extreme/Off-Road"
+
+; GUIDS
+
+;addonpart_guid  ~ multiple GUIDs can be specified, these are only hints, user can force installation of any addon to any vehicle.
+;200/Stripped/300
+;addonpart_guid "f4366e54-e74c-45bc-8482-c8524dd7b682"
+;400GT/Extreme/Off-Road
+addonpart_guid "ac2382e6-29b5-47b5-9e93-235ceaa27aa2"
+
+
+; Install instructions - usually props/flexbodies and managedmaterials
+; Format is exactly the same as in truck-definition fileformat.
+; IMPORTANT: `forset` line must be a single string as-is because it's wicked.
+; ---------------------------------------------------------------------------
+
+managedmaterials
+Bandit_daytona mesh_standard Bandit_daytona_Silver.png Bandit_daytona_s.png
+
+;syntax: addonpart_unwanted_flexbody <flexbody ID>
+addonpart_unwanted_flexbody 19
+
+;syntax: addonpart_unwanted_flare <flare ID>
+addonpart_unwanted_flare 10
+addonpart_unwanted_flare 11
+addonpart_unwanted_flare 12
+addonpart_unwanted_flare 13
+
+;syntax: addonpart_tweak_flexbody <flexbody ID><offsetx><offsety><offsetz><rotx><roty><rotz><mesh>
+addonpart_tweak_flexbody 17 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_nose.mesh
+addonpart_tweak_flexbody 24 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_wing.mesh
+```
+
+![bandit_daytona](/images/bandit_daytona.jpg)
+
+
+### Wheels 
+
+Wheels with pre-mounted tires. These wheels can be installed onto any vehicle with mesh wheels:
+
+```
+addonpart_name "StanceWerkz -ATS Cup Wheels"
+addonpart_description "Wheels for all vehicles. By FreeFall, ported to addonpart by CuriousMike"
+
+; WHEEL TWEAKS
+
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+addonpart_tweak_wheel 0 "ATSCup.mesh" "tracks/trans" r 0.29
+addonpart_tweak_wheel 1 "ATSCup.mesh" "tracks/trans" l 0.29
+addonpart_tweak_wheel 2 "ATSCup.mesh" "tracks/trans" r 0.29
+addonpart_tweak_wheel 3 "ATSCup.mesh" "tracks/trans" l 0.29
+
+; MANAGED MATERIALS
+
+managedmaterials
+;new_material    effect               parameters...
+ATSCup			        mesh_standard	        ATSCup.png		ATSCup_s.png
+Tire                            mesh_standard		Tire.png
+```
+
+![accord_626_atscup_wheels](/images/accord_626_atscup_wheels.jpg)
+
+Advanced wheel example, specifically made to fit the Gavril MV4S. Features `addonpart_tweak_prop` to move the brakes and calipers:
+
+```
+addonpart_name "Gavril MV4S - MotoMetal 962 Wheels"
+addonpart_description "Add-On wheels by Charger, for Gavril MV4S"
+
+; GUIDS
+
+;MV4S
+addonpart_guid "de88a97c-086e-446b-bdbd-81bb41ef54ae"
+
+; PROP TWEAKS
+
+; move brakes inwards a bit so they don't clip
+; syntax: 'addonpart_tweak_prop <prop ID> <offsetX> <offsetY> <offsetZ> <rotX> <rotY> <rotZ> <media1> <media2>'
+;; calipers (orig offset X: 0.65)
+addonpart_tweak_prop 11    0.31,0,0,   65,0,180, ""
+addonpart_tweak_prop 12    0.31,0,0,   225,0,180, ""
+addonpart_tweak_prop 13    0.32,0,0,   -90,0,180, ""
+addonpart_tweak_prop 14    0.32,0,0,   30,0,180, ""
+;; brake discs (orig offset X: 0.65)
+addonpart_tweak_prop 15    0.31,0,0,   0,180,0, ""
+addonpart_tweak_prop 16    0.31,0,0,   0,180,0, ""
+addonpart_tweak_prop 17    0.32,0,0,   0,180,0, ""
+addonpart_tweak_prop 18    0.32,0,0,   0,180,0, ""
+
+; WHEEL TWEAKS
+
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+addonpart_tweak_wheel 0 "MotoMetalF.mesh" "" l
+addonpart_tweak_wheel 1 "MotoMetalF.mesh" "" r
+addonpart_tweak_wheel 2 "MotoMetalR.mesh" "" l
+addonpart_tweak_wheel 3 "MotoMetalR.mesh" "" r 
+	
+
+; MANAGED MATERIALS
+
+managedmaterials
+MotoMetal mesh_standard MotoMetal_962.dds MotoMetal_962_s.dds
+```
+
+![motometal_mv4s](/images/motometal_mv4s.jpg)
+
+
