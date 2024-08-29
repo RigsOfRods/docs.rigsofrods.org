@@ -10,7 +10,4 @@ Tuning is currently disabled in Multiplayer, support will be added in a future r
 
 For a technical overview of the addonpart file format, see: [Addonpart file format](/vehicle-creation/fileformat-addonpart)
 
-!!! note 
-	Parts listed below are currently not available for download. 
-
 <img src="/images/tuning-menu.png" width="400">

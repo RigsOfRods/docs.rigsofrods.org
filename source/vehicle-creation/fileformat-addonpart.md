@@ -15,7 +15,8 @@ For an overview of the Tuning menu, see: [Tuning](/gameplay/tuning)
 - Hide unwanted flares
 - Hide unwanted exhaust smoke particles
 - Change or remove managedmaterial textures
-- Save/load `.tuneup` presets
+- Supports preview images, same as truck files and skins
+- Save and load `.tuneup` presets, these are stored in the `projects` directory and can be included with uploaded mods.
 
 ## Limitations
 
@@ -28,6 +29,62 @@ These features are not currently supported. They may be added in a future RoR re
 - Moving cinecams
 - Adding new animated props (replacing existing prop works)
 - Any other truck file sections not listed here
+
+## Parameters 
+
+### addonpart_name
+
+Required, the name of the addon. Shown in Tuning menu and parts selector. 
+
+### addonpart_description
+
+Required, addon description. Shown in part selector.
+
+### addonpart_guid 
+
+The [GUID](/vehicle-creation/fileformat-truck/#guid) of the truck the addonpart is intended for. Parts that match the GUID of the current active vehicle are shown in the Tuning menu.
+
+Multiple GUIDs can be defined, these are only hints as players can force installation of any addon to any vehicle.
+
+Optional, omitting this section requires the part to be installed manually through the parts selector.
+
+### addonpart_filename
+
+Optional. Restricts an addonpart to specific truck file(s), useful if multiple trucks share the same GUID.
+
+```
+addonpart_guid "db30c00b-021f-416a-92a7-3218374dbba2"
+addonpart_filename "BoxDodgeRam.truck"
+addonpart_filename "1994DodgeRam12V.truck"
+addonpart_filename "1994DodgeRam12VConstruction.truck"
+addonpart_filename "1994DodgeRam12VGuard.truck"
+```
+
+**NOTE:** Specifying only `addonpart_filename` will not work on its own, a matching GUID must also be present!
+
+### Props and flexbodies
+
+Props and flexbodies are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#props)
+
+### addonpart_unwanted_prop
+
+### addonpart_unwanted_flexbody
+
+### addonpart_unwanted_flare
+
+### addonpart_unwanted_exhaust
+
+### addonpart_unwanted_managedmaterial
+
+### addonpart_tweak_wheel
+
+### addonpart_tweak_node
+
+### addonpart_tweak_prop
+
+### addonpart_tweak_flexbody
+
+### addonpart_tweak_managedmaterial
 
 ## Examples
 
@@ -109,6 +166,50 @@ addonpart_tweak_flexbody 24 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_wing.mesh
 ```
 
 ![bandit_daytona](/images/bandit_daytona.jpg)
+
+### Moving nodes
+
+Using `addonpart_tweak_node`, it's possible to move the suspension nodes on a vehicle:
+
+```
+addonpart_name "Mazda 626 - Lowered Suspension - Stage 1"
+addonpart_description "For use with Mazda 626 GF"
+
+addonpart_guid "mazda626gf"
+
+ ; NODE TWEAKS
+ 
+;syntax: addonpart_tweak_node <node ID><x><y><z>
+
+;grp: front axle hubs
+addonpart_tweak_node  77,    0.920,    0.388,   -0.836
+addonpart_tweak_node  78,    0.770,    0.288,   -0.626
+addonpart_tweak_node  79,    1.070,    0.288,   -0.626
+addonpart_tweak_node  80,    0.920,    0.538,   -0.626
+addonpart_tweak_node  81,    0.920,    0.388,   -0.626
+addonpart_tweak_node  82,    0.920,    0.288,   -0.626
+addonpart_tweak_node  83,    0.920,    0.388,    0.836
+addonpart_tweak_node  84,    0.770,    0.288,    0.626
+addonpart_tweak_node  85,    1.070,    0.288,    0.626
+addonpart_tweak_node  86,    0.920,    0.538,    0.626
+addonpart_tweak_node  87,    0.920,    0.388,    0.626
+addonpart_tweak_node  88,    0.920,    0.288,    0.626
+;grp: rear axle hubs
+addonpart_tweak_node  92,    3.500,    0.343,   -0.836
+addonpart_tweak_node  93,    3.400,    0.243,   -0.626
+addonpart_tweak_node  94,    3.650,    0.243,   -0.626
+addonpart_tweak_node  95,    3.500,    0.493,   -0.626
+addonpart_tweak_node  96,    3.500,    0.343,   -0.626
+addonpart_tweak_node  97,    3.500,    0.243,   -0.626
+addonpart_tweak_node  98,    3.500,    0.343,    0.836
+addonpart_tweak_node  99,    3.400,    0.243,    0.626
+addonpart_tweak_node 100,    3.650,    0.243,    0.626
+addonpart_tweak_node 101,    3.500,    0.493,    0.626
+addonpart_tweak_node 102,    3.500,    0.343,    0.626
+addonpart_tweak_node 103,    3.500,    0.243,    0.626
+```
+
+![mazda626_lowered](/images/mazda626_lowered.gif)
 
 
 ### Wheels 
