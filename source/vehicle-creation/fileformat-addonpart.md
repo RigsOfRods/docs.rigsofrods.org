@@ -62,19 +62,92 @@ addonpart_filename "1994DodgeRam12VGuard.truck"
 
 **NOTE:** Specifying only `addonpart_filename` will not work on its own, a matching GUID must also be present!
 
+### Managedmaterials
+
+Materials can be defined in two ways, either through the [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials) section or with a [material file](https://wiki.ogre3d.org/Materials).
+
+```
+managedmaterials
+;new_material    effect               parameters...
+mainbody mesh_standard    mytruckbody.png mytruckbody-spec.png
+```
+
+Addon meshes that share a managedmaterial with the base mod do not need to be redefined. However, any `.material` files must be copied to the addon directory.
+
+
 ### Props and flexbodies
 
-Props and flexbodies are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#props)
+Props and flexbodies are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#props).
+
+In order to be parsed correctly, flexbody forset lines **MUST** be surrounded by quotes , mesh will not appear otherwise!
+
+```
+props
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
+93, 95, 92,    0.50,    0.37,     0.0,   90,    0,    0, airintake.mesh
+
+flexbodies
+;ref,  x,  y, offsetx, offsety, offsetz, rotx, roty, rotz, mesh
+3,  4, 19,       0,       0,   0.027,   90,    0,   90, dodgecharger.mesh
+"forset 0-16, 23-24, 31, 54-125"
+```
+
+### Flares
+
+Flares are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#flares). All flares sections (`flares`/`flares2`/`flares3`) are supported.
+
+```
+flares
+;RefNode,  X,  Y, OffsetX, OffsetY, Type, ControlNumber, BlinkDelay, size MaterialName
+51,  1, 79,    0.23,    0.50,    b,            -1,          0,   -1 default
+```
 
 ### addonpart_unwanted_prop
 
+Specifies a prop which should be hidden. IDs are shown in the Tuning menu, starting at `0`.
+
+```
+;syntax: addonpart_unwanted_prop <prop ID>
+addonpart_unwanted_prop 3
+```
+
 ### addonpart_unwanted_flexbody
+
+Specifies a flexbody which should be hidden.
+
+```
+;syntax: addonpart_unwanted_flexbody <flexbody ID>
+addonpart_unwanted_flexbody 2
+```
 
 ### addonpart_unwanted_flare
 
+Specifies a flare which should be hidden.
+
+```
+;syntax: addonpart_unwanted_flare <flare ID>
+addonpart_unwanted_flare 4
+```
+
 ### addonpart_unwanted_exhaust
 
+Specifies a exhaust smoke which should be hidden. Useful for custom exhaust parts.
+
+```
+;syntax: addonpart_unwanted_exhaust <exhaust ID>
+addonpart_unwanted_exhaust 0
+```
+
 ### addonpart_unwanted_managedmaterial
+
+Specifies a managedmaterial which shouldn't be rendered. Will be replaced by a transparent red material (`tracks/transred`) instead.
+
+Currently not very useful, exists for consistency.
+
+```
+;syntax: addonpart_unwanted_managedmaterial <material name>
+addonpart_unwanted_managedmaterial 0d570UID-dodgecharger
+```
 
 ### addonpart_tweak_wheel
 
