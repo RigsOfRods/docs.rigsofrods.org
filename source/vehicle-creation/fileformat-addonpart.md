@@ -32,15 +32,17 @@ These features are not currently supported. They may be added in a future RoR re
 
 ## Parameters 
 
-### addonpart_name
+### Required sections 
+
+#### addonpart_name
 
 Required, the name of the addon. Shown in Tuning menu and parts selector. 
 
-### addonpart_description
+#### addonpart_description
 
 Required, addon description. Shown in part selector.
 
-### addonpart_guid 
+#### addonpart_guid 
 
 The [GUID](/vehicle-creation/fileformat-truck/#guid) of the truck the addonpart is intended for. Parts that match the GUID of the current active vehicle are shown in the Tuning menu.
 
@@ -48,7 +50,7 @@ Multiple GUIDs can be defined, these are only hints as players can force install
 
 Optional, omitting this section requires the part to be installed manually through the parts selector.
 
-### addonpart_filename
+#### addonpart_filename
 
 Optional. Restricts an addonpart to specific truck file(s), useful if multiple trucks share the same GUID.
 
@@ -62,7 +64,9 @@ addonpart_filename "1994DodgeRam12VGuard.truck"
 
 **NOTE:** Specifying only `addonpart_filename` will not work on its own, a matching GUID must also be present!
 
-### Managedmaterials
+### Visual elements
+
+#### Managedmaterials
 
 Materials can be defined in two ways, either through the [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials) section or with a [material file](https://wiki.ogre3d.org/Materials).
 
@@ -75,7 +79,7 @@ mainbody mesh_standard    mytruckbody.png mytruckbody-spec.png
 Addon meshes that share a managedmaterial with the base mod do not need to be redefined. However, any `.material` files must be copied to the addon directory.
 
 
-### Props and flexbodies
+#### Props and flexbodies
 
 Props and flexbodies are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#props).
 
@@ -92,7 +96,7 @@ flexbodies
 "forset 0-16, 23-24, 31, 54-125"
 ```
 
-### Flares
+#### Flares
 
 Flares are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#flares). All flares sections (`flares`/`flares2`/`flares3`) are supported.
 
@@ -102,7 +106,9 @@ flares
 51,  1, 79,    0.23,    0.50,    b,            -1,          0,   -1 default
 ```
 
-### addonpart_unwanted_prop
+### Element removal (unwanted)
+
+#### addonpart_unwanted_prop
 
 Specifies a prop which should be hidden. IDs are shown in the Tuning menu, starting at `0`.
 
@@ -111,7 +117,7 @@ Specifies a prop which should be hidden. IDs are shown in the Tuning menu, start
 addonpart_unwanted_prop 3
 ```
 
-### addonpart_unwanted_flexbody
+#### addonpart_unwanted_flexbody
 
 Specifies a flexbody which should be hidden.
 
@@ -120,7 +126,7 @@ Specifies a flexbody which should be hidden.
 addonpart_unwanted_flexbody 2
 ```
 
-### addonpart_unwanted_flare
+#### addonpart_unwanted_flare
 
 Specifies a flare which should be hidden.
 
@@ -129,7 +135,7 @@ Specifies a flare which should be hidden.
 addonpart_unwanted_flare 4
 ```
 
-### addonpart_unwanted_exhaust
+#### addonpart_unwanted_exhaust
 
 Specifies a exhaust smoke which should be hidden. Useful for custom exhaust parts.
 
@@ -138,7 +144,7 @@ Specifies a exhaust smoke which should be hidden. Useful for custom exhaust part
 addonpart_unwanted_exhaust 0
 ```
 
-### addonpart_unwanted_managedmaterial
+#### addonpart_unwanted_managedmaterial
 
 Specifies a managedmaterial which shouldn't be rendered. Will be replaced by a transparent red material (`tracks/transred`) instead.
 
@@ -149,15 +155,36 @@ Currently not very useful, exists for consistency.
 addonpart_unwanted_managedmaterial 0d570UID-dodgecharger
 ```
 
-### addonpart_tweak_wheel
+### Element tweaking 
 
-### addonpart_tweak_node
+#### addonpart_tweak_wheel
 
-### addonpart_tweak_prop
+Changes wheel parameters. 
 
-### addonpart_tweak_flexbody
+- Wheel ID: The wheel number, with the first defined wheel starting at `0`.
+- Media1: Wheel mesh name. 
+- Media2: Wheelband material name for `wheels`/`meshwheels`, or tire mesh name for `flexbodywheels`. 
+For wheels with pre-mounted tires this should be set to `tracks/trans`. To use the base mod's wheelband or mesh, set an empty string `""`.
+- Wheel side: Direction the wheel is facing, `l` or `r`. Swap these values if your wheel is mounted backwards. This can be changed on-the-fly in the Tuning menu.
+- Radius: Optional. The radius of the wheel, in meters.
+- Width (ignored) - Optional. Use any number, wheel width is auto-calculated from distance between node1 and node2.
 
-### addonpart_tweak_managedmaterial
+```
+; basic example, uses base mod's wheelband material
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+addonpart_tweak_wheel 0 "5SpokeMBWheel.mesh" "" l
+
+; example for a wheel with pre-mounted tire, makes wheelband invisible and sets radius to 0.32
+addonpart_tweak_wheel 0 "AeroRaceWheel_Tire.mesh" "tracks/trans" l 0.32
+```
+
+#### addonpart_tweak_node
+
+#### addonpart_tweak_prop
+
+#### addonpart_tweak_flexbody
+
+#### addonpart_tweak_managedmaterial
 
 ## Examples
 
