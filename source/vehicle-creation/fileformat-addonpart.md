@@ -62,7 +62,8 @@ addonpart_filename "1994DodgeRam12VConstruction.truck"
 addonpart_filename "1994DodgeRam12VGuard.truck"
 ```
 
-**NOTE:** Specifying only `addonpart_filename` will not work on its own, a matching GUID must also be present!
+!!! note
+	Specifying only `addonpart_filename` will not work on its own, a matching GUID must also be present!
 
 ### Visual elements
 
@@ -113,7 +114,7 @@ flares
 Specifies a prop which should be hidden. IDs are shown in the Tuning menu, starting at `0`.
 
 ```
-;syntax: addonpart_unwanted_prop <prop ID>
+; syntax: addonpart_unwanted_prop <prop ID>
 addonpart_unwanted_prop 3
 ```
 
@@ -122,7 +123,7 @@ addonpart_unwanted_prop 3
 Specifies a flexbody which should be hidden.
 
 ```
-;syntax: addonpart_unwanted_flexbody <flexbody ID>
+; syntax: addonpart_unwanted_flexbody <flexbody ID>
 addonpart_unwanted_flexbody 2
 ```
 
@@ -131,7 +132,7 @@ addonpart_unwanted_flexbody 2
 Specifies a flare which should be hidden.
 
 ```
-;syntax: addonpart_unwanted_flare <flare ID>
+; syntax: addonpart_unwanted_flare <flare ID>
 addonpart_unwanted_flare 4
 ```
 
@@ -140,7 +141,7 @@ addonpart_unwanted_flare 4
 Specifies a exhaust smoke which should be hidden. Useful for custom exhaust parts.
 
 ```
-;syntax: addonpart_unwanted_exhaust <exhaust ID>
+; syntax: addonpart_unwanted_exhaust <exhaust ID>
 addonpart_unwanted_exhaust 0
 ```
 
@@ -151,7 +152,7 @@ Specifies a managedmaterial which shouldn't be rendered. Will be replaced by a t
 Currently not very useful, exists for consistency.
 
 ```
-;syntax: addonpart_unwanted_managedmaterial <material name>
+; syntax: addonpart_unwanted_managedmaterial <material name>
 addonpart_unwanted_managedmaterial 0d570UID-dodgecharger
 ```
 
@@ -161,13 +162,13 @@ addonpart_unwanted_managedmaterial 0d570UID-dodgecharger
 
 Changes wheel parameters. 
 
-- Wheel ID: The wheel number, with the first defined wheel starting at `0`.
-- Media1: Wheel mesh name. 
-- Media2: Wheelband material name for `wheels`/`meshwheels`, or tire mesh name for `flexbodywheels`. 
+- **Wheel ID**: The wheel number, with the first defined wheel starting at `0`.
+- **Media1**: Wheel mesh name. 
+- **Media2**: Wheelband material name for `wheels`/`meshwheels`, or tire mesh name for `flexbodywheels`. 
 For wheels with pre-mounted tires this should be set to `tracks/trans`. To use the base mod's wheelband or mesh, set an empty string `""`.
-- Wheel side: Direction the wheel is facing, `l` or `r`. Swap these values if your wheel is mounted backwards. This can be changed on-the-fly in the Tuning menu.
-- Radius: Optional. The radius of the wheel, in meters.
-- Width (ignored) - Optional. Use any number, wheel width is auto-calculated from distance between node1 and node2.
+- **Wheel side**: Direction the wheel is facing, `l` or `r`. Swap these values if your wheel is mounted backwards. This can be changed on-the-fly in the Tuning menu.
+- **Radius**: Optional. The radius of the wheel, in meters.
+- **Width (ignored)**: - Optional. Use any number, wheel width is auto-calculated from distance between node1 and node2.
 
 ```
 ; basic example, uses base mod's wheelband material
@@ -180,11 +181,79 @@ addonpart_tweak_wheel 0 "AeroRaceWheel_Tire.mesh" "tracks/trans" l 0.32
 
 #### addonpart_tweak_node
 
+Allows for moving existing nodes. Currently doesn't support node options. 
+
+- **Node ID**: Node number to be moved.
+- **X position (in meters)**: Node's X coordinate.
+- **Y position (in meters)**: Node's Y coordinate.
+- **Z position (in meters)**: Node's Z coordinate.
+
+```
+; syntax: addonpart_tweak_node <node ID><x><y><z>
+addonpart_tweak_node  5, 0.63, 0.36, 1.84
+```
+
 #### addonpart_tweak_prop
+
+Enables the moving or replacing of props. Shares most syntax with [props](/vehicle-creation/fileformat-truck/#props).
+
+- **Prop ID**: The prop number, starting at `0`.
+- **x\_offset**:  The amount the prop should be moved in the X direction from the **reference node**. The distance it is moved depends on the distance between the **Reference node** and the '''X direction node '''(it's proportional): (0) leaves the prop on the reference node, (1) moves it all the way to the **X direction node**, and (0.5) puts the prop half-way between the two
+- **y\_offset**:  The amount the prop should be moved in the Y direction from the **reference node**. Like the **X direction offset**, the amount it is proportional to the distance between the **reference node** and the **Y direction node**.
+- **z\_offset**:  Imagine a surface which the X and Y directions pass straight through. If looking along that surface is the forwards direction, then this field moves the prop straight up. Unlike the **X direction offset** and the **Y direction offset**, the amount for the straight up offset is measured in meters
+- **x\_axis\_rotation**:  The amount the prop should be rotated about the X axis
+- **y\_axis\_rotation**:  The amount the prop should be rotated about the Y axis
+- **z\_axis\_rotation**:  The amount the prop should be rotated about the 'straight up' axis
+- **mesh\_name\_or\_special\_prop**: The name of the Ogre3D mesh object used for the prop.
+    If the mesh name starts with one of the keywords defined on the [truck file format page](/vehicle-creation/fileformat-truck/#props), it will have special behavior.
+
+!!! note
+	To move an existing mesh, the name MUST contain an empty string `""`! This tells the game to use the existing mesh from the base mod.
+
+```
+; basic example, moves a prop:
+; syntax: 'addonpart_tweak_prop <prop ID> <offsetX> <offsetY> <offsetZ> <rotX> <rotY> <rotZ> <media1> <media2>'
+addonpart_tweak_prop 0 0.50,    0.37,     0.0,   90,    0,    0, ""
+
+; example for replacing a steering wheel dashboard prop:
+addonpart_tweak_prop 0 0,  0.38,  -0.06,  -10,  0,  180, "",DB_classic_swheel.mesh 0, 0, 0, 500
+```
+
 
 #### addonpart_tweak_flexbody
 
+Enables the moving or replacing of flexbodies. Shares most syntax with [flexbodies](/vehicle-creation/fileformat-truck/#flexbodies).
+
+- **Flexbody ID**: The flexbody number, starting at `0`.
+-   **x\_offset**: The amount the prop should be moved in the X direction from the **reference\_node**.
+-   **y\_offset**: The amount the prop should be moved in the Y direction from the **reference\_node**.
+-   **z\_offset\_meters**:  Moves the flexbody "straight up". Unlike the **x\_offset** and the **y\_offset**, the distance is measured in meters.
+-   **x\_axis\_rotation**: The amount the flexbody should be rotated about the X axis
+-   **y\_axis\_rotation**: The amount the flexbody should be rotated about the Y axis
+-   **z\_axis\_rotation**: The amount the flexbody should be rotated about the 'straight up' axis
+-   **mesh\_name**: The name of the Ogre3D mesh object used for the flexbody.
+
+```
+; basic example, moves a flexbody:
+; syntax: addonpart_tweak_flexbody <flexbody ID><offsetx><offsety><offsetz><rotx><roty><rotz><mesh>
+addonpart_tweak_flexbody 0 0.5, 0.3,   0.027,   90,    0,   90, ""
+
+; example for replacing a flexbody:
+addonpart_tweak_flexbody 22 -0.165, 0.5, -0.21, 0.0, 90.0, 0.0, spoiler-wing.mesh
+```
+
 #### addonpart_tweak_managedmaterial
+
+Allows for replacing managedmaterial textures. This can be used to override a vehicle's skin (e.g. a taxi sign addon could add a taxi livery).
+
+- **Name**: The material name.
+- **Type**: The name of the effect you want to use. Valid names are defined in the [truck file format page](/vehicle-creation/fileformat-truck/#managedmaterials).
+- **Media1-3**: Diffuse, specular, damage texture filenames.
+
+```
+; syntax: addonpart_tweak_managedmaterial <name> <type> <media1> <media2> [<media3>]
+addonpart_tweak_managedmaterial DodgeViperBody mesh_standard DodgeViperBody_myawesomeskin.dds DodgeViperBody_myawesomeskin_s.dds
+```
 
 ## Examples
 
@@ -251,16 +320,16 @@ addonpart_guid "ac2382e6-29b5-47b5-9e93-235ceaa27aa2"
 managedmaterials
 Bandit_daytona mesh_standard Bandit_daytona_Silver.png Bandit_daytona_s.png
 
-;syntax: addonpart_unwanted_flexbody <flexbody ID>
+; syntax: addonpart_unwanted_flexbody <flexbody ID>
 addonpart_unwanted_flexbody 19
 
-;syntax: addonpart_unwanted_flare <flare ID>
+; syntax: addonpart_unwanted_flare <flare ID>
 addonpart_unwanted_flare 10
 addonpart_unwanted_flare 11
 addonpart_unwanted_flare 12
 addonpart_unwanted_flare 13
 
-;syntax: addonpart_tweak_flexbody <flexbody ID><offsetx><offsety><offsetz><rotx><roty><rotz><mesh>
+; syntax: addonpart_tweak_flexbody <flexbody ID><offsetx><offsety><offsetz><rotx><roty><rotz><mesh>
 addonpart_tweak_flexbody 17 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_nose.mesh
 addonpart_tweak_flexbody 24 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_wing.mesh
 ```
@@ -279,7 +348,7 @@ addonpart_guid "mazda626gf"
 
  ; NODE TWEAKS
  
-;syntax: addonpart_tweak_node <node ID><x><y><z>
+; syntax: addonpart_tweak_node <node ID><x><y><z>
 
 ;grp: front axle hubs
 addonpart_tweak_node  77,    0.920,    0.388,   -0.836
