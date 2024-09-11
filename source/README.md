@@ -23,7 +23,8 @@ New to Rigs of Rods? Check out these pages to help you get started: <br>
 [Beginner's Guide](gameplay/beginners-guide/) - A guide for new players, teaches the basic controls and gameplay mechanics of RoR.<br>
 [Installing content (mods)](gameplay/installing-content/) - How to install new vehicles and terrains.<br>
 [Controls and configuration](gameplay/controls-config/) - Where you'll find the controls list, along with guides on how to set up controllers and other input devices.<br>
-[Vehicle AI](gameplay/vehicle-ai/) - An introduction to the new AI feature. 
+[Vehicle AI](gameplay/vehicle-ai/) - An introduction to the new AI feature.<br>
+[Tuning menu](gameplay/tuning/) - Overview of the new Tuning menu.
 
 ![seperator](/images/branding/ror_seperator.png)
 
@@ -32,6 +33,7 @@ Vehicle creation:<br>
 [Installing addons](tools-tutorials/addons/) - A guide on installing addon parts from the Repository.<br>
 [Truck file format](vehicle-creation/fileformat-truck/) - Information on the file format that defines every vehicle or object in the game.<br>
 [Soundscript file format](vehicle-creation/fileformat-soundscript/) - Information on the file format used to define vehicle sounds.<br>
+[Addonpart file format](vehicle-creation/fileformat-addonpart/) - Information on the file format used to create add-on parts.<br>
 [Alternate skins (skinzips)](vehicle-creation/alternate-skins/) - A guide on understanding the format used to create and share custom skins.<br>
 [Blender mesh editing](tools-tutorials/blender-mesh-editing/) - Learn the basics of editing existing vehicle models in Blender.<br>
 Terrain creation:<br>
