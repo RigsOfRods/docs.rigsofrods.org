@@ -2,7 +2,7 @@ Tuning
 ============
 
 !!! warning
-	This feature is in development. It is **NOT** available in the current stable RoR release (2022.12). If you're interested in trying this out today, download the latest [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-windows-and-linux.696/).
+	This feature is in development. It will be made available in an upcoming release. If you're interested in trying this out today, download the latest [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-windows-and-linux.696/).
 
 ## Introduction
 
@@ -48,7 +48,7 @@ These wheels can only be installed through the parts selector.
 
 ## Visual elements
 
-The Tuning menu also features the ability to toggle the visibility of props, flexbodies, flares (lights), and exhaust smoke:
+The Tuning menu also features the ability to toggle the visibility of props, flexbodies, flares (lights), exhaust smoke, and managedmaterials:
 
 <img src="/images/tuning-meshlist.png" width="800">
 
@@ -61,3 +61,39 @@ Disabled elements are moved to the bottom of the list.
 ### Protected 
 
 With the "Protected" option, it's possible to 'lock' an element from being changed or disabled by an add-on part.
+This can be useful for disabling specific elements of an addon (for instance, parts of a body kit).
+
+## Wheels
+
+When installing wheel addons, it's possible for the wheel mesh to be facing the wrong direction. This can be fixed through the Tuning menu:
+
+![tuning-wheelside](/images/tuning-wheelside.png)
+
+Some vehicles feature flexbody tires, if the wheel includes a pre-mounted tire you will need to hide them:
+
+![tuning-hide-flextires](/images/tuning-hide-flextires.png)
+
+## Saving and loading
+
+Once you're finished customizing a vehicle, it can be saved by clicking `Save as...` at the top of the Tuning menu:
+
+!!! note 
+	The `Save as...` button only appears after installing an add-on or toggling an element. 
+
+![tuning-save1](/images/tuning-save1.png)
+
+Give it a name, then click `Save`. Existing tunes with the same name will not be overwritten unless `Overwrite` is enabled.
+
+![tuning-save2](/images/tuning-save2.png)
+
+![tuning-save3](/images/tuning-save3.png)
+
+The tune is now saved. Simply click on the tune name to load it. Press & hold the `Delete` button to permanently remove a tune.
+
+Tunes are saved in `.tuneup` files inside a new `projects` folder in the user directory.
+
+### Savegames
+
+Savegames work seamlessly with Tuning, any changes you make to spawned vehicles will be saved. 
+
+When loading a savegame, the game may freeze/hang for a second when accessing the Tuning menu. This is caused by the conflict check and is normal.
