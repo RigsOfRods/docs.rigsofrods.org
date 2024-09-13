@@ -45,12 +45,13 @@ nav:
           - Installing content (mods): gameplay/installing-content.md
           - Controls and configuration: gameplay/controls-config.md
           - Vehicle AI: gameplay/vehicle-ai.md
+          - Tuning menu: gameplay/tuning.md
           - Aircraft handling: gameplay/aircraft-handling.md
           - Multiplayer server setup: gameplay/multiplayer-server-setup.md
           - Version 2020.01 FAQ: gameplay/version-2020-01-faq.md
           - Jargon: gameplay/jargon.md
     - Tools and tutorials:
-          - Installing addons: tools-tutorials/addons.md
+          - Installing addons (Manual): tools-tutorials/addons.md
           - Modifying suspension (lifting, lowering, width, camber): tools-tutorials/modding-suspension.md
           - Blender (2.7) mesh editing: tools-tutorials/blender-mesh-editing.md
           - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
@@ -60,6 +61,7 @@ nav:
     - Vehicle creation:
           - Truck file format: vehicle-creation/fileformat-truck.md
           - Soundscript file format: vehicle-creation/fileformat-soundscript.md
+          - Addonpart file format: vehicle-creation/fileformat-addonpart.md
           - Alternate skins (skinzips): vehicle-creation/alternate-skins.md
           - Engine: vehicle-creation/engine.md
           - Flares: vehicle-creation/flares.md
