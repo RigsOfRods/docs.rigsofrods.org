@@ -4,7 +4,7 @@ hide:
 ---
 
 <div class="hero">
-  <a href=#>
+  <a href="https://forum.rigsofrods.org/threads/rigs-of-rods-2022-12-released.3635/">
       <div class="hero-text">
           <h1>Read the Release Announcement for Rigs of Rods 2022.12</h1>
       </div>
@@ -28,7 +28,7 @@ hide:
     - [Multiplayer Server Setup Guide](gameplay/multiplayer-server-setup.md)
     - [FAQ's](gameplay/general-faq.md)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __Modding Rigs of Rods__
+-   :octicons-file-code-16:{ .lg .middle } __Modding Rigs of Rods__
 
     ---
 
@@ -44,7 +44,7 @@ hide:
     - [Object File Format](terrain-creation/object-format.md)
     - [Soundscript File Format](vehicle-creation/fileformat-soundscript.md)
 
--   :material-format-font:{ .lg .middle } __Community Rules__
+-   :material-gavel:{ .lg .middle } __Community Rules__
 
     ---
 

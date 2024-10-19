@@ -52,6 +52,10 @@ plugins:
   - git-revision-date-localized
   - minify:
       minify_html: true
+  - redirects:
+      redirect_maps:
+        'rules/rules-stolen-content.md': 'rules/community-guidelines.md#dont-steal-content-or-violate-intellectual-property'
+
 nav:
   - Overview: README.md
   - Gameplay:
