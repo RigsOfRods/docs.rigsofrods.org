@@ -1,117 +1,128 @@
-:root {
-  color-scheme: dark;
+/* Based off of XenForo's user and developer documentation 
+color scheme to match the default XenForo forum theme.
+
+Licensed MIT. Copyright (c) 2017 - 2023 XenForo Ltd.
+
+Modifications made to adjust to our own color scheme.*/
+
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: hsl(206 64% 30%);
+  --md-primary-fg-color--light: hsl(205 80% 40%);
+  --md-primary-fg-color--dark: hsl(205 80% 30%);
+  --md-primary-bg-color: hsl(205 64% 80%);
+  --md-primary-bg-color--light: hsl(204 80% 95%);
+
+  --md-accent-fg-color: hsl(206 64% 40%);
+  --md-accent-fg-color--transparent: hsl(205 80% 40% / 0.1);
+  --md-accent-bg-color: hsl(205 64% 80%);
+  --md-accent-bg-color--light: hsl(205 80% 95%);
+
+  --md-default-fg-color: hsl(0 0% 8%);
+  --md-default-fg-color-light: hsl(0 0% 8% / 0.7);
+  --md-default-fg-color-lighter: hsl(0 0% 8% / 0.3);
+  --md-default-fg-color-lightest: hsl(0 0% 8% / 0.12);
+  --md-default-bg-color: hsl(0 0% 100%);
+  --md-default-bg-color--light: hsl(0 0% 100% / 0.7);
+  --md-default-bg-color--lighter: hsl(0 0% 100% / 0.3);
+  --md-default-bg-color--lightest: hsl(0 0% 100% / .12);
+
+  --md-typeset-a-color: hsl(206 64% 40%);
+
+  --md-footer-fg-color: hsl(206 64% 80%);
+  --md-footer-fg-color--light: hsl(206 80% 95%);
+  --md-footer-fg-color--lighter: hsl(206 80% 95% / 0.5);
+  --md-footer-bg-color: hsl(205 80% 22%);
+  --md-footer-bg-color--dark: hsl(205 80% 22% / 0.5);
 }
 
-[data-md-color-scheme="beam"] {
-  --md-default-bg-color: #1d1d1d;
-  --md-default-fg-color: hsla(0,0%,100%,.6);
-  --md-default-fg-color--light: hsla(0,0%,100%,.87);
-  --md-default-fg-color--lighter: hsla(0,0%,100%,.87);
-  --md-default-fg-color--lightest: #2c2c2c;
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: hsl(205 60% 10%);
+  --md-primary-fg-color--light: hsl(205 60% 20%);
+  --md-primary-fg-color--dark: hsl(205 60% 10%);
+  --md-primary-bg-color: hsl(204 60% 60%);
+  --md-primary-bg-color--light: hsl(204 60% 75%);
 
-  --md-primary-fg-color: #226699;
-  --md-primary-fg-color--light: #226699;
-  --md-primary-fg-color--dark: #226699;
-  --md-primary-bg-color: #fff;
+  --md-accent-fg-color: hsl(205 60% 60%);
+  --md-accent-fg-color--transparent: hsl(205 60% 60% / 0.1);
+  --md-accent-bg-color: hsl(205 60% 20%);
+  --md-accent-bg-color--light: hsl(205 60% 40%);
 
-  --md-accent-fg-color: #2f84c5;
-  --md-accent-bg-color: #fff;
+  --md-default-fg-color: hsl(0 0% 88%);
+  --md-default-fg-color-light: hsl(0 0% 88% / 0.7);
+  --md-default-fg-color-lighter: hsl(0 0% 88% / 0.3);
+  --md-default-fg-color-lightest: hsl(0 0% 88% / 0.12);
+  --md-default-bg-color: hsl(0 0% 8%);
+  --md-default-bg-color--light: hsl(0 0% 8% / 0.7);
+  --md-default-bg-color--lighter: hsl(0 0% 8% / 0.3);
+  --md-default-bg-color--lightest: hsl(0 0% 8% / .12);
 
-  --md-code-bg-color: #2c2c2c;
-  --md-code-fg-color: hsla(0,0%,100%,.87);
+  --md-typeset-a-color: hsl(205 60% 60%);
 
-  --md-typeset-table-color: #2c2c2c;
-  --md-typeset-color: var(--md-default-fg-color);
-  --md-typeset-a-color: #4290ca;
-
-  --md-typeset-kbd-color: hsla(0,15%,94%,0.12);
-  --md-typeset-kbd-accent-color: hsla(0,15%,94%,0.2);
-  --md-typeset-kbd-border-color: hsla(0,15%,14%,1);
-
-  --md-admonition-bg-color: #222222;
-  --md-admonition-fg-color: var(--md-default-fg-color);
+  --md-footer-fg-color: hsl(206 60% 60%);
+  --md-footer-fg-color--light: hsl(206 60% 75%);
+  --md-footer-fg-color--lighter: hsl(206 60% 75% / 0.5);
+  --md-footer-bg-color: hsl(205 60% 2%);
+  --md-footer-bg-color--dark: hsl(205 60% 2% / 0.5);
 }
 
-.admonition-title {
-  color: var(--md-default-fg-color--lighter);
+.md-logo {
+  width: 11.5rem;
 }
 
-.md-top {
-  background-color: #222222;
+.md-logo:hover {
+  opacity: 1;
 }
 
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5,
-.md-typeset h6,
-.md-nav__title {
-  color: var(--md-default-fg-color--lighter);
-  font-weight: bold;
+th:first-of-type,
+td:first-of-type {
+  white-space: nowrap;
 }
 
-.md-header {
-  background-color: #226699;
+.hero {
+  background-image: url('https://www.rigsofrods.org/img/background-dodge.51baa5a7.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Align text at the bottom */
+  justify-content: flex-start; /* Align text to the left */
+  position: relative;
+  color: white; /* Text color */
+  text-align: left; /* Align text to the left */
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+  height: 150px;
+  padding: 0 20px; /* Horizontal padding */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box-shadow */
 }
 
-.md-search__input {
-  font-size: 0.65rem;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Gradient from transparent to dark */
+  border-radius: 0.5em; /* Match the border radius of the .hero */
+  z-index: 1; /* Ensure the gradient is below the text */
 }
 
-.md-nav__list {
-  color: #b7b7b7;
+.hero-text {
+  padding: 10px 0; /* Vertical padding to ensure spacing */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: relative; /* Bring text above the gradient */
+  z-index: 2; /* Ensure text is above the gradient */
 }
 
-.md-nav__link[data-md-state="blur"] {
-  color: #b5b5b59e;
+.hero:hover {
+  transform: translateY(-5px); /* Lift the hero section slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
 }
 
-.md-footer {
-  background-color: #131313de;
-}
-
-.md-footer-meta {
-  background-color: #101010;
-}
-
-.md-typeset .grid {
-  grid-gap: .4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
-  margin: 1em 0;
-}
-
-.md-typeset .grid ul {
-  display: contents;
-}
-
-.md-typeset .grid ul li {
-  border: .05rem solid var(--md-default-fg-color--lightest);
-  border-radius: .1rem;
-  display: block;
+.hero-text h1 {
   margin: 0;
-  padding: .8rem;
+  padding: 0;
+  font-size: 1.4em; 
+  color: white!important;
 }
-
-.md-typeset .grid ul li hr {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.md-extra {
-  margin: auto .6rem;
-  padding: .4rem 0;
-  font-size: .64rem;
-}
-
-.md-extra__link {
-  display: inline-block;
-  text-align: center;
-  margin: 0 .25em !important;
-}
-
-.md-typeset .keys span {
-  color: var(--md-typeset-color);
-}
-
