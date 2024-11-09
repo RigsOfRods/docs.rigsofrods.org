@@ -3,7 +3,7 @@ Addonpart file format
 
 This page serves as a technical overview of the `.addonpart` file format. It is a new text-based file format that enables easy vehicle customization without manually editing a `.truck` file.
 
-For an overview of the Tuning menu, see: [Tuning](/gameplay/tuning)
+For an overview of the Tuning menu, see: [Tuning](../gameplay/tuning.md)
 
 ## Features
 
@@ -44,7 +44,7 @@ Required, addon description. Shown in part selector.
 
 #### addonpart_guid 
 
-The [GUID](/vehicle-creation/fileformat-truck/#guid) of the truck the addonpart is intended for. Parts that match the GUID of the current active vehicle are shown in the Tuning menu.
+The [GUID](fileformat-truck.md#guid) of the truck the addonpart is intended for. Parts that match the GUID of the current active vehicle are shown in the Tuning menu.
 
 Multiple GUIDs can be defined, these are only hints as players can force installation of any addon to any vehicle.
 
@@ -69,7 +69,7 @@ addonpart_filename "1994DodgeRam12VGuard.truck"
 
 #### Managedmaterials
 
-Materials can be defined in two ways, either through the [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials) section or with a [material file](https://wiki.ogre3d.org/Materials).
+Materials can be defined in two ways, either through the [managedmaterials](fileformat-truck.md#managedmaterials) section or with a [material file](https://wiki.ogre3d.org/Materials).
 
 ```
 managedmaterials
@@ -82,7 +82,7 @@ Addon meshes that share a managedmaterial with the base mod do not need to be re
 
 #### Props and flexbodies
 
-Props and flexbodies are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#props).
+Props and flexbodies are defined using the same syntax as in a [truck file](fileformat-truck.md#props).
 
 In order to be parsed correctly, flexbody forset lines **MUST** be surrounded by quotes , mesh will not appear otherwise!
 
@@ -99,7 +99,7 @@ flexbodies
 
 #### Flares
 
-Flares are defined using the same syntax as in a [truck file](/vehicle-creation/fileformat-truck/#flares). All flares sections (`flares`/`flares2`/`flares3`) are supported.
+Flares are defined using the same syntax as in a [truck file](fileformat-truck.md#flares). All flares sections (`flares`/`flares2`/`flares3`) are supported.
 
 ```
 flares
@@ -195,7 +195,7 @@ addonpart_tweak_node  5, 0.63, 0.36, 1.84
 
 #### addonpart_tweak_prop
 
-Enables the moving or replacing of props. Shares most syntax with [props](/vehicle-creation/fileformat-truck/#props).
+Enables the moving or replacing of props. Shares most syntax with [props](fileformat-truck.md#props).
 
 - **Prop ID**: The prop number, starting at `0`.
 - **x\_offset**:  The amount the prop should be moved in the X direction from the **reference node**. The distance it is moved depends on the distance between the **Reference node** and the '''X direction node '''(it's proportional): (0) leaves the prop on the reference node, (1) moves it all the way to the **X direction node**, and (0.5) puts the prop half-way between the two
@@ -205,7 +205,7 @@ Enables the moving or replacing of props. Shares most syntax with [props](/vehic
 - **y\_axis\_rotation**:  The amount the prop should be rotated about the Y axis
 - **z\_axis\_rotation**:  The amount the prop should be rotated about the 'straight up' axis
 - **mesh\_name\_or\_special\_prop**: The name of the Ogre3D mesh object used for the prop.
-    If the mesh name starts with one of the keywords defined on the [truck file format page](/vehicle-creation/fileformat-truck/#props), it will have special behavior.
+    If the mesh name starts with one of the keywords defined on the [truck file format page](fileformat-truck.md#props), it will have special behavior.
 
 !!! note
 	To move an existing mesh, the name MUST contain an empty string `""`! This tells the game to use the existing mesh from the base mod.
@@ -222,7 +222,7 @@ addonpart_tweak_prop 0 0,  0.38,  -0.06,  -10,  0,  180, "",DB_classic_swheel.me
 
 #### addonpart_tweak_flexbody
 
-Enables the moving or replacing of flexbodies. Shares most syntax with [flexbodies](/vehicle-creation/fileformat-truck/#flexbodies).
+Enables the moving or replacing of flexbodies. Shares most syntax with [flexbodies](fileformat-truck.md#flexbodies).
 
 - **Flexbody ID**: The flexbody number, starting at `0`.
 -   **x\_offset**: The amount the prop should be moved in the X direction from the **reference\_node**.
@@ -247,7 +247,7 @@ addonpart_tweak_flexbody 22 -0.165, 0.5, -0.21, 0.0, 90.0, 0.0, spoiler-wing.mes
 Allows for replacing managedmaterial textures. This can be used to override a vehicle's skin (e.g. a taxi sign addon could add a taxi livery).
 
 - **Name**: The material name.
-- **Type**: The name of the effect you want to use. Valid names are defined in the [truck file format page](/vehicle-creation/fileformat-truck/#managedmaterials).
+- **Type**: The name of the effect you want to use. Valid names are defined in the [truck file format page](fileformat-truck.md#managedmaterials).
 - **Media1-3**: Diffuse, specular, damage texture filenames.
 
 ```

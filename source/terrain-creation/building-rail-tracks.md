@@ -61,7 +61,7 @@ For that purpose, open the terrn file, click each switch in blender/3ds and copy
 ![](../images/rail-track-building-terrn-placing-switches.png)
 to place the node and beam. Annoying, I know ;-) 
 When done, it's time to export the track layout. It should look like 
-![](../images/rail-track-building-switch-gaps.png)
+![](../images/rail-track-building-switch-gaps.jpg)
 with gaps for the switches.
 Move the pivot point of the track to (0, 0, 0) and export the mesh.
 Now you just need to place it on (0, 0, 0) in the terrn file and probably get the angles right.

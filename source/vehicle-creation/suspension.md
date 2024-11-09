@@ -5,11 +5,11 @@ Suspension
 
 Suspension is a flexible component which connects a car's body to its wheels. because of its flexibility, suspension components soften out bumps in the road and make the truck's ride smoother.
 
-For syntax, see [truckfile reference](/vehicle-creation/fileformat-truck#shocks).
+For syntax, see [truckfile reference](fileformat-truck.md#shocks).
 
 ## Example trucks
 
-A package containing all example trucks featured can be downloaded [here](/download/Suspension-examples.zip).
+A package containing all example trucks featured can be downloaded [here](../download/Suspension-examples.zip).
 
 ![Suspension-examples](../images/Suspension-examples.jpg)
 

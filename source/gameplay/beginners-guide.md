@@ -130,7 +130,7 @@ The An-12 does not stand high speeds (175+ knots) well, and you may find that if
 
 When it comes to landing, make sure you have room to slow down and take your time. Going straight into the runway is the easiest way to land when you first start off. It may take a few passes to go head-on so don't be afraid to abort a landing and throttle back up to regain altitude. The entire process is easier if you shadows enabled, but is possible without. When you land, hit `R` to reverse thrust and throttle up to slow down in addition to using `B` to brake the wheels.
 
-This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [Aircraft handling](/gameplay/aircraft-handling/).
+This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [Aircraft handling](aircraft-handling.md).
 
 ## Boating
 
@@ -177,8 +177,8 @@ Note that multiplayer is still in development and can be unstable at times!
 
 ## Default controls
 
-Please see the [Controls and configuration](/gameplay/controls-config/) page for a full list of controls.
+Please see the [Controls and configuration](controls-config.md) page for a full list of controls.
 
 ## Adding content
 
-To add new vehicles and terrains, go to the [Installing content](/gameplay/installing-content/) page.
+To add new vehicles and terrains, go to the [Installing content](installing-content.md) page.

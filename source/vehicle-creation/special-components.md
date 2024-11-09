@@ -3,7 +3,7 @@ Special components
 
 ## Command hydraulics - `commands`
 
-[Documentation](/vehicle-creation/fileformat-truck/#commands)
+[Documentation](fileformat-truck.md/#commands)
 
 A&nbsp;command is a beam&nbsp; that has "Commands"&nbsp;that make it extend/retract and so forth, 
 The command beam has many uses, From being a Hydraulic arm to a destruction tool,
@@ -30,11 +30,11 @@ This is a guide how you can use the different connection methods in RoR.
 
 ### Ropables
 
-The documentation about ropables [can be found here](/vehicle-creation/fileformat-truck/#ropables)
+The documentation about ropables [can be found here](fileformat-truck.md/#ropables)
 
 ### Ties
 
-The documentation about ties [can be found here](/vehicle-creation/fileformat-truck/#ties)
+The documentation about ties [can be found here](fileformat-truck.md/#ties)
 
 Ties (as commands) can only work over an RPM of 800 and might request more power from the engine when being used.
 
@@ -42,7 +42,7 @@ So basically define a tie on the transport truck and a ropable on the load you w
 
 ### Hooks
 
-The documentation about hooks [can be found here](/vehicle-creation/fileformat-truck/#hooks)
+The documentation about hooks [can be found here](fileformat-truck.md/#hooks)
 
 Hooks lock against nodes in a search area of 40 centimeters.
 

@@ -13,7 +13,7 @@ Other optional file types used to enhance the terrain's visuals and functionalit
 * **.os**: Caelum system (sky/weather) config. Visuals only. 
 * **.skx**: SkyX (sky/weather) config. Visuals only. 
 * **.hdx**: Hydrax config (0.4.5.0+). Water display.
-* **.as**: Terrain script file, usually used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
+* **.as**: Terrain script file, usually used for races. See [this page](scripting.md) for more info.
 
 ## Terrain 2 (.terrn2)
 
@@ -166,7 +166,7 @@ Sets the names of teach terrain object (tobj) file, ending with "=". You can hav
  
 ### Scripts section 
 
-Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](/terrain-creation/race-generator/) page for more info.
+Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
 
 ## Ogre Terrain Config (.otc)
 
@@ -179,7 +179,7 @@ RoR's primary mechanism for shaping a terrain are heightmaps.  8-bit or 16-bit u
 To use the heightmap in a terrain, you must configure it in a `.otc` and `-page-x-x.otc` file.
 
 If you are interested in creating a heightmap, we recommend taking a look at L3DT. 
-See [this page](/terrain-creation/l3dt-map-making/) for a complete tutorial on getting a L3DT terrain into RoR.
+See [this page](l3dt-map-making.md) for a complete tutorial on getting a L3DT terrain into RoR.
 
 ```
 PagesX=0
@@ -425,7 +425,7 @@ A "load spawner" deck will bring up a menu with trailers and loads. And so on.
 
 #### XYZ position
 
-The first three values is the XYZ position of the object. The easiest way to get these values is by using the built-in object editor, see [this page](/terrain-creation/editing-terrain-objects) for more info.
+The first three values is the XYZ position of the object. The easiest way to get these values is by using the built-in object editor, see [this page](editing-terrain-objects.md) for more info.
 
 #### Rotation
 
@@ -439,7 +439,7 @@ In Blender x is side to side, z is up-down, y is front-back
 
 #### Odef name 
 
-The name of the `.odef` file without the file extension. See the [Object file format](terrain-creation/object-format/) page for more info.
+The name of the `.odef` file without the file extension. See the [Object file format](object-format.md) page for more info.
 
 ### Special objects 
 

@@ -5,7 +5,7 @@ Converting terrain to terrn2 format
 
 ## Basic (Single-layer) 0.3x terrain to terrn2 conversion
 
-As of version 0.4.0, terrains now use the [terrn2](/terrain-creation/terrn2-subsystem/) file format. 
+As of version 0.4.0, terrains now use the [terrn2](terrn2-subsystem.md) file format. 
 This page will teach you how to convert a basic terrain to terrn2+.
 
 Programs needed:
@@ -15,13 +15,13 @@ Programs needed:
 
 ### What defines a "Single-layer" terrain?
 
-In the old [.terrn](/terrain-creation/old-terrn-subsystem/) format's .cfg file, you will find a line at the top in this format:
+In the old [.terrn](old-terrn-subsystem.md) format's .cfg file, you will find a line at the top in this format:
 
 ```
 WorldTexture=texture.dds
 ```
 
-This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](/terrain-creation/custom-texture-splatting/) which is not covered in this tutorial.
+This is the texture image for this single-layer. A majority of 0.3x terrains only use this layer for their terrain texture. Terrains that have more than one texture layer use [Alpha Splatting](custom-texture-splatting.md) which is not covered in this tutorial.
 
 ### Getting the template
 I have made and uploaded a template terrain [here](https://forum.rigsofrods.org/resources/template-raw-png-terrains.262/) with the right file structure which will be used throughout this tutorial. 

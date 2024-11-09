@@ -100,7 +100,7 @@ Sets the height airplanes will climb to after take off. Currently planes will re
 ### Vehicle name
 
 The vehicle the AI will use. Default is the 'Bus RVI Agora S', a standard vehicle included with RoR. Just click on the name to open a selector menu. 
-If the chosen vehicle has [sections](/vehicle-creation/fileformat-truck/#sections) and/or [skins](/vehicle-creation/alternate-skins/), AI will use the selected section/skin as well. 
+If the chosen vehicle has [sections](../vehicle-creation/fileformat-truck.md#sections) and/or [skins](../vehicle-creation/alternate-skins.md), the AI vehicle will use the selected section/skin.
 
 ## Presets menu 
 

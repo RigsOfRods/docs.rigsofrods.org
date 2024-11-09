@@ -156,27 +156,7 @@ since 0.38.62 it has two more arguments:
 Races
 -----
 
-It's no longer possible to add races to your terrain using the terrn file. You'll need a separate script file. More information can be found here: [Creating Races](Creating_Races "wikilink").
-
-Missions
---------
-
-Missions use triggers which can generate events with [LUA](LUA "wikilink"). For example:
-
-    1829.785156, 13.413086, 2222.167969, 0.000000, 0.000000, 0.000000, persontrigger trigger mission_aspen_1_start
-    1833.785156, 13.413086, 2222.167969, 0.000000, 0.000000, 0.000000, trucktrigger trigger mission_aspen_1_trailer
-    2197.2, 16.8624, 1946.06, 0, -100.381, 0, planetrigger trigger mission_aspen_airtutorial_trigger1
-
-There are three triggers:
-
-1.  persontrigger
-2.  trucktrigger
-3.  planetrigger
-
- The Format of missions is: *(trigger-type)* `trigger mission_`*(missionname)*`_`*(triggername)*
-
--   missionname : a lua file must exists for this mission: `/data/mission_`*(missionname)*`.lua`
--   triggername : this name can be used inside [LUA](LUA "wikilink") to differentiate the triggers
+It's no longer possible to add races to your terrain using the terrn file. You'll need a separate script file. More information can be found here: [Race script generator](race-generator.md)
 
 Procedural Roads
 ----------------
@@ -199,7 +179,7 @@ valid types:
 -   monorail (0.35+)
 -   monorail2 (0.35+)
 
-You can view some [examples of various settings](Procedual_Roads_Examples "wikilink").
+You can view some [examples of various settings](terrn2-subsystem.md#procedural-roads)
 
 Mpspawn
 -------

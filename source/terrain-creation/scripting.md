@@ -66,9 +66,9 @@ you should see something like this:
 
 ![eventbox-debug1] ![eventbox-debug2]
 
-[eventbox-debug1]: /images/scripting-odef-eventbox-debug-1.jpg
+[eventbox-debug1]: ../images/scripting-odef-eventbox-debug-1.jpg
 
-[eventbox-debug2]: /images/scripting-odef-eventbox-debug-2.jpg
+[eventbox-debug2]: ../images/scripting-odef-eventbox-debug-2.jpg
 
 
 note: We're only interested in the pink boxes here, as they represent event boxes. Light pink boxes do not call back an AngelScript function, while dark pink boxes do call back an AngelScript function when triggered (~when you drive into them).
@@ -89,7 +89,7 @@ if you do not see an oil loader, check the AngelScript.log file for errors. With
 
 What happens if you drive a truck into the pink event box: 
 
-[eventbox-oilrig]: /images/scripting-odef-eventbox-oilrig.jpg
+[eventbox-oilrig]: ../images/scripting-odef-eventbox-oilrig.jpg
 
 ![eventbox-oilrig]
 
@@ -197,9 +197,9 @@ We will discuss 2 methods to add a race to your terrain:
 
 ### Adding a race (fast method)
 
-You can find a race script generator [here](/terrain-creation/race-generator/).
+You can find a race script generator [here](race-generator.md).
 
-The checkpoints can be added by specifying the position (x,y,z), rotation (x,y,z) and an object for every checkpoint. This is similar to the [old .terrn file](/technical/old-terrn-subsystem) syntax, but be aware: do NOT add the checkpoint objects to the terrain using the [old .terrn file](/technical/old-terrn-subsystem). The objects will already be spawned by the script.
+The checkpoints can be added by specifying the position (x,y,z), rotation (x,y,z) and an object for every checkpoint. This is similar to the [old .terrn file](old-terrn-subsystem.md) syntax, but be aware: do NOT add the checkpoint objects to the terrain using the [old .terrn file](old-terrn-subsystem.md). The objects will already be spawned by the script.
 
 A checkpoint object is like every other object, but has beside a visible mesh also a virtual event box. The checkpoint will be marked as passed as soon as you drive through the virtual event box.
 

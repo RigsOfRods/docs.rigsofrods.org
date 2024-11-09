@@ -98,7 +98,7 @@ To view the node numbers, follow the steps below for your Blender version.
 
 By default, the plugin will enable Blender's debug mode which provides node ID visualization, however they are usually difficult to read. 
 
-To fix this, download [this plugin by GitHub user zeffii](https://gist.github.com/zeffii/9451340) ([mirror](/download/view3d_idx_view.py)) 
+To fix this, download [this plugin by GitHub user zeffii](https://gist.github.com/zeffii/9451340) ([mirror](../download/view3d_idx_view.py)) 
 
 Install it following the above instructions:
 
@@ -139,7 +139,7 @@ Node numbers should now be visible.
  
 Known issues:
 
-- If the `.truck` file contains [detacher_group](/vehicle-creation/fileformat-truck/#detacher_group) sections, they must be commented `;` out 
+- If the `.truck` file contains [detacher_group](../vehicle-creation/fileformat-truck.md#detacher_group) sections, they must be commented `;` out 
 otherwise not all beams will import correctly. See this [GitHub issue ticket](https://github.com/RigsOfRods/rigs-of-rods/issues/3002) for more information.
 
 
@@ -188,7 +188,7 @@ Pros:
 
 Cons:
 
-- Does not support newer [truck](/vehicle-creation/fileformat-truck/) sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
+- Does not support newer [truck](../vehicle-creation/fileformat-truck.md) sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
 
 It is recommended to make a copy of the truck file made for editing, then copy the changes over to your main truck file.
 
@@ -247,7 +247,7 @@ To adjust blueprints, click on _Place Blueprints_ on the far right, and place yo
 When you want to add nodes, just click on _Add Nodes_ up in the right. Click where you want the node to go, either in the Top Left, Bottom Left or Botton Right areas. If you want to make the node only get placed on the "grid" that divides the areas up-check the "snap nodes to grid" box.
 Special Nodes
 
-Check [truckfile reference](technical/fileformat-truck) for special node types.
+Check [truckfile reference](../vehicle-creation/fileformat-truck.md) for special node types.
 
 If you want to give your nodes these special options, just click on the _Nodes_ tab, pick the one you want to change, and put the corresponding node option in the options part.
 
@@ -255,7 +255,7 @@ If you want to give your nodes these special options, just click on the _Nodes_ 
 
 When you want to add beams, just click on the _Add Beams_ up in the right. Click the first node where you want the beam to start. Click the second node which is where you want the beam to end.
 
-Check [truckfile reference](technical/fileformat-truck) for special beam types.
+Check [truckfile reference](../vehicle-creation/fileformat-truck.md) for special beam types.
 
 If you want to give your beams these special options, just click on the _Beams_ tab, pick the beam you want to change, and put the corresponding beam option in the options box, along with any variables for that type of beam.
 

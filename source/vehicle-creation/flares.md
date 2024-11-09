@@ -56,7 +56,7 @@ number of nodes, number of flares, etc. You've been warned.
 
 ## Preparing the chassis
 
-Before we begin, you'll absolutely need a truck editor, such as the [Editorizer](/tools-tutorials/visual-editors).
+Before we begin, you'll absolutely need a truck editor, such as the [Editorizer](../tools-tutorials/visual-editors.md).
 
 This will allow you to see where each node is placed in relationship to the coordinate plane (X,Y,Z). 
 
@@ -88,7 +88,7 @@ and/or another editor, that's fine, as long as it can save in ANSI format--it'll
 Whatever you do, do not use MS Word/Wordpad/OpenOffice/AbiWord etc.
 
 You'll need to open up the vehicle or load of choice with the aforementioned application 
-(notepad or compliant editor). Here, you'll need to add a [flare](/vehicle-creation/fileformat-truck#flares) section 
+(notepad or compliant editor). Here, you'll need to add a [flare](fileformat-truck.md#flares) section 
 
 Once the line "flares" is added, you'll need to hit enter once, starting a new section, where it's advised you paste the syntax: 
 
@@ -159,7 +159,7 @@ Same thing apply for rear lights, top lights, side lights, just needs to have a 
 
 ## Syntax 
 
-Borrowed from [Truck file format](/vehicle-creation/fileformat-truck#flares): 
+Borrowed from [Truck file format](fileformat-truck.md#flares): 
 
 -   **Reference node**: <span style="color:#BD0058">Node ID</span>; Node which defines origin of flare-placement coordinate system
 -   **X axis node**: <span style="color:#BD0058">Node ID</span>; Node which defines X-axis of flare-placement coordinate system
@@ -331,7 +331,7 @@ Save your `.material` file after completing this.
 
 ### Editing the truck file 
 
-Open the `.truck` file, and find the [flares](/vehicle-creation/fileformat-truck#flares) section. To test these flashes, I would use the headlights as an example. So copy the headlight codes, and paste them below. You may have to change them from headlights, to custom flares. So if you see this in the headlight line: f, -1, you need to change that to: u, 1 because that makes it a user controlled flare (A flare you activate by pressing Ctrl+1)
+Open the `.truck` file, and find the [flares](fileformat-truck.md#flares) section. To test these flashes, I would use the headlights as an example. So copy the headlight codes, and paste them below. You may have to change them from headlights, to custom flares. So if you see this in the headlight line: f, -1, you need to change that to: u, 1 because that makes it a user controlled flare (A flare you activate by pressing Ctrl+1)
 Then, instead of end of the headlight code saying default, change it to: tracks/Flash1 so it flashes your custom flare pattern. 
 
 ![7](../images/flares-custom-03-text.png)

@@ -120,7 +120,7 @@ DWindow			mesh_standard		Dwindow.png		Dwindow_S.png
 CHeavyBumper		mesh_standard		HeavyBumper.dds		HeavyBumper_s.dds
 ```
 
-For more info on `managedmaterials`, see: [Managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials)
+For more info on `managedmaterials`, see: [Managedmaterials](../vehicle-creation/fileformat-truck.md#managedmaterials)
 
 ### Flexbodies/props
 
@@ -132,7 +132,7 @@ Before we begin, a few notes:
 In this case you would just copy one of the other placements and change the mesh name to the part. The readme will most likely specify this. 
 
 - Some parts (such as truck beds) may require you to edit the vehicle model (e.g. Bed is part of cab model) in order to install the part. 
-To do this, see: [Blender mesh editing](/tools-tutorials/blender-mesh-editing/)
+To do this, see: [Blender mesh editing](blender-mesh-editing.md)
 
 With that out of the way, search (`CTRL+F`) for `flexbodies`. You will see this:
 
@@ -166,7 +166,7 @@ forset 175-178, 76-79, 28-31
 forset 149-160
 ```
 
-For more info on props and flexbodies, see: [Props](/vehicle-creation/fileformat-truck/#props)
+For more info on props and flexbodies, see: [Props](../vehicle-creation/fileformat-truck.md#props)
 
 You can now save & close the truck file. 
 
@@ -279,7 +279,7 @@ MudTerrains 		mesh_standard		MudTerrain.dds		MudTerrain_s.dds
 Hub			mesh_standard		Hubed.dds		-
 ```
 
-For more info on `managedmaterials`, see: [Managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials)
+For more info on `managedmaterials`, see: [Managedmaterials](../vehicle-creation/fileformat-truck.md#managedmaterials)
 
 ### Meshwheels 
 
@@ -287,7 +287,7 @@ Before we continue, a few notes:
 
 - Some wheels may include a tire with the wheel mesh, in this case you'll have to set the tire material to `tracks/trans`. The examples below already have it set. 
 
-- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](/vehicle-creation/flexbody-wheels/)
+- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](../vehicle-creation/flexbody-wheels.md)
 
 - If the wheel is inside out ingame, swap the `l` and `r` values before the mesh name. The second example below had to be swapped.
 
@@ -313,7 +313,7 @@ meshwheels
 0.43,       0.2785,   0.5,      12,    103,   105,    9999,      1,         1,  6, 160.0, 190000.0,  1200.0,    r,   5SpokeRim.mesh tracks/trans
 ```
 
-For more info on meshwheels, see: [Meshwheels](/vehicle-creation/fileformat-truck/#meshwheels)
+For more info on meshwheels, see: [Meshwheels](../vehicle-creation/fileformat-truck.md#meshwheels)
 
 You can now save & close the truck file. 
 

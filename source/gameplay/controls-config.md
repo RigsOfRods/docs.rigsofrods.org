@@ -981,7 +981,7 @@ For advanced editing you'll need to edit the `Controller__XBOX_360_For_Windows_.
 
 #### Setting up the input map and FreePIE script
 
-After installing the above applications, download [this zip file](/download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
+After installing the above applications, download [this zip file](../download/RoR_Mouse_Control.zip) which contains the required input map and FreePIE script.
 
 There will be two files in the zip: `vJoy_Device.map` and `MouseControl.py`. 
 

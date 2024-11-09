@@ -11,7 +11,7 @@ What you need for this tutorial:
 
 * Some basic knowledge of building objects for RoR
 * A text editor, e.g. Notepad
-* [A visual editor](/tools-tutorials/visual-editors/) for watching the node and beam structure
+* [A visual editor](../tools-tutorials/visual-editors.md) for watching the node and beam structure
 
 Please note that this train does not work as well as expected. 
 Main reasons are the low mass of the train, the really short wheelbase and the fact 
@@ -25,7 +25,7 @@ The bogie is the main part of our train.
 It holds the wheels and avoids the train from sliding off the rails. 
 It has the shape of a trapezoid prism, the lower side is smaller than the upper. 
 The 4 upper nodes are for the wheels, the four lower nodes are the guidance nodes. 
-Those need to have low friction ( `set_node_defaults -1, 0, -1, -1` ) and need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
+Those need to have low friction ( `set_node_defaults -1, 0, -1, -1` ) and need to be [contacters](fileformat-truck.md/#contacters). 
 Give them a mass of `50` kg using the `l` -option in the nodes section.
 
 ![bogie](../images/rail-vehicles-tutorial-bogie.png)
@@ -64,7 +64,7 @@ We are using hooknodes with the auto-lock option.
 
 ### Step 6: Support beams
 
-The last step is to add more beams to make the structure stable. We can also add [contacters](/vehicle-creation/fileformat-truck/#contacters) and [ropables](/vehicle-creation/fileformat-truck/#ropables).
+The last step is to add more beams to make the structure stable. We can also add [contacters](fileformat-truck.md/#contacters) and [ropables](fileformat-truck.md/#ropables).
 
 ![fig7-support-beams](../images/rail-vehicles-tutorial-support-beams.png)
 
@@ -89,7 +89,7 @@ Please note the comments in there!
 The bogie is the main part of our wagon. It holds the wagon on the rails. 
 It has the shape of a trapezoid prism, the lower side is smaller than the upper. 
 The 4 upper nodes slide on top of the rail, the four lower nodes are the guidance nodes. 
-Make them all low friction ( `set_node_defaults -1, 0, -1, -1` ). The four lower nodes need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
+Make them all low friction ( `set_node_defaults -1, 0, -1, -1` ). The four lower nodes need to be [contacters](fileformat-truck.md/#contacters). 
 Give them a mass of `50` kg using the "l"-option in the nodes section. 
 
 ![fig10-wagon-bogie](../images/rail-vehicles-tutorial-wagon-bogie.png)

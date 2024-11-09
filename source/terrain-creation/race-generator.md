@@ -1795,7 +1795,7 @@ These are the checkpoints from [F1 Test Track](https://forum.rigsofrods.org/reso
 
 Object names: `new-checkpoint-start` and `new-checkpoint`.
 
-Download: [f1_checkpoint.zip](/download/f1_checkpoint.zip)
+Download: [f1_checkpoint.zip](../download/f1_checkpoint.zip)
 
 ##### Empty Checkpoint
 
@@ -1804,7 +1804,7 @@ or multiple races which share checkpoint locations.
 
 Object name: `empty-checkpoint`.
 
-Download: [empty_checkpoint.zip](/download/empty_checkpoint.zip)
+Download: [empty_checkpoint.zip](../download/empty_checkpoint.zip)
 
 ### Race abort points 
 
@@ -1814,7 +1814,7 @@ Optional, defines points which will abort the current race. Use the same coordin
 
 Not used by any of the included checkpoints. Defines settings for the `race_penalty` box. 
 
-To add a `race_penalty` box, edit the [odef](/terrain-creation/object-format/) file of your checkpoint. (See begin box section)
+To add a `race_penalty` box, edit the [odef](object-format.md) file of your checkpoint. (See begin box section)
 
 ### General settings
 
@@ -1960,7 +1960,7 @@ If everything went well, you should now have your race in RoR!
 
 When testing your race, your checkpoints may not be in the correct location or rotated correctly. 
 
-To adjust your checkpoint positions, use the [in-game object editor](/terrain-creation/editing-terrain-objects/#moving-objects).
+To adjust your checkpoint positions, use the [in-game object editor](editing-terrain-objects.md#moving-objects).
 
 Checkpoints are spawned first, so use `CTRL+[` and `CTRL+]` keys to scroll through each one.
 

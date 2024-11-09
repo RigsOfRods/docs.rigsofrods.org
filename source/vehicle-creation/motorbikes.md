@@ -9,7 +9,7 @@ Based off [this archived forum thread](http://archives.rigsofrods.net/old-forum/
 
 ## Theory
 
-Motorbikes are counter-intuitive, to turn left, you must steer right a little first and vice-versa. It is because of this that the player cannot control the steering directly (with hydros) because the response time is too long and there is no feedback like when you ride a bicycle. So you must use [animators](/vehicle-creation/fileformat-truck#animators) and the `roll` option. This is what we use to turn the front wheel.
+Motorbikes are counter-intuitive, to turn left, you must steer right a little first and vice-versa. It is because of this that the player cannot control the steering directly (with hydros) because the response time is too long and there is no feedback like when you ride a bicycle. So you must use [animators](fileformat-truck.md#animators) and the `roll` option. This is what we use to turn the front wheel.
 
 The roll means the angle between the camera plane and the ground plane, so you can adjust it by rotating the camera. This is the main way of controlling the bike, you essentially trick the bike into thinking its falling onto one side and it will always try to be level. In other words, you're not steering, just controlling the lean angle.
 
@@ -18,7 +18,7 @@ The roll means the angle between the camera plane and the ground plane, so you c
 ## Construction
 To make a motorcycle or similar you need to have good knowledge about node-beam systems and have experience of vehicle creation. A lot of details will not be covered because it should be obvious to an experienced user.
 
-The image above shows how the motorbike operates, note how the front wheel is able to slide up and down on four [slidenodes](/vehicle-creation/fileformat-truck#slide-nodes).
+The image above shows how the motorbike operates, note how the front wheel is able to slide up and down on four [slidenodes](fileformat-truck.md#slide-nodes).
 
 
 ## Wheels
@@ -43,7 +43,7 @@ wheels
 
 ### How to only power the rear wheel
 
-This bit is important, you **must** define an [axle](/vehicle-creation/fileformat-truck#axles),
+This bit is important, you **must** define an [axle](fileformat-truck.md#axles),
 making sure the differentials are set to split "d(s)" and only the rear wheel is powered.
 ```
 axles
@@ -64,11 +64,11 @@ There are four animators that form a sort to diamond shape they are defined some
 
 Note how the short and long limit are quite small, you don't need a large number because the castor angle on the front wheel helps the bike turn when it is in a lean.
 
-See [animators](/vehicle-creation/fileformat-truck#animators).
+See [animators](fileformat-truck.md#animators).
 
 ## Camera
 
-You can control the lean angle of the bike by controlling the lean angle of the camera, and you do this using [hydros](/vehicle-creation/fileformat-truck#hydros) as usual, just make sure they turn the camera assembly the opposite way from where you want the bike to go. I recommend trying about 20 deg then gradually increasing until a balance between control and stability is found. Offroad bikes should have less because of lower grip.
+You can control the lean angle of the bike by controlling the lean angle of the camera, and you do this using [hydros](fileformat-truck.md#hydros) as usual, just make sure they turn the camera assembly the opposite way from where you want the bike to go. I recommend trying about 20 deg then gradually increasing until a balance between control and stability is found. Offroad bikes should have less because of lower grip.
 
 ## Mass
 
@@ -101,7 +101,7 @@ Should be quite stiff with high damping to stop the bike bouncing and jiggling a
 
 ![motorbike-example-ingame](../images/motorbike-example-ingame.png)
 
-[Polaris_GP2.5.0.truck](/download/Polaris_GP2.5.0.truck)
+[Polaris_GP2.5.0.truck](../download/Polaris_GP2.5.0.truck)
 
 
 ## Conclusion

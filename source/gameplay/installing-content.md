@@ -26,7 +26,7 @@ To remove a mod, just go back to the file listing and press Remove.
 	
 - The In-Game Repository currently does not support installing content packs which are a zip file containing other zips. You can still download them in-game, but you'll have to browse to the `mods` folder and extract the pack zip manually. 
 
-- While there is an Addons category, most files there will have to be installed manually. Please see [Installing addons](/tools-tutorials/addons/) for more information.
+- While there is an Addons category, most files there will have to be installed manually. Please see [Installing addons](../tools-tutorials/addons.md) for more information.
 
 ## Installing mods manually
 
@@ -88,7 +88,7 @@ If you search for RoR mods on Google or YouTube, you'll likely find car mods tha
 They are not allowed on any of our services, including multiplayer. May also contain viruses and/or malware.
 
 Further reading:<br>
-[ToS - Stolen content](/rules/rules-stolen-content/)<br>
+[Don’t Steal Content or Violate Intellectual Property](../rules/community-guidelines.md#dont-steal-content-or-violate-intellectual-property)<br>
 [Stolen Content (Bus Epidemic)](https://forum.rigsofrods.org/threads/stolen-content-bus-epidemic.2034/)
 
 ### Extracting zips 
@@ -109,7 +109,7 @@ To install content packs (a zip file containing multiple zips inside) such as th
 
 Some mods may provide a `*.skinzip` which contains some extra liveries/skins for the vehicle. To install these, just place them inside the `mods` folder.
 
-For more information about skinzips, see [this page](/vehicle-creation/alternate-skins/).
+For more information about skinzips, see [this page](../vehicle-creation/alternate-skins.md).
 
 ## PSD/PDN files
 

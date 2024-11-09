@@ -2,9 +2,9 @@
 
 ## Wheels
 
-wheels are simply structures that the game creates automatically out of standard features to make creating vehicles easier. They are simply [nodes](/vehicle-creation/fileformat-truck#nodes) connected by [beams](/vehicle-creation/fileformat-truck#beams) with a contactable [submesh](/vehicle-creation/fileformat-truck#submesh). They are unique in that they will rotate when given input to accelerate.
+wheels are simply structures that the game creates automatically out of standard features to make creating vehicles easier. They are simply [nodes](fileformat-truck.md#nodes) connected by [beams](fileformat-truck.md#beams) with a contactable [submesh](fileformat-truck.md#submesh). They are unique in that they will rotate when given input to accelerate.
 
-[Wheels](/vehicle-creation/fileformat-truck#wheels) are the most basic wheels in the game. The width of a wheel is determined by the distance between the two reference nodes and is composed of pie slices known as rays. The more rays a wheel has, the smoother it will be but will also contain more nodes and beams and consequently lower performance. It is considered good form to keep your rays between 10 and 20.
+[Wheels](fileformat-truck.md#wheels) are the most basic wheels in the game. The width of a wheel is determined by the distance between the two reference nodes and is composed of pie slices known as rays. The more rays a wheel has, the smoother it will be but will also contain more nodes and beams and consequently lower performance. It is considered good form to keep your rays between 10 and 20.
 
  <p>
     <a href="/images/wheels-pic1.png" class="image">
@@ -51,7 +51,7 @@ Now all nodes will be on one level / line even node 1 and 4 aren't mounted prima
 ## Wheels2
 
  <p>This feature improves the default wheels section by splitting wheels into rims and tires. This allows the player to set tire pressure with the keyboard.  </p>
-[Wheels2](/vehicle-creation/fileformat-truck#wheels2) (also known as the "complex wheel model") allows you to separate the wheel [rim] from the tire (tyre). This requires extra syntax, namely specifying the characteristics of the wheel versus the tire. Traditionally the wheel will be very rigid with the tire being much less so. The rigidity of wheels2 tires can be altered by holding [ and ] ingame, resulting in this:
+[Wheels2](fileformat-truck.md#wheels2) (also known as the "complex wheel model") allows you to separate the wheel [rim] from the tire (tyre). This requires extra syntax, namely specifying the characteristics of the wheel versus the tire. Traditionally the wheel will be very rigid with the tire being much less so. The rigidity of wheels2 tires can be altered by holding [ and ] ingame, resulting in this:
  <table style="margin: 1em auto;" class="wikitable">
     <tr>
        <td> Inflated tire</td>
@@ -70,7 +70,7 @@ Now all nodes will be on one level / line even node 1 and 4 aren't mounted prima
 
 ## Meshwheels
 
-[Meshwheels](/vehicle-creation/fileformat-truck#meshwheels) takes advantage of a mesh's static nature. It also creates a smoother tire. The wheel rim is a standard Ogre3D mesh.
+[Meshwheels](fileformat-truck.md#meshwheels) takes advantage of a mesh's static nature. It also creates a smoother tire. The wheel rim is a standard Ogre3D mesh.
 
  <p>Meshwheels are very similar to normal wheels, but require specification of the wheel rim radius. Likewise, the direction the wheel is facing must be specified in order for the mesh to be rotated properly.<sup>1</sup> </p>
  <table style="margin: 1em auto;" class="wikitable">
@@ -139,7 +139,7 @@ w1(5 6), w2(7 8), d(l)
 
 ## Axle Rigidity
 
-See Also: [Suspension](/vehicle-creation/suspension)
+See Also: [Suspension](suspension.md)
 
 The <strong class="selflink">Axle Rigidity</strong> keeps the wheel aligned with the axle of the vehicle. It is used to avoid having to make a complex structure in order to hold the wheel in place. In fact, it keeps the two wheel nodes and the defined node in a straight line. This is intended to use with solid non-steerable axles. However, you probably can devise a way to use this as independent suspension.
 
@@ -161,7 +161,7 @@ The <strong class="selflink">Axle Rigidity</strong> keeps the wheel aligned with
 
 ### How it is Implemented
 
-The arm node is implemented through the [wheels](/vehicle-creation/fileformat-truck#wheels) section of a `.truck` file.
+The arm node is implemented through the [wheels](fileformat-truck.md#wheels) section of a `.truck` file.
 
 ### Example Vehicle
 
@@ -177,7 +177,7 @@ A good example vehicle that shows how the arm node works is box5diesel's [Baja T
 
 ## Steering
 
-Steering is made possible with the use of [hydros](/vehicle-creation/fileformat-truck#hydros). A proven steering set up which involves a diamond wheel support and a small chassis which the suspension is attached to. When this concept is realized, steering is not too difficult.
+Steering is made possible with the use of [hydros](fileformat-truck.md#hydros). A proven steering set up which involves a diamond wheel support and a small chassis which the suspension is attached to. When this concept is realized, steering is not too difficult.
 
 ### Wheel Mount
 
@@ -187,9 +187,9 @@ Steering is made possible with the use of [hydros](/vehicle-creation/fileformat-
         <img alt="Oktraeder.png" src="/images/wheels-steering-octahedron.png" width="427" height="483" /></a> 
 </p>
 
-The "wheel" nodes labeled here will become the position for the [wheels](/vehicle-creation/fileformat-truck#wheels). The distance between the two nodes will determine the wheel width. It is wise to make the diamond symmetrical for stability (that is, the height equals the width). You will need one of these for every wheel that is steerable.
+The "wheel" nodes labeled here will become the position for the [wheels](fileformat-truck.md#wheels). The distance between the two nodes will determine the wheel width. It is wise to make the diamond symmetrical for stability (that is, the height equals the width). You will need one of these for every wheel that is steerable.
 
-If you find your nodes are contacting the ground and obstructing movement, you can make specific nodes non-contactable. See the [nodes](/vehicle-creation/fileformat-truck#nodes) syntax.
+If you find your nodes are contacting the ground and obstructing movement, you can make specific nodes non-contactable. See the [nodes](fileformat-truck.md#nodes) syntax.
 
 ![wheelhub-wheel](../images/wheels-steering-wheelhub.jpg)
 
@@ -207,7 +207,7 @@ If you find your nodes are contacting the ground and obstructing movement, you c
 
 ### Hydros
 
-After the steering chassis is completed, the [hydros](/vehicle-creation/fileformat-truck#hydros) can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted).
+After the steering chassis is completed, the [hydros](fileformat-truck.md#hydros) can be added. Hydros are simply beams that change length when you press the right and left arrow keys, and are typically used for steering (although you can use them for other purposes if you so wanted).
 
  <p>In order to define a hydro, some specific information is needed. </p>
  <ol>
@@ -250,4 +250,4 @@ Don't forget to add suspension (as covered in the previous chapter)
 
 ## Braked Steering
 
-It is possible to have a steering system that only turns one side of wheels. In the [wheels](/vehicle-creation/fileformat-truck#wheels) section, set the `Wheel Braking` value to 2 or 3 for left or right wheel respectively. This works well for emulating tracked vehicles such as bulldozers. These usually do not work well at high speed.
+It is possible to have a steering system that only turns one side of wheels. In the [wheels](fileformat-truck.md#wheels) section, set the `Wheel Braking` value to 2 or 3 for left or right wheel respectively. This works well for emulating tracked vehicles such as bulldozers. These usually do not work well at high speed.

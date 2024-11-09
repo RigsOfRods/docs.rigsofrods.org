@@ -4,7 +4,7 @@ General FAQ
 Welcome to the General FAQ! Here you'll find answers to common questions you may have about Rigs of Rods.
 It is organized into sections to make finding answers easier.
 
-For info regarding errors and/or crashes, see: [Common issues](/gameplay/common-issues/)
+For info regarding errors and/or crashes, see: [Common issues](common-issues.md)
 
 ## Downloading Rigs of Rods
 
@@ -18,7 +18,7 @@ Windows XP & Vista are no longer supported as of version 0.4.8 RC5.
 
 MacOS hasn't been supported since version 0.37 due to lack of developer interest and outdated dependencies currently used by the game.
 
-Any other platform (ChromeOS, and iOS/Android) are not supported and likely never will be.
+Any other platform (ChromeOS, and iOS/Android) are unsupported and likely never will be.
 
 ### Windows
 
@@ -26,7 +26,7 @@ The latest version can be downloaded from the [home page](https://www.rigsofrods
 
 If you decide to download from Itch, we recommended using the [Itch desktop app](https://itch.io/app) as you'll receive updates automatically.
 
-If you need help, see: [Installing the game](/gameplay/installing-the-game/)
+If you need help, see: [Installing the game](installing-the-game.md)
 
 ###Linux
 
@@ -58,7 +58,7 @@ You can find previous RoR versions on [SourceForge](https://sourceforge.net/proj
 
 You can find mods on the [Repository](https://forum.rigsofrods.org/resources/) and the [content](https://forum.rigsofrods.org/#showrooms.11) section of the forum.
 
-For more info regarding installing mods, see: [Installing content (mods)](/gameplay/installing-content/).
+For more info regarding installing mods, see: [Installing content (mods)](installing-content.md).
 
 ### Archives
 
@@ -75,12 +75,12 @@ If you search for RoR mods on Google or YouTube, you'll likely find car mods tha
 They are not allowed on any of our services, including multiplayer. May also contain viruses and/or malware.
 
 Further reading:<br>
-[ToS - Stolen content](/rules/rules-stolen-content/)<br>
+[Don’t Steal Content or Violate Intellectual Property](../rules/community-guidelines.md#dont-steal-content-or-violate-intellectual-property)
 [Stolen Content (Bus Epidemic)](https://forum.rigsofrods.org/threads/stolen-content-bus-epidemic.2034/)
 
 ## Multiplayer
 
-To play multiplayer, see [this section](/gameplay/beginners-guide/#multiplayer) of the Beginner's Guide.
+To play multiplayer, see [this section](beginners-guide.md#multiplayer) of the Beginner's Guide.
 
 ### Wrong server version
 

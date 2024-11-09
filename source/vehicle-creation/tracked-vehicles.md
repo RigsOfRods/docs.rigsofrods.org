@@ -65,7 +65,7 @@ doesn't matter, but avoid larger differences. There are some methods for this:
   placing the nodes with the ruler.
 
 When the nodes are placed, it's time to define the
-[slidenodes and rails](/technical/fileformat-truck#slide-nodes)
+[slidenodes and rails](fileformat-truck.md#slide-nodes)
 in the truck file.
 
 And don't forget to make all track nodes contactable, in order to be driven by the submesh in the sprockets
@@ -107,7 +107,7 @@ In the example below, the size of the sprocket compared to the "bending frame" t
 How many sections that are needed depends on size of the track and the length of the track links.
 
 When you have built the basic structure of the sprocket, add the contactable
-[submesh](/technical/fileformat-truck#submesh) and use the "U" option for contact.
+[submesh](fileformat-truck.md#submesh) and use the "U" option for contact.
 Since the submesh is supposed to be invisible, simply skip the "texcoords" lines
 and add only "cab" lines.
 
@@ -135,7 +135,7 @@ connect three beams per side like the picture shows:
 
 ## Step 4: Making the rotator for the driving sprocket
 
-Now it's time to define [rotator](/technical/fileformat-truck#rotators) for the sprocket.
+Now it's time to define [rotator](fileformat-truck.md#rotators) for the sprocket.
 The size of the rotator can without problems be about the same size
 *as the sprocket itself, But it's recommended that you don't make the rotators
 *too small, for this matter: ((TODO: fix link))

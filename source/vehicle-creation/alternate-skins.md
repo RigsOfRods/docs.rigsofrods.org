@@ -9,7 +9,7 @@ This page serves as an overview page on how to create and modify custom skins.
 
 Skins are matched against vehicles via GUID (Globally-Unique-IDentifier).
 
-Make sure the vehicle you want to skin has one: [Truck file format - GUID](/vehicle-creation/fileformat-truck/#guid)
+Make sure the vehicle you want to skin has one: [Truck file format - GUID](fileformat-truck.md/#guid)
 
 Ideally, all vehicles should have one. You might need to regen the cache, so the GUID will be in the cache as well. 
 
@@ -38,7 +38,7 @@ There are 2 ways how to replace the original vehicle graphics with yours:
 
 * **Image substitution** - The simple one, you name an existing texture
     file and a replacement file. In this example,
-     'blansjaar41.jpg' is replaced with 'blansjaar41_sarens.jpg'. **This only works with [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials)**.
+     'blansjaar41.jpg' is replaced with 'blansjaar41_sarens.jpg'. **This only works with [managedmaterials](fileformat-truck.md/#managedmaterials)**.
 
 * **Material substitution** - More complex, you need to know the .material
     file format of OGRE3D engine. For an example, see the "antonov" tutorial
@@ -84,7 +84,7 @@ Sarens Skin for Sennebogen 5500
 `replaceTexture` - Defines the texture replacements, its first argument is 
 the original texture name, the second argument is the texture name of the skin. 
 Please note that those must be different, or you will get a file collision. 
-You can use this line as much as you like. As noted earlier, this only works with [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials).
+You can use this line as much as you like. As noted earlier, this only works with [managedmaterials](fileformat-truck.md/#managedmaterials).
 
 `preview` - The "mini" image that will appear on the skin selector window.
 
@@ -98,7 +98,7 @@ You can use this line as much as you like. As noted earlier, this only works wit
 
 `5831` would be the ID.
 
-`GUID` - The GUID that matches the GUID in the `.truck` file. See [Step 1 - GUID](#step-1---guid).
+`GUID` - The GUID that matches the GUID in the `.truck` file. See [Step 1 - GUID](#step-1-guid).
 
 ## Replacing OGRE Materials (.material) 
 

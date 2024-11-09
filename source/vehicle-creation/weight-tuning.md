@@ -26,7 +26,7 @@ Here we go...first of all a template truck:
 
 <b><font color="red">300 kg... RoR's first working 200 km/h light weight truck</font></b> 
 
-[Download here](/download/lightweight.truck)
+[Download here](../download/lightweight.truck)
 
 Its a truck featuring independent suspended front wheels and a rigid rear axle, it has a realistic steering geometry and is basically built for baja(gravel) terrains.
 

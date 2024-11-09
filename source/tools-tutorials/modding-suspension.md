@@ -9,7 +9,7 @@ This page will teach you how to lift or lower, change track/wheel width, and add
 
 ### Precomp
 
-The simple (and lazy) way of lifting or lowering a vehicle is by simply changing the precomp value in the [shocks](/vehicle-creation/fileformat-truck/#shocks) section.
+The simple (and lazy) way of lifting or lowering a vehicle is by simply changing the precomp value in the [shocks](../vehicle-creation/fileformat-truck.md#shocks) section.
 
 ```
 shocks
@@ -57,7 +57,7 @@ We'll be using the latest version (4.0 at the time of writing) but most steps sh
 
 - [Blender N/B Import/Export Plugin](https://forum.rigsofrods.org/resources/blender-n-b-import-export-plugin.25/)
 
-Install the 2.8+ version of the N/B plugin using [these instructions](/tools-tutorials/visual-editors/#28-and-newer). 
+Install the 2.8+ version of the N/B plugin using [these instructions](visual-editors.md#28-and-newer). 
 
 - [Notepad++](https://notepad-plus-plus.org/downloads/) 
 
@@ -118,7 +118,7 @@ Click `Replace All`.  All comment lines are now a node group.
 ##### Detacher group workaround
 
 The G2S features `detacher_group` sections. 
-Due to a bug with the Blender RoR importer, [detacher groups](/vehicle-creation/fileformat-truck/#detacher_group) cause beams to be missing on import.
+Due to a bug with the Blender RoR importer, [detacher groups](../vehicle-creation/fileformat-truck.md#detacher_group) cause beams to be missing on import.
 
 To work around this, we need to comment all `detacher_group` lines. Do a replace all again, this time use the following:
 
@@ -139,7 +139,7 @@ The file is now ready to be imported into Blender.
 	
 This setup only needs to be performed once. 
 
-Open Blender and install the N/B plugin if you haven't already from the [prerequisites](/tools-tutorials/modding-suspension/#prerequisites).
+Open Blender and install the N/B plugin if you haven't already from the [prerequisites](#prerequisites).
 
 Once the N/B plugin is installed, click `Edit` -> `Preferences` -> `Interface` and enable Developer Extras, this enables the ability to toggle indices (nodes) visualization.
 

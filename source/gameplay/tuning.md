@@ -10,13 +10,13 @@ The tuning menu is a new single player feature available for vehicles. It enable
 
 Tuning is currently disabled in Multiplayer, support will be added in a future release.
 
-For a technical overview of the addonpart file format, see: [Addonpart file format](/vehicle-creation/fileformat-addonpart)
+For a technical overview of the addonpart file format, see: [Addonpart file format](../vehicle-creation/fileformat-addonpart.md)
 
 <img src="/images/tuning-menu.png" width="400">
 
 ## Addon parts
 
-The main feature of the Tuning menu is the ability to install add-on parts with one click, without manually editing the [truck file](/vehicle-creation/fileformat-truck/).
+The main feature of the Tuning menu is the ability to install add-on parts with one click, without manually editing the [truck file](../vehicle-creation/fileformat-truck.md).
 
 Add-ons for the currently spawned vehicle will be displayed. Add-ons can be downloaded from the in-game Repository or the [website](https://forum.rigsofrods.org/resources/categories/addons.15/) and placed into the `mods` folder just like vehicles and terrains.
 Please note that only a handful of parts currently support the new file format. 
@@ -54,7 +54,7 @@ The Tuning menu also features the ability to toggle the visibility of props, fle
 
 ![tuning-flexbody-toggle](../images/tuning-flexbody-toggle.gif)
 
-Numbers next to element names are IDs, these are used for the [addonpart file format](/vehicle-creation/fileformat-addonpart/).
+Numbers next to element names are IDs, these are used for the [addonpart file format](../vehicle-creation/fileformat-addonpart.md).
 
 Disabled elements are moved to the bottom of the list. 
 

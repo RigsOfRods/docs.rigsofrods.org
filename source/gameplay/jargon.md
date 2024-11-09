@@ -53,7 +53,7 @@ The 3D rendering engine used in Rigs of Rods.
 
 This means the mod in question contains elements, in most cases meshes (3d models) which aren't the author's original work. This includes meshes obtained from public repositories, most notably SketchUp warehouse.
 
-More information: [Terms of Service#STOLEN CONTENT](/rules/terms-of-service/#stolen-content)
+More information: [Don’t Steal Content or Violate Intellectual Property](../rules/community-guidelines.md#dont-steal-content-or-violate-intellectual-property)
 
 ### Unreleased
 
