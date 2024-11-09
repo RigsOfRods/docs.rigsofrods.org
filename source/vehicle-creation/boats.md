@@ -24,7 +24,7 @@ and stabilizing it with beams,
   
 The picture illustrates the setup. Please imagine the box is actually a boat-hull :)
  
-![](/images/nautical-screwprop.png) 
+![](../images/nautical-screwprop.png) 
   
 Step2: You should enter the "screwprops" section into your .boat file.
 

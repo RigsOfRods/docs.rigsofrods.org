@@ -33,7 +33,7 @@ style from MacOS to Windows using an advanced text editor, or RoR will crash.
 ### Example Wing 
 Here's an example:
 
-![](/images/aerial-wing-example.jpg)
+![](../images/aerial-wing-example.jpg)
 
 And the corresponding wings section :
 
@@ -69,7 +69,7 @@ An air brake is a moving panel used to slow down an airplane.
 It is positioned similarly to a "props", with 
 `noderef, nodex, nodey, nodea, offsetx, offsety, offsetz` 
 
-![](/images/aerial-airbrake-reference.jpg)
+![](../images/aerial-airbrake-reference.jpg)
  
 The airbrake needs 4 nodes (noderef, nodex, nodey, nodea) to position it.  
 pick 4 nodes that form a square or rectangle at the position you want your airbrake. 
@@ -100,14 +100,14 @@ node and beam part of the engine (its the same for either type of engine, turbop
 
 You start off by making a diamond shape with one node in the middle, like so: 
 
-![](/images/aerial-propellers-softbody1.png)
+![](../images/aerial-propellers-softbody1.png)
 
 Make sure that all the nodes are evenly placed so that when they're spinning 
 at high RPM's they won't get out of balance. 
 (You can get them spot on in the editorizer if you use the "snap nodes to grid" option). 
 Now you need to add another node in the center of that diamond but this one needs to be a bit behind the first middle node. Like so: 
 
-![](/images/aerial-propellers-softbody2.png)
+![](../images/aerial-propellers-softbody2.png)
 
 now just connect all the nodes together with beams but make sure you only 
 connect the diamonds four outer edge nodes (in this case nodes 1,2,3 and 4) 
@@ -134,7 +134,7 @@ props
 0,1,5, 0.0, 0.0, 0.0, 0, 0, 0, spinprop.mesh
 ``` 
 
-![](/images/aerial-propellers-softbody3.png)
+![](../images/aerial-propellers-softbody3.png)
 
 The next thing we need to add to the props section is the propellers mesh.
 Its the same as for the "spinprop.mesh" you just need one for every visible propeller you want.
@@ -155,7 +155,7 @@ props
 0,5,4, 0.0, 0.0, 0.0, 180, 0, 90, pale.mesh
 ```
 
-![](/images/aerial-propellers-softbody4.png)
+![](../images/aerial-propellers-softbody4.png)
 
 ### Turboprops section
 

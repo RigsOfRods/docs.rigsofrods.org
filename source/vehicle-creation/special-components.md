@@ -18,7 +18,7 @@ Some of the things you can do with commands...
 
 One example (in picture below) - all of the moving parts are made by using Commands:
 
-![commands-wrecker](/images/commands-example-t800-wrecker.jpg)
+![commands-wrecker](../images/commands-example-t800-wrecker.jpg)
 
 ## Connection utilities
 

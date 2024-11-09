@@ -113,21 +113,21 @@ flares
 The first node (`219`) is where the flare comes from and the other 2 (`218`, `220`) 
 determine whether it faces front or back of the <b>plane</b>.
 
-![1](/images/flares-tutorial-pic1.png)
+![1](../images/flares-tutorial-pic1.png)
 
 The 1st image shows my plane nodes `0`, `1`, `217`, `218`
 
-![2](/images/flares-tutorial-pic2.png)
+![2](../images/flares-tutorial-pic2.png)
 
 The 2nd image shows the nodes where my flares are going to be placed 
 (optional to have them or not, just there to make things more precise and save time).
 
-![3](/images/flares-tutorial-pic3.png)
+![3](../images/flares-tutorial-pic3.png)
 
 The 3rd image shows the placement for the left headlight, 
 the first node `219` is where the flare comes from and `217`, `218` makes it face frontwards, if I did `218`, `217` the flare would face the other way.
 
-![4](/images/flares-tutorial-pic4.png)
+![4](../images/flares-tutorial-pic4.png)
 
 The 4th image shows the placement for the right headlight, 
 the first node `220` is where the flare comes from and `219`,`217` makes it face frontwards.
@@ -242,11 +242,11 @@ If you want to make your own custom flare textures, you will need a decent photo
 
 Open up a new document in your photo-editing software. Make the background transparent, and make it 40 pixels wide and 40 pixels high.
 
-![5](/images/flares-custom-01-new.png)
+![5](../images/flares-custom-01-new.png)
 
 Right after that, pick a color for your flare. I will do blue, because I want blue flashers on my vehicle. So I will select the gradient tool and make a small light effect. (Note I zoomed in a little bit)
 
-![6](/images/flares-custom-02-source.png)
+![6](../images/flares-custom-02-source.png)
 
 Remember to save your textures as Portable Network Graphics (PNG)
 
@@ -334,11 +334,11 @@ Save your `.material` file after completing this.
 Open the `.truck` file, and find the [flares](/vehicle-creation/fileformat-truck#flares) section. To test these flashes, I would use the headlights as an example. So copy the headlight codes, and paste them below. You may have to change them from headlights, to custom flares. So if you see this in the headlight line: f, -1, you need to change that to: u, 1 because that makes it a user controlled flare (A flare you activate by pressing Ctrl+1)
 Then, instead of end of the headlight code saying default, change it to: tracks/Flash1 so it flashes your custom flare pattern. 
 
-![7](/images/flares-custom-03-text.png)
+![7](../images/flares-custom-03-text.png)
 
 Once you test it in game, it is a simple on/off flashing pattern.
 
-![8](/images/flares-custom-04-1stgen.png)
+![8](../images/flares-custom-04-1stgen.png)
 
 ### Lets go one step further
 
@@ -346,15 +346,15 @@ Now that you can easily make an off/on flashing pattern, let's get more complex.
 
 Get back into the `.material` file, copy the custom flare section, and paste it below. Now switch/reverse the <On> and <Off> image, and call the pattern Flash2. 
 
-![8](/images/flares-custom-05-text.png)
+![8](../images/flares-custom-05-text.png)
 
 Now, open up the .truck file, and look at only ONE of the new flashing headlights, and change it's material name to tracks/Flash2. 
 
-![9](/images/flares-custom-06-text.png)
+![9](../images/flares-custom-06-text.png)
 
 Now, see it ingame, it will be a wig-wag pattern. 
 
-![10](/images/flares-custom-07-1stgen.png)
+![10](../images/flares-custom-07-1stgen.png)
 
 Easy as that. There is a rule when it comes to making custom flashes: 
 

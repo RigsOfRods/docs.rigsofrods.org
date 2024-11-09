@@ -16,20 +16,20 @@ The result is a quite long wheel what may be odd on the first sight,
 but if you think about it real train wheels are basically the same. 
 This also helps to keep the nodecount down. 
 
-![](/images/rail-vehicles-basic-concept1.jpg)
+![](../images/rail-vehicles-basic-concept1.jpg)
 
 The wagons use low friction nodes instead of wheels. 
 Main reason is the nodecount, e.g. on a 4 axle wagon we can save approx. 
 120 nodes by doing this, what will give you a much better framerate. 
 
-![](/images/rail-vehicles-basic-concept2.jpg)
+![](../images/rail-vehicles-basic-concept2.jpg)
 
 ### Basic node and beam principles
 
 To make your rail vehicle working well, you need to obtain certain principles. 
 
 * First of all your bogie geometry needs to be exactly as shown in the picture
-  ![](/images/rail-vehicles-geometry-reference.png) 
+  ![](../images/rail-vehicles-geometry-reference.png) 
   If you make a wagon without wheels, the low friction nodes running on the rail 
   need to be exactly where the wheel in the picture would touch the rail.
 * Your guidance nodes (those running on the inner side of the rail) need to be contacters. 
@@ -48,7 +48,7 @@ you need to make sure the coordinates in the 3d modeling program are the same as
 Open the terrain *.zip and search for a *.cfg file. 
 Read out the size of the terrain, switch to your 3d modeling program 
 and create a plane with the same size in the correct position:
-![](/images/rail-track-building-3dtool.jpg)
+![](../images/rail-track-building-3dtool.jpg)
 
 This will be our placement help.
 
@@ -58,10 +58,10 @@ When finished, you need to attach all track pieces together, but DO NOT ATTACH T
 We only placed them to read out the coordinates and we will place them on the map using the terrn file. 
 For that purpose, open the terrn file, click each switch in blender/3ds and copy the coordinates 
 (including rotational values) over to the terrn file. Then do 
-![](/images/rail-track-building-terrn-placing-switches.png)
+![](../images/rail-track-building-terrn-placing-switches.png)
 to place the node and beam. Annoying, I know ;-) 
 When done, it's time to export the track layout. It should look like 
-![](/images/rail-track-building-switch-gaps.png)
+![](../images/rail-track-building-switch-gaps.png)
 with gaps for the switches.
 Move the pivot point of the track to (0, 0, 0) and export the mesh.
 Now you just need to place it on (0, 0, 0) in the terrn file and probably get the angles right.
@@ -86,13 +86,13 @@ Convert heightmap raw to bmp with [ImageMagick](http://www.imagemagick.org/scrip
 Create a plane in 3ds Max, apply a 3d displacement modifier, load your converted heightmap 
 and assign the height found in the maps *.cfg there. 
 Subdivide your plane to the accuracy you want
-![](/images/rail-track-heightmap-spline-1.jpg)
+![](../images/rail-track-heightmap-spline-1.jpg)
 
 
 ### Step 3
 
 Create a spine representing the longitudinal track layout
-![](/images/rail-track-heightmap-spline-2.jpg)
+![](../images/rail-track-heightmap-spline-2.jpg)
 
 ### Step 4
 
@@ -102,7 +102,7 @@ Convert the heightmap to a poly object
 
 Extrude the spline to make it solid
 
-![](/images/rail-track-heightmap-spline-3.jpg)
+![](../images/rail-track-heightmap-spline-3.jpg)
 
 ### Step 6
 
@@ -112,8 +112,8 @@ Choose the spline solid, add a ProBoolean modifier, check substract, choose the 
 
 Choose the outermost edge of the resulting body, right click, choose create contour ->now you have your spline following the heightmap
 
-![](/images/rail-track-heightmap-spline-4.jpg)
-![](/images/rail-track-heightmap-spline-5.jpg)
+![](../images/rail-track-heightmap-spline-4.jpg)
+![](../images/rail-track-heightmap-spline-5.jpg)
 
 ### Step 8
 

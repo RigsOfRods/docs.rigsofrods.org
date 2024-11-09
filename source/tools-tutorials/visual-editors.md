@@ -17,7 +17,7 @@ To help you get started with creating a new node/beam, you can download this tru
 
 As of November 2018, Blender supports creating/editing Node/Beam structures with a plugin created by Ulteq.
 
-![blender](/images/blender-nb.png)
+![blender](../images/blender-nb.png)
 
 Features:
 
@@ -52,17 +52,17 @@ For Blender 2.8 and newer, download `blender_NB_plugin_2.8.zip`.
 
 Go to `File` -> `User Preferences`:
 
-![bnb1](/images/blender-edit-userprefs1.png)
+![bnb1](../images/blender-edit-userprefs1.png)
 
 Click `Add-ons` -> `Install from File`:
 
-![bnb2](/images/blender-edit-userprefs2.png)
+![bnb2](../images/blender-edit-userprefs2.png)
 
 Select the `blender_NB_plugin_2.79.zip` file you downloaded earlier. 
 
 Type "RoR" into the search bar and both add-ons should appear:
 
-![bnb3](/images/blender-nb-addoninstall.png)
+![bnb3](../images/blender-nb-addoninstall.png)
 
 Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`. 
 
@@ -74,17 +74,17 @@ The plugins are now available in `File` -> `Import` and `Export` -> `Truck (.tru
 
 Go to `Edit` -> `Preferences`:
 
-![bnb28-1](/images/blender-edit-userprefs1-2.8.png)
+![bnb28-1](../images/blender-edit-userprefs1-2.8.png)
 
 Click `Add-ons` -> `Install`:
 
-![bnb28-2](/images/blender-edit-userprefs2-2.8.png)
+![bnb28-2](../images/blender-edit-userprefs2-2.8.png)
 
 Select the `blender_NB_plugin_2.8.zip` file you downloaded earlier. 
 
 Type "RoR" into the search bar and both add-ons should appear:
 
-![bnb28-3](/images/blender-edit-userprefs3-2.8.png)
+![bnb28-3](../images/blender-edit-userprefs3-2.8.png)
 
 Enable both `RoR Exporter` and `RoR Importer` addons, then close the Preferences window. 
 
@@ -102,15 +102,15 @@ To fix this, download [this plugin by GitHub user zeffii](https://gist.github.co
 
 Install it following the above instructions:
 
-![bnb4](/images/blender-nb-nodev-install.png)
+![bnb4](../images/blender-nb-nodev-install.png)
 
 To enable it, go to the top right and find the little plus icon, or press `N` to open it:
 
-![bnb4](/images/blender-edit-applyingtexture5.png)
+![bnb4](../images/blender-edit-applyingtexture5.png)
 
 While in edit mode, open the `Mesh Display` menu and select `Visualize indices`:
 
-![bnb5](/images/blender-nb-nodev.png)
+![bnb5](../images/blender-nb-nodev.png)
 
 You should now have readable node IDs. 
 
@@ -118,19 +118,19 @@ You should now have readable node IDs.
 
 Make sure `Developer Extras` is enabled in `Edit` -> `Preferences` -> `Interface`:
 
-![bnb28-4](/images/blender-edit-devextras-2.8.png)
+![bnb28-4](../images/blender-edit-devextras-2.8.png)
 
 Now open the Overlays menu, located in the top right:
 
-![bnb28-5](/images/blender-edit-overlays-location-2.8.png)
+![bnb28-5](../images/blender-edit-overlays-location-2.8.png)
 
 Enable `Indices` under `Developer`:
 
-![bnb28-5](/images/blender-edit-overlays-indices-2.8.png)
+![bnb28-5](../images/blender-edit-overlays-indices-2.8.png)
 
 Node numbers should now be visible.
 
-![bnb28-6](/images/blender-edit-indices-2.8.png)
+![bnb28-6](../images/blender-edit-indices-2.8.png)
 
 ### Notes and known issues
 
@@ -147,7 +147,7 @@ otherwise not all beams will import correctly. See this [GitHub issue ticket](ht
 
 A Java program made by Gouranga designed for viewing a node/beam structure.
 
-![truckviewer](/images/truckviewer.png)
+![truckviewer](../images/truckviewer.png)
 
 Pros:
 
@@ -173,7 +173,7 @@ Cons:
 	This program is very old and thus shouldn't be used to edit existing vehicles. It is recommended to create N/Bs using [Blender](#blender) instead.
 
 
-![Editorizer](/images/editorizer.png)
+![Editorizer](../images/editorizer.png)
 
 
 The Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
@@ -201,7 +201,7 @@ Run as administrator! (only needed on the first run or if you move Editorizer's 
 #### Troubleshooting
 
 If you don't run Editorizer as administrator for the first time, or you subsequently move it's directory, you may encounter this error:
-![](/images/editorizer-error-comdlg32ocx.jpeg)
+![](../images/editorizer-error-comdlg32ocx.jpeg)
 
 To resolve this, try running as administrator again, and if it doesn't help, try these steps:
 

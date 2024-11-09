@@ -10,15 +10,15 @@ Starting with Rigs of Rods version 2022.04, it is now possible to download new c
 
 Just click on the Repository button at the main menu:
 
-![main-menu-repo-button](/images/main-menu-repo-button.png)
+![main-menu-repo-button](../images/main-menu-repo-button.png)
 
 You can view different categories, sort by most downloaded/last update/etc, and change the display view.
 
-![in-game-repo](/images/in-game-repo.png)
+![in-game-repo](../images/in-game-repo.png)
 
 After you find a mod to install, just click on the file and press the Install button:
 
-![in-game-repo-install](/images/in-game-repo-install.png)
+![in-game-repo-install](../images/in-game-repo-install.png)
 
 To remove a mod, just go back to the file listing and press Remove. 
 
@@ -34,17 +34,17 @@ Adding a new vehicle or terrain is very simple. Follow the appropriate instructi
 
 ### Windows 
 
-First, open File Explorer by clicking the ![File Explorer Icon](/images/file-explorer.png) icon on your taskbar or by pressing Windows key + E.
+First, open File Explorer by clicking the ![File Explorer Icon](../images/file-explorer.png) icon on your taskbar or by pressing Windows key + E.
 
 Click Documents, located under 'This PC' or 'Quick access':
 
-![FIle Explorer Documents](/images/file-explorer-docs.png)
+![FIle Explorer Documents](../images/file-explorer-docs.png)
 
-Select ![My Games](/images/my-games-folder.png) followed by ![Rigs of Rods User Folder](/images/rigs-of-rods-folder.png). You are now in RoR's user directory.
+Select ![My Games](../images/my-games-folder.png) followed by ![Rigs of Rods User Folder](../images/rigs-of-rods-folder.png). You are now in RoR's user directory.
 
 Place the `*.zip` file inside the `mods` folder, either by cut (CTRL+X) and paste (CTRL+V) or drag and drop. Your mods folder should now have the zip inside:
 
-![repository-install](/images/repository-installing-mod.png) 
+![repository-install](../images/repository-installing-mod.png) 
 
 You can also organize your mod zips by creating subfolders (e.g. `mods\cars\DodgeViperGTS.zip`).
 
@@ -54,20 +54,20 @@ That's it! You can launch Rigs of Rods now and your shiny new mod should be read
 
 For this, we'll be using Ubuntu 20.04. Instructions should be similar if you're using another distro.
 
-First, click the ![Ubuntu Files Icon](/images/ubuntu-files-icon.png) icon located on your dock/launcher. You should now be in your Home directory. 
+First, click the ![Ubuntu Files Icon](../images/ubuntu-files-icon.png) icon located on your dock/launcher. You should now be in your Home directory. 
 
 !!! warning
 	If you installed RoR via the [Snap Store](https://snapcraft.io/rigs-of-rods), the user directory is located at `~/snap/rigs-of-rods/common/`.
 
 By default, RoR's user folder is named `.rigsofrods`, which is a hidden folder. Hidden folders can be shown by clicking the top right menu icon and enabling 'Show Hidden Files':
 
-![Ubuntu Show Hidden Files](/images/ubuntu-show-hf.png)
+![Ubuntu Show Hidden Files](../images/ubuntu-show-hf.png)
 
-Once enabled, open the ![Ubuntu .rigsofrods Folder](/images/ubuntu-rigsofrods.png) folder. You are now in RoR's user directory.
+Once enabled, open the ![Ubuntu .rigsofrods Folder](../images/ubuntu-rigsofrods.png) folder. You are now in RoR's user directory.
 
 Place the `*.zip` file inside the `mods` folder, either by cut (CTRL+X) and paste (CTRL+V) or drag and drop. Your mods folder should now have the zip inside: 
 
-![Ubuntu Mod Installed](/images/ubuntu-installed-mod.png)
+![Ubuntu Mod Installed](../images/ubuntu-installed-mod.png)
 
 You can also organize your mod zips by creating subfolders (e.g. `mods\cars\DodgeViperGTS.zip`).
 

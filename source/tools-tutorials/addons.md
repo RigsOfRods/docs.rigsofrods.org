@@ -29,17 +29,17 @@ In this example we will be installing the [Heavy Bumper for the Chevy K3500](htt
 
 To begin, download & extract the part zip (in our case, `CHeavyBumper.zip`) into a new folder. The folder should contain the mesh, dds textures, PDN paintkit, and a readme text file:
 
-![1](/images/addon-bumper-folder.png)
+![1](../images/addon-bumper-folder.png)
 
 Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
-![2](/images/addon-bumper-zip.png)
+![2](../images/addon-bumper-zip.png)
 
 Find the `.truck` file you want to edit. For this example I'll be editing the `Standard cab Single rear wheels (lift)` version (`1990K3500_STD_LIFT.truck`)
 
 Once you've figured out which truck you want the bumper on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
 
-![3](/images/addon-bumper-truckfolder.png)
+![3](../images/addon-bumper-truckfolder.png)
 
 ### The truck file 
 
@@ -180,7 +180,7 @@ If the part includes multiple textures, you can only copy the files required by 
 
 Now it's time to test your newly installed part in-game. If you followed this tutorial exactly, you should now have a custom bumper on your K3500! 
 
-![4](/images/addon-bumper-ingame.png)
+![4](../images/addon-bumper-ingame.png)
 
 ## Wheels and tires 
 
@@ -190,17 +190,17 @@ Keeping with the K3500, in this example we will be installing the [5 Spoke Wheel
 
 To begin, download & extract the part zip (in our case, `5SpokeRim.zip`) into a new folder. The folder should contain the mesh, dds textures, PDN paintkit, and a readme text file:
 
-![1](/images/addon-wheel-folder.png)
+![1](../images/addon-wheel-folder.png)
 
 Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
-![2](/images/addon-bumper-zip.png)
+![2](../images/addon-bumper-zip.png)
 
 Find the `.truck` file you want to edit. For this example I'll be editing the `Standard cab Single rear wheels (lift)` version (`1990K3500_STD_LIFT.truck`)
 
 Once you've figured out which truck you want the wheels on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
 
-![3](/images/addon-wheel-truckfolder.png)
+![3](../images/addon-wheel-truckfolder.png)
 
 ### The truck file 
 
@@ -327,7 +327,7 @@ If the part includes multiple textures, you can only copy the files required by 
 
 Now it's time to test your newly installed wheel in-game. If you followed this tutorial exactly, you should now have new wheels on your K3500! 
 
-![4](/images/addon-wheel-ingame.png)
+![4](../images/addon-wheel-ingame.png)
 
 ## Troubleshooting
 

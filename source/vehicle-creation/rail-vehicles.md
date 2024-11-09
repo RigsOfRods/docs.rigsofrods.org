@@ -5,7 +5,7 @@ In this tutorial you will learn how to build a small locomotive and wagon.
 Apart from the meshbuilding, it covers everything needed to build a working train. 
 All sizes must be exactly as shown in this tutorial!
 
-![railrunner](/images/rail-vehicles-tutorial-railrunner.jpg)
+![railrunner](../images/rail-vehicles-tutorial-railrunner.jpg)
 
 What you need for this tutorial:
 
@@ -28,7 +28,7 @@ The 4 upper nodes are for the wheels, the four lower nodes are the guidance node
 Those need to have low friction ( `set_node_defaults -1, 0, -1, -1` ) and need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
 Give them a mass of `50` kg using the `l` -option in the nodes section.
 
-![bogie](/images/rail-vehicles-tutorial-bogie.png)
+![bogie](../images/rail-vehicles-tutorial-bogie.png)
 
 ### Step 2: Placement node
 
@@ -37,7 +37,7 @@ node `0` needs to be in the center of the train, `0.53` meters below the lowest 
 For our tutorial train, we set node `0` in the middle of the bogie. 
 Node `0` needs to have the `c` -option in the nodes section for no ground detection. 
 
-![fig2-node0](/images/rail-vehicles-tutorial-placement-node.png)
+![fig2-node0](../images/rail-vehicles-tutorial-placement-node.png)
 
 ### Step 3: Wheels
 
@@ -45,32 +45,32 @@ Now it's time to place the wheels between the upper nodes of the bogie.
 Remember to set the radius correctly. 
 Fig. 4 ("front view") shows the important sizes of what we have so far
 
-![fig3-wheels](/images/rail-vehicles-tutorial-wheels.png)
+![fig3-wheels](../images/rail-vehicles-tutorial-wheels.png)
 
-![fig4-front-view](/images/rail-vehicles-tutorial-wheels-front-view.png)
+![fig4-front-view](../images/rail-vehicles-tutorial-wheels-front-view.png)
 
 ### Step 4: Chassis
 
 It's time to build a chassis and, on this train, connect it directly to the bogie. 
 
-![fig5-chassis](/images/rail-vehicles-tutorial-chassis.png)
+![fig5-chassis](../images/rail-vehicles-tutorial-chassis.png)
 
 ### Step 5: Couplers
 
 Now we add simple couplers to the front and back of the train. 
 We are using hooknodes with the auto-lock option.
 
-![fig6-couplers](/images/rail-vehicles-tutorial-couplers.png)
+![fig6-couplers](../images/rail-vehicles-tutorial-couplers.png)
 
 ### Step 6: Support beams
 
 The last step is to add more beams to make the structure stable. We can also add [contacters](/vehicle-creation/fileformat-truck/#contacters) and [ropables](/vehicle-creation/fileformat-truck/#ropables).
 
-![fig7-support-beams](/images/rail-vehicles-tutorial-support-beams.png)
+![fig7-support-beams](../images/rail-vehicles-tutorial-support-beams.png)
 
-![fig8-support-beams-view-right](/images/rail-vehicles-tutorial-support-beams-view-right.png)
+![fig8-support-beams-view-right](../images/rail-vehicles-tutorial-support-beams-view-right.png)
 
-![fig9-support-beams-view-front](/images/rail-vehicles-tutorial-support-beams-view-front.png)
+![fig9-support-beams-view-front](../images/rail-vehicles-tutorial-support-beams-view-front.png)
 
  
 
@@ -92,7 +92,7 @@ The 4 upper nodes slide on top of the rail, the four lower nodes are the guidanc
 Make them all low friction ( `set_node_defaults -1, 0, -1, -1` ). The four lower nodes need to be [contacters](/vehicle-creation/fileformat-truck/#contacters). 
 Give them a mass of `50` kg using the "l"-option in the nodes section. 
 
-![fig10-wagon-bogie](/images/rail-vehicles-tutorial-wagon-bogie.png)
+![fig10-wagon-bogie](../images/rail-vehicles-tutorial-wagon-bogie.png)
 
 ### Step 2: Placement node
 
@@ -100,29 +100,29 @@ In order to spawn the wagon correctly in the train spawner,
 node `0` needs to be in the center of the train, `0.53` meters below the upper four nodes of our bogie. 
 Node `0` needs to have the "c"-option in the nodes section for no ground detection. 
 
-![fig11-wagon-node0](/images/rail-vehicles-tutorial-wagon-node0.png) ![fig12-wagon-sizes](/images/rail-vehicles-tutorial-wagon-sizes.png)
+![fig11-wagon-node0](../images/rail-vehicles-tutorial-wagon-node0.png) ![fig12-wagon-sizes](../images/rail-vehicles-tutorial-wagon-sizes.png)
 
 ### Step 4: Chassis
 
 We add the chassis.
 
-![fig13-wagon-chassis](/images/rail-vehicles-tutorial-wagon-chassis.png)
+![fig13-wagon-chassis](../images/rail-vehicles-tutorial-wagon-chassis.png)
 
 ### Step 5: Couplers
 
 Now we add simple couplers to the front and back of the wagon. We are using hooknodes with the auto-lock option (Attention: disable high quality reflective effects in RoR, otherwise it will crash).
 
-![fig14-wagon-couplers](/images/rail-vehicles-tutorial-wagon-couplers.png)
+![fig14-wagon-couplers](../images/rail-vehicles-tutorial-wagon-couplers.png)
 
 ### Step 6: Support beams
 
 The last step is to add more beams to make the structure stable. We can also add contacters and ropables. 
 
-![fig15-wagon-supports](/images/rail-vehicles-tutorial-wagon-supports.png)
+![fig15-wagon-supports](../images/rail-vehicles-tutorial-wagon-supports.png)
 
-![fig16-wagon-supports-right](/images/rail-vehicles-tutorial-wagon-supports-right.png)
+![fig16-wagon-supports-right](../images/rail-vehicles-tutorial-wagon-supports-right.png)
 
-![fig17-wagon-supports-front](/images/rail-vehicles-tutorial-wagon-supports-front.png)
+![fig17-wagon-supports-front](../images/rail-vehicles-tutorial-wagon-supports-front.png)
 
 ### Step 7: Tweaking the truckfile
 
@@ -155,7 +155,7 @@ triggers
 44, 165, 0.05, 0.1, -55, -56, ih
 ```
 
-![fig18-wagon-supports-front](/images/rail-vehicles-tutorial-auto-coupler.png)
+![fig18-wagon-supports-front](../images/rail-vehicles-tutorial-auto-coupler.png)
 
 ### Buffers and chain coupling
 
@@ -166,7 +166,7 @@ As this is quite complicated and hard to rebuild, please use the node and beam o
 
 #### Chain coupling
 
-![fig19-eu-chain-coupling](/images/rail-vehicles-tutorial-eu-chain-coupling.png)
+![fig19-eu-chain-coupling](../images/rail-vehicles-tutorial-eu-chain-coupling.png)
 
 First image shows standard position of the couplers.
 When a trigger is activated, it disengages a hook on the left and lets the chain piece swing down. Another hook is engaged, connecting the chain to the other coupling.
@@ -175,7 +175,7 @@ When a trigger is activated, it disengages a hook on the left and lets the chain
 ![fig21-eu-locking-position]  (/images/rail-vehicles-tutorial-eu-locking-position.png)
 ![fig22-eu-connected]         (/images/rail-vehicles-tutorial-eu-connected.png)
 
-![fig23-eu-hooks-lockgroups](/images/rail-vehicles-tutorial-eu-hooks-lockgroups.png)
+![fig23-eu-hooks-lockgroups](../images/rail-vehicles-tutorial-eu-hooks-lockgroups.png)
 
 Trigger code:
 
@@ -198,11 +198,11 @@ triggers
 
 The European coupling system needs buffers to absorb collisions between the wagons.
 
-![fig24-eu-buffers-height](/images/rail-vehicles-tutorial-eu-buffers-height.png)
+![fig24-eu-buffers-height](../images/rail-vehicles-tutorial-eu-buffers-height.png)
 
 One side has a contactable slidenode connected to a shock. The other side has a contactable submesh plane that is also movable and connected to a shock. The submesh collides with the contacter and absorbs the collisions. Try it out ingame to see how it works!
 
-![fig25-eu-buffers-principle](/images/rail-vehicles-tutorial-eu-buffers-principle.png)
+![fig25-eu-buffers-principle](../images/rail-vehicles-tutorial-eu-buffers-principle.png)
 
 ## Troubleshooting
 

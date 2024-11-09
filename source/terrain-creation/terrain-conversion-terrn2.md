@@ -36,21 +36,21 @@ In this tutorial I will be converting the [Cliffdrop](http://archives.rigsofrods
 Once you've downloaded the template terrain, extract it into a folder using any zipping program (Windows can extract files by default,
 but I use [7-Zip](http://www.7-zip.org/download.html). It should look like this:
 
-![1.1](/images/terrain-conversion1.png)
+![1.1](../images/terrain-conversion1.png)
 
 Extract the 0.3x terrain zip into that same folder. Now it should look like this:
-![1.2](/images/terrain-conversion2.png)
+![1.2](../images/terrain-conversion2.png)
 
 Rename the template_04 files to match your terrain's file name
 **Delete the template_04.raw file first as you will get duplicate errors otherwise!**:
 
-![1.3](/images/terrain-conversion3.png)
+![1.3](../images/terrain-conversion3.png)
 
 ### Transfering terrain information to terrn2 terrain files
 Now that you've got both the new terrn2 files and the old terrain files in the zip, I will start out by transfering the information from the .terrn file to the .terrn2 file.
 If you're using Notepad++, you can open both files and have them side-by-side for easy editing:
-![3](/images/terrain-conversion4.png)
-![4](/images/terrain-conversion5.png)
+![3](../images/terrain-conversion4.png)
+![4](../images/terrain-conversion5.png)
 #### .terrn -> .terrn2
 
 ```
@@ -177,31 +177,31 @@ Using latest version of GIMP, this can be fixed by applying a black layer mask. 
 
 ##### Open your texture in GIMP (in this case, Cliffdrop.jpg)
 
-![gimp1](/images/terrain-conversiongimp1.png)
+![gimp1](../images/terrain-conversiongimp1.png)
 
 ##### Go to Layer > Mask > Add Layer Mask...
 
-![gimp2](/images/terrain-conversiongimp2.png)
+![gimp2](../images/terrain-conversiongimp2.png)
 
 #### Select Black (full transparency) and click 'Add'
 
-![gimp3](/images/terrain-conversiongimp3.png)
+![gimp3](../images/terrain-conversiongimp3.png)
 
 #### It should now look like this:
 
-![gimp4](/images/terrain-conversiongimp4.png)
+![gimp4](../images/terrain-conversiongimp4.png)
 
 #### Go to File > Export As...
 
-![gimp5](/images/terrain-conversiongimp5.png)
+![gimp5](../images/terrain-conversiongimp5.png)
 
 #### Set the file format to .dds
 
-![gimp6](/images/terrain-conversiongimp6.png)
+![gimp6](../images/terrain-conversiongimp6.png)
 
 #### Set the compression type to 'BC3 / DXT5' and click 'OK'
 
-![gimp5](/images/terrain-conversiongimp7.png)
+![gimp5](../images/terrain-conversiongimp7.png)
 
 You can now close GIMP.
 
@@ -211,7 +211,7 @@ Now go ahead and zip all the files and place them in your `Documents\My Games\Ri
 
 When you load the terrain in Rigs of Rods, You should now have a working terrn2 terrain!
 
-![FinishedMap](/images/terrain-conversionfin.png)
+![FinishedMap](../images/terrain-conversionfin.png)
 
 #### Download the finished terrain [here.](https://forum.rigsofrods.org/resources/cliff-drop-crash-test-map.66/)
 
@@ -225,15 +225,15 @@ Since paint.net does not have this functionality by default, you also need to in
 
 To install the plugins, open the zip file and drag the `.dll` files inside the `dpyplugins8.1` folder into paint.net's Effects folder, usually located in `C:\Program Files\paint.net\Effects`:
 
-![1](/images/remove-alpha-mask1.png)
+![1](../images/remove-alpha-mask1.png)
 
 Click `Continue` when it asks for administrator permission.
 
 Now open your `.dds` file in paint.net and navigate to `Effects -> Color -> Alpha_to_255`.
 
-![2](/images/remove-alpha-mask2.png)
+![2](../images/remove-alpha-mask2.png)
 
-![3](/images/remove-alpha-mask3.png)
+![3](../images/remove-alpha-mask3.png)
 
 That's it! You can now edit the image and re-apply the alpha mask using the above steps once you're done.
 

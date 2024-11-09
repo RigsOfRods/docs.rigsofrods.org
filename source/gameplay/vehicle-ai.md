@@ -5,7 +5,7 @@ Vehicle AI
 
 Introduced in version 2022.12, AI vehicles now can be controlled and customized through the "Vehicle AI" section of the top menu:
 
-![vehicle-ai-menu](/images/vehicle-ai-menu.png)
+![vehicle-ai-menu](../images/vehicle-ai-menu.png)
 
 
 Only available in single player, disabled in multiplayer to prevent abuse. 
@@ -32,11 +32,11 @@ Whether the vehicles will spawn behind or next to each other.
 
 Behind:
 
-![vehicle-ai-behind](/images/vehicle-ai-behind.png)
+![vehicle-ai-behind](../images/vehicle-ai-behind.png)
 
 Parallel:
 
-![vehicle-ai-parallel](/images/vehicle-ai-parallel.png)
+![vehicle-ai-parallel](../images/vehicle-ai-parallel.png)
 
 ### Repeat times 
 
@@ -106,7 +106,7 @@ If the chosen vehicle has [sections](/vehicle-creation/fileformat-truck/#section
 
 After setting up the above options, click the `Presets` drop down menu:
 
-![vehicle-ai-presets-menu](/images/vehicle-ai-presets-menu.png)
+![vehicle-ai-presets-menu](../images/vehicle-ai-presets-menu.png)
 
 On a supported terrain, the presets that are available for the terrain will be displayed. If not a list of supported terrains will be shown instead.
 
@@ -123,7 +123,7 @@ This feature is mostly meant for fun, it is not recommended to use this to creat
 
 Creating a new waypoint preset is simple. Just open the enlarged overview map (press `TAB` key twice):
 
-![vehicle-ai-overview-map](/images/vehicle-ai-overview-map.png)
+![vehicle-ai-overview-map](../images/vehicle-ai-overview-map.png)
 
 #### Controls
 
@@ -139,7 +139,7 @@ Scroll wheel - Zoom mini map
 
 !!! note 
 	The zoom feature only works with the small minimap:
-	![vehicle-ai-small-map](/images/vehicle-ai-small-map.png)
+	![vehicle-ai-small-map](../images/vehicle-ai-small-map.png)
 
 
 #### Adding waypoints
@@ -150,13 +150,13 @@ After placing the waypoints, click the `Start` button to test drive your route.
 
 Your overview map should now look similar to this:
 
-![vehicle-ai-waypointed-map](/images/vehicle-ai-waypointed-map.png)
+![vehicle-ai-waypointed-map](../images/vehicle-ai-waypointed-map.png)
 
 #### Exporting
 
 Now click on the `Waypoints` drop down menu:
 
-![vehicle-ai-waypoints-menu](/images/vehicle-ai-waypoints-menu.png)
+![vehicle-ai-waypoints-menu](../images/vehicle-ai-waypoints-menu.png)
 
 Coordinates of each waypoint will be displayed. Clicking on a coordinate will teleport you to the waypoint. 
 

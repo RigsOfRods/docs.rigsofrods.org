@@ -244,9 +244,9 @@ because some planes could have more than 4 engines and you couldn't control them
 
 Starting with Rigs of Rods version 2021.10, it is now possible to remap keyboard controls in-game. Just press the Controls button on the main menu:
 
-![main-menu-controls-button](/images/main-menu-controls-button.png)
+![main-menu-controls-button](../images/main-menu-controls-button.png)
 
-![controls-menu](/images/controls-menu.png)
+![controls-menu](../images/controls-menu.png)
 
 From here it's pretty self-explanatory, just select which control you want to change and press the new key. 
 
@@ -942,23 +942,23 @@ This has been tested with a DualShock 4 controller,  these instructions should a
 To begin, install [Steam](https://store.steampowered.com/about/) if you don't already have it and sign in. 
 
 You will first have to enable PlayStation controller support. Click `Steam` -> `Settings`
-![steam-settings](/images/steam-settings.png)
+![steam-settings](../images/steam-settings.png)
 
 On the Controller tab, select `General controller settings`
 
-![steam-controller-settings](/images/steam-controller-settings.png)
+![steam-controller-settings](../images/steam-controller-settings.png)
 
 Enable `PlayStation Configuration Support` then click `Back` to return to the settings menu
 
-![steam-ps-support.png](/images/steam-ps-support.png)
+![steam-ps-support.png](../images/steam-ps-support.png)
 
 Next you'll have to add RoR as a non-Steam game. To do this click `Games` -> `Add a Non-Steam Game to My Library...`
 
-![steam-non-steam-game](/images/steam-non-steam-game.png)
+![steam-non-steam-game](../images/steam-non-steam-game.png)
 
-Click ![steam-browse](/images/steam-browse.png), locate where RoR is installed (usually `C:\Program Files\Rigs of Rods`) then double-click `RoR.exe`
+Click ![steam-browse](../images/steam-browse.png), locate where RoR is installed (usually `C:\Program Files\Rigs of Rods`) then double-click `RoR.exe`
 
-![steam-add-non-steam-game](/images/steam-add-non-steam-game.png)
+![steam-add-non-steam-game](../images/steam-add-non-steam-game.png)
 
 Finally, click `Add selected programs`. RoR will now be in your game library. 
 
@@ -991,15 +991,15 @@ Extract both files into `Documents\My Games\Rigs of Rods\config`.
 
 Open FreePIE and press `File -> Open`. Browse to the `MouseControl.py` file you downloaded earlier:
 
-![1](/images/FreePIE-1.png)
+![1](../images/FreePIE-1.png)
 
-![2](/images/FreePIE-2.png)
+![2](../images/FreePIE-2.png)
 
-![3](/images/FreePIE-3.png)
+![3](../images/FreePIE-3.png)
 
 Then press `Script -> Run script`:
 
-![4](/images/FreePIE-4.png)
+![4](../images/FreePIE-4.png)
 
 The script should now be running. If you get an error, install vJoy.
 
@@ -1020,19 +1020,19 @@ The easiest way to configure your device for use in Rigs of Rods is to use the [
 !!! note
     If you have vJoy installed, you will have to disable it before running the tool!
 
-![vJoyDisable](/images/vJoyDisable.png)
+![vJoyDisable](../images/vJoyDisable.png)
 
 ### Launching the tool
 
 After downloading, extract the zip into a new folder. Then double-click `Run.bat` to launch the tool. 
 
-![5](/images/InputMappingTool-1.png)
+![5](../images/InputMappingTool-1.png)
 
 ### Adding new inputs
 
 To begin adding inputs, click `Add`.
 
-![6](/images/InputMappingTool-2.png)
+![6](../images/InputMappingTool-2.png)
 
 Select the event you want to assign an input to. In this example, I will use `TRUCK_ACCELERATE`
 
@@ -1052,11 +1052,11 @@ Click `Add` once ready, the tool will then ask you to move the axis/press a butt
 The popup will automatically close once the requested action is completed. 
 If not, press Enter.
 
-![7](/images/InputMappingTool-3.png)
+![7](../images/InputMappingTool-3.png)
 
 Repeat the process for all the inputs you want to add.
 
-![8](/images/InputMappingTool-4.png)
+![8](../images/InputMappingTool-4.png)
 
 Once you're done, it's time to export the keymap.
 
@@ -1067,11 +1067,11 @@ Once you're done, it's time to export the keymap.
 
 Click `Export Keymap` then select your device from the list.
 
-![9](/images/InputMappingTool-5.png)
+![9](../images/InputMappingTool-5.png)
 
 Browse to `Documents\My Games\Rigs of Rods\config`, then click `Open` to save the file.
 
-![10](/images/InputMappingTool-6.png)
+![10](../images/InputMappingTool-6.png)
 
 And finally, run Rigs of Rods and test your device! If you wish to make further edits in the future, you can import your input map by clicking `Import Keymap`.
 
@@ -1119,7 +1119,7 @@ This is what you'll want to name your file. You can choose to just save your inp
 
 If you rename the file, it is highly recommended you enable file extensions (View -> File name extensions):
 
-![explorer-file-ext](/images/explorer-file-ext.png)
+![explorer-file-ext](../images/explorer-file-ext.png)
 
 This is to help avoid you naming the file  `.map.map` by mistake. 
 

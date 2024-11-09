@@ -102,7 +102,7 @@ This enables you to add grass to the terrain. The arguments are (all on one line
 | Sway Length       | Length of sway displacement                                                                                                         | 0.05                                      |
 | Sway Distribution | How much of the wind wave is distributed                                                                                            | 10                                        |
 | Density           | Density of grass distribution. Maximum of 3.5                                                                                       | 0.3                                       |
-| MinX/Y<br> MaxX/Y | Determine size of grass: ![](/images/terrn-grass-instruction.png)
+| MinX/Y<br> MaxX/Y | Determine size of grass: ![](../images/terrn-grass-instruction.png)
 | Fade Type         | Adjusts method of transition (via distance):<br>0 - FADETECH\_GROW = Grass will grow out of the ground, looks good with grass that has ground color<br>1 - FADETECH\_ALPHAGROW = Like 0, but with alpha blending<br>2 - FADETECH\_ALPHA = Alpha blends in/out | 0 |
 | Min-Y<br>Max-Y    | Minimum/maximum appearance level. 0 for no minimum/maximum.<br>Example: `0, 10` for seagrass under the water level 10 or `10, 0` for grass above the sea level (if the sea level is 10) 
 | Material          | Material file for grass appearance                                                                                                  | Listed in `/data/paged/grass.material`    |

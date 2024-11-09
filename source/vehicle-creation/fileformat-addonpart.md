@@ -291,7 +291,7 @@ flexbodies
 "forset 222-237"
 ```
 
-![mv4-db-spoiler](/images/mv4-db-spoiler.jpg)
+![mv4-db-spoiler](../images/mv4-db-spoiler.jpg)
 
 
 ### Tweaking existing flexbodies
@@ -334,7 +334,7 @@ addonpart_tweak_flexbody 17 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_nose.mesh
 addonpart_tweak_flexbody 24 0.5,-4.45,0.08,-90,180,0, Bandit_daytona_wing.mesh
 ```
 
-![bandit_daytona](/images/bandit_daytona.jpg)
+![bandit_daytona](../images/bandit_daytona.jpg)
 
 ### Moving nodes
 
@@ -378,7 +378,7 @@ addonpart_tweak_node 102,    3.500,    0.343,    0.626
 addonpart_tweak_node 103,    3.500,    0.243,    0.626
 ```
 
-![mazda626_lowered](/images/mazda626_lowered.gif)
+![mazda626_lowered](../images/mazda626_lowered.gif)
 
 
 ### Wheels 
@@ -405,7 +405,7 @@ ATSCup			        mesh_standard	        ATSCup.png		ATSCup_s.png
 Tire                            mesh_standard		Tire.png
 ```
 
-![accord_626_atscup_wheels](/images/accord_626_atscup_wheels.jpg)
+![accord_626_atscup_wheels](../images/accord_626_atscup_wheels.jpg)
 
 Advanced wheel example, specifically made to fit the Gavril MV4S. Features `addonpart_tweak_prop` to move the brakes and calipers:
 
@@ -448,6 +448,6 @@ managedmaterials
 MotoMetal mesh_standard MotoMetal_962.dds MotoMetal_962_s.dds
 ```
 
-![motometal_mv4s](/images/motometal_mv4s.jpg)
+![motometal_mv4s](../images/motometal_mv4s.jpg)
 
 

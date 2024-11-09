@@ -106,7 +106,7 @@ If your vehicle uses a `.material` file for its textures, you will have to use `
 
  So for an example we will just do this now for the an-12.airplane.
 
-![antonov-thumb](/images/skins-example-antonov.png)
+![antonov-thumb](../images/skins-example-antonov.png)
 
 ### Step 1 - The material
 

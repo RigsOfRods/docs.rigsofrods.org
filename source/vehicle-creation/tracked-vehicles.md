@@ -42,8 +42,8 @@ editor (View> Wheels) and remove the wheel when you are done.
 
 **Red dots** = crawler frame nodes, **Black tubes** = crawler frame beams
 
-![1-frame](/images/caterpillar-slidenodes-01-frame.png)
-![2-frame-3d](/images/caterpillar-slidenodes-02-frame-3d.png)
+![1-frame](../images/caterpillar-slidenodes-01-frame.png)
+![2-frame-3d](../images/caterpillar-slidenodes-02-frame-3d.png)
 
 ## Step 2: Making the track links
 
@@ -72,8 +72,8 @@ And don't forget to make all track nodes contactable, in order to be driven by t
 
 **Blue dots** = track nodes
 
-![3-tracknodes](/images/caterpillar-slidenodes-03-track-nodes.png)
-![4-tracknodes-3d](/images/caterpillar-slidenodes-04-track-nodes-3d.png)
+![3-tracknodes](../images/caterpillar-slidenodes-03-track-nodes.png)
+![4-tracknodes-3d](../images/caterpillar-slidenodes-04-track-nodes-3d.png)
 
 **Beams or shocks?** In some cases the track links need to change length
 *in order to keep in place on the sliderail, and in most cases it's only about
@@ -82,8 +82,8 @@ And don't forget to make all track nodes contactable, in order to be driven by t
 
 **Purple lines** = shocks
 
-![5-tracklinks](/images/caterpillar-slidenodes-05-track-links.png)
-![6-tracklinks-3d](/images/caterpillar-slidenodes-06-track-links-3d.png)
+![5-tracklinks](../images/caterpillar-slidenodes-05-track-links.png)
+![6-tracklinks-3d](../images/caterpillar-slidenodes-06-track-links-3d.png)
 
 The shocks don't need to be able to extend or retract much at all, 
 Maximum contraction and extension values like 0.05 for the shocks should work well.
@@ -113,12 +113,12 @@ and add only "cab" lines.
 
 **"Light pink" dots and lines** = sprocket nodes and beams
 
-![7-sprocket](/images/caterpillar-slidenodes-07-sprocket.png)
-![8-sprocket-3d](/images/caterpillar-slidenodes-08-sprocket-3d.png)
+![7-sprocket](../images/caterpillar-slidenodes-07-sprocket.png)
+![8-sprocket-3d](../images/caterpillar-slidenodes-08-sprocket-3d.png)
 
 Also keep in mind that the sprocket always need to be wider than the track itself.
 
-![9-sprocket-w](/images/caterpillar-slidenodes-09-sprocket-3d-width.png)
+![9-sprocket-w](../images/caterpillar-slidenodes-09-sprocket-3d-width.png)
 
 **One or two sprockets?**
 
@@ -131,7 +131,7 @@ see further down for how to make the rotators).
 In the example with the 6-section sprocket, it can be done easily by
 connect three beams per side like the picture shows:
 
-![10-2sprockets](/images/caterpillar-slidenodes-10-double-sprocket-3d.png)
+![10-2sprockets](../images/caterpillar-slidenodes-10-double-sprocket-3d.png)
 
 ## Step 4: Making the rotator for the driving sprocket
 
@@ -147,19 +147,19 @@ The size of the rotator can without problems be about the same size
 **Green**: Rotator, **Olive green**: beams connecting the rotator to the sprocket
 **Orange**: beams connecting the rotator to the crawler frame.
 
-![11-rotator](/images/caterpillar-slidenodes-11-rotator.png)
-![12-rotator-3d](/images/caterpillar-slidenodes-12-rotator-3d.png)
-![13-rotator-front](/images/caterpillar-slidenodes-13-rotator-3d-front.png)
+![11-rotator](../images/caterpillar-slidenodes-11-rotator.png)
+![12-rotator-3d](../images/caterpillar-slidenodes-12-rotator-3d.png)
+![13-rotator-front](../images/caterpillar-slidenodes-13-rotator-3d-front.png)
 
 The finished result looks something like this (track link beams are left out).
 The yellow planes in the 2nd picture are the submesh (will be invisible ingame).
 
-![14-final](/images/caterpillar-slidenodes-14-final.png)
-![15-submesh](/images/caterpillar-slidenodes-15-final-submesh.png)
+![14-final](../images/caterpillar-slidenodes-14-final.png)
+![15-submesh](../images/caterpillar-slidenodes-15-final-submesh.png)
 
 This is the right track of my crawler crane, viewed in Blender with plugins:
 
-![16-blender](/images/caterpillar-slidenodes-16-blender.png)
+![16-blender](../images/caterpillar-slidenodes-16-blender.png)
 
 Hope it was helpful!
 

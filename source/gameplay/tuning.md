@@ -27,13 +27,13 @@ To install a part, simply click the box next to the part name. Click again to re
 
 When hovering over an add-on part, red outlines around other parts may appear:
 
-![addon-part-conflicts](/images/addon-part-conflicts.png)
+![addon-part-conflicts](../images/addon-part-conflicts.png)
 
 These are conflicts. Conflicting parts cannot be installed together. When installing a part that conflicts, the other parts will be disabled (marked with an X).
 
 Attempting to install a conflicting part through the selector will display an error:
 
-![addon-part-conflict2](/images/addon-part-conflict2.png)
+![addon-part-conflict2](../images/addon-part-conflict2.png)
 
 ### Parts selector
 
@@ -52,7 +52,7 @@ The Tuning menu also features the ability to toggle the visibility of props, fle
 
 <img src="/images/tuning-meshlist.png" width="800">
 
-![tuning-flexbody-toggle](/images/tuning-flexbody-toggle.gif)
+![tuning-flexbody-toggle](../images/tuning-flexbody-toggle.gif)
 
 Numbers next to element names are IDs, these are used for the [addonpart file format](/vehicle-creation/fileformat-addonpart/).
 
@@ -67,11 +67,11 @@ This can be useful for disabling specific elements of an addon (for instance, pa
 
 When installing wheel addons, it's possible for the wheel mesh to be facing the wrong direction. This can be fixed through the Tuning menu:
 
-![tuning-wheelside](/images/tuning-wheelside.png)
+![tuning-wheelside](../images/tuning-wheelside.png)
 
 Some vehicles feature flexbody tires, if the wheel includes a pre-mounted tire you will need to hide them:
 
-![tuning-hide-flextires](/images/tuning-hide-flextires.png)
+![tuning-hide-flextires](../images/tuning-hide-flextires.png)
 
 ## Saving and loading
 
@@ -80,13 +80,13 @@ Once you're finished customizing a vehicle, it can be saved by clicking `Save as
 !!! note 
 	The `Save as...` button only appears after installing an add-on or toggling an element. 
 
-![tuning-save1](/images/tuning-save1.png)
+![tuning-save1](../images/tuning-save1.png)
 
 Give it a name, then click `Save`. Existing tunes with the same name will not be overwritten unless `Overwrite` is enabled.
 
-![tuning-save2](/images/tuning-save2.png)
+![tuning-save2](../images/tuning-save2.png)
 
-![tuning-save3](/images/tuning-save3.png)
+![tuning-save3](../images/tuning-save3.png)
 
 The tune is now saved. Simply click on the tune name to load it. Press & hold the `Delete` button to permanently remove a tune.
 

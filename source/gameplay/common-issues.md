@@ -7,11 +7,11 @@ This page explains the most common problems players may experience with Rigs of 
 
 When attempting to launch RoR or change game settings, you may receive one of these errors or a variation of them:
 
-![create-settings-error](/images/create-settings-error.png)
+![create-settings-error](../images/create-settings-error.png)
 
-![error](/images/error-special-chars.png)
+![error](../images/error-special-chars.png)
 
-![error2](/images/error-generatecontent.png)
+![error2](../images/error-generatecontent.png)
 
 ### Causes
 
@@ -54,9 +54,9 @@ OneDrive is known to prevent RoR from accessing the Documents folder. The only s
 
 ## No render system plugin available
 
-![error_no_rendersys_avail](/images/error_no_rendersys_avail.png)
+![error_no_rendersys_avail](../images/error_no_rendersys_avail.png)
 
-![error_no_render_sys_selected](/images/error_no_render_sys_selected.png)
+![error_no_render_sys_selected](../images/error_no_render_sys_selected.png)
 
 If you downloaded RoR using the zip file, you may receive these errors. This is caused by the DirectX 9 Runtime not being installed. Install it from [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=8109) then restart your PC.
 
@@ -81,7 +81,7 @@ Older versions:
 
 ## Full screen crash (Cannot create device)
 
-![error-createdevice](/images/error-createdevice.png) 
+![error-createdevice](../images/error-createdevice.png) 
 
 This error is usually caused by enabling full screen with the wrong resolution (video mode) set. 
 
@@ -93,7 +93,7 @@ If this doesn't fix your error, then your GPU is most likely too old to run RoR.
 
 ## Null program bound
 
-![error-nullprogrambound](/images/error-nullprogrambound.png)
+![error-nullprogrambound](../images/error-nullprogrambound.png)
 
 This error occurs with some Intel integrated graphics chips. Unfortunately there's currently no fix.
 
@@ -106,7 +106,7 @@ More info: [GitHub issue](https://github.com/RigsOfRods/rigs-of-rods/issues/2385
 
 With some GPUs (mostly integrated ones), shadows on vehicles may appear glitchy: 
 
-![shadows-glitch](/images/shadows-glitch.gif)
+![shadows-glitch](../images/shadows-glitch.gif)
 
 This is caused by your GPU not supporting self-shadowing (Shadows from other objects casting onto the vehicle). Please try one of the following workarounds:
 
@@ -146,4 +146,4 @@ If you prefer to use the default materials instead, do the following:
 
 If the game crashes when spawning an aircraft, change the Lights setting (Graphics tab) to anything that isn't `None (fastest)`:
 
-![airplane-crash-lights-fix](/images/airplane-crash-lights-fix.png)
+![airplane-crash-lights-fix](../images/airplane-crash-lights-fix.png)

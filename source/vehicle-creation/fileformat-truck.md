@@ -178,7 +178,7 @@ nodes
 
 You can debug your truck's node masses by enabling `Debug actor mass` in settings:
 
-![massdebug](/images/fileformat-truck-massdebug.png)
+![massdebug](../images/fileformat-truck-massdebug.png)
 
 Look into your `RoR.log` after spawning and you could see something like this:
 
@@ -288,7 +288,7 @@ The three parameters are node numbers. The first is the reference node and may b
 
 Correct relative placement of these nodes is important, or it may break the inside camera view.
 
-![Cameras](/images/truckfile-cameras.gif)
+![Cameras](../images/truckfile-cameras.gif)
 
 ```
 cameras
@@ -495,7 +495,7 @@ help
 tracks/semihelp
 ```
 
-![imgui-commands-panel](/images/imgui-commands-panel.png)
+![imgui-commands-panel](../images/imgui-commands-panel.png)
 
 This is optional. (But it looks cool, so use it!)
 
@@ -798,11 +798,11 @@ wheels2
 
 Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the [wheels](#wheels) section, though there are a few differences.
 
-The side value should be `l` or `r` depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](/images/truckfile-meshwheel-tire-texture.jpg)
+The side value should be `l` or `r` depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](../images/truckfile-meshwheel-tire-texture.jpg)
 
 Here is an example picture of a rim mesh, as it should be modeled. The tire geometry is added dynamically afterward by the game, and will flex like a real tire.
 
-![Rim mesh](/images/truckfile-meshwheel-rim-mesh.jpg)
+![Rim mesh](../images/truckfile-meshwheel-rim-mesh.jpg)
 
 ```
 meshwheels 
@@ -1225,7 +1225,7 @@ The parameters are:
 -   **Affects engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; 0 means that moving this command won't affect engine RPM, so it is independent. Value larger than 0 specifies how much engine power will be needed for this command to move.
 -   **Needs engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Boolean</span>; <span style="color:#0B8A00">default = true</span>; value of "true" means that the command only works with a running engine. "False" means engine is not needed.
 
-![Inertia models](/images/truckfile-inertia-models.png)
+![Inertia models](../images/truckfile-inertia-models.png)
 
 ```
 commands2
@@ -1318,7 +1318,7 @@ rotators
 29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2,                       1,          1,         smooth,        smooth,             0.5,         true
 ```
 
-![Rotators](/images/truckfile-rotators.jpg)
+![Rotators](../images/truckfile-rotators.jpg)
 
 ### Rotators2
 
@@ -2020,7 +2020,7 @@ Engine dying in idle and first gear? Just define a single higher peak value wher
 ...
 ```
 
-![Torque curve](/images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then `800` rpm in first gear.
+![Torque curve](../images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then `800` rpm in first gear.
 
 The example to the left shows a screenshot of a torquecurve made for a small diesel engine:
 
@@ -3148,11 +3148,11 @@ videocamera
 
 **UV Mapped mirror mesh:**
 
-![videocamera-uv-blender](/images/videocamera-uv-blender.png)
+![videocamera-uv-blender](../images/videocamera-uv-blender.png)
 
 **You can use this texture to help UV map your mirror mesh:**
 
-![vidscreen-disabled](/images/vidscreen-disabled.png)
+![vidscreen-disabled](../images/vidscreen-disabled.png)
 
 **`.material` file:**
 
@@ -3174,13 +3174,13 @@ material Quattro_LM
 
 **Node position reference:**
 
-![videocamera-nodes](/images/videocamera-nodes.png)
+![videocamera-nodes](../images/videocamera-nodes.png)
 
 Make sure `vidscreen-disabled.png` is in your truck zip. **Use your own texture and material names to avoid conflicts!**
 
 You can enable videocamera debug in settings (Diagnostic tab) which activates helpful meshes which show position and orientation of the video-cameras set up:
 
-![videocamera-debug-ingame](/images/videocamera-debug-ingame.png)
+![videocamera-debug-ingame](../images/videocamera-debug-ingame.png)
 
 Notes:
 
@@ -3488,7 +3488,7 @@ soundsources
   
 **Please see [this page](/vehicle-creation/aircraft-and-aerodynamics/) for more information**
 
-![Wing reference](/images/truckfile-wing.png)
+![Wing reference](../images/truckfile-wing.png)
 
 The wings parameters are:
 

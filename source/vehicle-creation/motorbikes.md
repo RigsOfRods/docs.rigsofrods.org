@@ -13,7 +13,7 @@ Motorbikes are counter-intuitive, to turn left, you must steer right a little fi
 
 The roll means the angle between the camera plane and the ground plane, so you can adjust it by rotating the camera. This is the main way of controlling the bike, you essentially trick the bike into thinking its falling onto one side and it will always try to be level. In other words, you're not steering, just controlling the lean angle.
 
-![motorbike](/images/motorbike-scheme.png)
+![motorbike](../images/motorbike-scheme.png)
 
 ## Construction
 To make a motorcycle or similar you need to have good knowledge about node-beam systems and have experience of vehicle creation. A lot of details will not be covered because it should be obvious to an experienced user.
@@ -99,7 +99,7 @@ Should be quite stiff with high damping to stop the bike bouncing and jiggling a
 
 ## Example Bike
 
-![motorbike-example-ingame](/images/motorbike-example-ingame.png)
+![motorbike-example-ingame](../images/motorbike-example-ingame.png)
 
 [Polaris_GP2.5.0.truck](/download/Polaris_GP2.5.0.truck)
 

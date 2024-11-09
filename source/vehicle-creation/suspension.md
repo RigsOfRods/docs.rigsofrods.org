@@ -11,7 +11,7 @@ For syntax, see [truckfile reference](/vehicle-creation/fileformat-truck#shocks)
 
 A package containing all example trucks featured can be downloaded [here](/download/Suspension-examples.zip).
 
-![Suspension-examples](/images/Suspension-examples.jpg)
+![Suspension-examples](../images/Suspension-examples.jpg)
 
 ## Types
 
@@ -28,7 +28,7 @@ So, for soft suspension you would want low spring and relatively low damp, and t
 
 ### Leaf springs
 
-![leafspring](/images/softbody-suspension-leafspring-ingame-tn.jpg)
+![leafspring](../images/softbody-suspension-leafspring-ingame-tn.jpg)
 
 Leaf spring suspension is a very simple (in real life; it is much harder to model in RoR) and efficient design found on almost all trucks using beam axles. The design consists of a spring and a shackle, the spring is a long metal arc that bend when a force is exerted on the spring. One end of the spring is securely mounted to the frame and the other to a shackle. The shackle allows for one end of the spring to move back and forth as the spring straightens out under force.
 
@@ -38,7 +38,7 @@ The wheels of each axle are securely connected to each other using non independe
 
 ### Beam axle
 
-![beamaxle](/images/softbody-suspension-beamaxle-ingame.jpg)
+![beamaxle](../images/softbody-suspension-beamaxle-ingame.jpg)
 
 Beam axles are an extremely simple form of suspension, almost always seen on the back axles of vans and semi trailers. The wheels are directly attached to the axles, and cannot change their angle to it.
 
@@ -57,7 +57,7 @@ Example using a beam axle on the rear, with simple truss for lateral location.
 
 ### Watt's linkage
 
-![wattslinkage](/images/softbody-suspension-watts-linkage.jpg)
+![wattslinkage](../images/softbody-suspension-watts-linkage.jpg)
 
 Example using Watt's linkage method of lateral location.
 
@@ -73,7 +73,7 @@ Watt's Linkage:
 ### Panhard rod
 
 
-![panhardrod](/images/softbody-suspension-panhard-rod.jpg)
+![panhardrod](../images/softbody-suspension-panhard-rod.jpg)
 
 Panhard rod: 
 
@@ -84,7 +84,7 @@ Panhard rod:
 
 ### De Dion tube
 
-![dediontube](/images/softbody-suspension-dedion-tube.jpg)
+![dediontube](../images/softbody-suspension-dedion-tube.jpg)
 
 De Dion tube suspension is a relatively complex form of suspension, which falls in between the categories of independent and non independent suspension: The wheels are directly connected to each other using a sliding tube, forcing them to stay parallel to each other, but this tube is not connected to any other part of the vehicle. each wheel is actually held to the truck by a single A-arm
 
@@ -92,7 +92,7 @@ Due to their complexity, De Dion tubes are uncommon on modern vehicles.
 
 Example using a de Dion tube on the rear. Since a telescoping tube cannot be directly modeled in RoR, a Sarrus Linkage has been used instead. It provides exactly the same effect.
 
-![dediontube2](/images/softbody-suspension-dedion-tube-wonky.jpg)
+![dediontube2](../images/softbody-suspension-dedion-tube-wonky.jpg)
 
 The wheels connected to the tube are kept parallel, regardless of body roll or suspension travel on either side... The tube's length can change.
 
@@ -104,7 +104,7 @@ The wheels connected to the tube are kept parallel, regardless of body roll or s
 
 ### Walking beam
 
-![walkingbeam1](/images/softbody-suspension-walking-beam.png)
+![walkingbeam1](../images/softbody-suspension-walking-beam.png)
 
 Walking beam is a special form of suspension: It solidly links two axles together, meaning that all four wheels on those axles must move in unison. Indeed, the setup is know as walking beam due to the way that trucks are see to 'walk' over obstacles. This design allows the tires to conform to the landscape, evening out the pressure on each tire. 
 
@@ -115,15 +115,15 @@ Example using extremely simple walking beam suspension on the rear.
 -   <span style="color:#19ac58">Green: simple truss for lateral location.</span>
 -   <span style="color:#9e8f02">Yellow: Frame for walking beam</span>
 
-![walkingbeam2](/images/softbody-suspension-walking-beam-frame.png)
+![walkingbeam2](../images/softbody-suspension-walking-beam-frame.png)
 
 The bogie that holds the truck's four back wheels together.
 
-![walkingbeam3](/images/softbody-suspension-walking-beam-ingame.jpg)
+![walkingbeam3](../images/softbody-suspension-walking-beam-ingame.jpg)
 
 A concept vehicle in game.
 
-![walkingbeam4](/images/softbody-suspension-walking-beam-diagram.jpg)
+![walkingbeam4](../images/softbody-suspension-walking-beam-diagram.jpg)
 
 - Black: Structural beams
 - <span style="color:#19ac58">Green: The suspension</span>
@@ -135,7 +135,7 @@ There are no significant connections between wheels in independent suspension se
 
 ### Swing axle
 
-![swingaxle](/images/softbody-suspension-swing-axle.jpg)
+![swingaxle](../images/softbody-suspension-swing-axle.jpg)
 
 The swing axle is a small step up from the beam axle. Although it is the most common form of suspension on Pricorde's trucks, it probably produces the worst handling vehicles in the game, due to the way the camber changes when going over bumps.
 
@@ -151,7 +151,7 @@ Example using swing axles on the rear. The axles on this truck are quite short, 
 
 ### Double wishbone
 
-![doublewishbone](/images/softbody-suspension-double-wishbone.jpg)
+![doublewishbone](../images/softbody-suspension-double-wishbone.jpg)
 
 Double wishbone suspension is most common in racing cars and larger passenger cars. The wheels are kept perpendicular to the road through the use of two A-arms, one above the other. It is relatively easy to tune for handling.
 
@@ -170,7 +170,7 @@ By far and away the most common form of front suspension for passenger cars, the
 
 #### Example 1
 
-![mcph](/images/softbody-suspension-mcpherson.jpg)
+![mcph](../images/softbody-suspension-mcpherson.jpg)
 
 Old-style example using McPherson strut suspension on the front. The straight line mechanism has been hidden on the right hand side to provide a better view of the overall setup.
 
@@ -184,13 +184,13 @@ Old-style example using McPherson strut suspension on the front. The straight li
 
 #### Example 2
 
-![mcphslidenodes](/images/softbody-suspension-mcpherson-slidenodes.jpg)
+![mcphslidenodes](../images/softbody-suspension-mcpherson-slidenodes.jpg)
 
 An example truck using slidenodes to keep the beam count down. No beams in the suspension mechanism have been hidden, the shocks are hold in line with slidenodes.
 
 ### Torsion bar
 
-![torsionbar](/images/suspension-torsion-bar.jpg)
+![torsionbar](../images/suspension-torsion-bar.jpg)
 
 A torsion bar is a simple form of independent suspension that uses a flexible rod to provide spring force instead of a coil spring. 
 It can be found on many vehicles from the VW beetle, to light trucks and SUVs, or even trailers.
@@ -213,7 +213,7 @@ Example using torsion bar suspension front and rear. You will notice the wheels 
 
 ### Anti roll bars
 
-![antiroll](/images/softbody-suspension-anti-roll-bars.jpg)
+![antiroll](../images/softbody-suspension-anti-roll-bars.jpg)
 
 Anti roll bars are stiff beams which run across vehicle axles to lessen body roll when cornering. This makes vehicles hold the road much better when cornering. 
 
@@ -233,7 +233,7 @@ Liftable axles have been implemented in a couple of ways in RoR.
 
 #### Example 1
 
-![liftaxle](/images/softbody-suspension-liftable-axle-diagram.jpg)
+![liftaxle](../images/softbody-suspension-liftable-axle-diagram.jpg)
 
 Creating a basic liftable axle is as easy as replacing part of the supporting beams with commands.  Note that if your commands are too long/too short, your shocks will break. In the picture above, the commands lift the node that the shock is attached to, effectively moving the axle.
 
@@ -244,7 +244,7 @@ Creating a basic liftable axle is as easy as replacing part of the supporting be
 Another way of accomplishing this same concept without stressing the axles is to lift the shocks, instead of the wheel.  
 The commands will lift the shock and, consequently, the wheel will travel with the shock thus lifting the axle without stressing the shocks.  This allows you to have very stiff shocks without fear of breaking.
 
-![liftaxle2](/images/softbody-suspension-liftable-axle.jpg)
+![liftaxle2](../images/softbody-suspension-liftable-axle.jpg)
 
 - Top image: Axle lowered. 
 - Bottom image: Axle raised. 

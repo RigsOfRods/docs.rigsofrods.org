@@ -110,7 +110,7 @@ Engine dying in idle and first gear? Just define a single higher peak value wher
     ...
 ```
 
-![torquecurve-example](/images/truckfile-torquecurve.png)
+![torquecurve-example](../images/truckfile-torquecurve.png)
 
 
 To the example above in the right spot will result the engine idle a little bit higher then 800 rpm in first gear. 

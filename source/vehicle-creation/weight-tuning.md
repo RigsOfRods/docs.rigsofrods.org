@@ -22,7 +22,7 @@ Since the new physics support this, here is your tutorial:
 
 Here we go...first of all a template truck:
 
-![Lightweight-truck](/images/lightweight-truck.png)
+![Lightweight-truck](../images/lightweight-truck.png)
 
 <b><font color="red">300 kg... RoR's first working 200 km/h light weight truck</font></b> 
 

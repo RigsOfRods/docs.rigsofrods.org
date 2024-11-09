@@ -173,7 +173,7 @@ A good example vehicle that shows how the arm node works is box5diesel's [Baja T
     In the top diagram, the arm node is behind the wheel, so as the wheel spins counterclockwise, it applies upward force to the node(red) in the blue circle, therefore imparting <i><b>less</b></i> traction as the chassis is pushed <i><b>upward</b></i>.In the bottom diagram, the arm node is in front of the wheel, so as the wheel spins counterclockwise, it applies downward force to the circled node, therefore imparting <i><b>more</b></i> traction as the chassis is pushed <i><b>downward</b></i>.
  </p>
 
-![arm-node](/images/wheels-reference-arm-node.jpg)
+![arm-node](../images/wheels-reference-arm-node.jpg)
 
 ## Steering
 
@@ -191,7 +191,7 @@ The "wheel" nodes labeled here will become the position for the [wheels](/vehicl
 
 If you find your nodes are contacting the ground and obstructing movement, you can make specific nodes non-contactable. See the [nodes](/vehicle-creation/fileformat-truck#nodes) syntax.
 
-![wheelhub-wheel](/images/wheels-steering-wheelhub.jpg)
+![wheelhub-wheel](../images/wheels-steering-wheelhub.jpg)
 
 ### Axle
 
@@ -244,7 +244,7 @@ hydros
 
 The finished axle can look like this:
 
-![finished-axle](/images/wheels-steering-complete.png)
+![finished-axle](../images/wheels-steering-complete.png)
 
 Don't forget to add suspension (as covered in the previous chapter)
 

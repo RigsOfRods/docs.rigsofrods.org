@@ -13,11 +13,11 @@ In order to success in this tutorial/guide, you must have a modeling program wit
 
 If you have a profession in SketchUp, you may know how to make some pretty nice stuff. For example, here is a complex house I made.
 
-![House visual mesh](/images/collisionmeshes-house-visual.png)
+![House visual mesh](../images/collisionmeshes-house-visual.png)
 
 ... and here it is in-game
 
-![House ingame](/images/collisionmeshes-house-ingame.png)
+![House ingame](../images/collisionmeshes-house-ingame.png)
 
 As you may see, I get ~25 frames-per-second, while I normally get ~100 around a simpler object. A collision mesh will polish up the framerate and physic lag.
 
@@ -25,11 +25,11 @@ As you may see, I get ~25 frames-per-second, while I normally get ~100 around a 
 
 You want to make the collision mesh be exactly around the model, or else it will be out of place. My best suggestion is to model over it, but snapping your model to the original model. So, here is my model:
 
-![House visual mesh](/images/collisionmeshes-house-visual.png)
+![House visual mesh](../images/collisionmeshes-house-visual.png)
 
 ... and here is the collision mesh I modeled.
 
-![House collision mesh](/images/collisionmeshes-house.png)
+![House collision mesh](../images/collisionmeshes-house.png)
 
 As you may see, I left out the window detail, door detail, roof detail, the stairs, the fence, and the chimney. I did this because the car won't be interacting much with those aspects of the house in the first place, so why waste the framerate on them?
 
@@ -39,30 +39,30 @@ Once you are done modeling it, make sure it is right around your model.
 
 Once it is put next to the model (make sure they are separate groups), select only ONE of them, and click the following...
 
-![](/images/collisionmeshes-sketchup-5.png)
+![](../images/collisionmeshes-sketchup-5.png)
 
 Then name your object however you like. I will name it "House".
 
-![](/images/collisionmeshes-sketchup-6.png)
+![](../images/collisionmeshes-sketchup-6.png)
 
 The reason why you want it separate is because one will be the house \[appearance\] and one will be the collision mesh \[physical structure\]. Then click "OK" and a series of windows come up.
 
-![](/images/collisionmeshes-sketchup-7.png)
+![](../images/collisionmeshes-sketchup-7.png)
 
-![](/images/collisionmeshes-sketchup-8.png)
+![](../images/collisionmeshes-sketchup-8.png)
 
-![](/images/collisionmeshes-sketchup-9.png)
+![](../images/collisionmeshes-sketchup-9.png)
 
 Then, separately select the collision mesh, and repeat the process. For the name, add "Collision" or "-Collision" at the end so it is easier to identify. It can even be as simple as as adding a "1" or "C" to the end. I will use the "-Collision" extension for the example.
-![](/images/collisionmeshes-sketchup-10.png)
+![](../images/collisionmeshes-sketchup-10.png)
 
 Then the series of windows pop up.
 
-![](/images/collisionmeshes-sketchup-7.png)
+![](../images/collisionmeshes-sketchup-7.png)
 
-![](/images/collisionmeshes-sketchup-8.png)
+![](../images/collisionmeshes-sketchup-8.png)
 
-![](/images/collisionmeshes-sketchup-9.png)
+![](../images/collisionmeshes-sketchup-9.png)
 
 You are done exporting!
 
@@ -70,45 +70,45 @@ You are done exporting!
 
 As a standard procedure for SketchUp, go to the following directory:
 
-![](/images/collisionmeshes-sketchup-11.png)
+![](../images/collisionmeshes-sketchup-11.png)
 
 Then, go to the .MATERIAL file.
 
-![](/images/collisionmeshes-sketchup-12.png)
+![](../images/collisionmeshes-sketchup-12.png)
 
 Open it, and remove the section "Material SketchUp Default" or something along those lines.
 
-![](/images/collisionmeshes-sketchup-13.png)
+![](../images/collisionmeshes-sketchup-13.png)
 
 Then, go to the .ODEF file.
 
-![](/images/collisionmeshes-sketchup-14.png)
+![](../images/collisionmeshes-sketchup-14.png)
 
 Then, target the mesh line.
 
-![](/images/collisionmeshes-odef-1.png)
+![](../images/collisionmeshes-odef-1.png)
 
 Then, replace it with the collision name of your mesh.
 
-![](/images/collisionmeshes-odef-2.png)
+![](../images/collisionmeshes-odef-2.png)
 
 ### Using the files
 
 For objects, the necessary files are the .ODEF, the .MESH, the .MATERIAL, and any textures left behind.
 
-![](/images/collisionmeshes-sketchup-17.png)
+![](../images/collisionmeshes-sketchup-17.png)
 
 For the collision mesh, all you need is the .MESH of the collision mesh. Because it does not need a .MATERIAL file because it's invisible, and it does not need an .ODEF because it uses the .ODEF of the original house.
 
-![](/images/collisionmeshes-sketchup-18.png)
+![](../images/collisionmeshes-sketchup-18.png)
 
 Then, add those to the index of the .ZIP of the terrain you will be adding the object to.
 
-![](/images/collisionmeshes-sketchup-19.png)
+![](../images/collisionmeshes-sketchup-19.png)
 
 Once I placed the object, look how much better my framerate is compared to the one in Step II.
 
-![](/images/collisionmeshes-house-ingame-2.png)
+![](../images/collisionmeshes-house-ingame-2.png)
 
 ## Collision Mesh Troubleshooting
 

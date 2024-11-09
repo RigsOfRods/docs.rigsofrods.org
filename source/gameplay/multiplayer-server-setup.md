@@ -38,7 +38,7 @@ Let's begin by downloading the latest Windows server release from [here](https:/
 
 Extract the downloaded zip into a new folder:
 
-![server-filelist-win](/images/server-filelist-win.png)
+![server-filelist-win](../images/server-filelist-win.png)
 
 !!! note "Tip"
 	It is highly recommended to enable file extensions in File Explorer as this will make it easier to differentiate each config file.<br>
@@ -51,7 +51,7 @@ Extract the downloaded zip into a new folder:
 
 Inside the folder, open (`server.cfg`) with Notepad or your preferred text editor.
 
-![server-config-notepad](/images/server-config-notepad.png)
+![server-config-notepad](../images/server-config-notepad.png)
 
 This is the main configuration file for your server. Each section contains a comment explaining what it does, pretty self-explanatory.
 
@@ -63,7 +63,7 @@ Save and close the file once you're finished.
 
 This file sets your server's Message of the Day (MOTD), shown on server join:
 
-![server-motd](/images/server-motd.png)
+![server-motd](../images/server-motd.png)
 
 Fill it out with whatever you'd like. 
 
@@ -81,7 +81,7 @@ This file configures the admins and moderators on your server. Please see the [U
 
 Once you're finished configuring your server, double-click `run.bat` to launch the server:
 
-![server-win-start](/images/server-win-start.png)
+![server-win-start](../images/server-win-start.png)
 
 If successful, your server should now be running and registered on the server list!
 
@@ -105,13 +105,13 @@ Extract the zip with the following command:
 
 The server files should now be located in the `rorserver` folder:
 
-![server-filelist-linux](/images/server-filelist-linux.png)
+![server-filelist-linux](../images/server-filelist-linux.png)
 
 ### server.cfg
 
 In SSH, Go into the newly created `rorserver` folder and type `nano server.cfg`.
 
-![server-config-nano](/images/server-config-nano.png)
+![server-config-nano](../images/server-config-nano.png)
 
 This is the main configuration file for your server.
 
@@ -125,7 +125,7 @@ Once you're done, press `CTRL+O` to save the file and `CTRL+X` to exit.
 
 This file sets your server's Message of the Day (MOTD), shown on server join:
 
-![server-motd](/images/server-motd.png)
+![server-motd](../images/server-motd.png)
 
 Fill it out with whatever you'd like. 
 
@@ -150,7 +150,7 @@ sh RunRoR.sh
 
 `chmod +x rorserver` only needs to be run once to set permissions.
 
-![server-linux-start](/images/server-linux-start.png)
+![server-linux-start](../images/server-linux-start.png)
 
 If successful, your server should now be running and registered on the server list!
 
@@ -217,7 +217,7 @@ Save the file and restart your server. If the server read the auth file correctl
 
 The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
 
-![userauth-ingame](/images/userauth-ingame.png)
+![userauth-ingame](../images/userauth-ingame.png)
 
 ### Moderation commands
 

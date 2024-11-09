@@ -40,17 +40,17 @@ For this reason we recommend using Blender 2.79 to edit meshes.
 If you're following this tutorial, chances are you probably already have a mesh you want to edit. In this tutorial I'll be editing [Box5Diesel's Ram EXT](https://forum.rigsofrods.org/resources/box-dodge-ram.319/).
 Open the `.zip` file for the vehicle, and extract the correct `.mesh` file(s) and the textures (`.dds`, `.png`, etc) into a folder you can easily access:
 
-![1](/images/blender-edit-meshandtextures.png)
+![1](../images/blender-edit-meshandtextures.png)
 
 Next, download the [Ogre Command Line Tools](https://forum.rigsofrods.org/resources/ogre-command-line-tools.967/) and extract the archive into a new folder. Inside you'll find `OgreXMLConverter.exe`.
 
 Now simply drag and drop the mesh onto `OgreXMLConverter.exe` to get a `.mesh.xml`:
 
-![2](/images/blender-edit-converting-mesh-to-xml.png)
+![2](../images/blender-edit-converting-mesh-to-xml.png)
 
 You should now have a `.mesh.xml` file in the same folder:
 
-![3](/images/blender-edit-converted-xml.png)
+![3](../images/blender-edit-converted-xml.png)
 
 We're ready to launch Blender now.
 
@@ -60,21 +60,21 @@ First, download the latest [Ogre Import/Export add-ons](https://github.com/Curio
 
 Now open Blender. Click `File` -> `User Preferences`:
 
-![4](/images/blender-edit-userprefs1.png)
+![4](../images/blender-edit-userprefs1.png)
 
 Click `Add-ons` -> `Install from File`:
 
-![5](/images/blender-edit-userprefs2.png)
+![5](../images/blender-edit-userprefs2.png)
 
 Select the `RoR_ImportExport_*.zip` file you downloaded earlier.
 
 Type `rigs` into the search bar and both add-ons should appear:
 
-![6](/images/blender-edit-userprefs3.png)
+![6](../images/blender-edit-userprefs3.png)
 
 Once both add-ons are enabled by clicking the checkbox, select `Save User Settings`:
 
-![7](/images/blender-edit-userprefs4.png)
+![7](../images/blender-edit-userprefs4.png)
 
 You can now close the `User Preferences` window. 
 
@@ -82,29 +82,29 @@ You can now close the `User Preferences` window.
 
 Select `File` -> `Import` -> `Ogre3D (.mesh.xml)`:
 
-![8](/images/blender-edit-import1.png)
+![8](../images/blender-edit-import1.png)
 
 Find & select the `.mesh` file.
 
-![9](/images/blender-edit-import2.png)
+![9](../images/blender-edit-import2.png)
 
 You should now see something similar to this:
 
-![10](/images/blender-edit-justimported.png)
+![10](../images/blender-edit-justimported.png)
 
 Press the `Z` key twice to get out of that shading mode. You should now see this:
 
-![11](/images/blender-edit-zkeytwice.png)
+![11](../images/blender-edit-zkeytwice.png)
 
 !!! warning
     The importer will automatically separate meshes if the `.mesh.xml` contains multiple materials. The object names match the material name. If there's many objects with the same material name, you should be safe to join them by pressing `CTRL+J`:
 	
-    ![blender-edit-joiningobjects.png](/images/blender-edit-joiningobjects.png)
+    ![blender-edit-joiningobjects.png](../images/blender-edit-joiningobjects.png)
 
 
 It should look similar to this now:
 
-![12](/images/blender-edit-objectsjoined.png)
+![12](../images/blender-edit-objectsjoined.png)
 
 ## Fixing object shading
 
@@ -112,23 +112,23 @@ You'll probably notice that your mesh is very blocky and/or has lots of shading 
 
 On the left menu (Press `T` if it's not already open) select `Smooth`. You need to be in Object Mode (`TAB` key) for this to appear:
 
-![13](/images/blender-edit-setsmooth.png)
+![13](../images/blender-edit-setsmooth.png)
 
 Now press the `TAB` key again to go into Edit Mode:
 
-![14](/images/blender-edit-editmode.png)
+![14](../images/blender-edit-editmode.png)
 
 Select `Remove Doubles` from the `T` menu:
 
-![15](/images/blender-edit-removingdoubles.png)
+![15](../images/blender-edit-removingdoubles.png)
 
 Now head over to the tool menu on the right and find the blue wrench icon -> `Add Modifier` -> `Edge Split`:
 
-![16](/images/blender-edit-edgesplit1.png)
+![16](../images/blender-edit-edgesplit1.png)
 
 The `Edge Split` Modifier should now be selected. The default `Split Angle` (30) should be fine in most cases. **Do not apply the modifier. The exporter will do this for you.**
 
-![17](/images/blender-edit-edgesplit2.png)
+![17](../images/blender-edit-edgesplit2.png)
 
 !!! note
 	For some models just applying edge split won't be enough, further work may be required (such as marking faces sharp).**
@@ -137,46 +137,46 @@ The `Edge Split` Modifier should now be selected. The default `Split Angle` (30)
 
 Now we can apply the texture. Press the `TAB` key to go into Edit Mode if you're not in it already and click the circle icon on the bottom left -> `UV/Image Editor`:
 
-![18](/images/blender-edit-applyingtexture1.png)
+![18](../images/blender-edit-applyingtexture1.png)
 
 The `UV/Image Editor` should now be open:
 
-![19](/images/blender-edit-applyingtexture2.png)
+![19](../images/blender-edit-applyingtexture2.png)
 
 Select `Open` from the bottom bar:
 
-![20](/images/blender-edit-applyingtexture3.png)
+![20](../images/blender-edit-applyingtexture3.png)
 
 Find & select your texture file:
 
-![21](/images/blender-edit-applyingtexture4.png)
+![21](../images/blender-edit-applyingtexture4.png)
 
 The texture file should now be open in the `UV/Image Editor`. 
 
 Now go to the top right and find the little plus icon, or press `N` to open it:
 
-![22](/images/blender-edit-applyingtexture5.png)
+![22](../images/blender-edit-applyingtexture5.png)
 
 Open the `Shading` menu and click `Textured Solid`:
 
-![23](/images/blender-edit-applyingtexture6.png)
+![23](../images/blender-edit-applyingtexture6.png)
 
 
 It should now look similar to this:
 
-![24](/images/blender-edit-applyingtexture7.png)
+![24](../images/blender-edit-applyingtexture7.png)
 
 ## Editing the mesh
 
 You're now ready to start editing the mesh. For this tutorial, I removed the exhaust stacks from the bed:
 
-![25](/images/blender-edit-editedmesh.png)
+![25](../images/blender-edit-editedmesh.png)
 
 ## Setting the object name
 
 In the outliner (object list), double-click the object name to rename it. This will be the name of your mesh when exporting.
 
-![26](/images/blender-edit-naming-mesh2.png)
+![26](../images/blender-edit-naming-mesh2.png)
 
 In this example, I'll name it `BoxDodgeCummins-NoStacks`.
 
@@ -184,38 +184,38 @@ In this example, I'll name it `BoxDodgeCummins-NoStacks`.
 
 Now select the circle icon next to the triangle icon and click `New`:
 
-![27](/images/blender-edit-mat1.png)
+![27](../images/blender-edit-mat1.png)
 
 The easiest way to find the material name is by opening the `.mesh.xml` file in a text editor and search "material":
 
-![28](/images/blender-edit-finding-mat.png)
+![28](../images/blender-edit-finding-mat.png)
 
-![29](/images/blender-edit-mat2.png)
+![29](../images/blender-edit-mat2.png)
 
 ## Exporting
 
 Before we export, if you moved the object while editing it you will need to apply `Location/Rotation/Scale` by pressing `CTRL+A` otherwise it will be placed incorrectly in-game:
 
-![30](/images/blender-edit-ctrla.png)
+![30](../images/blender-edit-ctrla.png)
 
 Select your mesh then click `File` -> `Export` -> `Ogre3D (.scene and .mesh.xml)`:
 
-![31](/images/blender-edit-export1.png)
+![31](../images/blender-edit-export1.png)
 
 Change your export settings to match the screenshot (all other settings can be left to their defaults):
 
-![32](/images/blender-edit-export2.png)
+![32](../images/blender-edit-export2.png)
 
 You should now have a new `.mesh.xml` and `.mesh` file in your folder:
 
-![32.1](/images/blender-edit-exported.png)
+![32.1](../images/blender-edit-exported.png)
 
 The exporter will automatically convert the `.mesh.xml` to `.mesh` as long RoR is installed to the default location.
 
 If you want to preview your exported model, you can use [OgreMeshy](https://forum.rigsofrods.org/resources/ogremeshy.595/) to view it:
 (You can make a `.material` file if you want it to be textured in OgreMeshy)
 
-![35](/images/blender-edit-preview-ogremeshtool.png)
+![35](../images/blender-edit-preview-ogremeshtool.png)
 
 ## Testing in-game
 
@@ -226,7 +226,7 @@ Now just edit the vehicle's `.truck` file to match the name of your new mesh and
 forset 7, 12, 40, 41, 44-66, 69-87, 111
 ```
 
-![35](/images/blender-edit-ingame.png)
+![35](../images/blender-edit-ingame.png)
 
 Congratulations!
 
@@ -243,7 +243,7 @@ You forgot to convert the `.mesh` to `.mesh.xml`, as described in the [Getting s
 
 Change the "swap axis" option in the export settings:
 
-![36](/images/blender-export-swap-axis.png)
+![36](../images/blender-export-swap-axis.png)
 
 Rigs of Rods meshes require the axis to be swapped to `xz-y` due to differences in the axises between RoR and Blender:
 
