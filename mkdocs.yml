@@ -79,6 +79,7 @@ nav:
       - Visual editors: tools-tutorials/visual-editors.md
       - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
       - Documentation contributing guide {How to edit the docs): tools-tutorials/docs-contributing-guide.md
+      - Branding: tools-tutorials/branding.md
   - Vehicle creation:
       - Truck file format: vehicle-creation/fileformat-truck.md
       - Soundscript file format: vehicle-creation/fileformat-soundscript.md
