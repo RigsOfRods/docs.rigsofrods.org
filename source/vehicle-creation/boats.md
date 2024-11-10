@@ -9,7 +9,7 @@ You can make many different shaped hulls, they will affect the performance of th
 Try your best to use the least amount of nodes as possible, 
 For a typical hull, you should use from 10-30 nodes at the most. 
  
-Step2: When you finish your softbody, you need to [submesh](/technical/fileformat-truck#submesh) it. 
+Step2: When you finish your softbody, you need to [submesh](fileformat-truck.md#submesh) it. 
 Submeshing it will allow the boat to float, instead of sinking.
  
 Step3: try it out ingame. It should float nicely. 
@@ -24,7 +24,7 @@ and stabilizing it with beams,
   
 The picture illustrates the setup. Please imagine the box is actually a boat-hull :)
  
-![](/images/nautical-screwprop.png) 
+![](../images/nautical-screwprop.png) 
   
 Step2: You should enter the "screwprops" section into your .boat file.
 

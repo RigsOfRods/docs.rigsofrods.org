@@ -14,7 +14,7 @@ When launching RoR for the first time, the user directory will be created. On Wi
 
 The game should open in a small window:
 
-![firstrun1](/images/bg-firstrun1.png)
+![firstrun1](../images/bg-firstrun1.png)
 
 Before playing, you should first change your settings. Begin by clicking `Settings`.
 
@@ -22,43 +22,43 @@ First, make sure the rendering system is set to `Direct3D9 Rendering Subsystem`.
 
 If you're running Linux, ignore this as DirectX is not available. 
 
-![firstrun2](/images/bg-firstrun2.png)
+![firstrun2](../images/bg-firstrun2.png)
 
 Now select `Video Mode` and change it to your monitor's native resolution then restart the game to apply your changes.
 
-![firstrun3](/images/bg-firstrun3.png)
+![firstrun3](../images/bg-firstrun3.png)
 
-![firstrun4](/images/bg-firstrun4.png)
+![firstrun4](../images/bg-firstrun4.png)
 
 Click `Settings` again, then click the `Graphics` tab.
 
 The following settings should be fine for most people, but feel free to adjust them to fit your liking.
 
-![firstrun5](/images/bg-firstrun5.png)
+![firstrun5](../images/bg-firstrun5.png)
 
 Then click the `Audio` tab and set the device and volume.
 
-![firstrun6](/images/bg-firstrun6.png)
+![firstrun6](../images/bg-firstrun6.png)
 
 Once you're finished, restart the game again. 
 
 Now you're ready to begin playing. Start by clicking `Single player` to open the terrain selector. 
 
-![terrnselect](/images/bg-terrnselect.png)
+![terrnselect](../images/bg-terrnselect.png)
 
 For the sake of this tutorial, select *North St Helens*. 
 
 Once the terrain loads, you will spawn as a country person known lovingly as RoRBot. You control him with the arrow keys while using `SHIFT` to run and `SPACE` to jump (good for getting over bumps, or if you get stuck).
 
-![rorbot](/images/bg-rorbot.png)
+![rorbot](../images/bg-rorbot.png)
 
 You spawn in front of a building known as the *Rig-a-Deal*. This is where you will spawn new trucks. Walk into the "Office" to bring up the selection menu. You can also spawn a vehicle anywhere at any time by pressing `CTRL+G`.
 
-![vehselect](/images/bg-vehselect.png)
+![vehselect](../images/bg-vehselect.png)
 
 Use the mouse or arrow keys to move through the menus. Select the *DAF Semi truck*. The truck spawns inside the Rig-a-Deal with you inside it. If you happen to spawn the truck with RoRBot outside of the vehicle, simply hit `ENTER`/`RETURN` to get in a vehicle.
 
-![daf1](/images/bg-daf1.png)
+![daf1](../images/bg-daf1.png)
 
 ## Driving
 
@@ -92,9 +92,9 @@ Now, make your way back to the *Rig-a-Deal*.
 
 You should see a large, grey, open-platform with an orange console. Park the truck (use `P` to set the parking brake) and hit `ENTER`/`RETURN` to get out. Note that the same camera commands work with RoRBot. Step in front of the orange console to open the load selector. 
 
-![daf2](/images/bg-daf2.png)
+![daf2](../images/bg-daf2.png)
 
-![loadselect](/images/bg-loadselect.png)
+![loadselect](../images/bg-loadselect.png)
 
 
 Select the *Semi trailer (37 tons)*. 
@@ -103,7 +103,7 @@ Get back in the semi and drive in front of the load. Use the camera in third-per
 
 The hook points must be within 10cm to hook, so it may take some practice to get close. When you think you're close, hit `L`. If you're close enough, the semi will latch to the trailer. Raise the legs by holding `F1`. 
 
-![daf3](/images/bg-daf3.png)
+![daf3](../images/bg-daf3.png)
 
 You can now drive around with the trailer. You will notice that the trailer has a large effect on how the semi pulls and handles! This process is the same for most trailers. In some cases you can secure loads to trucks using `O`. 
 
@@ -113,7 +113,7 @@ NOTE: on some computers trailers may increase lag or decrease FPS(frames per sec
 
 Now that we've become comfortable with driving. Let's try to fly. Move your mouse to the to top of the screen to bring up the menubar, click `Vehicles` then `Antonov 12` to instantly enter the plane which is sitting on the runway. 
 
-![planeselect](/images/bg-planeselect.png)
+![planeselect](../images/bg-planeselect.png)
 
 Apply the parking brake by pressing `P`. Turn on the flying lights by pressing `M`. Start the engines by using your mouse to click the `ON` buttons in the lower right hand corner (or by pressing `CTRL+HOME`). 
 
@@ -123,29 +123,29 @@ If you have a short runway, be sure to use the flaps with `1` and `2` (this is e
 
 The An-12 does not stand high speeds (175+ knots) well, and you may find that if you go too fast the wings will break apart!
 
-![plane1](/images/bg-plane1.png)
+![plane1](../images/bg-plane1.png)
 
-![plane2](/images/bg-plane2.png)
+![plane2](../images/bg-plane2.png)
 
 
 When it comes to landing, make sure you have room to slow down and take your time. Going straight into the runway is the easiest way to land when you first start off. It may take a few passes to go head-on so don't be afraid to abort a landing and throttle back up to regain altitude. The entire process is easier if you shadows enabled, but is possible without. When you land, hit `R` to reverse thrust and throttle up to slow down in addition to using `B` to brake the wheels.
 
-This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [Aircraft handling](/gameplay/aircraft-handling/).
+This tutorial does not make use of the autopilot. For more information regarding the use of autopilot, see [Aircraft handling](aircraft-handling.md).
 
 ## Boating
 
 We must explore beyond Coldwater to get to the marina. Take the main road out of Coldwater, heading southwest toward the Elk Hotel. Take the second left after you leave town. You should see the water soon. 
 When you arrive at the marina, you should see marina-style boat docks and a ramp along with a building. 
 
-![boat1](/images/bg-boat1.png)
+![boat1](../images/bg-boat1.png)
 
 Walk around to the front of the building and enter the open door. Choose the Wahoo boat. 
 
-![boatselect](/images/bg-boatselect.png)
+![boatselect](../images/bg-boatselect.png)
 
 Use `UP`/`DOWN` to throttle and `LEFT`/`RIGHT` to steer. Use `PGUP` to center the throttle (to neutral) and `PGDOWN` to center the rudder. It may take you a while to get your sea legs. If you have waves enabled, see how far out you can go before you flip over waves!
 
-![boat2](/images/bg-boat2.png)
+![boat2](../images/bg-boat2.png)
 
 ## Conclusion
 
@@ -155,30 +155,30 @@ Now that you have a basic grasp of the basic vehicles in RoR, it is now up to yo
 
 If you feel like sharing the experience, you can play on one of the many public multiplayer servers. To get started, click the `Multi player` button on the main menu. 
 
-![mp1](/images/bg-mp1.png)
+![mp1](../images/bg-mp1.png)
 
 Set your username by clicking on `Settings` and changing it in the `Player nickname` textbox.
 
-![mp2](/images/bg-mp2.png)
+![mp2](../images/bg-mp2.png)
 
 You may have to restart the game for the changes to take effect.
 
 Now just select the server you want to play on, then click `Join`.
 
-![mp3](/images/bg-mp3.png)
+![mp3](../images/bg-mp3.png)
 
 The 'any' servers allow you to select a terrain, while other servers (such as Official Nhelens) are set to use a specific terrain. 
 
 While on a server, you can enable collisions between other players or hide nicknames by going to `Settings` in the top menubar.
 
-![mp4](/images/bg-mp4.png)
+![mp4](../images/bg-mp4.png)
 
 Note that multiplayer is still in development and can be unstable at times!
 
 ## Default controls
 
-Please see the [Controls and configuration](/gameplay/controls-config/) page for a full list of controls.
+Please see the [Controls and configuration](controls-config.md) page for a full list of controls.
 
 ## Adding content
 
-To add new vehicles and terrains, go to the [Installing content](/gameplay/installing-content/) page.
+To add new vehicles and terrains, go to the [Installing content](installing-content.md) page.

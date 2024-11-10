@@ -29,17 +29,17 @@ In this example we will be installing the [Heavy Bumper for the Chevy K3500](htt
 
 To begin, download & extract the part zip (in our case, `CHeavyBumper.zip`) into a new folder. The folder should contain the mesh, dds textures, PDN paintkit, and a readme text file:
 
-![1](/images/addon-bumper-folder.png)
+![1](../images/addon-bumper-folder.png)
 
 Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
-![2](/images/addon-bumper-zip.png)
+![2](../images/addon-bumper-zip.png)
 
 Find the `.truck` file you want to edit. For this example I'll be editing the `Standard cab Single rear wheels (lift)` version (`1990K3500_STD_LIFT.truck`)
 
 Once you've figured out which truck you want the bumper on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
 
-![3](/images/addon-bumper-truckfolder.png)
+![3](../images/addon-bumper-truckfolder.png)
 
 ### The truck file 
 
@@ -120,7 +120,7 @@ DWindow			mesh_standard		Dwindow.png		Dwindow_S.png
 CHeavyBumper		mesh_standard		HeavyBumper.dds		HeavyBumper_s.dds
 ```
 
-For more info on `managedmaterials`, see: [Managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials)
+For more info on `managedmaterials`, see: [Managedmaterials](../vehicle-creation/fileformat-truck.md#managedmaterials)
 
 ### Flexbodies/props
 
@@ -132,7 +132,7 @@ Before we begin, a few notes:
 In this case you would just copy one of the other placements and change the mesh name to the part. The readme will most likely specify this. 
 
 - Some parts (such as truck beds) may require you to edit the vehicle model (e.g. Bed is part of cab model) in order to install the part. 
-To do this, see: [Blender mesh editing](/tools-tutorials/blender-mesh-editing/)
+To do this, see: [Blender mesh editing](blender-mesh-editing.md)
 
 With that out of the way, search (`CTRL+F`) for `flexbodies`. You will see this:
 
@@ -166,7 +166,7 @@ forset 175-178, 76-79, 28-31
 forset 149-160
 ```
 
-For more info on props and flexbodies, see: [Props](/vehicle-creation/fileformat-truck/#props)
+For more info on props and flexbodies, see: [Props](../vehicle-creation/fileformat-truck.md#props)
 
 You can now save & close the truck file. 
 
@@ -180,7 +180,7 @@ If the part includes multiple textures, you can only copy the files required by 
 
 Now it's time to test your newly installed part in-game. If you followed this tutorial exactly, you should now have a custom bumper on your K3500! 
 
-![4](/images/addon-bumper-ingame.png)
+![4](../images/addon-bumper-ingame.png)
 
 ## Wheels and tires 
 
@@ -190,17 +190,17 @@ Keeping with the K3500, in this example we will be installing the [5 Spoke Wheel
 
 To begin, download & extract the part zip (in our case, `5SpokeRim.zip`) into a new folder. The folder should contain the mesh, dds textures, PDN paintkit, and a readme text file:
 
-![1](/images/addon-wheel-folder.png)
+![1](../images/addon-wheel-folder.png)
 
 Next, browse to `Documents\My Games\Rigs of Rods\mods` and open `ChevyK3500.zip`:
 
-![2](/images/addon-bumper-zip.png)
+![2](../images/addon-bumper-zip.png)
 
 Find the `.truck` file you want to edit. For this example I'll be editing the `Standard cab Single rear wheels (lift)` version (`1990K3500_STD_LIFT.truck`)
 
 Once you've figured out which truck you want the wheels on, drag the `.truck` file from the zip and into the folder containing the part you downloaded earlier:
 
-![3](/images/addon-wheel-truckfolder.png)
+![3](../images/addon-wheel-truckfolder.png)
 
 ### The truck file 
 
@@ -279,7 +279,7 @@ MudTerrains 		mesh_standard		MudTerrain.dds		MudTerrain_s.dds
 Hub			mesh_standard		Hubed.dds		-
 ```
 
-For more info on `managedmaterials`, see: [Managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials)
+For more info on `managedmaterials`, see: [Managedmaterials](../vehicle-creation/fileformat-truck.md#managedmaterials)
 
 ### Meshwheels 
 
@@ -287,7 +287,7 @@ Before we continue, a few notes:
 
 - Some wheels may include a tire with the wheel mesh, in this case you'll have to set the tire material to `tracks/trans`. The examples below already have it set. 
 
-- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](/vehicle-creation/flexbody-wheels/)
+- Some wheels may have the tire as a separate mesh, in this case see: [Flexbody wheels](../vehicle-creation/flexbody-wheels.md)
 
 - If the wheel is inside out ingame, swap the `l` and `r` values before the mesh name. The second example below had to be swapped.
 
@@ -313,7 +313,7 @@ meshwheels
 0.43,       0.2785,   0.5,      12,    103,   105,    9999,      1,         1,  6, 160.0, 190000.0,  1200.0,    r,   5SpokeRim.mesh tracks/trans
 ```
 
-For more info on meshwheels, see: [Meshwheels](/vehicle-creation/fileformat-truck/#meshwheels)
+For more info on meshwheels, see: [Meshwheels](../vehicle-creation/fileformat-truck.md#meshwheels)
 
 You can now save & close the truck file. 
 
@@ -327,7 +327,7 @@ If the part includes multiple textures, you can only copy the files required by 
 
 Now it's time to test your newly installed wheel in-game. If you followed this tutorial exactly, you should now have new wheels on your K3500! 
 
-![4](/images/addon-wheel-ingame.png)
+![4](../images/addon-wheel-ingame.png)
 
 ## Troubleshooting
 

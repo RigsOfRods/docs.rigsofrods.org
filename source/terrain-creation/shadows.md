@@ -55,9 +55,7 @@ As soon as you put all these three, you will get working shadows with a detailed
 
 ### Vehicles
 
-For vehicles, you can simply use the [managedmaterials](/vehicle-creation/fileformat-truck/#managedmaterials) section of the truck file, which will give you shadows instantly without any problems.
-
-If you want to use a material file instead, use the same technique as explained above.
+Shadows no longer cast onto vehicles as of version 2022.12+  due to [graphical glitches](../gameplay/common-issues.md#glitchy-vehicle-shadows).
 
 ### Misc
 Other than the `RoR/Managed_Mats/Base` inheritance, you can use all these for each type of texture/model used.

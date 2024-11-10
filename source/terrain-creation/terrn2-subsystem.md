@@ -13,7 +13,7 @@ Other optional file types used to enhance the terrain's visuals and functionalit
 * **.os**: Caelum system (sky/weather) config. Visuals only. 
 * **.skx**: SkyX (sky/weather) config. Visuals only. 
 * **.hdx**: Hydrax config (0.4.5.0+). Water display.
-* **.as**: Terrain script file, usually used for races. See [this page](http://docs.rigsofrods.org/terrain-creation/scripting/) for more info.
+* **.as**: Terrain script file, usually used for races. See [this page](scripting.md) for more info.
 
 ## Terrain 2 (.terrn2)
 
@@ -166,7 +166,7 @@ Sets the names of teach terrain object (tobj) file, ending with "=". You can hav
  
 ### Scripts section 
 
-Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](/terrain-creation/race-generator/) page for more info.
+Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
 
 ## Ogre Terrain Config (.otc)
 
@@ -179,7 +179,7 @@ RoR's primary mechanism for shaping a terrain are heightmaps.  8-bit or 16-bit u
 To use the heightmap in a terrain, you must configure it in a `.otc` and `-page-x-x.otc` file.
 
 If you are interested in creating a heightmap, we recommend taking a look at L3DT. 
-See [this page](/terrain-creation/l3dt-map-making/) for a complete tutorial on getting a L3DT terrain into RoR.
+See [this page](l3dt-map-making.md) for a complete tutorial on getting a L3DT terrain into RoR.
 
 ```
 PagesX=0
@@ -425,7 +425,7 @@ A "load spawner" deck will bring up a menu with trailers and loads. And so on.
 
 #### XYZ position
 
-The first three values is the XYZ position of the object. The easiest way to get these values is by using the built-in object editor, see [this page](/terrain-creation/editing-terrain-objects) for more info.
+The first three values is the XYZ position of the object. The easiest way to get these values is by using the built-in object editor, see [this page](editing-terrain-objects.md) for more info.
 
 #### Rotation
 
@@ -439,7 +439,7 @@ In Blender x is side to side, z is up-down, y is front-back
 
 #### Odef name 
 
-The name of the `.odef` file without the file extension. See the [Object file format](terrain-creation/object-format/) page for more info.
+The name of the `.odef` file without the file extension. See the [Object file format](object-format.md) page for more info.
 
 ### Special objects 
 
@@ -453,7 +453,7 @@ Static objects can also have extra values after the odef name:
 
 The `hotel Elk` line defines the icon and name of the object shown on the overview (TAB) map.
 
-![overview-map-icon](/images/overview-map-icon.png)
+![overview-map-icon](../images/overview-map-icon.png)
 
 `hotel` is the name of the structure, it also defines the icon type. Valid types:
 
@@ -476,7 +476,7 @@ ship
 
 Allows you to add a grid, as shown on the default Simple Terrain:
 
-![simple-terrain](/images/simple-terrain.png)
+![simple-terrain](../images/simple-terrain.png)
 
 ```
 // grid x y z 
@@ -532,7 +532,7 @@ This enables you to add grass to the terrain. The arguments are (all on one line
 | Sway Length       | Length of sway displacement                                                                                                         | 0.05                                      |
 | Sway Distribution | How much of the wind wave is distributed                                                                                            | 10                                        |
 | Density           | Density of grass distribution. Maximum of 3.5                                                                                       | 0.3                                       |
-| MinX/Y<br> MaxX/Y | Determine size of grass: ![](/images/terrn-grass-instruction.png)
+| MinX/Y<br> MaxX/Y | Determine size of grass: ![](../images/terrn-grass-instruction.png)
 | Fade Type         | Adjusts method of transition (via distance):<br>0 - FADETECH\_GROW = Grass will grow out of the ground, looks good with grass that has ground color<br>1 - FADETECH\_ALPHAGROW = Like 0, but with alpha blending<br>2 - FADETECH\_ALPHA = Alpha blends in/out | 0 |
 | Min-Y<br>Max-Y    | Minimum/maximum appearance level. 0 for no minimum/maximum.<br>Example: `0, 10` for seagrass under the water level 10 or `10, 0` for grass above the sea level (if the sea level is 10) 
 | Material          | Material file for grass appearance                                                                                                  | Listed in `/data/paged/grass.material`    |

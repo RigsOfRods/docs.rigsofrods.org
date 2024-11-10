@@ -8,12 +8,12 @@ As of Rigs of Rods 0.4.x, terrain objects are stored in `.tobj` files, they cont
 
 ## Adding a new object 
 
-For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/downloads.php?do=file&id=6) using Rigs of Rods version 0.4.7.0+. 
+For this tutorial, I will be placing a Rig-A-Deal (truckshop) on [Baja Track](https://forum.rigsofrods.org/resources/baja-track.167/) using Rigs of Rods version 0.4.7.0+. 
 
 Open Rigs of Rods and select the map you want to add an object to. 
 
 Go to where you want the object to be without being in a vehicle, for example here:
-![image1](/images/adding-terrain-object1.png)
+![image1](../images/adding-terrain-object1.png)
 Now press the `h` key. The current position coordinates will be written to the `RoR.log` (Located in `Documents\My Games\Rigs of Rods\logs` on Windows or `~/.rigsofrods/logs` on Linux.
 Open the `RoR.log` file in any text editor and scroll down to the end of the file. You should see a line similar to this:
 
@@ -21,7 +21,7 @@ Open the `RoR.log` file in any text editor and scroll down to the end of the fil
 
 This is the coordinates for your new object. Now find and open the terrain zip (Example: `Bajatrack.zip`) and open the correct `.tobj` file (Example: `Bajatrack.tobj`) It should look similar to this:
 
-![2](/images/adding-terrain-object2.png)
+![2](../images/adding-terrain-object2.png)
 
 Now take the numbers from the `RoR.log` line and add them to the end of the file, like so:
 
@@ -51,7 +51,7 @@ I recommend leaving the rotation (last 3) values to 0 for now.
 
 Save the file and reopen Rigs of Rods. Your new object should appear roughly where you want it:
 
-![3](/images/adding-terrain-object3.png)
+![3](../images/adding-terrain-object3.png)
 
 To precisely place your object, you can use the built-in "terrain/object editor" that is included with 0.4.7.0+. I'll explain how to use it below.
 
@@ -63,7 +63,7 @@ First, make sure you're running RoR version 0.4.7.0 or newer.
 
 Next, load the terrain you want to edit. While not in a vehicle, press `CTRL+Y`. A notification box should appear in the top right:
 
-![4](/images/adding-terrain-object4.png)
+![4](../images/adding-terrain-object4.png)
 
 You should now be in "terrain editing mode". 
 
@@ -82,19 +82,19 @@ CTRL+Y - Exit editor and save changes
 
 In this example I will rotate the truckshop. Move RoRBot near the object and press `Enter`. The object should now be selected:
 
-![5](/images/adding-terrain-object5.png)
+![5](../images/adding-terrain-object5.png)
 
 Use the keys listed above to move/rotate. You may have to switch the rotation axis using the `R` key to correctly rotate the object.
 
 Once you have your object(s) placed where you want it press `CTRL+Y` again to exit the editor:
 
-![6](/images/adding-terrain-object6.png)
+![6](../images/adding-terrain-object6.png)
 
-![7](/images/adding-terrain-object7.png)
+![7](../images/adding-terrain-object7.png)
 
 The changes have been saved to the `editor_out.cfg` file in the `/config` folder. Open that file in a text editor. It should look similar to this:
 
-![8](/images/adding-terrain-object8.png)
+![8](../images/adding-terrain-object8.png)
 
 And finally, copy the correct placement line to your map's `.tobj` file. Example:
 

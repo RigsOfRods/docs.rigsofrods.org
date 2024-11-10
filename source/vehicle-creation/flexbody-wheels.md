@@ -188,11 +188,11 @@ Flexbody wheels
 
 ## What is this?
 
-By default, Rigs of Rods's [meshwheels](/vehicle-creation/fileformat-truck/#meshwheels) sections generate a tire using a texture. In order to use a 3D tire mesh, you have to place the tire meshes using [flexbodies](/vehicle-creation/fileformat-truck/#flexbodies) or [props](/vehicle-creation/fileformat-truck/#props). This tool simplifies that process by generating the flexbody code for you.
+By default, Rigs of Rods's [meshwheels](fileformat-truck.md/#meshwheels) sections generate a tire using a texture. In order to use a 3D tire mesh, you have to place the tire meshes using [flexbodies](fileformat-truck.md/#flexbodies) or [props](fileformat-truck.md/#props). This tool simplifies that process by generating the flexbody code for you.
 
 Some addon parts require you to generate flexbody wheels as the tire mesh is separate.
 
-Not to be confused with [flexbodywheels](/vehicle-creation/fileformat-truck/#flexbodywheels), which provides this feature.
+Not to be confused with [flexbodywheels](fileformat-truck.md/#flexbodywheels), which provides this feature.
 
 ## Instructions
 
@@ -215,9 +215,9 @@ Explanation of each option:
 
 `Wheel rays` - The number of ‘pie pieces’, or corners, that make up the wheel. In the above example, `numrays` is set to `14` .
 
-`Chassis nodes` - Amount of nodes the vehicle has. Just set the last node ID at the bottom of the [nodes](/vehicle-creation/fileformat-truck/#nodes) section.
+`Chassis nodes` - Amount of nodes the vehicle has. Just set the last node ID at the bottom of the [nodes](fileformat-truck.md/#nodes) section.
 
-`Cameras before wheel section` - Amount of [cameras](/vehicle-creation/fileformat-truck/#cameras) the vehicle has. Most only have 1, while others (such as the Gavrils) have 3.
+`Cameras before wheel section` - Amount of [cameras](fileformat-truck.md/#cameras) the vehicle has. Most only have 1, while others (such as the Gavrils) have 3.
 
 `Inside axle node` -  The inner axle node. In the above example, the first wheel's `node1` is `32` .
 
@@ -267,7 +267,7 @@ enough for development purposes.
 
 ## Troubleshooting
 
-* If the tire sticks too far out/in, adjust the [X offset](/vehicle-creation/fileformat-truck/#flexbodies). In the above Burnside Race example, the offset is set to `0.5` .
+* If the tire sticks too far out/in, adjust the [X offset](fileformat-truck.md/#flexbodies). In the above Burnside Race example, the offset is set to `0.5` .
 
 * If the tire glitches/isn't attached to the wheel, you have set the wrong node/camera count and/or wheel nodes.
 

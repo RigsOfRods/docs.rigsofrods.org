@@ -4,7 +4,7 @@ To ensure consistency and quality, please follow these guidelines when creating 
 
 ## General Requirements
 
-1. Any content you submit must be your own creation, or [you must have permission](/rules/community-guidelines/#dont-steal-content-or-violate-intellectual-property) from the original creator(s) to share or modify their work.
+1. Any content you submit must be your own creation, or [you must have permission](community-guidelines.md#dont-steal-content-or-violate-intellectual-property) from the original creator(s) to share or modify their work.
 2. You must ensure that the content you submit is compatible with the latest stable version of Rigs of Rods. Please test your mod to ensure it works correctly before submission.
 3. Ensure filenames and asset names are descriptive and unique to avoid conflicts with other mods.
 4. Any content you submit must not exceed 4GB in size. This limit is imposed to prevent abuse and helps us to save on valuable bandwidth.

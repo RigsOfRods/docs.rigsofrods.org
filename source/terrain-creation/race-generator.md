@@ -1769,7 +1769,7 @@ To add the coordinates you retrieved from the log file, edit the lines to match 
 
 Then paste the lines into the "Checkpoint coordinates" box. Example:
 
-![race-chp-example](/images/race-chp-example.png)
+![race-chp-example](../images/race-chp-example.png)
 
 A preview of the checkpoint layout will be shown.
 
@@ -1781,7 +1781,7 @@ Each line can have a different checkpoint object. However, for simplicity's sake
 
 By default, RoR includes these checkpoint models:
 
-![race-chp](/images/race-chp.png)
+![race-chp](../images/race-chp.png)
 
 The names for these objects are `chp-start` and `chp-checkpoint`.
 
@@ -1789,13 +1789,13 @@ You can also use a custom object. Here are a few checkpoints you can use, just e
 
 ##### F1 Test Track Checkpoint
 
-![race-chp-f1](/images/race-chp-f1.png)
+![race-chp-f1](../images/race-chp-f1.png)
 
 These are the checkpoints from [F1 Test Track](https://forum.rigsofrods.org/resources/f1-test-track.244/), updated with fixed normals and new textures.
 
 Object names: `new-checkpoint-start` and `new-checkpoint`.
 
-Download: [f1_checkpoint.zip](/download/f1_checkpoint.zip)
+Download: [f1_checkpoint.zip](../download/f1_checkpoint.zip)
 
 ##### Empty Checkpoint
 
@@ -1804,7 +1804,7 @@ or multiple races which share checkpoint locations.
 
 Object name: `empty-checkpoint`.
 
-Download: [empty_checkpoint.zip](/download/empty_checkpoint.zip)
+Download: [empty_checkpoint.zip](../download/empty_checkpoint.zip)
 
 ### Race abort points 
 
@@ -1814,7 +1814,7 @@ Optional, defines points which will abort the current race. Use the same coordin
 
 Not used by any of the included checkpoints. Defines settings for the `race_penalty` box. 
 
-To add a `race_penalty` box, edit the [odef](/terrain-creation/object-format/) file of your checkpoint. (See begin box section)
+To add a `race_penalty` box, edit the [odef](object-format.md) file of your checkpoint. (See begin box section)
 
 ### General settings
 
@@ -1937,7 +1937,7 @@ To add your generated script to the terrain, copy the script (CTRL+A to select a
 
 Save the file with the `.as` file extension: **Make sure to set the file type to "All files"!**
 
-![race-script-save](/images/race-script-save.png)
+![race-script-save](../images/race-script-save.png)
 
 Place the file into your terrain's zip, then open the terrain's `.terrn2` file. 
 
@@ -1954,17 +1954,17 @@ Save your changes and place the edited `terrn2` back into the terrain zip if nec
 
 If everything went well, you should now have your race in RoR!
 
-![race-ingame](/images/race-ingame.png)
+![race-ingame](../images/race-ingame.png)
 
 ## Fine tuning checkpoint locations
 
 When testing your race, your checkpoints may not be in the correct location or rotated correctly. 
 
-To adjust your checkpoint positions, use the [in-game object editor](/terrain-creation/editing-terrain-objects/#moving-objects).
+To adjust your checkpoint positions, use the [in-game object editor](editing-terrain-objects.md#moving-objects).
 
 Checkpoints are spawned first, so use `CTRL+[` and `CTRL+]` keys to scroll through each one.
 
-![race-chp-adjust](/images/race-chp-adjust.png)
+![race-chp-adjust](../images/race-chp-adjust.png)
 
 Once you're done moving your checkpoints. exit editor mode (`CTRL+Y`) then exit the game. 
 

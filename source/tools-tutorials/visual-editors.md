@@ -17,7 +17,7 @@ To help you get started with creating a new node/beam, you can download this tru
 
 As of November 2018, Blender supports creating/editing Node/Beam structures with a plugin created by Ulteq.
 
-![blender](/images/blender-nb.png)
+![blender](../images/blender-nb.png)
 
 Features:
 
@@ -52,17 +52,17 @@ For Blender 2.8 and newer, download `blender_NB_plugin_2.8.zip`.
 
 Go to `File` -> `User Preferences`:
 
-![bnb1](/images/blender-edit-userprefs1.png)
+![bnb1](../images/blender-edit-userprefs1.png)
 
 Click `Add-ons` -> `Install from File`:
 
-![bnb2](/images/blender-edit-userprefs2.png)
+![bnb2](../images/blender-edit-userprefs2.png)
 
 Select the `blender_NB_plugin_2.79.zip` file you downloaded earlier. 
 
 Type "RoR" into the search bar and both add-ons should appear:
 
-![bnb3](/images/blender-nb-addoninstall.png)
+![bnb3](../images/blender-nb-addoninstall.png)
 
 Once both plug-ins are enabled by clicking the checkbox, select `Save User Settings`. 
 
@@ -74,17 +74,17 @@ The plugins are now available in `File` -> `Import` and `Export` -> `Truck (.tru
 
 Go to `Edit` -> `Preferences`:
 
-![bnb28-1](/images/blender-edit-userprefs1-2.8.png)
+![bnb28-1](../images/blender-edit-userprefs1-2.8.png)
 
 Click `Add-ons` -> `Install`:
 
-![bnb28-2](/images/blender-edit-userprefs2-2.8.png)
+![bnb28-2](../images/blender-edit-userprefs2-2.8.png)
 
 Select the `blender_NB_plugin_2.8.zip` file you downloaded earlier. 
 
 Type "RoR" into the search bar and both add-ons should appear:
 
-![bnb28-3](/images/blender-edit-userprefs3-2.8.png)
+![bnb28-3](../images/blender-edit-userprefs3-2.8.png)
 
 Enable both `RoR Exporter` and `RoR Importer` addons, then close the Preferences window. 
 
@@ -98,19 +98,19 @@ To view the node numbers, follow the steps below for your Blender version.
 
 By default, the plugin will enable Blender's debug mode which provides node ID visualization, however they are usually difficult to read. 
 
-To fix this, download [this plugin by GitHub user zeffii](https://gist.github.com/zeffii/9451340) ([mirror](/download/view3d_idx_view.py)) 
+To fix this, download [this plugin by GitHub user zeffii](https://gist.github.com/zeffii/9451340) ([mirror](../download/view3d_idx_view.py)) 
 
 Install it following the above instructions:
 
-![bnb4](/images/blender-nb-nodev-install.png)
+![bnb4](../images/blender-nb-nodev-install.png)
 
 To enable it, go to the top right and find the little plus icon, or press `N` to open it:
 
-![bnb4](/images/blender-edit-applyingtexture5.png)
+![bnb4](../images/blender-edit-applyingtexture5.png)
 
 While in edit mode, open the `Mesh Display` menu and select `Visualize indices`:
 
-![bnb5](/images/blender-nb-nodev.png)
+![bnb5](../images/blender-nb-nodev.png)
 
 You should now have readable node IDs. 
 
@@ -118,19 +118,19 @@ You should now have readable node IDs.
 
 Make sure `Developer Extras` is enabled in `Edit` -> `Preferences` -> `Interface`:
 
-![bnb28-4](/images/blender-edit-devextras-2.8.png)
+![bnb28-4](../images/blender-edit-devextras-2.8.png)
 
 Now open the Overlays menu, located in the top right:
 
-![bnb28-5](/images/blender-edit-overlays-location-2.8.png)
+![bnb28-5](../images/blender-edit-overlays-location-2.8.png)
 
 Enable `Indices` under `Developer`:
 
-![bnb28-5](/images/blender-edit-overlays-indices-2.8.png)
+![bnb28-5](../images/blender-edit-overlays-indices-2.8.png)
 
 Node numbers should now be visible.
 
-![bnb28-6](/images/blender-edit-indices-2.8.png)
+![bnb28-6](../images/blender-edit-indices-2.8.png)
 
 ### Notes and known issues
 
@@ -139,7 +139,7 @@ Node numbers should now be visible.
  
 Known issues:
 
-- If the `.truck` file contains [detacher_group](/vehicle-creation/fileformat-truck/#detacher_group) sections, they must be commented `;` out 
+- If the `.truck` file contains [detacher_group](../vehicle-creation/fileformat-truck.md#detacher_group) sections, they must be commented `;` out 
 otherwise not all beams will import correctly. See this [GitHub issue ticket](https://github.com/RigsOfRods/rigs-of-rods/issues/3002) for more information.
 
 
@@ -147,7 +147,7 @@ otherwise not all beams will import correctly. See this [GitHub issue ticket](ht
 
 A Java program made by Gouranga designed for viewing a node/beam structure.
 
-![truckviewer](/images/truckviewer.png)
+![truckviewer](../images/truckviewer.png)
 
 Pros:
 
@@ -173,7 +173,7 @@ Cons:
 	This program is very old and thus shouldn't be used to edit existing vehicles. It is recommended to create N/Bs using [Blender](#blender) instead.
 
 
-![Editorizer](/images/editorizer.png)
+![Editorizer](../images/editorizer.png)
 
 
 The Editorizer is a free program written by Ben for making vehicles. Contributions: Tuusita (Comments, Structure, Connect To).
@@ -188,7 +188,7 @@ Pros:
 
 Cons:
 
-- Does not support newer [truck](/vehicle-creation/fileformat-truck/) sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
+- Does not support newer [truck](../vehicle-creation/fileformat-truck.md) sections (such as `set_node_defaults`). These sections will have to be commented out otherwise the Editorizer fails to open the file.
 
 It is recommended to make a copy of the truck file made for editing, then copy the changes over to your main truck file.
 
@@ -201,7 +201,7 @@ Run as administrator! (only needed on the first run or if you move Editorizer's 
 #### Troubleshooting
 
 If you don't run Editorizer as administrator for the first time, or you subsequently move it's directory, you may encounter this error:
-![](/images/editorizer-error-comdlg32ocx.jpeg)
+![](../images/editorizer-error-comdlg32ocx.jpeg)
 
 To resolve this, try running as administrator again, and if it doesn't help, try these steps:
 
@@ -247,7 +247,7 @@ To adjust blueprints, click on _Place Blueprints_ on the far right, and place yo
 When you want to add nodes, just click on _Add Nodes_ up in the right. Click where you want the node to go, either in the Top Left, Bottom Left or Botton Right areas. If you want to make the node only get placed on the "grid" that divides the areas up-check the "snap nodes to grid" box.
 Special Nodes
 
-Check [truckfile reference](technical/fileformat-truck) for special node types.
+Check [truckfile reference](../vehicle-creation/fileformat-truck.md) for special node types.
 
 If you want to give your nodes these special options, just click on the _Nodes_ tab, pick the one you want to change, and put the corresponding node option in the options part.
 
@@ -255,7 +255,7 @@ If you want to give your nodes these special options, just click on the _Nodes_ 
 
 When you want to add beams, just click on the _Add Beams_ up in the right. Click the first node where you want the beam to start. Click the second node which is where you want the beam to end.
 
-Check [truckfile reference](technical/fileformat-truck) for special beam types.
+Check [truckfile reference](../vehicle-creation/fileformat-truck.md) for special beam types.
 
 If you want to give your beams these special options, just click on the _Beams_ tab, pick the beam you want to change, and put the corresponding beam option in the options box, along with any variables for that type of beam.
 

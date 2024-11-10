@@ -11,7 +11,7 @@ Comment lines can be inserted by putting `;` or `//` at the beginning of the lin
 
 ## Building Philosophy
 
-See [Vehicle Concepts](/vehicle-creation/vehicle-concepts) to understand the building philosophy.
+See [Vehicle Concepts](vehicle-concepts.md) to understand the building philosophy.
 
 ## Is It a Truck, Plane, Train or Boat?
 
@@ -20,7 +20,7 @@ Before we start, let's ask an important question: **Is it a truck, plane, train,
 -   A truck is a description file containing an **engine** section
 -   A plane is a description file containing a **turboprops**, **turbojets**, or **pistonprops** section
 -   A boat is a description file containing a **screwprops** section
--   A train is a vehicle that drives on a rail (see [Building rail vehicles](/vehicle-creation/rail-vehicles))
+-   A train is a vehicle that drives on a rail (see [Building rail vehicles](rail-vehicles.md))
 
 Also, notice that:
 
@@ -178,7 +178,7 @@ nodes
 
 You can debug your truck's node masses by enabling `Debug actor mass` in settings:
 
-![massdebug](/images/fileformat-truck-massdebug.png)
+![massdebug](../images/fileformat-truck-massdebug.png)
 
 Look into your `RoR.log` after spawning and you could see something like this:
 
@@ -288,7 +288,7 @@ The three parameters are node numbers. The first is the reference node and may b
 
 Correct relative placement of these nodes is important, or it may break the inside camera view.
 
-![Cameras](/images/truckfile-cameras.gif)
+![Cameras](../images/truckfile-cameras.gif)
 
 ```
 cameras
@@ -354,7 +354,7 @@ These sections are not required, but will make it easier to locate your file or 
 
 You should use the guid feature to allow RoR to recognize your truck uniquely. 
 
-This section is required for [skins](/vehicle-creation/alternate-skins).
+This section is required for [skins](alternate-skins.md).
 
 ```
 ;guid <GUID>
@@ -495,7 +495,7 @@ help
 tracks/semihelp
 ```
 
-![imgui-commands-panel](/images/imgui-commands-panel.png)
+![imgui-commands-panel](../images/imgui-commands-panel.png)
 
 This is optional. (But it looks cool, so use it!)
 
@@ -739,10 +739,10 @@ This section is important: it defines the wheels! Parameters are:
 -   **Node 1** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where the one side of the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number or name</span>;The node on the axle where one side of the wheel ends.
     To clarify, if you imagine a beam that goes right through the middle of the wheel along the axis of rotation, Node 1 and Node 2 would be at the intersection between one side of the wheel and the beam and the intersection between other side of the wheel and the beam.
--   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#axle-rigidity)). Use `9999` if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number or name</span>; The number of a special rigidity node (see explanation about [Axle Rigidity](wheels-axles-steering.md#axle-rigidity)). Use `9999` if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span>`0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for undriven wheels, `1` for wheels driven forwards, `2` for wheels driven backwards
--   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
+-   **Reference arm node** - <span style="color:#BD0058">Node number or name</span>; The [reference arm node](wheels-axles-steering.md#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction. Setting the reference arm node to the same node as **Node 1** or **Node 2** gets rid of the effects of the Reference Arm Node.
 -   **Mass** - <span style="color:#BD0058">Real number</span>; Mass of the wheel, in kilograms.
 -   **Springiness** - <span style="color:#BD0058">Real number</span>; The stiffness of the wheel, somewhat equivalent to tire pressure. Having too much spring will make the steering wheels bounce back and forth during understeer, sending vibrations through the entire vehicle.
 -   **Damping** - <span style="color:#BD0058">Real number</span>; The rebound rate of the wheel
@@ -772,10 +772,10 @@ This section improves wheels by simulating both wheel tires and rims. The player
 -   **Number of rays** - <span style="color:#BD0058">Real number</span> The number of 'pie pieces', or corners, that make up the wheel. For reference, `3` makes the wheel triangular, and `4` makes the wheel square. Recommended values are between `10` and `16`.
 -   **Node 1** - <span style="color:#BD0058">Node number/name</span> The node where the wheel starts.
 -   **Node 2** - <span style="color:#BD0058">Node number/name</span> The node where the wheel ends. (See [Wheels](#wheels) for an explanation of how this works.)
--   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#axle-rigidity)). Use `9999` if there is no rigidity node.
+-   **Rigidity Node** - <span style="color:#BD0058">Node number/name</span> The number of a special rigidity node (see [Axle Rigidity explanation](wheels-axles-steering.md#axle-rigidity)). Use `9999` if there is no rigidity node.
 -   **Wheel Braking** - <span style="color:#BD0058">Positive real number from range <0 - 4>; </span> `0` for unbraked wheels, `1` for braked wheels. For directional braking, as found in airplanes, use `2` for a left wheel, `3` for a right wheel. In 0.37+, `4` is used for a wheel with a footbrake, but no parking brake.
 -   **Wheel Drive** - <span style="color:#BD0058">Positive real number from range <0 - 2>; </span> `0` for an undriven wheel, `1` for a wheel driven forwards, `2` for a wheel driven backwards.
--   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](https://docs.rigsofrods.org/vehicle-creation/wheels-axles-steering/#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
+-   **Reference arm node** - <span style="color:#BD0058">Node number/name</span> The [reference arm node](wheels-axles-steering.md#reference-arm-node) for the wheel. This is where reaction torque is applied to the chassis. Set it to a node in front of the wheel for more traction and behind the wheel for less traction.
 -   **Mass** - <span style="color:#BD0058">Real number</span> Mass of the wheel in kilograms.
 -   **Rim springiness** - <span style="color:#BD0058">Real number</span> The stiffness of the wheel rim.
 -   **Rim damping**- <span style="color:#BD0058">Real number</span> The rebound rate of the wheel rim.
@@ -798,11 +798,11 @@ wheels2
 
 Mesh wheels allows you to do very nice wheels. It takes an Ogre3D mesh of a rim (the rim only, without the tire!). The mesh should be centered, and of the right size for the wheel you want to do: its outer diameter should be the same as the "rim\_radius" parameter, and its width should be the same as the distance between node1 and node2. The other parameters are similar to the [wheels](#wheels) section, though there are a few differences.
 
-The side value should be `l` or `r` depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](/images/truckfile-meshwheel-tire-texture.jpg)
+The side value should be `l` or `r` depending on the side of the wheel, and the final parameters are the mesh name and the material for the tire. The mapping of the texture should look something like this: ![Meshwheel tire texture](../images/truckfile-meshwheel-tire-texture.jpg)
 
 Here is an example picture of a rim mesh, as it should be modeled. The tire geometry is added dynamically afterward by the game, and will flex like a real tire.
 
-![Rim mesh](/images/truckfile-meshwheel-rim-mesh.jpg)
+![Rim mesh](../images/truckfile-meshwheel-rim-mesh.jpg)
 
 ```
 meshwheels 
@@ -1225,7 +1225,7 @@ The parameters are:
 -   **Affects engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Positive real number</span>; <span style="color:#0B8A00">default = 1.0</span>; 0 means that moving this command won't affect engine RPM, so it is independent. Value larger than 0 specifies how much engine power will be needed for this command to move.
 -   **Needs engine?** <span style="color:#666">(optional)</span>: <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span>; <span style="color:#BD0058">Boolean</span>; <span style="color:#0B8A00">default = true</span>; value of "true" means that the command only works with a running engine. "False" means engine is not needed.
 
-![Inertia models](/images/truckfile-inertia-models.png)
+![Inertia models](../images/truckfile-inertia-models.png)
 
 ```
 commands2
@@ -1308,7 +1308,7 @@ New in <span style="background-color:#854200">\[ Version 0.4+ \]</span>
 -   engine\_coupling. Real, default `1.0`
 -   needs\_engine. Boolean, default false
 
-Rotators can use [inertia](#inertia).
+Rotators can use [inertia](#set_inertia_defaults).
 
 The reference nodes for the baseplate and rotator plate must also match each other in order. (i.e. if you start at the front left for the base plate and work clockwise, do the same for the rotator plate!) See the example rotators code and attached picture. Both plates must be identical!
 
@@ -1318,7 +1318,7 @@ rotators
 29,    30,   31, 32, 34, 33,   37, 38, 36, 35,    0.1,       1,        2,                       1,          1,         smooth,        smooth,             0.5,         true
 ```
 
-![Rotators](/images/truckfile-rotators.jpg)
+![Rotators](../images/truckfile-rotators.jpg)
 
 ### Rotators2
 
@@ -2020,7 +2020,7 @@ Engine dying in idle and first gear? Just define a single higher peak value wher
 ...
 ```
 
-![Torque curve](/images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then `800` rpm in first gear.
+![Torque curve](../images/truckfile-torquecurve.png) to the example above in the right spot will result the engine idle a little bit higher then `800` rpm in first gear.
 
 The example to the left shows a screenshot of a torquecurve made for a small diesel engine:
 
@@ -2285,7 +2285,7 @@ set_managedmaterials_options 1
 
 Flares allow you to add lights to your truck. They work as light sources in OGRE and will illuminate other objects (if enabled in settings).
 
-See also: [Flares Tutorial](/vehicle-creation/flares)
+See also: [Flares Tutorial](flares.md)
 
 Required parameters:
 
@@ -2318,7 +2318,7 @@ Optional parameters:
 -   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
         For `u` flares, enter value 1-10: `1` would be `CTRL+1`, `2` would be `CTRL+2`, and so on. For other flare types, enter -1.
     -   Special value: `12` - Parking brake indicator 
--	**Dashboard input source**: <span style="color:#BD0058">String</span> Enter an input source from the [dashboard system](/vehicle-creation/making-custom-hud/#input-sources). This enables flares to toggle based on dashboard UI status, such as engine ignition or locked state.
+-	**Dashboard input source**: <span style="color:#BD0058">String</span> Enter an input source from the [dashboard system](making-custom-hud.md#input-sources). This enables flares to toggle based on dashboard UI status, such as engine ignition or locked state.
 -   **Blink delay (ms)**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -2</span>;
         Delay between on/off change, in milliseconds. A value of 500 means that the light is 500ms on and 500ms off. Use a value of 0 to create a non-blinking light.
     -   Special value: `-1` to use the default value of 500ms.
@@ -2381,7 +2381,7 @@ set_inertia_defaults 0.4, 0.8, linear, linear
 
 ### Materialflarebindings
 
-See also: [Flares Tutorial](/vehicle-creation/flares)
+See also: [Flares Tutorial](flares.md)
 
 This can bind a material to a flare, so that the material changes with the flare's on/off status.
 
@@ -2733,7 +2733,7 @@ Specials: Limits do not apply for **mode:sequential**. In this case the options 
   
 *event:*
 
--   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](/gameplay/controls-config/#keypress-events).)
+-   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](../gameplay/controls-config.md#keypress-events).)
 
 **How to use:**
 
@@ -3024,8 +3024,8 @@ By using this section you can set some parameters of the Truck GUI. This can be 
 
 Format: keyword <space> value
 
--   **dashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for this truck. You can use multiple lines.
--   **texturedashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](/vehicle-creation/making-custom-hud) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
+-   **dashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for this truck. You can use multiple lines.
+-   **texturedashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
 -   **interactiveOverviewMap**: <span style="background-color:#854200">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
 
 Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored or removed soon.
@@ -3148,11 +3148,11 @@ videocamera
 
 **UV Mapped mirror mesh:**
 
-![videocamera-uv-blender](/images/videocamera-uv-blender.png)
+![videocamera-uv-blender](../images/videocamera-uv-blender.png)
 
 **You can use this texture to help UV map your mirror mesh:**
 
-![vidscreen-disabled](/images/vidscreen-disabled.png)
+![vidscreen-disabled](../images/vidscreen-disabled.png)
 
 **`.material` file:**
 
@@ -3174,13 +3174,13 @@ material Quattro_LM
 
 **Node position reference:**
 
-![videocamera-nodes](/images/videocamera-nodes.png)
+![videocamera-nodes](../images/videocamera-nodes.png)
 
 Make sure `vidscreen-disabled.png` is in your truck zip. **Use your own texture and material names to avoid conflicts!**
 
 You can enable videocamera debug in settings (Diagnostic tab) which activates helpful meshes which show position and orientation of the video-cameras set up:
 
-![videocamera-debug-ingame](/images/videocamera-debug-ingame.png)
+![videocamera-debug-ingame](../images/videocamera-debug-ingame.png)
 
 Notes:
 
@@ -3293,7 +3293,7 @@ Adds a sound source to your vehicle.
 Parameters:
 
 -   **node**: <span style="color:#BD0058">Node number</span>; The place where your sound will come from. Doesn't support named nodes.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](/vehicle-creation/fileformat-soundscript/). You can use game-defined sound scripts or your own sound scripts.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](fileformat-soundscript.md). You can use game-defined sound scripts or your own sound scripts.
 
 ```
 soundsources
@@ -3313,7 +3313,7 @@ Parameters:
     -   **-1**: Enabled in external camera only
     -   **0 (or higher)**: Enabled for cinecamera number specified.
         Note: for backwards compatibility, the parser will read invalid values as `0` and emit a warning.
--   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](/vehicle-creation/fileformat-soundscript). You can use game-defined sound scripts or your own sound scripts.
+-   **sound\_script\_name**: <span style="color:#BD0058">String</span>; Sound scripts are defined in [soundscript files](fileformat-soundscript.md). You can use game-defined sound scripts or your own sound scripts.
 
 ```
 soundsources2
@@ -3486,9 +3486,9 @@ soundsources
 ### Wings
 
   
-**Please see [this page](/vehicle-creation/aircraft-and-aerodynamics/) for more information**
+**Please see [this page](aircraft-and-aerodynamics.md) for more information**
 
-![Wing reference](/images/truckfile-wing.png)
+![Wing reference](../images/truckfile-wing.png)
 
 The wings parameters are:
 
@@ -3752,7 +3752,7 @@ pistonprops
 
 ## Boats
 
-See: [Boats](/vehicle-creation/boats)
+See: [Boats](boats.md)
 
 ### Screwprops
 

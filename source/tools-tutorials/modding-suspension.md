@@ -9,7 +9,7 @@ This page will teach you how to lift or lower, change track/wheel width, and add
 
 ### Precomp
 
-The simple (and lazy) way of lifting or lowering a vehicle is by simply changing the precomp value in the [shocks](/vehicle-creation/fileformat-truck/#shocks) section.
+The simple (and lazy) way of lifting or lowering a vehicle is by simply changing the precomp value in the [shocks](../vehicle-creation/fileformat-truck.md#shocks) section.
 
 ```
 shocks
@@ -43,7 +43,7 @@ The effectiveness of this method depends on the suspension geometry. Solid axles
 
 Changing precomp forces the shock to expand or compress. This can cause beams to deform or break on weaker (deformable) N/Bs.
 
-![precomp-lift](/images/precomp-lift.gif)
+![precomp-lift](../images/precomp-lift.gif)
 
 ### Moving nodes with Blender
 
@@ -57,7 +57,7 @@ We'll be using the latest version (4.0 at the time of writing) but most steps sh
 
 - [Blender N/B Import/Export Plugin](https://forum.rigsofrods.org/resources/blender-n-b-import-export-plugin.25/)
 
-Install the 2.8+ version of the N/B plugin using [these instructions](/tools-tutorials/visual-editors/#28-and-newer). 
+Install the 2.8+ version of the N/B plugin using [these instructions](visual-editors.md#28-and-newer). 
 
 - [Notepad++](https://notepad-plus-plus.org/downloads/) 
 
@@ -67,7 +67,7 @@ We'll be using some Notepad++ features to assist.
 
 For this tutorial, we'll be lowering the [Gavril G2S](https://forum.rigsofrods.org/resources/gavril-g2.274/). and lifting the [Box Dodge Ram EXT](https://forum.rigsofrods.org/resources/box-dodge-ram.319/).  These are two very commonly modified vehicles. 
 
-![G2S](/images/g2s-ram.jpg)
+![G2S](../images/g2s-ram.jpg)
 
 We need to prepare the files to be correctly imported into Blender. 
 
@@ -75,7 +75,7 @@ Begin by opening the vehicle zip file (`gavril23.zip` or `BoxDodgeRam.zip`) and 
 
 Move the truck file into a new folder. Now create a copy in the folder:
 
-![truck-file-copy](/images/truck-file-copy.png)
+![truck-file-copy](../images/truck-file-copy.png)
 
 We'll be editing this copy to preserve the original truck file.
 
@@ -87,21 +87,21 @@ We'll be editing this copy to preserve the original truck file.
 Open the copied truck file in Notepad++ and scroll down to the nodes section:
 
 G2S:
-![Notepad-nodes](/images/notepad-nodes-g2s.png)
+![Notepad-nodes](../images/notepad-nodes-g2s.png)
 
 Ram EXT:
-![Notepad-nodes](/images/notepad-nodes-ram.png)
+![Notepad-nodes](../images/notepad-nodes-ram.png)
 
 The G2S nodes section is organized with comment lines.
 We'll convert the comments to groups so they'll become vertex groups when imported into Blender.
 
 Find the axle nodes, for this vehicle they are found under the running gear section:
 
-![Notepad-axle-nodes](/images/notepad-axle-nodes.png)
+![Notepad-axle-nodes](../images/notepad-axle-nodes.png)
 
 Rename `front`/`rear` to `front axle`/`rear axle`. Doing this will prevent conflicts with other Blender vertex groups. 
 
-![Notepad-axle-nodes-renamed](/images/notepad-axle-nodes-renamed.png)
+![Notepad-axle-nodes-renamed](../images/notepad-axle-nodes-renamed.png)
 
 Now press `CTRL+H` to open the Replace window and set the following:
 
@@ -109,16 +109,16 @@ Find what: `;`
 
 Replace with: `;grp:`
 
-![Notepad-replace-comments](/images/notepad-replace-comments.png)
+![Notepad-replace-comments](../images/notepad-replace-comments.png)
 
 Click `Replace All`.  All comment lines are now a node group. 
 
-![Notepad-node-groups](/images/notepad-node-groups.png)
+![Notepad-node-groups](../images/notepad-node-groups.png)
 
 ##### Detacher group workaround
 
 The G2S features `detacher_group` sections. 
-Due to a bug with the Blender RoR importer, [detacher groups](/vehicle-creation/fileformat-truck/#detacher_group) cause beams to be missing on import.
+Due to a bug with the Blender RoR importer, [detacher groups](../vehicle-creation/fileformat-truck.md#detacher_group) cause beams to be missing on import.
 
 To work around this, we need to comment all `detacher_group` lines. Do a replace all again, this time use the following:
 
@@ -126,7 +126,7 @@ Find what: `detacher_group`
 
 Replace with: `;detacher_group` 
 
-![notepad-detacher-comment](/images/notepad-detacher-comment.png)
+![notepad-detacher-comment](../images/notepad-detacher-comment.png)
 
 The file is now ready to be imported into Blender.
 
@@ -139,18 +139,18 @@ The file is now ready to be imported into Blender.
 	
 This setup only needs to be performed once. 
 
-Open Blender and install the N/B plugin if you haven't already from the [prerequisites](/tools-tutorials/modding-suspension/#prerequisites).
+Open Blender and install the N/B plugin if you haven't already from the [prerequisites](#prerequisites).
 
 Once the N/B plugin is installed, click `Edit` -> `Preferences` -> `Interface` and enable Developer Extras, this enables the ability to toggle indices (nodes) visualization.
 
-![blender-edit-dev-extras-4.0](/images/blender-edit-dev-extras-4.0.png)
+![blender-edit-dev-extras-4.0](../images/blender-edit-dev-extras-4.0.png)
 
 By default indices are a blue color which is difficult to read. 
 It is highly recommended to change the color by going to:
 
  `Edit` -> `Preferences` -> `Themes` -> `3D Viewport`:
 
-![blender-change-node-color](/images/blender-change-node-color.png)
+![blender-change-node-color](../images/blender-change-node-color.png)
 
 Scroll until you find `Face Angle Text`. Change it to white or another an easier to see color.
 
@@ -160,59 +160,59 @@ Close Preferences.
 
 Click `File` -> `Import` -> `Truck`
 
-![blender-file-truck-import](/images/blender-file-truck-import.png)
+![blender-file-truck-import](../images/blender-file-truck-import.png)
 
 Select the copied truck file, in this case `gavril - Copy.truck` or `BoxDodgeRamEXT - Copy.truck`. 
 
 The N/B is now imported:
 
-![blender-gavril-nb](/images/blender-gavril-nb.png)
+![blender-gavril-nb](../images/blender-gavril-nb.png)
 
-![blender-ram-nb](/images/blender-ram-nb.png)
+![blender-ram-nb](../images/blender-ram-nb.png)
 
 Enter edit mode with Tab, then click `Mesh Edit Mode Overlays` at the top right and enable Indices:
 
-![blender-indices-4.0](/images/blender-indices-4.0.png)
+![blender-indices-4.0](../images/blender-indices-4.0.png)
 
 Also click `Viewport Gizmos` and enable the move object gizmo:
 
-![blender-enable-gizmos](/images/blender-enable-gizmos.png)
+![blender-enable-gizmos](../images/blender-enable-gizmos.png)
 
 Node IDs should now appear when selecting: 
 
-![blender-nb-nodevisuals](/images/blender-nb-nodevisuals.png)
+![blender-nb-nodevisuals](../images/blender-nb-nodevisuals.png)
 
 ##### Selecting axle nodes 
 
 Press Numpad 3 to change view to right orthographic:
 
-![blender-right-ortho](/images/blender-right-ortho.png)
+![blender-right-ortho](../images/blender-right-ortho.png)
 
 Now select the axle nodes. For vehicles without node groups, press `C` for circle select or `B` for box select. 
 
 For truck files with node groups, click the data properties tab (green triangle icon), you should see a list of vertex groups:
 
-![blender-data-tab](/images/blender-data-tab.png)
+![blender-data-tab](../images/blender-data-tab.png)
 
 Find the axle groups on the list, click on each axle group then click the Select button:
 
-![blender-select-vertex-groups](/images/blender-select-vertex-groups.gif)
+![blender-select-vertex-groups](../images/blender-select-vertex-groups.gif)
 
 (Open in new tab to view full size)
 
 The axle nodes are now selected. Enable wireframe mode with `Z` for a better view:
 
-![blender-nb-wireframe-axles.png](/images/blender-nb-wireframe-axles.png)
+![blender-nb-wireframe-axles.png](../images/blender-nb-wireframe-axles.png)
 
-![blender-ram-nb-selected](/images/blender-ram-nb-selected.png)
+![blender-ram-nb-selected](../images/blender-ram-nb-selected.png)
 
 ##### Moving nodes 
 
 With the axle nodes selected, click and drag the blue arrow to move the nodes up to lower or down to lift:
 
-![blender-moving-nodes-lower](/images/blender-moving-nodes-lower.gif)
+![blender-moving-nodes-lower](../images/blender-moving-nodes-lower.gif)
 
-![blender-moving-nodes-lift](/images/blender-moving-nodes-lift.gif)
+![blender-moving-nodes-lift](../images/blender-moving-nodes-lift.gif)
 
 Alternatively, press `G` then `Z` to move on the Z axis.
  
@@ -220,7 +220,7 @@ Alternatively, press `G` then `Z` to move on the Z axis.
  
  Once finished, click `File` -> `Export` -> `Truck` 
  
- ![blender-export-truck](/images/blender-export-truck.png)
+ ![blender-export-truck](../images/blender-export-truck.png)
  
  Export to the copied truck file, in this case `gavril - Copy.truck` or `BoxDodgeRamEXT - Copy.truck`. 
 
@@ -228,33 +228,33 @@ Alternatively, press `G` then `Z` to move on the Z axis.
 
 Due to a bug with the 2.8+ plugin, you will find it exported to a blank file. Right click ->  Edit with Notepad++
 
-![blender-plugin-bug](/images/blender-plugin-bug.png)
+![blender-plugin-bug](../images/blender-plugin-bug.png)
 
 Open the original truck file (`gavril.truck`, `BoxDodgeRamEXT.truck`) as well. Both files should now be open in tabs. 
 
 Now right click the original truck file tab and click `Move Document` -> `Move to Other View`:
 
-![notepad-otherview](/images/notepad-otherview.png)
+![notepad-otherview](../images/notepad-otherview.png)
 
 The original and exported files should now be displayed in split view:
 
-![notepad-splitview](/images/notepad-splitview.png)
+![notepad-splitview](../images/notepad-splitview.png)
 
-![notepad-splitview-ram](/images/notepad-splitview-ram.png)
+![notepad-splitview-ram](../images/notepad-splitview-ram.png)
 
 Find the axle node groups, then copy and paste the new node positions into the original truck file like so:
 
-![notepad-copy-nodes](/images/notepad-copy-nodes.gif)
+![notepad-copy-nodes](../images/notepad-copy-nodes.gif)
 
 For the Ram EXT, copy and paste the entire nodes section. You can use `Begin/End Select` for this:
 
-![notepad-copy-nodes-whole](/images/notepad-copy-nodes-whole.gif)
+![notepad-copy-nodes-whole](../images/notepad-copy-nodes-whole.gif)
 
 Finally, save the truck file and drag it back into the zip file. 
 
 If successful, your vehicle should now be lowered or lifted!
 
-![g2s-ram-edited](/images/g2s-ram-edited.jpg)
+![g2s-ram-edited](../images/g2s-ram-edited.jpg)
 
 You may need to go back to Blender for further adjustments. Repeat the above exporting steps. 
 
@@ -264,15 +264,15 @@ To change a vehicle's track width:
 
 In edit mode, click `Mesh` -> `Transform` -> ` Push/Pull`
 
-![blender-pushpull](/images/blender-pushpull.png)
+![blender-pushpull](../images/blender-pushpull.png)
 
 Press `X` to enable X axis, then move the mouse left or right:
 
-![blender-pushpull-nb](/images/blender-pushpull-nb.gif)
+![blender-pushpull-nb](../images/blender-pushpull-nb.gif)
 
 Export and test in-game:
 
-![g2s-widetrack](/images/g2s-widetrack.jpg)
+![g2s-widetrack](../images/g2s-widetrack.jpg)
 
 ## Camber and wheel width
 
@@ -280,7 +280,7 @@ Changing camber and wheel width can be done without Blender.
 
 Press `K` to enable skeleton view in-game, then go to top Tools menu and click `Node details`. Optionally enable `Hide wheels`.
 
-![ror-wheelnodes](/images/ror-wheelnodes.png)
+![ror-wheelnodes](../images/ror-wheelnodes.png)
 
 Now find the outer wheel nodes. For the G2S:
 
@@ -319,7 +319,7 @@ Camber example:
 91,    1.632,    0.309,    1.037, l 12
 ```
 
-![g2s-camber](/images/g2s-camber.jpg)
+![g2s-camber](../images/g2s-camber.jpg)
 
 Wheel width example: 
 
@@ -333,7 +333,7 @@ Wheel width example:
 91,    1.632,    0.289,    1.057, l 12
 ```
 
-![g2s-wheelwidth](/images/g2s-wheelwidth.jpg)
+![g2s-wheelwidth](../images/g2s-wheelwidth.jpg)
 
 The wheel no longer fits the tire due to the increased width. 
 

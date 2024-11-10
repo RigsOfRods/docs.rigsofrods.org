@@ -19,7 +19,7 @@ Also, if you want to "dress" the chassis with a texture, you can "fill" any node
 
 One important thing is that the interconnection of beams to nodes uses what is known as a <b>ball joint</b>. That means that no force opposes a change of angles between two beams connected to the same node. It may sound abstract, but in practice you will immediately see the result : <b>anything that is not triangulated will fold</b>. To design rigid bodies you must have triangles everywhere, in any direction. So for example, if you have a cubic structure, you must add diagonal rods in all the faces. If you let a square somewhere it will fold, or it will be a soft zone (it will stay rigid because of other parts of the geometry, adding strains to this part).
 
-![Ball joint concept](/images/concepts-ball-joint.png)
+![Ball joint concept](../images/concepts-ball-joint.png)
 
 Why did we chose ball joints? Because:
 

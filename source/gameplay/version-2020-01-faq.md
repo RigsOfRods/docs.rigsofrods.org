@@ -30,7 +30,7 @@ The user directory on Linux will remain in `~/.rigsofrods` for now.
 
 ### Mods
 
-On first run, players with the old directory will receive a notice about the directory change. To continue using your mods, you will have to move your mod directories (`mods` on recent RCs, or `packs`,`terrains`, and `vehicles` on older versions) to the new `My Games\Rigs of Rods` directory. RoR itself will not move the folders to prevent data loss. The [Installing content](/gameplay/installing-content/) page has been updated for the new directory. 
+On first run, players with the old directory will receive a notice about the directory change. To continue using your mods, you will have to move your mod directories (`mods` on recent RCs, or `packs`,`terrains`, and `vehicles` on older versions) to the new `My Games\Rigs of Rods` directory. RoR itself will not move the folders to prevent data loss. The [Installing content](installing-content.md) page has been updated for the new directory. 
 
 ### Settings and input mappings
 
@@ -38,7 +38,7 @@ At the moment, players who already use 0.4.8 RC5 can move the `config` and `save
 
 For those running older versions, **DO NOT** move the `config` or `savegames` folders. Version 2020.01 is not compatible with anything older than 0.4.8 RC5.
 
-If you have input maps for controllers ([separate controller `.map` files](/images/controller-inputmaps.png), not an edited `input.map`!!) you will have to move those to the new `config` folder to continue using your input devices.
+If you have input maps for controllers ([separate controller `.map` files](../images/controller-inputmaps.png), not an edited `input.map`!!) you will have to move those to the new `config` folder to continue using your input devices.
 
 ## End of 32 bit support 
 
