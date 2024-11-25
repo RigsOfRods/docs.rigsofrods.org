@@ -5,8 +5,6 @@ Motorbikes
 
 This tutorial covers the theory and concepts used to build real 2-wheeled vehicles in Rigs of Rods.
 
-Based off [this archived forum thread](http://archives.rigsofrods.net/old-forum/forums/120-Mod-tech/95634/page-0001.html).
-
 ## Theory
 
 Motorbikes are counter-intuitive, to turn left, you must steer right a little first and vice-versa. It is because of this that the player cannot control the steering directly (with hydros) because the response time is too long and there is no feedback like when you ride a bicycle. So you must use [animators](fileformat-truck.md#animators) and the `roll` option. This is what we use to turn the front wheel.
