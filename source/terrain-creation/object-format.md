@@ -51,7 +51,7 @@ end
 
 The format is described below: 
 
-The first line specifies the visual mesh to use 
+The first line specifies the visual mesh to use. Can be set to `none` to disable visuals, useful for event boxes. 
 
 The second line specifies the scale of it (`x`, `y`, `z`) 
 Default: `1,1,1`
