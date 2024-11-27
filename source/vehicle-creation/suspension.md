@@ -205,7 +205,8 @@ Example using torsion bar suspension front and rear. You will notice the wheels 
 
 ### Other forms of independent suspension
 
--   **Twin Traction Beam** - A beam that goes to the other side of the truck where it is connected to the chassis. [Example](http://www.explorer4x4.com/zimmods97.jpg).
+-   **Twin Traction Beam** - A beam that goes to the other side of the truck where it is connected to the chassis.
+![twin-traction-beam](../images/twin-traction-beam.jpg)
 -   **Multilink** - Multilink, or 5-link, system are called so because they use 5 different points to connect the fusee to the chassis.
 -   **Trailing-arm** - Two arms that look like the 4 link system except that there is not solid axle.
 
