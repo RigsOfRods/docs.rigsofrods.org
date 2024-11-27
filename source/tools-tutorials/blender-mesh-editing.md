@@ -27,13 +27,9 @@ We'll also assume you are running Windows, however these instructions should mos
 
 ## Blender version warning 
 
-On July 2019, Blender 2.8 was released. It was the biggest release in Blender's history, reworking a lot of Blender's core features. 
-This included changes to the addon API, which means addons need to be updated to support the newer versions. 
+This page was written for Blender 2.79 and has not yet been updated for newer versions. For 2.8+ you can use the [blender2ogre plugin](https://github.com/OGRECave/blender2ogre) to import/export meshes.
 
-As of November 2022, the [Ogre Mesh Import/Export plugin](https://github.com/OGRECave/blender2ogre) _technically_  _supports_  Blender 2.8+, 
-it currently suffers from usability bugs that prevent this page from being updated.
-
-For this reason we recommend using Blender 2.79 to edit meshes.
+When downloading Blender from the above link, avoid the versions in the `latest` folder! They do not support the addons. If you're unsure, download `blender-2.79-windows64.msi`.
 
 ## Getting started
 

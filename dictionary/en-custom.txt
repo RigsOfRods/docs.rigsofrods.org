@@ -147,6 +147,7 @@ Detacher
 difflock
 diffusespecular
 DirectX
+OpenGL
 disabledefaultsounds
 distro
 dll
