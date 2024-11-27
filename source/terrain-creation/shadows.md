@@ -55,7 +55,7 @@ As soon as you put all these three, you will get working shadows with a detailed
 
 ### Vehicles
 
-Shadows no longer cast onto vehicles as of version 2022.12+  due to [graphical glitches](../gameplay/common-issues.md#glitchy-vehicle-shadows).
+Shadows no longer cast onto vehicles as of version 2022.12+  due to [graphical glitches](../gameplay/common-issues.md#flickering-vehicle-shadows).
 
 ### Misc
 Other than the `RoR/Managed_Mats/Base` inheritance, you can use all these for each type of texture/model used.
