@@ -812,5 +812,3 @@ string arrayToString(array<string>@ arr) {
 ### Troubleshooting
 
 If your race doesn't work, feel free to post your terrain file in this forum, and we may have a look at it. <https://forum.rigsofrods.org/forums/content-support.10/>
-
-Further, you may find some help in this archive: <http://rigsofrods.org/old-forum/forums/167-Scripting/page-0001.html>

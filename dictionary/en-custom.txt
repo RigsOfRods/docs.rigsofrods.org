@@ -127,6 +127,7 @@ cSpline
 ctrl
 CTRL
 CuriousMike
+AnotherFoxGuy
 da
 DAF
 dampingrate
@@ -146,6 +147,7 @@ Detacher
 difflock
 diffusespecular
 DirectX
+OpenGL
 disabledefaultsounds
 distro
 dll

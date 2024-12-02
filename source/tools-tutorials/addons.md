@@ -5,7 +5,7 @@ Installing Addons (Manual)
 
 ## What are addons?
 
-In the [Repository](https://forum.rigsofrods.org/resources/) and [Archives](http://archives.rigsofrods.net/), you will find a category for [addon parts](https://forum.rigsofrods.org/resources/categories/addons.15/). These are ready-to-install modifications for existing vehicles.
+In the [Repository](https://forum.rigsofrods.org/resources/), you will find a category for [addon parts](https://forum.rigsofrods.org/resources/categories/addons.15/). These are ready-to-install modifications for existing vehicles.
 
 Some are designed for specific vehicles (e.g. bumpers/exhausts) while others can fit on any vehicle (e.g. wheels/tires). This page serves as a general guide on the basics of installing various types of parts. 
 

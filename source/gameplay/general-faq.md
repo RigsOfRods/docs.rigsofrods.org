@@ -18,7 +18,7 @@ Windows XP & Vista are no longer supported as of version 0.4.8 RC5.
 
 MacOS hasn't been supported since version 0.37 due to lack of developer interest and outdated dependencies currently used by the game.
 
-Any other platform (ChromeOS, and iOS/Android) are unsupported and likely never will be.
+ChromeOS and mobile platforms (iOS/Android) are unsupported and likely never will be.
 
 ### Windows
 
@@ -62,12 +62,14 @@ For more info regarding installing mods, see: [Installing content (mods)](instal
 
 ### Archives
 
-The forum archives have been partially [unavailable](https://forum.rigsofrods.org/threads/archives-temporarily-unavailable.2777/) since September 2020.
+The forum archives have been [unavailable](https://forum.rigsofrods.org/threads/archives-temporarily-unavailable.2777/) since September 2020.
 
-A backup of the old Repository files may be found [here](https://cdn.anotherfoxguy.com/repo-backup/). 
-Another backup of a VBulletin forum (prior to the switch to XenForo) may be found [here](http://www.austingratzer.com/rigs/).
+A backup of the original Repository files (hosted by [AnotherFoxGuy](https://forum.rigsofrods.org/members/anotherfoxguy.40/)) may be found [here](https://ror-mini-pictures.netlify.app/). 
 
-Please note that the archives contain older versions of mods which may not be compatible with the latest RoR version. Always check the current [Repository](https://forum.rigsofrods.org/resources/) for the latest versions.
+!!! warning 
+	The Repository archive contains a handful of content featuring Sketchup 3D Warehouse assets that were released prior to the rule prohibiting  the use of these models. These are considered stolen content (see below) and are not allowed on official services. 
+	
+	It also contains older versions of mods which may not be compatible with the latest RoR version. Always check the current [Repository](https://forum.rigsofrods.org/resources/) for the latest versions.
 
 ### Downloading mods from unofficial sources 
 
@@ -76,6 +78,7 @@ They are not allowed on any of our services, including multiplayer. May also con
 
 Further reading:<br>
 [Don’t Steal Content or Violate Intellectual Property](../rules/community-guidelines.md#dont-steal-content-or-violate-intellectual-property)
+<br>
 [Stolen Content (Bus Epidemic)](https://forum.rigsofrods.org/threads/stolen-content-bus-epidemic.2034/)
 
 ## Multiplayer

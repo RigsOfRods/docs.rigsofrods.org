@@ -15,9 +15,15 @@ When attempting to launch RoR or change game settings, you may receive one of th
 
 ### Causes
 
+#### Controlled folder access 
+
+On Windows 10/11, Windows Security (Defender) has a "Controlled folder access" feature. When enabled, it blocks applications such as RoR from accessing your Documents folder. 
+
+See this tutorial ([Windows 10](https://www.tenforums.com/tutorials/113380-how-enable-disable-controlled-folder-access-windows-10-a.html)/[Windows 11](https://www.elevenforum.com/t/enable-or-disable-controlled-folder-access-for-microsoft-defender-antivirus-in-windows-11.4013/)) for instructions on how to disable it.
+
 #### Unicode characters
 
-The most common cause of these errors is having [Unicode](https://en.wikipedia.org/wiki/Unicode) characters in the path to the `Documents\My Games\Rigs of Rods` folder, typically caused by the Windows (Name of the folder in `C:\Users`, **NOT** the display name!) username (e.g. `André`).  
+Another common cause of these errors is having [Unicode](https://en.wikipedia.org/wiki/Unicode) characters in the path to the `Documents\My Games\Rigs of Rods` folder, typically caused by the Windows (Name of the folder in `C:\Users`, **NOT** the display name!) username (e.g. `René`).  
 
 There are three workarounds to this problem. Fix #2 is recommended if you don't want to run RoR as administrator.
 
@@ -40,17 +46,7 @@ Following either method will result in RoR now using the `config` folder instead
 If you installed the content packs, you will have to move the `*.zip` files from `Documents\My Games\Rigs of Rods\mods` to `config\mods`. New mods are also installed there.
 
 ##### Fix #3
-The last solution is simply to create a new Windows user account without any special characters or wipe your drive and install a new copy of Windows.
-
-#### Controlled folder access 
-
-Controlled folder access is a feature of Windows Security (Defender). When this feature is enabled, it blocks applications such as RoR from accessing your Documents folder. 
-
-Please see [this page](https://www.tenforums.com/tutorials/113380-how-enable-disable-controlled-folder-access-windows-10-a.html) for instructions on how to disable it.
-
-#### OneDrive
-
-OneDrive is known to prevent RoR from accessing the Documents folder. The only solution is to uninstall OneDrive. 
+The last solution is simply to create a new Windows user account without any special characters or reinstall Windows.
 
 ## No render system plugin available
 
@@ -59,7 +55,6 @@ OneDrive is known to prevent RoR from accessing the Documents folder. The only s
 ![error_no_render_sys_selected](../images/error_no_render_sys_selected.png)
 
 If you downloaded RoR using the zip file, you may receive these errors. This is caused by the DirectX 9 Runtime not being installed. Install it from [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=8109) then restart your PC.
-
 
 ## Visual C++ DLLs missing
 
@@ -89,7 +84,7 @@ This error is usually caused by enabling full screen with the wrong resolution (
 2. Start RoR, the game will be in a small window. Click Settings -> Render system and change the Video Mode setting to your monitor's **native resolution** (e.g. 1920x1080). Enable full screen if you want.
 3. Restart RoR.
 
-If this doesn't fix your error, then your GPU is most likely too old to run RoR. 
+If this doesn't fix your error, then your GPU is likely too old to run RoR. 
 
 ## Null program bound
 
@@ -99,12 +94,22 @@ This error occurs with some Intel integrated graphics chips. Unfortunately there
 
 More info: [GitHub issue](https://github.com/RigsOfRods/rigs-of-rods/issues/2385)
 
-## Glitchy vehicle shadows
+## Low resolution terrain textures
+
+On AMD graphics cards under Linux (OpenGL), terrain textures may appear low resolution:
+
+![low-res-terrain-tex](../images/low-res-terrain-tex.jpg)
+
+This is caused by shadows, you will need to disable them (Settings -> Graphics -> Set shadows to "None" -> Restart RoR).
+
+Alternatively you can play the Windows version through [Wine](https://www.winehq.org/).
+
+## Flickering vehicle shadows
 
 !!! note
 	This issue does not occur as of version 2022.12+
 
-With some GPUs (mostly integrated ones), shadows on vehicles may appear glitchy: 
+With some GPUs (mainly integrated), shadows on vehicles may flicker: 
 
 ![shadows-glitch](../images/shadows-glitch.gif)
 
@@ -117,7 +122,7 @@ The simplest workaround is to just disable shadows. (Settings -> Graphics -> Set
 ### Fix #2: Enable classic materials
 
 !!! note
-	As of version 2022.12, the "classic materials" are enabled by default with the option removed.
+	As of version 2022.12, the "classic materials" option isn't available as it is now enabled by default.
  
 In versions 2020.01 to 2022.04, an option to enable classic (0.38-era) material shaders is available. This can be found under Settings -> Graphics -> Classic material shaders. 
 
@@ -140,9 +145,6 @@ If you prefer to use the default materials instead, do the following:
 6. Save the file, then copy it back to `resources\managed_materials`, overwriting the original file. Allow administrator permission when prompted.
 
 ## Airplane spawning crash
-
-!!! note
-	Confirmed fixed in 2022.12+. Please note that changing light sources to None will cause no flares (headlights etc) to appear.
 
 If the game crashes when spawning an aircraft, change the Lights setting (Graphics tab) to anything that isn't `None (fastest)`:
 

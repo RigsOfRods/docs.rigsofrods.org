@@ -48,6 +48,9 @@ Now you're ready to begin playing. Start by clicking `Single player` to open the
 
 For the sake of this tutorial, select *North St Helens*. 
 
+!!! note 
+	Depending on how you downloaded the game, the North St Helens terrain may be missing. If so, please install it from the [Repository](installing-content.md) before continuing.
+
 Once the terrain loads, you will spawn as a country person known lovingly as RoRBot. You control him with the arrow keys while using `SHIFT` to run and `SPACE` to jump (good for getting over bumps, or if you get stuck).
 
 ![rorbot](../images/bg-rorbot.png)
