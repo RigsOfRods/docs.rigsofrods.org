@@ -69,7 +69,7 @@ By avoiding these behaviors, you help maintain a positive atmosphere where creat
     A few examples of content theft include:
 
     - Downloading someone else’s mod, skin, or vehicle and reposting it as your own without permission or credit.
-    - Modifying someone else’s work (e.g., changing a skin or vehicle) and sharing it without the original creator’s consent and proper attribution.
+    - Modifying someone else's work and sharing it without the original creator’s consent and proper attribution.
     - Using assets, textures, or models from other games, websites, or creators without following their licensing terms.
 
 2. Always give proper credit. When sharing or using someone else’s work, make sure to give clear credit to the original creator. Even if you’ve made modifications, acknowledge the original author in your post or description.
