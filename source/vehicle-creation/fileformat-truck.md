@@ -2127,7 +2127,7 @@ Sample transfercase section:
 
 transfercase
 ;default driven axle, alternate axle, has 2wd mode, has 2wd lo mode
-1, 2, 1, 0
+2, 1, 1, 0
 
 ;Transfer case with alternate ratio(s)
 
@@ -2395,7 +2395,7 @@ flares
 51,1,79, 0.23, 0.50, b, -1, 300, 0.2 myTruck/MyBrakeFlare
 
 materialflarebindings
-1, myBrakeMaterial
+0, myBrakeMaterial
 ```
 
 The material must use an animated texture, as shown below:
