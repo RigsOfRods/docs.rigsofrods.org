@@ -1051,3 +1051,50 @@ tracks/default_marine_small
  sound 100.0 default_marine_small.wav
 }
 ```
+
+## Exporting sounds
+
+To correctly export sounds for use in RoR, first install [Audacity](https://www.audacityteam.org/). 
+
+Other programs and online converters usually won't work!
+
+Once installed, open your sound file in Audacity. It will likely have two audio tracks:
+
+![sound-export1](../images/sound-export1.png)
+
+Convert to Mono by clicking `Tracks` -> `Mix` -> `Mix Stereo Down to Mono`:
+
+![sound-export2](../images/sound-export2.png)
+
+The sound should now only have a single audio track:
+
+![sound-export3](../images/sound-export3.png)
+
+Now click `File` -> `Export Audio..`
+
+![sound-export4](../images/sound-export4.png)
+
+..then `Export to computer`
+
+![sound-export5](../images/sound-export5.png)
+
+![sound-export6](../images/sound-export6.png)
+
+Use the following settings:
+
+Format: `WAV (Microsoft)`
+
+Channels: `Mono`
+
+Encoding: `Signed 16-bit PCM`
+
+Once done, click `Edit Metadata..`:
+
+![sound-export7](../images/sound-export7.png)
+
+Press `Clear` to remove all metadata tags if there are any. The sound will **NOT** play in-game if metadata is present!
+
+Click `OK` to exit the metadata window. Finally, click `Export` to save your sound. 
+
+Your sound should now be ready to use in RoR!
+
