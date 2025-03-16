@@ -5,7 +5,7 @@ To effortlessly install and keep Rigs of Rods up-to-date, we recommend using the
 [![Available on itch.io](https://static.itch.io/images/badge-color.svg){ width=150 loading=lazy }](http://rigs-of-rods.sf.net/itch/dev/)
 
 !!! danger "Don't place your device at risk"
-    For your security, only download Rigs of Rods from the [official Download Center](https://www.rigsofrods.org/download). Downloading from unkown sources may expose you to malware, outdated versions, or modified files that could harm your device.
+    For your security, only download Rigs of Rods from the [official Download Center](https://www.rigsofrods.org/download). Downloading from unknown sources may expose you to malware, outdated versions, or modified files that could harm your device.
 
 ## Windows
 
@@ -28,7 +28,7 @@ When your download finishes, follow these steps to quickly go through the instal
 2. Accept the License Agreement by selecting *I accept the agreement* then click *Next*.
 3. If you wish to install to another location, select *Browse*, otherwise the default location will be used.
 4. If you want the installer to create a desktop shortcut check *Create a desktop shortcut*.
-5. Review the installation and click *Back* if you want to make any changes, otherwise click *Install* to begin the installation proccess.
+5. Review the installation and click *Back* if you want to make any changes, otherwise click *Install* to begin the installation process.
 6. Upon completion of the installation read then click *Next*.
 7. Well done, the installation is now completed. Leave *Launch Rigs of Rods* checked and click *Finish* to launch Rigs of Rods.
 
