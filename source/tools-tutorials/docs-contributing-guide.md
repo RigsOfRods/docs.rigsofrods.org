@@ -3,7 +3,7 @@
 Thank you for your interest in contributing to the Rigs of Rods project documentation. This guide will walk you through the process of setting up your environment, making changes, and submitting your contributions. The documentation is built using MkDocs with the Material for MkDocs theme and deployed directly to GitHub Pages.
 
 ??? note "Make Quick Edits with the ":material-file-document-edit-outline:" Icon"
-    Every page has a ":material-file-document-edit-outline:" icon in the top-right corner. Clicking this icon will take you directly to the source file on GitHub, where you can make edits and propsoe changes without needing to clone the repository locally. This comesi n handy for small fixes like typos, broken links, or minor clarifications.
+    Every page has a ":material-file-document-edit-outline:" icon in the top-right corner. Clicking this icon will take you directly to the source file on GitHub, where you can make edits and propose changes without needing to clone the repository locally. This comes in handy for small fixes like typos, broken links, or minor clarifications.
 
 ## Prerequisites
 
