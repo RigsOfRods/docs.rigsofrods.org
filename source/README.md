@@ -3,6 +3,13 @@ hide:
   - toc
 ---
 
+<style>
+/* Hack to hide icons above the hero */
+.md-content__button {
+    display: none;
+}
+</style>
+
 <div class="hero">
   <a href="https://forum.rigsofrods.org/threads/rigs-of-rods-2022-12-released.3635/">
       <div class="hero-text">

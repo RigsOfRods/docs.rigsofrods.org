@@ -2,7 +2,7 @@ site_name: Rigs of Rods Documentation
 site_description: Rigs of Rods project documentation
 site_author: Rigs of Rods contributors
 site_url: https://rigsofrods.org/
-copyright: <a href="https://docs.rigsofrods.org/" target="_blank">End-user documentation for the Rigs of Rods project. &copy; 2013-2024 Rigs of Rods documentation contributors.</a>
+copyright: <a href="https://docs.rigsofrods.org/" target="_blank">End-user documentation for the Rigs of Rods project. &copy; 2013-2025 Rigs of Rods documentation contributors.</a>
 
 docs_dir: source
 
@@ -38,17 +38,21 @@ theme:
   features:
     - navigation.instant
     - navigation.footer
-    #- toc.integrate
-    - content.code.annotate
     - navigation.top
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
 
 extra_css:
   - stylesheets/ror.css
 
 plugins:
   - search # necessary for search to work
+  # - git-authors
   - git-committers:
       repository: RigsOfRods/docs.rigsofrods.org
+      branch: master
   - git-revision-date-localized
   - minify:
       minify_html: true
@@ -78,7 +82,7 @@ nav:
       - Editor nodeSnap: tools-tutorials/editor-nodeSnap.md
       - Visual editors: tools-tutorials/visual-editors.md
       - How to contribute to community projects using GitHub: tools-tutorials/contributing-github.md
-      - Documentation contributing guide {How to edit the docs): tools-tutorials/docs-contributing-guide.md
+      - Docs Contributing Guide: tools-tutorials/docs-contributing-guide.md
       - Branding: tools-tutorials/branding.md
   - Vehicle creation:
       - Truck file format: vehicle-creation/fileformat-truck.md
