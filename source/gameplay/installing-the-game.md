@@ -1,71 +1,76 @@
-Installing the game
-============
+# Installation Guide
 
-## Installation 
+To effortlessly install and keep Rigs of Rods up-to-date, we recommend using the [itch.io](https://itch.io/app) desktop app available for Windows and Linux.
 
-### Downloading
+[![Available on itch.io](https://static.itch.io/images/badge-color.svg){ width=150 loading=lazy }](http://rigs-of-rods.sf.net/itch/dev/)
 
-To get started, download the latest version of the game from our [homepage](https://www.rigsofrods.org/).
+!!! danger "Don't place your device at risk"
+    For your security, only download Rigs of Rods from the [official Download Center](https://www.rigsofrods.org/download). Downloading from unkown sources may expose you to malware, outdated versions, or modified files that could harm your device.
 
-![download](../images/bg-download2021.png)
+## Windows
 
-From here, choose which package you would like to install. We recommend the Installer for beginner users. 
 
-![options](../images/bg-downloadopt2021.png)
+!!! warning ""Windows protected your PC" Windows SmartScreen"
+    On Windows, you may be presented with a pop up saying that it prevented an unrecognized app from starting. You must click **More info** and then **Run anyway** in order for the installer to run.
 
-You will be redirected to Sourceforge, and the file will automatically download. Once downloaded, double-click the file to start the installer.
+### with Installer <small>recommended</small> { #with-installer data-toc-label="with Installer" }
 
-**If you're running Linux, you can download the game by following [these instructions](https://forum.rigsofrods.org/threads/test-build-version-0-4-8-rc4.1217/).**
+<figure markdown>
+  ![Install guide](/images/win-install-ror.gif){ loading=lazy }
+  <figcaption>Windows 11 version 21H1</figcaption>
+</figure>
 
-### Windows SmartScreen warning
+For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select *Rigs of Rods 64-bit Installer* for Windows. You will immediately be redirected to SourceForge, and the download will automatically begin.
 
-![smartscreen](../images/bg-smartscreen.png)
+When your download finishes, follow these steps to quickly go through the installer.
 
-When launching the installer for the first time, Windows Defender SmartScreen may prevent the installer from starting. 
+1. Select your language, by default it is English. Click *Next*.
+2. Accept the License Agreement by selecting *I accept the agreement* then click *Next*.
+3. If you wish to install to another location, select *Browse*, otherwise the default location will be used.
+4. If you want the installer to create a desktop shortcut check *Create a desktop shortcut*.
+5. Review the installation and click *Back* if you want to make any changes, otherwise click *Install* to begin the installation proccess.
+6. Upon completion of the installation read then click *Next*.
+7. Well done, the installation is now completed. Leave *Launch Rigs of Rods* checked and click *Finish* to launch Rigs of Rods.
 
-If this happens, click `More info` then `Run anyway`.
 
-The installer should launch once you accept the UAC dialog.
+### with Portable (.zip)
 
-### Installing
+For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select *Rigs of Rods 64-bit Portable (.zip)* for Windows. You will immediately be redirected to SourceForge, and the download will automatically begin.
 
-Select your language, then click `OK`.
+When your download finishes, follow these steps to launch Rigs of Rods.
 
-![installer1](../images/bg-installer1.png)
+1. Extract the .zip into your desired location (Do not merge with an existing Rigs of Rods version!)
+2. Launch Rigs of Rods by double-clicking `RoR.exe`
 
-Click `Next`.
+## Linux
 
-![installer2](../images/bg-installer2.png)
+### with Portable (.zip) <small>recommended</small> { #with-portable-zip_1 data-toc-label="with Portable (.zip)" }
 
-Accept the agreement, then click `Next`.
+For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select *Rigs of Rods 64-bit Portable (.zip)* for Linux. You will immediately be redirected to Sourceforge, and the download will automatically begin.
 
-![installer3](../images/bg-installer3.png)
+When your download finishes, follow these steps to launch Rigs of Rods on Linux.
 
-If you wish to install RoR to another location, you can change it here. We recommend leaving it to the default location. 
+1. Extract the .zip into your desired location (Do not merge with an existing Rigs of Rods version!)
+``` bash
+unzip rigs-of-rods-linux.zip
+```
+2. Depending on your graphical interface, you may double-click `RunRoR`
+``` bash
+./RunRoR
+```
 
-![installer4](../images/bg-installer4.png)
+### with Snap Store
 
-By default, RoR only comes with a very small selection of content. To help new players, we've created content packs which provide a good selection of vehicles and terrains to get you started.
+**Snap Store is not OFFICIALLY maintained but is regularly kept up-to-date.** Snaps can be used on all major Linux distributions and is widely used because of its graphical counterpart the Snap Store.
 
-You can choose to either download all the packs, or only select the ones that interest you. For simplicity's sake, no packs will be downloaded.
+``` bash
+sudo snap install rigs-of-rods
+```
 
-Click `Next` to continue. 
+### with AUR
 
-![installer5](../images/bg-installer5.png)
+The Arch User Repository (AUR) packages can be installed on your Arch Linux system with with the use of a helper like yay or paru.
 
-If you want the installer to create a desktop icon, check the box. Click `Next` to continue. 
-
-![installer6](../images/bg-installer6.png)
-
-Click `Install` to begin the installation process. 
-
-![installer7](../images/bg-installer7.png)
-
-Once the installation finishes, read the message that appears then click `Next` to continue. 
-
-![installer8](../images/bg-installer8.png)
-
-Installation is now completed. Leave `Launch Rigs of Rods` checked then click `Finish` to launch RoR!
-
-![installer9](../images/bg-installer9.png) 
-
+```bash
+paru -S rigsofrods
+```
