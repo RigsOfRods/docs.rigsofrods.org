@@ -1,99 +1,107 @@
-Documentation contributing guide {How to edit the docs)
-============
+# Docs Contributing Guide
 
-Interested in updating existing pages or writing your own page? Here you'll learn the basics on contributing to RoR's documentation. This guide assumes you're running Windows, but most steps should be valid on Linux as well. 
+Thank you for your interest in contributing to the Rigs of Rods project documentation. This guide will walk you through the process of setting up your environment, making changes, and submitting your contributions. The documentation is built using MkDocs with the Material for MkDocs theme and deployed directly to GitHub Pages.
 
-## Requirements 
-- A GitHub account 
-- [GitHub Desktop](https://desktop.github.com/)
-- [Git for Windows](https://gitforwindows.org/) (Leave all installer options as the default)
-- [Python](https://www.python.org/downloads/) (Make sure the "Add to PATH" option is selected in the installer)
+??? note "Make Quick Edits with the ":material-file-document-edit-outline:" Icon"
+    Every page has a ":material-file-document-edit-outline:" icon in the top-right corner. Clicking this icon will take you directly to the source file on GitHub, where you can make edits and propsoe changes without needing to clone the repository locally. This comesi n handy for small fixes like typos, broken links, or minor clarifications.
 
-## Forking the repository 
-To begin, head over to the [docs.rigsofrods.org GitHub repository](https://github.com/RigsOfRods/docs.rigsofrods.org) and click the ![github-fork](../images/github-fork.png) button at the top right. This will create a copy of the repository on your GitHub account where your changes will be made. 
+## Prerequisites
 
-## Using GitHub Desktop 
-After installing GitHub Desktop, launch the app and sign into your GitHub account. After signing in, it'll ask you to clone a repository. Select the repository you forked earlier along with where you want the repository to be stored locally:
+Before you start, ensure you have the following installed:
 
-![github-desktop-clone](../images/github-desktop-clone.png)
+* **[git](https://git-scm.com/downloads)**: To clone the repository and push your changes.
+* **[Python 3.9+](https://www.python.org/downloads/)**: MkDocs is a Python-based tool.
+* **pip**: Python package manager, which is usually bundled with Python itself.
 
-When the cloning process is finished, it will ask how you plan on using this repository. I recommend selecting "For my own purposes" as this will prevent confusion between your fork and the main repository. 
+You can alternatively use something like [GitHub Desktop](https://github.com/apps/desktop) in place of using git itself.
 
-In the toolbar, click `Repository` -> `Open in Command Prompt`  This is where you'll run the commands in the following steps. 
+## Setting Up Your Environment
 
-## Installing MkDocs 
-The documentation is powered by MkDocs. it will need to be installed if you wish to be able to preview your changes in real time. Go to the [official MkDocs installation](https://www.mkdocs.org/user-guide/installation/) page and follow the steps listed there, come back here once you've reached the "Installing MkDocs" section. 
+1. Fork the Repository:
+    * Fork the repository on GitHub to your own personal GitHub account.
+2. Clone your Fork:
+    ```bash
+    $ git clone https://github.com/<YOUR_USERNAME>/docs.rigsofrods.org ror-docs
+    $ cd ror-docs
+    ```
+3. Set Up a Virtual Environment (optional, but recommended):
+    ```bash
+    $ python -m venv venv
+    $ source venv/bin/activate # On Windows, use `venv/Scripts/activate`
+    ```
+4. Install Dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-After you've successfully installed Python and pip, run the following commands one by one in the command prompt window you opened earlier: 
-```
-pip install mkdocs
-pip install mkdocs-material
-pip install mkdocs-minify-plugin
-pip install mkdocs-git-revision-date-localized-plugin
-```
+## Making Changes
 
-These packages can also be found in the `requirements.txt` file in the root of the repository. 
+1. Create a New Branch:
+    ```bash
+    $ git checkout -b my-cool-change
+    ```
+2. Make Your Changes:
+    * The documentation is written in Markdown (`.md`) and located in the `source/` directory.
+3. Update the Navigation:
+    * Open `mkdocs.yml` at the root directory.
+    * Add the new page to the `nav:` section, for example:
+    ```yaml
+    nav:
+        - My new page: tools-tutorials/my-new-page.md
+    ```
 
-Once everything is installed, you should now be able to view a local version of the docs by running `mkdocs serve`. Your command prompt window should now look like this:
-![powershell-mkdocs](../images/powershell-mkdocs.png) 
+## Previewing Your Changes
 
-The documentation should now be viewable in your browser at `http://127.0.0.1:8000/`
+1. Run the MkDocs Development Server:
+    ```bash
+    $ mkdocs serve
+    ```
+    * This will start a local server at `http://127.0.0.1:8000/` where you can preview your changes in real-time.
+2. Check for Errors:
+    * Ensure there are no build errors or broken links. MkDocs will display errors in the terminal if any exist.
 
-The page will automatically reload when changes are made. 
+## Submitting Your Contributions
 
-## Making changes 
-In GitHub Desktop, it is **highly** recommended that you create a new branch by selecting `Branch -> New branch...` in the toolbar. This will ensure you don't make changes you didn't want to the main branch, as undoing them can be a pain without creating unnecessary commits. 
+1. Commit Your Changes:
+    ```bash
+    $ git add .
+    $ git commit -m "Your descriptive commit message"
+    ```
+2. Push to Your Fork:
+    ```bash
+    git push
+    ```
+3. Create a Pull Request (PR):
+    * Go to your fork on GitHub and click "Compare & Pull Request."
+    * Write a clear title and description for your PR, explaining the changes you made.
+    * Submit the PR and wait for feedback from the maintainers.
 
-Pages are written in Markdown, the same formatting syntax used on GitHub. See [this page](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) to learn the basic Markdown syntax. 
+## Style Guide
 
-### Adding images 
-To add a new image to a page, add the image to the `source\images` folder:
-![explorer-images-folder](../images/explorer-images-folder.png)
+To maintain consistency across the documentation, please follow these guidelines:
 
-Give the image a name that describes what the image is of (example for the above image: `explorer-images-folder.png`) Then reference the image in the page using this syntax:
- ```
- ![explorer-images-folder](../images/explorer-images-folder.png)
- ```
- 
-**Note:** It seems in recent versions of MkDocs, the `mkdocs serve` command can crash after adding an image to the folder. Just run it again if this happens to you. 
+1. Markdown Formatting:
+    * Use headings (`#`, `##`, `###`) to structure your content.
+    * Use fenced code blocks for code snippets:
+    ```markdown
+    ```python
+    print("Hello world")
+    ```
+2. Language and Tone
+    * Use clear, concise, and friendly language.
+    * Write in an active voice whenever possible.
+3. Admonitions:
+    * Use Material for MkDocs admonitions to highlight important information:
+    ```markdown
+    !!! note
+        This is a note.
+    ```
+4. Links:
+    * Use relative links for internal documentation pages.
+    * Use descriptive anchor text for external links.
 
-### Creating new pages 
-To create a new page, simply create a new file with the `.md` file extension in the appropriate category folder. 
+## Code of Conduct
 
-Make sure you also add the page to the sidebar by editing `mkdocs.yml`, otherwise `mkdocs serve` will show a warning!
+By contributing, you agree to follow our [Contributor Code of Conduct](../rules/contributor-code-of-conduct.md). Please be respectful and inclusive in all interactions.
 
-### Linking other docs pages 
-
-To link to other pages on the docs, use the following syntax:
-
-```
-Correct:
-[Beginner's Guide](/gameplay/beginners-guide/)
-Incorrect:
-[Beginner's Guide](https://docs.rigsofrods.org/gameplay/beginners-guide/)
-```
-
-## Making a pull request 
-Once you're finished editing, your GitHub Desktop app will probably look similar to this:
-![github-desktop-docs](../images/github-desktop-docs.png)
-
-Write a title and description for your changes, then click "Commit to branch" to add your changes to the branch. 
-When ready, select `Branch -> Create pull request` to create a pull request on the main repository, and if everything goes well, it'll be merged! 
-
-## Syncing your fork 
-
-After new commits are pushed to the main repository, you'll want to make sure your fork is up to date. Unfortunately GitHub Desktop doesn't appear to have an easy way to do this without creating a merge commit. Open a command prompt (`Repository` -> `Open in Command Prompt` in GitHub Desktop) and run the following: 
-
-```
-git remote remove upstream
-git remote add upstream https://github.com/RigsOfRods/docs.rigsofrods.org.git
-git fetch upstream
-git merge upstream/master
-```
-
-To update your fork in the future, run only the last two commands.
-
-In GitHub Desktop, click "Push to origin" after running the above commands. 
-
-## Conclusion
-I hope this helps anyone who becomes interested in helping contribute to the docs. 
+Finally, thank you for contributing to the Rigs of Rods project and community! Your efforts will help make the project better for everyone.
