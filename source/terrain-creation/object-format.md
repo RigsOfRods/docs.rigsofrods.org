@@ -29,7 +29,7 @@ hangar.mesh
 1, 1, 1
 
 beginmesh
-mesh hangar.mesh
+mesh hangarcol.mesh
 endmesh
 
 
@@ -37,12 +37,14 @@ beginbox
 boxcoords -23.75, -21.75, -0.2, 2.1, -3.07, -0.19
 virtual
 event shopplane avatar
+reverb_preset EFX_REVERB_PRESET_WOODEN_ALCOVE
 endbox
 
 beginbox
 boxcoords  -17, 17, 0, 4.5, -29, 4
 virtual
 event spawnzone
+reverb_preset EFX_REVERB_PRESET_FACTORY_HALL
 direction 0, 90, 0
 endbox
 
@@ -115,6 +117,8 @@ Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and
 
 **optional:**`forcecamera x, y, z`: Coordinates to place the camera, and force to change to this camera point of view when player enter at the box coords. 
 
+**optional:**`reverb_preset preset_name`:  The OpenAL sound preset to be used when player vehicle enters the box. 
+Where `preset_name` is an `EFX_REVERB_PRESET_*` from [here](https://github.com/RigsOfRods/rigs-of-rods/blob/4261db5063f47921f0305fb491a12eda6c297aa4/source/main/audio/SoundManager.cpp#L327-L401).
 
 `endbox` must close the box
 
