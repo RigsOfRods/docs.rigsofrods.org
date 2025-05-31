@@ -109,7 +109,7 @@ Specifies a box that can be used for collisions or events.
 
 Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and `spawnzone` but you can define a non existing eventname if you want to use with Angelscript.
 
-`filterevent`: on what it should trigger. valid values: `avatar`, `truck`, and `airplane`. 
+`filterevent`: on what it should trigger. valid values: `avatar`, `truck`, `truck_wheels`, `boat` and `airplane`. 
 
 **optional:**`direction 0, 90, 0`: this determines the direction of objects spawned in this box 
 

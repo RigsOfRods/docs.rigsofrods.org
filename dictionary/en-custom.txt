@@ -845,3 +845,8 @@ md
 AUR
 paru
 yay
+OpenAL
+Pointlight
+DirX
+DirY
+DirZ
