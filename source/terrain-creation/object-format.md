@@ -166,7 +166,7 @@ endmesh
 end
 ```
 
-A friction settings tool can be accesed in-game through the Tools tab of the Top Menubar. Use this to check if the friction is correctly applied to the object.
+A friction settings tool can be accessed in-game through the Tools tab of the Top Menubar. Use this to check if the friction is correctly applied to the object.
 
 ## Animations
 
@@ -188,3 +188,47 @@ You can add chimneys or other particle effects to your object using this:
 ;particleSystem scale, x, y, z, particleInstanceName particleScriptName
 particleSystem 1, 1, 1, 1, myfire1 enhancedFire
 ```
+
+## Ambient light
+
+Allows for ambient light to be added to an object that can cast light onto other objects.  Works similarly to [flares](../vehicle-creation/fileformat-truck.md#flares).
+
+!!! note
+	Light casting currently only works with PSSM shadows disabled!
+
+### Pointlight
+
+```
+;pointlight x, y, z, dirx, diry, dirz, r, g, b, range
+pointlight -13, 1, 6, -1, 0, -1, 10, 5, 0, 60
+```
+
+Parameters:
+
+- X position: Light's X coordinate.
+- Y position: Light's Y coordinate.
+- Z position: Light's Z coordinate.
+- DirX: Light direction on the X axis.
+- DirY: Light direction on the Y axis.
+- DirZ: Light direction on the Z axis.
+- R, G, B: RGB 0-1 color values. Sets the color of the visual flare and light.
+- Range: Distance the light will cast.
+
+### Spotlight
+
+```
+;spotlight x, y, z, dirx, diry, dirz, r, g, b, range, innerAngle, outerAngle 
+spotlight  -13, 1, 6, -1, 0, -1, 10, 5, 0, 60,30,45
+```
+
+Parameters:
+
+- X position: Light's X coordinate.
+- Y position: Light's Y coordinate.
+- Z position: Light's Z coordinate.
+- DirX: Light direction on the X axis.
+- DirY: Light direction on the Y axis.
+- DirZ: Light direction on the Z axis.
+- R, G, B: RGB 0-1 color values. Sets the color of the visual flare and light.
+- Range: Distance the light will cast.
+- Inner / Outer Angle: The angles that determine where the light fades from bright in the middle to dimmer on the outside edges.
