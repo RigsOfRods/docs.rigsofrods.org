@@ -76,9 +76,7 @@ For example you create a file called `myRedBuilding.odef` and inside you specify
 
 ### nocast
 
-Disables shadow casting for the object. Useful for skyboxes.
-
-Example:
+Disables shadow casting for the object, useful for skyboxes.
 
 ```
 Building.mesh
@@ -117,19 +115,6 @@ Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and
 
 **optional:**`forcecamera x, y, z`: Coordinates to place the camera, and force to change to this camera point of view when player enter at the box coords. 
 
-**optional:**`frictionconfig name-groundmodel.cfg` 
-
-Loads a custom groundmodel config. Use this if you want to use a groundmodel not specified in `ground_models.cfg`. 
-
-`name-groundmodel.cfg` is the name of your groundmodel config file. 
-
-**optional:**`stdfriction name` 
-
-Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision box will do. The physical parameters of these standard friction materials are defined in the configuration file `ground_models.cfg`.
-
-**optional:**`friction adhesion velocity, static friction coef, dynamic friction coef, hydrodynamic coef, Stribeck velocity, alpha, strength, fx_type, [fx_color]`: this will set the parameters of the friction the collision box will do. The physical parameters are manually given.
-
-
 
 `endbox` must close the box
 
@@ -153,21 +138,35 @@ You can use a existing mesh that RoR collision system will use.
 
 `endmesh`: closes the actual mesh box
 
-You can also use the option `stdfriction` with this syntax. 
+## Friction
 
-For example, if you have made a road object in 3D and you want to give it an asphalt friction, give it an odef file like this one:
+Defined inside of a `beginbox` or `beginmesh`, this sets the friction of a collision mesh or box. If not defined the default groundmodel used will be `concrete`.
+
+`frictionconfig name-groundmodel.cfg` 
+
+Optional, loads a custom groundmodel config. Use this if you want to use a groundmodel not specified in [ground_models.cfg](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/ground_models.cfg).
+
+`name-groundmodel.cfg` is the name of your groundmodel config file. 
+
+`stdfriction name`  or `usefriction name`
+
+Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision mesh or box will do. The physical parameters of these standard friction materials are defined in the configuration file [ground_models.cfg](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/ground_models.cfg).
+
+For example, if you have made a road object and you want to give it an asphalt friction, give it an odef file like this one:
 
 ```
-mr_road.mesh
+example_road.mesh
 1, 1, 1
 
 beginmesh
-mesh mr_road.mesh
+mesh example_road.mesh
 stdfriction asphalt
 endmesh
 
 end
 ```
+
+A friction settings tool can be accesed in-game through the Tools tab of the Top Menubar. Use this to check if the friction is correctly applied to the object.
 
 ## Animations
 
