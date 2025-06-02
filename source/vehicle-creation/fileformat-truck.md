@@ -3099,7 +3099,7 @@ Parameters:
 -   **texture\_height**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; Y-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum `256`, watch your FPS.
 -   **min\_clip\_distance**: <span style="color:#BD0058">Real number</span>; Minimum distance in meters of objects to be rendered Valid: `0.1` - value&lt;maxclipdistance. Useful to blend out things that should not be displayed. Good to tune FPS.
 -   **max\_clip\_distance**: <span style="color:#BD0058">Real number</span> Maximum distance in meters of objects to be rendered Valid: value&gt;minclipdistance - `32000`. Useful to blend out things that should not be displayed. Watch your FPS.
--   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: `-1` == camera, `0` == tracker camera (requires an alternative camera orientation node), `1` == mirrors.
+-   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: <br> `-1` == Camera <br> `0` == Tracker camera (requires an alternative camera orientation node) <br> `1` == Mirrors <br> `2` == Same as mirrors (`1`) but without flipping the texture horizontally (expects texcoords to be already flipped in the mesh).
 -   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a `-2` in here.
 -   **material**: <span style="color:#BD0058">String</span>; The material the generated textured should be displayed on. Requires a prop (mesh) using this material to get any visual results.
 -   **name**: <span style="background-color:#854200">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
@@ -3137,7 +3137,7 @@ videocamera
 43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
 ```
 
-**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/): (They are currently disabled)**
+**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/):**
 
 ```
 videocamera
