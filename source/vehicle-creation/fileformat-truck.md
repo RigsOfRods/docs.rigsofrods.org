@@ -2855,6 +2855,23 @@ As next, a line beginning with the word *forset* follows. Behind the word *forse
 
 -   **node\_list**: <span style="color:#BD0058">List of node{number/name/range}</span>; List of nodes to use for deforming the flexbody. These nodes should be outer nodes of the vehicle, those that are close to the mesh.
 
+### (sub-directive) forvert
+
+An additional line added after `forset` enabling manual override of node bindings for specified vertices. The specified nodes do not need to be in `forset` node list.
+Processing works the same as `forset`: the game calculates the offset between the nodes and the vertex and maintains it. 
+
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system
+-   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
+-   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
+-   **vertex\_list**: <span style="color:#BD0058">List of vertices</span>; List of mesh vertices to use for deforming the flexbody, ranges are supported. Vertex numbers can be viewed in-game using the "Flexbody debug" tool from Top Menubar -> Tools.
+
+!!! note
+	The `verts:` intermediate line before the vertex list is required!
+
+```
+forvert 25, 0, 2, verts: 70-71, 28
+```
+
 Notes about backwards compatibility:
 
 -   If you use a node range \[A-B\], RoR will tolerate if node B doesn't exist (warning will be emitted).

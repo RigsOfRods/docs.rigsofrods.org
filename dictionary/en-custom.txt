@@ -201,6 +201,7 @@ flexmeshes
 FN
 footbrake
 forset
+forvert
 forwardcommands
 Forwardcommands
 fov
