@@ -3051,6 +3051,7 @@ Format: keyword <space> value
 -   **dashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for this truck. You can use multiple lines.
 -   **texturedashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
 -   **interactiveOverviewMap**: <span style="background-color:#854200">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
+-   **shifterAnimTime**: Sets how much a shifter prop animation should be smoothed. Default `0.4`, use `0.0` to disable.
 
 Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored or removed soon.
 
