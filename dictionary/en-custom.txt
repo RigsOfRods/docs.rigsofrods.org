@@ -845,3 +845,4 @@ md
 AUR
 paru
 yay
+dashboardsource

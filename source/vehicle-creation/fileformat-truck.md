@@ -2675,7 +2675,8 @@ Parameters:
 -   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
     - `source:` <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
     - `mode:` <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
-    - `event:` <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
+    - `event:` <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the [keypress event](../gameplay/controls-config.md#keypress-events) to catch for the animation
+    - `link:` <span style="color:#BD0058">Dashboard source type</span>; An optional input, only needed for **source: dashboard**. It determines the [dashboard source](making-custom-hud.md#input-sources) to catch for the animation
     - `autoanimate` <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
 -   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
 -   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current status, useful for switches and status levers. Only works with **mode:event** and a correct defined **event:**
@@ -2708,6 +2709,7 @@ Parameters:
 -   `shifterman2` - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
 -   `sequential` - sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
 -   `shifterlin` - for auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
+-   `signalstalk` - for turn signal stalk animations.
 -   `torque` - current engine torque
 -   `heading` - This prop animates with the current heading of the truck.
 -   `difflock` - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
@@ -2717,6 +2719,7 @@ Parameters:
 -   `aileron` - This prop animates with the aileron status for airplanes.
 -   `elevator` - This prop animates with the elevator status for airplanes.
 -   `rudderair` - This prop animates with the rudder status for airplanes.
+-   `dashboard` - This prop animates with the status of a GUI element (engine ignition, parking brake etc). Requires `link:` data link argument, see below.
 -   `permanent` - This is a permanent source, which is always active when you are in the truck.
 -   `event` - A source triggered by a keypress, needs exactly one defined event.
 
@@ -2734,6 +2737,10 @@ Specials: Limits do not apply for **mode:sequential**. In this case the options 
 *event:*
 
 -   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](../gameplay/controls-config.md#keypress-events).)
+
+*link:*
+
+- **dashboardsource** - Any input source from the [dashboard system](making-custom-hud.md#input-sources).
 
 **How to use:**
 
