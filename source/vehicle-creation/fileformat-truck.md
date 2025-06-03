@@ -2422,6 +2422,25 @@ This section should be after the flares section and before the props and flexbod
 
 COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, the parser will silently accept it.
 
+### Flaregroups_no_import
+
+Prevents a truck from importing flare states when locked or tied to another truck. 
+
+For example, this can be used to stop a truck-mounted forklift's lights from activating with the truck lights.
+
+-   **Type**: <span style="color:#BD0058">Character</span>; Type of flare, e.g. low beams (`f`).
+-   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
+        For user-controlled (`u`) flares, enter value 1-10 that corresponds to the flare.
+		
+Example to prevent importing low beams and CTRL+1 user-controlled lights:
+
+```
+flaregroups_no_import 
+f
+u 1
+```
+
+
 ### Props
 
 This allows you to "stick" any 3D mesh to a triangle of points of a truck. You can use it to stick air intakes, horns, seats, dashboard, bumpers, whatever to the truck. Note that there will be no collision detection with these objects. Like flares, they use a vector coordinate system instead of normal right-angle coordinates. Props are positioned relative to 3 nodes of the chassis: One node is the reference node, and the two others define a base (x,y). Props are positioned relative to the reference node by adding proportions of the vectors ref-&gt;X, ref-&gt;Y, with the normal being used as well.
