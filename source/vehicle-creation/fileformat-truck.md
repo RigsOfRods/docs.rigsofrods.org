@@ -2223,6 +2223,17 @@ rescuer
 
 This single keyword placed in the truck file will make the truck a rescuer, like the Scania Wrecker. These vehicles can be entered by pressing `R`.
 
+### Scripts
+
+Loads an [AngelScript (*.as)](../terrain-creation/scripting.md) file. Functions like other custom scripts except it provides an extra global variable `thisActor` pointing to the associated truck.
+
+```
+scripts
+MyTruckScript.as
+```
+
+This feature is early in development, scripting documentation will be updated soon.
+
 ## Look & Feel
 
 ### Managedmaterials
