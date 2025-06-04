@@ -366,7 +366,7 @@ You can generate some GUIDs [here](https://www.guidgenerator.com).
 ### Default_skin
 
 Overrides the pre-selected skin of the truck. 
-The specified skin will be displayed at the top of skin selector instead of the dummy "Default skin" entry. 
+The specified skin will be displayed at the top of the skin selector instead of the dummy "Default skin" entry. 
 
 If no other skins are available, the skin will be applied automatically.
 
@@ -2198,7 +2198,7 @@ wheeldetachers
 
 ### Collisionboxes
 
-In RoR 0.4.0.5 and above you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
+In <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span> you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
 
 Syntax:
 
@@ -2736,12 +2736,16 @@ Parameters:
 -   `tacho` - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
 -   `turbo` - This prop animates with the vehicle's turbocharger PSI.
 -   `parking` - This prop animates with the vehicle's parking brake status.
+-   `gear#` - This prop animates with the specified gear. Where `#` is the gear number (1/2/3 etc).
+-   `gearneutral` - This prop animates with the vehicle's neutral gear. 
+-   `gearreverse` - This prop animates with the vehicle's reverse gear. 
 -   `shifterman1` - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
 -   `shifterman2` - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
--   `sequential` - sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
--   `shifterlin` - for auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
--   `signalstalk` - for turn signal stalk animations.
--   `torque` - current engine torque
+-   `sequential` - Sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
+-   `shifterlin` - For auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
+-   `autoshifterlin` - Same as `shifterlin` except it allows for D/N/R positions as forward gears are clamped to 1.
+-   `signalstalk` - For turn signal stalk animations.
+-   `torque` - Current engine torque.
 -   `heading` - This prop animates with the current heading of the truck.
 -   `difflock` - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
 -   `rudderboat` - This prop animates with the steering hydro on boats.
