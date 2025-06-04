@@ -354,7 +354,7 @@ These sections are not required, but will make it easier to locate your file or 
 
 You should use the guid feature to allow RoR to recognize your truck uniquely. 
 
-This section is required for [skins](alternate-skins.md).
+This section is **required** for [skins](alternate-skins.md).
 
 ```
 ;guid <GUID>
@@ -362,6 +362,18 @@ guid 6daaee29-e462-4d99-96d2-4577294f7b10
 ```
 
 You can generate some GUIDs [here](https://www.guidgenerator.com).
+
+### Default_skin
+
+Overrides the pre-selected skin of the truck. 
+The specified skin will be displayed at the top of skin selector instead of the dummy "Default skin" entry. 
+
+If no other skins are available, the skin will be applied automatically.
+
+```
+;default_skin <skin_name_with_underscores_for_spaces>
+default_skin My_Awesome_Skin
+```
 
 ### Fileformatversion
 
