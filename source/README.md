@@ -41,15 +41,17 @@ hide:
 
     Want to start modding Rigs of Rods? Start at 0 and work your way to pro with detailed guides on modding.
 
+    - [Truck File Format](vehicle-creation/fileformat-truck.md)
+    - [Soundscript File Format](vehicle-creation/fileformat-soundscript.md)
+    - [Addonpart File Format](vehicle-creation/fileformat-addonpart.md)
+    - [Terrn2 File Format](terrain-creation/terrn2-subsystem.md)
+    - [Object File Format](terrain-creation/object-format.md)
+    - [Alternate Skins (skinzip) Guide](vehicle-creation/alternate-skins.md)
     - [Installing Addons Guide](tools-tutorials/addons.md)
     - [Blender Mesh Editing Guide](tools-tutorials/blender-mesh-editing.md)
     - [Editing Terrain Objects](terrain-creation/editing-terrain-objects.md)
-    - [Addonpart File Format](vehicle-creation/fileformat-addonpart.md)
-    - [Alternate Skins (skinzips) Guide](vehicle-creation/alternate-skins.md)
-    - [Truckfile Format](vehicle-creation/fileformat-truck.md)
-    - [Terrn2 File Format](terrain-creation/terrn2-subsystem.md)
-    - [Object File Format](terrain-creation/object-format.md)
-    - [Soundscript File Format](vehicle-creation/fileformat-soundscript.md)
+
+
 
 -   :material-gavel:{ .lg .middle } __Community Rules__
 
