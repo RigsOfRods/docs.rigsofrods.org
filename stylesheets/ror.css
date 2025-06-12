@@ -1,0 +1,128 @@
+/* Based off of XenForo's user and developer documentation 
+color scheme to match the default XenForo forum theme.
+
+Licensed MIT. Copyright (c) 2017 - 2023 XenForo Ltd.
+
+Modifications made to adjust to our own color scheme.*/
+
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: hsl(206 64% 30%);
+  --md-primary-fg-color--light: hsl(205 80% 40%);
+  --md-primary-fg-color--dark: hsl(205 80% 30%);
+  --md-primary-bg-color: hsl(205 64% 80%);
+  --md-primary-bg-color--light: hsl(204 80% 95%);
+
+  --md-accent-fg-color: hsl(206 64% 40%);
+  --md-accent-fg-color--transparent: hsl(205 80% 40% / 0.1);
+  --md-accent-bg-color: hsl(205 64% 80%);
+  --md-accent-bg-color--light: hsl(205 80% 95%);
+
+  --md-default-fg-color: hsl(0 0% 8%);
+  --md-default-fg-color-light: hsl(0 0% 8% / 0.7);
+  --md-default-fg-color-lighter: hsl(0 0% 8% / 0.3);
+  --md-default-fg-color-lightest: hsl(0 0% 8% / 0.12);
+  --md-default-bg-color: hsl(0 0% 100%);
+  --md-default-bg-color--light: hsl(0 0% 100% / 0.7);
+  --md-default-bg-color--lighter: hsl(0 0% 100% / 0.3);
+  --md-default-bg-color--lightest: hsl(0 0% 100% / .12);
+
+  --md-typeset-a-color: hsl(206 64% 40%);
+
+  --md-footer-fg-color: hsl(206 64% 80%);
+  --md-footer-fg-color--light: hsl(206 80% 95%);
+  --md-footer-fg-color--lighter: hsl(206 80% 95% / 0.5);
+  --md-footer-bg-color: hsl(205 80% 22%);
+  --md-footer-bg-color--dark: hsl(205 80% 22% / 0.5);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: hsl(205 60% 10%);
+  --md-primary-fg-color--light: hsl(205 60% 20%);
+  --md-primary-fg-color--dark: hsl(205 60% 10%);
+  --md-primary-bg-color: hsl(204 60% 60%);
+  --md-primary-bg-color--light: hsl(204 60% 75%);
+
+  --md-accent-fg-color: hsl(205 60% 60%);
+  --md-accent-fg-color--transparent: hsl(205 60% 60% / 0.1);
+  --md-accent-bg-color: hsl(205 60% 20%);
+  --md-accent-bg-color--light: hsl(205 60% 40%);
+
+  --md-default-fg-color: hsl(0 0% 88%);
+  --md-default-fg-color-light: hsl(0 0% 88% / 0.7);
+  --md-default-fg-color-lighter: hsl(0 0% 88% / 0.3);
+  --md-default-fg-color-lightest: hsl(0 0% 88% / 0.12);
+  --md-default-bg-color: hsl(0 0% 8%);
+  --md-default-bg-color--light: hsl(0 0% 8% / 0.7);
+  --md-default-bg-color--lighter: hsl(0 0% 8% / 0.3);
+  --md-default-bg-color--lightest: hsl(0 0% 8% / .12);
+
+  --md-typeset-a-color: hsl(205 60% 60%);
+
+  --md-footer-fg-color: hsl(206 60% 60%);
+  --md-footer-fg-color--light: hsl(206 60% 75%);
+  --md-footer-fg-color--lighter: hsl(206 60% 75% / 0.5);
+  --md-footer-bg-color: hsl(205 60% 2%);
+  --md-footer-bg-color--dark: hsl(205 60% 2% / 0.5);
+}
+
+.md-logo {
+  width: 11.5rem;
+}
+
+.md-logo:hover {
+  opacity: 1;
+}
+
+th:first-of-type,
+td:first-of-type {
+  white-space: nowrap;
+}
+
+.hero {
+  background-image: url('https://www.rigsofrods.org/img/background-dodge.51baa5a7.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; /* Align text at the bottom */
+  justify-content: flex-start; /* Align text to the left */
+  position: relative;
+  color: white; /* Text color */
+  text-align: left; /* Align text to the left */
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+  height: 150px;
+  padding: 0 20px; /* Horizontal padding */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and box-shadow */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%); /* Gradient from transparent to dark */
+  border-radius: 0.5em; /* Match the border radius of the .hero */
+  z-index: 1; /* Ensure the gradient is below the text */
+}
+
+.hero-text {
+  padding: 10px 0; /* Vertical padding to ensure spacing */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: relative; /* Bring text above the gradient */
+  z-index: 2; /* Ensure text is above the gradient */
+}
+
+.hero:hover {
+  transform: translateY(-5px); /* Lift the hero section slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+}
+
+.hero-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em; 
+  color: white!important;
+}
