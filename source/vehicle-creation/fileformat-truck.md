@@ -354,7 +354,7 @@ These sections are not required, but will make it easier to locate your file or 
 
 You should use the guid feature to allow RoR to recognize your truck uniquely. 
 
-This section is required for [skins](alternate-skins.md).
+This section is **required** for [skins](alternate-skins.md).
 
 ```
 ;guid <GUID>
@@ -362,6 +362,18 @@ guid 6daaee29-e462-4d99-96d2-4577294f7b10
 ```
 
 You can generate some GUIDs [here](https://www.guidgenerator.com).
+
+### Default_skin
+
+Overrides the pre-selected skin of the truck. 
+The specified skin will be displayed at the top of the skin selector instead of the dummy "Default skin" entry. 
+
+If no other skins are available, the skin will be applied automatically.
+
+```
+;default_skin <skin_name_with_underscores_for_spaces>
+default_skin My_Awesome_Skin
+```
 
 ### Fileformatversion
 
@@ -2186,7 +2198,7 @@ wheeldetachers
 
 ### Collisionboxes
 
-In RoR 0.4.0.5 and above you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
+In <span style="background-color:#854200">\[ Version 0.4.0.5+ \]</span> you can define collisionboxes. In earlier versions of RoR, there was only one bounding box for truck activation per object, which was defined by the outermost nodes. With collisionboxes, you get the ability to define the nodes that should be used for the activation bounding box calculation. It is also possible to define multiple bounding boxes, for example to exclude some areas from activation.
 
 Syntax:
 
@@ -2210,6 +2222,17 @@ rescuer
 ```
 
 This single keyword placed in the truck file will make the truck a rescuer, like the Scania Wrecker. These vehicles can be entered by pressing `R`.
+
+### Scripts
+
+Loads an [AngelScript (*.as)](../terrain-creation/scripting.md) file. Functions like other custom scripts except it provides an extra global variable `thisActor` pointing to the associated truck.
+
+```
+scripts
+MyTruckScript.as
+```
+
+This feature is early in development, scripting documentation will be updated soon.
 
 ## Look & Feel
 
@@ -2421,6 +2444,25 @@ Put the off-state of the brakelight into the file `truck_brake_material_0.png` a
 This section should be after the flares section and before the props and flexbodies section in order for the lights to work properly.
 
 COMPATIBILITY NOTE: Parameters \#1 and \#2 can also be separated by just space, the parser will silently accept it.
+
+### Flaregroups_no_import
+
+Prevents a truck from importing flare states when locked or tied to another truck. 
+
+For example, this can be used to stop a truck-mounted forklift's lights from activating with the truck lights.
+
+-   **Type**: <span style="color:#BD0058">Character</span>; Type of flare, e.g. low beams (`f`).
+-   **Control number**: <span style="color:#BD0058">Integer</span>; <span style="color:#0B8A00">default = -1</span>
+        For user-controlled (`u`) flares, enter value 1-10 that corresponds to the flare.
+		
+Example to prevent importing low beams and CTRL+1 user-controlled lights:
+
+```
+flaregroups_no_import 
+f
+u 1
+```
+
 
 ### Props
 
@@ -2675,7 +2717,8 @@ Parameters:
 -   **(Attributes)**: <span style="color:#BD0058">{ Key: options } pairs</span>; Parameter consisting of name, colon, and \| - delimited list of options.
     - `source:` <span style="color:#BD0058">Source type(s) joined with \|</span>; A list of sources to use, it is recommended to use only 1 per add\_animation line, though multiple sources are possible too.
     - `mode:` <span style="color:#BD0058">Mode type(s) joined with \|</span>; A list of modes to use, multiple modes are valid
-    - `event:` <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the keypress event to catch for the animation
+    - `event:` <span style="color:#BD0058">Key event string</span>; An optional input, only needed for **source: event**. It determines the [keypress event](../gameplay/controls-config.md#keypress-events) to catch for the animation
+    - `link:` <span style="color:#BD0058">Dashboard source type</span>; An optional input, only needed for **source: dashboard**. It determines the [dashboard source](making-custom-hud.md#input-sources) to catch for the animation
     - `autoanimate` <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"autoanimate" keyword</span>; rotation or offset is applied as long as source is not 0. Useful for driveshafts, fans, etc.
 -   **"noflip"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"noflip" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just stops at -   **"bounce"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"bounce" keyword</span>; a prop will flip to the opposite limit when a limit is reached, with this mode it just rebound at the set limit. Only useful with **mode: noflip**
 -   **"eventlock"** <span style="color:#666">(optional)</span>: <span style="color:#BD0058">"eventlock" keyword</span>; will lock a toggled event in its current status, useful for switches and status levers. Only works with **mode:event** and a correct defined **event:**
@@ -2704,11 +2747,16 @@ Parameters:
 -   `tacho` - This prop animates with the vehicle's RPM. It scales with guisetting tachometer. (It is best use it even if there is no custom overlay dashboard; simplifies the adjustment a lot.)
 -   `turbo` - This prop animates with the vehicle's turbocharger PSI.
 -   `parking` - This prop animates with the vehicle's parking brake status.
+-   `gear#` - This prop animates with the specified gear. Where `#` is the gear number (1/2/3 etc).
+-   `gearneutral` - This prop animates with the vehicle's neutral gear. 
+-   `gearreverse` - This prop animates with the vehicle's reverse gear. 
 -   `shifterman1` - H-shift left/right ( Reverse \| 1-2 \| 3-4 \| 5-6...11-12 as positions, scales with engine settings (maxGear)
 -   `shifterman2` - H-shift forth/back animator Reverse-2-6-8-10-12 \| 1-3-5-7-9-11 as positions
--   `sequential` - sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
--   `shifterlin` - for auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
--   `torque` - current engine torque
+-   `sequential` - Sequential shift ( i.e for tiptronic or wheel shift pedals), can be used for commands too (no settable limits then)
+-   `shifterlin` - For auto transmission animations or gearselect indicators (special limits rules apply for this one, see below!)
+-   `autoshifterlin` - Same as `shifterlin` except it allows for D/N/R positions as forward gears are clamped to 1.
+-   `signalstalk` - For turn signal stalk animations.
+-   `torque` - Current engine torque.
 -   `heading` - This prop animates with the current heading of the truck.
 -   `difflock` - This prop animates with the difflock status of the truck (It only works when differentials are present in the truck.)
 -   `rudderboat` - This prop animates with the steering hydro on boats.
@@ -2717,6 +2765,7 @@ Parameters:
 -   `aileron` - This prop animates with the aileron status for airplanes.
 -   `elevator` - This prop animates with the elevator status for airplanes.
 -   `rudderair` - This prop animates with the rudder status for airplanes.
+-   `dashboard` - This prop animates with the status of a GUI element (engine ignition, parking brake etc). Requires `link:` data link argument, see below.
 -   `permanent` - This is a permanent source, which is always active when you are in the truck.
 -   `event` - A source triggered by a keypress, needs exactly one defined event.
 
@@ -2734,6 +2783,10 @@ Specials: Limits do not apply for **mode:sequential**. In this case the options 
 *event:*
 
 -   **rorkeypressevent** - All RoR keypress events. ([A list of valid RoR events](../gameplay/controls-config.md#keypress-events).)
+
+*link:*
+
+- **dashboardsource** - Any input source from the [dashboard system](making-custom-hud.md#input-sources).
 
 **How to use:**
 
@@ -2854,6 +2907,23 @@ The first line of this section is exactly the same format as on the props sectio
 As next, a line beginning with the word *forset* follows. Behind the word *forset*, you declare all nodes used for the deformation of the mesh (ranges are supported).
 
 -   **node\_list**: <span style="color:#BD0058">List of node{number/name/range}</span>; List of nodes to use for deforming the flexbody. These nodes should be outer nodes of the vehicle, those that are close to the mesh.
+
+### (sub-directive) forvert
+
+An additional line added after `forset` enabling manual override of node bindings for specified vertices. The specified nodes do not need to be in `forset` node list.
+Processing works the same as `forset`: the game calculates the offset between the nodes and the vertex and maintains it. 
+
+-   **reference\_node**: <span style="color:#BD0058">Node number/name</span>; The base node, used to define the coordinate system
+-   **x\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the X direction (this can be visualized as a line pointing from the **reference node** to this node)
+-   **y\_direction\_node**: <span style="color:#BD0058">Node number/name</span>; The node that defines the Y direction (this can be visualized as a line pointing from the **reference node** to this node)
+-   **vertex\_list**: <span style="color:#BD0058">List of vertices</span>; List of mesh vertices to use for deforming the flexbody, ranges are supported. Vertex numbers can be viewed in-game using the "Flexbody debug" tool from Top Menubar -> Tools.
+
+!!! note
+	The `verts:` intermediate line before the vertex list is required!
+
+```
+forvert 25, 0, 2, verts: 70-71, 28
+```
 
 Notes about backwards compatibility:
 
@@ -3027,6 +3097,7 @@ Format: keyword <space> value
 -   **dashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for this truck. You can use multiple lines.
 -   **texturedashboard**: <span style="background-color:#854200">\[ Version 0.38.66+ \]</span> [Custom HUD layout](making-custom-hud.md) that should be used for the RTT for this truck. You can use multiple lines. RTT means Real Time-generated Texture, you can use it as material for your custom dashboard mesh.
 -   **interactiveOverviewMap**: <span style="background-color:#854200">\[ Version 0.36+ \]</span>; <span style="color:#BD0058">off / simple / zoom</span> - Enables/disables the activation of the interactive map for the truck.
+-   **shifterAnimTime**: Sets how much a shifter prop animation should be smoothed. Default `0.4`, use `0.0` to disable.
 
 Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored or removed soon.
 
@@ -3099,7 +3170,7 @@ Parameters:
 -   **texture\_height**: <span style="color:#BD0058">Positive decimal, must be power of 2</span>; Y-resolution of the texture generated. Valid: any value^2 (POW) (see below for explanation), recommended maximum `256`, watch your FPS.
 -   **min\_clip\_distance**: <span style="color:#BD0058">Real number</span>; Minimum distance in meters of objects to be rendered Valid: `0.1` - value&lt;maxclipdistance. Useful to blend out things that should not be displayed. Good to tune FPS.
 -   **max\_clip\_distance**: <span style="color:#BD0058">Real number</span> Maximum distance in meters of objects to be rendered Valid: value&gt;minclipdistance - `32000`. Useful to blend out things that should not be displayed. Watch your FPS.
--   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: `-1` == camera, `0` == tracker camera (requires an alternative camera orientation node), `1` == mirrors.
+-   **camera\_role**: <span style="color:#BD0058">Decimal number</span>; Role aka function of the camera: <br> `-1` == Camera <br> `0` == Tracker camera (requires an alternative camera orientation node) <br> `1` == Mirrors <br> `2` == Same as mirrors (`1`) but without flipping the texture horizontally (expects texcoords to be already flipped in the mesh).
 -   **camera\_mode**: <span style="color:#BD0058">Decimal number, use -2</span>; Camera switchoff state. Not supported yet, put a `-2` in here.
 -   **material**: <span style="color:#BD0058">String</span>; The material the generated textured should be displayed on. Requires a prop (mesh) using this material to get any visual results.
 -   **name**: <span style="background-color:#854200">\[ Version 0.38.63+ \]</span> <span style="color:#BD0058">String</span>; Specify a name for this videocamera that might be used for the title of the renderwindow.
@@ -3137,7 +3208,7 @@ videocamera
 43, 42,  1,  185,      -1,    0.00,  0.00,  0.00,    0,    0,    0,  70,  256,  256,    0.10,    2500,     1,    -2, video-camera1
 ```
 
-**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/): (They are currently disabled)**
+**Example mirror setup from the [1988 Audi UR-Quattro](https://forum.rigsofrods.org/resources/1988-audi-ur-quattro.85/):**
 
 ```
 videocamera

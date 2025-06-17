@@ -190,6 +190,7 @@ flamewar
 flaperon
 flarematerialname
 Flarewing
+Flaregroups
 flexbodies
 Flexbodies
 flexbody
@@ -201,6 +202,7 @@ flexmeshes
 FN
 footbrake
 forset
+forvert
 forwardcommands
 Forwardcommands
 fov
@@ -850,3 +852,5 @@ Pointlight
 DirX
 DirY
 DirZ
+dashboardsource
+shifterAnimTime
