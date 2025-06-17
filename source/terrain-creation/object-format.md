@@ -29,7 +29,7 @@ hangar.mesh
 1, 1, 1
 
 beginmesh
-mesh hangar.mesh
+mesh hangarcol.mesh
 endmesh
 
 
@@ -37,12 +37,14 @@ beginbox
 boxcoords -23.75, -21.75, -0.2, 2.1, -3.07, -0.19
 virtual
 event shopplane avatar
+reverb_preset EFX_REVERB_PRESET_WOODEN_ALCOVE
 endbox
 
 beginbox
 boxcoords  -17, 17, 0, 4.5, -29, 4
 virtual
 event spawnzone
+reverb_preset EFX_REVERB_PRESET_FACTORY_HALL
 direction 0, 90, 0
 endbox
 
@@ -76,9 +78,7 @@ For example you create a file called `myRedBuilding.odef` and inside you specify
 
 ### nocast
 
-Disables shadow casting for the object. Useful for skyboxes.
-
-Example:
+Disables shadow casting for the object, useful for skyboxes.
 
 ```
 Building.mesh
@@ -109,7 +109,7 @@ Specifies a box that can be used for collisions or events.
 
 Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and `spawnzone` but you can define a non existing eventname if you want to use with Angelscript.
 
-`filterevent`: on what it should trigger. valid values: `avatar`, `truck`, and `airplane`. 
+`filterevent`: on what it should trigger. valid values: `avatar`, `truck`, `truck_wheels`, `boat` and `airplane`. 
 
 **optional:**`direction 0, 90, 0`: this determines the direction of objects spawned in this box 
 
@@ -117,19 +117,8 @@ Some predefined values are `shopboat`, `shoptruck`, `shopplane`, `shoptrain` and
 
 **optional:**`forcecamera x, y, z`: Coordinates to place the camera, and force to change to this camera point of view when player enter at the box coords. 
 
-**optional:**`frictionconfig name-groundmodel.cfg` 
-
-Loads a custom groundmodel config. Use this if you want to use a groundmodel not specified in `ground_models.cfg`. 
-
-`name-groundmodel.cfg` is the name of your groundmodel config file. 
-
-**optional:**`stdfriction name` 
-
-Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision box will do. The physical parameters of these standard friction materials are defined in the configuration file `ground_models.cfg`.
-
-**optional:**`friction adhesion velocity, static friction coef, dynamic friction coef, hydrodynamic coef, Stribeck velocity, alpha, strength, fx_type, [fx_color]`: this will set the parameters of the friction the collision box will do. The physical parameters are manually given.
-
-
+**optional:**`reverb_preset preset_name`:  The OpenAL sound preset to be used when player vehicle enters the box. 
+Where `preset_name` is an `EFX_REVERB_PRESET_*` from [here](https://github.com/RigsOfRods/rigs-of-rods/blob/4261db5063f47921f0305fb491a12eda6c297aa4/source/main/audio/SoundManager.cpp#L327-L401).
 
 `endbox` must close the box
 
@@ -153,21 +142,35 @@ You can use a existing mesh that RoR collision system will use.
 
 `endmesh`: closes the actual mesh box
 
-You can also use the option `stdfriction` with this syntax. 
+## Friction
 
-For example, if you have made a road object in 3D and you want to give it an asphalt friction, give it an odef file like this one:
+Defined inside of a `beginbox` or `beginmesh`, this sets the friction of a collision mesh or box. If not defined the default groundmodel used will be `concrete`.
+
+`frictionconfig name-groundmodel.cfg` 
+
+Optional, loads a custom groundmodel config. Use this if you want to use a groundmodel not specified in [ground_models.cfg](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/ground_models.cfg).
+
+`name-groundmodel.cfg` is the name of your groundmodel config file. 
+
+`stdfriction name`  or `usefriction name`
+
+Where `name` is either `concrete`, `asphalt`,`gravel`, `rock`, `ice`, `snow`, `metal`, `grass` or `sand`: this will set the type of friction the collision mesh or box will do. The physical parameters of these standard friction materials are defined in the configuration file [ground_models.cfg](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/ground_models.cfg).
+
+For example, if you have made a road object and you want to give it an asphalt friction, give it an odef file like this one:
 
 ```
-mr_road.mesh
+example_road.mesh
 1, 1, 1
 
 beginmesh
-mesh mr_road.mesh
+mesh example_road.mesh
 stdfriction asphalt
 endmesh
 
 end
 ```
+
+A friction settings tool can be accessed in-game through the Tools tab of the Top Menubar. Use this to check if the friction is correctly applied to the object.
 
 ## Animations
 
@@ -189,3 +192,47 @@ You can add chimneys or other particle effects to your object using this:
 ;particleSystem scale, x, y, z, particleInstanceName particleScriptName
 particleSystem 1, 1, 1, 1, myfire1 enhancedFire
 ```
+
+## Ambient light
+
+Allows for ambient light to be added to an object that can cast light onto other objects.  Works similarly to [flares](../vehicle-creation/fileformat-truck.md#flares).
+
+!!! note
+	Light casting currently only works with PSSM shadows disabled!
+
+### Pointlight
+
+```
+;pointlight x, y, z, dirx, diry, dirz, r, g, b, range
+pointlight -13, 1, 6, -1, 0, -1, 10, 5, 0, 60
+```
+
+Parameters:
+
+- X position: Light's X coordinate.
+- Y position: Light's Y coordinate.
+- Z position: Light's Z coordinate.
+- DirX: Light direction on the X axis.
+- DirY: Light direction on the Y axis.
+- DirZ: Light direction on the Z axis.
+- R, G, B: RGB 0-1 color values. Sets the color of the visual flare and light.
+- Range: Distance the light will cast.
+
+### Spotlight
+
+```
+;spotlight x, y, z, dirx, diry, dirz, r, g, b, range, innerAngle, outerAngle 
+spotlight  -13, 1, 6, -1, 0, -1, 10, 5, 0, 60,30,45
+```
+
+Parameters:
+
+- X position: Light's X coordinate.
+- Y position: Light's Y coordinate.
+- Z position: Light's Z coordinate.
+- DirX: Light direction on the X axis.
+- DirY: Light direction on the Y axis.
+- DirZ: Light direction on the Z axis.
+- R, G, B: RGB 0-1 color values. Sets the color of the visual flare and light.
+- Range: Distance the light will cast.
+- Inner / Outer Angle: The angles that determine where the light fades from bright in the middle to dimmer on the outside edges.
