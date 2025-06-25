@@ -186,18 +186,18 @@ Scroll to the end of the file, you should see lines similar to these:
 
 The waypoints are exported in JSON format. 
 
-From here you have two options:
+From here you can:
 
 - Name the preset and create an issue ticket on [GitHub](https://github.com/RigsOfRods-Community/ai-waypoints/issues) with the completed preset. Someone else will add it to the `waypoints.json` file. 
 
 - Download the `waypoints.json` file from [GitHub](https://raw.githubusercontent.com/RigsOfRods-Community/ai-waypoints/main/waypoints.json) (right click -> Save As, set file type to "All files")
 and place it in the `savegames` folder. RoR will load this file instead of downloading. Edit the file with your new preset, then create a pull request with your changes.
 
+The preset can also be added to a terrain using the [AI Presets](../terrain-creation/terrn2-subsystem.md#ai-presets-section) section.
+
 ## Limitations
 
 The current AI is an evolution of the per-terrain based AI featured on terrains such as F1 Test Track and Bajarama V2. It has some limitations:
-
-- You cannot set the vehicle speed per-waypoint. This also means an AI vehicle cannot stop at a waypoint (example: bus stops)
 
 - An AI vehicle in 'normal' mode will slow down at every waypoint. For most terrains this is fine but for others (such as race tracks) the AI drives too slowly. The current 'race' mode does not fix this as that mode will always drive at the same speed and won't slow down for corners.
 

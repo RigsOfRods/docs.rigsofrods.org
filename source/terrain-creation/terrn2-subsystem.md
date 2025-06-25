@@ -52,7 +52,10 @@ YourMapobj.tobj=
 YourMapMoreobj.tobj=
 	
 [Scripts]
- MyRaceScript.as=
+MyRaceScript.as=
+ 
+[AI Presets]
+YourMapWaypoints.json=
 ```
 
 ### General section 
@@ -167,6 +170,10 @@ Sets the names of teach terrain object (tobj) file, ending with "=". You can hav
 ### Scripts section 
 
 Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
+
+### AI Presets section
+
+Sets the name of JSON files containing waypoints for use with the [vehicle AI](../gameplay/vehicle-ai.md), ending with "=".
 
 ## Ogre Terrain Config (.otc)
 
