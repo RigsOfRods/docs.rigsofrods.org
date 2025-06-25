@@ -35,6 +35,7 @@ CaelumConfigFile = YourMap.os
 SkyXConfigFile =  YourMap.skx
 HydraxConfigFile = YourMap.hdx
 StartPosition = 256, 10, 256
+StartRotation = 180
 SandStormCubeMap = tracks/skyboxcol
 Gravity = -9.81
 CategoryID = 129
@@ -123,11 +124,18 @@ To get the position values:
 - Close RoR and browse to `Documents\My Games\Rigs of Rods\logs` (or `~/.rigsofrods/logs` on Linux) and open the `RoR.log` file with a text editor. 
 - Scroll to the bottom of the file. You should find a line similar to this:
 
-`22:21:51: Position: 885.289, 113.769, 586.640, 0.0, 0.0, 0.0`
+`Position: 885.289, 113.769, 586.640, 0.0, 0.0, 0.0`
 
-- Copy the first 3 position lines and paste them in the StartPosition line. Example:
+- Copy the first three position lines and paste them in the StartPosition line. Example:
 
 `StartPosition = 885.289, 113.769, 586.640`
+
+#### StartRotation
+
+<span style="color:#BD0058">(degrees)</span> Sets the spawn rotation of the player character. 
+
+By default the spawn rotation is determined by the presence of a predefined vehicle. For example, [NeoQueretaro](https://forum.rigsofrods.org/resources/neoqueretaro.246/) features a predefined Scania Wrecker.
+If this vehicle is not installed the character spawns facing the gas station, otherwise it will spawn facing the opposite direction (towards the towing garage). 
 
 #### SandStormCubeMap
 
