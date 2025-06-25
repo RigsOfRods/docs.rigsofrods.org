@@ -738,7 +738,10 @@ AmbientColor
 CaelumConfigFile
 HydraxConfigFile
 StartPosition
+StartRotation
 XYZ
+xyz
+yxz
 SandStormCubeMap
 cubemap
 CategoryID
@@ -854,3 +857,5 @@ DirY
 DirZ
 dashboardsource
 shifterAnimTime
+TestC
+NeoQueretaro

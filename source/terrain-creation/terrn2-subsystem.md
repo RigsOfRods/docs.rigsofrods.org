@@ -427,7 +427,7 @@ Defines object or vehicle placement on terrain.
 
 ### Static objects 
 
-Static objects are referred to in the file by its `.odef` name. The `.odef` file contains names of the visual meshes 
+Static objects are referred to by its object definition (`.odef`) file name. This file contains names of the visual meshes 
 along with collision mesh and associated friction settings.
 
 Static objects may also trigger special events. A "truck shop" building will, when entered, will display a vehicle menu. 
@@ -601,10 +601,6 @@ since 0.38.62 it has two more arguments:
 
 ### Procedural Roads
 
-!!! note 
-	Procedural roads will be getting an interactive editor along with other improvements in a future RoR version,
-	see [this thread](https://forum.rigsofrods.org/threads/procedural-roads-evolution.3780/) for more info.
-
 There are two ways to add roads. One way is just by placing meshes like any other object:
 
 ```
@@ -624,17 +620,27 @@ begin_procedural_roads
 end_procedural_roads
 ```
 
+#### Road editor
+
+An interactive road editor was introduced in version 2022.12.  The [2022.12 release trailer](https://youtu.be/OagiMx2zwTA) features a demo of the initial version. 
+
+In the current stable release (2022.12) the road editor is accessed by opening the console (Top Menubar -> `Tools` -> `Show console` or press the tilde key), type `loadscript road_editor.as` and press Enter.
+
+Starting with 2025.03 RC1, the road editor is now available as a gadget (a self-contained script). 
+Gadgets are loaded through the Top Menubar -> `Tools` -> `Browse gadgets...`,  from here the road editor can be selected.
+
+![road_editor](../images/road_editor.jpg)
+
 #### Road types
 
--   flat
--   left - Only left border
--   right - Only right border
--   both - Both borders
--   bridge
--   bridge\_no\_pillars
-
--   monorail (0.35+)
--   monorail2 (0.35+)
+-   `flat`
+-   `left` - Only left border
+-   `right` - Only right border
+-   `both` - Both borders
+-   `bridge`
+-   `bridge_no_pillars`
+-   `monorail`
+-   `monorail2`
 
 As of version 0.4.0.7 all roads are automatically converted into procedural roads. 
 
@@ -662,3 +668,29 @@ If you're making a long straight road, you only need the first and the last obje
 You need only the first and the last object, the rest of the road will be generated between these two objects. 
 This makes the terrain file smaller but you still get the same result. 
 Please note that the rotation of the road blocks must be the same, otherwise the loading times will be much longer.
+
+#### rot_yxz
+
+A self-contained line that can be placed anywhere in the terrain object file. When used it changes how road roll angles are processed, making it possible to create correctly banked roads.
+
+Example usage from the [Stunt Rally track pack](https://forum.rigsofrods.org/threads/stunt-rally-130-tracks-converted-for-ror.4205/) (TestC1-Circle):
+
+![road_rot_yxz_example](../images/road_rot_yxz_example.jpg)
+
+#### set_default_rendering_distance
+
+This directive sets the rendering distance of all objects that are defined after it, useful for optimization.
+
+```
+; limit distance to 500 meters
+set_default_rendering_distance 500
+
+2490, 0.1, 2164, 0, 0, 0, truckshop sale Mainbase-Truck
+2490, 0.1, 2183, 0, 0, 0, myhangar2 repair Mainbase
+2490, -0.1, 2253, 0, -90, 0, hangar sale Mainbase-Aircraft
+2349, 0, 2105, 0, 0, 0, load-spawner sale Mainbase-Cargo
+2507, 0, 2162, 0, 90, 0, f4afUID-lab
+
+; reset to infinite distance
+set_default_rendering_distance 0
+```
