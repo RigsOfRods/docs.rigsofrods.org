@@ -695,6 +695,7 @@ Not all make sense though for animated props.
 | TRUCK_SHIFT_LOWRANGE      |     N/A                             | sets low range (1-6) for H-shaft | 
 | TRUCK_SHIFT_MIDRANGE       |    N/A                             | sets middle range (7-12) for H-shaft | 
 | TRUCK_SHIFT_HIGHRANGE     |     N/A                             | sets high range (13-18) for H-shaft | 
+| TRUCK_CYCLE_GEAR_RANGES    |     N/A                             | toggle between low/middle/high gear ranges | 
 | TRUCK_SWITCH_SHIFT_MODES       | Q                   | toggle between transmission modes | 
 
 ### Airplane
