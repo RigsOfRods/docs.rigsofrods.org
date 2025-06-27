@@ -47,11 +47,15 @@ TractionMap = YourMap-landuse.cfg
 terrain = YourName
 trees&grass = OtherName
 objects = YetAnotherName
+
+[AssetPacks]
+industrial-objects.assetpack=
+fancy-trees.assetpack=
 	
 [Objects]
 YourMapobj.tobj=
 YourMapMoreobj.tobj=
-	
+
 [Scripts]
 MyRaceScript.as=
  
@@ -171,17 +175,30 @@ You can change the gravity in-game using the console command `gravity`.
 
 <span style="color:#BD0058">("String = String" pairs)</span> Sets the names of the users who created the terrain, appears in the terrain selector. You can add multiple lines. 
 
+### AssetPacks section
+
+Sets the names of asset packs, ending with `=`. 
+
+Asset packs are separately distributed zip files that can include meshes/textures/object files/etc to be used by terrains or vehicles.
+
+An asset pack zip file **MUST** include a text file with `.assetpack` extension containing file info:
+
+```
+assetpack_name "Industrial objects"
+assetpack_description "Example asset pack"
+```
+
 ### Objects section 
 
-Sets the names of teach terrain object (tobj) file, ending with "=". You can have multiple object files (eg. separate file for trees/grass and another for buildings).
+Sets the names of teach terrain object (tobj) file, ending with `=`. You can have multiple object files (eg. separate file for trees/grass and another for buildings).
  
 ### Scripts section 
 
-Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
+Sets the names of AngelScript files associated with the map,, ending with `=`. Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
 
 ### AI Presets section
 
-Sets the name of JSON files containing waypoints for use with the [vehicle AI](../gameplay/vehicle-ai.md), ending with "=".
+Sets the name of JSON files containing waypoints for use with the [vehicle AI](../gameplay/vehicle-ai.md), ending with `=`.
 
 ## Ogre Terrain Config (.otc)
 
@@ -677,7 +694,7 @@ Example usage from the [Stunt Rally track pack](https://forum.rigsofrods.org/thr
 
 ![road_rot_yxz_example](../images/road_rot_yxz_example.jpg)
 
-#### set_default_rendering_distance
+### set_default_rendering_distance
 
 This directive sets the rendering distance of all objects that are defined after it, useful for optimization.
 
