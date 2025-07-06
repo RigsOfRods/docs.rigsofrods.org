@@ -3,14 +3,14 @@ Vehicle concepts
 
 **Rigs of Rods (RoR)** is not your typical vehicle simulator. Other vehicle simulators use fake suspension, mesh-based vehicles with no mass distribution, predetermined damage from collisions, and approximated fuzzy-dice sway models. 
 
-Rigs of Rods uses a very unique way to simulate a truck. In fact, <b>it does not simulates a truck at all</b>... It only simulates a set of points, called **Nodes** interconnected by **Beams**. Assembling these elements to form the structure of a truck makes a truck. But you could also assemble them to do a car, a bike, a giant robot, a boat, a plane, a building, a bridge, anything, and it would be simulated the same way. 
+RoR uses a very unique way to simulate a truck. In fact, <b>it does not simulates a truck at all</b>... It only simulates a set of points, called **Nodes** interconnected by **Beams**. Assembling these elements to form the structure of a truck makes a truck. But you could also assemble them to do a car, a bike, a giant robot, a boat, a plane, a building, a bridge, anything, and it would be simulated the same way. 
 
 To grasp the idea, take a look at these games that use the same construction logic:
 
 -   [Geomag](https://www.geomagworld.com/en/) is a real-world construction game that uses metallic balls and magnets.
 -   [Bridge Construction Set](http://www.chroniclogic.com/pontifex2.htm) is a video game where you build and test bridges.
 
-To build a truck in Rigs of rods, you need to design a structural chassis composed of a lattice of rods. You have to define :
+To build a truck in RoR, you need to design a structural chassis composed of a lattice of rods. You have to define :
 
 -   **Nodes**: these are the points of interconnection of rods (the same as the balls in Geomag). For the physics engine, these nodes are the only concrete elements of the truck: they have a mass and can collide with other elements, but they are dimensionless.
 -   **Beams**: (or rods): they interconnect nodes. For the physics engine they are massless and are composed of a spring and a damper, so their length can change depending on the forces it bears. They are monodimensional - they have length, but no thickness.

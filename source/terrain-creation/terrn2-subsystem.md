@@ -35,6 +35,7 @@ CaelumConfigFile = YourMap.os
 SkyXConfigFile =  YourMap.skx
 HydraxConfigFile = YourMap.hdx
 StartPosition = 256, 10, 256
+StartRotation = 180
 SandStormCubeMap = tracks/skyboxcol
 Gravity = -9.81
 CategoryID = 129
@@ -46,13 +47,20 @@ TractionMap = YourMap-landuse.cfg
 terrain = YourName
 trees&grass = OtherName
 objects = YetAnotherName
+
+[AssetPacks]
+industrial-objects.assetpack=
+fancy-trees.assetpack=
 	
 [Objects]
 YourMapobj.tobj=
 YourMapMoreobj.tobj=
-	
+
 [Scripts]
- MyRaceScript.as=
+MyRaceScript.as=
+ 
+[AI Presets]
+YourMapWaypoints.json=
 ```
 
 ### General section 
@@ -120,11 +128,18 @@ To get the position values:
 - Close RoR and browse to `Documents\My Games\Rigs of Rods\logs` (or `~/.rigsofrods/logs` on Linux) and open the `RoR.log` file with a text editor. 
 - Scroll to the bottom of the file. You should find a line similar to this:
 
-`22:21:51: Position: 885.289, 113.769, 586.640, 0.0, 0.0, 0.0`
+`Position: 885.289, 113.769, 586.640, 0.0, 0.0, 0.0`
 
-- Copy the first 3 position lines and paste them in the StartPosition line. Example:
+- Copy the first three position lines and paste them in the StartPosition line. Example:
 
 `StartPosition = 885.289, 113.769, 586.640`
+
+#### StartRotation
+
+<span style="color:#BD0058">(degrees)</span> Sets the spawn rotation of the player character. 
+
+By default the spawn rotation is determined by the presence of a predefined vehicle. For example, [NeoQueretaro](https://forum.rigsofrods.org/resources/neoqueretaro.246/) features a predefined Scania Wrecker.
+If this vehicle is not installed the character spawns facing the gas station, otherwise it will spawn facing the opposite direction (towards the towing garage). 
 
 #### SandStormCubeMap
 
@@ -160,13 +175,30 @@ You can change the gravity in-game using the console command `gravity`.
 
 <span style="color:#BD0058">("String = String" pairs)</span> Sets the names of the users who created the terrain, appears in the terrain selector. You can add multiple lines. 
 
+### AssetPacks section
+
+Sets the names of asset packs, ending with `=`. 
+
+Asset packs are separately distributed zip files that can include meshes/textures/object files/etc to be used by terrains or vehicles.
+
+An asset pack zip file **MUST** include a text file with `.assetpack` extension containing file info:
+
+```
+assetpack_name "Industrial objects"
+assetpack_description "Example asset pack"
+```
+
 ### Objects section 
 
-Sets the names of teach terrain object (tobj) file, ending with "=". You can have multiple object files (eg. separate file for trees/grass and another for buildings).
+Sets the names of teach terrain object (tobj) file, ending with `=`. You can have multiple object files (eg. separate file for trees/grass and another for buildings).
  
 ### Scripts section 
 
-Sets the names of AngelScript files associated with the map,, ending with "=". Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
+Sets the names of AngelScript files associated with the map,, ending with `=`. Mostly used for races, see the [Race script generator](race-generator.md) page for more info.
+
+### AI Presets section
+
+Sets the name of JSON files containing waypoints for use with the [vehicle AI](../gameplay/vehicle-ai.md), ending with `=`.
 
 ## Ogre Terrain Config (.otc)
 
@@ -412,7 +444,7 @@ Defines object or vehicle placement on terrain.
 
 ### Static objects 
 
-Static objects are referred to in the file by its `.odef` name. The `.odef` file contains names of the visual meshes 
+Static objects are referred to by its object definition (`.odef`) file name. This file contains names of the visual meshes 
 along with collision mesh and associated friction settings.
 
 Static objects may also trigger special events. A "truck shop" building will, when entered, will display a vehicle menu. 
@@ -586,10 +618,6 @@ since 0.38.62 it has two more arguments:
 
 ### Procedural Roads
 
-!!! note 
-	Procedural roads will be getting an interactive editor along with other improvements in a future RoR version,
-	see [this thread](https://forum.rigsofrods.org/threads/procedural-roads-evolution.3780/) for more info.
-
 There are two ways to add roads. One way is just by placing meshes like any other object:
 
 ```
@@ -609,17 +637,27 @@ begin_procedural_roads
 end_procedural_roads
 ```
 
+#### Road editor
+
+An interactive road editor was introduced in version 2022.12.  The [2022.12 release trailer](https://youtu.be/OagiMx2zwTA) features a demo of the initial version. 
+
+In the current stable release (2022.12) the road editor is accessed by opening the console (Top Menubar -> `Tools` -> `Show console` or press the tilde key), type `loadscript road_editor.as` and press Enter.
+
+Starting with 2025.03 RC1, the road editor is now available as a gadget (a self-contained script). 
+Gadgets are loaded through the Top Menubar -> `Tools` -> `Browse gadgets...`,  from here the road editor can be selected.
+
+![road_editor](../images/road_editor.jpg)
+
 #### Road types
 
--   flat
--   left - Only left border
--   right - Only right border
--   both - Both borders
--   bridge
--   bridge\_no\_pillars
-
--   monorail (0.35+)
--   monorail2 (0.35+)
+-   `flat`
+-   `left` - Only left border
+-   `right` - Only right border
+-   `both` - Both borders
+-   `bridge`
+-   `bridge_no_pillars`
+-   `monorail`
+-   `monorail2`
 
 As of version 0.4.0.7 all roads are automatically converted into procedural roads. 
 
@@ -647,3 +685,29 @@ If you're making a long straight road, you only need the first and the last obje
 You need only the first and the last object, the rest of the road will be generated between these two objects. 
 This makes the terrain file smaller but you still get the same result. 
 Please note that the rotation of the road blocks must be the same, otherwise the loading times will be much longer.
+
+#### rot_yxz
+
+A self-contained line that can be placed anywhere in the terrain object file. When used it changes how road roll angles are processed, making it possible to create correctly banked roads.
+
+Example usage from the [Stunt Rally track pack](https://forum.rigsofrods.org/threads/stunt-rally-130-tracks-converted-for-ror.4205/) (TestC1-Circle):
+
+![road_rot_yxz_example](../images/road_rot_yxz_example.jpg)
+
+### set_default_rendering_distance
+
+This directive sets the rendering distance of all objects that are defined after it, useful for optimization.
+
+```
+; limit distance to 500 meters
+set_default_rendering_distance 500
+
+2490, 0.1, 2164, 0, 0, 0, truckshop sale Mainbase-Truck
+2490, 0.1, 2183, 0, 0, 0, myhangar2 repair Mainbase
+2490, -0.1, 2253, 0, -90, 0, hangar sale Mainbase-Aircraft
+2349, 0, 2105, 0, 0, 0, load-spawner sale Mainbase-Cargo
+2507, 0, 2162, 0, 90, 0, f4afUID-lab
+
+; reset to infinite distance
+set_default_rendering_distance 0
+```

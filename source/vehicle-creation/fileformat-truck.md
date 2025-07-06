@@ -2304,6 +2304,24 @@ Parameters:
 set_managedmaterials_options 1
 ```
 
+### Assetpacks 
+
+Asset packs are separately distributed zip files that can include meshes/textures/materials/etc to be used by vehicles or terrains.
+
+Asset packs are defined in the truck file using:
+
+```
+assetpacks
+myTruckParts.assetpack
+```
+
+An asset pack zip file **MUST** include a text file with `.assetpack` extension containing file info:
+
+```
+assetpack_name "Extra Parts for my Awesome Truck"
+assetpack_description "Example asset pack"
+```
+
 ### Flares
 
 Flares allow you to add lights to your truck. They work as light sources in OGRE and will illuminate other objects (if enabled in settings).
