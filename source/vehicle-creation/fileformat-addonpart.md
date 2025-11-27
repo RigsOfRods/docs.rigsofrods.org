@@ -26,7 +26,6 @@ These features are not currently supported. They may be added in a future RoR re
 - Adding new nodes and beams 
 - Engine tweaking 
 - Adding or changing sounds
-- Moving cinecams
 - Adding new animated props (replacing existing prop works)
 - Any other truck file sections not listed here
 
