@@ -3125,6 +3125,9 @@ Legacy parameters (not affecting the v0.4 custom HUD system). Will be restored o
 -   **useMaxRPM**: <span style="color:#BD0058">0 or 1</span>; <span style="color:#0B8A00">default = 0</span>; \[Yes/No\] Whether or not to use the max rpm (in the engine section) as the highest number on the tachometer. Note that your actual max rpm is MaxRPM+20%. Do not include the 20% on your tachometer or it will be inaccurate. Tachometer needle is from -120° to 120°.
 -   **helpMaterial**: <span style="color:#BD0058">String</span>; <span style="color:#0B8A00">default = tracks/black</span>; The help material (a picture that shows command instructions). NOTE: This value overrides settings from [section "help"](#help)
 
+Since version 2026.01, each `texturedashboard` is rendered to a different RTT texture. The first `texturedashboard` is rendered to `RTTTexture1`, the second one to `RTTTexture2`, and so on. There are
+10 textures available and you can preview them using the Texture Tool in _Tools > Texture tool_.
+
 Example:
 
 ```
@@ -3132,14 +3135,39 @@ guisettings
 interactiveOverviewMap zoom
 dashboard dash_test.layout
 dashboard dash_test2.layout
+; Will be rendered to RTTTexture1
 texturedashboard dashGauges.layout
+; Will be rendered to RTTTexture2 (since 2026.01)
+texturedashboard advancedDash.dashboard
 ; legacy settings
 tachoMaterial tracks/MyTacho
 speedoMaterial tracks/MySpeedo
 speedoMax 80
 useMaxRPM 1
 ```
-   
+
+### Customdashboardinputs
+
+<span style="background-color:#854200">\[ Version 2026.01+ \]</span> 
+
+Adds custom input sources to the vehicle's [dashboard system](making-custom-hud.md). These inputs can be modified using scripts, allowing you to implement highly-customised and complex behaviours.
+
+Parameters:
+
+-   **input_name**: <span style="color:#BD0058">Custom input name</span>. Do not use [built-in](making-custom-hud.md#input-sources) names! It's highly recommended to
+use names that are unique enough to avoid conflicts, since dashboard mods can also add custom inputs! An unique name could be something like `VehicleName_CustomInput_InputName`.
+-   **data_type**: <span style="color:#BD0058">Input data type</span>. Allowed types: `bool`, `int`, `float`, `string`. The correct data type for the input depends on its
+purpose. For instance, you use `float` to [rotate images](making-custom-hud.md#rotate) or [animate props](#add_animation), `int` to control [series](making-custom-hud.md#series), `bool` to control [lamps](making-custom-hud.md#lamp) or [flares](#flares), and `string` to [add text](making-custom-hud.md#textstring-textformat) to your dashboard.
+
+Example:
+
+```
+customdashboardinputs
+VehicleName_CustomInput_DieselGlowPlugLight bool
+VehicleName_CustomInput_FuelLevel float
+VehicleName_CustomInput_GaugeFaceType int
+VehicleName_CustomInput_ClockString string
+```
 
 ### Set\_skeleton\_settings
 
