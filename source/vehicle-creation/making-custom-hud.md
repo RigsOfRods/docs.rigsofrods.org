@@ -204,6 +204,50 @@ format=%04.0f km/h
 link=speedo_kph
 ```
 
+### Multiple animations
+
+Since version 2026.01, you can add multiple animations to a MyGUI widget by appending a number to the properties associated to each animation. These have to be numbered in
+order (do not skip numbers!). Properties for the first animation are **not** numbered.
+
+You can set up to 11 animations (10 rotations/scalings/translations + 1 series/textstring/textformat/lamp).
+
+Example for an aircraft attitude indicator, using custom inputs:
+
+```
+anim=translate
+min=-360
+max=360
+vmin=-100
+vmax=100
+direction=left
+link=AircraftName_CustomInput_AttitudeTranslateX
+
+anim2=translate
+min2=-360
+max2=360
+vmin2=-100
+vmax2=100
+direction2=down
+link2=AircraftName_CustomInput_AttitudeTranslateY
+
+anim3=rotate
+min3=-360
+max3=360
+vmin3=-360
+vmax3=360
+direction3=down
+link3=AircraftName_CustomInput_AttitudeRotate
+```
+
+## Widget visibility
+
+Each dashboard input source has an enabled/disabled property that sets the visibility of the MyGUI widgets associated to it.
+
+On widgets that have one or more animations, the visibility is always set by the first animation's dashboard input link.
+
+Widgets can also have a single dashboard input link with no animations, allowing you to set the visibility only.
+
+
 ## Input sources
 
 | <div style="width:165px">Method</div> | Description                                                                       | Type / Values / Ranges                       | Active when    |
@@ -335,6 +379,7 @@ A dashboard mod contains:
 - MyGUI `*.layout` file(s)
 - Textures
 - (optional) Preview (`filename-mini`) images
+- (optional) A [dashboard script](#dashboard-scripts) (`*.as` file) <span style="background-color:#854200">\[ Version 2026.01+ \]</span>
 
 ### Dashboard file format
 
@@ -348,6 +393,19 @@ dashboard_description "Semi-transparent blue-tinted analog gauges with a digital
 dashboard_author "graphics" 899 "Mark" "example@example.com"
 dashboard_author "layouts" 899 "Mark" "example@example.com"
 dashboard_category 201
+```
+
+Generic example, using [custom inputs](#dashboard_custom_input):
+
+```
+dashboard_name "Dashboard with custom inputs"
+dashboard_description "Dashboard that uses custom inputs!"
+dashboard_author "everything" 22564 "Eze" "example@example.com"
+dashboard_category 201
+dashboard_custom_input DashboardModName_CustomInput_DieselGlowPlugLight bool
+dashboard_custom_input DashboardModName_CustomInput_FuelLevel float
+dashboard_custom_input DashboardModName_CustomInput_GaugeFaceType int
+dashboard_custom_input DashboardModName_CustomInput_ClockString string
 ```
 
 #### dashboard_name
@@ -380,6 +438,76 @@ https://forum.rigsofrods.org/members/curiousmike.5831/
 - `200` - Generic
 - `201` - Truck
 - `202` - Boat
+
+#### dashboard_custom_input
+
+<span style="background-color:#854200">\[ Version 2026.01+ \]</span>
+
+Specifies a custom input source that can be modified using scripts.
+
+Parameters:
+
+-   **input_name**: <span style="color:#BD0058">Custom input name</span>. Do not use [built-in](#input-sources) names! It's highly recommended to
+use names that are unique enough to avoid conflicts, since vehicles can also have their own custom inputs! An unique name could be something like `DashboardModName_CustomInput_InputName`.
+-   **data_type**: <span style="color:#BD0058">Input data type</span>. Allowed types: `bool`, `int`, `float`, `string`. The correct data type for the input depends on its
+purpose. For instance, you use `float` to [rotate images](#rotate), `int` to control [series](#series), `bool` to control [lamps](#lamp), and `string` to [add text](#textstring-textformat) to your dashboard.
+
+
+### Dashboard scripting with AngelScript
+
+Since version 2026.01, dashboard mods can execute their own script. You just create an `*.as` file, in the same folder and **with the same name** as the `*.dashboard` file. See the [docs for DashBoardManagerClass](https://developer.rigsofrods.org/d8/d07/class_script2_game_1_1_dash_board_manager_class.html) to start controlling your dashboard!
+
+Example script:
+
+```cpp
+DashBoardManagerClass@ dash = null;
+
+// Custom values
+int DashLinkID_DieselGlowPlugLight;
+int DashLinkID_FuelLevel;
+int DashLinkID_MainOdometer;
+
+bool AreGlowPlugsOn()
+{
+	// Logic that checks if the glow plugs are on.
+	return true;
+}
+
+float GetFuelLevel()
+{
+	// Code that gets the fuel level from somewhere.
+	return 1;
+}
+
+float GetMainOdometer()
+{
+	// Code that gets the main odometer value from somewhere.
+	return 1234.5;
+}
+
+// Get the dash manager instance and link IDs at initialisation
+void main() {
+	// Get the DashBoardManager of the actor associated to this script.
+	@dash = thisActor.getDashboardManager();
+    if (@dash != null) {
+		DashLinkID_DieselGlowPlugLight = dash.getLinkIDForName("MyDashboardMod_CustomInput_DieselGlowPlugLight");
+		DashLinkID_FuelLevel = dash.getLinkIDForName("MyDashboardMod_CustomInput_FuelLevel");
+		DashLinkID_MainOdometer = dash.getLinkIDForName("MyDashboardMod_CustomInput_MainOdometer");
+    }
+}
+
+void frameStep(float dt) {
+    if (@dash != null) {
+		bool glowPlug = AreGlowPlugsOn();
+		float fuelLevel = GetFuelLevel();
+		float mainOdo = GetMainOdometer();
+		string mainOdoFormat = "ODO: " + formatFloat(mainOdo, '0', 6, 1) + " km";
+        dash.setBool(DashLinkID_DieselGlowPlugLight, glowPlug);
+        dash.setFloat(DashLinkID_FuelLevel, fuelLevel);
+        dash.setString(DashLinkID_MainOdometer, mainOdoFormat);
+    }
+}
+```
 
 ### Layout file names
 
