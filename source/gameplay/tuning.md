@@ -1,12 +1,9 @@
 Tuning
 ============
 
-!!! warning
-	This feature is in development. It will be made available in an upcoming release. If you're interested in trying this out today, download the latest [development build](https://forum.rigsofrods.org/threads/ror-development-builds-for-windows-and-linux.696/).
-
 ## Introduction
 
-The tuning menu is a new single player feature available for vehicles. It enables the ability to install add-on parts, toggle visibility of meshes and visual effects, flip wheel direction, and save/load tuneups.
+Introduced in version 2026.01, the tuning menu is a new single player feature available for vehicles. It enables the ability to install add-on parts, toggle visibility of meshes and visual effects, flip wheel direction, and save/load tuneups.
 
 Tuning is currently disabled in Multiplayer, support will be added in a future release.
 
