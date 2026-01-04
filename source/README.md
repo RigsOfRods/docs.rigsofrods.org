@@ -11,9 +11,9 @@ hide:
 </style>
 
 <div class="hero">
-  <a href="https://forum.rigsofrods.org/threads/rigs-of-rods-2022-12-released.3635/">
+  <a href="https://forum.rigsofrods.org/threads/rigs-of-rods-2026-01-released.4887/">
       <div class="hero-text">
-          <h1>Read the Release Announcement for Rigs of Rods 2022.12</h1>
+          <h1>Read the Release Announcement for Rigs of Rods 2026.01</h1>
       </div>
   </a>
 </div>

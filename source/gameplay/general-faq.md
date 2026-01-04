@@ -89,4 +89,4 @@ To play multiplayer, see [this section](beginners-guide.md#multiplayer) of the B
 
 This means you're trying to join a server that is running an older or newer RoRNet version than what your current RoR version supports.
 
-The latest version, 2022.12, supports RoRNet 2.44.
+The latest version, 2026.01, supports RoRNet 2.45.

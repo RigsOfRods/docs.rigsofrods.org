@@ -641,10 +641,7 @@ end_procedural_roads
 
 An interactive road editor was introduced in version 2022.12.  The [2022.12 release trailer](https://youtu.be/OagiMx2zwTA) features a demo of the initial version. 
 
-In the current stable release (2022.12) the road editor is accessed by opening the console (Top Menubar -> `Tools` -> `Show console` or press the tilde key), type `loadscript road_editor.as` and press Enter.
-
-Starting with 2025.03 RC1, the road editor is now available as a gadget (a self-contained script). 
-Gadgets are loaded through the Top Menubar -> `Tools` -> `Browse gadgets...`,  from here the road editor can be selected.
+To launch the road editor in the current stable release (2026.01), go to the Top Menubar -> `Tools` -> `Browse gadgets...` and load the 'Road editor' gadget, then press CTRL+Y to activate the terrain editor.
 
 ![road_editor](../images/road_editor.jpg)
 
