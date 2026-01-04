@@ -166,15 +166,15 @@ Changes wheel parameters.
 - **Media2**: Wheelband material name for `wheels`/`meshwheels`, or tire mesh name for `flexbodywheels`. 
 For wheels with pre-mounted tires this should be set to `tracks/trans`. To use the base mod's wheelband or mesh, set an empty string `""`.
 - **Wheel side**: Direction the wheel is facing, `l` or `r`. Swap these values if your wheel is mounted backwards. This can be changed on-the-fly in the Tuning menu.
-- **Radius**: Optional. The radius of the wheel, in meters.
-- **Width (ignored)**: - Optional. Use any number, wheel width is auto-calculated from distance between node1 and node2.
+- **Tire radius**: Optional. The radius of the tire, in meters.
+- **Rim radius**: Optional. The radius of the rim, in meters.
 
 ```
 ; basic example, uses base mod's wheelband material
-; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <tire_radius><rim_radius>
 addonpart_tweak_wheel 0 "5SpokeMBWheel.mesh" "" l
 
-; example for a wheel with pre-mounted tire, makes wheelband invisible and sets radius to 0.32
+; example for a wheel with pre-mounted tire, makes wheelband invisible and sets tire radius to 0.32
 addonpart_tweak_wheel 0 "AeroRaceWheel_Tire.mesh" "tracks/trans" l 0.32
 ```
 
@@ -390,7 +390,7 @@ addonpart_description "Wheels for all vehicles. By FreeFall, ported to addonpart
 
 ; WHEEL TWEAKS
 
-; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <tire_radius><rim_radius>
 addonpart_tweak_wheel 0 "ATSCup.mesh" "tracks/trans" r 0.29
 addonpart_tweak_wheel 1 "ATSCup.mesh" "tracks/trans" l 0.29
 addonpart_tweak_wheel 2 "ATSCup.mesh" "tracks/trans" r 0.29
@@ -434,7 +434,7 @@ addonpart_tweak_prop 18    0.32,0,0,   0,180,0, ""
 
 ; WHEEL TWEAKS
 
-; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <radius><width>
+; syntax: addonpart_tweak_wheel <wheel ID> <media1> <media2> <wheel side> <tire_radius><rim_radius>
 addonpart_tweak_wheel 0 "MotoMetalF.mesh" "" l
 addonpart_tweak_wheel 1 "MotoMetalF.mesh" "" r
 addonpart_tweak_wheel 2 "MotoMetalR.mesh" "" l
