@@ -209,7 +209,7 @@ link=speedo_kph
 Since version 2026.01, you can add multiple animations to a MyGUI widget by appending a number to the properties associated to each animation. These have to be numbered in
 order (do not skip numbers!). Properties for the first animation are **not** numbered.
 
-You can set up to 11 animations (10 rotations/scalings/translations + 1 series/textstring/textformat/lamp).
+You can set up to 11 animations (10 rotate, scale and translate operations + 1 series/textstring/textformat/lamp).
 
 Example for an aircraft attitude indicator, using custom inputs:
 

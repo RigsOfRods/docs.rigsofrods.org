@@ -3150,7 +3150,7 @@ useMaxRPM 1
 
 <span style="background-color:#854200">\[ Version 2026.01+ \]</span> 
 
-Adds custom input sources to the vehicle's [dashboard system](making-custom-hud.md). These inputs can be modified using scripts, allowing you to implement highly-customised and complex behaviours.
+Adds custom input sources to the vehicle's [dashboard system](making-custom-hud.md). These inputs can be modified using scripts, allowing you to implement highly-customized and complex behaviours.
 
 Parameters:
 
