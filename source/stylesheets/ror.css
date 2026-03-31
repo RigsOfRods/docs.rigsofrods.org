@@ -80,7 +80,7 @@ td:first-of-type {
 }
 
 .hero {
-  background-image: url('https://www.rigsofrods.org/img/background-dodge.51baa5a7.jpg');
+  background-image: url('../images/background-dodge-docs.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
