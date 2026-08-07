@@ -1,174 +1,169 @@
-Multiplayer server setup
-============
+# Multiplayer Server Setup
+
+Rigs of Rods multiplayer uses a relay-type server architecture, where the server acts as an intermediary between connected clients by forwarding synchronized physics, vehicle, chat, and gameplay data rather than simulating the world authoritatively itself.
+
+Because of this, the server software is very lightweight and can run on modest hardware while still supporting multiple concurrent players.
+
+This guide covers downloading, configuring, and running a dedicated multiplayer server for Rigs of Rods on Linux and Windows.
+
+Running and maintaining a multiplayer server requires some familiarity with system administration, networking, security, and ongoing maintenance. If you would prefer not to manage the infrastructure yourself, several community-vetted hosting providers offer preconfigured Rigs of Rods server hosting options.
+
+- [PingPerfect $4.99/mo (w/free trial), last checked May 2026](https://pingperfect.com/gameservers/rigs-of-rods-server-hosting)
 
 
+!!! note
+	These providers are listed for convenience only and are not officially affiliated with or endorsed by the Rigs of Rods project. Always review pricing, support quality, uptime guarantees, and terms of service before purchasing hosting services.
 
-## Introduction
+## Requirements
 
-This tutorial will guide you through the process of setting up a Rigs of Rods multiplayer server.
+As mentioned earlier, the server software is very lightweight, but the relay-type architecture inherently requires significant bandwidth.
 
-### Port forwarding
+- 512 MB (less is ok) of memory for up to 16 players
+- 1 vCPU (modern single-core performance is sufficient for small servers)
+- 1 GB of disk space for the server binaries and logs (could be more, depending on how active the server is)
+- 100 MiB up, 10 MiB down internet speeds (at least, one should plan for up to 100-50 GiB in outbound traffic per month)
 
-**THIS STEP IS EXTREMELY IMPORTANT - FAILURE TO PORT FORWARD WILL RESULT IN YOUR SERVER TO NOT APPEAR ON THE SERVER LIST AND OTHER PLAYERS WILL NOT BE ABLE TO JOIN!**
+In practice, this may look like the e2-micro from Google Public Cloud, the t2.nano from Amazon Web Services, or the smallest droplet from [DigitalOcean](https://m.do.co/c/8d2c25d20a60).
 
-Before we begin, you **MUST** be able to forward the server port (TCP `12000` by default). This requires accessing your router's firewall settings. 
+For Windows Server, the above still applies with the additional operating system overhead.
 
-!!! warning
-    All routers/ISPs are different, so just search for a tutorial for your router. A general port forwarding guide can be found <a href="https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/">here</a>. If you're unable to figure it out, don't bother trying to host a server.
+### Port Forwarding
 
-If you fail to port forward, the [Cannot connect to master server](#cannot-connect-to-master-server) error will appear on startup.
+If you decide to self-host (as in, hosted on your own computer and/or home internet), it may be necessary to to [port forward](https://en.wikipedia.org/wiki/Port_forwarding). Without port forwarding, no one else outside your home/local network will be able to join your server.
 
-On Windows, you also may have to allow `rorserver.exe` through the firewall. 
+!!! warning "Continue at your own risk"
+	Port forwarding exposes your local network to incoming traffic from the internet. Only proceed if you understand the security implications and are comfortable configuring your router. If done incorrectly, it may result in connectivity issues or unintended exposure of your system.
 
-Got that? Great! Let's begin. 
+Because router interfaces vary, choose your specific router model or ISP gateway and follow its port forwarding instructions accordingly.
 
-## Windows
+The suggested port to forward is `12000`, or anything in that range.
 
-### Requirements 
+## Download
 
-- [VS 2015-2022 Redistributable x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- Text editor 
-- Router access for port forwarding
-- Good internet connection speed
-- A brain, basic computer knowledge, and patience
+The latest server release is published on the [Repository](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/) for both Linux and Windows.
 
-### Download
+=== "Linux"
 
-Let's begin by downloading the latest Windows server release from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
+	This guide assumes basic familiarity with Linux system administration and that you are connecting to the server remotely over SSH.
 
-Extract the downloaded zip into a new folder:
+	You will need the `unzip` utility, which is available through virtually every Linux distribution package manager (e.g. `apt`, `dnf`, or `yum`).
 
-![server-filelist-win](../images/server-filelist-win.png)
+    Transfer the server archive to your machine using `scp`, `rsync`, or an SFTP client such as WinSCP or FileZilla. Once connected over SSH, extract the archive:
 
-!!! note "Tip"
-	It is highly recommended to enable file extensions in File Explorer as this will make it easier to differentiate each config file.<br>
-	Windows 10:<br>
-	<img src="/images/file-ext-win10.png"  width="80%" height="30%"><br>
-	Windows 11:<br>
-	<img src="/images/file-ext-win11.png"  width="50%" height="30%"><br>
+    ```bash
+    unzip rorserver-*-linux.zip -d rorserver
+    cd rorserver
+    ```
 
-### server.cfg
+=== "Windows"
 
-Inside the folder, open (`server.cfg`) with Notepad or your preferred text editor.
+    This guide assumes you're either using a home PC (with direct monitor access) or remotely connected through [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c).
 
-![server-config-notepad](../images/server-config-notepad.png)
+    Install the [Visual C++ 2015–2022 Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) if you don't already have it.
 
-This is the main configuration file for your server. Each section contains a comment explaining what it does, pretty self-explanatory.
+    Extract the downloaded zip into a new folder:
 
-For simplicity's sake, you only need to change the `name`, `terrain`, `port`, and `password` lines.
+    ![server-filelist-win](../images/server-filelist-win.png)
 
-Save and close the file once you're finished.
+    !!! tip "Enable file extensions"
+        Turn on file extensions in File Explorer so you can tell the config files apart at a glance. In Windows 10 and 11, open File Explorer and toggle **View -> Show -> File name extensions**.
 
-### server.motd 
+## Configuration
 
-This file sets your server's Message of the Day (MOTD), shown on server join:
+The server ships with four plain-text configuration files. Any text editor will do — the examples below just show one common choice per platform.
 
-![server-motd](../images/server-motd.png)
+=== "Linux"
 
-Fill it out with whatever you'd like. 
+    From inside the `rorserver` directory:
 
-### server.rules
+    ```bash
+    nano server.cfg
+    ```
 
-This file contains the rules for your server, shown by typing `!rules`.
+    ![server-config-nano](../images/server-config-nano.png)
 
-Just as before, fill it out with rules you want players to follow. 
+    Save with ++ctrl+o++, exit with ++ctrl+x++.
 
-### server.auth 
+=== "Windows"
 
-This file configures the admins and moderators on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
+    Right-click `server.cfg` and open it with Notepad (or your preferred editor).
 
-### Running
-
-Once you're finished configuring your server, double-click `run.bat` to launch the server:
-
-![server-win-start](../images/server-win-start.png)
-
-If successful, your server should now be running and registered on the server list!
-
-Please see the [troubleshooting](#troubleshooting) section if you receive an error.
-
-## Linux
-
-### Download
-
-I will assume you're running the server on a 64-bit VPS with SSH/FTP access and have `unzip` and `nano` installed.
-
-Let's begin by downloading the latest Linux server release from [here](https://forum.rigsofrods.org/resources/rigs-of-rods-multiplayer-server.208/).
-
-Upload the file to your VPS using an FTP client such as WinSCP or FileZilla.
-
-Now SSH into your VPS and change to the directory where you uploaded the zip file. 
-
-Extract the zip with the following command:
-
-`unzip rorserver-2021.04-linux.zip -d rorserver`
-
-The server files should now be located in the `rorserver` folder:
-
-![server-filelist-linux](../images/server-filelist-linux.png)
+    ![server-config-notepad](../images/server-config-notepad.png)
 
 ### server.cfg
 
-In SSH, Go into the newly created `rorserver` folder and type `nano server.cfg`.
+The main server configuration. Every option has an inline comment explaining what it does.
 
-![server-config-nano](../images/server-config-nano.png)
+At minimum, set:
 
-This is the main configuration file for your server.
+| Field | Purpose |
+| --- | --- |
+| `name` | Display name shown in the public server list |
+| `terrain` | Terrain filename players will load |
+| `port` | TCP port the server listens on (default is random, but suggested port is `12000`) |
+| `password` | Optional join password — leave blank for a public server |
 
-Each section contains a comment explaining what it does, pretty self-explanatory.
+If you want a private server that doesn't register with the master server list, set `mode = lan` instead of `mode = inet`. Players will then join via the **Direct IP** tab in-game.
 
-For simplicity's sake, you only need to change the `name`, `terrain`, `port`, and `password` lines.
+### server.motd
 
-Once you're done, press `CTRL+O` to save the file and `CTRL+X` to exit.
-
-### server.motd 
-
-This file sets your server's Message of the Day (MOTD), shown on server join:
+The Message of the Day, displayed to players on join.
 
 ![server-motd](../images/server-motd.png)
 
-Fill it out with whatever you'd like. 
-
 ### server.rules
 
-This file contains the rules for your server, shown by typing `!rules`.
-
-Just as before, fill it out with rules you want players to follow. 
-
-### server.auth 
-
-This file configures the admins and moderators on your server. Please see the [UserAuth setup](#userauth-setup) section for more information. 
-
-### Running
-
-Once you're finished configuring your server, start your server by running the following:
-
-```
-chmod +x rorserver
-sh RunRoR.sh
-```
-
-`chmod +x rorserver` only needs to be run once to set permissions.
-
-![server-linux-start](../images/server-linux-start.png)
-
-If successful, your server should now be running and registered on the server list!
-
-Please see the [troubleshooting](#troubleshooting) section if you receive an error.
-
-## UserAuth setup
-
-This section will teach you how to set up the `server.auth` file. This is used to define who is staff on your server.
-
-Shut down your server before following these steps.
-
-### User token
-
-First, you need to set a user token in your game's settings. To do this, please follow [this tutorial](https://forum.rigsofrods.org/account/user-token).
+The rules text, shown to players when they type `!rules` in chat.
 
 ### server.auth
 
-Open the `server.auth` file in a text editor. The contents should look like this:
+Defines admins, moderators, and bots. See [UserAuth setup](#userauth-setup) below — you can leave this file untouched for now and come back once the server is running.
+
+## Running the server
+
+=== "Linux"
+
+    From inside the `rorserver` directory:
+
+    ```bash
+    chmod +x rorserver
+    ./RunRoR.sh
+    ```
+
+    `chmod +x` only needs to be run once.
+
+    ![server-linux-start](../images/server-linux-start.png)
+
+    !!! tip "Keep it running after you log out"
+        Running `./RunRoR.sh` directly will stop the server when your SSH session ends. For a persistent server, run it inside `tmux` or `screen`, or wrap it in a `systemd` service.
+
+=== "Windows"
+
+    Double-click `run.bat`.
+
+    ![server-win-start](../images/server-win-start.png)
+
+If the server starts cleanly, it's now live and — assuming `mode = inet` — registered on the public server list. If you see an error instead, jump to [Troubleshooting](#troubleshooting).
+
+## UserAuth setup
+
+`server.auth` defines who has staff privileges on your server. Stop the server before editing it — changes are only loaded at startup.
+
+Authorization levels:
+
+| Level | Role | Notes |
+| --- | --- | --- |
+| `1` | Administrator | Red name, full access to admin commands |
+| `4` | Moderator | Red name, full access to admin commands |
+| `8` | Bot | Blue name, no special privileges |
+
+### Get your user token
+
+In the game settings, set a personal user token following [this tutorial](https://forum.rigsofrods.org/account/user-token). The server stores a hashed version of it, not the token itself.
+
+### Edit server.auth
+
+Open `server.auth`. The default contents look like this:
 
 ```
 ; This files defines who is an admin, moderator etc on your server
@@ -194,92 +189,95 @@ Open the `server.auth` file in a text editor. The contents should look like this
 ;1 9b3c463506f128319a0f16ef08d39d876ca25c68 admin_user
 ```
 
-Start your server, join it and open the log file located at `config/server.log`. You should see a line similar to this:
-
-`INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9`
-
-`0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9` is the hashed token for the player, which is what you will set in your auth file. 
-
-If you want the player to be a admin, set the number to `1`, or `4` if you want the player to be a moderator.
+To find a player's hashed token, start the server, have them join, then open `config/server.log`. Look for a line like:
 
 ```
-;example admin
+INFO| New client: example_user (en_US), using RoR 0.4.7.0-dev-0ab5bca-dirty, with token 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9
+```
+
+The 40-character string at the end is the hashed token. Add an entry to `server.auth` using the format `<level> <hashed_token> <username>`:
+
+```
+; example admin
 1 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
-;example moderator
+; example moderator
 4 0EBB5A8B28053AB3CF63D4C59F0C1E04F28F01C9 example_user
 ```
 
-Make sure to remove the comment (`;`) before the line. 
+Remove the leading `;` to activate the line. Save and restart the server. On successful load you'll see:
 
-Save the file and restart your server. If the server read the auth file correctly, it should log this:
+```
+INFO| found X auth overrides in the authorizations file!
+```
 
-`INFO| found X auth overrides in the authorizations file!`
-
-The next time you join your server you should now have a red flag next to your name if you're a admin or a blue flag if you're a moderator.
+The player will then appear with a red flag (admin) or blue flag (moderator) next to their name:
 
 ![userauth-ingame](../images/userauth-ingame.png)
 
 ### Moderation commands
 
-`!list` 
-
-Lists all players on a server with their UID.
-
-`!kick` and `!ban` 
-
-Kicks or bans a player. Banned players are stored in `banned-players.json` which is loaded on server startup. 
-
-Usage: `!kick UID reason` or `!ban UID reason`
-
-`!say` 
-
-Sends a message to a player using their UID or the entire server.
-
-Usage: `!say 10 message` or `!say -1 message`
+| Command | Usage | Description |
+| --- | --- | --- |
+| `!list` | `!list` | List all connected players and their UIDs |
+| `!kick` | `!kick <UID> <reason>` | Kick a player |
+| `!ban` | `!ban <UID> <reason>` | Ban a player — stored in `banned-players.json` and loaded on startup |
+| `!say` | `!say <UID> <message>` | Send a private message to a UID; use `-1` to message everyone |
 
 ## Troubleshooting
 
-Many things can go wrong with your server, here's a small selection of problems that may occur:
+### Cannot connect to master server
 
-### Common error messages
+```
+Registration failed, response code: HTTP 503
+Could not connect to your server and verify it's version.
+Your server is NOT advertised on the master server!
+```
 
-#### Cannot connect to master server
+The master server couldn't reach yours to verify it. Common causes:
 
-By default, the server attempts to connect to the server list (master server) and will exit if the connection fails.
+- The port isn't forwarded on your router (see [Port Forwarding](#port-forwarding)).
+- A firewall (host or network) is blocking inbound traffic on the configured port.
+- The `ip` setting in `server.cfg` points to the wrong address — leave it blank and the server will auto-detect.
 
-`Registration failed, response code: HTTP 503, body: {"result":false,"message":"Could not connect to your server and verify it's version. Please check your Firewall or leave it as it is now to create a local only server. Your server is NOT advertised on the master server!`
- 
- This happens when:
+If you only want a LAN/Direct-IP server, set `mode = lan` and ignore this error.
 
-- You didn't forward the port correctly in your router's settings.
-- You specified the wrong IP address in your server's config. If you don't know the correct IP address, then don't specify one. The server will search the correct IP address itself.
-- Your firewall is blocking network access to the server. 
+### Address already in use
 
-If you do not want your server advertised on the server list and would rather have players join through the 'Direct IP' tab , change `mode = inet` to `mode = lan` in your server config.
+```
+FATAL Listener: SWInetSocket::bind() error: Address already in use
+```
 
-#### Address already in use
+Another process is already bound to the port you configured. Pick a different `port` value in `server.cfg`, or stop the process holding it.
 
-`FATAL Listerer: SWInetSocket::bind() error: Address already in use`
-	
-The port that you filled in is already in use by another program. Please use another port number.
+=== "Linux"
 
-#### Failed to open authorization file
-  
-`Couldn't open the local authorizations file ('/etc/rorserver/simple.auth'). No authorizations were loaded.`
-  
-This means that the server failed to read your authorization file. Make sure your filename matches the one you specified and refer back to the [UserAuth setup](#userauth-setup) section.
+    ```bash
+    ss -lntup | grep <port>
+    ```
 
-If you didn't setup an authorization file, you can safely ignore this error message.
+=== "Windows"
 
-### Connection issues
+    ```powershell
+    netstat -ano | findstr :<port>
+    ```
 
-#### Server uses a different protocol version
+### Failed to open authorization file
 
-`Network fatal error: server uses a different protocol version`
+```
+Couldn't open the local authorizations file ('...simple.auth'). No authorizations were loaded.
+```
 
-You need to download the correct game version to match your server version. The latest RoR version supports RoRNet 2.44.
+The server couldn't find the auth file referenced in `server.cfg`. Check that the filename matches what's on disk and revisit [UserAuth setup](#userauth-setup). If you aren't using auth, this warning is harmless.
 
-The latest version may be downloaded from the [homepage](https://www.rigsofrods.org/).
+### Server uses a different protocol version
 
-If you've come across a problem not listed here, please post in the appropriate [support forum](https://forum.rigsofrods.org/forums/webservices-support.9/).
+```
+Network fatal error: server uses a different protocol version
+```
+
+The client and server are built against incompatible RoRNet protocol versions. Update the game to match the server (or vice versa) from the [Rigs of Rods homepage](https://www.rigsofrods.org/).
+
+---
+
+Run into something not covered here? Post in the [Webservices support forum](https://forum.rigsofrods.org/forums/webservices-support.9/).
 
