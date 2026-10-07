@@ -438,6 +438,35 @@ Layer at position \#0 is a ground layer - it covers the entire page and thus nee
 
 Layers \#1 - \#5 only cover areas which have a corresponding color in the **blendmap**.
 
+## Traction map (.cfg)
+
+Also known as "landusemap" or just "landuse", this fileformat specifies the physical properties of the terrain surface.
+It uses [ground models](https://github.com/RigsOfRods/rigs-of-rods/blob/master/resources/skeleton/config/ground_models.cfg),
+either those which come with the game or custom ones bundled with the terrain.
+
+Commented example of a landuse file:
+```
+[config]
+# the texture to use
+texture = 31-traction.png
+# the default terrain to be used, if not using landuse its 'gravel'
+defaultuse = mud
+# the friction config to load, multiple lines possible to load multiple files
+loadGroundModelsConfig = 31-groundmodel.cfg
+
+# the colour <--> ground type coupling
+[use-map]
+#colour format explanation: 0x[fixed!](2 Alpha Char)(2 Red Char)(2 Green Char)(2 Blue Char)
+
+
+0xffff0000 = asphalt
+0xff00ff00 = grass
+0xff0000ff = gravel
+0xffffff00 = sand
+0xff00ffff = rock
+0xffff00ff = mud
+```
+
 ## Terrain Objects (.tobj)
 
 Defines object or vehicle placement on terrain. 
