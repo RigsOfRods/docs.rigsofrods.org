@@ -24,6 +24,14 @@ We may remove or modify any Content submitted at any time, with or without cause
 
 You may not access the Service through automated or programmatic means (such as through a content scraper) without prior permission from us.
 
+This restriction includes automated scraping, harvesting, crawling, or other programmatic collection of Content for purposes including, but not limited to, search indexing, dataset creation, artificial intelligence (or "AI") or machine learning training, or other commercial or non-commercial purposes.
+
+Scalping and other forms of automated access that consume excessive bandwidth or resources are prohibited. Attempts to circumvent rate limits, access controls, or other measures intended to prevent abusive automated access are also prohibited.
+
+We use automated protections, including Anubis, to detect and block automated traffic, scalping, and other abusive access patterns. These protections may also block traffic originating from VPNs, proxies, or other anonymizing services. Attempts to circumvent these protections, including through rotating IP addresses or other means, may result in temporary or permanent blocking.
+
+Legitimate automated access may be permitted at our discretion. Permission must be obtained from us in advance.
+
 ## License to Use Content
 
 By submitting Content, you are granting us a non-exclusive, permanent, irrevocable, unlimited license to use, publish, or re-publish your Content in connection with the Service. However, you retain copyright over the Content.
