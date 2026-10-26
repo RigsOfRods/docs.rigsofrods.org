@@ -1088,14 +1088,14 @@ Also change Vertical Axis from Right Stick Y ABS_RY to Left Stick Y ABS_Y
 
 That would be it for Keymasq click Apply and Save.
 
-Now to test axes download and compile  latest jstest-gtk
+Now to test axes download and compile latest and geatest jstest-gtk with
 
 `
 git clone https://git.launchpad.net/ubuntu/+source/jstest-gtk
 `
 
-Opn it and at top select keymasq-gamepad, move mouse around you should see
-Axis0 and Axis1 move
+Open it and at top select keymasq-gamepad, in Keymasq enable your device and move mouse around
+you should see Axis0 and Axis1 move
 
 ![7.7](../images/MoveMauseLinux-9.png)
 
