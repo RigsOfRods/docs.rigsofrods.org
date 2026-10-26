@@ -1023,17 +1023,150 @@ The easiest way to configure your device for use in Rigs of Rods is to use the [
 
 ![vJoyDisable](../images/vJoyDisable.png)
 
+### On Linux to move camera or steering wheel with mouse
+
+You will need to install Keymasq, on Debian based distros like Ubuntu / Linux Mint run this command
+
+```
+curl -fsSL https://repo.keymasq.tools/gpg-key.asc \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/keymasq.gpg
+echo "deb [signed-by=/etc/apt/keyrings/keymasq.gpg arch=all] https://repo.keymasq.tools/debian stable main" \
+  | sudo tee /etc/apt/sources.list.d/keymasq.list
+sudo
+ apt update
+sudo
+ apt install keymasq
+sudo
+ systemctl enable --now keymasqd
+systemctl
+ --user enable --now keymasq-session`
+```
+Start by creating new profile give it name RoR
+
+![7](../images/MoveMauseLinux-1.png)
+
+You will get new pop-up window, on it at bottom just enable Always grab 2 interfaces 
+
+![7.1](../images/MoveMauseLinux-2.png)
+
+After that scroll down to Keyboard you will found that its split in to (Left) and (Right)
+
+![7.2](../images/MoveMauseLinux-3.png)
+
+here you will allow keys which are need for the game like UP ARROW and other inputs to go through keymasq, keymasq will not allow game to register pressed key if you do not allow them to go through. 
+So click on let say “c” to allow to change camera in game, on the left click on Keyboard and down on Capture Key
+
+![7.3](../images/MoveMauseLinux-4.png)
+
+and just press c on keyboard, repeat for UP/DOWN/LEFT/RIGHT arrows. Alternatively open `.config/keymasq/profiles/NAME_OF_YOUR_PROFILE.toml`
+in your favorite text editor and add
+
+```
+[devices."YOUR_VID:PID".mapping.key_c]
+action = "keyboard"
+target = "key_c"
+
+[devices."YOUR_VID:PID".mapping.key_left]
+action = "keyboard"
+target = "key_left"
+```
+Scroll down to Pointer and click Pointer Movement
+
+![7.4](../images/MoveMauseLinux-5.png)
+
+On Output change Mouse Movement to Controller Axes
+
+![7.5](../images/MoveMauseLinux-6.png)
+
+Scroll down to Axes and change Right Stick X ABS_RX to Left Stick X ABX_X
+
+![7.6](../images/MoveMauseLinux-7.png)
+
+Also change Vertical Axis from Right Stick Y ABS_RY to Left Stick Y ABS_Y
+
+![7.7](../images/MoveMauseLinux-8.png)
+
+That would be it for Keymasq click Apply and Save.
+
+Now to test axes download and compile latest and geatest jstest-gtk with
+
+`
+git clone https://git.launchpad.net/ubuntu/+source/jstest-gtk
+`
+
+Open it and at top select keymasq-gamepad, in Keymasq enable your device and move mouse around
+you should see Axis0 and Axis1 move
+
+![7.7](../images/MoveMauseLinux-9.png)
+
+
+Create new file called keymasq_gamepad.map in ~/.rigsofrods/config/ with with command
+ 
+`
+touch ~/.rigsofrods/config/keymasq_gamepad.map
+`
+
+and put this in to it 
+
+```
+; -------------------------------------------
+; Keymasq_gamepad Controller Input Map
+; 
+; Version 0.1
+
+;Buttons:
+;A: Button 0
+;B: Button 1
+;X: Button 2
+;Y: Button 3
+;Left bumper: Button 4
+;Right bumper: Button 5
+;View: Button 6
+;Menu: Button 7
+;Left stick button: Button 8
+;Right stick button: Button 9
+
+;Axes:
+;Left Stick (Left/Right): Axis 0
+;Left Stick (Up/Down): Axis 1
+;Right Stick (Left/Right): Axis 3
+;Right Stick (Up/Down): Axis 4
+;Left Trigger: Axis 2
+;Right Trigger: Axis 5
+; -------------------------------------------
+
+; CAMERA
+CAMERA_ROTATE_DOWN             JoystickAxis          0 1 UPPER
+CAMERA_ROTATE_UP               JoystickAxis          0 1 LOWER
+CAMERA_ROTATE_LEFT             JoystickAxis         0 0 LOWER 
+CAMERA_ROTATE_RIGHT            JoystickAxis         0 0 UPPER
+```
+
+Replace ;CAMERA with
+
+```
+; TRUCK
+
+TRUCK_STEER_LEFT               JoystickAxis         0 0 LOWER
+TRUCK_STEER_RIGHT              JoystickAxis         0 0 UPPER 
+```
+
+if you want to control steering with mouse 
+
+Now when you click "enable" on Keymasq you will lost mouse to bring it back 
+just press SPACE_BAR
+
 ### Launching the tool
 
 After downloading, extract the zip into a new folder. Then double-click `Run.bat` to launch the tool. 
 
-![5](../images/InputMappingTool-1.png)
+![6.3](../images/InputMappingTool-1.png)
 
 ### Adding new inputs
 
 To begin adding inputs, click `Add`.
 
-![6](../images/InputMappingTool-2.png)
+![6.3](../images/InputMappingTool-2.png)
 
 Select the event you want to assign an input to. In this example, I will use `TRUCK_ACCELERATE`
 
