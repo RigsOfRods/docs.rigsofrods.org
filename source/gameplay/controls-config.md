@@ -1045,11 +1045,11 @@ Start by creating new profile give it name RoR
 
 ![7](../images/MoveMauseLinux-1.png)
 
-You will get new pop-up window, on it at bottom just enable Alway grab 2 interfaces 
+You will get new pop-up window, on it at bottom just enable Always grab 2 interfaces 
 
 ![7.1](../images/MoveMauseLinux-2.png)
 
-After that scroll down to Keyboard you will found thet its splited to (Left) and (Right)
+After that scroll down to Keyboard you will found that its split in to (Left) and (Right)
 
 ![7.2](../images/MoveMauseLinux-3.png)
 
@@ -1086,7 +1086,7 @@ Also change Vertical Axis from Right Stick Y ABS_RY to Left Stick Y ABS_Y
 
 ![7.7](../images/MoveMauseLinux-8.png)
 
-That would be it for Keymasq clik Apply and Save.
+That would be it for Keymasq click Apply and Save.
 Create new file called keymasq_gamepad.map in ~/.rigsofrods/config/ with with command
  
 `
@@ -1138,7 +1138,7 @@ TRUCK_STEER_LEFT               JoystickAxis         0 0 LOWER
 TRUCK_STEER_RIGHT              JoystickAxis         0 0 UPPER 
 ```
 
-if you want to controll steering with mouse 
+if you want to control steering with mouse 
 
 Now when you click "enable" on Keymasq you will lost mouse to bring it back 
 just press SPACE_BAR
